@@ -15,7 +15,7 @@ const business = businessEntry?.data;
   <div class="contact-layout">
     <section class="contact-form">
       <h2>Send Us a Message</h2>
-      <form>
+      <form id="quote-form">
         <div class="form-row">
           <div class="form-group">
             <label for="name">Full Name</label>
@@ -49,6 +49,7 @@ const business = businessEntry?.data;
           <textarea id="message" name="message" rows="5" placeholder="Tell us about your logistics needs..." required></textarea>
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
 
@@ -99,6 +100,43 @@ const business = businessEntry?.data;
 
     </aside>
   </div>
+
+  <script>
+    import { supabase } from '../db/supabase.js';
+
+    const form = document.getElementById('quote-form');
+    const status = document.getElementById('form-status');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const fd = new FormData(form);
+      const payload = {
+        name: fd.get('name'),
+        email: fd.get('email'),
+        phone: fd.get('phone') || null,
+        subject: fd.get('subject') || null,
+        message: fd.get('message'),
+      };
+
+      btn.disabled = true;
+      status.textContent = 'Sending…';
+      status.className = 'form-status';
+
+      const { error } = await supabase.from('quote_requests').insert(payload);
+
+      if (error) {
+        console.error(error);
+        status.textContent = 'Something went wrong — please call us or try again.';
+        status.classList.add('error');
+      } else {
+        form.reset();
+        status.textContent = 'Thanks! We got your request and will be in touch shortly.';
+        status.classList.add('success');
+      }
+      btn.disabled = false;
+    });
+  </script>
 </Base>
 
 <style>
@@ -190,6 +228,24 @@ const business = businessEntry?.data;
   }
   .submit-btn:hover {
     background: #1e40af;
+  }
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  .form-status {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .form-status:empty {
+    display: none;
+  }
+  .form-status.success {
+    color: #047857;
+  }
+  .form-status.error {
+    color: #b91c1c;
   }
 
   .contact-info {
