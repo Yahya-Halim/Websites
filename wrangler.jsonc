@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "freightbridgellc",
+  "compatibility_date": "2026-05-28",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "freight-bridge-llc-cedarrapids"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
