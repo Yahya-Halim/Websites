@@ -1,0 +1,172 @@
+{
+  "cities": [
+    {
+      "slug": "cedar-rapids-ia",
+      "city": "Cedar Rapids",
+      "state": "Iowa",
+      "stateAbbr": "IA",
+      "localContent": {
+        "headline": "Cedar Rapids Freight & Moving Services You Can Count On",
+        "intro": "Running a business or planning a move in the Corridor? Freight Bridge LLC brings reliable freight hauling, furniture delivery, and moving services right to Cedar Rapids and the surrounding I-380 corridor. We're based out of Iowa City, so we know the roads, the timing, and the neighborhoods that make this region tick.",
+        "servicesOffered": {
+          "residential-moving": "Moving into a new place near Collins Road or over by the Cedar River? We handle Cedar Rapids residential moves with the same care we give every load. From your old living room to your new front door, we wrap, load, and transport everything — including those awkward sectional sofas and heavy dressers that don't fit through doorways. Our crews know the layout of neighborhoods like Noelridge Park, Kenwood Park, and the Kingston Village area, so we can plan routes that avoid train crossings and construction delays. We also coordinate with apartment complexes downtown and in the Czech Village district to make sure loading dock access is locked in before we roll.",
+          "furniture-delivery": "Whether you're furnishing a new build in the Big Cedar Industrial Center area or delivering pieces from a local furniture store to a customer in Marion or Hiawatha, we keep your items stable and protected. Cedar Rapids has a lot of historic homes with narrow staircases and tight corners — we account for that with blanket wraps, corner guards, and careful handling on every delivery. We also work with local furniture retailers, interior designers, and online sellers who need reliable white-glove delivery to residences and businesses across Linn County.",
+          "office-moving": "Office moves in Cedar Rapids are a specialty of ours. We've moved everything from small dental practices near Mercy Medical Center to multi-floor corporate tenants in the U.S. Bank Building downtown. Our team coordinates with building management, maps out elevator schedules, and labels every box so your team can pick up where they left off. We also handle IT equipment, server racks, and sensitive electronics with extra care — especially for the tech and data center companies that operate out of the I-380 corridor.",
+          "long-distance-moving": "If you're moving out of Cedar Rapids to another state — or relocating your family here from somewhere else — we handle the whole trip. We run routes out of Cedar Rapids down I-380 to I-80, and from there we can go anywhere in the Midwest or beyond. We've helped families move to Denver, Atlanta, and the West Coast, always with real-time tracking and clear communication along the way. Freight Bridge LLC operates under USDOT 4166904, so you know you're working with a properly registered carrier that takes long-distance moves seriously.",
+          "freight-hauling": "Cedar Rapids is a manufacturing and logistics hub, and we move freight to match. We haul full pallets, oversized equipment, and partial loads for businesses operating out of the Big Cedar Industrial Center, the Rockwell Collins area, and the growing industrial parks along Highway 30 and I-380. Whether you're shipping fabricated metal parts to a factory in Milwaukee or raw materials to a processor in Omaha, we pick up from your dock and deliver direct — no terminal transfers, no extra handling."
+        },
+        "localConnection": "Cedar Rapids sits just 30 miles north of our Iowa City base along the I-380 corridor, which makes it one of our most natural and frequent service areas. We run loads up and down that highway daily, so a Cedar Rapids delivery or move fits right into our regular route schedule. That local proximity means we can offer faster pickup windows and more flexible scheduling compared to carriers based farther out. It also means we know the traffic patterns around the 380/Interstate 80 split, the construction zones near the Collins Road exit, and the best ways to navigate downtown during events at the Alliant Energy PowerHouse. We're not showing up with a GPS and a hope — we know Cedar Rapids.",
+        "benefits": [
+          "30-minute drive from our Iowa City hub — faster response times and flexible scheduling for Cedar Rapids customers",
+          "Experienced navigating Cedar Rapids neighborhoods, one-way streets downtown, and industrial zones like Big Cedar Industrial Center",
+          "Full-service moving and freight under one roof — residential, commercial, and LTL freight all handled by the same team",
+          "We work around your timeline, whether that means early morning loading at a manufacturing plant or a weekend residential move"
+        ],
+        "pricingGuide": "Cedar Rapids pricing from Freight Bridge LLC depends on the type of move or freight shipment. Local residential moves within Linn County typically start around $350–$650 for a one-bedroom apartment and scale up from there based on distance and item count. Furniture delivery runs between $125 and $300 per stop depending on assembly needs and floor access. Freight hauling from Cedar Rapids to regional Midwest destinations averages $1.50–$2.25 per mile for dedicated runs. We give firm quotes — no surprise fees at the end.",
+        "faqs": [
+          {
+            "question": "How far in advance should I book a move or delivery in Cedar Rapids?",
+            "answer": "We recommend booking at least one to two weeks out for residential moves, especially during the peak season from May through September. For freight hauling and office moves, a week's notice usually gives us enough time to work your shipment into our route schedule. That said, we do handle last-minute requests when we have capacity — it never hurts to call and ask. Because we're based just down I-380 in Iowa City, we can often squeeze in Cedar Rapids jobs on shorter notice than bigger carriers with hubs farther away."
+          },
+          {
+            "question": "Does Freight Bridge LLC move items to and from storage units in Cedar Rapids?",
+            "answer": "Absolutely. We frequently pick up from and deliver to storage facilities all across Cedar Rapids, including places like Storage Solutions off Edgewood Road, SecurCare on Blairs Ferry, and U-Haul locations throughout the area. Just let us know the storage facility address, the unit number, and whether you need us to load or unload at the unit. We bring dollies, ramps, and blankets to make the process smooth. If you're moving items out of storage and into a new home, we can coordinate that as a single job to save you time."
+          },
+          {
+            "question": "What areas of Cedar Rapids do you serve for local moves?",
+            "answer": "We cover the entire Cedar Rapids metro area and surrounding communities. That includes downtown Cedar Rapids near the U.S. Bank Building and Alliant Energy PowerHouse, the residential neighborhoods around Kenwood Park and Noelridge, the Collins Road/I-380 commercial district, and the Mount Vernon Road corridor. We also serve the suburbs and neighboring towns like Marion, Hiawatha, Robins, and Fairfax. If your address falls within Linn County or the immediate I-380 corridor, we can get there."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "des-moines-ia",
+      "city": "Des Moines",
+      "state": "Iowa",
+      "stateAbbr": "IA",
+      "localContent": {
+        "headline": "Des Moines Freight, Moving & Delivery Services",
+        "intro": "Des Moines is Iowa's capital city and a major crossroads for the Midwest economy. Freight Bridge LLC connects businesses and residents in the Des Moines metro with dependable freight hauling, office and residential moving, and furniture delivery — backed by a team that actually understands the I-80/I-35 corridor and the city's unique neighborhoods.",
+        "servicesOffered": {
+          "residential-moving": "Moving into a bungalow in the East Village or a new development out in West Des Moines? We've moved families into just about every corner of the Des Moines metro. Our crews handle the packing, loading, and unloading with an eye for detail — wrapping furniture, securing boxes, and protecting your floors and doorways. We know the traffic quirks around the I-235 corridor during rush hour and plan our arrival times accordingly. Whether you're moving across town from Beaverdale to Ankeny or coming into the city from a rural area, we make the transition as smooth as possible.",
+          "furniture-delivery": "From the Jordan Creek Town Center retail corridor to locally owned furniture shops in the Historic Valley Junction district, we handle delivery with the kind of care that keeps your pieces looking like they do in the showroom. Freight Bridge LLC delivers furniture to homes, apartments, and businesses across the full Des Moines metro, including Altoona, Urbandale, Clive, and Pleasant Hill. We offer white-glove delivery that includes inside placement, assembly, and debris removal — a service especially popular with customers who've ordered big-ticket items like bedroom sets or sectionals online and want a hassle-free experience when they arrive.",
+          "office-moving": "Des Moines has a strong financial and insurance sector, and we've moved plenty of offices in the downtown financial district near Locust Street and the Principal complex. Our office moving process starts with a walkthrough of your current space and the new one — we map out elevator dimensions, loading dock access, and floor plan layouts so there are no surprises on move day. We label every work station, pack sensitive electronics in anti-static materials, and handle file room contents with secure protocols. We can also do after-hours or weekend moves to minimize business disruption.",
+          "long-distance-moving": "If your move takes you beyond Iowa, we've got the equipment and the licensing to get you there. Freight Bridge LLC operates under USDOT 4166904 with full authority for interstate transport. We regularly run loads out of Des Moines west on I-80 toward Omaha and Denver, east toward Chicago and the industrial Midwest, and south on I-35 toward Kansas City and beyond. For families relocating out of Des Moines, we provide clear timelines, real-time tracking, and a single point of contact throughout the trip.",
+          "freight-hauling": "Des Moines sits at the intersection of I-80 and I-35, making it a natural distribution point for manufacturers, wholesalers, and e-commerce businesses. We haul freight for companies operating out of the Southeast Connector industrial park, the Des Moines International Airport cargo area, and the manufacturing zones in Ankeny and Grimes. We handle full truckloads as well as partial shipments (LTL), and we do direct dock-to-dock delivery — no cross-docking at a terminal, no unnecessary handling of your goods."
+        },
+        "localConnection": "Des Moines is about 110 miles northwest of our home base in Iowa City, and we run the I-80 corridor between these cities regularly. That route — past the Amana Colonies, through the Iowa River Valley, and into the growing Des Moines metro — is one we know by heart. The owner, Mohamed Soliman, built Freight Bridge around the principle that local carriers give better service than faceless brokers, and that shows in how we handle Des Moines jobs. We know the difference between rush hour on I-235 versus the outer loop on Highway 5, and we factor that into every pickup and delivery. That kind of local know-how makes a real difference when you're trying to get goods across a growing metro like this one.",
+        "benefits": [
+          "Regular I-80 route schedule between Iowa City and Des Moines means faster dispatch and available capacity for metro-area jobs",
+          "Experience with downtown Des Moines high-rises, loading docks, and elevator logistics for office and apartment moves",
+          "One team handles it all — residential moving, office relocation, freight hauling, and furniture delivery across the metro",
+          "No broker markup — you work directly with the carrier for clearer communication and better rates"
+        ],
+        "pricingGuide": "Des Moines-area pricing depends on the scope of work. Local moves within the metro typically range from $400 for a studio apartment to $1,200 or more for a three-bedroom house with significant furniture and box volume. Furniture delivery in the Des Moines area starts at $125 per stop for basic delivery and goes up for white-glove with assembly. Freight from Des Moines to other Midwest cities averages $1.50–$2.75 per mile depending on weight, and we always provide a binding quote before any work begins.",
+        "faqs": [
+          {
+            "question": "Do you serve both Des Moines proper and the suburbs like West Des Moines and Ankeny?",
+            "answer": "Yes, we cover the entire Des Moines metropolitan area. That includes Des Moines proper (downtown, the East Village, Beaverdale, and the South Side), plus all the major suburbs — West Des Moines, Clive, Urbandale, Johnston, Grimes, Ankeny, Altoona, Pleasant Hill, Norwalk, and Carlisle. If you're within the I-80/I-35/I-235 loop or just outside it, we can get a truck to you. The suburbs are actually where a lot of our furniture delivery and residential moving work comes from, especially new construction areas in Ankeny and Waukee."
+          },
+          {
+            "question": "How do you handle furniture delivery to apartment buildings in downtown Des Moines?",
+            "answer": "Downtown apartment deliveries require good coordination, and we have experience with buildings like The Fifth, Bankers Trust, and the Gateway West building. Before we arrive, we confirm the loading dock or freight elevator access, any required certificates of insurance, and the building's delivery time windows. We bring protective materials for lobbies and hallways, and we can place furniture directly into the unit. If the building doesn't have a freight elevator, we work with the standard passenger elevator but schedule during low-traffic times to avoid inconveniencing other residents."
+          },
+          {
+            "question": "What is the best way to get a quote for moving from Des Moines to another state?",
+            "answer": "The most accurate way is to reach out directly with your pickup and delivery addresses, an estimate of your total weight or item count, and your desired timeline. We can give a ballpark over the phone, but for long-distance moves from Des Moines, we prefer to do a quick video walkthrough or in-person estimate so we can account for specialty items like pianos, large exercise equipment, or fragile antiques. We'll then provide a binding quote in writing so there are no surprises on move day. Give us a call or reach out through the Freight Bridge website to get the process started."
+          },
+          {
+            "question": "Does Freight Bridge LLC handle commercial freight for Des Moines businesses?",
+            "answer": "Yes, commercial freight is a core part of what we do. We work with manufacturers, distributors, retailers, and e-commerce companies throughout the Des Moines metro. We pick up from industrial facilities in the Southeast Connector area, the Ankeny manufacturing corridor, and the Grimes industrial park. We handle palletized freight, machinery, raw materials, and finished goods. We can also accommodate specialized requests like liftgate service for locations without loading docks and inside delivery for commercial spaces. We're authorized under USDOT 4166904 for both intrastate and interstate freight."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "chicago-il",
+      "city": "Chicago",
+      "state": "Illinois",
+      "stateAbbr": "IL",
+      "localContent": {
+        "headline": "Chicago Freight & Moving Services from Freight Bridge LLC",
+        "intro": "Chicago is the freight capital of the Midwest, and Freight Bridge LLC brings the same reliability we're known for in Iowa to the Chicagoland market. Whether you need freight hauled through the I-80/I-55 corridor, an office relocated in the Loop, or furniture delivered to a high-rise in Lincoln Park, we've got the equipment and the experience to make it happen.",
+        "servicesOffered": {
+          "residential-moving": "Moving within Chicago is a different beast than moving anywhere else, and we respect that. Our crews have navigated the tight alleys of Wicker Park, the walk-up apartments in Lincoln Park, and the high-rise condos along the lakefront in Lakeview and Gold Coast. We coordinate building elevator reservations, secure parking permits for loading zones, and bring enough manpower to move quickly in situations where street parking is time-limited. We handle moves in all directions — from a Bucktown brownstone to a Evanston single-family home, or from a Rogers Park apartment to a new place out in the western suburbs like Naperville or Downers Grove. No two Chicago moves are alike, and we plan each one accordingly.",
+          "furniture-delivery": "Furniture delivery in Chicago comes with its own set of challenges — tight freight elevators, busy loading docks, congested streets, and buildings with strict delivery windows. We handle deliveries to Loop high-rises, Fulton Market loft apartments, and suburban homes across Chicagoland. Our white-glove delivery includes inside placement, assembly, and debris removal. We work with furniture retailers in the Merchandise Mart, online furniture brands shipping to Chicago customers, and design firms placing orders for residential and commercial clients. We understand the building-specific requirements for properties managed by companies like Habitat, FirstService Residential, and Marquette Management.",
+          "office-moving": "Office moves in Chicago require serious coordination. We've relocated practices, law firms, and corporate offices from the West Loop to the suburbs and vice versa. Our process starts with a site survey to understand the loading dock situation — which is critical in a city where dock appointments can make or break your move day. We coordinate with building engineers, reserve freight elevators, and develop a floor-by-floor moving plan for multi-level offices. We're particularly experienced with IT and server room moves, which is essential for businesses in Chicago's growing tech corridor along the Kennedy Expressway.",
+          "long-distance-moving": "Chicago is a major departure point for long-distance moves, and we're fully authorized to handle interstate relocations out of the Chicagoland area under USDOT 4166904. Whether you're moving from Naperville to Nashville, from Oak Park to Oregon, or from downtown Chicago to anywhere in between, we provide a dedicated truck, clear communication, and accurate delivery windows. We route long-distance moves efficiently through the major interstates — I-90 west toward Rockford and points west, I-55 southwest toward St. Louis, I-57 south toward Memphis, and I-80/I-94 east toward Indiana and the East Coast.",
+          "freight-hauling": "Being in the freight business, Chicago is a natural part of our service map. This is where the major rail lines meet the interstate system, and where goods move in and out of the country through O'Hare's cargo facilities and the rail yards that crisscross the city. We haul freight for Chicagoland businesses shipping to Iowa, Nebraska, the Dakotas, and beyond. We pick up from warehouses in the suburbs — Elk Grove Village, Wood Dale, Romeoville, Joliet — and deliver direct to destination. We skip the terminal handoffs and the transloading, which means your freight spends less time sitting in a warehouse and more time getting where it needs to go."
+        },
+        "localConnection": "Chicago is roughly 220 miles from our Iowa City headquarters, straight up I-80. That's about a 3.5-hour drive, and it's a route our drivers know well. We serve Chicago as a natural extension of our core Midwest network — we're already running loads through the Quad Cities and Joliet corridor, so adding a Chicago pickup or delivery fits within our regular freight and moving routes. Owner Mohamed Soliman started Freight Bridge LLC with a focus on the regional Midwest market, and Chicago was always part of that vision given its role as the transportation backbone of the country. We're not a Chicago-based company trying to figure out the market — we're a regional carrier that treats Chicago as the critical hub it is, with the respect and attention it deserves.",
+        "benefits": [
+          "Direct I-80 route from our Iowa City hub to Chicago means competitive rates and reliable transit times for Chicagoland customers",
+          "Experienced with Chicago-specific logistics — loading docks, freight elevators, parking permits, and building insurance requirements",
+          "Full range of services from residential moves to commercial freight under a single carrier relationship",
+          "Regional carrier pricing with personal account management — not a national chain call center"
+        ],
+        "pricingGuide": "Chicago-area pricing varies significantly depending on whether you're in the city proper or the suburbs. Local moves within the Chicago city limits typically range from $800 to $2,500 depending on home size, distance, and building access requirements (parking permits, elevator reservations, etc.). Suburban moves tend to be somewhat more affordable. Freight from Chicago to Iowa City or Des Moines generally runs $1.75–$3.00 per mile for dedicated runs. Always get a binding quote — Chicago moves have more variables than most, and we want you to know exactly what you're paying before we start.",
+        "faqs": [
+          {
+            "question": "Does Freight Bridge LLC have parking and permits figured out for Chicago city moves?",
+            "answer": "We do. Chicago requires moving companies to secure parking permits for certain neighborhoods and commercial zones, and we take care of that paperwork as part of our planning process. We also handle the building-specific requirements — the certificates of insurance that condo associations require, the loading dock reservations that commercial buildings mandate, and the time-of-day restrictions that apply to certain streets in the Loop and surrounding neighborhoods. We've done enough Chicago moves to know that failing on these details can derail an entire moving day, so we treat building and city compliance as a priority, not an afterthought."
+          },
+          {
+            "question": "Can you deliver furniture to high-rise apartments in downtown Chicago?",
+            "answer": "Yes, high-rise furniture delivery is something we handle regularly. We work with buildings across the downtown area — the South Loop, River North, the West Loop, and Streeterville. Each building has its own delivery procedures, and we familiarize ourselves with them before we arrive. Some require freight elevator reservations made days in advance, others need specific insurance documents on file, and a few have restricted delivery hours. We manage all of that coordination. For the delivery itself, we bring appropriate padding, floor protection, and enough crew to handle the move efficiently within the building's time window."
+          },
+          {
+            "question": "How does freight shipping to and from Chicago work with Freight Bridge?",
+            "answer": "We operate direct routes between Chicago and our Iowa City hub. For shipments coming out of Chicago, we coordinate pickup windows with your warehouse or loading dock — we have experience with facilities in Elk Grove Village, Bensenville, Romeoville, and other major industrial suburbs. We then run the freight direct to its destination without terminal transfers. For shipments coming into Chicago, we deliver to the address you specify, whether that's a commercial loading dock, a construction site, or a residential driveway with liftgate access. We provide tracking updates throughout the transit."
+          },
+          {
+            "question": "What's the best way to schedule an office move in Chicago?",
+            "answer": "For Chicago office moves, we recommend starting the conversation at least three to four weeks out if possible. The earlier we get involved, the better we can coordinate with building management, secure dock and elevator time, and develop a floor plan for the new space. We'll schedule a walkthrough of both locations to understand access points, elevator sizes, and any specialty requirements like IT equipment handling or furniture disassembly and reassembly. We can work after hours, over weekends, or during business hours depending on your preference and building rules."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "minneapolis-mn",
+      "city": "Minneapolis",
+      "state": "Minnesota",
+      "stateAbbr": "MN",
+      "localContent": {
+        "headline": "Minneapolis Freight & Moving Services — Twin Cities Coverage",
+        "intro": "The Twin Cities are a major hub for business, manufacturing, and logistics in the Upper Midwest, and Freight Bridge LLC extends our reliable freight and moving services up the I-35 corridor to Minneapolis and St. Paul. From downtown high-rises to suburban distribution centers, we bring the same hands-on service to Minnesota that we're known for in Iowa.",
+        "servicesOffered": {
+          "residential-moving": "We've helped families move into apartments near Uptown, condos along the Mississippi River in St. Anthony Main, and houses in established suburbs like Edina and Bloomington. Minneapolis residential moves come with their own set of considerations — alley access in older neighborhoods, winter weather planning, and building-specific move-in rules for the growing number of apartment towers downtown and in the North Loop. We adjust our approach based on the season and location, making sure floors are protected, furniture is wrapped for the climate, and timelines account for potential weather delays. We also serve the St. Paul side of the metro and the first-ring suburbs in between.",
+          "furniture-delivery": "Furniture delivery in the Minneapolis metro comes through our regular route network. We deliver for retailers, online sellers, and individual customers across the Twin Cities. Our team handles the logistics of residential and commercial deliveries — coordinating with building management for high-rise apartments in downtown Minneapolis, navigating the access restrictions in the Mall of America area for commercial deliveries, and making sure oversized pieces get through doors and up staircases without damage. White-glove service includes placement, assembly, and packaging removal, which is especially popular with customers ordering full room sets from furniture showrooms along the 394 corridor.",
+          "office-moving": "Minneapolis has a dense downtown business core with a lot of Class A office space, and we've moved offices in the buildings along Nicollet Mall, the IDS Center area, and the growing North Loop district. Our office moving process is thorough: pre-move survey, floor plan mapping, IT equipment handling, furniture disassembly and reassembly, and after-hours coordination. We understand the specific requirements of buildings managed by Ryan Companies and other major Twin Cities property managers, including dock scheduling, freight elevator booking, and insurance documentation. We also handle suburban office moves in the 494 and 694 beltway corridors.",
+          "long-distance-moving": "Moving out of Minneapolis to another state? We handle long-distance relocations from the Twin Cities throughout the Midwest and beyond. We route out of Minneapolis on I-35W south toward Iowa, I-94 east toward Wisconsin and Chicago, I-94 west toward Fargo and the Dakotas, and I-35 north toward Duluth. We're fully authorized for interstate transport under USDOT 4166904, so whether you're moving to a warmer climate in Arizona, heading east to the Great Lakes region, or relocating within the Upper Midwest, we can get you there. We provide firm pricing, regular communication, and a dedicated truck for your household goods.",
+          "freight-hauling": "Minneapolis is a major freight destination with a strong industrial base. We haul freight for businesses in the Twin Cities metro shipping to Iowa, Nebraska, Wisconsin, and beyond. We pick up from industrial parks in Brooklyn Park, Plymouth, Eagan, and Shakopee, and we deliver direct to destination — no terminal transfers, no unnecessary handling. Our freight service covers LTL and full truckload shipments, and we accommodate special requirements like liftgate service, inside delivery, and residential delivery for e-commerce businesses that ship oversized goods."
+        },
+        "localConnection": "Minneapolis sits about 240 miles north of our Iowa City operations, up I-35W and I-35E. It's a route we know well — through the farmland of northern Iowa, past Albert Lea, and into the southern Twin Cities suburbs. Minneapolis is the largest metro in the Upper Midwest outside of Chicago, and it's a key part of our regional service map. Freight Bridge LLC was founded by Mohamed Soliman with the idea that regional carriers can and should compete with national chains on service and reliability, and Minneapolis is a perfect example of that — we bring local Midwestern service standards to a city that's used to dealing with faceless logistics companies. We're not just another carrier passing through on I-94 — we're invested in the region and in doing right by our Minnesota customers.",
+        "benefits": [
+          "Regular route schedule from Iowa City up I-35W provides reliable transit times and cost-effective service to the Twin Cities",
+          "Familiar with Minneapolis building rules, dock access requirements, and downtown street configurations for efficient moves",
+          "Competitive rates compared to Twin Cities-based carriers because of our efficient regional route network",
+          "Personal account management — you talk to someone who knows your move or shipment, not a call center agent reading a script"
+        ],
+        "pricingGuide": "Minneapolis metro pricing follows a similar structure to other major Midwest cities. Local residential moves in the Twin Cities generally range from $500 for a studio to $1,500+ for larger homes depending on distance, floor access, and total volume. Furniture delivery in Minneapolis and the surrounding suburbs starts at $150 per stop. Freight runs from Minneapolis back to Iowa or the Midwest average $1.75–$3.00 per mile. We recommend reaching out for a customized quote, as Minneapolis jobs can vary significantly based on the specific location and requirements. All quotes are binding.",
+        "faqs": [
+          {
+            "question": "Can you move a household from Minneapolis to Iowa City or Des Moines?",
+            "answer": "Absolutely. That's actually one of our most common long-distance routes — moving families and individuals between Minnesota and Iowa. We run I-35W south regularly, so a Minneapolis-to-Iowa-City move fits our operational sweet spot. We can usually schedule these moves within a week or two of your preferred date, and because it's a regular route for us, the pricing is competitive. We handle anything from a studio apartment's worth of belongings to a full four-bedroom house. We'll coordinate pickup in the Minneapolis area and deliver straight to your new home, wherever that may be in Iowa."
+          },
+          {
+            "question": "Does Freight Bridge LLC work with businesses in the Twin Cities for regular freight shipping?",
+            "answer": "Yes, we work with manufacturers, distributors, and e-commerce businesses across the Minneapolis metro. Our freight service is designed for companies that need reliable, direct trucking between the Twin Cities and the rest of the Midwest — especially Iowa, Illinois, Nebraska, and Wisconsin. We're a good fit for businesses that are tired of dealing with large carriers that treat their freight as just another number in a terminal system. With us, you get the same driver, the same dispatch contact, and the same attention to your shipping requirements every time."
+          },
+          {
+            "question": "How do you handle furniture delivery to Minneapolis apartment buildings in winter?",
+            "answer": "Winter delivery in Minneapolis requires extra preparation. We park as close to the building entrance as possible to minimize exposure, and we use hand trucks rated for snow and ice conditions. We protect furniture from moisture with additional wrapping, and we lay down protective runners in building lobbies and hallways to keep melted snow and salt off the floors. We monitor weather forecasts closely and communicate with customers if a major storm might affect the delivery window. If the building has heated underground parking, we'll coordinate with management to use that access point if possible."
+          },
+          {
+            "question": "What areas of the Twin Cities do you cover?",
+            "answer": "We cover the full Minneapolis-St. Paul metropolitan area. That includes Minneapolis proper (downtown, Uptown, North Loop, Dinkytown, Northeast, and South Minneapolis), St. Paul (downtown, Summit-University, Highland Park, and the Midway area), and most suburbs including Bloomington (home to the Mall of America), Edina, Richfield, Roseville, Maplewood, Brooklyn Center, Plymouth, Minnetonka, and Eagan. If your address is within the 494/694 beltway or in the closer suburbs beyond it, we can provide service."
+          }
+        ]
+      }
+    }
+  ]
+}

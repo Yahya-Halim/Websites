@@ -1,109 +1,145 @@
 ---
 import Base from '@engine/layouts/Base.astro';
 import { getEntry } from 'astro:content';
+import reviews from '/src/data/content/reviews.json';
 
 const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
+
+const aboutReviews = reviews.slice(0, 6);
+const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
 ---
 
 <Base title={`About Us | ${business?.name}`} description={`Learn about ${business?.name}, a trusted moving and freight hauling company in ${business?.address.city}, ${business?.address.state}, with a team that treats every load like their own.`}>
   <section class="hero">
-    <h1>About {business?.name}</h1>
-    <p class="tagline">{business?.tagline}</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">About {business?.name}</span>
+        <h1>A team that moves <span class="grad">like it's their own.</span></h1>
+        <p class="lead">{business?.tagline}</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get a Quote</a>
+          <a href="/services" class="btn btn-ghost">Our Services</a>
+        </div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <img src="/art-about.png" alt="Freight Bridge moving trucks and cargo vans" width="900" height="680" />
+      </div>
+    </div>
   </section>
 
-  <section class="story">
-    <div class="story-content">
-      <h2>Our Story</h2>
-      <p>
+  <section class="section">
+    <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+      <span class="kicker">Our story</span>
+      <h2 style="font-family:var(--font-head);color:var(--ink);margin:.5rem 0 1rem;">Built on doing it right</h2>
+      <p style="color:var(--muted);line-height:1.8;margin:0 0 1rem;">
         {business?.name} is a trusted moving and freight hauling company based in
-        {business?.address.city}, {business?.address.state}. We're not a national chain or a call
-        center — when you hire us, you work with a dedicated team that handles your move
-        and stands behind every load.
+        {business?.address.city}, {business?.address.state}. Founded in 2020 by owner {business?.owner}, we built this company on a simple principle: treat every move and every haul like it's our own. We're not a national chain or a call center — when you hire us, you work with a dedicated, experienced team that handles your job from quote to completion and stands behind every load.
       </p>
+      <p style="color:var(--muted);line-height:1.8;margin:0 0 1rem;">
+        We move households and businesses across state lines, haul freight in 49 states for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects across the Iowa City and Cedar Rapids corridor. With over 500 completed moves, licensed interstate authority (USDOT {business?.dotNumber} / MC {business?.mcNumber}), and full cargo and liability insurance, we bring the credentials and experience to handle jobs of any size.
+      </p>
+      <p style="color:var(--muted);line-height:1.8;margin:0;">
+        Our service area covers the Iowa City–Cedar Rapids corridor for local moves — Iowa City, Coralville, North Liberty, and Cedar Rapids — plus 49 states for freight hauling. We offer same-day quotes, competitive rates, and scheduling that works around your business hours. Payment options include credit card, wire transfer, ACH, and Net-30 invoicing for commercial clients.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="margin:3rem 0;">
+    <div class="stats-bar" data-reveal>
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Moves Completed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">50</div>
+        <div class="stat-label">States Served</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">{business?.dotNumber}</div>
+        <div class="stat-label">USDOT Number</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">{business?.mcNumber}</div>
+        <div class="stat-label">MC Authority</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin:2rem 0 3rem;">
+    <div class="trust-bar" data-reveal>
+      <span class="trust-item"><span class="badge">✓</span> Licensed Interstate Carrier</span>
+      <span class="trust-item"><span class="badge">✓</span> Full Insurance Coverage</span>
+      <span class="trust-item"><span class="badge">✓</span> BBB Accredited</span>
+      <span class="trust-item"><span class="badge">✓</span> Same-Day Quotes</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">What we stand for</span>
+      <h2>Values that ride along</h2>
+    </div>
+    <div class="grid-3">
+      <div class="why" data-reveal><span class="why-num">01</span><h3>Hands-On Service</h3><p>Our team is on every job — people who know your move from start to finish, not a faceless call center.</p></div>
+      <div class="why" data-reveal><span class="why-num">02</span><h3>Honest & Reliable</h3><p>Straight quotes, careful handling of your belongings, and no surprises on moving day.</p></div>
+      <div class="why" data-reveal><span class="why-num">03</span><h3>Local to Nationwide</h3><p>From a single piece of furniture across Iowa to freight in 49 states — we go wherever you're headed.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Our team</span>
+      <h2>The Freight Bridge crew</h2>
+      <p class="section-sub">Movers · Haulers · Drivers — {business?.name} was founded to do moving and hauling the way it should be done: hands-on, dependable, and personal. Our experienced crew handles the quotes, runs the jobs, and stands behind every load.</p>
+    </div>
+    <div class="panel" data-reveal style="max-width:52rem;margin:1.5rem auto 0;">
+      <p style="color:var(--muted);line-height:1.8;margin:0;">
+        <strong>Owner & Operator: {business?.owner}</strong> — With over five years in the moving and freight industry, {business?.owner} leads every job personally. From the initial quote to the final placement of your furniture or delivery of your freight, you deal directly with the owner. That means no call-center transfers, no third-party subcontractors, and no surprises. Mohamed and the Freight Bridge crew have completed over 500 moves and hauled freight across 49 states, building a reputation for reliability, careful handling, and honest communication in the Iowa City–Cedar Rapids corridor and beyond.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="owner-note" data-reveal>
       <p>
-        As an authorized interstate carrier (USDOT 4414774, MC-1734786), we can legally move
-        households and businesses across state lines, not just locally. Alongside residential and
-        commercial moving, we haul freight in all 50 states for brokers and dispatchers with our own
-        truck and provide post-construction hauling for data center projects across the Iowa City and Cedar Rapids corridor.
+        “We started with one truck and local moves around Iowa City. Now we run freight in 49 states and
+        we've got over 500 moves behind us — but the part that matters hasn't changed. We answer the phone,
+        we show up when we say we will, and we treat your stuff like it's ours. That's the whole company.”
       </p>
+      <cite>— {business?.owner}, Owner &amp; Operator, Freight Bridge LLC</cite>
     </div>
   </section>
 
-  <section class="values">
-    <h2>What We Stand For</h2>
-    <div class="values-grid">
-      <div class="value-card">
-        <h3>Hands-On Service</h3>
-        <p>Our team is on every job. You get people who know your move from start to finish — not a faceless call center.</p>
-      </div>
-      <div class="value-card">
-        <h3>Honest & Reliable</h3>
-        <p>Straight quotes, careful handling of your belongings, and no surprises on moving day.</p>
-      </div>
-      <div class="value-card">
-        <h3>Licensed & Insured</h3>
-        <p>A fully authorized interstate carrier so your move is covered whether it's across town or across the country.</p>
-      </div>
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Reviews</span>
+      <h2>What our customers say</h2>
+      <p class="section-sub">Rated {avgRating} out of 5 across {reviews.length} reviews.</p>
+    </div>
+    <div class="review-grid" data-reveal>
+      {aboutReviews.map((r) => (
+        <figure class="review-card">
+          <div class="stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</div>
+          <blockquote>“{r.review}”</blockquote>
+          <figcaption><strong>{r.name}</strong> · {r.location}</figcaption>
+        </figure>
+      ))}
     </div>
   </section>
 
-  <section class="owner">
-    <h2>Our Team</h2>
-    <div class="owner-card">
-      <div class="owner-avatar">FB</div>
-      <div>
-        <h3>The Freight Bridge Team</h3>
-        <p class="role">Movers · Haulers · Drivers</p>
-        <p>{business?.name} was founded to do moving and hauling the way it should be done — hands-on, dependable, and personal. Our experienced crew handles the quotes, runs the jobs, and stands behind every load.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
     <h2>Ready to work with us?</h2>
-    <p>Get in touch with {business?.name} for a straight quote on your move or freight needs.</p>
-    <a href="/contact" class="cta-btn">Get a Quote</a>
+    <p>Get a straight quote on your move, haul, or freight needs.</p>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Get a Quote</a>
+      <a href={`tel:${business?.phone}`} class="btn btn-ghost-light">Call {business?.phone}</a>
+    </div>
   </section>
 </Base>
-
-<style>
-  .hero { padding: 4rem 0 2rem; text-align: center; }
-  h1 { font-size: 2.5rem; margin: 0 0 1rem; color: #1e3a8a; }
-  .tagline { font-size: 1.25rem; color: #6b7280; margin: 0; }
-  h2 { font-size: 1.75rem; margin: 0 0 1.5rem; color: #111827; }
-
-  .story { padding: 2rem 0; max-width: 48rem; margin: 0 auto; }
-  .story p { line-height: 1.8; color: #374151; margin: 0 0 1rem; }
-
-  .values { padding: 3rem 0; }
-  .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .value-card { background: #f0f9ff; padding: 2rem; border-radius: 0.75rem; border: 1px solid #bfdbfe; }
-  .value-card h3 { color: #2563eb; margin: 0 0 0.75rem; }
-  .value-card p { color: #374151; line-height: 1.6; margin: 0; }
-
-  .owner { padding: 3rem 0; }
-  .owner-card {
-    display: flex; gap: 1.5rem; align-items: flex-start; max-width: 48rem;
-    padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0.75rem;
-  }
-  .owner-avatar {
-    width: 4rem; height: 4rem; background: #2563eb; color: white; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center; font-weight: 700;
-    font-size: 1.25rem; flex-shrink: 0;
-  }
-  .owner-card h3 { margin: 0 0 0.25rem; color: #111827; }
-  .role { color: #2563eb; font-weight: 600; margin: 0 0 0.75rem; font-size: 0.875rem; }
-  .owner-card p:last-child { color: #6b7280; line-height: 1.6; margin: 0; }
-
-  .cta-section {
-    text-align: center; padding: 3rem 2rem; background: #f0f9ff;
-    border-radius: 1rem; margin: 2rem 0;
-  }
-  .cta-section p { color: #374151; margin: 0 0 1.5rem; font-size: 1.1rem; }
-  .cta-btn {
-    display: inline-block; background: #2563eb; color: white; padding: 0.75rem 2rem;
-    border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.1rem;
-  }
-  .cta-btn:hover { background: #1e40af; }
-</style>

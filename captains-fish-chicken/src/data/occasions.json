@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "family-dinner",
+    "title": "Family Dinner Night",
+    "headline": "Feed the Whole Crew Without Breaking the Bank",
+    "body": "Bring the family to Captains Fish and Chicken for a dinner everyone will love. Our combo dinners are packed with generous portions of fried fish, shrimp, or chicken, plus fries and bread. With prices between $10–$20 per person, you can treat the whole table without the hassle of cooking at home. Clean, welcoming, and always crispy.",
+    "featuredItems": [
+      { "sectionSlug": "combos-sides", "itemIndex": 0 },
+      { "sectionSlug": "seafood", "itemIndex": 0 },
+      { "sectionSlug": "chicken", "itemIndex": 0 }
+    ],
+    "faqs": [
+      { "question": "Do you have seating for large families?", "answer": "Yes, we have tables that can accommodate groups of 6–8. For larger parties, arrive early or call ahead." },
+      { "question": "Is there a kids' menu?", "answer": "Our chicken tenders and catfish nuggets are perfect for kids. We also offer smaller portion sizes upon request." },
+      { "question": "Can we order for the whole family online?", "answer": "Absolutely. Use UberEats or DoorDash to order family-size combos and have them delivered to your door." },
+      { "question": "Do you offer any family meal deals?", "answer": "Yes! Our Captain's Combo Dinner is the best value. Ask about seasonal family specials when you visit." },
+      { "question": "Is the restaurant kid-friendly?", "answer": "Very much so. We welcome families and keep the dining area clean and comfortable." }
+    ],
+    "crossLinks": [
+      { "slug": "menu", "anchor": "Browse all our seafood and chicken options", "context": "related" },
+      { "slug": "visit", "anchor": "Get directions and hours for our Cedar Rapids location", "context": "related" },
+      { "slug": "game-day", "anchor": "Planning a watch party? Check our game day spread", "context": "related" },
+      { "slug": "lunch-break", "anchor": "Quick lunch combos under $15", "context": "related" }
+    ],
+    "heroAltText": "A family enjoying fried fish and chicken at a restaurant table",
+    "howToSteps": [
+      { "name": "Browse the Menu", "text": "Choose from seafood, chicken, combos, and sides." },
+      { "name": "Place Your Order", "text": "Order at the counter, online, or by phone." },
+      { "name": "Pick Up or Dine In", "text": "Enjoy your meal in our clean dining area or take it home." }
+    ],
+    "seo": {
+      "title": "Family Dinner at Captains Fish and Chicken | Cedar Rapids",
+      "description": "Bring the family to Captains Fish and Chicken for affordable combo dinners, fresh fried seafood, and crispy chicken in Cedar Rapids. Dine in or order online.",
+      "canonical": "https://captainsfishandchicken.com/occasions/family-dinner"
+    },
+    "schemaTypes": ["HowTo", "FAQPage"]
+  },
+  {
+    "slug": "game-day",
+    "title": "Game Day Grub",
+    "headline": "The Perfect Lineup for Game Day",
+    "body": "Whether you're watching the Hawkeyes, the Cyclones, or the big game, Captains Fish and Chicken has the food to fuel your fandom. Order a spread of fried shrimp, wings, and catfish nuggets with plenty of fries. Big portions mean leftovers — or enough to feed the whole watch party. Available for pickup and delivery through UberEats and DoorDash.",
+    "featuredItems": [
+      { "sectionSlug": "chicken", "itemIndex": 0 },
+      { "sectionSlug": "seafood", "itemIndex": 0 },
+      { "sectionSlug": "combos-sides", "itemIndex": 1 }
+    ],
+    "faqs": [
+      { "question": "Can I place a large order for game day?", "answer": "Yes, we accept large orders. Call ahead for orders over $50 to ensure everything is ready on time." },
+      { "question": "Do you offer catering trays?", "answer": "We can package large orders in family trays. Call us to discuss your game day needs." },
+      { "question": "How fast is delivery on game day?", "answer": "Delivery times vary during peak hours. We recommend ordering early or choosing pickup." },
+      { "question": "What's the best item for a crowd?", "answer": "The 20pc wing platter and seafood combo are perfect for sharing. Add large fries for the table." },
+      { "question": "Do you stay open late on game days?", "answer": "We close at 10pm Mon–Sat and 9pm Sunday. Plan your order accordingly!" }
+    ],
+    "crossLinks": [
+      { "slug": "menu", "anchor": "See all wings, shrimp, and sides", "context": "related" },
+      { "slug": "family-dinner", "anchor": "Great for feeding the whole crew", "context": "related" },
+      { "slug": "lunch-break", "anchor": "Fast lunch combos under $15", "context": "related" },
+      { "slug": "visit", "anchor": "Pick up your order hot and fresh", "context": "related" }
+    ],
+    "heroAltText": "Crispy fried chicken wings and shrimp arranged for a game day spread",
+    "howToSteps": [
+      { "name": "Choose Your Spread", "text": "Pick wings, shrimp, catfish nuggets, and sides." },
+      { "name": "Order Ahead", "text": "Call, order online, or visit to place your game day order." },
+      { "name": "Enjoy the Game", "text": "Pick up or get delivery and enjoy hot, crispy food while you watch." }
+    ],
+    "seo": {
+      "title": "Game Day Food | Wings, Shrimp & Fish in Cedar Rapids",
+      "description": "Order game day food from Captains Fish and Chicken — wings, fried shrimp, catfish nuggets, and sides. Delivery and pickup in Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.com/occasions/game-day"
+    },
+    "schemaTypes": ["HowTo", "FAQPage"]
+  },
+  {
+    "slug": "lunch-break",
+    "title": "Lunch Break",
+    "headline": "Fast, Filling, and Under $15",
+    "body": "Short on time but big on hunger? Captains Fish and Chicken serves up lunch that's fast, affordable, and satisfying. Our combo dinners come with fries and bread, and most items are under $15. Located at 1616 1st Ave NE in Cedar Rapids, we're easy to reach from downtown or the highway. Dine in or grab it to go.",
+    "featuredItems": [
+      { "sectionSlug": "combos-sides", "itemIndex": 0 },
+      { "sectionSlug": "seafood", "itemIndex": 0 },
+      { "sectionSlug": "chicken", "itemIndex": 2 }
+    ],
+    "faqs": [
+      { "question": "How fast is lunch service?", "answer": "Most orders are ready in 10–15 minutes. Call ahead if you're in a rush." },
+      { "question": "Do you have lunch specials?", "answer": "Our Captain's Combo Dinner is always a great deal. Ask about any daily specials when you visit." },
+      { "question": "Is there parking nearby?", "answer": "Yes, we have convenient parking right outside our location on 1st Ave NE." },
+      { "question": "Can I order online for lunch pickup?", "answer": "Yes, order through UberEats or DoorDash for pickup or delivery." },
+      { "question": "What's the fastest item to order?", "answer": "Gizzards and fries are among our fastest items, ready in about 10 minutes." }
+    ],
+    "crossLinks": [
+      { "slug": "menu", "anchor": "Check prices and combos for your lunch break", "context": "related" },
+      { "slug": "visit", "anchor": "Get directions to 1616 1st Ave NE", "context": "related" },
+      { "slug": "family-dinner", "anchor": "Feeding the whole family tonight?", "context": "related" },
+      { "slug": "game-day", "anchor": "Planning an evening event?", "context": "related" }
+    ],
+    "heroAltText": "A quick lunch combo of fried fish, fries, and a drink on a restaurant table",
+    "howToSteps": [
+      { "name": "Pick Your Combo", "text": "Choose a fast, filling combo under $15." },
+      { "name": "Order", "text": "Order at the counter, online, or by phone." },
+      { "name": "Enjoy Your Lunch", "text": "Dine in or take it back to the office." }
+    ],
+    "seo": {
+      "title": "Lunch Specials Cedar Rapids | Fish & Chicken Under $15",
+      "description": "Fast, affordable lunch at Captains Fish and Chicken in Cedar Rapids. Combos under $15 with fries and bread. Dine in, pickup, or delivery.",
+      "canonical": "https://captainsfishandchicken.com/occasions/lunch-break"
+    },
+    "schemaTypes": ["HowTo", "FAQPage"]
+  }
+]

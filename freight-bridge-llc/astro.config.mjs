@@ -17,6 +17,9 @@ export default defineConfig({
         '@engine/components/Header.astro': fileURLToPath(
           new URL('./src/components/Header.astro', import.meta.url),
         ),
+        '@engine/layouts/Base.astro': fileURLToPath(
+          new URL('./src/layouts/Base.astro', import.meta.url),
+        ),
       },
     },
   },

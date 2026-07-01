@@ -1,0 +1,23 @@
+{
+  "id": "site",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Menu", "href": "/menu" },
+    { "label": "Occasions", "href": "/occasions" },
+    { "label": "Visit", "href": "/visit" }
+  ],
+  "footer": { 
+    "links": [
+      { "label": "Menu", "href": "/menu" },
+      { "label": "Visit Us", "href": "/visit" },
+      { "label": "Order Online", "href": "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA" },
+      { "label": "Facebook", "href": "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/" }
+    ], 
+    "copyrightText": "© Captains Fish and Chicken Inc. All rights reserved."
+  },
+  "schemaMap": {},
+  "cta": { 
+    "text": "Order Online", 
+    "href": "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA" 
+  }
+}

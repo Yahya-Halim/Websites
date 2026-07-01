@@ -1,0 +1,309 @@
+---
+import Base from '../layouts/Base.astro';
+import { getEntry, getCollection } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const menuEntry = await getCollection('menu');
+const featuredSections = menuEntry?.slice(0, 2) ?? [];
+
+const title = business?.name ?? "Captain's Fish & Chicken";
+const description = business?.description ?? '';
+const tagline = business?.tagline ?? '';
+---
+
+<Base title={title} description={description} transparentHeader={true}>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="logo-wrap">
+        <img src="/logo.png" alt={business?.brand?.logoAlt ?? "Captain's Fish & Chicken logo"} class="hero-logo" width="220" height="220" />
+      </div>
+      <h1 class="hero-title">Fresh Fish.<br/>Crispy Chicken.<br/>Unforgettable Flavor.</h1>
+      {tagline && <p class="hero-tagline">{tagline}</p>}
+      <p class="hero-desc">{description}</p>
+      <div class="hero-cta">
+        <a href="/menu" class="btn btn-primary">View Menu</a>
+        <a href={business?.sameAs?.[1]} class="btn btn-secondary" target="_blank" rel="noopener">Order Online</a>
+      </div>
+      <div class="meta-badges">
+        <span class="badge"><span aria-hidden="true">★</span> 4.4 (209 reviews)</span>
+        <span class="badge">$10–$20 per person</span>
+        <span class="badge">Mon–Sat 11am–10pm</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#F6F7F9" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
+  <!-- Popular Menu Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Customer Favorites</h2>
+        <p>Big portions, bold flavor, and prices that keep you coming back.</p>
+      </div>
+      <div class="grid-3">
+        {featuredSections.map((section) => (
+          <div class="card menu-card">
+            <div class="card-icon" aria-hidden="true">🍤</div>
+            <h3>{section.data.name}</h3>
+            <p>{section.data.description}</p>
+            <ul class="item-list">
+              {section.data.items.slice(0, 3).map((item) => (
+                <li>
+                  <span class="item-name">{item.name}</span>
+                  <span class="item-price">${item.prices[0].price.toFixed(2)}</span>
+                </li>
+              ))}
+            </ul>
+            <a href="/menu" class="btn btn-primary">See Full Menu</a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Why Choose Captain's</h2>
+        <p>Fresh ingredients, crispy perfection, and flavors that make you a regular.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card feature-card">
+          <div class="feature-icon" aria-hidden="true">🐟</div>
+          <h3>Fresh Daily</h3>
+          <p>Our seafood is sourced fresh and fried to order. No frozen fillets here.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon" aria-hidden="true">💰</div>
+          <h3>Great Value</h3>
+          <p>Combos under $15 with fries and bread. Big portions for big appetites.</p>
+        </div>
+        <div class="card feature-card">
+          <div class="feature-icon" aria-hidden="true">⭐</div>
+          <h3>4.4 Star Rating</h3>
+          <p>Rated by 200+ happy customers in Cedar Rapids. Come taste why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="section section-navy">
+    <div class="container">
+      <div class="section-header">
+        <h2>What Cedar Rapids Is Saying</h2>
+        <p>Real reviews from real customers.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card review-card">
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <p>"You definitely get a lot of food in your order. The combo dinners are a good value, they come with fries and a piece of bread."</p>
+          <span class="reviewer">— Local Diner</span>
+        </div>
+        <div class="card review-card">
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <p>"Gizzards had the most flavor of any I've had in the area and were so tender you could bite thru them no problem. Perfect amount of seasoning."</p>
+          <span class="reviewer">— Regular Customer</span>
+        </div>
+        <div class="card review-card">
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <p>"Good prices, clean place, nice staff and service, and amazing food."</p>
+          <span class="reviewer">— Happy Guest</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Online Section -->
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header">
+        <h2>Order Online</h2>
+        <p>Get your favorites delivered or ready for pickup.</p>
+      </div>
+      <div class="order-links">
+        <a href={business?.sameAs?.[1]} class="btn btn-primary" target="_blank" rel="noopener">🛵 Order on UberEats</a>
+        <a href={business?.sameAs?.[2]} class="btn btn-secondary" target="_blank" rel="noopener">🛵 Order on DoorDash</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #112E5C, #08162B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('/logo.png') center/contain no-repeat;
+    opacity: 0.05;
+    transform: scale(2);
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8, 22, 43, 0.55);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+  }
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-bottom: 2.5rem;
+    transition: transform 0.3s ease;
+  }
+  .logo-wrap:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+  .hero-logo {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.5));
+  }
+  .hero-title {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .hero-tagline {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  .hero-desc {
+    color: rgba(255,255,255,0.85);
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  .meta-badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(245, 181, 30, 0.3);
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  .wave-divider { margin-top: -1px; }
+  .wave-divider svg { display: block; }
+
+  .menu-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .item-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
+  .item-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--silver);
+  }
+  .item-name { font-weight: 600; }
+  .item-price {
+    background: var(--gold);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.15rem 0.7rem;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+
+  .feature-card {
+    text-align: center;
+  }
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .feature-card h3 {
+    color: var(--navy);
+  }
+  .feature-card p {
+    color: #555;
+  }
+
+  .review-card {
+    text-align: center;
+  }
+  .review-card p {
+    color: #555;
+    font-style: italic;
+  }
+  .stars {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .reviewer {
+    display: block;
+    margin-top: 1rem;
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .order-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 6rem 1rem 3rem; }
+    .hero-logo { width: 150px; }
+    .logo-wrap { padding: 1.25rem; }
+  }
+</style>

@@ -1,0 +1,262 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const menuSections = await getCollection('menu');
+const sorted = menuSections.sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0));
+
+const title = `Menu | ${business?.name ?? "Captain's Fish & Chicken"}`;
+const description = `Full menu for ${business?.name}. Seafood, chicken, combos, and sides in Cedar Rapids.`;
+---
+
+<Base title={title} description={description}>
+  <section class="menu-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Our Menu</h1>
+      <p class="tagline">Fresh fried fish, crispy chicken, and all the fixins.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#FFFFFF" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      {sorted.map((section) => (
+        <div class="menu-section" id={section.data.slug}>
+          <h2>{section.data.name}</h2>
+          <p class="section-desc">{section.data.description}</p>
+          <div class="items">
+            {section.data.items.map((item) => (
+              <div class="item-card">
+                {item.image && (
+                  <div class="item-photo">
+                    <img
+                      src={item.image}
+                      alt={item.imageAlt ?? item.name}
+                      loading="lazy"
+                      decoding="async"
+                      width="400"
+                      height="300"
+                      onerror="this.closest('.item-photo')?.remove()"
+                    />
+                  </div>
+                )}
+                <div class="item-body">
+                  <div class="item-header">
+                    <h3>{item.name}</h3>
+                    <div class="prices">
+                      {item.prices.map((p) => (
+                        <span class="price-tag">{p.label}: <strong>${p.price.toFixed(2)}</strong></span>
+                      ))}
+                    </div>
+                  </div>
+                  <p class="item-desc">{item.description}</p>
+                  {item.prepTime && <span class="prep"><span aria-hidden="true">⏱</span> {item.prepTime}</span>}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+      <p class="price-note">
+        Everything is fried fresh to order. Prices are updated regularly but may
+        change — please call <a href={`tel:${business?.phone}`}>{business?.phone}</a>
+        or check UberEats / DoorDash to confirm current pricing.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-navy">
+    <div class="container">
+      <div class="section-header">
+        <h2>Order Online</h2>
+        <p>Skip the line and get your favorites delivered.</p>
+      </div>
+      <div class="order-links">
+        <a href={business?.sameAs?.[1]} class="btn btn-primary" target="_blank" rel="noopener">🛵 UberEats</a>
+        <a href={business?.sameAs?.[2]} class="btn btn-secondary" target="_blank" rel="noopener">🛵 DoorDash</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .menu-hero {
+    min-height: 50vh;
+    background: linear-gradient(180deg, #112E5C, #08162B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8, 22, 43, 0.4);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .menu-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .tagline {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .wave-divider { margin-top: -1px; }
+  .wave-divider svg { display: block; }
+
+  .menu-section {
+    margin-bottom: 4rem;
+  }
+  .menu-section h2 {
+    font-size: 2rem;
+    color: var(--navy);
+    position: relative;
+    display: inline-block;
+  }
+  .menu-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--gold);
+    margin-top: 0.5rem;
+    border-radius: 2px;
+  }
+  .section-desc {
+    color: #555;
+    margin-top: 0.75rem;
+    font-size: 1.05rem;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .item-card {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: var(--shadow-medium);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(191, 200, 214, 0.3);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .item-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-large);
+  }
+  .item-photo {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--light-gray);
+    border-bottom: 3px solid var(--gold);
+  }
+  .item-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .item-card:hover .item-photo img {
+    transform: scale(1.06);
+  }
+  .item-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.5rem;
+  }
+  .item-header h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  .prices {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .price-tag {
+    font-size: 0.85rem;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+  .price-tag strong {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.95rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 8px;
+  }
+  .item-desc {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  .prep {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--navy);
+    background: var(--light-gray);
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+  }
+  .price-note {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .price-note a {
+    color: var(--navy);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .order-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 640px) {
+    .menu-hero { padding: 6rem 1rem 3rem; }
+  }
+</style>

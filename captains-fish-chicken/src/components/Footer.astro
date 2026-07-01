@@ -1,0 +1,170 @@
+---
+import { getEntry } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="footer-logo-chip">
+          <img
+            src="/logo.png"
+            alt={business?.brand?.logoAlt ?? `${business?.name ?? "Captain's Fish & Chicken"} logo`}
+            class="footer-logo"
+            width="120"
+            height="120"
+            loading="lazy"
+          />
+        </span>
+        <span class="brand-name">{business?.name ?? "Captain's Fish & Chicken"}</span>
+        {business?.slogan && <span class="brand-slogan">{business.slogan}</span>}
+      </div>
+      <div class="footer-divider"></div>
+    </div>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu">Menu</a></li>
+          <li><a href="/occasions">Occasions</a></li>
+          <li><a href="/visit">Visit Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href={business?.sameAs?.[1]} target="_blank" rel="noopener">Order on UberEats</a></li>
+          <li><a href={business?.sameAs?.[2]} target="_blank" rel="noopener">Order on DoorDash</a></li>
+          <li><a href={business?.sameAs?.[0]} target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Sat: 11am – 10pm</li>
+          <li>Sunday: 12pm – 9pm</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href={`tel:${business?.phone}`}>{business?.phone}</a></li>
+          <li><a href={`mailto:${business?.email}`}>{business?.email}</a></li>
+          <li>{business?.address?.street}</li>
+          <li>{business?.address?.city}, {business?.address?.state} {business?.address?.zip}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright">
+        {site?.footer?.copyrightText ?? `© ${business?.copyrightYears ?? new Date().getFullYear()} ${business?.name ?? ''}`}
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.8);
+    padding: 4rem 0 2rem;
+    border-top: 4px solid var(--gold);
+  }
+  /* Clear the floating "Order Online" pill / scroll-to-top button on small screens */
+  @media (max-width: 860px) {
+    .site-footer { padding-bottom: 6rem; }
+  }
+  .footer-top {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer-logo-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin-bottom: 0.5rem;
+  }
+  .footer-logo {
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+    display: block;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
+  }
+  .brand-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.85rem;
+    color: var(--white);
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+  .brand-slogan {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+  }
+  .footer-divider {
+    width: 80px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0 auto;
+    border-radius: 2px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  .footer-col h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-col li {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .footer-col a {
+    color: rgba(255,255,255,0.7);
+    transition: color var(--transition-fast);
+  }
+  .footer-col a:hover {
+    color: var(--gold);
+  }
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .copyright {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+  }
+</style>

@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://captainsfishandchicken.com/#business",
+  "name": "Captains Fish and Chicken",
+  "description": "Captains Fish and Chicken serves up Cedar Rapids' best fried catfish, shrimp, and chicken. Family-owned with big portions, great prices, and that perfect crispy crunch. Dine in or order online through UberEats and DoorDash.",
+  "telephone": "(319) 221-1040",
+  "email": "info@captainsfishandchicken.com",
+  "url": "https://captainsfishandchicken.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1616 1st Ave NE",
+    "addressLocality": "Cedar Rapids",
+    "addressRegion": "IA",
+    "postalCode": "52402",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.9779,
+    "longitude": -91.6578
+  },
+  "sameAs": [
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/",
+    "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+    "https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802889/73635575/"
+  ],
+  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay",
+  "image": "https://captainsfishandchicken.com/logo.png",
+  "logo": "https://captainsfishandchicken.com/logo.png",
+  "foundingDate": "2024"
+}

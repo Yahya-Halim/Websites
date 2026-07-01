@@ -1,6 +1,7 @@
 ---
 import Base from '@engine/layouts/Base.astro';
 import { getEntry, getCollection } from 'astro:content';
+import reviews from '/src/data/content/reviews.json';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -13,26 +14,172 @@ export async function getStaticPaths() {
 const { service } = Astro.props;
 const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
+const body = service.body;
 
-const iconMap: Record<string, string> = {
-  'residential-moving': '🚚',
-  'commercial-moving': '🏢',
-  'freight-hauling': '🚛',
+const iconFor: Record<string, string> = {
+  'residential-moving': 'home',
+  'commercial-moving': 'building',
+  'freight-hauling': 'truck',
+};
+const icons: Record<string, string> = {
+  home: '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>',
+  building: '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg>',
+  truck: '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>',
+};
+const icon = (name: string) => icons[name] ?? icons.truck;
+
+const base = business?.domain ?? '';
+const serviceUrl = service.seo?.canonical ?? `${base}/services/${service.slug}`;
+
+// Reviews — rotate deterministically by slug so each service page differs.
+const slugHash = [...service.slug].reduce((a, c) => a + c.charCodeAt(0), 0);
+const startIdx = slugHash % reviews.length;
+const shownReviews = [...reviews.slice(startIdx), ...reviews.slice(0, startIdx)].slice(0, 3);
+const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: service.name,
+  description: service.description,
+  serviceType: service.name,
+  url: serviceUrl,
+  provider: {
+    '@type': 'LocalBusiness',
+    '@id': `${base}/#business`,
+    name: business?.name,
+    telephone: business?.phone,
+  },
+  areaServed: { '@type': 'State', name: business?.address.stateFullName },
+};
+
+const faqLd =
+  service.faqs && service.faqs.length > 0
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: service.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      }
+    : null;
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${base}/services` },
+    { '@type': 'ListItem', position: 3, name: service.name, item: serviceUrl },
+  ],
 };
 ---
 
 <Base title={service.seo.title} description={service.seo.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceLd)} />
+  {faqLd && <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />}
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   <section class="hero">
-    <span class="hero-icon">{iconMap[service.slug] ?? '📦'}</span>
-    <h1>{service.name}</h1>
-    <p class="description">{service.description}</p>
-    <a href="/contact" class="cta-btn">Get a Quote</a>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner solo">
+      <div data-reveal>
+        <span class="svc-badge" set:html={icon(iconFor[service.slug] ?? 'truck')} />
+        <h1 class="grad">{service.name}</h1>
+        <p class="lead">{service.description}</p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get a Quote</a>
+          <a href={`tel:${business?.phone}`} class="btn btn-ghost">Call {business?.phone}</a>
+        </div>
+      </div>
+    </div>
   </section>
 
+  {body?.lede && (
+    <section class="section">
+      <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+        <p style="color:var(--ink);line-height:1.8;margin:0;font-size:1.08rem;">{body.lede}</p>
+      </div>
+    </section>
+  )}
+
+  {body?.included && body.included.length > 0 && (
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">What's included</span>
+        <h2>What you get</h2>
+      </div>
+      <ul class="benefit-list" data-reveal>
+        {body.included.map((item) => (
+          <li><span class="benefit-check">✓</span><span>{item}</span></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {body?.process && body.process.length > 0 && (
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">How it works</span>
+        <h2>Our {service.name.toLowerCase()} process</h2>
+      </div>
+      <div class="svc-process" data-reveal>
+        {body.process.map((step, i) => (
+          <div class="svc-step">
+            <span class="svc-step-num">{i + 1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {body?.detail && (
+    <section class="section">
+      <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+        <span class="kicker">The details</span>
+        <p style="color:var(--muted);line-height:1.8;margin:.75rem 0 0;">{body.detail}</p>
+      </div>
+    </section>
+  )}
+
+  {body?.ownerNote && (
+    <section class="section">
+      <div class="owner-note" data-reveal>
+        <p>“{body.ownerNote.split('—')[0].trim()}”</p>
+        {body.ownerNote.includes('—') && <cite>— {body.ownerNote.split('—').slice(1).join('—').trim()}</cite>}
+      </div>
+    </section>
+  )}
+
+  {shownReviews.length > 0 && (
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Reviews</span>
+        <h2>What our customers say</h2>
+        <p class="section-sub">Rated {avgRating} out of 5 across {reviews.length} reviews.</p>
+      </div>
+      <div class="review-grid" data-reveal>
+        {shownReviews.map((r) => (
+          <figure class="review-card">
+            <div class="stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</div>
+            <blockquote>“{r.review}”</blockquote>
+            <figcaption><strong>{r.name}</strong> · {r.location}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )}
+
   {service.faqs && service.faqs.length > 0 && (
-    <section class="faq">
-      <h2>Frequently Asked Questions</h2>
-      <div class="faq-list">
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">FAQ</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list" data-reveal>
         {service.faqs.map((faq) => (
           <details class="faq-item">
             <summary>{faq.question}</summary>
@@ -44,159 +191,38 @@ const iconMap: Record<string, string> = {
   )}
 
   {service.crossLinks && service.crossLinks.length > 0 && (
-    <section class="related">
-      <h2>Related Services</h2>
-      <div class="related-grid">
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Related</span>
+        <h2>Other services</h2>
+      </div>
+      <div class="grid-2">
         {service.crossLinks.map((link) => (
-          <a href={`/services/${link.slug}`} class="related-card">
-            <span class="related-icon">{iconMap[link.slug] ?? '📦'}</span>
-            <span>{link.anchor}</span>
-            <span class="arrow">→</span>
+          <a href={`/services/${link.slug}`} class="card" data-reveal>
+            <h3>{link.anchor}</h3>
+            <span class="card-link">View service <span class="arrow">→</span></span>
           </a>
         ))}
       </div>
     </section>
   )}
 
-  <section class="cta-section">
-    <h2>Ready to Use Our {service.name} Service?</h2>
-    <p>Contact {business?.name} today for a free consultation and competitive quote.</p>
-    <div class="cta-buttons">
-      <a href="/contact" class="cta-btn primary">Request a Quote</a>
-      <a href={`tel:${business?.phone}`} class="cta-btn secondary">Call {business?.phone}</a>
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <h2>Ready to use our {service.name} service?</h2>
+    <p>Contact {business?.name} for a free consultation and a competitive quote.</p>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Request a Quote</a>
+      <a href={`tel:${business?.phone}`} class="btn btn-ghost-light">Call {business?.phone}</a>
     </div>
   </section>
 </Base>
 
 <style>
-  .hero {
-    padding: 4rem 0 2rem;
-    text-align: center;
+  .svc-badge {
+    display: inline-flex; align-items: center; justify-content: center; width: 72px; height: 72px;
+    border-radius: 20px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; margin-bottom: 1.25rem; backdrop-filter: blur(8px);
   }
-  .hero-icon {
-    font-size: 3.5rem;
-    display: block;
-    margin-bottom: 1rem;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin: 0 0 1rem;
-    color: #1e3a8a;
-  }
-  .description {
-    max-width: 40rem;
-    margin: 0 auto 2rem;
-    color: #374151;
-    line-height: 1.7;
-    font-size: 1.1rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-    color: #111827;
-    margin: 0 0 1.5rem;
-  }
-  .cta-btn {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .cta-btn:hover {
-    background: #1e40af;
-  }
-
-  .faq {
-    padding: 3rem 0;
-    max-width: 48rem;
-    margin: 0 auto;
-  }
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  .faq-item {
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    overflow: hidden;
-  }
-  .faq-item summary {
-    padding: 1rem 1.5rem;
-    cursor: pointer;
-    font-weight: 600;
-    color: #111827;
-    background: #f9fafb;
-  }
-  .faq-item summary:hover {
-    background: #f0f9ff;
-  }
-  .faq-item p {
-    padding: 1rem 1.5rem;
-    margin: 0;
-    color: #374151;
-    line-height: 1.6;
-    border-top: 1px solid #e5e7eb;
-  }
-
-  .related {
-    padding: 3rem 0;
-  }
-  .related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-  .related-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1.25rem 1.5rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    color: #111827;
-    font-weight: 600;
-    transition: border-color 0.2s;
-  }
-  .related-card:hover {
-    border-color: #2563eb;
-  }
-  .related-icon {
-    font-size: 1.5rem;
-  }
-  .arrow {
-    margin-left: auto;
-    color: #2563eb;
-  }
-
-  .cta-section {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: #f0f9ff;
-    border-radius: 1rem;
-    margin: 2rem 0;
-  }
-  .cta-section p {
-    color: #374151;
-    margin: 0 0 1.5rem;
-    font-size: 1.1rem;
-  }
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .cta-btn.primary {
-    background: #2563eb;
-    color: white;
-  }
-  .cta-btn.secondary {
-    background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
-  }
+  .hero-inner.solo h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); }
 </style>

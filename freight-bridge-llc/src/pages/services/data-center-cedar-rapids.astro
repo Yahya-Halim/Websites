@@ -1,174 +1,144 @@
 ---
 import Base from '@engine/layouts/Base.astro';
 import { getEntry } from 'astro:content';
+import reviews from '/src/data/content/reviews.json';
 
 const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
+
+const dcReviews = reviews.slice(0, 3);
+const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+
+const faqs = [
+  { question: 'Do you service the Big Cedar Industrial Center?', answer: 'Yes. We provide debris removal, equipment hauling, and site cleanup for projects at Big Cedar Industrial Center and throughout the Cedar Rapids metro area.' },
+  { question: 'Can you work with QTS or Google project timelines?', answer: 'Absolutely. Our team coordinates directly with site managers to schedule removal runs that fit your project phases.' },
+  { question: 'Do you handle hazardous materials?', answer: 'No. We focus on standard construction debris and non-hazardous waste removal only.' },
+  { question: 'How quickly can you respond?', answer: "We're based in the Iowa City–Cedar Rapids corridor. Our crew can be on-site within hours for urgent cleanup needs." },
+  { question: 'Do you provide data destruction for decommissioned equipment?', answer: 'We focus on physical removal and transport. We deliver equipment to your certified ITAD or e-waste recycling partner.' },
+];
+
+const base = business?.domain ?? '';
+const pageUrl = `${base}/services/data-center-cedar-rapids`;
+
+const serviceLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Data Center Cleanup & Removal — Cedar Rapids',
+  description: 'Post-construction debris removal and equipment hauling for data center projects in Cedar Rapids, including Big Cedar Industrial Center.',
+  serviceType: 'Post-construction hauling',
+  url: pageUrl,
+  provider: { '@type': 'LocalBusiness', '@id': `${base}/#business`, name: business?.name, telephone: business?.phone },
+  areaServed: ['Cedar Rapids', 'Marion', 'Hiawatha'].map((name) => ({ '@type': 'City', name })),
+};
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
+};
+
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
+    { '@type': 'ListItem', position: 2, name: 'Services', item: `${base}/services` },
+    { '@type': 'ListItem', position: 3, name: 'Data-Center Hauling — Cedar Rapids', item: pageUrl },
+  ],
+};
 ---
 
 <Base title="Data Center Cleanup & Removal — Cedar Rapids | Freight Bridge LLC" description="Post-construction debris removal and equipment hauling for data center projects in Cedar Rapids. Serving Big Cedar Industrial Center, QTS, and Google campuses.">
+  <script type="application/ld+json" set:html={JSON.stringify(serviceLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
   <section class="hero">
-    <span class="badge">Cedar Rapids Corridor</span>
-    <h1>Data Center Cleanup & Removal</h1>
-    <p class="subtitle">Post-construction hauling for Cedar Rapids — serving Big Cedar Industrial Center and beyond</p>
-  </section>
-
-  <section class="intro">
-    <p>
-      Cedar Rapids is the epicenter of Iowa's data center boom — with billions in investment
-      from QTS, Google, and others at Big Cedar Industrial Center. Freight Bridge LLC provides
-      the post-construction muscle: hauling out debris, removing decommissioned equipment,
-      and cleaning up sites so they're ready for commissioning. Our crew supervises every load with care.
-    </p>
-  </section>
-
-  <section class="services-detail">
-    <h2>What We Haul Out</h2>
-    <div class="service-grid">
-      <div class="service-item">
-        <span class="icon">🏗️</span>
-        <h3>Construction Debris Removal</h3>
-        <p>Concrete waste, scrap metal, wood, drywall, insulation, packaging, and general debris from data center build sites at Big Cedar Industrial Center and throughout Cedar Rapids.</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">Cedar Rapids Corridor</span>
+        <h1>Data-center <span class="grad">cleanup & removal.</span></h1>
+        <p class="lead">Post-construction hauling for Cedar Rapids — serving Big Cedar Industrial Center and beyond.</p>
+        <div class="hero-cta">
+          <a href={`tel:${business?.phone}`} class="btn btn-primary">Call {business?.phone}</a>
+          <a href="/contact" class="btn btn-ghost">Request a Quote</a>
+        </div>
       </div>
-      <div class="service-item">
-        <span class="icon">🖥️</span>
-        <h3>Decommissioned Equipment Hauling</h3>
-        <p>Server racks, cooling units, UPS systems, PDUs, cable trays, and obsolete infrastructure. We transport to your certified ITAD or recycling facility.</p>
-      </div>
-      <div class="service-item">
-        <span class="icon">🧹</span>
-        <h3>Post-Construction Site Cleanup</h3>
-        <p>Final-phase clearing after buildout. We coordinate with QTS, Google, and other project timelines to fit removal runs around active construction.</p>
+      <div class="hero-art" data-reveal>
+        <img src="/art-datacenter.png" alt="Warehouse and industrial facility" width="900" height="680" />
       </div>
     </div>
   </section>
 
-  <section class="coverage">
-    <h2>Service Area</h2>
-    <div class="area-grid">
-      <div class="area featured">
-        <h3>Big Cedar Industrial Center</h3>
-        <p>All services — QTS & Google campuses</p>
-      </div>
-      <div class="area">
-        <h3>Cedar Rapids</h3>
-        <p>All services available</p>
-      </div>
-      <div class="area">
-        <h3>Marion</h3>
-        <p>Debris removal & site cleanup</p>
-      </div>
-      <div class="area">
-        <h3>Hiawatha</h3>
-        <p>Debris removal & site cleanup</p>
-      </div>
+  <section class="section">
+    <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+      <p style="color:var(--muted);line-height:1.8;margin:0;font-size:1.05rem;">
+        Cedar Rapids is the epicenter of Iowa's data center boom — with billions in investment from
+        QTS, Google, and others at Big Cedar Industrial Center. Freight Bridge LLC provides the
+        post-construction muscle: hauling out debris, removing decommissioned equipment, and cleaning
+        up sites so they're ready for commissioning. Our crew supervises every load with care.
+      </p>
     </div>
   </section>
 
-  <section class="why-us">
-    <h2>Why Freight Bridge for Data Center Cleanup?</h2>
-    <div class="reasons">
-      <div class="reason">
-        <strong>A team on every job</strong>
-        <p>Our crew supervises every load with care. No middlemen, no call centers.</p>
-      </div>
-      <div class="reason">
-        <strong>25 miles from the action</strong>
-        <p>Based in Iowa City, just down I-380 from Cedar Rapids. On-site within the hour.</p>
-      </div>
-      <div class="reason">
-        <strong>Built for data center scale</strong>
-        <p>Multi-trip scheduling for large campus projects. We coordinate with your GC's phases.</p>
-      </div>
-      <div class="reason">
-        <strong>Clean and simple</strong>
-        <p>Standard debris and non-hazardous equipment only. No hazmat complications — just reliable hauling.</p>
-      </div>
+  <section class="section">
+    <div class="section-head" data-reveal><span class="kicker">What we haul out</span><h2>Built for campus-scale projects</h2></div>
+    <div class="grid-3">
+      <div class="card" data-reveal><h3>🏗️ Construction Debris Removal</h3><p>Concrete waste, scrap metal, wood, drywall, insulation, packaging, and general debris from build sites at Big Cedar Industrial Center and throughout Cedar Rapids.</p></div>
+      <div class="card" data-reveal><h3>🖥️ Equipment Hauling</h3><p>Server racks, cooling units, UPS systems, PDUs, cable trays, and obsolete infrastructure, transported to your certified ITAD or recycling facility.</p></div>
+      <div class="card" data-reveal><h3>🧹 Site Cleanup</h3><p>Final-phase clearing after buildout. We coordinate with QTS, Google, and other project timelines to fit runs around active construction.</p></div>
     </div>
   </section>
 
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-list">
-      <details class="faq-item">
-        <summary>Do you service the Big Cedar Industrial Center?</summary>
-        <p>Yes. We provide debris removal, equipment hauling, and site cleanup for projects at Big Cedar Industrial Center and throughout the Cedar Rapids metro area.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Can you work with QTS or Google project timelines?</summary>
-        <p>Absolutely. Our team coordinates directly with site managers to schedule removal runs that fit your project phases.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do you handle hazardous materials?</summary>
-        <p>No. We focus on standard construction debris and non-hazardous waste removal only.</p>
-      </details>
-      <details class="faq-item">
-        <summary>How quickly can you respond?</summary>
-        <p>We're based in the Iowa City-Cedar Rapids corridor. Our crew can be on-site within hours for urgent cleanup needs.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Do you provide data destruction for decommissioned equipment?</summary>
-        <p>We focus on physical removal and transport. We deliver equipment to your certified ITAD or e-waste recycling partner.</p>
-      </details>
+  <section class="section">
+    <div class="section-head" data-reveal><span class="kicker">Service area</span><h2>Where we work</h2></div>
+    <div class="grid-2">
+      <div class="dc-card" data-reveal><span class="dc-tag">Featured</span><h3>Big Cedar Industrial Center</h3><p>All services — QTS &amp; Google campuses</p></div>
+      <div class="why" data-reveal><h3>Cedar Rapids</h3><p>All services available</p></div>
+      <div class="why" data-reveal><h3>Marion</h3><p>Debris removal & site cleanup</p></div>
+      <div class="why" data-reveal><h3>Hiawatha</h3><p>Debris removal & site cleanup</p></div>
     </div>
   </section>
 
-  <section class="cta-section">
+  <section class="section">
+    <div class="section-head" data-reveal><span class="kicker">Why us</span><h2>Why Freight Bridge for data-center cleanup?</h2></div>
+    <div class="grid-2">
+      <div class="why" data-reveal><h3>A team on every job</h3><p>Our crew supervises every load with care. No middlemen, no call centers.</p></div>
+      <div class="why" data-reveal><h3>25 miles from the action</h3><p>Based in Iowa City, just down I-380 from Cedar Rapids. On-site within the hour.</p></div>
+      <div class="why" data-reveal><h3>Built for data-center scale</h3><p>Multi-trip scheduling for large campus projects. We coordinate with your GC's phases.</p></div>
+      <div class="why" data-reveal><h3>Clean and simple</h3><p>Standard debris and non-hazardous equipment only. No hazmat complications — just reliable hauling.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" data-reveal><span class="kicker">FAQ</span><h2>Frequently asked questions</h2></div>
+    <div class="faq-list" data-reveal>
+      {faqs.map((faq) => (
+        <details class="faq-item"><summary>{faq.question}</summary><p>{faq.answer}</p></details>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head" data-reveal><span class="kicker">Reviews</span><h2>What our customers say</h2><p class="section-sub">Rated {avgRating} out of 5 across {reviews.length} reviews.</p></div>
+    <div class="review-grid" data-reveal>
+      {dcReviews.map((r) => (
+        <figure class="review-card">
+          <div class="stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</div>
+          <blockquote>“{r.review}”</blockquote>
+          <figcaption><strong>{r.name}</strong> · {r.location}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
     <h2>Need post-construction hauling in Cedar Rapids?</h2>
     <p>Call us directly — our team will coordinate the removal around your project timeline.</p>
-    <div class="cta-buttons">
-      <a href={`tel:${business?.phone}`} class="cta-btn primary">Call {business?.phone}</a>
-      <a href="/contact" class="cta-btn secondary">Request a Quote</a>
+    <div class="hero-cta">
+      <a href={`tel:${business?.phone}`} class="btn btn-primary">Call {business?.phone}</a>
+      <a href="/contact" class="btn btn-ghost-light">Request a Quote</a>
     </div>
   </section>
 </Base>
-
-<style>
-  .hero { padding: 4rem 0 2rem; text-align: center; }
-  .badge {
-    display: inline-block; background: #2563eb; color: white;
-    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.05em; padding: 0.375rem 1rem; border-radius: 1rem; margin-bottom: 1rem;
-  }
-  h1 { font-size: 2.5rem; margin: 0 0 1rem; color: #1e3a8a; }
-  .subtitle { font-size: 1.2rem; color: #6b7280; margin: 0; }
-  h2 { font-size: 1.75rem; color: #111827; margin: 0 0 1.5rem; }
-
-  .intro { max-width: 48rem; margin: 0 auto; padding: 2rem 0; }
-  .intro p { line-height: 1.8; color: #374151; font-size: 1.05rem; }
-
-  .services-detail { padding: 3rem 0; }
-  .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .service-item { padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0.75rem; }
-  .service-item .icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
-  .service-item h3 { margin: 0 0 0.75rem; color: #1e3a8a; }
-  .service-item p { margin: 0; color: #374151; line-height: 1.6; font-size: 0.95rem; }
-
-  .coverage { padding: 3rem 0; text-align: center; }
-  .area-grid { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
-  .area { padding: 1.5rem 2rem; background: #f0f9ff; border-radius: 0.75rem; border: 1px solid #bfdbfe; min-width: 180px; }
-  .area.featured { background: #dbeafe; border-color: #2563eb; }
-  .area h3 { margin: 0 0 0.25rem; color: #1e3a8a; }
-  .area p { margin: 0; color: #6b7280; font-size: 0.85rem; }
-
-  .why-us { padding: 3rem 0; }
-  .reasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-  .reason { padding: 1.5rem; background: #f0f9ff; border-radius: 0.5rem; border-left: 4px solid #2563eb; }
-  .reason strong { display: block; margin-bottom: 0.5rem; color: #111827; }
-  .reason p { margin: 0; color: #374151; font-size: 0.9rem; line-height: 1.5; }
-
-  .faq { padding: 3rem 0; max-width: 48rem; margin: 0 auto; }
-  .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
-  .faq-item { border: 1px solid #e5e7eb; border-radius: 0.5rem; overflow: hidden; }
-  .faq-item summary { padding: 1rem 1.5rem; cursor: pointer; font-weight: 600; color: #111827; background: #f9fafb; }
-  .faq-item summary:hover { background: #f0f9ff; }
-  .faq-item p { padding: 1rem 1.5rem; margin: 0; color: #374151; line-height: 1.6; border-top: 1px solid #e5e7eb; }
-
-  .cta-section { text-align: center; padding: 3rem 2rem; background: #1e3a8a; color: white; border-radius: 1rem; margin: 2rem 0; }
-  .cta-section h2 { color: white; }
-  .cta-section p { opacity: 0.9; margin: 0 0 1.5rem; font-size: 1.1rem; }
-  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .cta-btn { display: inline-block; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
-  .cta-btn.primary { background: #2563eb; color: white; }
-  .cta-btn.secondary { background: transparent; color: white; border: 2px solid white; }
-</style>

@@ -1,0 +1,65 @@
+---
+import Base from '@engine/layouts/Base.astro';
+import { getEntry, getCollection } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime(),
+);
+
+const fmt = (d: string) =>
+  new Date(`${d}T00:00:00`).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+const title = `Moving & Freight Guides | ${business?.name}`;
+const description =
+  'Practical moving and freight guides from Freight Bridge LLC — Iowa moving costs, furniture moving, office relocation, long-distance moving, and small-business freight shipping.';
+---
+
+<Base title={title} description={description}>
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">Guides & resources</span>
+        <h1>Moving & freight, <span class="grad">explained.</span></h1>
+        <p class="lead">
+          Straight-talking guides from a working moving and freight company — real Iowa pricing, real
+          checklists, and the lessons {business?.movesCompleted} moves have taught us.
+        </p>
+        <div class="hero-cta"><a href="/contact" class="btn btn-primary">Get a Quote</a></div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <img src="/art-services.png" alt="Mover with boxes and delivery van" width="900" height="680" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-3">
+      {posts.map((post) => (
+        <a href={`/blog/${post.id}`} class="card" data-reveal>
+          <h3>{post.data.title}</h3>
+          <p>{post.data.excerpt}</p>
+          <p class="post-card-meta">{fmt(post.data.pubDate)}{post.data.readTime ? ` · ${post.data.readTime}` : ''}</p>
+          <span class="card-link">Read guide <span class="arrow">→</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <h2>Got a question we haven't answered?</h2>
+    <p>Call {business?.owner} and the Freight Bridge team for a straight answer.</p>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Contact Us</a>
+      <a href={`tel:${business?.phone}`} class="btn btn-ghost-light">Call {business?.phone}</a>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .post-card-meta { color: var(--muted); font-size: 0.82rem; margin: 0 0 1.1rem; font-weight: 500; }
+</style>

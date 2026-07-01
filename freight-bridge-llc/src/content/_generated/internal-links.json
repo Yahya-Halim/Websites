@@ -22,6 +22,11 @@
       "context": "inline"
     },
     {
+      "slug": "/blog",
+      "anchor": "Guides",
+      "context": "inline"
+    },
+    {
       "slug": "/contact",
       "anchor": "Contact",
       "context": "inline"

@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "headline": "Affordable Freight & Moving Services — Iowa City to 49 states",
+    "subheadline": "Owner Mohamed Soliman brings a boutique, hands-on approach to every move. Whether you need reliable long-distance moving or nationwide freight hauling, we treat your belongings like our own — one truck, one customer, one job at a time.",
+    "ctaPrimary": "Get a Free Quote",
+    "ctaSecondary": "Call (641) 451-3132"
+  },
+  "trustSignals": {
+    "stats": [
+      { "number": "500+", "label": "Moves Completed" },
+      { "number": "50", "label": "States Served" },
+      { "number": "1", "label": "Truck, Full Attention" },
+      { "number": "4166904", "label": "USDOT Licensed" }
+    ],
+    "badges": [
+      "Licensed Interstate Carrier",
+      "Full Insurance",
+      "Owner-Operated",
+      "Same-Day Quotes"
+    ]
+  },
+  "services": {
+    "intro": "Freight Bridge LLC offers a full range of moving and freight services designed for homes, businesses, and everything in between. As a small, owner-operated carrier based in Iowa City, we bring personal care to every job — from a single piece of furniture to a full household across the country. Below is everything we do.",
+    "items": [
+      {
+        "name": "Residential Moving",
+        "description": "Best-in-class residential moving from Iowa City to anywhere in the U.S. Mohamed and his team handle packing, loading, transport, and unloading with the care your home deserves. No subcontractors — just the owner on-site.",
+        "link": "/services/residential-moving"
+      },
+      {
+        "name": "Office Moving",
+        "description": "Minimize downtime with a commercial move that actually stays on schedule. We coordinate after-hours or weekend moves so your business stays up and running. IT equipment, furniture, files — we've moved it all across Iowa and beyond.",
+        "link": "/services/office-moving"
+      },
+      {
+        "name": "Furniture Delivery",
+        "description": "Need a couch, table, or appliance delivered safely? We offer affordable furniture delivery across the Midwest and nationwide. Each piece is strapped, padded, and delivered by the person who loaded it — because we don't pass the buck.",
+        "link": "/services/furniture-delivery"
+      },
+      {
+        "name": "Long-Distance Moving",
+        "description": "Relocating across state lines? As a fully licensed interstate carrier (USDOT 4166904, MC 1734786), we handle long-distance moves with full insurance and real, personal accountability. One truck means your stuff stays on board from pickup to drop-off.",
+        "link": "/services/long-distance-moving"
+      },
+      {
+        "name": "Nationwide Freight Hauling",
+        "description": "From Iowa City to California, Florida, or anywhere in between — we haul freight to 49 states. Small loads, LTL, and full truckload. Call (641) 451-3132 for a same-day quote and talk directly to the owner.",
+        "link": "/services/nationwide-freight-hauling"
+      }
+    ]
+  },
+  "aboutSummary": "Freight Bridge LLC is a boutique, owner-operated freight and moving company based in Iowa City, Iowa. Owner Mohamed Soliman personally runs every aspect of the business — from quoting and scheduling to driving the truck and unloading at your destination. With over 500 moves completed and a clean safety record under USDOT 4166904 and MC 1734786, Freight Bridge delivers reliable, affordable moving and freight hauling to 49 states. Mohamed's philosophy is simple: operate one truck, give each customer his undivided attention, and never compromise on care. Whether you're moving a family across town or shipping equipment cross-country, you work directly with the person responsible for getting it there safely. That's the Freight Bridge difference.",
+  "serviceAreas": {
+    "headline": "Where We Serve — Local Iowa & Nationwide Freight Coverage",
+    "local": "Based in Iowa City, we serve the entire Iowa City-Cedar Rapids corridor including Coralville, North Liberty, Tiffin, Solon, Mount Vernon, and Marion. Same-day quotes and flexible scheduling for local moves. We know these streets, these buildings, and these neighborhoods — and we're proud to serve our community first.",
+    "nationwide": "Licensed for interstate freight and moving in 49 states. From the East Coast to the West Coast, we haul long-distance residential moves, commercial freight, and furniture deliveries. LTL and full truckload available. No matter where you're headed, we'll get you there — with one driver, one truck, and no handoffs.",
+    "keyCities": [
+      "Cedar Rapids, IA",
+      "Des Moines, IA",
+      "Chicago, IL",
+      "Minneapolis, MN",
+      "Davenport, IA"
+    ]
+  },
+  "faqs": [
+    {
+      "question": "What is the best freight company in Iowa City?",
+      "answer": "If you're looking for the best freight and moving company in Iowa City, Freight Bridge LLC stands out for one simple reason: the owner shows up. Mohamed Soliman operates a single truck with a single standard — treat every item like it's his own. With over 500 moves completed, full interstate licensing (USDOT 4166904, MC 1734786), and service to 49 states, Freight Bridge offers the reliability of a national carrier with the personal attention only an owner-operator can provide. Customers appreciate same-day quotes, honest pricing, and the peace of mind that comes from working directly with the person driving the truck. If you live in the Iowa City-Cedar Rapids area or need freight shipped anywhere across the country, Freight Bridge is a name you can trust."
+    },
+    {
+      "question": "How much does moving cost in Iowa?",
+      "answer": "Moving costs in Iowa vary depending on distance, volume, stairs, packing services, and timing. Freight Bridge LLC offers affordable, transparent pricing with no hidden fees. Because we're a small, owner-operated company — not a corporate chain — our overhead is lower, and those savings go straight to you. Mohamed provides same-day quotes over the phone after understanding exactly what you're moving and where it's going. A local Iowa City to Cedar Rapids move will naturally cost less than a cross-country relocation, but in every case, you get the full attention of the owner from start to finish. Call (641) 451-3132 for a free, no-obligation estimate. We'll give you a fair price, and we'll stick to it — no surprises."
+    },
+    {
+      "question": "Does Freight Bridge LLC handle long-distance moves?",
+      "answer": "Absolutely — long-distance moving is one of our core specialties. Freight Bridge LLC is a fully licensed interstate carrier (USDOT 4166904, MC 1734786) authorized to operate in 49 states. When you book a long-distance move with us, your belongings are loaded onto our single truck and stay there until they reach your destination. That means no transfers, no third-party handlers, and no lost items. Mohamed drives the truck himself, so you always know who's in charge. Whether you're moving from Iowa City to Denver, Chicago to Phoenix, or anywhere in between, we provide reliable, insured, and personally supervised service. We also offer flexible scheduling to accommodate your timeline. Call (641) 451-3132 to talk through your move and get a free quote."
+    },
+    {
+      "question": "What areas do you serve?",
+      "answer": "Freight Bridge LLC serves two primary categories of areas. Locally, we cover the entire Iowa City-Cedar Rapids corridor including Coralville, North Liberty, Tiffin, Solon, Mount Vernon, and Marion. We know the area intimately and can typically offer same-day or next-day service for local moves and deliveries. Nationwide, we are licensed and insured to operate in 49 states. Our interstate authority (USDOT 4166904, MC 1734786) covers everything from short regional hauls to coast-to-coast relocations. Key cities we frequently serve include Des Moines, Chicago, Minneapolis, Davenport, Omaha, Kansas City, St. Louis, Denver, Phoenix, and many more. No matter where you're headed, if you need reliable freight or moving service, Freight Bridge can get you there."
+    },
+    {
+      "question": "Do you offer furniture delivery?",
+      "answer": "Yes, we offer affordable and reliable furniture delivery across the Midwest and nationwide. Whether you're buying a sectional from a local Iowa City shop, sending a dining set to your college student in Chicago, or shipping an antique to a family member in California, Freight Bridge can handle it. Every piece is professionally strapped, padded, and secured by Mohamed himself. Because we operate a single truck, your furniture is never transferred between vehicles — it stays in our care from pickup to delivery. This reduces the risk of damage and ensures a consistent, accountable experience. We offer same-day quotes, flexible scheduling, and full insurance coverage. Call (641) 451-3132 to arrange a furniture delivery — whether it's one item or a whole houseful."
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Move? Talk Directly to the Owner.",
+    "text": "When you call Freight Bridge LLC, you get Mohamed — not a call center, not a dispatcher, not a salesperson. He'll answer your questions, give you a fair price on the spot, and personally handle your move from start to finish. Over 500 customers have trusted him with their belongings. You can too."
+  }
+}

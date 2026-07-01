@@ -7,7 +7,7 @@
   "domain": "https://freightbridgellc.com",
   "owner": "Mohamed Soliman",
   "slogan": "Moving & Freight Hauling — Done Right",
-  "description": "Freight Bridge LLC is a trusted moving and freight hauling company based in Iowa City, Iowa. As an authorized interstate carrier (USDOT 4414774, MC-1734786), we handle residential and commercial moves, haul freight in all 50 states for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects in the Iowa City and Cedar Rapids corridor. Our experienced team is hands-on with every job.",
+  "description": "Freight Bridge LLC is a trusted moving and freight hauling company based in Iowa City, Iowa. We handle residential and commercial moves, haul freight in 49 states (all except Alaska) for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects in the Iowa City and Cedar Rapids corridor. Our experienced team is hands-on with every job.",
   "address": {
     "street": "Iowa City",
     "city": "Iowa City",
@@ -27,7 +27,18 @@
   "paymentAccepted": "Credit Card, Wire Transfer, ACH, Invoice (Net 30)",
   "mapsUrl": "https://maps.google.com/?q=Iowa+City+IA+52245",
   "directionsUrl": "https://maps.google.com/dir/?q=Iowa+City+IA+52245",
-  "sameAs": [],
+  "sameAs": [
+    "https://www.carriersource.io/profile/freight-bridge-llc",
+    "https://maps.google.com/?q=Iowa+City+IA+52245",
+    "https://www.bbb.org/us/ia/iowa-city/profile/moving-companies/freight-bridge-llc-0666-1000063275"
+  ],
+  "dotNumber": "4166904",
+  "mcNumber": "1734786",
+  "truckCount": 1,
+  "teamSize": "Experienced crew",
+  "movesCompleted": "500+",
+  "statesServed": "49 states (excl. Alaska)",
+  "insurance": "Full cargo and liability coverage",
   "brand": {
     "primaryColor": "#2563eb",
     "accentColor": "#1e40af",
@@ -37,5 +48,5 @@
     "logoFilename": "freight-bridge-high-resolution-logo.png",
     "logoAlt": "Freight Bridge LLC Logo"
   },
-  "analytics": { "gaId": "G-PLACEHOLDER" }
+  "analytics": { "gaId": "G-SCSLVS4DX0" }
 }

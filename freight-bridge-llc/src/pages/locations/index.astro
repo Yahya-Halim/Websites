@@ -5,213 +5,253 @@ import { getEntry, getCollection } from 'astro:content';
 const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
 const locations = await getCollection('locations');
+
+// Group locations by state
+const byState: Record<string, typeof locations> = {};
+for (const loc of locations) {
+  const state = loc.data.state;
+  if (!byState[state]) byState[state] = [];
+  byState[state].push(loc);
+}
+const states = Object.keys(byState).sort();
+const stateCount = states.length;
+const cityCount = locations.length;
+
+const title = `Service Areas | ${business?.name}`;
+const description = `${business?.name} serves ${cityCount} cities across ${stateCount} states for moving and freight hauling. Get a free quote.`;
 ---
 
-<Base title={`Service Areas | ${business?.name}`} description={`${business?.name} serves the Iowa City and Cedar Rapids corridor for moving and hauling, with licensed interstate service for long-distance moves.`}>
+<Base title={title} description={description}>
   <section class="hero">
-    <h1>Service Areas</h1>
-    <p class="subtitle">Based in the Iowa City–Cedar Rapids corridor, with licensed interstate service for long-distance moves</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">Service areas</span>
+        <h1>Local roots, <span class="grad">interstate reach.</span></h1>
+        <p class="lead">Based in the Iowa City–Cedar Rapids corridor, with licensed interstate service for long-distance moves.</p>
+        <div class="hero-cta"><a href="/contact" class="btn btn-primary">Get a Quote</a></div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <img src="/art-locations.png" alt="USA map showing Freight Bridge service areas" width="900" height="680" />
+      </div>
+    </div>
   </section>
 
-  <section class="locations-grid">
-    {locations.map((location) => (
-      <a class="location-card" href={`/locations/${location.data.slug}`}>
-        <div class="location-header">
-          <span class="location-icon">📍</span>
-          <div>
-            <h2>{location.data.city}, {location.data.state}</h2>
-            <span class="location-slug">{location.data.servicesOffered.length} services available</span>
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Coverage</span>
+      <h2>{cityCount} cities across {stateCount} states</h2>
+      <p class="section-sub">Filter by state or search for your city.</p>
+    </div>
+
+    {/* Search bar */}
+    <div class="filter-bar" data-reveal>
+      <input
+        type="text"
+        id="city-search"
+        placeholder="Search for a city..."
+        class="search-input"
+        autocomplete="off"
+      />
+      <div class="filter-count">
+        <span id="city-count">{cityCount}</span> cities
+      </div>
+    </div>
+
+    {/* State filter buttons */}
+    <div class="state-filters" data-reveal>
+      <button class="filter-btn active" data-state="all">All States</button>
+      {states.map((state) => (
+        <button class="filter-btn" data-state={state}>
+          {state} ({byState[state].length})
+        </button>
+      ))}
+    </div>
+
+    {/* City grid */}
+    <div class="grid-3" id="city-grid">
+      {locations.map((location) => (
+        <a
+          class="card city-card"
+          href={`/locations/${location.data.slug}`}
+          data-reveal
+          data-state={location.data.state}
+          data-city={location.data.city.toLowerCase()}
+        >
+          <div class="city-img-wrap">
+            <img
+              src={`/images/cities/${location.data.slug}.png`}
+              alt={`${location.data.city}, ${location.data.stateAbbr || location.data.state}`}
+              width="400"
+              height="250"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
-        </div>
-        <div class="services-offered">
-          <h3>Services Available</h3>
-          <ul>
-            {location.data.servicesOffered.map((s) => (
-              <li>{s.replace(/-/g, ' ')}</li>
-            ))}
-          </ul>
-        </div>
-        <span class="learn-more">View {location.data.city} →</span>
-      </a>
-    ))}
+          <div class="city-card-body">
+            <h3>{location.data.city}, {location.data.stateAbbr || location.data.state}</h3>
+            <ul class="pill-list" style="margin:0 0 0.6rem;">
+              {location.data.servicesOffered.map((s) => (<li>{s.replace(/-/g, ' ')}</li>))}
+            </ul>
+            <span class="card-link">View {location.data.city} <span class="arrow">→</span></span>
+          </div>
+        </a>
+      ))}
+    </div>
   </section>
 
-  <section class="coverage">
-    <h2>Local Roots, Interstate Reach</h2>
-    <p class="coverage-text">
-      {business?.name} is based in {business?.address.city}, Iowa, serving the surrounding
-      corridor — Coralville, North Liberty, and Cedar Rapids — for moving and freight hauling.
-      As an authorized interstate carrier (USDOT 4414774, MC-1734786), we also handle long-distance
-      moves across state lines when you're relocating beyond Iowa.
-    </p>
+  <section class="section">
+    <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;text-align:center;">
+      <span class="kicker">Coverage</span>
+      <h2 style="font-family:var(--font-head);color:var(--ink);margin:.5rem 0 1rem;">Local roots, interstate reach</h2>
+      <p style="color:var(--muted);line-height:1.8;margin:0;">
+        {business?.name} is based in {business?.address.city}, Iowa, serving the surrounding corridor —
+        Coralville, North Liberty, and Cedar Rapids — for moving and freight hauling. We also haul
+        freight and handle long-distance moves in 49 states.
+      </p>
+    </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Need a Mover or Hauler in Your Area?</h2>
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <h2>Need a mover or hauler in your area?</h2>
     <p>Contact {business?.name} for a straight quote on your move or freight needs.</p>
-    <a href="/contact" class="cta-btn">Get a Quote</a>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Get a Quote</a>
+      <a href={`tel:${business?.phone}`} class="btn btn-ghost-light">Call {business?.phone}</a>
+    </div>
   </section>
+
+  <script is:inline>
+    (function() {
+      const searchInput = document.getElementById('city-search');
+      const cityGrid = document.getElementById('city-grid');
+      const cityCards = cityGrid.querySelectorAll('.city-card');
+      const countDisplay = document.getElementById('city-count');
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      let activeState = 'all';
+
+      function updateFilter() {
+        const query = searchInput.value.toLowerCase().trim();
+        let visible = 0;
+
+        cityCards.forEach((card) => {
+          const state = card.dataset.state;
+          const city = card.dataset.city;
+          const matchesState = activeState === 'all' || state === activeState;
+          const matchesSearch = !query || city.includes(query) || state.toLowerCase().includes(query);
+
+          if (matchesState && matchesSearch) {
+            card.style.display = '';
+            visible++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        countDisplay.textContent = visible;
+      }
+
+      searchInput.addEventListener('input', updateFilter);
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          filterButtons.forEach((b) => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeState = btn.dataset.state;
+          updateFilter();
+        });
+      });
+    })();
+  </script>
+
+  <style>
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 48rem;
+      margin: 0 auto 2rem;
+      padding: 0 1rem;
+    }
+    .search-input {
+      flex: 1;
+      padding: 0.75rem 1.25rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      font-size: 1rem;
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: #fff;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+    .search-input:focus {
+      border-color: var(--blue);
+    }
+    .filter-count {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .state-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      max-width: 58rem;
+      margin: 0 auto 2.5rem;
+      padding: 0 1rem;
+    }
+    .filter-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: var(--font-body);
+    }
+    .filter-btn:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .filter-btn.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+    .city-card {
+      overflow: hidden;
+      padding: 0;
+    }
+    .city-img-wrap {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: var(--surface);
+    }
+    .city-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .city-card:hover .city-img-wrap img {
+      transform: scale(1.05);
+    }
+    .city-card-body {
+      padding: 1.5rem;
+    }
+    .city-card-body h3 {
+      font-size: 1.15rem;
+      margin: 0 0 0.6rem;
+      color: var(--navy);
+    }
+  </style>
 </Base>
-
-<style>
-  .hero {
-    padding: 4rem 0 2rem;
-    text-align: center;
-  }
-  h1 {
-    font-size: 2.5rem;
-    margin: 0 0 1rem;
-    color: #1e3a8a;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-    color: #6b7280;
-    margin: 0;
-  }
-  h2 {
-    font-size: 1.75rem;
-    color: #111827;
-    margin: 0 0 1.5rem;
-  }
-
-  .locations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem 0;
-  }
-  .location-card {
-    display: block;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    text-decoration: none;
-    color: inherit;
-  }
-  .location-card:hover {
-    border-color: #2563eb;
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
-  }
-  .location-card .learn-more {
-    display: inline-block;
-    margin-top: 1rem;
-    color: #2563eb;
-    font-weight: 600;
-    font-size: 0.9rem;
-  }
-  .services-offered li {
-    display: inline-block;
-    padding: 0.375rem 0.75rem;
-    background: #f0f9ff;
-    color: #2563eb;
-    border-radius: 0.375rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: capitalize;
-  }
-  .location-header {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    margin-bottom: 1.25rem;
-  }
-  .location-icon {
-    font-size: 1.5rem;
-    flex-shrink: 0;
-  }
-  .location-header h2 {
-    font-size: 1.25rem;
-    margin: 0;
-    color: #1e3a8a;
-  }
-  .location-slug {
-    font-size: 0.8rem;
-    color: #6b7280;
-    text-transform: capitalize;
-  }
-  .services-offered h3 {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    color: #6b7280;
-    margin: 0 0 0.5rem;
-    letter-spacing: 0.05em;
-  }
-  .services-offered ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .services-offered li a {
-    display: inline-block;
-    padding: 0.375rem 0.75rem;
-    background: #f0f9ff;
-    color: #2563eb;
-    border-radius: 0.375rem;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-transform: capitalize;
-  }
-  .services-offered li a:hover {
-    background: #dbeafe;
-  }
-
-  .coverage {
-    padding: 3rem 0;
-    text-align: center;
-  }
-  .coverage-text {
-    max-width: 40rem;
-    margin: 0 auto 2rem;
-    color: #374151;
-    line-height: 1.7;
-  }
-  .coverage-stats {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-  }
-  .cov-stat {
-    text-align: center;
-  }
-  .cov-value {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: #2563eb;
-  }
-  .cov-label {
-    font-size: 0.9rem;
-    color: #6b7280;
-  }
-
-  .cta-section {
-    text-align: center;
-    padding: 3rem 2rem;
-    background: #f0f9ff;
-    border-radius: 1rem;
-    margin: 2rem 0;
-  }
-  .cta-section p {
-    color: #374151;
-    margin: 0 0 1.5rem;
-    font-size: 1.1rem;
-  }
-  .cta-btn {
-    display: inline-block;
-    background: #2563eb;
-    color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: 600;
-  }
-  .cta-btn:hover {
-    background: #1e40af;
-  }
-</style>

@@ -1,0 +1,208 @@
+{
+  "strategy": "Hub-and-spoke distribution model optimized for a boutique 1-truck freight operation. The homepage and main service/location overview pages act as authority hubs that distribute link equity down to individual service, location, and blog pages. Cross-linking between semantically related services (e.g., residential moving ↔ furniture delivery) creates topical clusters that reinforce relevance signals. Location pages link to nearby service areas to build regional authority. Blog content funnels readers into service and location pages with contextual, intent-matched anchor text. The goal is to ensure no page is more than 2 clicks from the homepage and that every page has at least 3 inbound internal links.",
+  "pillarPages": [
+    {
+      "path": "/",
+      "type": "homepage",
+      "role": "Top-level authority hub. Links to all core service categories, about page, contact, and top location pages."
+    },
+    {
+      "path": "/services",
+      "type": "service pillar",
+      "role": "Central service hub. Links to all six individual service pages and reinforces the full-service freight narrative."
+    },
+    {
+      "path": "/locations",
+      "type": "location pillar",
+      "role": "Regional authority hub. Links to all service-area pages and establishes geographic coverage across the Midwest."
+    }
+  ],
+  "links": [
+    {
+      "source": "/",
+      "target": "/services/residential-moving",
+      "anchor": "residential moving services across Iowa and the Midwest",
+      "context": "Homepage CTA - primary service offering"
+    },
+    {
+      "source": "/",
+      "target": "/about",
+      "anchor": "meet Mohamed Soliman and the Freight Bridge story",
+      "context": "Homepage about section - builds trust and E-E-A-T"
+    },
+    {
+      "source": "/",
+      "target": "/locations",
+      "anchor": "service areas covering Iowa, Illinois, and Minnesota",
+      "context": "Homepage service area highlight"
+    },
+    {
+      "source": "/services/residential-moving",
+      "target": "/services/furniture-delivery",
+      "anchor": "furniture delivery and transport service",
+      "context": "Related service - residential moves often include furniture transport"
+    },
+    {
+      "source": "/services/residential-moving",
+      "target": "/services/long-distance-moving",
+      "anchor": "long-distance moving options for cross-country relocations",
+      "context": "Related service - residential moves may be long-distance"
+    },
+    {
+      "source": "/services/office-moving",
+      "target": "/services/commercial-moving",
+      "anchor": "full commercial moving solutions for businesses",
+      "context": "Related service - office moving is a subset of commercial moving"
+    },
+    {
+      "source": "/services/furniture-delivery",
+      "target": "/services/residential-moving",
+      "anchor": "full-service residential movers in Iowa",
+      "context": "Related service - furniture delivery complements residential moving"
+    },
+    {
+      "source": "/services/long-distance-moving",
+      "target": "/services/freight-hauling",
+      "anchor": "freight hauling for oversized or bulk shipments",
+      "context": "Related service - alternative for large long-distance shipments"
+    },
+    {
+      "source": "/services/residential-moving",
+      "target": "/locations/iowa-city-ia",
+      "anchor": "top-rated movers in Iowa City",
+      "context": "Location relevance - Iowa City is home base for Mohamed Soliman"
+    },
+    {
+      "source": "/services/residential-moving",
+      "target": "/locations/cedar-rapids-ia",
+      "anchor": "affordable home moving in Cedar Rapids",
+      "context": "Location relevance - nearby major Iowa city"
+    },
+    {
+      "source": "/services/office-moving",
+      "target": "/locations/des-moines-ia",
+      "anchor": "office relocation services in Des Moines",
+      "context": "Location relevance - state capital and business hub"
+    },
+    {
+      "source": "/services/furniture-delivery",
+      "target": "/locations/chicago-il",
+      "anchor": "furniture movers serving the Chicago area",
+      "context": "Location relevance - largest metro area served"
+    },
+    {
+      "source": "/services/long-distance-moving",
+      "target": "/locations/minneapolis-mn",
+      "anchor": "long-distance moves to and from Minneapolis",
+      "context": "Location relevance - major Twin Cities market"
+    },
+    {
+      "source": "/services/commercial-moving",
+      "target": "/locations/coralville-ia",
+      "anchor": "commercial movers in Coralville and surrounding areas",
+      "context": "Location relevance - growing business community near Iowa City"
+    },
+    {
+      "source": "/locations/iowa-city-ia",
+      "target": "/services/residential-moving",
+      "anchor": "home moving services based in Iowa City",
+      "context": "Service relevance - primary service for this location"
+    },
+    {
+      "source": "/locations/cedar-rapids-ia",
+      "target": "/services/furniture-delivery",
+      "anchor": "furniture delivery and setup in Cedar Rapids",
+      "context": "Service relevance - high-demand service in this area"
+    },
+    {
+      "source": "/locations/des-moines-ia",
+      "target": "/services/office-moving",
+      "anchor": "office and business moving in Des Moines",
+      "context": "Service relevance - office moves are common in the capital"
+    },
+    {
+      "source": "/locations/chicago-il",
+      "target": "/services/long-distance-moving",
+      "anchor": "long-distance moving services from Chicago",
+      "context": "Service relevance - Chicago clients frequently move out of state"
+    },
+    {
+      "source": "/locations/north-liberty-ia",
+      "target": "/services/residential-moving",
+      "anchor": "residential movers serving North Liberty",
+      "context": "Service relevance - fastest-growing nearby suburb"
+    },
+    {
+      "source": "/locations/iowa-city-ia",
+      "target": "/locations/coralville-ia",
+      "anchor": "moving services in neighboring Coralville",
+      "context": "Proximity link - adjacent cities share the same service area"
+    },
+    {
+      "source": "/locations/cedar-rapids-ia",
+      "target": "/locations/north-liberty-ia",
+      "anchor": "North Liberty moving and delivery options",
+      "context": "Proximity link - along the I-380 corridor"
+    },
+    {
+      "source": "/locations/des-moines-ia",
+      "target": "/locations/davenport-ia",
+      "anchor": "movers serving the Davenport and Quad Cities area",
+      "context": "Proximity link - both along I-80 in Iowa"
+    },
+    {
+      "source": "/blog/cost-of-moving-in-iowa",
+      "target": "/services/residential-moving",
+      "anchor": "competitive Iowa moving company rates",
+      "context": "Content-to-service - blog reader has cost intent"
+    },
+    {
+      "source": "/blog/office-moving-checklist",
+      "target": "/services/office-moving",
+      "anchor": "professional office moving services in Iowa",
+      "context": "Content-to-service - blog reader needs a moving partner"
+    },
+    {
+      "source": "/blog/how-to-move-furniture-safely",
+      "target": "/services/furniture-delivery",
+      "anchor": "professional furniture moving and delivery",
+      "context": "Content-to-service - DIY reader may convert to hiring pros"
+    },
+    {
+      "source": "/blog/long-distance-moving-guide",
+      "target": "/services/long-distance-moving",
+      "anchor": "reliable long-distance moving services",
+      "context": "Content-to-service - blog reader is researching long-distance options"
+    },
+    {
+      "source": "/blog/freight-shipping-tips-for-small-businesses",
+      "target": "/services/freight-hauling",
+      "anchor": "freight shipping services for small businesses",
+      "context": "Content-to-service - blog reader owns a small business"
+    },
+    {
+      "source": "/services/office-moving",
+      "target": "/locations/iowa-city-ia",
+      "anchor": "Iowa City office movers trusted by local businesses",
+      "context": "Location relevance - home base with strong business network"
+    },
+    {
+      "source": "/locations/minneapolis-mn",
+      "target": "/services/freight-hauling",
+      "anchor": "freight hauling services to and from Minneapolis",
+      "context": "Service relevance - freight is the most requested service for long hauls"
+    },
+    {
+      "source": "/locations/davenport-ia",
+      "target": "/services/commercial-moving",
+      "anchor": "commercial moving and relocation in the Quad Cities",
+      "context": "Service relevance - Davenport has a growing commercial sector"
+    }
+  ],
+  "recommendations": {
+    "homepage": "Feature the three pillar page links prominently: /services (USP-focused CTA), /locations (interactive map or list), and /about (owner story for trust). Add secondary links to /contact (quote request) and /blog (latest post or moving tips). Keep anchor text action-oriented and include geographic qualifiers such as 'Iowa City', 'Iowa', and 'Midwest'.",
+    "servicePages": "Every service page should link to at least two related services and two relevant location pages. Use the 'context' field to identify natural editorial placement — for example, within a 'Related Services' section or an 'Available In' geographic sidebar. Avoid footer-only links; embed contextual anchor text in the body copy.",
+    "locationPages": "Each location page should link to: (1) the three most relevant services for that area, (2) at least one neighboring location page via proximity-based anchor text, and (3) the /contact page with a localized CTA such as 'get a free moving quote in [city]'. Location pages are the top converters for local SEO traffic — ensure every service link has a clear user benefit tied to that city.",
+    "blogPosts": "Every blog post must contain at least one contextual link to a relevant service page and one to a relevant location page. Place the service link within the first 60% of the content for maximum SEO value. Use anchor text that bridges the informational intent of the blog post with the commercial intent of the service page — e.g., a cost article links to 'transparent pricing from Iowa City movers' rather than just 'moving services'."
+  }
+}

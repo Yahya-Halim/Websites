@@ -1,9 +1,9 @@
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "MovingCompany",
   "@id": "https://freightbridgellc.com/#business",
   "name": "Freight Bridge LLC",
-  "description": "Freight Bridge LLC is a trusted moving and freight hauling company based in Iowa City, Iowa. As an authorized interstate carrier (USDOT 4414774, MC-1734786), we handle residential and commercial moves, haul freight in all 50 states for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects in the Iowa City and Cedar Rapids corridor. Our experienced team is hands-on with every job.",
+  "description": "Freight Bridge LLC is a trusted moving and freight hauling company based in Iowa City, Iowa. We handle residential and commercial moves, haul freight in 49 states (all except Alaska) for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects in the Iowa City and Cedar Rapids corridor. Our experienced team is hands-on with every job.",
   "telephone": "(641) 451-3132",
   "email": "info@freightbridgellc.com",
   "url": "https://freightbridgellc.com",
@@ -20,9 +20,93 @@
     "latitude": 41.6611,
     "longitude": -91.5302
   },
-  "sameAs": [],
+  "sameAs": [
+    "https://www.carriersource.io/profile/freight-bridge-llc",
+    "https://maps.google.com/?q=Iowa+City+IA+52245",
+    "https://www.bbb.org/us/ia/iowa-city/profile/moving-companies/freight-bridge-llc-0666-1000063275"
+  ],
   "paymentAccepted": "Credit Card, Wire Transfer, ACH, Invoice (Net 30)",
   "image": "https://freightbridgellc.com/freight-bridge-high-resolution-logo.png",
   "logo": "https://freightbridgellc.com/freight-bridge-high-resolution-logo.png",
-  "foundingDate": "2020"
+  "foundingDate": "2020",
+  "identifier": [
+    {
+      "@type": "PropertyValue",
+      "name": "USDOT Number",
+      "value": "4166904"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "MC Number",
+      "value": "1734786"
+    }
+  ],
+  "numberOfEmployees": "Experienced crew",
+  "priceRange": "$$",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Moving & Freight Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Residential & Furniture Moving",
+          "description": "Full-service home and apartment moving with careful furniture handling, loading, and transport."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Commercial & Office Moving",
+          "description": "Business relocations handled with minimal downtime."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nationwide Freight Hauling",
+          "description": "We run our own truck coast to coast, hauling loads in all 50 states."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Data-Center Hauling",
+          "description": "Post-construction debris removal and site cleanup for data center projects."
+        }
+      }
+    ]
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "00:00",
+      "closes": "00:00",
+      "description": "By appointment"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "00:00",
+      "closes": "00:00",
+      "description": "Closed"
+    }
+  ]
 }

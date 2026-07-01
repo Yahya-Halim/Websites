@@ -1,0 +1,192 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCollection, getEntry } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const occasions = await getCollection('occasions');
+
+const title = `Occasions | ${business?.name ?? "Captain's Fish & Chicken"}`;
+const description = `Special occasions and catering at ${business?.name}. Family dinners, game day, and lunch breaks in Cedar Rapids.`;
+---
+
+<Base title={title} description={description}>
+  <section class="occasions-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Occasions</h1>
+      <p class="tagline">The perfect meal for every moment.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#F6F7F9" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="occasions-list">
+        {occasions.map((occ, index) => (
+          <article class="occasion-card" id={occ.data.slug}>
+            <div class="card-accent-bar"></div>
+            <div class="occasion-content">
+              <div class="occasion-number">0{index + 1}</div>
+              <h2>{occ.data.title}</h2>
+              <p class="headline">{occ.data.headline}</p>
+              <p class="body">{occ.data.body}</p>
+
+              <div class="faq">
+                <h3>FAQs</h3>
+                {occ.data.faqs.map((faq) => (
+                  <details class="faq-item">
+                    <summary>{faq.question}</summary>
+                    <p>{faq.answer}</p>
+                  </details>
+                ))}
+              </div>
+
+              {occ.data.howToSteps && (
+                <div class="how-to">
+                  <h3>How It Works</h3>
+                  <ol>
+                    {occ.data.howToSteps.map((step) => (
+                      <li><strong>{step.name}</strong> — {step.text}</li>
+                    ))}
+                  </ol>
+                </div>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .occasions-hero {
+    min-height: 50vh;
+    background: linear-gradient(180deg, #112E5C, #08162B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8, 22, 43, 0.4);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .occasions-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .tagline {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .wave-divider { margin-top: -1px; }
+  .wave-divider svg { display: block; }
+
+  .occasions-list {
+    padding: 1rem 0;
+  }
+  .occasion-card {
+    background: var(--white);
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-medium);
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .occasion-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-large);
+  }
+  .card-accent-bar {
+    width: 6px;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  .occasion-content {
+    padding: 2.5rem;
+    flex: 1;
+  }
+  .occasion-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    color: var(--gold);
+    opacity: 0.5;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .occasion-card h2 {
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .headline {
+    font-weight: 700;
+    color: var(--ocean);
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  .body {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .faq, .how-to {
+    margin-top: 1.5rem;
+  }
+  .faq h3, .how-to h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+  }
+  .faq-item {
+    background: var(--light-gray);
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--navy);
+  }
+  .faq-item p {
+    margin: 0.5rem 0 0;
+    color: #555;
+  }
+  .how-to ol {
+    padding-left: 1.25rem;
+  }
+  .how-to li {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  .how-to li strong {
+    color: var(--navy);
+  }
+  @media (max-width: 640px) {
+    .occasions-hero { padding: 6rem 1rem 3rem; }
+    .occasion-content { padding: 1.5rem; }
+    .occasion-number { font-size: 2rem; }
+  }
+</style>

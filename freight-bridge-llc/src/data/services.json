@@ -1,22 +1,90 @@
 [
   {
     "slug": "residential-moving",
-    "name": "Residential & Furniture Moving",
-    "description": "Full-service home and apartment moving with careful furniture handling, loading, and transport. From a single piece of furniture to a whole household, our team packs, loads, hauls, and places your belongings — local moves around Iowa City or long-distance interstate moves under our USDOT/MC authority.",
+    "name": "Residential Moving",
+    "description": "Full-service home and apartment moving with careful furniture handling, loading, and transport. From a single piece of furniture to a whole household, our team packs, loads, hauls, and places your belongings — local moves around Iowa City or long-distance moves across state lines.",
     "icon": "truck",
     "faqs": [
-      { "question": "Do you handle long-distance and interstate moves?", "answer": "Yes. Freight Bridge LLC is an authorized interstate carrier (USDOT 4414774, MC-1734786), so we can legally move your household across state lines, not just locally around Iowa City." },
-      { "question": "Can you move just a few large items instead of a whole house?", "answer": "Absolutely. We handle single-item and partial moves — a couch, an appliance, a few rooms of furniture — as well as full-household relocations." },
-      { "question": "Do you provide packing and loading?", "answer": "Yes. We load, secure, transport, and unload. Let us know if you'd like help packing boxes or just the heavy lifting and transport." }
+      {
+        "question": "Do you handle long-distance and interstate moves?",
+        "answer": "Yes. We handle long-distance moves across state lines, not just local moves around Iowa City and Cedar Rapids. Whether you're moving from Iowa City to Des Moines or from Iowa to Oregon, we'll get your belongings there safe."
+      },
+      {
+        "question": "Can you move just a few large items instead of a whole house?",
+        "answer": "Absolutely. We handle single-item and partial moves — a couch, an appliance, a few rooms of furniture — as well as full-household relocations. You don't need to fill a whole truck to get our help."
+      },
+      {
+        "question": "What areas do you serve for local residential moves?",
+        "answer": "We cover the Iowa City-Cedar Rapids corridor for local moves, including Coralville, North Liberty, and surrounding towns. For anything beyond that, we offer interstate service to 49 states."
+      },
+      {
+        "question": "Do you provide packing and loading services?",
+        "answer": "Yes. We load, secure, transport, and unload your items. Let us know if you'd like help packing boxes or just the heavy lifting and transport — we'll tailor the service to what you need."
+      },
+      {
+        "question": "How far in advance should I book a residential move?",
+        "answer": "We recommend booking at least two weeks ahead, especially during peak season (May–September). That said, we're a small operation and can often accommodate last-minute requests — give us a call and we'll see what we can do."
+      },
+      {
+        "question": "Is Freight Bridge LLC licensed and insured for residential moves?",
+        "answer": "Yes. We operate with proper licensing and insurance for both local and interstate moves. Your belongings are covered while they're in our care."
+      },
+      {
+        "question": "Do you offer furniture disassembly and reassembly?",
+        "answer": "We can disassemble and reassemble most furniture that requires it — bed frames, tables, shelving units, and modular furniture. Just let us know what needs taken apart when you book."
+      }
     ],
     "crossLinks": [
-      { "slug": "commercial-moving", "anchor": "Commercial & Office Moving", "context": "related" },
-      { "slug": "freight-hauling", "anchor": "Nationwide Freight Hauling", "context": "related" }
+      {
+        "slug": "commercial-moving",
+        "anchor": "Commercial & Office Moving",
+        "context": "related"
+      },
+      {
+        "slug": "freight-hauling",
+        "anchor": "Nationwide Freight Hauling",
+        "context": "related"
+      },
+      {
+        "slug": "furniture-delivery",
+        "anchor": "Furniture Delivery",
+        "context": "related"
+      }
     ],
     "seo": {
-      "title": "Residential & Furniture Moving | Freight Bridge LLC",
-      "description": "Trusted home, apartment, and furniture moving in Iowa City with licensed interstate service. Careful loading, hauling, and placement by an experienced team. Get a quote today.",
+      "title": "Residential Moving | Freight Bridge LLC",
+      "description": "Trusted home and apartment moving in Iowa City with licensed interstate service. Careful loading, hauling, and placement by an experienced team. Get a quote today.",
       "canonical": "https://freightbridgellc.com/services/residential-moving"
+    },
+    "body": {
+      "lede": "Every house is different, and we don't do cookie-cutter quotes. We've moved studio apartments out of third-floor walk-ups near the University of Iowa and full households into homes out in Johnson County. Before we give you a number, we ask the questions that actually matter — how many bedrooms, sure, but also whether that armoire comes apart, if the stairs have a landing, and whether you need us to disconnect the washer.",
+      "included": [
+        "Careful loading, securing, and placement — we wrap furniture in moving blankets and stretch wrap, not a quick toss in the truck",
+        "Furniture disassembly and reassembly for bed frames, tables, shelving, and modular pieces",
+        "Floor and doorway protection on both ends of the move",
+        "Single-item and partial moves welcome — you don't need to fill a truck to get our help",
+        "Local moves around the Iowa City–Cedar Rapids corridor and licensed interstate moves to 49 states"
+      ],
+      "process": [
+        {
+          "title": "Walkthrough & quote",
+          "text": "We talk through your inventory, access, and timeline — in person or by video — and give you a firm, binding quote. No surprise fees on move day."
+        },
+        {
+          "title": "Prep & protect",
+          "text": "We pad-wrap furniture, disassemble what needs it, and lay down floor protection. Fragile and oddly shaped items get a plan before they get lifted."
+        },
+        {
+          "title": "Load & transport",
+          "text": "The same crew that quoted your move loads and secures it. For local moves we usually wrap up in a day; interstate moves stay on one truck, start to finish."
+        },
+        {
+          "title": "Place & reassemble",
+          "text": "We set everything in the room you want it and reassemble what we took apart — we don't drop boxes at the door and leave."
+        }
+      ],
+      "detail": "We run a 26-foot box truck with the dollies, straps, appliance carts, and padded blankets to handle a full household without babying it. The older homes around the Northside and Longfellow have tight 1920s stairwells, so we measure before we commit to a plan. If a sectional won't make the turn, we'd rather know in the driveway than wedged on the landing. For interstate moves, your belongings ride on our truck the whole way — no transfer to a national van line, no terminal where your boxes sit for a week.",
+      "ownerNote": "When you hire us, you get my crew and my phone number — not a call center in another state. If something comes up on your move, I want to hear about it and fix it. — Mohamed Soliman, Owner"
     }
   },
   {
@@ -25,37 +93,438 @@
     "description": "Business relocations handled with minimal downtime. We move office furniture, equipment, inventory, and fixtures — coordinating around your schedule so your operation is back up and running fast. Local and interstate commercial moves welcome.",
     "icon": "building",
     "faqs": [
-      { "question": "Can you move our office after hours or on weekends?", "answer": "Yes. We schedule commercial moves around your business hours to minimize downtime, including evenings and weekends by arrangement." },
-      { "question": "Do you move heavy office equipment?", "answer": "We handle desks, filing systems, shelving, and standard office equipment. Tell us about any specialty or oversized items so we can plan the right approach." }
+      {
+        "question": "Can you move our office after hours or on weekends?",
+        "answer": "Yes. We schedule commercial moves around your business hours to minimize downtime, including evenings and weekends by arrangement. We'll work with your timeline, not the other way around."
+      },
+      {
+        "question": "Do you move heavy office equipment?",
+        "answer": "We handle desks, filing systems, shelving, and standard office equipment. Tell us about any specialty or oversized items so we can plan the right approach and bring any extra equipment we might need."
+      },
+      {
+        "question": "What size commercial moves do you handle?",
+        "answer": "Everything from a single-room office to a multi-floor business. We're a small operation that gives each move the attention it deserves, so nothing gets lost in the shuffle."
+      },
+      {
+        "question": "Do you offer interstate commercial moving?",
+        "answer": "Yes. We move businesses across state lines, not just locally. If your company is relocating to a new state or opening a second location, we can get your equipment and inventory there."
+      },
+      {
+        "question": "How do you handle sensitive documents and electronics?",
+        "answer": "We take extra care with electronics and sensitive items — secure packing, careful labeling, and padded transport. If you have items that need special handling, let us know ahead of time."
+      },
+      {
+        "question": "Can you move inventory and stock along with office furniture?",
+        "answer": "Absolutely. We handle inventory, fixtures, shelving units, and office furniture in a single coordinated move. We'll work with your team to keep things organized from old location to new."
+      },
+      {
+        "question": "What's the typical timeline for an office move?",
+        "answer": "A small office can be moved in a day. Larger relocations usually take 1–3 days depending on the volume and distance. We'll help you plan the timeline during the quote process."
+      }
     ],
     "crossLinks": [
-      { "slug": "residential-moving", "anchor": "Residential & Furniture Moving", "context": "related" },
-      { "slug": "freight-hauling", "anchor": "Nationwide Freight Hauling", "context": "related" }
+      {
+        "slug": "residential-moving",
+        "anchor": "Residential Moving",
+        "context": "related"
+      },
+      {
+        "slug": "freight-hauling",
+        "anchor": "Nationwide Freight Hauling",
+        "context": "related"
+      },
+      {
+        "slug": "office-moving",
+        "anchor": "Office Moving",
+        "context": "related"
+      }
     ],
     "seo": {
       "title": "Commercial & Office Moving | Freight Bridge LLC",
       "description": "Office and business relocation in Iowa City and interstate, scheduled around your hours to minimize downtime. Handled by a careful, professional crew. Request a quote.",
       "canonical": "https://freightbridgellc.com/services/commercial-moving"
+    },
+    "body": {
+      "lede": "A commercial move lives or dies on planning. We've moved dental practices, law offices, and small-floor corporate tenants, and the jobs that go smoothly are the ones where we mapped the loading dock, the elevator, and the new floor plan before anyone lifted a desk. The ones that go sideways are the ones where somebody skipped the walkthrough.",
+      "included": [
+        "Pre-move site survey of both the old and new space — dock access, elevator dimensions, floor plans",
+        "Labeled, organized moves so each workstation lands in the right spot",
+        "Careful handling of electronics, IT equipment, and sensitive files with padded, secure transport",
+        "After-hours and weekend scheduling to keep your downtime to a minimum",
+        "Office furniture, fixtures, inventory, and equipment moved in one coordinated job"
+      ],
+      "process": [
+        {
+          "title": "Site survey",
+          "text": "We walk both locations, map access and elevator logistics, and build a move plan around your schedule — not the other way around."
+        },
+        {
+          "title": "Label & stage",
+          "text": "Everything gets labeled to a destination zone so the new space comes together fast and nobody's hunting for the server rack."
+        },
+        {
+          "title": "After-hours move",
+          "text": "We run the move evenings or weekends when it makes sense, so your team isn't losing billable days."
+        },
+        {
+          "title": "Set up & verify",
+          "text": "We place furniture per the floor plan, reconnect what we can, and walk the space with you before we call it done."
+        }
+      ],
+      "detail": "We coordinate with building management on dock times, freight-elevator reservations, and certificate-of-insurance requirements — the details that derail a move day when they're handled as an afterthought. For IT and electronics, we pack with anti-static materials and keep server and network gear together so your team can get back online fast. Local commercial moves stay inside the Iowa City–Cedar Rapids corridor; for businesses opening a second location or relocating across state lines, our interstate authority covers all 49 states.",
+      "ownerNote": "A business move isn't just furniture — it's your livelihood sitting on my truck. We schedule around your hours so you're back up and running, not bleeding downtime. — Mohamed Soliman, Owner"
     }
   },
   {
     "slug": "freight-hauling",
     "name": "Nationwide Freight Hauling",
-    "description": "We run our own truck coast to coast, hauling loads in all 50 states. Freight Bridge LLC picks up freight booked through brokers and dispatchers and delivers it safely and on time under our authorized interstate carrier authority (USDOT 4414774, MC-1734786). Reliable capacity, clear communication, and on-time delivery on every lane.",
+    "description": "We run our own truck coast to coast, hauling loads in 49 states. Freight Bridge LLC picks up freight booked through brokers and dispatchers and delivers it safely and on time, nationwide. Reliable capacity, clear communication, and on-time delivery on every lane.",
     "icon": "truck-fast",
     "faqs": [
-      { "question": "Where do you haul to?", "answer": "All 50 states. As an authorized interstate carrier, we run nationwide lanes and go wherever the load needs to go." },
-      { "question": "Do you take loads from brokers and dispatchers?", "answer": "Yes. We work directly with freight brokers and dispatch services — send us your load details and we'll cover it with our own truck." },
-      { "question": "What kind of freight do you haul?", "answer": "We handle standard over-the-road freight. Share the commodity, weight, and lane and we'll confirm whether it's a fit for our equipment." }
+      {
+        "question": "Where do you haul to?",
+        "answer": "49 states (all except Alaska). We run nationwide lanes and go wherever the load needs to go. No region is off-limits — if there's freight that needs moving, we'll get it there."
+      },
+      {
+        "question": "Do you take loads from brokers and dispatchers?",
+        "answer": "Yes. We work directly with freight brokers and dispatch services — send us your load details and we'll cover it with our own truck. We're a reliable 1-truck owner-operator outfit that communicates clearly and shows up on time."
+      },
+      {
+        "question": "What kind of freight do you haul?",
+        "answer": "We handle standard over-the-road freight. Share the commodity, weight, and lane and we'll confirm whether it's a fit for our equipment. If we can't take it, we'll tell you straight up."
+      },
+      {
+        "question": "Who operates the truck?",
+        "answer": "Mohamed Soliman, owner of Freight Bridge LLC. It's a one-truck operation, which means you deal directly with the person driving the load — no dispatcher middleman, no communication lag."
+      },
+      {
+        "question": "What's your on-time record like?",
+        "answer": "We pride ourselves on being where we say we'll be when we say we'll be there. Clear communication and realistic scheduling are how we keep our brokers and customers coming back."
+      },
+      {
+        "question": "Can you also handle local moving or delivery on the same trip?",
+        "answer": "If we're heading your way with freight, we can often tack on local moving or delivery services in the Iowa City-Cedar Rapids area. Ask us when you book and we'll see if we can make it work."
+      },
+      {
+        "question": "How do I book a load with Freight Bridge LLC?",
+        "answer": "Send us your load details — pickup and drop-off locations, commodity, weight, and preferred dates. We'll confirm availability and get you a straight answer fast."
+      }
     ],
     "crossLinks": [
-      { "slug": "residential-moving", "anchor": "Residential & Furniture Moving", "context": "related" },
-      { "slug": "commercial-moving", "anchor": "Commercial & Office Moving", "context": "related" }
+      {
+        "slug": "residential-moving",
+        "anchor": "Residential Moving",
+        "context": "related"
+      },
+      {
+        "slug": "commercial-moving",
+        "anchor": "Commercial & Office Moving",
+        "context": "related"
+      },
+      {
+        "slug": "long-distance-moving",
+        "anchor": "Long-Distance Moving",
+        "context": "related"
+      }
     ],
     "seo": {
       "title": "Nationwide Freight Hauling | Freight Bridge LLC",
-      "description": "Freight Bridge LLC hauls loads in all 50 states with our own truck, covering freight from brokers and dispatchers. Authorized interstate carrier. Book your lane today.",
+      "description": "Freight Bridge LLC hauls loads in 49 states with our own truck, covering freight from brokers and dispatchers. Book your lane today.",
       "canonical": "https://freightbridgellc.com/services/freight-hauling"
+    },
+    "body": {
+      "lede": "We run our own truck, coast to coast, in 49 states. When you book a load with Freight Bridge, you're not throwing it into a brokered pool to be covered by whoever's cheapest that week — you're getting a specific carrier on a specific lane, with the owner answering the phone. Brokers and dispatchers keep coming back to us for one reason: we show up when we say we will.",
+      "included": [
+        "Full truckload and partial (LTL) freight on over-the-road lanes nationwide",
+        "Direct dock-to-dock delivery — no terminal cross-docking, no extra hands on your load",
+        "Liftgate service for pickups and deliveries without a dock",
+        "One point of contact from pickup to drop-off — the person driving the load",
+        "Net-30 terms available for commercial accounts, plus credit card, wire, and ACH"
+      ],
+      "process": [
+        {
+          "title": "Send the lane",
+          "text": "Share the commodity, weight, pickup, and drop-off. We'll tell you straight whether it's a fit for our equipment — and if it isn't, we'll say so."
+        },
+        {
+          "title": "Rate & book",
+          "text": "You get a clear rate and a confirmed pickup window, not a vague promise and a phone tree."
+        },
+        {
+          "title": "Pickup & transit",
+          "text": "We load at the dock and run direct, with updates along the way. No transloading, no sitting in a warehouse."
+        },
+        {
+          "title": "On-time delivery",
+          "text": "We deliver dock-to-dock on the window we committed to. Being where we say we'll be is the whole business."
+        }
+      ],
+      "detail": "Our base near the I-80/I-380 split in eastern Iowa is about as good a launch point as the Midwest offers — we're a day's run from Chicago, the Twin Cities, Kansas City, and Omaha, and within reach of the coasts. Common lanes include Iowa to Texas, Iowa to Florida, Iowa to California, and the regional Midwest runs we make constantly. We handle standard over-the-road dry freight; we don't run hazmat, tanker, or reefer. Send us your details and you'll get an honest answer fast.",
+      "ownerNote": "It's a one-truck operation, which means you deal directly with the person driving your freight. No dispatcher middleman, no communication lag. — Mohamed Soliman, Owner"
+    }
+  },
+  {
+    "slug": "furniture-delivery",
+    "name": "Furniture Delivery",
+    "description": "Furniture delivery from stores, online retailers, or private sellers straight to your door in the Iowa City-Cedar Rapids corridor. We haul furniture of all sizes — from a single nightstand to a full living room set — with careful loading, transporting, and placement inside your home.",
+    "icon": "home",
+    "faqs": [
+      {
+        "question": "Where do you deliver furniture?",
+        "answer": "We deliver throughout the Iowa City-Cedar Rapids corridor including Coralville, North Liberty, and surrounding towns. For deliveries outside the local area, ask us about interstate options."
+      },
+      {
+        "question": "Do you deliver from big-box stores or furniture outlets?",
+        "answer": "Yes. If a store's delivery window is weeks out or they don't deliver to your area, we can step in. We'll pick up from any retailer or warehouse in our service area and deliver directly to you."
+      },
+      {
+        "question": "Will you bring furniture inside and set it up?",
+        "answer": "Absolutely. We place items in the room of your choice, not just drop them at the curb. We can also do basic assembly if needed."
+      },
+      {
+        "question": "Can you pick up furniture I bought from a private seller?",
+        "answer": "Yes. If you found a deal on Marketplace, Craigslist, or an estate sale but don't have a truck, we'll go pick it up and bring it to you. It's one of the things we do most often."
+      },
+      {
+        "question": "How do you handle large or bulky furniture?",
+        "answer": "We're experienced with oversized items — sectionals, armoires, pool tables, appliances. We'll measure doorways and plan the approach so nothing gets damaged on the way in."
+      },
+      {
+        "question": "What's the typical turnaround for local furniture delivery?",
+        "answer": "Most local deliveries are same-day or next-day. We're a small outfit so we can move fast — call us when you need something moved and we'll find a slot."
+      },
+      {
+        "question": "Do you offer white-glove delivery service?",
+        "answer": "We offer what you could call hands-on delivery — inside placement, unboxing, assembly, and debris removal. Tell us what level of service you need and we'll quote accordingly."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "residential-moving",
+        "anchor": "Residential Moving",
+        "context": "related"
+      },
+      {
+        "slug": "freight-hauling",
+        "anchor": "Nationwide Freight Hauling",
+        "context": "related"
+      },
+      {
+        "slug": "long-distance-moving",
+        "anchor": "Long-Distance Moving",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Furniture Delivery | Freight Bridge LLC",
+      "description": "Local furniture delivery in Iowa City and Cedar Rapids — from stores, online retailers, or private sellers. Fast, careful, and we bring it right inside. Get a quote.",
+      "canonical": "https://freightbridgellc.com/services/furniture-delivery"
+    },
+    "body": {
+      "lede": "Bought a couch from a local shop, scored a dining set on Marketplace, or stuck waiting three weeks for a big-box store's delivery truck? That's our bread and butter. We pick up from any retailer, warehouse, or private seller in the Iowa City–Cedar Rapids corridor and bring it inside — to the room you want it in, not dumped at the curb.",
+      "included": [
+        "Same-day and next-day local delivery across the Iowa City–Cedar Rapids corridor",
+        "Pickup from stores, warehouses, estate sales, and private sellers (Marketplace, Craigslist, auctions)",
+        "Inside placement, basic assembly, and packaging removal — what some call white-glove",
+        "Careful handling of oversized pieces: sectionals, armoires, pool tables, appliances",
+        "Interstate furniture transport on request for pieces heading out of the area"
+      ],
+      "process": [
+        {
+          "title": "Tell us the pickup",
+          "text": "Give us the store or seller address and where it's going. We'll quote it on the spot, usually for same-day or next-day."
+        },
+        {
+          "title": "Measure & plan",
+          "text": "For big pieces we check doorways and stairwells so nothing gets stuck or scratched on the way in."
+        },
+        {
+          "title": "Haul & place",
+          "text": "We pad it, load it, and bring it inside — setting it where you want it and assembling it if it needs it."
+        },
+        {
+          "title": "Clean up",
+          "text": "We haul off the boxes and packaging so you're not left with a pile of cardboard."
+        }
+      ],
+      "detail": "We're a small outfit, which is exactly why we can move fast — when a store's next delivery slot is two weeks out, we can often have your piece in your living room tomorrow. We've handled everything from a single nightstand to full living-room sets, and we've got the blankets, straps, and dollies to do it without leaving a mark. For private-seller pickups, you don't need a truck or a friend with a strong back; that's what we're for.",
+      "ownerNote": "Furniture delivery is one of the things we do most. People are surprised a 'freight company' will run a single couch across town — but that's exactly the kind of job we like. — Mohamed Soliman, Owner"
+    }
+  },
+  {
+    "slug": "long-distance-moving",
+    "name": "Long-Distance Moving",
+    "description": "Interstate moving services from the Iowa City-Cedar Rapids area to anywhere in the United States. We load, haul, and unload your household belongings across state lines with the same care as a local move, backed by proper licensing and insurance for long-distance transport.",
+    "icon": "truck",
+    "faqs": [
+      {
+        "question": "How far will you move my belongings?",
+        "answer": "Anywhere in the continental United States. We're based in Iowa City but we run nationwide — whether you're moving to Chicago, Denver, Atlanta, or Portland, we'll get you there."
+      },
+      {
+        "question": "How does pricing work for long-distance moves?",
+        "answer": "We price based on distance, weight, and volume. Since we're a one-truck operation with low overhead, our rates are competitive. We'll give you an honest quote with no hidden fees."
+      },
+      {
+        "question": "Can you combine my long-distance move with freight hauling?",
+        "answer": "Often yes. Since we cover 49 states for freight, we can sometimes schedule a household move on the same route as a freight load — which can save you money. Ask us about it when you book."
+      },
+      {
+        "question": "What's the difference between your long-distance moving and freight hauling services?",
+        "answer": "Long-distance moving is for households and personal belongings, with full loading/unloading service. Freight hauling is commercial freight from brokers and dispatchers. Different focus, same truck."
+      },
+      {
+        "question": "Do you provide packing materials for long-distance moves?",
+        "answer": "We can provide boxes, tape, and packing supplies on request. We can also pack your items for you if you'd rather leave it to someone who's done it a thousand times."
+      },
+      {
+        "question": "How do you protect my furniture during a long cross-country trip?",
+        "answer": "We use furniture pads, stretch wrap, tie-downs, and careful loading to keep everything secure. Your items won't shift during transport — we've logged enough miles to know how to pack a truck right."
+      },
+      {
+        "question": "What if my new place isn't ready on the expected delivery date?",
+        "answer": "We'll work with you on timing and storage options if needed. Since we manage our own schedule, we have more flexibility than the big corporate movers. We'll figure out a solution."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "residential-moving",
+        "anchor": "Residential Moving",
+        "context": "related"
+      },
+      {
+        "slug": "freight-hauling",
+        "anchor": "Nationwide Freight Hauling",
+        "context": "related"
+      },
+      {
+        "slug": "furniture-delivery",
+        "anchor": "Furniture Delivery",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Long-Distance Moving | Freight Bridge LLC",
+      "description": "Interstate moving from Iowa City to anywhere in the US. Licensed, insured, and handled personally by our experienced team. Get a quote for your long-distance move.",
+      "canonical": "https://freightbridgellc.com/services/long-distance-moving"
+    },
+    "body": {
+      "lede": "Long-distance moving is where the big national van lines tend to let people down — your stuff gets loaded onto a truck with three other families' belongings, transferred at a terminal, and shows up two weeks late with a box missing. We do it differently. Your household goes on our truck, with our crew, and stays there until it reaches your door.",
+      "included": [
+        "Licensed interstate moving to anywhere in the continental United States (USDOT 4166904 / MC 1734786)",
+        "One truck, one crew, no terminal transfers — your belongings stay aboard the whole way",
+        "Furniture pads, stretch wrap, tie-downs, and careful load securement for the long haul",
+        "Binding written quotes with a firm pickup and delivery window",
+        "Packing materials and full packing service available on request"
+      ],
+      "process": [
+        {
+          "title": "Inventory & quote",
+          "text": "We do a walkthrough — in person or by video — to account for specialty items, then give you a binding written quote so there are no surprises."
+        },
+        {
+          "title": "Pack & load",
+          "text": "We pad-wrap and secure everything for highway transport. We can supply boxes or pack the whole house if you'd rather not."
+        },
+        {
+          "title": "Drive it ourselves",
+          "text": "Your goods stay on our truck, start to finish. You get updates en route and a single point of contact who knows exactly where your stuff is."
+        },
+        {
+          "title": "Deliver & place",
+          "text": "We unload, place, and reassemble at the destination. If your new place isn't ready, we'll work with you on timing."
+        }
+      ],
+      "detail": "Because we run our own freight lanes across 49 states, we sometimes schedule a household move on the same route as a freight load — which can bring your cost down. We've logged enough interstate miles to know how to pack a truck so nothing shifts between Iowa and Denver, Atlanta, or the coasts. The biggest thing you're buying with us isn't just transport; it's knowing the same people who loaded your home are the ones unloading it.",
+      "ownerNote": "On a cross-country move, you want to know who has your things. With us, it's me and my crew the whole way — not a chain of subcontractors you'll never meet. — Mohamed Soliman, Owner"
+    }
+  },
+  {
+    "slug": "office-moving",
+    "name": "Office Moving",
+    "description": "Dedicated office and business relocation for the Iowa City-Cedar Rapids corridor. We move desks, chairs, filing cabinets, electronics, and common-area furniture with minimal disruption to your workday. Same careful approach as our larger commercial moving service, sized for smaller offices and startups that don't need a full-scale operation.",
+    "icon": "building",
+    "faqs": [
+      {
+        "question": "How is office moving different from commercial moving?",
+        "answer": "Office moving focuses on smaller-scale business relocations — single-floor offices, suites, and shared workspaces. Commercial moving handles larger operations. Think of it as the difference between moving a law firm and moving a distribution center."
+      },
+      {
+        "question": "Can you move our office over a weekend so we don't lose workdays?",
+        "answer": "Yes. Weekend and after-hours office moves are our specialty. We'll have everything set up and ready for your team on Monday morning so nobody misses a beat."
+      },
+      {
+        "question": "Do you handle IT equipment and server racks?",
+        "answer": "We handle standard office electronics. For sensitive IT infrastructure like server racks, we'll coordinate with your IT team to make sure everything is disconnected, packed, and reconnected properly."
+      },
+      {
+        "question": "What's included in a standard office move?",
+        "answer": "Disassembly of furniture, careful packing of office items, loading, transport, unloading, and reassembly. We'll also label everything so each desk ends up in the right spot at the new location."
+      },
+      {
+        "question": "Do you move filing cabinets with documents inside?",
+        "answer": "We can move locked filing cabinets with documents inside if they're on casters or we use proper lifting equipment. For heavy lateral files, we may recommend emptying them first — we'll advise during the walkthrough."
+      },
+      {
+        "question": "How far in advance should I book an office move?",
+        "answer": "Two to three weeks is ideal. That gives us time to do a walkthrough, plan the layout at your new space, and coordinate around your schedule. We can handle shorter notice too — just call."
+      },
+      {
+        "question": "Do you offer storage options during an office transition?",
+        "answer": "Yes. If there's a gap between move-out and move-in dates, we can store your office furniture and equipment at our facility until your new space is ready."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "commercial-moving",
+        "anchor": "Commercial & Office Moving",
+        "context": "related"
+      },
+      {
+        "slug": "residential-moving",
+        "anchor": "Residential Moving",
+        "context": "related"
+      },
+      {
+        "slug": "freight-hauling",
+        "anchor": "Nationwide Freight Hauling",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Office Moving | Freight Bridge LLC",
+      "description": "Small office and business relocation in Iowa City and Cedar Rapids. Weekend and after-hours moves available with furniture disassembly, transport, and setup. Get a quote.",
+      "canonical": "https://freightbridgellc.com/services/office-moving"
+    },
+    "body": {
+      "lede": "Office moving is commercial moving sized for smaller operations — the single-floor offices, suites, shared workspaces, and startups that don't need a full-scale relocation crew but still can't afford to lose three workdays. We get you out of the old space and set up in the new one over a weekend, so your team walks in Monday and gets to work.",
+      "included": [
+        "Furniture disassembly, packing, transport, and reassembly for offices and suites",
+        "Labeled moves so every desk and box lands at the right workstation",
+        "Standard office electronics handled with care; coordination with your IT team for server racks",
+        "Weekend and after-hours scheduling so you don't lose workdays",
+        "Short-term storage available if there's a gap between move-out and move-in dates"
+      ],
+      "process": [
+        {
+          "title": "Walkthrough",
+          "text": "We survey both spaces, plan the new layout, and coordinate around your business hours."
+        },
+        {
+          "title": "Pack & label",
+          "text": "Everything is packed and labeled to its destination so unpacking is fast and nothing goes missing."
+        },
+        {
+          "title": "Weekend move",
+          "text": "We run the move evenings or weekends when we can, so you're not closing during business hours."
+        },
+        {
+          "title": "Set up for Monday",
+          "text": "We place and reassemble furniture so your team starts the week in a working office."
+        }
+      ],
+      "detail": "We handle the things smaller offices tend to underestimate — moving locked filing cabinets, getting heavy lateral files down a stairwell, and coordinating with building management on elevator and dock access. For IT, we'll work with your provider to make sure equipment is disconnected, packed, and reconnected properly rather than yanked and hoped-for. If your new space isn't ready on schedule, we can store your furniture and equipment until it is.",
+      "ownerNote": "A startup's whole operation can fit in a few rooms, but it's still their whole operation. We treat a ten-person office move with the same care as a corporate floor. — Mohamed Soliman, Owner"
     }
   }
 ]

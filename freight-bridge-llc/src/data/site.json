@@ -5,6 +5,7 @@
     { "label": "About", "href": "/about" },
     { "label": "Services", "href": "/services" },
     { "label": "Service Areas", "href": "/locations" },
+    { "label": "Guides", "href": "/blog" },
     { "label": "Contact", "href": "/contact" }
   ],
   "footer": {
@@ -12,6 +13,8 @@
       { "label": "About Us", "href": "/about" },
       { "label": "Services", "href": "/services" },
       { "label": "Locations", "href": "/locations" },
+      { "label": "Guides", "href": "/blog" },
+      { "label": "FAQ", "href": "/faq" },
       { "label": "Contact", "href": "/contact" }
     ],
     "copyrightText": "© 2023-2026 Freight Bridge LLC. All rights reserved."

@@ -1,6 +1,7 @@
 ---
 import Base from '@engine/layouts/Base.astro';
 import { getEntry, getCollection } from 'astro:content';
+import reviews from '/src/data/content/reviews.json';
 
 export async function getStaticPaths() {
   const locations = await getCollection('locations');
@@ -15,75 +16,397 @@ const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
 
 const services = await getCollection('services');
-const offered = services.filter((s) => location.servicesOffered.includes(s.data.slug));
+const serviceName: Record<string, string> = Object.fromEntries(
+  services.map((s) => [s.data.slug, s.data.name]),
+);
+
+const allLocations = await getCollection('locations');
+const nearbyCities = allLocations
+  .filter((l) => l.data.state === location.state && l.data.slug !== location.slug)
+  .slice(0, 12);
+
+const base = business?.domain ?? '';
+const locationUrl = location.seo?.canonical ?? `${base}/locations/${location.slug}`;
+const stateAbbr = location.stateAbbr || location.state;
+const phone = business?.phone;
+
+// ---------------------------------------------------------------------------
+// Real, verifiable geography — distance + compass direction from our Iowa City
+// base. This is genuine Information Gain: every page states a true fact unique
+// to that city, instead of the identical city-swapped boilerplate Google flags
+// as scaled-content / doorway abuse.
+// ---------------------------------------------------------------------------
+const BASE_GEO = business?.geo ?? { latitude: 41.6611, longitude: -91.5302 };
+const toRad = (d: number) => (d * Math.PI) / 180;
+const haversine = (a: { latitude: number; longitude: number }, b: { latitude: number; longitude: number }) => {
+  const R = 3958.8; // miles
+  const dLat = toRad(b.latitude - a.latitude);
+  const dLon = toRad(b.longitude - a.longitude);
+  const la1 = toRad(a.latitude);
+  const la2 = toRad(b.latitude);
+  const x = Math.sin(dLat / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dLon / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+};
+const bearing = (a: { latitude: number; longitude: number }, b: { latitude: number; longitude: number }) => {
+  const y = Math.sin(toRad(b.longitude - a.longitude)) * Math.cos(toRad(b.latitude));
+  const x =
+    Math.cos(toRad(a.latitude)) * Math.sin(toRad(b.latitude)) -
+    Math.sin(toRad(a.latitude)) * Math.cos(toRad(b.latitude)) * Math.cos(toRad(b.longitude - a.longitude));
+  return (((Math.atan2(y, x) * 180) / Math.PI) + 360) % 360;
+};
+const DIRS = ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest'];
+const distanceMi = location.geo ? Math.round(haversine(BASE_GEO, location.geo)) : null;
+const direction = location.geo ? DIRS[Math.round(bearing(BASE_GEO, location.geo) / 45) % 8] : null;
+const drivable = distanceMi != null && distanceMi < 1800;
+
+const REGION: Record<string, string> = {
+  IA: 'the Midwest', IL: 'the Midwest', IN: 'the Midwest', MI: 'the Great Lakes region', MN: 'the Upper Midwest',
+  MO: 'the Midwest', NE: 'the Great Plains', OH: 'the Great Lakes region', WI: 'the Upper Midwest', KS: 'the Great Plains',
+  ND: 'the Northern Plains', SD: 'the Northern Plains',
+  AL: 'the South', AR: 'the South', FL: 'the Southeast', GA: 'the Southeast', KY: 'the South',
+  LA: 'the Gulf South', MS: 'the Gulf South', NC: 'the Southeast', SC: 'the Southeast', TN: 'the South',
+  VA: 'the Mid-Atlantic', WV: 'the Appalachian region', OK: 'the South-Central US', TX: 'the South-Central US',
+  CT: 'New England', MA: 'New England', ME: 'New England', NH: 'New England', RI: 'New England', VT: 'New England',
+  NY: 'the Northeast', NJ: 'the Northeast', PA: 'the Northeast', MD: 'the Mid-Atlantic', DE: 'the Mid-Atlantic',
+  AZ: 'the Southwest', NM: 'the Southwest', NV: 'the Southwest', CO: 'the Mountain West', UT: 'the Mountain West',
+  WY: 'the Mountain West', MT: 'the Mountain West', ID: 'the Mountain West', CA: 'the West Coast',
+  OR: 'the Pacific Northwest', WA: 'the Pacific Northwest', HI: 'Hawaii',
+};
+const region = REGION[stateAbbr] ?? 'the United States';
+
+const lc = location.localContent;
+const hasRich = !!(lc && (lc.intro || lc.localConnection));
+const offeredSlugs: string[] = location.servicesOffered ?? [];
+const isLocal = distanceMi != null && distanceMi <= 12; // Iowa City corridor home turf
+
+// deterministic per-city variation (no Math.random — keeps builds stable)
+const slugHash = [...location.slug].reduce((a, c) => a + c.charCodeAt(0), 0);
+
+// ---------------------------------------------------------------------------
+// Reviews — real customer reviews on every page (E-E-A-T). Prefer reviews from
+// the same state; otherwise rotate through the set deterministically by slug.
+// ---------------------------------------------------------------------------
+const stateReviews = reviews.filter((r) => r.location.endsWith(`, ${stateAbbr}`));
+const picked: typeof reviews = stateReviews.length >= 2 ? stateReviews.slice(0, 3) : [...stateReviews];
+const startIdx = slugHash % reviews.length;
+const rotated = [...reviews.slice(startIdx), ...reviews.slice(0, startIdx)];
+for (const r of rotated) {
+  if (picked.length >= 3) break;
+  if (!picked.includes(r)) picked.push(r);
+}
+const shownReviews = picked.slice(0, 3);
+const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+
+// ---------------------------------------------------------------------------
+// Data-driven narrative for cities without hand-written rich content (the
+// freight-lane destinations). Built entirely from true facts — distance,
+// direction, region — so each page is genuinely distinct, not a token-swap.
+// ---------------------------------------------------------------------------
+const openerVariants = [
+  `${location.city}, ${stateAbbr} sits about ${distanceMi} miles ${direction} of our Iowa City base, out in ${region}.`,
+  `From our Iowa City hub, ${location.city} is roughly ${distanceMi} miles ${direction} — squarely inside the 49-state network we run.`,
+  `${location.city} lies about ${distanceMi} miles ${direction} of eastern Iowa, in ${region}.`,
+];
+const haulNote =
+  distanceMi == null
+    ? ''
+    : distanceMi < 250
+    ? `That's a short, regular run for us, so capacity and scheduling on this lane are rarely a problem.`
+    : distanceMi < 500
+    ? `That's a solid day's haul, the kind of mid-range interstate lane we run all the time.`
+    : distanceMi < 900
+    ? `That's a genuine long-haul lane, and we plan these runs honestly — firm timelines, no overpromising.`
+    : `That's a long-distance, multi-day haul, and we're straight with you about transit time and cost before anything's booked.`;
+const driveVerb = drivable
+  ? `We reach ${location.city} the way an interstate carrier should — by running the road ourselves, picking up and delivering with our own truck and crew under USDOT ${business?.dotNumber} and MC ${business?.mcNumber}.`
+  : `As a licensed interstate carrier (USDOT ${business?.dotNumber} / MC ${business?.mcNumber}), we coordinate freight to and from ${location.city} as part of our nationwide network.`;
+const freightPara1 = `${openerVariants[slugHash % openerVariants.length]} ${haulNote} ${driveVerb}`;
+const freightPara2 = `For shippers and dispatchers, that means dock-to-dock delivery with no terminal cross-docking and no extra hands on your load. We pick up freight booked through brokers and dispatch services and run it direct, with one point of contact from pickup to drop-off — not a call center and not a brokered handoff to whoever's cheapest that week. Whether it's a full truckload or a partial shipment moving between ${region} and the rest of the country, you get a binding quote up front and a carrier who answers the phone.`;
+
+// services to show in the fallback path (mostly freight; Hawaii shows moving)
+const fallbackServiceText = (slug: string): string => {
+  const map: Record<string, string> = {
+    'freight-hauling': `Nationwide freight hauling to and from ${location.city}, ${stateAbbr}. We run our own truck for brokers and dispatchers, covering 49 states with reliable capacity, clear communication, and on-time delivery — about ${distanceMi} miles ${direction} of our Iowa City base.`,
+    'residential-moving': `Licensed interstate household moving between ${location.city}, ${stateAbbr} and the Iowa region. We load, secure, and transport your belongings on one truck with one crew — no national-van-line handoffs.`,
+    'commercial-moving': `Interstate commercial and office relocation serving ${location.city}, ${stateAbbr}. We move furniture, equipment, and inventory across state lines, scheduled to keep your downtime short.`,
+  };
+  return map[slug] || `Licensed interstate moving and freight service connecting ${location.city}, ${stateAbbr} with the Iowa region and all 49 states.`;
+};
+const serviceIcon = (slug: string) => {
+  const icons: Record<string, string> = {
+    'residential-moving': '🏠',
+    'commercial-moving': '🏢',
+    'office-moving': '🏢',
+    'freight-hauling': '🚛',
+    'furniture-delivery': '🛋️',
+    'long-distance-moving': '🚚',
+  };
+  return icons[slug] || '📦';
+};
+const prettify = (slug: string) => slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+
+// ---------------------------------------------------------------------------
+// FAQs — use the hand-written city FAQs when present; otherwise generate a set
+// that bakes in the real distance/region facts (so they're not boilerplate).
+// ---------------------------------------------------------------------------
+const generatedFaqs = [
+  {
+    question: `Does Freight Bridge LLC serve ${location.city}, ${stateAbbr}?`,
+    answer: `Yes. Freight Bridge LLC is a licensed interstate carrier based in Iowa City, Iowa — about ${distanceMi} miles ${direction} of ${location.city}. We handle interstate moves and freight hauling to and from ${location.city} and the surrounding ${region} market under USDOT ${business?.dotNumber} and MC ${business?.mcNumber}.`,
+  },
+  {
+    question: `How does freight to or from ${location.city} work?`,
+    answer: drivable
+      ? `We run our own truck on the lane between eastern Iowa and ${location.city} — roughly ${distanceMi} miles ${direction}. Pickup and delivery are dock-to-dock and direct, with no terminal cross-docking. Send us the commodity, weight, and lane and we'll confirm whether it's a fit and quote it.`
+      : `${location.city} is part of our nationwide freight coverage. As a licensed interstate carrier, we coordinate loads to and from the ${region} market. Send us the commodity, weight, and lane for a rate quote.`,
+  },
+  {
+    question: `How do I get a quote for ${location.city}?`,
+    answer: `Call ${phone} or use the contact form. Share your pickup and delivery details, the commodity or household inventory, and your timeline. Most quotes come back the same day, and what we quote is binding — no surprise fees.`,
+  },
+  {
+    question: `Is Freight Bridge LLC based in ${location.city}?`,
+    answer: `No — we're based in Iowa City, Iowa, about ${distanceMi} miles ${direction}. We reach ${location.city} by running interstate routes, which is why our service here is long-distance moving and freight hauling rather than same-day local work. You get one accountable carrier for the whole run.`,
+  },
+];
+const faqs = hasRich && lc?.faqs && lc.faqs.length > 0 ? lc.faqs : generatedFaqs;
+
+// ---------------------------------------------------------------------------
+// Structured data
+// ---------------------------------------------------------------------------
+const breadcrumbLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${base}/` },
+    { '@type': 'ListItem', position: 2, name: 'Service Areas', item: `${base}/locations` },
+    { '@type': 'ListItem', position: 3, name: location.city, item: locationUrl },
+  ],
+};
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+const reviewLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MovingCompany',
+  '@id': `${base}/#business`,
+  name: business?.name,
+  telephone: phone,
+  areaServed: { '@type': 'City', name: `${location.city}, ${stateAbbr}` },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: avgRating,
+    reviewCount: String(reviews.length),
+  },
+  review: shownReviews.map((r) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.name },
+    reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5' },
+    name: r.title,
+    reviewBody: r.review,
+  })),
+};
 ---
 
 <Base title={location.seo.title} description={location.seo.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />
+
   <section class="hero">
-    <span class="badge">{location.city}, {location.state}</span>
-    <h1>Moving & Freight Hauling in {location.city}</h1>
-    <p class="subtitle">{location.seo.description}</p>
-    <a href="/contact" class="cta-btn">Get a Quote</a>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">{location.city}, {location.state}{distanceMi != null && !isLocal ? ` · ~${distanceMi} mi ${direction} of Iowa City` : ''}</span>
+        <h1>Moving & freight in <span class="grad">{location.city}.</span></h1>
+        <p class="lead">
+          {hasRich && lc?.intro
+            ? lc.intro
+            : isLocal
+            ? `${business?.name} is based right here in the ${location.city} area, offering same-day local moving, furniture delivery, and nationwide freight. Get a free quote — same-day response.`
+            : `${business?.name} serves ${location.city}, ${location.state} with licensed interstate moving and freight hauling, about ${distanceMi} miles ${direction} of our Iowa City base. Get a free quote — same-day response.`}
+        </p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Get a Quote</a>
+          <a href={`tel:${phone}`} class="btn btn-ghost">Call {phone}</a>
+        </div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <img src={`/images/cities/${location.slug}.png`} alt={`${location.city}, ${stateAbbr}`} width="800" height="500" />
+      </div>
+    </div>
   </section>
 
-  <section class="services">
-    <h2>Services in {location.city}</h2>
-    <div class="service-grid">
-      {offered.map((service) => (
-        <a href={`/services/${service.data.slug}`} class="service-card">
-          <h3>{service.data.name}</h3>
-          <p>{service.data.description}</p>
-          <span class="learn-more">Learn More →</span>
-        </a>
+  {location.keyTakeaway && (
+    <section class="section">
+      <div class="key-takeaway" data-reveal>
+        <span class="kicker">Key takeaway</span>
+        <blockquote>{location.keyTakeaway}</blockquote>
+      </div>
+    </section>
+  )}
+
+  {/* ---- Connection / "how we serve this city" ---- */}
+  <section class="section">
+    <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+      <span class="kicker">{isLocal ? `Local to ${location.city}` : `${region} coverage`}</span>
+      <h2 style="font-family:var(--font-head);color:var(--ink);margin:.5rem 0 1rem;">
+        {hasRich && lc?.headline ? lc.headline : `${business?.name} serves ${location.city}, ${stateAbbr}`}
+      </h2>
+      {hasRich && lc?.localConnection ? (
+        <p style="color:var(--muted);line-height:1.8;margin:0;">{lc.localConnection}</p>
+      ) : (
+        <>
+          <p style="color:var(--muted);line-height:1.8;margin:0 0 1rem;">{freightPara1}</p>
+          <p style="color:var(--muted);line-height:1.8;margin:0;">{freightPara2}</p>
+        </>
+      )}
+    </div>
+  </section>
+
+  {/* ---- Stats bar ---- */}
+  <section class="section" style="margin:3rem 0;">
+    <div class="stats-bar" data-reveal>
+      <div class="stat"><div class="stat-num">{business?.movesCompleted}</div><div class="stat-label">Moves Completed</div></div>
+      <div class="stat"><div class="stat-num">50</div><div class="stat-label">States Served</div></div>
+      <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Years in Business</div></div>
+      <div class="stat"><div class="stat-num">{business?.dotNumber}</div><div class="stat-label">USDOT Number</div></div>
+      <div class="stat"><div class="stat-num">{business?.mcNumber}</div><div class="stat-label">MC Authority</div></div>
+    </div>
+  </section>
+
+  {/* ---- Services ---- */}
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">What we do {isLocal ? 'in' : 'for'} {location.city}</span>
+      <h2>Our services {isLocal ? 'in' : 'serving'} {location.city}</h2>
+      <p class="section-sub">Handled by our experienced, hands-on crew — no subcontractors, no call centers.</p>
+    </div>
+    <div class="grid-3">
+      {hasRich && lc?.servicesOffered
+        ? Object.entries(lc.servicesOffered).map(([slug, text]) => (
+            <a href={`/services/${slug}`} class="card" data-reveal>
+              <span class="card-icon" style="font-size:2rem;">{serviceIcon(slug)}</span>
+              <h3>{serviceName[slug] ?? prettify(slug)}</h3>
+              <p>{text}</p>
+              <span class="card-link">Learn more <span class="arrow">→</span></span>
+            </a>
+          ))
+        : offeredSlugs.map((slug) => (
+            <a href={`/services/${slug}`} class="card" data-reveal>
+              <span class="card-icon" style="font-size:2rem;">{serviceIcon(slug)}</span>
+              <h3>{serviceName[slug] ?? prettify(slug)}</h3>
+              <p>{fallbackServiceText(slug)}</p>
+              <span class="card-link">Learn more <span class="arrow">→</span></span>
+            </a>
+          ))}
+    </div>
+  </section>
+
+  {/* ---- Benefits (rich cities) ---- */}
+  {hasRich && lc?.benefits && lc.benefits.length > 0 && (
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Why us in {location.city}</span>
+        <h2>What you get with Freight Bridge</h2>
+      </div>
+      <ul class="benefit-list" data-reveal>
+        {lc.benefits.map((b) => (
+          <li><span class="benefit-check">✓</span><span>{b}</span></li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  {/* ---- Pricing guide (rich cities) ---- */}
+  {hasRich && lc?.pricingGuide && (
+    <section class="section">
+      <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+        <span class="kicker">Pricing in {location.city}</span>
+        <h2 style="font-family:var(--font-head);color:var(--ink);margin:.5rem 0 1rem;">What it costs</h2>
+        <p style="color:var(--muted);line-height:1.8;margin:0;">{lc.pricingGuide}</p>
+      </div>
+    </section>
+  )}
+
+  {/* ---- Reviews (every page) ---- */}
+  {shownReviews.length > 0 && (
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Reviews</span>
+        <h2>What our customers say</h2>
+        <p class="section-sub">Rated {avgRating} out of 5 across {reviews.length} reviews.</p>
+      </div>
+      <div class="review-grid" data-reveal>
+        {shownReviews.map((r) => (
+          <figure class="review-card">
+            <div class="stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</div>
+            <blockquote>“{r.review}”</blockquote>
+            <figcaption><strong>{r.name}</strong> · {r.location}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  )}
+
+  {/* ---- FAQ ---- */}
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">FAQ</span>
+      <h2>Frequently asked questions about {location.city}</h2>
+    </div>
+    <div class="faq-list" data-reveal>
+      {faqs.map((faq) => (
+        <details class="faq-item">
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
+        </details>
       ))}
     </div>
   </section>
 
-  <section class="cta-section">
+  {/* ---- Nearby cities ---- */}
+  {nearbyCities.length > 0 && (
+    <section class="section">
+      <div class="section-head" data-reveal>
+        <span class="kicker">Nearby</span>
+        <h2>Other cities we serve in {location.state}</h2>
+      </div>
+      <div class="grid-3">
+        {nearbyCities.map((nearby) => (
+          <a href={`/locations/${nearby.data.slug}`} class="card" data-reveal>
+            <div class="city-img-wrap" style="aspect-ratio:16/10;overflow:hidden;border-radius:var(--r);margin-bottom:1rem;">
+              <img
+                src={`/images/cities/${nearby.data.slug}.png`}
+                alt={`${nearby.data.city}, ${nearby.data.stateAbbr || nearby.data.state}`}
+                width="400"
+                height="250"
+                loading="lazy"
+                decoding="async"
+                style="width:100%;height:100%;object-fit:cover;"
+              />
+            </div>
+            <h3>{nearby.data.city}, {nearby.data.stateAbbr || nearby.data.state}</h3>
+            <span class="card-link">View {nearby.data.city} <span class="arrow">→</span></span>
+          </a>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
     <h2>Need a mover or hauler in {location.city}?</h2>
     <p>Call {business?.name} and talk to our team directly — no call centers, no middlemen.</p>
-    <div class="cta-buttons">
-      <a href="/contact" class="cta-btn primary">Request a Quote</a>
-      <a href={`tel:${business?.phone}`} class="cta-btn secondary">Call {business?.phone}</a>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Request a Quote</a>
+      <a href={`tel:${phone}`} class="btn btn-ghost-light">Call {phone}</a>
     </div>
   </section>
 </Base>
-
-<style>
-  .hero { padding: 4rem 0 2rem; text-align: center; }
-  .badge {
-    display: inline-block; background: #2563eb; color: white;
-    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
-    letter-spacing: 0.05em; padding: 0.375rem 1rem; border-radius: 1rem; margin-bottom: 1rem;
-  }
-  h1 { font-size: 2.5rem; margin: 0 0 1rem; color: #1e3a8a; }
-  .subtitle { max-width: 42rem; margin: 0 auto 2rem; color: #374151; line-height: 1.7; font-size: 1.1rem; }
-  h2 { font-size: 1.75rem; color: #111827; margin: 0 0 1.5rem; }
-
-  .services { padding: 3rem 0; }
-  .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-  .service-card {
-    display: block; padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0.75rem;
-    text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .service-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
-  .service-card h3 { font-size: 1.25rem; margin: 0 0 0.75rem; color: #1e3a8a; }
-  .service-card p { color: #6b7280; line-height: 1.6; margin: 0 0 1rem; font-size: 0.95rem; }
-  .learn-more { color: #2563eb; font-weight: 600; font-size: 0.9rem; }
-
-  .cta-btn {
-    display: inline-block; background: #2563eb; color: white; padding: 0.75rem 2rem;
-    border-radius: 0.5rem; text-decoration: none; font-weight: 600;
-  }
-  .cta-btn:hover { background: #1e40af; }
-
-  .cta-section {
-    text-align: center; padding: 3rem 2rem; background: #1e3a8a; color: white;
-    border-radius: 1rem; margin: 2rem 0;
-  }
-  .cta-section h2 { color: white; }
-  .cta-section p { opacity: 0.9; margin: 0 0 1.5rem; font-size: 1.1rem; }
-  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .cta-btn.primary { background: #2563eb; color: white; }
-  .cta-btn.secondary { background: transparent; color: white; border: 2px solid white; }
-</style>

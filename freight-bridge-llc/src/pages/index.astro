@@ -1,145 +1,390 @@
 ---
 import Base from '@engine/layouts/Base.astro';
 import { getEntry, getCollection } from 'astro:content';
+import reviews from '/src/data/content/reviews.json';
 
 const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
 const services = await getCollection('services');
 
-const iconMap: Record<string, string> = {
-  'residential-moving': '🚚',
-  'commercial-moving': '🏢',
-  'freight-hauling': '🚛',
+const homeReviews = reviews.slice(0, 6);
+const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+
+const reviewLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MovingCompany',
+  '@id': `${business?.domain}/#business`,
+  name: business?.name,
+  telephone: business?.phone,
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: avgRating,
+    reviewCount: String(reviews.length),
+  },
+  review: reviews.map((r) => ({
+    '@type': 'Review',
+    author: { '@type': 'Person', name: r.name },
+    reviewRating: { '@type': 'Rating', ratingValue: String(r.rating), bestRating: '5' },
+    name: r.title,
+    reviewBody: r.review,
+  })),
 };
 
-const title = business?.name ?? 'Welcome';
-const description = business?.description ?? '';
+const iconFor: Record<string, string> = {
+  'residential-moving': 'home',
+  'commercial-moving': 'building',
+  'freight-hauling': 'truck',
+};
+
+const icons: Record<string, string> = {
+  home: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>',
+  building: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg>',
+  truck: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>',
+};
+const icon = (name: string) => icons[name] ?? icons.truck;
+
+const title = `Moving & Freight Hauling in ${business?.address.city}, ${business?.address.state} | ${business?.name}`;
+const description =
+  'Residential & commercial moving, nationwide freight hauling in 49 states, and data-center hauling in the Iowa City–Cedar Rapids corridor. Get a free quote.';
+
+const homepageFaqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What services does Freight Bridge LLC offer in Iowa City?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Freight Bridge LLC offers four core services from our Iowa City base: residential and furniture moving, commercial and office moving, nationwide freight hauling, and data-center hauling. Residential moving covers everything from single-item furniture hauls to full household relocations across state lines. Commercial moving handles office furniture, equipment, inventory, and fixtures with scheduling designed to minimize business downtime. Nationwide freight hauling means we run our own truck coast to coast, covering 49 states for brokers and dispatchers. Data-center hauling focuses on post-construction debris removal, decommissioned equipment transport, and site cleanup for data center projects in the Iowa City–Cedar Rapids corridor. Every service is handled by our experienced, hands-on crew — no call centers, no subcontractors.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does commercial moving cost in Iowa City?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Commercial moving costs in Iowa City depend on several factors: the size of the office, the distance of the move, the amount of furniture and equipment, and whether the move is local or interstate. A small local office relocation within the Iowa City–Cedar Rapids corridor typically ranges from $800 to $2,500, while larger office moves or interstate relocations can range from $3,000 to $8,000 or more. Freight Bridge LLC provides free, no-obligation quotes tailored to your specific needs. We factor in packing requirements, specialty equipment handling, after-hours scheduling, and the number of crew members needed. Because we are a local, independent company — not a national chain — we offer competitive rates without the overhead markup. Contact us with your office size, inventory list, and preferred move date for a precise estimate.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Freight Bridge LLC handle long-distance moves?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, Freight Bridge LLC handles both local and long-distance moves. While we are based in Iowa City, Iowa, our licensed interstate authority allows us to move households and businesses across state lines throughout the entire United States. Long-distance moves require careful planning: we secure all furniture and equipment for highway transport, provide detailed inventory tracking, and coordinate pickup and delivery windows that match your schedule. Our crew handles the loading, transport, and unloading personally — you work with the same team from start to finish. We are licensed with USDOT 4166904 and MC 1734786, which means we meet all federal requirements for interstate commerce. Whether you are moving from Iowa City to Texas, Florida, or California, we provide the same careful, hands-on service that our local customers trust.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What areas does Freight Bridge LLC serve for moving and freight?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Freight Bridge LLC serves the Iowa City–Cedar Rapids corridor for local moving and hauling, including Iowa City, Coralville, North Liberty, and Cedar Rapids. For freight hauling, our service area extends to 49 states. Our local moving coverage includes Johnson County and Linn County, with same-day and next-day availability for moves within the corridor. For freight, we pick up loads from brokers and dispatchers nationwide and deliver to any destination in the continental United States. Our data-center hauling specifically serves the growing data center developments along the I-380 corridor, including the Big Cedar Industrial Center area in Cedar Rapids and projects around Iowa City, Coralville, and North Liberty. No matter the distance, our experienced crew ensures safe, on-time delivery.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What should I expect when hiring Freight Bridge LLC for a data-center haul?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'When you hire Freight Bridge LLC for a data-center haul, you can expect a professional, efficient cleanup and removal process from a crew that understands the unique requirements of post-construction sites. We arrive on schedule with the proper equipment to handle debris removal, decommissioned server racks, cabling, and leftover construction materials. Our team works safely around active infrastructure, coordinates with your site manager, and ensures the haul area is left clean and ready for the next phase of your project. We serve data center developments in the Iowa City and Cedar Rapids corridor, including the Big Cedar Industrial Center area. Typical data-center hauling projects range from single-day cleanups to multi-week ongoing removal contracts. Contact us with your site details and timeline for a custom quote.',
+      },
+    },
+  ],
+};
 ---
 
 <Base title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(homepageFaqLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(reviewLd)} />
+
   <section class="hero">
-    <h1>{title}</h1>
-    {business?.slogan && <p class="tagline">{business.slogan}</p>}
-    <p class="description">
-      A trusted moving and nationwide freight hauling team based in {business?.address.city}, {business?.address.state}.
-      Licensed interstate carrier — USDOT 4414774 · MC-1734786.
-    </p>
-    <div class="hero-cta">
-      <a href="/contact" class="cta-btn primary">Get a Quote</a>
-      <a href={`tel:${business?.phone}`} class="cta-btn secondary">Call {business?.phone}</a>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">🛋️ Iowa furniture moving · Summer-to-fall special</span>
+        <h1>Furniture moving in Iowa <br /><span class="grad">10% off through fall.</span></h1>
+        <p class="lead"> 
+          One couch or a whole house — we move furniture anywhere in Iowa, handled with care.
+          <strong>Save 10%</strong> when you book through fall 2026.
+        </p>
+        <p class="offer-ribbon">
+          <span class="offer-tag">10% OFF</span>
+          <span>Summer-to-fall special on every furniture move in Iowa — just mention this offer when you book.</span>
+        </p>
+        <div class="hero-cta">
+          <a href="/contact" class="btn btn-primary">Claim 10% Off</a>
+          <a href={`tel:${business?.phone}`} class="btn btn-ghost">Call {business?.phone}</a>
+        </div>
+        <ul class="chips">
+          <li>🛋️ Couches, sectionals & single items</li>
+          <li>🏠 Iowa City to anywhere in Iowa</li>
+          <li>✅ Licensed & insured · 500+ moves</li>
+        </ul>
+      </div>
+      <div class="hero-art" data-reveal>
+        <picture>
+          <source srcset="/truck.webp" type="image/webp" />
+          <img
+            src="/truck.png"
+            alt="Freight Bridge LLC blue box truck with the company logo on the trailer"
+            width="1200"
+            height="800"
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
+      </div>
     </div>
   </section>
 
-  <section class="services">
-    <h2>What We Do</h2>
-    <div class="service-grid">
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">What we do</span>
+      <h2>Three ways we keep you moving</h2>
+    </div>
+    <div class="grid-3">
       {services.map((service) => (
-        <a href={`/services/${service.data.slug}`} class="service-card">
-          <span class="service-icon">{iconMap[service.data.slug] ?? '📦'}</span>
+        <a href={`/services/${service.data.slug}`} class="card" data-reveal>
+          <span class="card-icon" set:html={icon(iconFor[service.data.slug] ?? 'truck')} />
           <h3>{service.data.name}</h3>
           <p>{service.data.description}</p>
-          <span class="learn-more">Learn More →</span>
+          <span class="card-link">Learn more <span class="arrow">→</span></span>
         </a>
       ))}
     </div>
   </section>
 
-  <section class="datacenter">
-    <h2>Data Center Hauling</h2>
-    <p class="dc-subtitle">Post-construction debris removal and equipment hauling for Iowa's data center corridor.</p>
-    <div class="dc-cards">
-      <a href="/services/data-center-iowa-city" class="dc-card">
-        <h3>Iowa City Corridor</h3>
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Specialty</span>
+      <h2>Data-center hauling</h2>
+      <p class="section-sub">Post-construction debris and equipment removal for Iowa's data-center corridor.</p>
+    </div>
+    <div class="grid-2">
+      <a href="/services/data-center-iowa-city" class="dc-card" data-reveal>
+        <span class="dc-tag">Iowa City Corridor</span>
+        <h3>Iowa City</h3>
         <p>Debris removal, equipment hauling, and site cleanup in Iowa City, Coralville, and North Liberty.</p>
-        <span class="learn-more">Learn More →</span>
+        <span class="card-link">Learn more <span class="arrow">→</span></span>
       </a>
-      <a href="/services/data-center-cedar-rapids" class="dc-card">
+      <a href="/services/data-center-cedar-rapids" class="dc-card" data-reveal>
+        <span class="dc-tag">Cedar Rapids Corridor</span>
         <h3>Cedar Rapids</h3>
-        <p>Serving Big Cedar Industrial Center and the I-380 corridor with a careful, professional hauling crew.</p>
-        <span class="learn-more">Learn More →</span>
+        <p>Serving Big Cedar Industrial Center and the I-380 corridor with a professional hauling crew.</p>
+        <span class="card-link">Learn more <span class="arrow">→</span></span>
       </a>
     </div>
   </section>
 
-  <section class="why-us">
-    <h2>Why Freight Bridge?</h2>
-    <div class="reasons">
-      <div class="reason">
-        <strong>A team you can trust</strong>
-        <p>Our experienced crew handles your move and every haul with care. No call centers, no runaround.</p>
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Why Freight Bridge</span>
+      <h2>Built to be the easy call</h2>
+    </div>
+    <div class="grid-3">
+      <div class="why" data-reveal>
+        <span class="why-num">01</span>
+        <h3>A team you can trust</h3>
+        <p>Our experienced crew handles your move and every haul with care — no call centers, no runaround.</p>
       </div>
-      <div class="reason">
-        <strong>Licensed interstate carrier</strong>
-        <p>USDOT 4414774, MC-1734786 — we can legally move you across state lines, not just locally.</p>
+      <div class="why" data-reveal>
+        <span class="why-num">02</span>
+        <h3>Local to nationwide</h3>
+        <p>From a single piece of furniture across Iowa to freight in 49 states — we go wherever you're headed.</p>
       </div>
-      <div class="reason">
-        <strong>Moving and freight under one roof</strong>
-        <p>Need a household move, a data-center haul, or freight covered across the country? We do it all.</p>
+      <div class="why" data-reveal>
+        <span class="why-num">03</span>
+        <h3>Moving & freight in one place</h3>
+        <p>A household move, a data-center haul, or freight covered across the country — we do it all.</p>
       </div>
     </div>
   </section>
 
-  <section class="cta-section">
+  {/* ---- GEO-SEO: Stats & Trust Signals ---- */}
+  <section class="section" style="margin:3rem 0;">
+    <div class="stats-bar" data-reveal>
+      <div class="stat">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Moves Completed</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">50</div>
+        <div class="stat-label">States Served</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4166904</div>
+        <div class="stat-label">USDOT Number</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1734786</div>
+        <div class="stat-label">MC Authority</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="margin:2rem 0 3rem;">
+    <div class="trust-bar" data-reveal>
+      <span class="trust-item"><span class="badge">✓</span> Licensed Interstate Carrier</span>
+      <span class="trust-item"><span class="badge">✓</span> Full Insurance Coverage</span>
+      <span class="trust-item"><span class="badge">✓</span> BBB Accredited</span>
+      <span class="trust-item"><span class="badge">✓</span> Same-Day Quotes</span>
+    </div>
+  </section>
+
+  {/* ---- GEO-SEO: Answer Blocks (134–167 words) ---- */}
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">About our services</span>
+      <h2>What you should know</h2>
+    </div>
+
+    <div class="answer-block" data-reveal>
+      <h3>What is Freight Bridge LLC?</h3>
+      <p>
+        Freight Bridge LLC is a licensed moving and freight hauling company headquartered in Iowa City, Iowa. Founded in 2020 by owner Mohamed Soliman, the company operates as a hands-on, independent carrier — not a national franchise or a call-center dispatch service. Freight Bridge LLC holds USDOT 4166904 and MC 1734786 authority, which authorizes interstate commerce in 49 states. The company operates its own truck and employs an experienced crew that handles every job personally, from the initial quote to the final delivery. Services include residential moving, commercial office relocation, nationwide freight hauling for brokers and dispatchers, and post-construction data-center hauling in the Iowa City–Cedar Rapids corridor. The business serves Johnson County and Linn County for local moves and the entire United States for freight lanes.
+      </p>
+    </div>
+
+    <div class="answer-block" data-reveal>
+      <h3>What does commercial moving cost in Iowa City?</h3>
+      <p>
+        Commercial moving costs in Iowa City depend on several factors: the size of the office, the distance of the move, the amount of furniture and equipment, and whether the move is local or interstate. A small local office relocation within the Iowa City–Cedar Rapids corridor typically ranges from $800 to $2,500, while larger office moves or interstate relocations can range from $3,000 to $8,000 or more. Freight Bridge LLC provides free, no-obligation quotes tailored to your specific needs. We factor in packing requirements, specialty equipment handling, after-hours scheduling, and the number of crew members needed. Because we are a local, independent company — not a national chain — we offer competitive rates without the overhead markup. Contact us with your office size, inventory list, and preferred move date for a precise estimate.
+      </p>
+    </div>
+
+    <div class="answer-block" data-reveal>
+      <h3>Where does Freight Bridge LLC haul freight?</h3>
+      <p>
+        Freight Bridge LLC hauls freight in 49 states. We run our own truck coast to coast, picking up loads from freight brokers and dispatch services and delivering them safely and on time. Our licensed interstate authority (USDOT 4166904 / MC 1734786) allows us to operate in every state, from the I-380 corridor in Iowa to the East Coast, West Coast, Gulf Coast, and everywhere in between. We cover standard over-the-road freight lanes, dry van loads, and regional runs. Brokers and dispatchers work with us because we provide reliable capacity, clear communication, and consistent on-time delivery. Typical lanes include Iowa to Texas, Iowa to Florida, Iowa to California, and regional Midwest routes. We welcome one-time loads and ongoing lane commitments. Contact us with your commodity, weight, and lane details for a rate quote.
+      </p>
+    </div>
+  </section>
+
+  {/* ---- GEO-SEO: Service Area Detail ---- */}
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Coverage</span>
+      <h2>Service areas & freight lanes</h2>
+    </div>
+    <div class="panel" data-reveal style="max-width:52rem;margin:0 auto;">
+      <p style="color:var(--muted);line-height:1.8;margin:0 0 1rem;">
+        <strong>Local moving & hauling:</strong> Iowa City, Coralville, North Liberty, Cedar Rapids, and the entire Iowa City–Cedar Rapids corridor. We cover Johnson County and Linn County with same-day and next-day availability for local moves.
+      </p>
+      <p style="color:var(--muted);line-height:1.8;margin:0 0 1rem;">
+        <strong>Nationwide freight:</strong> 49 states (all except Alaska). We pick up from brokers and dispatchers nationwide and deliver anywhere in the continental United States. Common lanes include Iowa to Texas, Iowa to Florida, Iowa to California, and regional Midwest routes.
+      </p>
+      <p style="color:var(--muted);line-height:1.8;margin:0;">
+        <strong>Data-center hauling:</strong> The I-380 corridor including Big Cedar Industrial Center in Cedar Rapids, and projects in Iowa City, Coralville, and North Liberty. We handle post-construction debris removal, equipment hauling, and site cleanup.
+      </p>
+    </div>
+  </section>
+
+  {/* ---- GEO-SEO: Detailed FAQ (134–167 words per answer) ---- */}
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <p class="section-sub">More on our <a href="/faq">full FAQ page</a>.</p>
+    </div>
+    <div class="faq-list" data-reveal>
+      <details class="faq-item">
+        <summary>What services does Freight Bridge LLC offer in Iowa City?</summary>
+        <p>
+          Freight Bridge LLC offers four core services from our Iowa City base: residential and furniture moving, commercial and office moving, nationwide freight hauling, and data-center hauling. Residential moving covers everything from single-item furniture hauls to full household relocations across state lines. Commercial moving handles office furniture, equipment, inventory, and fixtures with scheduling designed to minimize business downtime. Nationwide freight hauling means we run our own truck coast to coast, covering 49 states for brokers and dispatchers. Data-center hauling focuses on post-construction debris removal, decommissioned equipment transport, and site cleanup for data center projects in the Iowa City–Cedar Rapids corridor. Every service is handled by our experienced, hands-on crew — no call centers, no subcontractors.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How much does commercial moving cost in Iowa City?</summary>
+        <p>
+          Commercial moving costs in Iowa City depend on several factors: the size of the office, the distance of the move, the amount of furniture and equipment, and whether the move is local or interstate. A small local office relocation within the Iowa City–Cedar Rapids corridor typically ranges from $800 to $2,500, while larger office moves or interstate relocations can range from $3,000 to $8,000 or more. Freight Bridge LLC provides free, no-obligation quotes tailored to your specific needs. We factor in packing requirements, specialty equipment handling, after-hours scheduling, and the number of crew members needed. Because we are a local, independent company — not a national chain — we offer competitive rates without the overhead markup. Contact us with your office size, inventory list, and preferred move date for a precise estimate.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does Freight Bridge LLC handle long-distance moves?</summary>
+        <p>
+          Yes, Freight Bridge LLC handles both local and long-distance moves. While we are based in Iowa City, Iowa, our licensed interstate authority allows us to move households and businesses across state lines throughout the entire United States. Long-distance moves require careful planning: we secure all furniture and equipment for highway transport, provide detailed inventory tracking, and coordinate pickup and delivery windows that match your schedule. Our crew handles the loading, transport, and unloading personally — you work with the same team from start to finish. We are licensed with USDOT 4166904 and MC 1734786, which means we meet all federal requirements for interstate commerce. Whether you are moving from Iowa City to Texas, Florida, or California, we provide the same careful, hands-on service that our local customers trust.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What areas does Freight Bridge LLC serve for moving and freight?</summary>
+        <p>
+          Freight Bridge LLC serves the Iowa City–Cedar Rapids corridor for local moving and hauling, including Iowa City, Coralville, North Liberty, and Cedar Rapids. For freight hauling, our service area extends to 49 states. Our local moving coverage includes Johnson County and Linn County, with same-day and next-day availability for moves within the corridor. For freight, we pick up loads from brokers and dispatchers nationwide and deliver to any destination in the continental United States. Our data-center hauling specifically serves the growing data center developments along the I-380 corridor, including the Big Cedar Industrial Center area in Cedar Rapids and projects around Iowa City, Coralville, and North Liberty. No matter the distance, our experienced crew ensures safe, on-time delivery.
+        </p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What should I expect when hiring Freight Bridge LLC for a data-center haul?</summary>
+        <p>
+          When you hire Freight Bridge LLC for a data-center haul, you can expect a professional, efficient cleanup and removal process from a crew that understands the unique requirements of post-construction sites. We arrive on schedule with the proper equipment to handle debris removal, decommissioned server racks, cabling, and leftover construction materials. Our team works safely around active infrastructure, coordinates with your site manager, and ensures the haul area is left clean and ready for the next phase of your project. We serve data center developments in the Iowa City and Cedar Rapids corridor, including the Big Cedar Industrial Center area. Typical data-center hauling projects range from single-day cleanups to multi-week ongoing removal contracts. Contact us with your site details and timeline for a custom quote.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  {/* ---- Owner's voice (E-E-A-T: Experience) ---- */}
+  <section class="section">
+    <div class="owner-note" data-reveal>
+      <p>
+        “I started Freight Bridge in 2020 because I was tired of watching the big moving companies treat
+        people like inventory. You call, you get a call center. When you hire us, you get my crew and my
+        number — and if something goes wrong, I want to know about it so I can fix it. That's the difference
+        between a company run by someone who still loads the truck and one run by a board of directors.”
+      </p>
+      <cite>— {business?.owner}, Owner &amp; Operator, Freight Bridge LLC</cite>
+    </div>
+  </section>
+
+  {/* ---- Reviews (E-E-A-T / trust) ---- */}
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Reviews</span>
+      <h2>What our customers say</h2>
+      <p class="section-sub">Rated {avgRating} out of 5 across {reviews.length} reviews from across the Midwest.</p>
+    </div>
+    <div class="review-grid" data-reveal>
+      {homeReviews.map((r) => (
+        <figure class="review-card">
+          <div class="stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</div>
+          <blockquote>“{r.review}”</blockquote>
+          <figcaption><strong>{r.name}</strong> · {r.location}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
     <h2>Ready to get moving?</h2>
     <p>Tell us what you need and we'll get you a straight quote — fast.</p>
-    <div class="cta-buttons">
-      <a href="/contact" class="cta-btn primary">Get a Quote</a>
-      <a href={`tel:${business?.phone}`} class="cta-btn secondary">Call {business?.phone}</a>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Get a Quote</a>
+      <a href={`tel:${business?.phone}`} class="btn btn-ghost-light">Call {business?.phone}</a>
     </div>
   </section>
 </Base>
 
 <style>
-  .hero { padding: 4rem 0 2rem; text-align: center; }
-  h1 { font-size: 2.75rem; margin: 0 0 1rem; color: #1e3a8a; }
-  .tagline { font-size: 1.35rem; color: #2563eb; font-weight: 600; margin: 0 0 1rem; }
-  .description { max-width: 42rem; margin: 0 auto 2rem; line-height: 1.7; color: #374151; font-size: 1.1rem; }
-  .hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  h2 { font-size: 1.75rem; color: #111827; margin: 0 0 1.5rem; }
-
-  .cta-btn {
-    display: inline-block; padding: 0.75rem 2rem; border-radius: 0.5rem;
-    text-decoration: none; font-weight: 600;
+  /* ---- Iowa furniture-moving 10% offer (homepage hero) ---- */
+  .offer-ribbon {
+    display: flex; align-items: center; gap: 0.65rem;
+    max-width: 38rem; margin: 0 0 1.6rem; padding: 0.7rem 0.95rem;
+    background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 4px solid #ffd34e; border-radius: 12px;
+    color: #eef2ff; font-size: 0.9rem; line-height: 1.5; backdrop-filter: blur(8px);
   }
-  .cta-btn.primary { background: #2563eb; color: white; }
-  .cta-btn.primary:hover { background: #1e40af; }
-  .cta-btn.secondary { background: transparent; color: #2563eb; border: 2px solid #2563eb; }
-
-  .services { padding: 3rem 0; }
-  .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-  .service-card {
-    display: block; padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0.75rem;
-    text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s;
+  .offer-tag {
+    flex-shrink: 0; font-family: var(--font-head); font-weight: 800;
+    background: var(--grad-red); color: #fff; padding: 0.3rem 0.65rem;
+    border-radius: 8px; font-size: 0.82rem; letter-spacing: 0.02em; white-space: nowrap;
   }
-  .service-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
-  .service-icon { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
-  .service-card h3 { font-size: 1.25rem; margin: 0 0 0.75rem; color: #1e3a8a; }
-  .service-card p { color: #6b7280; line-height: 1.6; margin: 0 0 1rem; font-size: 0.95rem; }
-  .learn-more { color: #2563eb; font-weight: 600; font-size: 0.9rem; }
-
-  .datacenter { padding: 3rem 0; }
-  .dc-subtitle { color: #6b7280; font-size: 1.1rem; margin: -1rem 0 2rem; }
-  .dc-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-  .dc-card {
-    display: block; padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0.75rem;
-    text-decoration: none; color: inherit; background: #f0f9ff; transition: border-color 0.2s, transform 0.2s;
-  }
-  .dc-card:hover { border-color: #2563eb; transform: translateY(-2px); }
-  .dc-card h3 { font-size: 1.35rem; margin: 0 0 0.75rem; color: #1e3a8a; }
-  .dc-card p { color: #374151; line-height: 1.6; margin: 0 0 1rem; font-size: 0.95rem; }
-
-  .why-us { padding: 3rem 0; }
-  .reasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
-  .reason { padding: 1.5rem; background: #f9fafb; border-radius: 0.5rem; border-left: 4px solid #2563eb; }
-  .reason strong { display: block; margin-bottom: 0.5rem; color: #111827; }
-  .reason p { margin: 0; color: #374151; font-size: 0.9rem; line-height: 1.5; }
-
-  .cta-section {
-    text-align: center; padding: 3rem 2rem; background: #1e3a8a; color: white;
-    border-radius: 1rem; margin: 2rem 0;
-  }
-  .cta-section h2 { color: white; }
-  .cta-section p { opacity: 0.9; margin: 0 0 1.5rem; font-size: 1.1rem; }
-  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .cta-section .cta-btn.secondary { color: white; border-color: white; }
+  @media (max-width: 600px) { .offer-ribbon { flex-wrap: wrap; } }
 </style>

@@ -1,0 +1,58 @@
+{
+  "id": "business",
+  "name": "Captains Fish and Chicken",
+  "tagline": "Fresh Fried Fish & Chicken in Cedar Rapids",
+  "phone": "(319) 221-1040",
+  "email": "info@captainsfishandchicken.com",
+  "domain": "https://captainsfishandchicken.com",
+  "owner": "Captains Fish and Chicken Inc",
+  "slogan": "Hooked on Flavor",
+  "description": "Captains Fish and Chicken serves up Cedar Rapids' best fried catfish, shrimp, and chicken. Family-owned with big portions, great prices, and that perfect crispy crunch. Dine in or order online through UberEats and DoorDash.",
+  "address": {
+    "street": "1616 1st Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "stateFullName": "Iowa",
+    "zip": "52402",
+    "country": "US"
+  },
+  "geo": {
+    "latitude": 41.9779,
+    "longitude": -91.6578
+  },
+  "hours": {
+    "weekday": {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    "sunday": {
+      "days": ["Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    },
+    "displayText": "Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm"
+  },
+  "yearEstablished": "2024",
+  "copyrightYears": "2024-2026",
+  "paymentAccepted": "Cash, Visa, Mastercard, Apple Pay",
+  "mapsUrl": "https://maps.google.com/?q=1616+1st+Ave+NE+Cedar+Rapids+IA+52402",
+  "directionsUrl": "https://maps.google.com/dir/?q=1616+1st+Ave+NE+Cedar+Rapids+IA+52402",
+  "sameAs": [
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/",
+    "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+    "https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802889/73635575/"
+  ],
+  "brand": {
+    "primaryColor": "#0B1F3A",
+    "accentColor": "#F5B51E",
+    "bgColor": "#F6F7F9",
+    "secondaryColor": "#1C74D9",
+    "textColor": "#202124",
+    "logoFilename": "logo.png",
+    "logoAlt": "Captain's Fish & Chicken logo featuring a smiling shark captain in a nautical theme"
+  },
+  "analytics": {
+    "gaId": "G-XXXXXXXXXX"
+  }
+}

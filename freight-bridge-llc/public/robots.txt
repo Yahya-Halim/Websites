@@ -11,6 +11,21 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: DeepSeekBot
+Allow: /
+
 User-agent: *
 Allow: /
 

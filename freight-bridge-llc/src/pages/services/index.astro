@@ -1,155 +1,111 @@
 ---
 import Base from '@engine/layouts/Base.astro';
 import { getEntry, getCollection } from 'astro:content';
+import reviews from '/src/data/content/reviews.json';
 
 const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
 const services = await getCollection('services');
 
-const iconMap: Record<string, string> = {
-  'residential-moving': '🚚',
-  'commercial-moving': '🏢',
-  'freight-hauling': '🚛',
+const idxReviews = reviews.slice(0, 3);
+const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).toFixed(1);
+
+const iconFor: Record<string, string> = {
+  'residential-moving': 'home',
+  'commercial-moving': 'building',
+  'freight-hauling': 'truck',
 };
+const icons: Record<string, string> = {
+  home: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></svg>',
+  building: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1.5"/><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2"/></svg>',
+  truck: '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.8"/><circle cx="17.5" cy="18" r="1.8"/></svg>',
+};
+const icon = (name: string) => icons[name] ?? icons.truck;
 ---
 
 <Base title={`Our Services | ${business?.name}`} description={`${business?.name} offers residential and commercial moving, nationwide freight hauling, and data center hauling.`}>
   <section class="hero">
-    <h1>Our Services</h1>
-    <p class="subtitle">Moving, nationwide freight hauling, and data center cleanup — handled by a team you trust</p>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-copy" data-reveal>
+        <span class="eyebrow">Our services</span>
+        <h1>Moving, freight & <span class="grad">specialty hauling.</span></h1>
+        <p class="lead">Everything we do, handled by a team you can trust — from a single sofa to nationwide freight.</p>
+        <div class="hero-cta"><a href="/contact" class="btn btn-primary">Get a Quote</a></div>
+      </div>
+      <div class="hero-art" data-reveal>
+        <img src="/art-services.png" alt="Mover with boxes and delivery van" width="900" height="680" />
+      </div>
+    </div>
   </section>
 
-  <section class="services-grid">
-    {services.map((service) => (
-      <a href={`/services/${service.data.slug}`} class="service-card">
-        <div class="service-icon">{iconMap[service.data.slug] ?? '📦'}</div>
-        <h2>{service.data.name}</h2>
-        <p>{service.data.description}</p>
-        <span class="learn-more">Learn More →</span>
-      </a>
-    ))}
+  <section class="section">
+    <div class="grid-3">
+      {services.map((service) => (
+        <a href={`/services/${service.data.slug}`} class="card" data-reveal>
+          <span class="card-icon" set:html={icon(iconFor[service.data.slug] ?? 'truck')} />
+          <h3>{service.data.name}</h3>
+          <p>{service.data.description}</p>
+          <span class="card-link">Learn more <span class="arrow">→</span></span>
+        </a>
+      ))}
+    </div>
   </section>
 
-  <section class="datacenter">
-    <h2>Data Center Hauling</h2>
-    <p class="dc-subtitle">Post-construction cleanup and removal for Iowa's data center corridor</p>
-    <div class="dc-cards">
-      <a href="/services/data-center-iowa-city" class="dc-card">
-        <div class="dc-badge">Iowa City Corridor</div>
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Specialty</span>
+      <h2>Data-center hauling</h2>
+      <p class="section-sub">Post-construction cleanup and removal for Iowa's data-center corridor.</p>
+    </div>
+    <div class="grid-2">
+      <a href="/services/data-center-iowa-city" class="dc-card" data-reveal>
+        <span class="dc-tag">Iowa City Corridor</span>
         <h3>Iowa City</h3>
-        <p>Post-construction debris removal, decommissioned equipment hauling, and site cleanup for data center projects in Iowa City, Coralville, and North Liberty.</p>
-        <ul class="dc-services">
-          <li>Construction debris removal</li>
-          <li>Equipment hauling</li>
-          <li>Post-build site cleanup</li>
-        </ul>
-        <span class="learn-more">Learn More →</span>
+        <p>Post-construction debris removal, decommissioned equipment hauling, and site cleanup in Iowa City, Coralville, and North Liberty.</p>
+        <span class="card-link">Learn more <span class="arrow">→</span></span>
       </a>
-      <a href="/services/data-center-cedar-rapids" class="dc-card">
-        <div class="dc-badge">Cedar Rapids Corridor</div>
+      <a href="/services/data-center-cedar-rapids" class="dc-card" data-reveal>
+        <span class="dc-tag">Cedar Rapids Corridor</span>
         <h3>Cedar Rapids</h3>
-        <p>Serving the Big Cedar Industrial Center and surrounding data center developments — QTS, Google, and more. Debris removal and equipment hauling by a professional crew.</p>
-        <ul class="dc-services">
-          <li>Construction debris removal</li>
-          <li>Equipment hauling</li>
-          <li>Post-build site cleanup</li>
-        </ul>
-        <span class="learn-more">Learn More →</span>
+        <p>Serving Big Cedar Industrial Center and surrounding data center developments — QTS, Google, and more.</p>
+        <span class="card-link">Learn more <span class="arrow">→</span></span>
       </a>
     </div>
   </section>
 
-  <section class="benefits">
-    <h2>Why Choose {business?.name}?</h2>
-    <div class="benefits-grid">
-      <div class="benefit">
-        <span class="benefit-icon">✓</span>
-        <div>
-          <h3>A Team You Can Trust</h3>
-          <p>Our experienced crew handles your job with care — no call centers, no runaround, no surprises.</p>
-        </div>
-      </div>
-      <div class="benefit">
-        <span class="benefit-icon">✓</span>
-        <div>
-          <h3>Licensed Interstate Carrier</h3>
-          <p>USDOT 4414774, MC-1734786 — legal to move you locally or across state lines.</p>
-        </div>
-      </div>
-      <div class="benefit">
-        <span class="benefit-icon">✓</span>
-        <div>
-          <h3>Careful Handling</h3>
-          <p>Your furniture and equipment are loaded, secured, and placed with care on every move.</p>
-        </div>
-      </div>
-      <div class="benefit">
-        <span class="benefit-icon">✓</span>
-        <div>
-          <h3>Straight Quotes</h3>
-          <p>Clear, honest pricing up front so you know what to expect before moving day.</p>
-        </div>
-      </div>
+  <section class="section">
+    <div class="section-head" data-reveal>
+      <span class="kicker">Why Freight Bridge</span>
+      <h2>Why customers choose us</h2>
+    </div>
+    <div class="grid-3">
+      <div class="why" data-reveal><span class="why-num">01</span><h3>A team you can trust</h3><p>Our experienced crew handles your job with care — no call centers, no runaround, no surprises.</p></div>
+      <div class="why" data-reveal><span class="why-num">02</span><h3>Local to nationwide</h3><p>From local Iowa City moves to freight in 49 states — we go wherever you're headed.</p></div>
+      <div class="why" data-reveal><span class="why-num">03</span><h3>Careful handling</h3><p>Your furniture and equipment are loaded, secured, and placed with care on every move.</p></div>
     </div>
   </section>
 
-  <section class="cta-section">
-    <h2>Ready to Get Started?</h2>
+  <section class="section">
+    <div class="section-head" data-reveal><span class="kicker">Reviews</span><h2>What our customers say</h2><p class="section-sub">Rated {avgRating} out of 5 across {reviews.length} reviews.</p></div>
+    <div class="review-grid" data-reveal>
+      {idxReviews.map((r) => (
+        <figure class="review-card">
+          <div class="stars" aria-label={`${r.rating} out of 5 stars`}>{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</div>
+          <blockquote>“{r.review}”</blockquote>
+          <figcaption><strong>{r.name}</strong> · {r.location}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true"></div>
+    <h2>Ready to get started?</h2>
     <p>Contact us today for a straight quote on your move or freight needs.</p>
-    <div class="cta-buttons">
-      <a href="/contact" class="cta-btn primary">Get a Quote</a>
-      <a href={`tel:${business?.phone}`} class="cta-btn secondary">Call {business?.phone}</a>
+    <div class="hero-cta">
+      <a href="/contact" class="btn btn-primary">Get a Quote</a>
+      <a href={`tel:${business?.phone}`} class="btn btn-ghost-light">Call {business?.phone}</a>
     </div>
   </section>
 </Base>
-
-<style>
-  .hero { padding: 4rem 0 2rem; text-align: center; }
-  h1 { font-size: 2.5rem; margin: 0 0 1rem; color: #1e3a8a; }
-  .subtitle { font-size: 1.2rem; color: #6b7280; margin: 0; }
-  h2 { font-size: 1.75rem; color: #111827; margin: 0 0 1.5rem; }
-
-  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; padding: 2rem 0; }
-  .service-card {
-    display: block; padding: 2rem; border: 1px solid #e5e7eb; border-radius: 0.75rem;
-    text-decoration: none; color: inherit; transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .service-card:hover { border-color: #2563eb; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1); }
-  .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
-  .service-card h2 { font-size: 1.35rem; margin: 0 0 0.75rem; color: #1e3a8a; }
-  .service-card p { color: #6b7280; line-height: 1.6; margin: 0 0 1rem; font-size: 0.95rem; }
-  .learn-more { color: #2563eb; font-weight: 600; font-size: 0.9rem; }
-
-  .datacenter { padding: 3rem 0; }
-  .dc-subtitle { color: #6b7280; font-size: 1.1rem; margin: -1rem 0 2rem; }
-  .dc-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
-  .dc-card {
-    display: block; padding: 2rem; border: 2px solid #e5e7eb; border-radius: 0.75rem;
-    text-decoration: none; color: inherit; background: #f0f9ff;
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-  }
-  .dc-card:hover { border-color: #2563eb; box-shadow: 0 6px 20px rgba(37, 99, 235, 0.15); transform: translateY(-2px); }
-  .dc-badge {
-    display: inline-block; background: #2563eb; color: white; font-size: 0.75rem; font-weight: 700;
-    text-transform: uppercase; letter-spacing: 0.05em; padding: 0.25rem 0.75rem; border-radius: 1rem; margin-bottom: 1rem;
-  }
-  .dc-card h3 { font-size: 1.5rem; margin: 0 0 0.75rem; color: #1e3a8a; }
-  .dc-card p { color: #374151; line-height: 1.6; margin: 0 0 1rem; font-size: 0.95rem; }
-  .dc-services { list-style: none; padding: 0; margin: 0 0 1.25rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .dc-services li { background: white; border: 1px solid #d1d5db; padding: 0.25rem 0.75rem; border-radius: 0.375rem; font-size: 0.8rem; color: #374151; }
-
-  .benefits { padding: 3rem 0; }
-  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
-  .benefit { display: flex; gap: 1rem; padding: 1.5rem; background: #f9fafb; border-radius: 0.5rem; }
-  .benefit-icon { color: #10b981; font-size: 1.25rem; font-weight: 700; flex-shrink: 0; }
-  .benefit h3 { margin: 0 0 0.5rem; font-size: 1rem; color: #111827; }
-  .benefit p { margin: 0; color: #6b7280; font-size: 0.9rem; line-height: 1.5; }
-
-  .cta-section { text-align: center; padding: 3rem 2rem; background: #1e3a8a; color: white; border-radius: 1rem; margin: 2rem 0; }
-  .cta-section h2 { color: white; }
-  .cta-section p { opacity: 0.9; margin: 0 0 1.5rem; font-size: 1.1rem; }
-  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-  .cta-btn { display: inline-block; padding: 0.75rem 2rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; }
-  .cta-btn.primary { background: #2563eb; color: white; }
-  .cta-btn.secondary { background: transparent; color: white; border: 2px solid white; }
-</style>

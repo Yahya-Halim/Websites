@@ -1,0 +1,291 @@
+[
+  {
+    "slug": "seafood",
+    "name": "Fish & Seafood",
+    "order": 1,
+    "description": "Fresh perch, tilapia, catfish, cod, snapper, shrimp and more — hand-breaded and fried to order. Dinners come with fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Fried Catfish Dinner",
+        "description": "Golden hand-breaded catfish fried fresh to order. Served with fries, coleslaw, and bread.",
+        "prices": [{ "label": "Dinner", "price": 13.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/catfish.jpg",
+        "imageAlt": "Golden fried catfish fillets with fries"
+      },
+      {
+        "name": "Fried Perch Dinner",
+        "description": "Crispy lake perch fillets, seasoned and fried until flaky. Served with fries, coleslaw, and bread.",
+        "prices": [{ "label": "Dinner", "price": 12.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/perch.jpg",
+        "imageAlt": "Crispy fried perch fillets on a plate"
+      },
+      {
+        "name": "Fried Tilapia Dinner",
+        "description": "Mild, tender tilapia fillets breaded and fried golden. Served with fries, coleslaw, and bread.",
+        "prices": [{ "label": "Dinner", "price": 12.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/tilapia.jpg",
+        "imageAlt": "Fried tilapia fillets with a golden crust"
+      },
+      {
+        "name": "Fried Cod Dinner",
+        "description": "Thick, flaky cod fillets fried to a crisp golden brown. Served with fries, coleslaw, and bread.",
+        "prices": [{ "label": "Dinner", "price": 13.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/cod.jpg",
+        "imageAlt": "Battered fried cod fillets"
+      },
+      {
+        "name": "Fried Red Snapper Dinner",
+        "description": "Whole seasoned red snapper, fried crisp and served hot. Served with fries, coleslaw, and bread.",
+        "prices": [{ "label": "Dinner", "price": 16.99 }],
+        "prepTime": "15-20 min",
+        "image": "/images/menu/red-snapper.jpg",
+        "imageAlt": "Whole fried red snapper on a plate"
+      },
+      {
+        "name": "Fried Shrimp Dinner",
+        "description": "Lightly breaded shrimp fried until crispy and juicy. Served with fries, coleslaw, and bread.",
+        "prices": [{ "label": "Dinner", "price": 13.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/shrimp.jpg",
+        "imageAlt": "Crispy golden fried shrimp"
+      },
+      {
+        "name": "Calamari",
+        "description": "Tender calamari rings, lightly breaded and fried to a golden crunch.",
+        "prices": [{ "label": "Regular", "price": 10.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/calamari.jpg",
+        "imageAlt": "Fried calamari rings with dipping sauce"
+      },
+      {
+        "name": "Crab Cakes",
+        "description": "Savory crab cakes, pan-fried crisp on the outside and tender inside.",
+        "prices": [{ "label": "Regular", "price": 12.99 }],
+        "prepTime": "12-18 min",
+        "image": "/images/menu/crab-cakes.jpg",
+        "imageAlt": "Golden pan-fried crab cakes"
+      },
+      {
+        "name": "Seafood Combo",
+        "description": "A mix of catfish, shrimp, and your choice of fish. The best way to sample it all. Served with fries and bread.",
+        "prices": [{ "label": "Combo", "price": 18.99 }],
+        "prepTime": "15-20 min",
+        "image": "/images/menu/seafood-combo.jpg",
+        "imageAlt": "Fried seafood platter with fish, shrimp, and fries"
+      }
+    ],
+    "faqs": [
+      { "question": "Is the fish fried fresh to order?", "answer": "Yes. Everything is hand-breaded and fried to order, so it comes out hot and crispy. We recommend calling ahead at (319) 221-1040 for faster service." },
+      { "question": "What comes with a seafood dinner?", "answer": "Our dinners come with fries, coleslaw, and bread. You can swap sides on request." }
+    ]
+  },
+  {
+    "slug": "chicken",
+    "name": "Chicken",
+    "order": 2,
+    "description": "Fried chicken, tenders, boneless bites, bone-in wings, and gizzards — crispy, juicy, and seasoned just right.",
+    "items": [
+      {
+        "name": "Fried Chicken (Legs & Thighs)",
+        "description": "Classic bone-in fried chicken, seasoned and fried crispy. Juicy legs and thighs done right.",
+        "prices": [{ "label": "Dinner", "price": 11.99 }],
+        "prepTime": "15-20 min",
+        "image": "/images/menu/fried-chicken.jpg",
+        "imageAlt": "Crispy golden fried chicken pieces"
+      },
+      {
+        "name": "Chicken Tenders",
+        "description": "Hand-breaded all-white-meat tenders, crispy outside and juicy inside. A kid and adult favorite.",
+        "prices": [{ "label": "4 pc", "price": 8.99 }, { "label": "6 pc", "price": 11.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/chicken-tenders.jpg",
+        "imageAlt": "Golden fried chicken tenders with dipping sauce"
+      },
+      {
+        "name": "Boneless Chicken Bites",
+        "description": "Bite-sized breaded chicken, fried crisp — toss them in your favorite wing sauce.",
+        "prices": [{ "label": "Regular", "price": 9.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/boneless-bites.jpg",
+        "imageAlt": "Breaded boneless chicken bites"
+      },
+      {
+        "name": "Bone-In Wings",
+        "description": "Crispy bone-in wings fried to order. Plain or tossed in your choice of sauce. Dinners include fries, coleslaw, and bread.",
+        "prices": [
+          { "label": "6 pc Dinner", "price": 13.99 },
+          { "label": "10 pc Dinner", "price": 19.99 },
+          { "label": "20 pc", "price": 32.99 },
+          { "label": "30 pc", "price": 49.99 },
+          { "label": "50 pc", "price": 84.99 },
+          { "label": "100 pc", "price": 159.99 }
+        ],
+        "prepTime": "12-18 min",
+        "image": "/images/menu/wings.jpg",
+        "imageAlt": "Crispy fried chicken wings"
+      },
+      {
+        "name": "Gizzards",
+        "description": "Tender, perfectly seasoned chicken gizzards with a light breading and satisfying crunch. A local favorite.",
+        "prices": [{ "label": "Regular", "price": 9.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/gizzards.jpg",
+        "imageAlt": "Fried chicken gizzards"
+      },
+      {
+        "name": "Philly Chicken Sandwich",
+        "description": "Griddled chicken with peppers, onions, and melted cheese on a toasted hoagie roll.",
+        "prices": [{ "label": "Sandwich", "price": 10.99 }],
+        "prepTime": "10-15 min",
+        "image": "/images/menu/philly-chicken.jpg",
+        "imageAlt": "Philly chicken cheesesteak sandwich"
+      }
+    ],
+    "faqs": [
+      { "question": "Are the wings bone-in or boneless?", "answer": "Our classic wings are bone-in. If you prefer boneless, try our Boneless Chicken Bites tossed in sauce." },
+      { "question": "Can I order wings by the bulk for a party?", "answer": "Absolutely — we do 20, 30, 50, and 100-piece orders. Call ahead at (319) 221-1040 for large orders." }
+    ]
+  },
+  {
+    "slug": "sides",
+    "name": "Sides",
+    "order": 3,
+    "description": "Southern-style sides done right — from hush puppies to mac & cheese.",
+    "items": [
+      {
+        "name": "Hush Puppies",
+        "description": "Golden fried cornmeal hush puppies — crispy outside, fluffy inside.",
+        "prices": [{ "label": "10 pc", "price": 6.99 }],
+        "prepTime": "8-12 min",
+        "image": "/images/menu/hush-puppies.jpg",
+        "imageAlt": "Golden fried hush puppies"
+      },
+      {
+        "name": "Breaded Mushrooms",
+        "description": "Whole mushrooms hand-breaded and fried crisp. Great for sharing.",
+        "prices": [{ "label": "10 pc", "price": 6.99 }],
+        "prepTime": "8-12 min",
+        "image": "/images/menu/breaded-mushrooms.jpg",
+        "imageAlt": "Breaded fried mushrooms"
+      },
+      {
+        "name": "Cheese Curds",
+        "description": "Battered Wisconsin-style cheese curds, fried until gooey and golden.",
+        "prices": [{ "label": "Regular", "price": 6.99 }],
+        "prepTime": "8-12 min",
+        "image": "/images/menu/cheese-curds.jpg",
+        "imageAlt": "Fried cheese curds"
+      },
+      {
+        "name": "Onion Rings",
+        "description": "Thick-cut onion rings in a crispy golden batter.",
+        "prices": [{ "label": "Regular", "price": 5.99 }],
+        "prepTime": "8-12 min",
+        "image": "/images/menu/onion-rings.jpg",
+        "imageAlt": "Stack of crispy onion rings"
+      },
+      {
+        "name": "Fried Okra",
+        "description": "Bite-sized okra, breaded and fried Southern-style.",
+        "prices": [{ "label": "Regular", "price": 5.99 }],
+        "prepTime": "8-12 min"
+      },
+      {
+        "name": "Mac & Cheese",
+        "description": "Creamy, cheesy macaroni — a comfort-food classic.",
+        "prices": [{ "label": "Regular", "price": 4.99 }],
+        "prepTime": "5 min",
+        "image": "/images/menu/mac-and-cheese.jpg",
+        "imageAlt": "Creamy macaroni and cheese"
+      },
+      {
+        "name": "French Fries",
+        "description": "Crispy, golden fries — perfect on their own or with any dinner.",
+        "prices": [{ "label": "Regular", "price": 3.99 }, { "label": "Large", "price": 5.99 }],
+        "prepTime": "5 min",
+        "image": "/images/menu/french-fries.jpg",
+        "imageAlt": "Basket of golden french fries"
+      },
+      {
+        "name": "Coleslaw",
+        "description": "Creamy, tangy coleslaw that pairs perfectly with fried seafood and chicken.",
+        "prices": [{ "label": "Regular", "price": 2.99 }],
+        "prepTime": "2 min",
+        "image": "/images/menu/coleslaw.jpg",
+        "imageAlt": "Bowl of creamy coleslaw"
+      }
+    ],
+    "faqs": [
+      { "question": "What sides come with a dinner?", "answer": "Dinners come with fries, coleslaw, and bread. You can swap in another side on request." },
+      { "question": "Do you have vegetarian sides?", "answer": "Yes — fried okra, mushrooms, cheese curds, mac & cheese, fries, and coleslaw are all meat-free." }
+    ]
+  },
+  {
+    "slug": "desserts",
+    "name": "Desserts",
+    "order": 4,
+    "description": "Save room — our desserts are made to finish the meal right.",
+    "items": [
+      {
+        "name": "Banana Pudding",
+        "description": "Classic Southern banana pudding with vanilla wafers and fresh banana.",
+        "prices": [{ "label": "Cup", "price": 4.99 }],
+        "prepTime": "2 min",
+        "image": "/images/menu/banana-pudding.jpg",
+        "imageAlt": "Banana pudding with vanilla wafers"
+      },
+      {
+        "name": "Chocolate Cake",
+        "description": "Rich, moist chocolate layer cake.",
+        "prices": [{ "label": "Slice", "price": 5.99 }],
+        "prepTime": "2 min",
+        "image": "/images/menu/chocolate-cake.jpg",
+        "imageAlt": "Slice of rich chocolate layer cake"
+      },
+      {
+        "name": "Lemon Cake",
+        "description": "Bright, sweet-tart lemon cake.",
+        "prices": [{ "label": "Slice", "price": 5.99 }],
+        "prepTime": "2 min",
+        "image": "/images/menu/lemon-cake.jpg",
+        "imageAlt": "Slice of lemon cake"
+      },
+      {
+        "name": "New York Cheesecake",
+        "description": "Smooth, creamy New York-style cheesecake.",
+        "prices": [{ "label": "Slice", "price": 5.99 }],
+        "prepTime": "2 min",
+        "image": "/images/menu/cheesecake.jpg",
+        "imageAlt": "Slice of New York cheesecake"
+      }
+    ]
+  },
+  {
+    "slug": "drinks",
+    "name": "Drinks",
+    "order": 5,
+    "description": "Ice-cold beverages to wash it all down.",
+    "items": [
+      {
+        "name": "Fountain Drink",
+        "description": "Coca-Cola, Diet Coke, Sprite, and more. Free refills with dine-in.",
+        "prices": [{ "label": "Regular", "price": 2.49 }, { "label": "Large", "price": 2.99 }],
+        "prepTime": "1 min",
+        "image": "/images/menu/fountain-drink.jpg",
+        "imageAlt": "Fountain soft drink in a cup"
+      },
+      {
+        "name": "Bottled Water",
+        "description": "Refreshing bottled water.",
+        "prices": [{ "label": "Bottle", "price": 1.99 }],
+        "prepTime": "1 min",
+        "image": "/images/menu/fountain-drink.jpg",
+        "imageAlt": "Bottled water"
+      }
+    ]
+  }
+]

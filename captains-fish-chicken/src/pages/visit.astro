@@ -1,0 +1,202 @@
+---
+import Base from '../layouts/Base.astro';
+import { getEntry } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const title = `Visit Us | ${business?.name ?? "Captain's Fish & Chicken"}`;
+const description = `Visit ${business?.name} at ${business?.address?.street}, ${business?.address?.city}, ${business?.address?.state}. Open Mon–Sat 11am–10pm, Sun 12pm–9pm.`;
+---
+
+<Base title={title} description={description}>
+  <section class="visit-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Visit Us</h1>
+      <p class="tagline">Come taste the crispiest fish and chicken in Cedar Rapids.</p>
+    </div>
+  </section>
+
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path fill="#F6F7F9" d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z"></path>
+    </svg>
+  </div>
+
+  <section class="section section-light">
+    <div class="container">
+      <h2 class="sr-only">Visit Information</h2>
+      <div class="visit-grid">
+        <div class="card info-card">
+          <div class="info-icon" aria-hidden="true">📍</div>
+          <h3>Location</h3>
+          <p class="address">
+            {business?.address?.street}<br />
+            {business?.address?.city}, {business?.address?.state} {business?.address?.zip}
+          </p>
+          <a href={business?.directionsUrl} class="btn btn-primary" target="_blank" rel="noopener">Get Directions</a>
+        </div>
+
+        <div class="card info-card">
+          <div class="info-icon" aria-hidden="true">🕐</div>
+          <h3>Hours</h3>
+          <ul class="hours-list">
+            <li><span>Mon–Sat</span> <span>11:00 AM – 10:00 PM</span></li>
+            <li><span>Sunday</span> <span>12:00 PM – 9:00 PM</span></li>
+          </ul>
+        </div>
+
+        <div class="card info-card">
+          <div class="info-icon" aria-hidden="true">📞</div>
+          <h3>Contact</h3>
+          <p class="contact-line">
+            <strong>Phone:</strong> <a href={`tel:${business?.phone}`}>{business?.phone}</a>
+          </p>
+          <p class="contact-line">
+            <strong>Email:</strong> <a href={`mailto:${business?.email}`}>{business?.email}</a>
+          </p>
+          <p class="contact-line">
+            <strong>Payment:</strong> {business?.paymentAccepted}
+          </p>
+        </div>
+
+        <div class="card info-card">
+          <div class="info-icon" aria-hidden="true">🛵</div>
+          <h3>Order Online</h3>
+          <p>Skip the line and get your favorites delivered.</p>
+          <div class="order-links">
+            <a href={business?.sameAs?.[1]} class="btn btn-primary" target="_blank" rel="noopener">UberEats</a>
+            <a href={business?.sameAs?.[2]} class="btn btn-secondary" target="_blank" rel="noopener">DoorDash</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Find Us on the Map</h2>
+      </div>
+      <div class="map-embed">
+        <iframe
+          title="Captain's Fish and Chicken location"
+          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.5!2d${business?.geo?.longitude}!3d${business?.geo?.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU4JzQwLjQiTiA5McKwMzknMjguMSJX!5e0!3m2!1sen!2sus!4v1`}
+          width="100%"
+          height="400"
+          style="border:0; border-radius: 20px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <p class="map-fallback">
+        <a href={business?.mapsUrl} target="_blank" rel="noopener">Open in Google Maps →</a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .visit-hero {
+    min-height: 50vh;
+    background: linear-gradient(180deg, #112E5C, #08162B);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(8, 22, 43, 0.4);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  .visit-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  }
+  .tagline {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .wave-divider { margin-top: -1px; }
+  .wave-divider svg { display: block; }
+
+  .visit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .info-card {
+    text-align: center;
+  }
+  .info-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .info-card h3 {
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .address {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+  .hours-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+  }
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--silver);
+    color: #444;
+  }
+  .contact-line {
+    margin: 0.5rem 0;
+    color: #444;
+  }
+  .contact-line strong {
+    color: var(--navy);
+  }
+  .order-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  .map-embed {
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow-large);
+  }
+  .map-fallback {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .map-fallback a {
+    color: var(--ocean);
+    font-weight: 600;
+  }
+  .map-fallback a:hover {
+    color: var(--gold);
+  }
+  @media (max-width: 640px) {
+    .visit-hero { padding: 6rem 1rem 3rem; }
+  }
+</style>
