@@ -10,16 +10,17 @@ const singletonJson = (fileName: string, entryId: string) => file(fileName, {
   parser: (text: string) => ({ [entryId]: JSON.parse(text) }),
 });
 
-// Extend the engine's menu schema with optional per-item imagery. The engine's
-// item schema strips unknown keys, so we add `image`/`imageAlt` explicitly to
-// keep them available to our custom menu page. Everything else is inherited
-// from the engine schema unchanged, preserving the wire-input contract.
+// Extend the engine's menu schema with optional per-item imagery and
+// popularity/rating badges. The engine's item schema strips unknown keys,
+// so we add them explicitly to keep them available to our custom menu page.
 const menuSchemaWithImages = restaurantCollections.menu.extend({
   items: z
     .array(
       restaurantCollections.menu.shape.items.element.extend({
         image: z.string().optional(),
         imageAlt: z.string().optional(),
+        popular: z.boolean().optional(),
+        rating: z.string().optional(),
       }),
     )
     .min(1),

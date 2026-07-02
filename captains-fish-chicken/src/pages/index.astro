@@ -29,7 +29,10 @@ const tagline = business?.tagline ?? '';
         <a href={business?.sameAs?.[1]} class="btn btn-secondary" target="_blank" rel="noopener">Order Online</a>
       </div>
       <div class="meta-badges">
-        <span class="badge"><span aria-hidden="true">★</span> 4.4 (209 reviews)</span>
+        <span class="badge">
+          <svg class="badge-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          4.4 (209 reviews)
+        </span>
         <span class="badge">$10–$20 per person</span>
         <span class="badge">Mon–Sat 11am–10pm</span>
       </div>
@@ -48,12 +51,14 @@ const tagline = business?.tagline ?? '';
     <div class="container">
       <div class="section-header">
         <h2>Customer Favorites</h2>
-        <p>Big portions, bold flavor, and prices that keep you coming back.</p>
+        <p>The dishes our regulars order every time. Big portions. Prices that don't sting. Flavor that keeps you coming back.</p>
       </div>
       <div class="grid-3">
         {featuredSections.map((section) => (
           <div class="card menu-card">
-            <div class="card-icon" aria-hidden="true">🍤</div>
+            <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C7 2 3 6 3 11c0 2.5 1 4.8 2.7 6.5L12 22l6.3-4.5C20 15.8 21 13.5 21 11c0-5-4-9-9-9z"/><path d="M12 6v6l3 3"/></svg>
+          </div>
             <h3>{section.data.name}</h3>
             <p>{section.data.description}</p>
             <ul class="item-list">
@@ -76,23 +81,25 @@ const tagline = business?.tagline ?? '';
     <div class="container">
       <div class="section-header">
         <h2>Why Choose Captain's</h2>
-        <p>Fresh ingredients, crispy perfection, and flavors that make you a regular.</p>
+        <p>We're not a chain. We're a family-owned spot on 1st Ave NE where the fish is hand-breaded, the chicken is fried to order, and the regulars know our names.</p>
       </div>
       <div class="grid-3">
         <div class="card feature-card">
           <div class="feature-icon" aria-hidden="true">🐟</div>
           <h3>Fresh Daily</h3>
-          <p>Our seafood is sourced fresh and fried to order. No frozen fillets here.</p>
+          <p>Every fillet is breaded in-house that morning. No frozen bricks. No microwave shortcuts. Just fish that hits the fryer when you order it.</p>
         </div>
         <div class="card feature-card">
           <div class="feature-icon" aria-hidden="true">💰</div>
           <h3>Great Value</h3>
-          <p>Combos under $15 with fries and bread. Big portions for big appetites.</p>
+          <p>Combos under $15 with fries and bread included. Most dinners feed two light eaters or one very hungry person. You get your money's worth.</p>
         </div>
         <div class="card feature-card">
-          <div class="feature-icon" aria-hidden="true">⭐</div>
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--navy)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2L22 9.8l-6 4.8 2.4 7.2L12 16.4l-6.4 5.4 2.4-7.2L2 9.8l7.6-.6z" fill="var(--gold)" stroke="none"/></svg>
+          </div>
           <h3>4.4 Star Rating</h3>
-          <p>Rated by 200+ happy customers in Cedar Rapids. Come taste why.</p>
+          <p>Rated by 200+ happy customers in Cedar Rapids. Read the reviews. They mention the crunch, the portions, and the friendly service. Every time.</p>
         </div>
       </div>
     </div>
@@ -103,21 +110,39 @@ const tagline = business?.tagline ?? '';
     <div class="container">
       <div class="section-header">
         <h2>What Cedar Rapids Is Saying</h2>
-        <p>Real reviews from real customers.</p>
+        <p>Real reviews from real customers who keep coming back. Not filtered. Not paid for. Just honest words from people who love fried food done right.</p>
       </div>
       <div class="grid-3">
         <div class="card review-card">
-          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
           <p>"You definitely get a lot of food in your order. The combo dinners are a good value, they come with fries and a piece of bread."</p>
           <span class="reviewer">— Local Diner</span>
         </div>
         <div class="card review-card">
-          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
           <p>"Gizzards had the most flavor of any I've had in the area and were so tender you could bite thru them no problem. Perfect amount of seasoning."</p>
           <span class="reviewer">— Regular Customer</span>
         </div>
         <div class="card review-card">
-          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
+          <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg class="star-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
           <p>"Good prices, clean place, nice staff and service, and amazing food."</p>
           <span class="reviewer">— Happy Guest</span>
         </div>
@@ -130,11 +155,24 @@ const tagline = business?.tagline ?? '';
     <div class="container">
       <div class="section-header">
         <h2>Order Online</h2>
-        <p>Get your favorites delivered or ready for pickup.</p>
+        <p>Get your favorites delivered hot and fresh, or order ahead for pickup. Same food. Same quality. Just more convenient.</p>
       </div>
       <div class="order-links">
-        <a href={business?.sameAs?.[1]} class="btn btn-primary" target="_blank" rel="noopener">🛵 Order on UberEats</a>
-        <a href={business?.sameAs?.[2]} class="btn btn-secondary" target="_blank" rel="noopener">🛵 Order on DoorDash</a>
+        <a href={business?.sameAs?.[1]} class="btn btn-primary btn-delivery" target="_blank" rel="noopener">
+          <svg class="delivery-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+            <path d="M15 5h-2l-1 2H9L7 9H4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1a3 3 0 0 0 6 0h2a3 3 0 0 0 6 0h1a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-3l-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <circle cx="7" cy="17" r="2" fill="currentColor"/>
+            <circle cx="17" cy="17" r="2" fill="currentColor"/>
+          </svg>
+          Order on UberEats
+        </a>
+        <a href={business?.sameAs?.[2]} class="btn btn-secondary btn-delivery" target="_blank" rel="noopener">
+          <svg class="delivery-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true">
+            <path d="M12 3l9 4.5v6L12 18 3 13.5v-6L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M12 12l9-4.5M12 12v6M12 12L3 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Order on DoorDash
+        </a>
       </div>
     </div>
   </section>
@@ -299,6 +337,16 @@ const tagline = business?.tagline ?? '';
     gap: 1.5rem;
     justify-content: center;
     flex-wrap: wrap;
+  }
+  .btn-delivery {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .delivery-icon {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
   }
 
   @media (max-width: 640px) {

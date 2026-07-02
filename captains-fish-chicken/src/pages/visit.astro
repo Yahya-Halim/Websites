@@ -6,7 +6,7 @@ const businessEntry = await getEntry('business', 'biz');
 const business = businessEntry?.data;
 
 const title = `Visit Us | ${business?.name ?? "Captain's Fish & Chicken"}`;
-const description = `Visit ${business?.name} at ${business?.address?.street}, ${business?.address?.city}, ${business?.address?.state}. Open Mon–Sat 11am–10pm, Sun 12pm–9pm.`;
+const description = `Visit ${business?.name} at ${business?.address?.street}, ${business?.address?.city}, ${business?.address?.state}. Open ${business?.hours?.displayText ?? 'Mon–Sun 11am–10pm'}.`;
 ---
 
 <Base title={title} description={description}>
@@ -14,7 +14,7 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1>Visit Us</h1>
-      <p class="tagline">Come taste the crispiest fish and chicken in Cedar Rapids.</p>
+      <p class="tagline">{business?.address?.street} — {business?.address?.city}, {business?.address?.state}</p>
     </div>
   </section>
 
@@ -26,48 +26,89 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
 
   <section class="section section-light">
     <div class="container">
-      <h2 class="sr-only">Visit Information</h2>
       <div class="visit-grid">
-        <div class="card info-card">
-          <div class="info-icon" aria-hidden="true">📍</div>
-          <h3>Location</h3>
-          <p class="address">
+        <!-- Address Card -->
+        <div class="info-card">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 5-9 13-9 13S3 15 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <h3>Address</h3>
+          <address class="address-block">
+            {business?.name}<br />
             {business?.address?.street}<br />
             {business?.address?.city}, {business?.address?.state} {business?.address?.zip}
-          </p>
+          </address>
           <a href={business?.directionsUrl} class="btn btn-primary" target="_blank" rel="noopener">Get Directions</a>
         </div>
 
-        <div class="card info-card">
-          <div class="info-icon" aria-hidden="true">🕐</div>
+        <!-- Hours Card -->
+        <div class="info-card">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
           <h3>Hours</h3>
           <ul class="hours-list">
-            <li><span>Mon–Sat</span> <span>11:00 AM – 10:00 PM</span></li>
-            <li><span>Sunday</span> <span>12:00 PM – 9:00 PM</span></li>
+            <li><span>Mon–Thu</span> <span>11:00 AM – 10:00 PM</span></li>
+            <li><span>Fri–Sat</span> <span>11:00 AM – 11:00 PM</span></li>
+            <li><span>Sunday</span> <span>11:00 AM – 8:00 PM</span></li>
           </ul>
         </div>
 
-        <div class="card info-card">
-          <div class="info-icon" aria-hidden="true">📞</div>
+        <!-- Contact Card -->
+        <div class="info-card">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </div>
           <h3>Contact</h3>
-          <p class="contact-line">
-            <strong>Phone:</strong> <a href={`tel:${business?.phone}`}>{business?.phone}</a>
-          </p>
-          <p class="contact-line">
-            <strong>Email:</strong> <a href={`mailto:${business?.email}`}>{business?.email}</a>
-          </p>
-          <p class="contact-line">
-            <strong>Payment:</strong> {business?.paymentAccepted}
-          </p>
+          <div class="contact-lines">
+            <p><a href={`tel:${business?.phone}`}>{business?.phone}</a></p>
+            <p><a href={`mailto:${business?.email}`}>{business?.email}</a></p>
+          </div>
+          <div class="social-links">
+            <a href={business?.sameAs?.[0]} class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              Follow on Facebook
+            </a>
+          </div>
         </div>
 
-        <div class="card info-card">
-          <div class="info-icon" aria-hidden="true">🛵</div>
+        <!-- Order Online Card -->
+        <div class="info-card">
+          <div class="info-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+              <path d="M3 6h18"/>
+              <path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+          </div>
           <h3>Order Online</h3>
-          <p>Skip the line and get your favorites delivered.</p>
+          <p class="order-text">Pickup or delivery. Your food comes out hot, crispy, and exactly how you ordered it.</p>
           <div class="order-links">
-            <a href={business?.sameAs?.[1]} class="btn btn-primary" target="_blank" rel="noopener">UberEats</a>
-            <a href={business?.sameAs?.[2]} class="btn btn-secondary" target="_blank" rel="noopener">DoorDash</a>
+            <a href={business?.sameAs?.[1]} class="btn btn-primary btn-delivery" target="_blank" rel="noopener">
+              <svg class="delivery-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M15 5h-2l-1 2H9L7 9H4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h1a3 3 0 0 0 6 0h2a3 3 0 0 0 6 0h1a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2h-3l-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <circle cx="7" cy="17" r="2" fill="currentColor"/>
+                <circle cx="17" cy="17" r="2" fill="currentColor"/>
+              </svg>
+              UberEats
+            </a>
+            <a href={business?.sameAs?.[2]} class="btn btn-secondary btn-delivery" target="_blank" rel="noopener">
+              <svg class="delivery-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" aria-hidden="true">
+                <path d="M12 3l9 4.5v6L12 18 3 13.5v-6L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                <path d="M12 12l9-4.5M12 12v6M12 12L3 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              DoorDash
+            </a>
           </div>
         </div>
       </div>
@@ -76,16 +117,17 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
 
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <h2>Find Us on the Map</h2>
+      <div class="map-section-header">
+        <h2>Find Us</h2>
+        <p>{business?.address?.street}, {business?.address?.city}, {business?.address?.state} {business?.address?.zip}</p>
       </div>
-      <div class="map-embed">
+      <div class="map-wrapper">
         <iframe
           title="Captain's Fish and Chicken location"
-          src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.5!2d${business?.geo?.longitude}!3d${business?.geo?.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDU4JzQwLjQiTiA5McKwMzknMjguMSJX!5e0!3m2!1sen!2sus!4v1`}
+          src={`https://maps.google.com/maps?q=${encodeURIComponent(`${business?.address?.street},${business?.address?.city},${business?.address?.state} ${business?.address?.zip}`)}&output=embed`}
           width="100%"
-          height="400"
-          style="border:0; border-radius: 20px;"
+          height="420"
+          style="border:0;"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -100,7 +142,7 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
 
 <style>
   .visit-hero {
-    min-height: 50vh;
+    min-height: 45vh;
     background: linear-gradient(180deg, #112E5C, #08162B);
     display: flex;
     align-items: center;
@@ -111,7 +153,7 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
   }
   .hero-overlay {
     position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
+    inset: 0;
     background: rgba(8, 22, 43, 0.4);
   }
   .hero-content {
@@ -125,7 +167,7 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
   }
   .tagline {
     color: var(--gold);
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     font-weight: 500;
   }
   .wave-divider { margin-top: -1px; }
@@ -137,53 +179,137 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
     gap: 1.5rem;
   }
   .info-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem 1.75rem;
+    box-shadow: var(--shadow-small);
+    border: 1px solid rgba(191, 200, 214, 0.25);
     text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
   }
   .info-icon {
-    font-size: 2.5rem;
+    color: var(--navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: var(--light-gray);
     margin-bottom: 1rem;
   }
   .info-card h3 {
     color: var(--navy);
+    font-size: 1.15rem;
     margin-bottom: 1rem;
   }
-  .address {
-    font-size: 1.05rem;
-    color: #333;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  .address-block {
+    font-style: normal;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
   }
   .hours-list {
     list-style: none;
     padding: 0;
-    margin: 0 0 1.5rem;
+    margin: 0 0 1.25rem;
   }
   .hours-list li {
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem 0;
+    padding: 0.65rem 0;
     border-bottom: 1px dashed var(--silver);
     color: #444;
+    font-size: 0.95rem;
   }
-  .contact-line {
-    margin: 0.5rem 0;
-    color: #444;
+  .hours-list li:last-child {
+    border-bottom: none;
   }
-  .contact-line strong {
-    color: var(--navy);
+  .contact-lines {
+    margin-bottom: 1rem;
+  }
+  .contact-lines p {
+    margin: 0.4rem 0;
+    font-size: 0.95rem;
+  }
+  .contact-lines a {
+    color: var(--ocean);
+    font-weight: 500;
+  }
+  .contact-lines a:hover {
+    color: var(--gold);
+  }
+  .social-links {
+    margin-top: 0.75rem;
+  }
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3b5998;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    background: rgba(59, 89, 152, 0.08);
+    transition: background 0.2s ease;
+  }
+  .social-link:hover {
+    background: rgba(59, 89, 152, 0.15);
+  }
+  .social-link svg {
+    flex-shrink: 0;
+  }
+  .order-text {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
   }
   .order-links {
     display: flex;
     gap: 0.75rem;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 1rem;
   }
-  .map-embed {
-    max-width: 100%;
-    overflow: hidden;
+  .btn-delivery {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .delivery-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+  }
+
+  .map-section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .map-section-header h2 {
+    color: var(--navy);
+    font-size: 1.8rem;
+  }
+  .map-section-header p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.4rem;
+  }
+  .map-wrapper {
     border-radius: 20px;
+    overflow: hidden;
     box-shadow: var(--shadow-large);
+    line-height: 0;
+  }
+  .map-wrapper iframe {
+    display: block;
   }
   .map-fallback {
     margin-top: 1rem;
@@ -196,7 +322,11 @@ const description = `Visit ${business?.name} at ${business?.address?.street}, ${
   .map-fallback a:hover {
     color: var(--gold);
   }
+
   @media (max-width: 640px) {
     .visit-hero { padding: 6rem 1rem 3rem; }
+    .visit-grid { grid-template-columns: 1fr; }
+    .info-card { padding: 1.5rem 1.25rem; }
+    .map-wrapper iframe { height: 300px; }
   }
 </style>

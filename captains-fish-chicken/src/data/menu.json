@@ -1,291 +1,209 @@
 [
   {
-    "slug": "seafood",
-    "name": "Fish & Seafood",
+    "slug": "side-orders",
+    "name": "Side Orders",
     "order": 1,
-    "description": "Fresh perch, tilapia, catfish, cod, snapper, shrimp and more — hand-breaded and fried to order. Dinners come with fries, coleslaw, and bread.",
+    "description": "All the fixins to round out your meal. Fried, crispy, and made for sharing.",
     "items": [
-      {
-        "name": "Fried Catfish Dinner",
-        "description": "Golden hand-breaded catfish fried fresh to order. Served with fries, coleslaw, and bread.",
-        "prices": [{ "label": "Dinner", "price": 13.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/catfish.jpg",
-        "imageAlt": "Golden fried catfish fillets with fries"
-      },
-      {
-        "name": "Fried Perch Dinner",
-        "description": "Crispy lake perch fillets, seasoned and fried until flaky. Served with fries, coleslaw, and bread.",
-        "prices": [{ "label": "Dinner", "price": 12.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/perch.jpg",
-        "imageAlt": "Crispy fried perch fillets on a plate"
-      },
-      {
-        "name": "Fried Tilapia Dinner",
-        "description": "Mild, tender tilapia fillets breaded and fried golden. Served with fries, coleslaw, and bread.",
-        "prices": [{ "label": "Dinner", "price": 12.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/tilapia.jpg",
-        "imageAlt": "Fried tilapia fillets with a golden crust"
-      },
-      {
-        "name": "Fried Cod Dinner",
-        "description": "Thick, flaky cod fillets fried to a crisp golden brown. Served with fries, coleslaw, and bread.",
-        "prices": [{ "label": "Dinner", "price": 13.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/cod.jpg",
-        "imageAlt": "Battered fried cod fillets"
-      },
-      {
-        "name": "Fried Red Snapper Dinner",
-        "description": "Whole seasoned red snapper, fried crisp and served hot. Served with fries, coleslaw, and bread.",
-        "prices": [{ "label": "Dinner", "price": 16.99 }],
-        "prepTime": "15-20 min",
-        "image": "/images/menu/red-snapper.jpg",
-        "imageAlt": "Whole fried red snapper on a plate"
-      },
-      {
-        "name": "Fried Shrimp Dinner",
-        "description": "Lightly breaded shrimp fried until crispy and juicy. Served with fries, coleslaw, and bread.",
-        "prices": [{ "label": "Dinner", "price": 13.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/shrimp.jpg",
-        "imageAlt": "Crispy golden fried shrimp"
-      },
-      {
-        "name": "Calamari",
-        "description": "Tender calamari rings, lightly breaded and fried to a golden crunch.",
-        "prices": [{ "label": "Regular", "price": 10.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/calamari.jpg",
-        "imageAlt": "Fried calamari rings with dipping sauce"
-      },
-      {
-        "name": "Crab Cakes",
-        "description": "Savory crab cakes, pan-fried crisp on the outside and tender inside.",
-        "prices": [{ "label": "Regular", "price": 12.99 }],
-        "prepTime": "12-18 min",
-        "image": "/images/menu/crab-cakes.jpg",
-        "imageAlt": "Golden pan-fried crab cakes"
-      },
-      {
-        "name": "Seafood Combo",
-        "description": "A mix of catfish, shrimp, and your choice of fish. The best way to sample it all. Served with fries and bread.",
-        "prices": [{ "label": "Combo", "price": 18.99 }],
-        "prepTime": "15-20 min",
-        "image": "/images/menu/seafood-combo.jpg",
-        "imageAlt": "Fried seafood platter with fish, shrimp, and fries"
-      }
-    ],
-    "faqs": [
-      { "question": "Is the fish fried fresh to order?", "answer": "Yes. Everything is hand-breaded and fried to order, so it comes out hot and crispy. We recommend calling ahead at (319) 221-1040 for faster service." },
-      { "question": "What comes with a seafood dinner?", "answer": "Our dinners come with fries, coleslaw, and bread. You can swap sides on request." }
-    ]
-  },
-  {
-    "slug": "chicken",
-    "name": "Chicken",
-    "order": 2,
-    "description": "Fried chicken, tenders, boneless bites, bone-in wings, and gizzards — crispy, juicy, and seasoned just right.",
-    "items": [
-      {
-        "name": "Fried Chicken (Legs & Thighs)",
-        "description": "Classic bone-in fried chicken, seasoned and fried crispy. Juicy legs and thighs done right.",
-        "prices": [{ "label": "Dinner", "price": 11.99 }],
-        "prepTime": "15-20 min",
-        "image": "/images/menu/fried-chicken.jpg",
-        "imageAlt": "Crispy golden fried chicken pieces"
-      },
-      {
-        "name": "Chicken Tenders",
-        "description": "Hand-breaded all-white-meat tenders, crispy outside and juicy inside. A kid and adult favorite.",
-        "prices": [{ "label": "4 pc", "price": 8.99 }, { "label": "6 pc", "price": 11.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/chicken-tenders.jpg",
-        "imageAlt": "Golden fried chicken tenders with dipping sauce"
-      },
-      {
-        "name": "Boneless Chicken Bites",
-        "description": "Bite-sized breaded chicken, fried crisp — toss them in your favorite wing sauce.",
-        "prices": [{ "label": "Regular", "price": 9.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/boneless-bites.jpg",
-        "imageAlt": "Breaded boneless chicken bites"
-      },
-      {
-        "name": "Bone-In Wings",
-        "description": "Crispy bone-in wings fried to order. Plain or tossed in your choice of sauce. Dinners include fries, coleslaw, and bread.",
-        "prices": [
-          { "label": "6 pc Dinner", "price": 13.99 },
-          { "label": "10 pc Dinner", "price": 19.99 },
-          { "label": "20 pc", "price": 32.99 },
-          { "label": "30 pc", "price": 49.99 },
-          { "label": "50 pc", "price": 84.99 },
-          { "label": "100 pc", "price": 159.99 }
-        ],
-        "prepTime": "12-18 min",
-        "image": "/images/menu/wings.jpg",
-        "imageAlt": "Crispy fried chicken wings"
-      },
-      {
-        "name": "Gizzards",
-        "description": "Tender, perfectly seasoned chicken gizzards with a light breading and satisfying crunch. A local favorite.",
-        "prices": [{ "label": "Regular", "price": 9.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/gizzards.jpg",
-        "imageAlt": "Fried chicken gizzards"
-      },
-      {
-        "name": "Philly Chicken Sandwich",
-        "description": "Griddled chicken with peppers, onions, and melted cheese on a toasted hoagie roll.",
-        "prices": [{ "label": "Sandwich", "price": 10.99 }],
-        "prepTime": "10-15 min",
-        "image": "/images/menu/philly-chicken.jpg",
-        "imageAlt": "Philly chicken cheesesteak sandwich"
-      }
-    ],
-    "faqs": [
-      { "question": "Are the wings bone-in or boneless?", "answer": "Our classic wings are bone-in. If you prefer boneless, try our Boneless Chicken Bites tossed in sauce." },
-      { "question": "Can I order wings by the bulk for a party?", "answer": "Absolutely — we do 20, 30, 50, and 100-piece orders. Call ahead at (319) 221-1040 for large orders." }
-    ]
-  },
-  {
-    "slug": "sides",
-    "name": "Sides",
-    "order": 3,
-    "description": "Southern-style sides done right — from hush puppies to mac & cheese.",
-    "items": [
-      {
-        "name": "Hush Puppies",
-        "description": "Golden fried cornmeal hush puppies — crispy outside, fluffy inside.",
-        "prices": [{ "label": "10 pc", "price": 6.99 }],
-        "prepTime": "8-12 min",
-        "image": "/images/menu/hush-puppies.jpg",
-        "imageAlt": "Golden fried hush puppies"
-      },
-      {
-        "name": "Breaded Mushrooms",
-        "description": "Whole mushrooms hand-breaded and fried crisp. Great for sharing.",
-        "prices": [{ "label": "10 pc", "price": 6.99 }],
-        "prepTime": "8-12 min",
-        "image": "/images/menu/breaded-mushrooms.jpg",
-        "imageAlt": "Breaded fried mushrooms"
-      },
-      {
-        "name": "Cheese Curds",
-        "description": "Battered Wisconsin-style cheese curds, fried until gooey and golden.",
-        "prices": [{ "label": "Regular", "price": 6.99 }],
-        "prepTime": "8-12 min",
-        "image": "/images/menu/cheese-curds.jpg",
-        "imageAlt": "Fried cheese curds"
-      },
-      {
-        "name": "Onion Rings",
-        "description": "Thick-cut onion rings in a crispy golden batter.",
-        "prices": [{ "label": "Regular", "price": 5.99 }],
-        "prepTime": "8-12 min",
-        "image": "/images/menu/onion-rings.jpg",
-        "imageAlt": "Stack of crispy onion rings"
-      },
-      {
-        "name": "Fried Okra",
-        "description": "Bite-sized okra, breaded and fried Southern-style.",
-        "prices": [{ "label": "Regular", "price": 5.99 }],
-        "prepTime": "8-12 min"
-      },
-      {
-        "name": "Mac & Cheese",
-        "description": "Creamy, cheesy macaroni — a comfort-food classic.",
-        "prices": [{ "label": "Regular", "price": 4.99 }],
-        "prepTime": "5 min",
-        "image": "/images/menu/mac-and-cheese.jpg",
-        "imageAlt": "Creamy macaroni and cheese"
-      },
-      {
-        "name": "French Fries",
-        "description": "Crispy, golden fries — perfect on their own or with any dinner.",
-        "prices": [{ "label": "Regular", "price": 3.99 }, { "label": "Large", "price": 5.99 }],
-        "prepTime": "5 min",
-        "image": "/images/menu/french-fries.jpg",
-        "imageAlt": "Basket of golden french fries"
-      },
-      {
-        "name": "Coleslaw",
-        "description": "Creamy, tangy coleslaw that pairs perfectly with fried seafood and chicken.",
-        "prices": [{ "label": "Regular", "price": 2.99 }],
-        "prepTime": "2 min",
-        "image": "/images/menu/coleslaw.jpg",
-        "imageAlt": "Bowl of creamy coleslaw"
-      }
-    ],
-    "faqs": [
-      { "question": "What sides come with a dinner?", "answer": "Dinners come with fries, coleslaw, and bread. You can swap in another side on request." },
-      { "question": "Do you have vegetarian sides?", "answer": "Yes — fried okra, mushrooms, cheese curds, mac & cheese, fries, and coleslaw are all meat-free." }
+      {"name": "(10 Pc) Hush Puppies", "description": "Crispy, deep-fried cornbread balls.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/hush-puppies.jpg"},
+      {"name": "(10 Pc) Breaded Mushrooms", "description": "Crispy breaded mushrooms, perfect as a side dish.", "prices": [{"label": "Regular", "price": 6.99}], "rating": "60% (5)", "image": "/images/menu/breaded-mushrooms.jpg"},
+      {"name": "(10 Pc) Mac and Cheese Bites", "description": "Crispy bites filled with macaroni and cheese.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/mac-and-cheese.jpg"},
+      {"name": "(5 Pc) Cheese Sticks", "description": "Crispy sticks filled with melted cheese.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/cheese-sticks.jpg"},
+      {"name": "Cheese Curds", "description": "Crispy, melted cheese bits served as a side.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/cheese-curds.jpg"},
+      {"name": "Pizza Puff", "description": "Crispy pastry filled with savory ingredients.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/pizza-puff.jpg"},
+      {"name": "(10 Pc) Onion Rings", "description": "Crispy onion pieces in a golden batter.", "prices": [{"label": "Regular", "price": 6.99}], "rating": "88% (9)", "popular": true, "image": "/images/menu/onion-rings.jpg"},
+      {"name": "Small Fries", "description": "Crispy fried potato sticks.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/french-fries.jpg"},
+      {"name": "Large Fries", "description": "Crispy potato sticks served hot.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/french-fries.jpg"},
+      {"name": "Half Pan of Fries", "description": "Crispy fried potatoes served hot.", "prices": [{"label": "Regular", "price": 16.99}], "image": "/images/menu/french-fries.jpg"},
+      {"name": "Full Pan of Fries", "description": "Crispy, golden fries in a generous serving.", "prices": [{"label": "Regular", "price": 27.99}], "image": "/images/menu/french-fries.jpg"},
+      {"name": "Extra Sauce", "description": "Additional serving of sauce on the side.", "prices": [{"label": "Regular", "price": 0.50}], "rating": "85% (7)", "popular": true, "image": "/images/menu/extra-sauce.jpg"},
+      {"name": "Gizzards / Livers", "description": "Chicken organs, rich in flavor and texture.", "prices": [{"label": "Regular", "price": 7.99}], "rating": "100% (4)", "popular": true, "image": "/images/menu/gizzards.jpg"},
+      {"name": "(1 Pc) Wings", "description": "One chicken wing piece, served as a side.", "prices": [{"label": "Regular", "price": 2.45}], "image": "/images/menu/wings.jpg"},
+      {"name": "(1 Pc) Legs", "description": "One chicken leg piece, ideal as a side.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/fried-chicken-legs.jpg"},
+      {"name": "(1 Pc) Thighs", "description": "One chicken thigh piece, served as a side.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/fried-chicken.jpg"},
+      {"name": "Catfish Nuggets", "description": "Bite-sized catfish pieces with a crispy coating, perfect as a side.", "prices": [{"label": "Regular", "price": 7.99}], "image": "/images/menu/catfish-nuggets.jpg"}
     ]
   },
   {
     "slug": "desserts",
     "name": "Desserts",
-    "order": 4,
-    "description": "Save room — our desserts are made to finish the meal right.",
+    "order": 2,
+    "description": "Sweet endings to a savory meal.",
     "items": [
-      {
-        "name": "Banana Pudding",
-        "description": "Classic Southern banana pudding with vanilla wafers and fresh banana.",
-        "prices": [{ "label": "Cup", "price": 4.99 }],
-        "prepTime": "2 min",
-        "image": "/images/menu/banana-pudding.jpg",
-        "imageAlt": "Banana pudding with vanilla wafers"
-      },
-      {
-        "name": "Chocolate Cake",
-        "description": "Rich, moist chocolate layer cake.",
-        "prices": [{ "label": "Slice", "price": 5.99 }],
-        "prepTime": "2 min",
-        "image": "/images/menu/chocolate-cake.jpg",
-        "imageAlt": "Slice of rich chocolate layer cake"
-      },
-      {
-        "name": "Lemon Cake",
-        "description": "Bright, sweet-tart lemon cake.",
-        "prices": [{ "label": "Slice", "price": 5.99 }],
-        "prepTime": "2 min",
-        "image": "/images/menu/lemon-cake.jpg",
-        "imageAlt": "Slice of lemon cake"
-      },
-      {
-        "name": "New York Cheesecake",
-        "description": "Smooth, creamy New York-style cheesecake.",
-        "prices": [{ "label": "Slice", "price": 5.99 }],
-        "prepTime": "2 min",
-        "image": "/images/menu/cheesecake.jpg",
-        "imageAlt": "Slice of New York cheesecake"
-      }
+      {"name": "Cheesecake", "description": "Rich and creamy dessert with a velvety texture.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/cheesecake.jpg"},
+      {"name": "Caramel Cheesecake", "description": "Rich and creamy cheesecake with a caramel twist.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/cheesecake.jpg"},
+      {"name": "Carrot Cake", "description": "Moist and flavorful cake made with carrots.", "prices": [{"label": "Regular", "price": 3.99}], "popular": true, "image": "/images/menu/chocolate-cake.jpg"},
+      {"name": "Caramel Coconut", "description": "Rich coconut dessert with caramel flavor.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/banana-pudding.jpg"},
+      {"name": "Lemon Cake", "description": "Moist and tangy cake infused with a hint of lemon.", "prices": [{"label": "Regular", "price": 3.99}], "rating": "66% (6)", "image": "/images/menu/lemon-cake.jpg"}
+    ]
+  },
+  {
+    "slug": "fish-only-family-deal",
+    "name": "Fish Only Family Deal",
+    "order": 3,
+    "description": "Feed the whole crew with fish-only family-size platters.",
+    "items": [
+      {"name": "(10 Pc) Catfish, Perch, Tilapia", "description": "Assortment of catfish, perch, and tilapia.", "prices": [{"label": "Regular", "price": 49.99}], "image": "/images/menu/seafood-combo.jpg"},
+      {"name": "(20 Pc) Catfish, Perch, Tilapia", "description": "Assortment of catfish, perch, and tilapia.", "prices": [{"label": "Regular", "price": 69.99}], "image": "/images/menu/perch.jpg"},
+      {"name": "(30 Pc) Catfish, Perch, Tilapia", "description": "Assortment of catfish, perch, and tilapia.", "prices": [{"label": "Regular", "price": 99.99}], "image": "/images/menu/tilapia.jpg"},
+      {"name": "(40 Pc) Catfish, Perch, Tilapia", "description": "Assortment of catfish, perch, and tilapia.", "prices": [{"label": "Regular", "price": 139.99}], "image": "/images/menu/catfish.jpg"},
+      {"name": "(50 Pc) Catfish, Perch, Tilapia", "description": "Assortment of catfish, perch, and tilapia.", "prices": [{"label": "Regular", "price": 166.99}], "image": "/images/menu/seafood-combo.jpg"},
+      {"name": "Half Pan of Catfish Nuggets", "description": "Tender catfish pieces in a crispy nugget form.", "prices": [{"label": "Regular", "price": 49.99}], "image": "/images/menu/catfish-nuggets.jpg"},
+      {"name": "Full Pan of Catfish Nuggets", "description": "Tender catfish pieces in a crispy nugget form.", "prices": [{"label": "Regular", "price": 89.99}], "image": "/images/menu/catfish-nuggets.jpg"}
+    ]
+  },
+  {
+    "slug": "captains-family-meal",
+    "name": "Captain's Family Meal Deal",
+    "order": 4,
+    "description": "The Captain's special — built for families.",
+    "items": [
+      {"name": "Captain's Family Meal Deal", "description": "Large fries, and your choice of two items.", "prices": [{"label": "Regular", "price": 59.99}], "image": "/images/menu/seafood-combo.jpg"}
     ]
   },
   {
     "slug": "drinks",
     "name": "Drinks",
     "order": 5,
-    "description": "Ice-cold beverages to wash it all down.",
+    "description": "Cold beverages to wash it all down.",
     "items": [
-      {
-        "name": "Fountain Drink",
-        "description": "Coca-Cola, Diet Coke, Sprite, and more. Free refills with dine-in.",
-        "prices": [{ "label": "Regular", "price": 2.49 }, { "label": "Large", "price": 2.99 }],
-        "prepTime": "1 min",
-        "image": "/images/menu/fountain-drink.jpg",
-        "imageAlt": "Fountain soft drink in a cup"
-      },
-      {
-        "name": "Bottled Water",
-        "description": "Refreshing bottled water.",
-        "prices": [{ "label": "Bottle", "price": 1.99 }],
-        "prepTime": "1 min",
-        "image": "/images/menu/fountain-drink.jpg",
-        "imageAlt": "Bottled water"
-      }
+      {"name": "Water", "description": "Refreshing still water.", "prices": [{"label": "Regular", "price": 0.99}], "image": "/images/menu/fountain-drink.jpg"},
+      {"name": "Mystic", "description": "Fruity and refreshing drink.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/bottled-drinks.jpg"},
+      {"name": "Calypso", "description": "Fruity and refreshing drink.", "prices": [{"label": "Regular", "price": 3.99}], "image": "/images/menu/bottled-drinks.jpg"}
+    ]
+  },
+  {
+    "slug": "combo-dinners",
+    "name": "Combo Dinners",
+    "order": 6,
+    "description": "Mix and match your favorites into one complete meal.",
+    "items": [
+      {"name": "Your Choice of Two Items", "description": "Choose two items from our menu to create a customized combo dinner.", "prices": [{"label": "Regular", "price": 18.99}], "rating": "75% (4)", "image": "/images/menu/seafood-combo.jpg"},
+      {"name": "Your Choice of Three Items", "description": "Mix and match any three menu items to build your combo dinner, served together as one meal.", "prices": [{"label": "Regular", "price": 21.99}], "rating": "73% (15)", "image": "/images/menu/fried-chicken.jpg"}
+    ]
+  },
+  {
+    "slug": "whole-wings",
+    "name": "Whole Wings",
+    "order": 7,
+    "description": "Classic bone-in wings, fried crispy and served with fries, coleslaw, and bread.",
+    "items": [
+      {"name": "Wings Meal (4 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 8.99}], "rating": "83% (6)", "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Meal (6 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 13.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Meal (10 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 19.99}], "popular": true, "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Only (20 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 32.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Only (30 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 49.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Only (50 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 84.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Only (100 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 159.99}], "image": "/images/menu/wings.jpg"}
+    ]
+  },
+  {
+    "slug": "party-wings",
+    "name": "Party Wings",
+    "order": 8,
+    "description": "Bigger wing packs for gatherings and game days.",
+    "items": [
+      {"name": "Wings Meal (8 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 14.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Meal (12 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 18.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Only (16 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 24.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Wings Only (20 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 28.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Chicken Only (30 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 45.99}], "image": "/images/menu/wings.jpg"},
+      {"name": "Chicken Only (50 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 79.99}], "image": "/images/menu/wings.jpg"}
+    ]
+  },
+  {
+    "slug": "boneless-chicken-bites",
+    "name": "Boneless Chicken Bites",
+    "order": 9,
+    "description": "All-white-meat boneless bites, breaded and fried crispy.",
+    "items": [
+      {"name": "Boneless Wings Meal (8 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 12.99}], "image": "/images/menu/boneless-bites.jpg"},
+      {"name": "Boneless Wings Meal (12 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 18.99}], "image": "/images/menu/boneless-bites.jpg"},
+      {"name": "Boneless Wings Only (20 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 26.99}], "image": "/images/menu/boneless-bites.jpg"},
+      {"name": "Boneless Wings Only (30 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 49.99}], "image": "/images/menu/boneless-bites.jpg"},
+      {"name": "Boneless Wings Only (50 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 79.99}], "image": "/images/menu/boneless-bites.jpg"}
+    ]
+  },
+  {
+    "slug": "chicken-leg-thigh-mix",
+    "name": "Chicken Leg and Thigh Mix",
+    "order": 10,
+    "description": "A mix of legs and thighs, fried to a golden crunch.",
+    "items": [
+      {"name": "Chicken Mix Meal (4 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 12.99}], "image": "/images/menu/fried-chicken.jpg"},
+      {"name": "Chicken Mix Meal (6 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 15.99}], "image": "/images/menu/fried-chicken-legs.jpg"},
+      {"name": "Chicken Mix Meal (10 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 24.99}], "popular": true, "image": "/images/menu/fried-chicken.jpg"},
+      {"name": "Chicken Mix (Only Chicken) (20 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 39.99}], "image": "/images/menu/fried-chicken-legs.jpg"},
+      {"name": "Chicken Mix (Only Chicken) (30 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 59.99}], "image": "/images/menu/fried-chicken.jpg"},
+      {"name": "Chicken Mix (Only Chicken) (50 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 89.99}], "image": "/images/menu/fried-chicken-legs.jpg"}
+    ]
+  },
+  {
+    "slug": "chicken-tenders",
+    "name": "Chicken Tenders",
+    "order": 11,
+    "description": "Hand-breaded all-white-meat tenders, crispy outside and juicy inside.",
+    "items": [
+      {"name": "Tenders Meal (3 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 12.99}], "image": "/images/menu/chicken-tenders.jpg"},
+      {"name": "Tenders Meal (6 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 21.99}], "popular": true, "image": "/images/menu/chicken-tenders.jpg"},
+      {"name": "Tenders Meal (10 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 34.99}], "image": "/images/menu/chicken-tenders.jpg"},
+      {"name": "Tenders (Only Chicken) (20 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 59.99}], "image": "/images/menu/chicken-tenders.jpg"}
+    ]
+  },
+  {
+    "slug": "shrimp",
+    "name": "Shrimp",
+    "order": 12,
+    "description": "Jumbo and medium shrimp, Captains breaded and fried golden.",
+    "items": [
+      {"name": "Jumbo Shrimp (1/2 Lb) (7 pcs)", "description": "Captains breaded. Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 15.99}], "image": "/images/menu/shrimp.jpg"},
+      {"name": "Jumbo Shrimp (1 Lb) (14 pcs)", "description": "Captains breaded. Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 25.99}], "image": "/images/menu/shrimp.jpg"},
+      {"name": "Medium Shrimp (1/2 Lb)", "description": "Captains breaded. Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 13.99}], "image": "/images/menu/shrimp.jpg"},
+      {"name": "Medium Shrimp (1 Lb)", "description": "Captains breaded. Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 21.99}], "image": "/images/menu/shrimp.jpg"},
+      {"name": "Shrimp Basket", "description": "Popcorn shrimp. Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 10.99}], "image": "/images/menu/shrimp.jpg"}
+    ]
+  },
+  {
+    "slug": "gizzards",
+    "name": "Gizzards",
+    "order": 13,
+    "description": "Tender, perfectly seasoned chicken gizzards and livers.",
+    "items": [
+      {"name": "Gizzards (1 Lb)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 13.99}], "image": "/images/menu/gizzards.jpg"},
+      {"name": "Livers (1 Lb)", "description": "Fries, coleslaw and 1 piece bread. No substitutions.", "prices": [{"label": "Regular", "price": 13.99}], "popular": true, "image": "/images/menu/gizzards.jpg"}
+    ]
+  },
+  {
+    "slug": "seafood-meal",
+    "name": "Seafood Meal",
+    "order": 14,
+    "description": "Fresh fish and seafood dinners, hand-breaded and fried to order. Served with fries, coleslaw, and bread.",
+    "items": [
+      {"name": "Catfish Fillet, Perch, Tilapia (2 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 13.99}], "image": "/images/menu/catfish.jpg"},
+      {"name": "Catfish Fillet, Perch, Tilapia (3 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 16.99}], "image": "/images/menu/perch.jpg"},
+      {"name": "Catfish Fillet, Perch, Tilapia (4 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 21.99}], "image": "/images/menu/tilapia.jpg"},
+      {"name": "Catfish Steak (Bone In) (2 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 13.99}], "image": "/images/menu/catfish.jpg"},
+      {"name": "Catfish Steak (Bone In) (3 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 15.99}], "image": "/images/menu/catfish.jpg"},
+      {"name": "Catfish Steak (Bone In) (4 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 19.99}], "image": "/images/menu/catfish.jpg"},
+      {"name": "Catfish Nuggets (1 Lb)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 14.99}], "image": "/images/menu/catfish-nuggets.jpg"},
+      {"name": "Cod Fish (2 pcs) (Wild Caught)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 14.99}], "popular": true, "image": "/images/menu/cod.jpg"},
+      {"name": "Cod Fish (3 pcs) (Wild Caught)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 19.99}], "image": "/images/menu/cod.jpg"},
+      {"name": "Cod Fish (4 pcs) (Wild Caught)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 23.99}], "image": "/images/menu/cod.jpg"},
+      {"name": "Crab Cakes Meal (4 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 14.99}], "image": "/images/menu/crab-cakes.jpg"},
+      {"name": "Red Snapper (2 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 14.99}], "image": "/images/menu/red-snapper.jpg"},
+      {"name": "Red Snapper (3 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 19.99}], "image": "/images/menu/red-snapper.jpg"},
+      {"name": "Red Snapper (4 pcs)", "description": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "prices": [{"label": "Regular", "price": 23.99}], "image": "/images/menu/red-snapper.jpg"}
+    ]
+  },
+  {
+    "slug": "kids-meal",
+    "name": "Kids Meal",
+    "order": 15,
+    "description": "Smaller portions for smaller appetites. Served with fries.",
+    "items": [
+      {"name": "Chicken Nuggets (5 pcs)", "description": "Served with fries.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/chicken-tenders.jpg"},
+      {"name": "Chicken Tenders (2 pcs)", "description": "Served with fries.", "prices": [{"label": "Regular", "price": 6.99}], "popular": true, "image": "/images/menu/chicken-tenders.jpg"},
+      {"name": "Pizza Puff", "description": "Served with fries.", "prices": [{"label": "Regular", "price": 6.99}], "image": "/images/menu/pizza-puff.jpg"}
     ]
   }
 ]
