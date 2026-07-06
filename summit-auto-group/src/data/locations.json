@@ -1,0 +1,41 @@
+[
+  {
+    "id": "denver",
+    "slug": "denver",
+    "city": "Denver",
+    "state": "CO",
+    "geo": { "latitude": 39.7864, "longitude": -105.025 },
+    "inventoryFocus": ["Certified Pre-Owned SUVs", "Trucks", "All-Wheel Drive"],
+    "seo": {
+      "title": "Used Cars in Denver, CO | Summit Auto Group",
+      "description": "Shop used and certified pre-owned SUVs, trucks, and AWD vehicles at Summit Auto Group's flagship Denver dealership on Federal Blvd. Financing and service on-site.",
+      "canonical": "https://summitautogroup.example/locations/denver"
+    }
+  },
+  {
+    "id": "aurora",
+    "slug": "aurora",
+    "city": "Aurora",
+    "state": "CO",
+    "geo": { "latitude": 39.7294, "longitude": -104.8319 },
+    "inventoryFocus": ["Family SUVs", "Sedans", "Electric & Hybrid"],
+    "seo": {
+      "title": "Used Cars near Aurora, CO | Summit Auto Group",
+      "description": "Serving Aurora drivers with family SUVs, fuel-efficient sedans, and EVs. Summit Auto Group delivers to Aurora and offers virtual test drives. Financing available.",
+      "canonical": "https://summitautogroup.example/locations/aurora"
+    }
+  },
+  {
+    "id": "lakewood",
+    "slug": "lakewood",
+    "city": "Lakewood",
+    "state": "CO",
+    "geo": { "latitude": 39.7047, "longitude": -105.0814 },
+    "inventoryFocus": ["Trucks", "Off-Road & 4x4", "All-Wheel Drive"],
+    "seo": {
+      "title": "Used Trucks & 4x4s near Lakewood, CO | Summit Auto Group",
+      "description": "Lakewood's source for used trucks, 4x4s, and AWD vehicles built for the Colorado high country. Summit Auto Group offers trade-ins, financing, and full service.",
+      "canonical": "https://summitautogroup.example/locations/lakewood"
+    }
+  }
+]

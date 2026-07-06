@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "phase": 3,
+  "specialist": "local-ai-visibility",
+  "capturedAt": "2026-07-05",
+
+  "planningNote": "Phase-contract specialist for Phase 3 is local-ai-visibility, which is narrower than 'DESIGN' (it generates llms.txt / FAQPage / GEO markup / crawler directives). This artifact delivers the FULL Phase 3 design/content/build plan the contract requires (designContentBuildPlan, selectedArchitecture, assetNeeds) and folds the AI-visibility deliverables in as one section. Seam flagged, consistent with the Phase 2 planner seam. Founder-catalog caveat honored: llms.txt is a low-priority machine-readable fact surface, NOT a ranking lever.",
+
+  "selectedArchitecture": {
+    "generator": "Astro (static output)",
+    "rationale": "Matches the founder-catalog template stack (Base.astro, astro.config, @astrojs/sitemap); static site required (per Phase 0: any form must post to an external service, never a first-party handler).",
+    "hosting": "Static host with _headers + netlify.toml support (Netlify-class). Exact deploy target TBD at Phase 7 (owner has no domain/host yet).",
+    "routing": "File-based; 32 routes from the Phase 2 matrix, mapped by page-kind to layouts.",
+    "schemaStack": {
+      "model": "hub-and-spoke single @id (founder P0)",
+      "businessEntity": "{domain}/#business as schema.org Restaurant + {domain}/#website",
+      "businessFields": ["name", "address (1616 1st Ave NE only)", "telephone", "openingHoursSpecification (closed days omitted)", "servesCuisine: Soul Food / Seafood", "hasMenu", "knowsAbout[]", "areaServed: Cedar Rapids", "priceRange: OMITTED (no authoritative prices)", "founder: Person (Ray Aqel)", "aggregateRating: OMITTED (reviews too thin)"],
+      "perPageKindRecipe": {
+        "home": ["Restaurant", "WebSite", "WebPage"],
+        "menu-hub": ["Menu", "WebPage", "BreadcrumbList"],
+        "menu-category": ["MenuSection", "WebPage"],
+        "intent-landing": ["WebPage", "FAQPage(if faqs)"],
+        "occasion": ["WebPage"],
+        "local-landing": ["WebPage", "FAQPage"],
+        "about": ["AboutPage", "Person", "Organization"],
+        "contact": ["ContactPage", "Restaurant(ref @id)"],
+        "faq": ["FAQPage"],
+        "story": ["WebPage", "Speakable"]
+      },
+      "rule": "Every non-business node references provider/isPartOf = {@id}; never re-declare NAP. Emit conditional types only when source data exists (FAQPage iff real FAQs)."
+    },
+    "pageHeadSignals": ["canonical (trailingSlash always)", "OG + Twitter (absolute-URL images)", "geo meta quartet (region/placename/position/ICBM) for Cedar Rapids", "robots: index,follow,max-snippet:-1,max-image-preview:large", "WebPage Speakable on h1/lead/FAQ"],
+    "performanceA11ySecurity": {
+      "perf": ["hero <picture> preload + fetchpriority=high", "explicit width/height on all imgs", "WebP pass", "system-font body + async-swap display font for headings", "idle-deferred GA4 ONLY IF analytics later configured (currently none)"],
+      "a11y": ["skip-link to #main", "nav aria-current + aria-expanded hamburger", "native details/summary FAQ", "44px tap targets", ":focus-visible", "prefers-reduced-motion", "decorative aria-hidden"],
+      "security": ["_headers + netlify.toml: X-Frame-Options, X-Content-Type-Options nosniff, HSTS, Referrer-Policy, Permissions-Policy", "immutable asset cache"]
+    }
+  },
+
+  "designContentBuildPlan": {
+    "brandSystem": {
+      "colors": { "primary": "navy #0a3a5c", "accent": "gold #f2a516", "neutrals": "warm off-white + charcoal text" },
+      "typography": "Display font (async-swap) for headings; system-font stack for body (perf).",
+      "voice": "Soul-food, family-owned, made-fresh-to-order; owner authority (Ray Aqel, restaurateur since 2006). No hype, no fabricated claims.",
+      "logo": "To be created (navy/gold) — nautical + fish/chicken motif."
+    },
+    "layouts": ["Base.astro (head + a11y + perf + security)", "Header (nav + dual-CTA)", "Footer (NAP, hours, dual-CTA)", "StickyCallBar (singleton, call-only)", "page-kind layouts: Home, MenuHub, MenuCategory, IntentLanding, Occasion, LocalLanding, About, Contact, Faq, Story"],
+    "croComponents": {
+      "hero": "h1 + 3-value-prop strip (made fresh to order / does both fish and chicken right / family-owned)",
+      "dualCta": "CALL-ONLY (tel:+13192211040). No SMS affordance — CSB-dual-cta unresolved; text button omitted until an SMS number is provided.",
+      "stickyCallBar": "fixed mobile bar, call-only, mounted once in Base layout",
+      "midCtaBanner": "'Call ahead — your order's hot when you arrive.' (tel: anchor)",
+      "trustGrid": "OMITTED site-wide (<6 real facts). Brand-story facts surface on /about + /how-we-cook instead.",
+      "leadForm": "BLOCKED — required on home + contact but no external endpoint. Designed as a pluggable block: OMITTED until an https endpoint + email exist. Shippable fallback = phone + map + hours + directions. NOTE: home/contact FAIL the cro-block-presence gate until endpoint provided OR Yahya records an exception.",
+      "offerCallout": "omitted (no offers)",
+      "financingBlock": "N/A (restaurant)"
+    },
+    "contentSourcing": {
+      "menuPages": "From owner-confirmed menu items only. Prices OMITTED. Press-sourced additions (liver, mashed potatoes, mac & cheese) shown only after owner confirms.",
+      "occasionPages": "From the occasion taxonomy (family dinner, Friday fish fry, game-day wings, quick lunch, late-night, weekend dinner) — real customer moments; no catering.",
+      "intentLandings": "From keyword/entity clusters (fried fish / fried chicken / soul food / seafood / best catfish CR).",
+      "aboutStory": "Owner facts: since 2006, MN/IL/MI track record, first Iowa location, made-to-order.",
+      "localPage": "Mound View real facts only (1st Ave NE corridor, near Hy-Vee, onsite parking, large dining room). No fabricated landmarks.",
+      "faq": "Real Q/A: most popular (catfish), hours, parking, dine-in (dining room exists), how to order, delivery apps.",
+      "antiFabrication": "No prices, no ratings, no fake reviews, no invented town facts. Omit-never-fabricate (KG7)."
+    },
+    "aiVisibilityArtifacts": {
+      "llmsTxt": "Two-tier fact surface (index: differentiators, per-dish lines, hours, key pages, curated FAQ; full: per-page FAQ, menu, URL-pattern doc). Treated as LOW-PRIORITY hygiene per founder-catalog June-2026 GEO caveat (Mueller: no major AI system consumes llms.txt). Value is the citable facts, not ranking.",
+      "faqPageSchema": "FAQPage on /faq, /best-catfish-cedar-rapids, /neighborhoods/mound-view.",
+      "geoAnswerUnits": "'Key Takeaways' answer boxes above the fold on intent/occasion pages (catfish = most popular; NE-side location; made-to-order).",
+      "crawlerDirectives": "robots.txt: ADD OAI-SearchBot, ChatGPT-User, Claude-SearchBot/Claude-User, Applebot/Applebot-Extended, meta-externalagent; DROP Google-Extended (training opt-out, not a visibility lever); /admin disallow. Surface trade-offs at review.",
+      "indexNow": "Optional; only if a deploy host + key are set (Phase 7)."
+    },
+    "crossLinkMesh": "occasion -> menu items; menu-category -> occasions + intent; dish -> intent landing; all -> home + /menu hubs; local -> home + order.",
+    "carriedBlockers": ["CSB-lead-form (home/contact, must resolve before Phase 4 build gate)", "CSB-dual-cta (call-only until SMS provided)"]
+  },
+
+  "assetNeeds": {
+    "logo": { "need": "create", "spec": "navy #0a3a5c + gold #f2a516, nautical + fish/chicken", "phase": 6, "skill": "logo-prompting / higgsfield" },
+    "imagery": {
+      "need": "generate ALL (no real photos exist)",
+      "constraint": "Representational only — appetizing generic food is fine; generated storefront/interior/owner images MUST NOT misrepresent the specific real premises or person. Prefer food-forward imagery.",
+      "slots": "15 slots from Phase 2 imageSlotPlan (hero, per-category food, occasions, how-we-cook, about, storefront/local).",
+      "phase": 6
+    },
+    "fonts": "1 display font (async-swap, self-hosted or Google async) for headings; system stack body.",
+    "icons": "Inline SVG, aria-hidden; a11y-safe.",
+    "favicon": "Derived from logo (navy/gold).",
+    "map": "Contact page: static map image or plain map link for 1616 1st Ave NE (no API key; static site).",
+    "analytics": "None wired (owner has no GA4). Leave a documented insertion point only."
+  },
+
+  "seamsFlagged": [
+    "Phase 3 specialist local-ai-visibility is narrower than DESIGN; full design plan produced here.",
+    "Phase 4 specialist 'content-writer' has NO skill file (mapping decision still pending before Phase 4 build)."
+  ],
+
+  "handoffToPhase4": [
+    "Build 32 Astro routes per the layouts + schema stack + CRO components above.",
+    "RESOLVE before build gate: CSB-lead-form (endpoint+email or exception) and CSB-dual-cta (SMS or accept call-only).",
+    "DECIDE the content-writer specialist mapping (vendored seo-content-writer / write-content, or add a first-party skill).",
+    "No prices, no ratings, no fabricated imagery/town facts."
+  ]
+}

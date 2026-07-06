@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 5,
+  "reviewer": "validation-fix-review",
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-5.json",
+  "artifactHash": "5560e1e18d96a39271bd4965892502cec42ba756911d1d06cc5cb1581d0f58f6",
+  "notesFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/reviews/phase-5-validation-fix-review.md",
+  "notes": "# Review — Phase 5 VALIDATE · reviewer: validation-fix-review · verdict: PASS\n\nThe validate run was captured accurately and every finding is triaged correctly. Crucially, the\nreviewer agrees NOT to paper over findings: the GA placeholder is left as a real ship-blocker rather\nthan swapped for a fake id, and the evergreen offers are NOT given fabricated end dates just to\nsilence a LOW note. That is the right call — the do-not-ship gate is doing its job.\n\nThe only two open items are an owner input (GA4 id) and a Phase-6 asset (logo). Neither is a defect\nin the built site. Fix-round discipline is sound; no regressions introduced. PASS to imagery.\n",
+  "reviewedAt": "2026-07-05T19:42:24.482Z"
+}

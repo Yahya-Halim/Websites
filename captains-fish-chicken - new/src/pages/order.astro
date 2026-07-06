@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import { telHref, telDisplay, orderUrl, directionsUrl } from '../lib/site';
+const title = 'Order Online or Call | Captains Fish and Chicken, Cedar Rapids';
+const description = 'Order Captains Fish and Chicken in Cedar Rapids — call (319) 221-1040 to order ahead for pickup, or order online for delivery on Uber Eats. Made fresh to order.';
+const ways = [
+  { t: 'Call ahead', d: 'The fastest way. Call and we’ll have your order fried fresh and ready at pickup.', cta: `Call ${telDisplay}`, href: telHref, primary: true },
+  { t: 'Order online', d: 'Delivery and pickup through Uber Eats and other apps.', cta: 'Order on Uber Eats', href: orderUrl, primary: false },
+  { t: 'Directions', d: 'Come in and order at the counter, 1616 1st Ave NE.', cta: 'Get Directions', href: directionsUrl, primary: false },
+];
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Order</nav>
+      <span class="eyebrow" style="margin-top:14px">Three ways to get it</span>
+      <h1 class="display h-xl" style="margin-top:10px">Order fresh</h1>
+      <p class="lead mt-s">Everything is fried to order — call ahead for the fastest pickup, or order online for delivery.</p>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap"><div class="grid grid--3">
+      {ways.map((w) => (
+        <div class="card"><h3>{w.t}</h3><p class="card__desc">{w.d}</p><a class={w.primary ? 'btn' : 'btn btn--navy'} href={w.href} target={w.href.startsWith('http') ? '_blank' : undefined} rel="noopener" style="align-self:flex-start;margin-top:8px">{w.cta}</a></div>
+      ))}
+    </div></div>
+  </section>
+</Base>

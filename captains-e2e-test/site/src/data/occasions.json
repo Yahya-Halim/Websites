@@ -1,0 +1,179 @@
+[
+  {
+    "slug": "family-dinner",
+    "title": "Family Dinner Takeout",
+    "headline": "Feed the whole family — fried fish and chicken to go",
+    "body": "Grab a family-size spread of fried catfish, chicken, and Southern sides to take home. Everything is made fresh to order, so call ahead at (319) 221-1040 and it's hot when you arrive.",
+    "featuredItems": [
+      { "sectionSlug": "catfish", "itemIndex": 0 },
+      { "sectionSlug": "fried-chicken", "itemIndex": 0 },
+      { "sectionSlug": "sides", "itemIndex": 0 }
+    ],
+    "faqs": [
+      { "question": "Can I order a family-size meal to go?", "answer": "Yes — Captains is counter-service and takeout-first. Call ahead at (319) 221-1040 and your order is ready hot when you arrive." },
+      { "question": "What's the most popular dish for families?", "answer": "The fried catfish is our most-ordered item; fried chicken and wings are close behind." },
+      { "question": "Do you take reservations?", "answer": "No — Captains is a counter-service spot. There is a dining room at the storefront, but most orders go out. Call ahead for faster pickup." },
+      { "question": "Is everything made to order?", "answer": "Yes — fish and chicken are breaded and fried fresh when you order, so calling ahead speeds up pickup." },
+      { "question": "What are your hours?", "answer": "Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, and Sun 11am–8pm." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "Fried catfish", "context": "related" },
+      { "slug": "/menu/fried-chicken/", "anchor": "Fried chicken", "context": "related" },
+      { "slug": "/menu/sides/", "anchor": "Southern sides", "context": "related" },
+      { "slug": "/occasions/weekend-dinner/", "anchor": "Weekend dinner", "context": "related" }
+    ],
+    "seo": {
+      "title": "Family Dinner Takeout — Captains Fish and Chicken",
+      "description": "Family-size fried catfish, chicken, and Southern sides to go in Cedar Rapids. Made fresh to order — call ahead.",
+      "canonical": "https://captainsfishandchicken.example/occasions/family-dinner/"
+    },
+    "schemaTypes": ["WebPage"]
+  },
+  {
+    "slug": "friday-fish-fry",
+    "title": "Friday Fish Fry",
+    "headline": "Friday fish fry, fried to order",
+    "body": "Make Friday a fish-fry night with cornmeal-breaded catfish, perch, and cod, fried fresh to order. Open until 11pm on Fridays.",
+    "featuredItems": [
+      { "sectionSlug": "catfish", "itemIndex": 0 },
+      { "sectionSlug": "perch", "itemIndex": 0 },
+      { "sectionSlug": "cod", "itemIndex": 0 }
+    ],
+    "faqs": [
+      { "question": "What fish do you fry?", "answer": "Catfish, perch, tilapia, cod, and shrimp — all breaded and fried to order." },
+      { "question": "How late are you open on Fridays?", "answer": "Until 11pm on Friday and Saturday." },
+      { "question": "Which fish is most popular?", "answer": "The fried catfish is our most-ordered item." },
+      { "question": "Should I call ahead?", "answer": "Yes — everything is fried to order, so a call ahead at (319) 221-1040 means it's ready hot when you arrive." },
+      { "question": "How is the fish prepared?", "answer": "Cornmeal breading with fresh-ground lemon pepper, fried fresh to order." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "Fried catfish", "context": "related" },
+      { "slug": "/menu/perch/", "anchor": "Fried perch", "context": "related" },
+      { "slug": "/menu/cod/", "anchor": "Fried cod", "context": "related" },
+      { "slug": "/seafood-cedar-rapids/", "anchor": "Seafood in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Friday Fish Fry — Captains Fish and Chicken",
+      "description": "Cornmeal-breaded catfish, perch, and cod fried to order for your Friday fish fry in Cedar Rapids. Open late Fridays.",
+      "canonical": "https://captainsfishandchicken.example/occasions/friday-fish-fry/"
+    },
+    "schemaTypes": ["WebPage"]
+  },
+  {
+    "slug": "game-day-wings",
+    "title": "Game-Day Wings",
+    "headline": "Wings for game day",
+    "body": "Bone-in and boneless wings, fried to order, plus sides like cheese curds and fries. Call ahead for a bigger order.",
+    "featuredItems": [
+      { "sectionSlug": "wings", "itemIndex": 0 },
+      { "sectionSlug": "wings", "itemIndex": 1 },
+      { "sectionSlug": "sides", "itemIndex": 5 }
+    ],
+    "faqs": [
+      { "question": "Do you have bone-in and boneless wings?", "answer": "Yes — both, breaded and fried to order." },
+      { "question": "Can I place a large wing order?", "answer": "Yes — call ahead at (319) 221-1040 so a bigger order is ready when you arrive." },
+      { "question": "What sides go with wings?", "answer": "Cheese curds, fries, onion rings, and hush puppies are popular pairings." },
+      { "question": "Are the wings made to order?", "answer": "Yes — fried fresh when you order." },
+      { "question": "How late can I grab wings?", "answer": "Until 10pm Mon–Thu, 11pm Fri–Sat, and 8pm Sunday." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/wings/", "anchor": "Wings", "context": "related" },
+      { "slug": "/menu/sides/", "anchor": "Sides", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" },
+      { "slug": "/occasions/late-night/", "anchor": "Open late", "context": "related" }
+    ],
+    "seo": {
+      "title": "Game-Day Wings — Captains Fish and Chicken",
+      "description": "Bone-in and boneless wings fried to order for game day in Cedar Rapids, plus cheese curds and fries. Call ahead.",
+      "canonical": "https://captainsfishandchicken.example/occasions/game-day-wings/"
+    },
+    "schemaTypes": ["WebPage"]
+  },
+  {
+    "slug": "quick-lunch",
+    "title": "Quick Lunch",
+    "headline": "A fast fried-fish or chicken lunch",
+    "body": "Counter-service lunch on the 1st Ave NE side — catfish, tenders, and sides, made to order. Call ahead to skip the wait.",
+    "featuredItems": [
+      { "sectionSlug": "catfish", "itemIndex": 0 },
+      { "sectionSlug": "chicken-tenders", "itemIndex": 0 }
+    ],
+    "faqs": [
+      { "question": "Is lunch quick if I call ahead?", "answer": "Yes — call (319) 221-1040 and your order is ready for pickup when you arrive." },
+      { "question": "What's good for a fast lunch?", "answer": "Fried catfish or chicken tenders with a side." },
+      { "question": "Where are you located?", "answer": "1616 1st Ave NE, on the northeast side of Cedar Rapids, with onsite parking." },
+      { "question": "Are you open for lunch every day?", "answer": "Yes — daily from 11am." },
+      { "question": "Is it made to order?", "answer": "Yes — fried fresh when you order, so call ahead for the fastest pickup." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "Fried catfish", "context": "related" },
+      { "slug": "/menu/chicken-tenders/", "anchor": "Chicken tenders", "context": "related" },
+      { "slug": "/neighborhoods/mound-view/", "anchor": "Find us in Mound View", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Quick Lunch — Captains Fish and Chicken",
+      "description": "A fast counter-service lunch of fried catfish or chicken tenders in northeast Cedar Rapids. Call ahead to skip the wait.",
+      "canonical": "https://captainsfishandchicken.example/occasions/quick-lunch/"
+    },
+    "schemaTypes": ["WebPage"]
+  },
+  {
+    "slug": "late-night",
+    "title": "Open Late",
+    "headline": "Fried fish and chicken, open late",
+    "body": "Captains is open late — until 10pm Monday through Thursday and 11pm Friday and Saturday. Wings, catfish, and shrimp, fried to order.",
+    "featuredItems": [
+      { "sectionSlug": "wings", "itemIndex": 0 },
+      { "sectionSlug": "shrimp", "itemIndex": 0 }
+    ],
+    "faqs": [
+      { "question": "How late are you open?", "answer": "Until 10pm Monday through Thursday, 11pm Friday and Saturday, and 8pm on Sunday." },
+      { "question": "What can I order later in the evening?", "answer": "Wings, fried catfish, shrimp, and Southern sides — all made to order." },
+      { "question": "Should I call ahead in the evening?", "answer": "Yes — call (319) 221-1040 so your order is ready when you arrive." },
+      { "question": "Do you deliver at night?", "answer": "Delivery is available through the major apps during open hours." },
+      { "question": "Where are you located?", "answer": "1616 1st Ave NE, northeast Cedar Rapids, with onsite parking." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/wings/", "anchor": "Wings", "context": "related" },
+      { "slug": "/menu/shrimp/", "anchor": "Fried shrimp", "context": "related" },
+      { "slug": "/occasions/game-day-wings/", "anchor": "Game-day wings", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Open Late — Captains Fish and Chicken",
+      "description": "Fried fish and chicken open late in Cedar Rapids — until 10pm Mon–Thu and 11pm Fri–Sat. Wings, catfish, and shrimp made to order.",
+      "canonical": "https://captainsfishandchicken.example/occasions/late-night/"
+    },
+    "schemaTypes": ["WebPage"]
+  },
+  {
+    "slug": "weekend-dinner",
+    "title": "Weekend Dinner",
+    "headline": "Weekend fried seafood and chicken",
+    "body": "Weekend dinner to go — seafood baskets, fried chicken, and Southern sides. Open until 11pm Friday and Saturday.",
+    "featuredItems": [
+      { "sectionSlug": "seafood-basket", "itemIndex": 2 },
+      { "sectionSlug": "fried-chicken", "itemIndex": 0 }
+    ],
+    "faqs": [
+      { "question": "What's good for a weekend dinner?", "answer": "A seafood basket or fried chicken with Southern sides." },
+      { "question": "How late are you open on weekends?", "answer": "Until 11pm Friday and Saturday, and 8pm on Sunday." },
+      { "question": "Can I get a mix of seafood?", "answer": "Yes — the seafood basket combines our fried seafood." },
+      { "question": "Is it made to order?", "answer": "Yes — fried fresh when you order; call ahead for faster pickup." },
+      { "question": "Do you take reservations for the weekend?", "answer": "No — Captains is counter-service and takeout-first. Call ahead at (319) 221-1040." }
+    ],
+    "crossLinks": [
+      { "slug": "/seafood-cedar-rapids/", "anchor": "Seafood in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/fried-chicken/", "anchor": "Fried chicken", "context": "related" },
+      { "slug": "/menu/seafood-basket/", "anchor": "Seafood baskets", "context": "related" },
+      { "slug": "/occasions/family-dinner/", "anchor": "Family dinner takeout", "context": "related" }
+    ],
+    "seo": {
+      "title": "Weekend Dinner — Captains Fish and Chicken",
+      "description": "Weekend fried seafood baskets and chicken to go in Cedar Rapids. Open until 11pm Friday and Saturday. Made to order.",
+      "canonical": "https://captainsfishandchicken.example/occasions/weekend-dinner/"
+    },
+    "schemaTypes": ["WebPage"]
+  }
+]

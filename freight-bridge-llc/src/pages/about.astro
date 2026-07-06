@@ -38,7 +38,7 @@ const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).t
         {business?.address.city}, {business?.address.state}. Founded in 2020 by owner {business?.owner}, we built this company on a simple principle: treat every move and every haul like it's our own. We're not a national chain or a call center — when you hire us, you work with a dedicated, experienced team that handles your job from quote to completion and stands behind every load.
       </p>
       <p style="color:var(--muted);line-height:1.8;margin:0 0 1rem;">
-        We move households and businesses across state lines, haul freight in 49 states for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects across the Iowa City and Cedar Rapids corridor. With over 500 completed moves, licensed interstate authority (USDOT {business?.dotNumber} / MC {business?.mcNumber}), and full cargo and liability insurance, we bring the credentials and experience to handle jobs of any size.
+        We move households and businesses across state lines, haul freight in 49 states for brokers and dispatchers with our own truck, and provide post-construction hauling for data center projects across the Iowa City and Cedar Rapids corridor. With over 500 completed moves, licensed interstate authority (USDOT {business?.dotNumber}), and full cargo and liability insurance, we bring the credentials and experience to handle jobs of any size.
       </p>
       <p style="color:var(--muted);line-height:1.8;margin:0;">
         Our service area covers the Iowa City–Cedar Rapids corridor for local moves — Iowa City, Coralville, North Liberty, and Cedar Rapids — plus 49 states for freight hauling. We offer same-day quotes, competitive rates, and scheduling that works around your business hours. Payment options include credit card, wire transfer, ACH, and Net-30 invoicing for commercial clients.
@@ -59,14 +59,6 @@ const avgRating = (reviews.reduce((a, r) => a + r.rating, 0) / reviews.length).t
       <div class="stat">
         <div class="stat-num">5+</div>
         <div class="stat-label">Years in Business</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">{business?.dotNumber}</div>
-        <div class="stat-label">USDOT Number</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">{business?.mcNumber}</div>
-        <div class="stat-label">MC Authority</div>
       </div>
     </div>
   </section>

@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 6,
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-6.json",
+  "artifactHash": "12198acd15932d77458e797898618080ee68857b2154e8401602cd149917f622",
+  "specialist": "higgsfield",
+  "completedAt": "2026-07-05T19:45:24.573Z",
+  "contract": "Higgsfield manifest, selections, exports, verification report",
+  "artifact": {
+    "phase": 6,
+    "name": "IMAGERY",
+    "specialist": "higgsfield",
+    "higgsfieldManifest": {
+      "path": "scripts/image-prompts.json",
+      "slots": [
+        {
+          "id": "logo",
+          "required": true,
+          "status": "provided",
+          "output_file": "public/logo.svg"
+        },
+        {
+          "id": "hero",
+          "required": false,
+          "status": "pending",
+          "output_file": "public/images/hero.jpg",
+          "note": "Higgsfield generation not run (no browser/account this session); prompt authored and queued."
+        },
+        {
+          "id": "dish-catfish",
+          "required": false,
+          "status": "blocked-awaiting-photos"
+        },
+        {
+          "id": "dish-wings",
+          "required": false,
+          "status": "blocked-awaiting-photos"
+        },
+        {
+          "id": "family-deal",
+          "required": false,
+          "status": "blocked-awaiting-photos"
+        }
+      ],
+      "policy": "Real dish photos must come from the owner. No fabricated food photo is presented as the restaurant's actual plate."
+    },
+    "selections": {
+      "path": "scripts/selections.json",
+      "decisions": {
+        "logo": "provided (public/logo.svg — vector wordmark authored this phase)",
+        "dish-catfish": "blocked-for-real-photo",
+        "dish-wings": "blocked-for-real-photo",
+        "family-deal": "blocked-for-real-photo"
+      }
+    },
+    "exports": [
+      {
+        "slot": "logo",
+        "to": "public/logo.svg",
+        "method": "provided vector asset (in place)"
+      }
+    ],
+    "verificationReport": {
+      "command": "higgsfield-workflow verify",
+      "ok": true,
+      "problems": [],
+      "deferred": {
+        "slots": [
+          "dish-catfish",
+          "dish-wings",
+          "family-deal"
+        ],
+        "pages": []
+      },
+      "followupValidate": "factory validate — logo asset-reference advisory now CLEARED; remaining findings are the GA ship-blocker (owner input) and accepted graph-legacy + evergreen-offer notes."
+    }
+  }
+}

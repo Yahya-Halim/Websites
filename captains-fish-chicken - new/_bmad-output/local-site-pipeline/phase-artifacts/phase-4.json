@@ -1,0 +1,37 @@
+{
+  "phase": 4,
+  "name": "BUILD",
+  "specialist": "content-writer",
+  "filesChanged": [
+    "package.json (engine dep repointed to local file: build)",
+    "src/data/business.json (real NAP, hours, brand, cuisine enrichers, sameAs, GA placeholder)",
+    "src/data/site.json (nav, footer, CRO: ctaPrimary, valueProps[3], ctaBanner, offers[3], trustBar[6], schemaMap Restaurant)",
+    "src/data/menu.json (10 sections, 35 items, all price variants)",
+    "src/data/occasions.json (left empty [] — deals surfaced via site.offers)",
+    "public/llms.txt, public/llms-full.txt, public/robots.txt (wire)",
+    "src/content/_generated/localbusiness.jsonld, website.jsonld, internal-links.json (wire)",
+    "dist/** (astro build output)"
+  ],
+  "routesGenerated": ["/ (index.html)", "sitemap-index.xml", "sitemap-0.xml"],
+  "commandsRun": [
+    "factory init restaurant . --name captains-fish-chicken",
+    "npm install (engine via file:)",
+    "factory wire (legacy mode — no graph)",
+    "factory graph-seed (0 nodes — no faq-shaped source data)",
+    "factory build (astro static, 1 page in ~2.5s)",
+    "factory validate"
+  ],
+  "buildResult": {
+    "buildExit": 0,
+    "pagesBuilt": 1,
+    "indexHtmlBytes": 12615,
+    "renderedContentVerified": ["Captains Fish and Chicken", "Made fresh to order", "Fish-Only Family Deal", "(319) 221-1040", "Cedar Rapids", "Call to Order"],
+    "schemaInPage": ["Restaurant", "PostalAddress", "GeoCoordinates", "OpeningHoursSpecification x2", "Offer x3 (family deals as makesOffer)", "WebSite", "WebPage"],
+    "validateExit": 1,
+    "validateFindings": {
+      "shipBlockers": ["do-not-ship-guards: analytics.gaId placeholder G-XXXXXXXXXX (intended — real GA4 id required before launch)"],
+      "advisories": ["asset-references-exist: public/logo.svg missing (resolved in Phase 6 imagery)", "graph-presence: legacy mode"],
+      "low": ["3 makesOffer entries have no validThrough — treated as evergreen"]
+    }
+  }
+}

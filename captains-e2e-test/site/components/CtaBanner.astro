@@ -1,0 +1,73 @@
+---
+/**
+ * CtaBanner — a full-width mid-page CTA band (cro-gates Task 4).
+ *
+ * Sourced from `site.ctaBanner` (T1: `{headline, sublabel?}`) + the dual CTA.
+ * Renders the headline + optional sublabel with the CtaBar (surface="inline").
+ * KG7: absent headline copy → renders NOTHING (no marker). When it renders, the
+ * root carries `data-cro-block="cta-banner"`. Copy is drawn from T1 fields only
+ * — never fabricated defaults.
+ */
+import CtaBar from '@engine/components/CtaBar.astro';
+
+interface CtaLink {
+  text: string;
+  href: string;
+}
+
+interface CtaBannerCopy {
+  headline: string;
+  sublabel?: string;
+}
+
+interface Props {
+  /** The `site.ctaBanner` block. */
+  ctaBanner?: CtaBannerCopy;
+  ctaPrimary?: CtaLink;
+  ctaSecondary?: CtaLink;
+}
+
+const { ctaBanner, ctaPrimary, ctaSecondary } = Astro.props;
+const hasBanner = Boolean(ctaBanner && ctaBanner.headline && ctaBanner.headline.trim().length > 0);
+---
+
+{hasBanner && (
+  <section class="cta-banner" data-cro-block="cta-banner">
+    <div class="cta-banner-copy">
+      <p class="cta-banner-headline">{ctaBanner!.headline}</p>
+      {ctaBanner!.sublabel && <p class="cta-banner-sublabel">{ctaBanner!.sublabel}</p>}
+    </div>
+    <CtaBar surface="inline" ctaPrimary={ctaPrimary} ctaSecondary={ctaSecondary} />
+  </section>
+)}
+
+<style>
+  .cta-banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+    background: var(--accent-color, #f60);
+    color: #fff;
+    border-radius: 0.5rem;
+  }
+  .cta-banner-copy {
+    flex: 1 1 20rem;
+  }
+  .cta-banner-headline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  .cta-banner-sublabel {
+    margin: 0.5rem 0 0;
+    opacity: 0.9;
+  }
+  .cta-banner :global(.cta-secondary) {
+    color: #fff;
+    border-color: #fff;
+  }
+</style>

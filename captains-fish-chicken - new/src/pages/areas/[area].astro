@@ -1,0 +1,77 @@
+---
+import Base from '../../layouts/Base.astro';
+import areas from '../../data/areas.json';
+import { menu, telHref, telDisplay, orderUrl, directionsUrl, slugify, money, fromPrice } from '../../lib/site';
+
+export function getStaticPaths() {
+  return (areas as any[]).map((a) => ({ params: { area: a.slug }, props: { area: a } }));
+}
+const { area } = Astro.props as { area: any };
+
+const allItems = menu.flatMap((s) => s.items.map((i) => ({ ...i, section: s.slug })));
+const picks = (area.popularOrders ?? []).map((name: string) => allItems.find((i) => i.name === name)).filter(Boolean).slice(0, 4);
+
+const title = `Fried Fish & Chicken near ${area.name} | Captains Fish and Chicken, Cedar Rapids`;
+const description = `${area.intro} Order fresh-fried catfish, wings, shrimp and family deals from Captains Fish and Chicken — pickup, delivery and catering near ${area.name}. Call ${telDisplay}.`;
+
+const breadcrumb = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
+    { '@type': 'ListItem', position: 2, name: 'Areas We Serve', item: '/areas/' },
+    { '@type': 'ListItem', position: 3, name: area.name, item: `/areas/${area.slug}/` },
+  ],
+};
+const faqLd = area.faqs?.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: area.faqs.map((f: any) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) } : null;
+const jsonLd = faqLd ? [breadcrumb, faqLd] : [breadcrumb];
+---
+<Base title={title} description={description} jsonLd={jsonLd}>
+  <section class="section section--navy-deep" style="padding-block:52px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / <a href="/areas/">Areas</a> / {area.name}</nav>
+      <span class="eyebrow" style="margin-top:14px">Serving {area.name}</span>
+      <h1 class="display h-xl" style="margin-top:10px">Fried fish &amp; chicken near {area.name}</h1>
+      <p class="lead mt-s">{area.intro}</p>
+      {area.driveNote && <p class="mt-s" style="color:rgba(255,248,238,.72)">{area.driveNote}</p>}
+      <div class="hero__cta mt-m"><a class="btn" href={telHref}>Call {telDisplay}</a><a class="btn btn--ghost" href={orderUrl} target="_blank" rel="noopener">Order Online</a></div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap-narrow stack" style="--s:20px">
+      {(area.body ?? []).map((p: string) => <p class="lead" style="font-size:1.08rem">{p}</p>)}
+      {area.landmarks?.length > 0 && (
+        <p class="card__desc">Near {area.landmarks.slice(0, 5).join(', ')} and the rest of {area.name}.</p>
+      )}
+    </div>
+  </section>
+
+  {picks.length > 0 && (
+    <section class="section section--paper">
+      <div class="wrap">
+        <h2 class="display h-md" style="color:var(--navy-800)">Popular orders near {area.name}</h2>
+        <div class="grid grid--4 mt-m">
+          {picks.map((i: any) => (
+            <a class="card card--link" href={`/menu/${i.section}/${slugify(i.name)}/`}><h3 style="font-size:1.1rem">{i.name}</h3><span class="price-pill" style="align-self:flex-start">from {money(fromPrice(i))}</span></a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {area.faqs?.length > 0 && (
+    <section class="section section--cream">
+      <div class="wrap-narrow">
+        <h2 class="display h-md" style="color:var(--navy-800)">{area.name} — good to know</h2>
+        <div class="faq mt-m">{area.faqs.map((f: any) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+      </div>
+    </section>
+  )}
+
+  <section class="section section--navy-deep center">
+    <div class="wrap-narrow">
+      <h2 class="display h-lg">Fresh fried, {area.name} — let's eat</h2>
+      <div class="hero__cta mt-m" style="justify-content:center"><a class="btn btn--lg" href={telHref}>Call {telDisplay}</a><a class="btn btn--ghost btn--lg" href={directionsUrl} target="_blank" rel="noopener">Get Directions</a></div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,62 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import Faq from '../components/Faq.astro';
+import { webPage } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Financing', path: '/financing' },
+];
+
+const description =
+  'Auto financing at Summit Auto Group in Denver. We work with 14 lenders across a wide range of credit situations. Get pre-qualified with no impact to your credit score.';
+
+const faqs = [
+  { question: 'Can I get financed with less-than-perfect credit?', answer: 'Often, yes. We work with 14 lenders and specialize in matching Colorado buyers to the right program — including first-time buyers and credit rebuilders.' },
+  { question: 'Will getting pre-qualified hurt my credit?', answer: 'No. Our pre-qualification uses a soft credit pull that does not affect your score. A hard inquiry only happens once you choose to move forward.' },
+  { question: 'How much should I put down?', answer: 'It depends on the vehicle and program, but many customers put down 10–20%. A larger down payment lowers your monthly payment and total interest.' },
+  { question: 'Do you accept trade-ins toward my down payment?', answer: 'Absolutely. A trade-in can serve as all or part of your down payment. Start with a free trade-in appraisal and we’ll apply the value to your deal.' },
+];
+
+const schemas = [
+  webPage({ name: 'Auto Financing in Denver', path: '/financing', description }),
+];
+---
+
+<PageLayout
+  title="Auto Financing in Denver | Summit Auto Group"
+  description={description}
+  breadcrumbs={crumbs}
+  eyebrow="Financing"
+  heroTitle="Financing that fits your life"
+  heroSubtitle="14 lenders, one honest conversation. Get pre-qualified in minutes with no impact to your credit."
+  schemas={schemas}
+>
+  <div class="prose">
+    <p>
+      At Summit Auto Group, financing is a conversation, not a sales trap. Tell us your budget and goals and
+      we’ll shop 14 lenders to find a program that works — whether you have strong credit, thin credit, or a
+      few bumps along the way.
+    </p>
+
+    <h2>How it works</h2>
+    <ul>
+      <li><strong>Pre-qualify online.</strong> Soft credit check, no score impact, real numbers.</li>
+      <li><strong>Pick your vehicle.</strong> Browse the <a href="/inventory">inventory</a> and lock in your terms.</li>
+      <li><strong>Add protection (optional).</strong> Ask about <a href="/services/extended-warranties">extended warranties</a> and GAP.</li>
+      <li><strong>Drive off.</strong> Sign in-store or remotely — we deliver across the metro.</li>
+    </ul>
+
+    <div class="band">
+      <h2>Trade-in = down payment</h2>
+      <p>Roll your current car’s value straight into your new deal. Start with a free
+        <a href="/services/trade-in-appraisal">trade-in appraisal</a>.</p>
+      <div class="btn-row">
+        <a class="btn" href="/inventory">Find your vehicle</a>
+        <a class="btn ghost" href="/contact">Talk to finance</a>
+      </div>
+    </div>
+  </div>
+
+  <Faq faqs={faqs} heading="Financing FAQs" />
+</PageLayout>

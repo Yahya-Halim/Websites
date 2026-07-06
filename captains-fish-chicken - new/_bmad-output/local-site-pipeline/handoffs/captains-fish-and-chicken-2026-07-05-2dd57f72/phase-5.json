@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "briefHash": "359358364d9f5e67d657646fc9ace680d97ca53edf80137e4072e00f08c3eec0",
+  "phase": 5,
+  "exitedAt": "2026-07-05T19:42:24.280Z",
+  "specialistInvoked": "seo-geo-ai-validation",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-5.json",
+    "artifactHash": "5560e1e18d96a39271bd4965892502cec42ba756911d1d06cc5cb1581d0f58f6",
+    "contract": "validation runs, failures, fix rounds, remaining advisories"
+  },
+  "nextPhaseAllowed": [
+    6
+  ],
+  "nextPhaseHint": 6,
+  "blocking": []
+}

@@ -1,0 +1,45 @@
+{
+  "id": "business",
+  "name": "Summit Auto Group",
+  "tagline": "Colorado's trusted source for quality used & certified pre-owned vehicles",
+  "phone": "(303) 555-0142",
+  "email": "sales@summitautogroup.example",
+  "domain": "https://summitautogroup.example",
+  "owner": "Marcus Delgado",
+  "slogan": "Reach your summit",
+  "description": "Summit Auto Group is a family-owned Denver dealership offering hand-picked used cars, certified pre-owned vehicles, transparent in-house financing, and a full-service maintenance department for every make and model.",
+  "address": {
+    "street": "4820 Federal Blvd",
+    "city": "Denver",
+    "state": "CO",
+    "stateFullName": "Colorado",
+    "zip": "80221",
+    "country": "US"
+  },
+  "geo": { "latitude": 39.7864, "longitude": -105.025 },
+  "hours": {
+    "weekday": { "days": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], "opens": "09:00", "closes": "19:00" },
+    "sunday": { "days": ["Sun"], "opens": "10:00", "closes": "17:00" },
+    "displayText": "Mon–Sat 9:00am–7:00pm · Sun 10:00am–5:00pm"
+  },
+  "yearEstablished": "2009",
+  "copyrightYears": "2009-2026",
+  "paymentAccepted": "Cash, Credit Card, Financing, Trade-In",
+  "mapsUrl": "https://maps.google.com/?q=Summit+Auto+Group+Denver+CO",
+  "directionsUrl": "https://maps.google.com/dir/?destination=Summit+Auto+Group+4820+Federal+Blvd+Denver+CO",
+  "sameAs": [
+    "https://www.facebook.com/summitautogroup",
+    "https://www.instagram.com/summitautogroup",
+    "https://www.youtube.com/@summitautogroup"
+  ],
+  "brand": {
+    "primaryColor": "#0b3d2e",
+    "accentColor": "#f2a900",
+    "bgColor": "#f7f9f8",
+    "secondaryColor": "#1b6b52",
+    "textColor": "#12241d",
+    "logoFilename": "logo.svg",
+    "logoAlt": "Summit Auto Group logo"
+  },
+  "analytics": { "gaId": "G-SUMMIT2009" }
+}

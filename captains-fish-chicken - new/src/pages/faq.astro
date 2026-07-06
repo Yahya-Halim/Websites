@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import { telHref, telDisplay, orderUrl } from '../lib/site';
+const faqs = [
+  { q: 'What kind of fish do you serve?', a: 'Catfish, perch, tilapia, cod and red snapper, plus catfish nuggets, calamari, crab cakes and jumbo shrimp — all breaded and fried fresh to order.' },
+  { q: 'Where are you located?', a: 'At 1616 1st Ave NE, Cedar Rapids, IA 52402, just northeast of downtown. Call (319) 221-1040.' },
+  { q: 'What are your hours?', a: 'Monday–Thursday 11am–10pm, Friday–Saturday 11am–11pm, and Sunday 11am–8pm.' },
+  { q: 'Do you deliver?', a: 'Yes — order on Uber Eats and other delivery apps. You can also call (319) 221-1040 to order ahead for pickup.' },
+  { q: 'Is everything really made to order?', a: 'Yes. Baskets are dropped fresh when you order, so it comes out hot and crisp. That’s why we suggest calling ahead for faster service.' },
+  { q: 'Do you cater or take large orders?', a: 'We do — family deals, half and full pans of catfish nuggets and fries, and party platters. Call ahead so we can fry it fresh for your pickup time. See our catering page.' },
+  { q: 'Do you have wings?', a: 'Whole wings, party wings and boneless wings — as a meal or in bulk for a crowd.' },
+  { q: 'Are there sides and desserts?', a: 'Plenty — hush puppies, fries, okra, cheese curds, mac & cheese bites, onion rings and more, plus cheesecake, banana pudding, carrot cake and lemon cake.' },
+  { q: 'Is there a second location?', a: 'Yes, there’s a second Cedar Rapids location at 3100 6th St SW. This site covers the 1616 1st Ave NE location.' },
+];
+const description = 'Answers about Captains Fish and Chicken in Cedar Rapids — menu, hours, delivery, catering and more.';
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Base title="FAQ | Captains Fish and Chicken, Cedar Rapids" description={description} jsonLd={[faqLd]}>
+  <section class="section section--navy-deep" style="padding-block:52px">
+    <div class="wrap-narrow">
+      <nav class="crumbs"><a href="/">Home</a> / FAQ</nav>
+      <span class="eyebrow" style="margin-top:14px">Good to know</span>
+      <h1 class="display h-xl" style="margin-top:10px">Frequently asked</h1>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap-narrow">
+      <div class="faq">{faqs.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}</div>
+      <div class="hero__cta mt-l"><a class="btn btn--lg" href={telHref}>Call {telDisplay}</a><a class="btn btn--navy btn--lg" href={orderUrl} target="_blank" rel="noopener">Order Online</a></div>
+    </div>
+  </section>
+</Base>

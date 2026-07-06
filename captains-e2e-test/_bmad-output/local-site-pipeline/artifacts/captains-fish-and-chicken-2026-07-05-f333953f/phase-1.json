@@ -1,0 +1,335 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "phase": 1,
+  "artifactPath": "D:/website/captains-e2e-test/research/phase-1-research.json",
+  "artifactHash": "cb5a91398454d0c5b0a318ada5fe9197bd9414e7d1bd14b3e1e72a195cdfaf45",
+  "specialist": "keyword-research",
+  "completedAt": "2026-07-05T23:49:52.724Z",
+  "contract": "research sources, competitor notes, keyword/entity findings, source dates, evidence gaps",
+  "artifact": {
+    "schemaVersion": 1,
+    "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+    "phase": 1,
+    "specialist": "keyword-research",
+    "capturedAt": "2026-07-05",
+    "inputsUsed": [
+      "discovery/phase-0-discovery.json (sealed v1 — approved)",
+      "discovery/phase-0-discovery.v2.json (Phase-1 enrichment: owner-since-2006, catfish signature, cornmeal/lemon-pepper breading, press menu additions)"
+    ],
+    "researchSources": [
+      {
+        "url": "https://www.yelp.com/search?cflt=soulfood&find_loc=Cedar+Rapids,+IA",
+        "what": "Cedar Rapids soul-food competitor set"
+      },
+      {
+        "url": "https://iowasoulfoodcompany.wixsite.com/sugapeach",
+        "what": "SugaPeach Chicken & Fish Fry — primary direct competitor, own web presence"
+      },
+      {
+        "url": "https://www.iowasoulfood.com/our-brands",
+        "what": "Iowa Soul Food Company brand umbrella (SugaPeach)"
+      },
+      {
+        "url": "https://www.thegazette.com/restaurants/new-restaurateurs-bring-harolds-chicken-fried-recipe-back-to-iowa-with-cedar-rapids-opening/",
+        "what": "Harold's Chicken Cedar Rapids reopening (SW side)"
+      },
+      {
+        "url": "https://thegazette.com/subject/life/food-and-drink/soulgood-southern-diner-cedar-rapids-restaurant-fried-chicken-fish-20210318",
+        "what": "SoulGood Southern Diner (3100 6th St SW) profile"
+      },
+      {
+        "url": "https://www.doordash.com/store/chicago-grill-chicken-&-fish-cedar-rapids-448775/",
+        "what": "Chicago Grill Chicken & Fish — chicken/fish competitor"
+      },
+      {
+        "url": "https://www.thegazette.com/lifestyles/food-drink/captain-s-fish-and-chicken-opens-second-location-in-cedar-rapids/article_3232d23b-7b86-5882-807b-edd10fb1ce3a.html",
+        "what": "Primary: owner background, signature dishes, menu specifics"
+      },
+      {
+        "url": "https://khak.com/captains-fish-chicken-cedar-rapids/",
+        "what": "Local press: opening, menu, made-to-order"
+      },
+      {
+        "url": "https://www.loopnet.com/Listing/1616-1st-Ave-NE-Cedar-Rapids-IA/32640577/",
+        "what": "1616 property facts: 1,895 sqft, large dining room, retail counter, onsite parking, high-visibility 1st Ave NE"
+      },
+      {
+        "url": "https://www.city-data.com/neighborhood/Mound-View-Cedar-Rapids-IA.html",
+        "what": "Mound View neighborhood profile (location context)"
+      },
+      {
+        "url": "https://www.yelp.com/search?find_desc=Catfish&find_loc=Cedar+Rapids,+IA",
+        "what": "Catfish-intent SERP set (Cedar Rapids)"
+      },
+      {
+        "url": "https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids",
+        "what": "Captains Yelp listing (soul food, 1616)"
+      }
+    ],
+    "sourceDates": [
+      {
+        "source": "The Gazette — Captains 2nd location",
+        "publishedDate": "2025 (post May 16 2025)",
+        "accessedDate": "2026-07-05"
+      },
+      {
+        "source": "The Gazette — Harold's Chicken CR reopening",
+        "publishedDate": "2026 (Feb reopening referenced)",
+        "accessedDate": "2026-07-05"
+      },
+      {
+        "source": "The Gazette — SoulGood Southern Diner",
+        "publishedDate": "2021-03-18",
+        "accessedDate": "2026-07-05"
+      },
+      {
+        "source": "KHAK — Captains",
+        "publishedDate": "2024 (opening coverage)",
+        "accessedDate": "2026-07-05"
+      },
+      {
+        "source": "LoopNet 1616 1st Ave NE listing",
+        "publishedDate": "unknown (commercial listing)",
+        "accessedDate": "2026-07-05"
+      },
+      {
+        "source": "Yelp soul-food / catfish CR SERPs",
+        "publishedDate": "listing updated Mar 2026 per Yelp",
+        "accessedDate": "2026-07-05"
+      }
+    ],
+    "competitorNotes": [
+      {
+        "name": "SugaPeach Chicken & Fish Fry (Iowa Soul Food Company)",
+        "positioning": "Primary direct competitor — fried chicken + fish + soul sides (mac & cheese praised). Part of a multi-brand Iowa Soul Food Company; has its own website + brand identity.",
+        "threat": "Owned web presence and brand umbrella = stronger existing search footprint than Captains (who has none).",
+        "gapCaptainsExploits": "Captains' owner-since-2006 multi-state track record + catfish signature + made-to-order angle; a real marketing site closes SugaPeach's web-presence advantage."
+      },
+      {
+        "name": "Harold's Chicken",
+        "positioning": "Recognized Chicago fried-chicken brand; reopened in Cedar Rapids (SW side, near Wawa Caribbean, former Highway 30 Diner) in Feb 2026.",
+        "threat": "National brand recognition for fried chicken.",
+        "gapCaptainsExploits": "Captains = fish AND chicken (broader), NE-side location (1st Ave corridor) vs Harold's SW side — different trade area."
+      },
+      {
+        "name": "SoulGood Southern Diner",
+        "positioning": "African-American + Asian soul cuisine, fried chicken/fish; listed at 3100 6th St SW (Gazette 2021).",
+        "threat": "Established soul-food identity with press history.",
+        "gapCaptainsExploits": "Captains' fried-fish specialization + NE trade area.",
+        "note": "3100 6th St SW is ALSO Captains' out-of-scope 2nd-location address — ambiguous (prior tenant / co-address / adjacent unit). Flagged in evidenceGaps."
+      },
+      {
+        "name": "Chicago Grill Chicken & Fish",
+        "positioning": "Chicken/fish delivery competitor (DoorDash).",
+        "threat": "Overlapping menu category on delivery apps.",
+        "gapCaptainsExploits": "Direct brand site + made-to-order + local-owner story."
+      },
+      {
+        "name": "Yelp long-tail (unverified individually)",
+        "list": [
+          "I'm Soul Hungry",
+          "Pee Wees",
+          "Royceann's Soul Food",
+          "Black Sheep Social Club",
+          "Pick Up N Go",
+          "Rodney's Kitchen",
+          "Shugga's Soul Cafe"
+        ],
+        "note": "Named in Yelp soul-food results; open/closed status, catering-only status, and menu overlap NOT individually verified — see evidenceGaps."
+      }
+    ],
+    "keywordEntityFindings": {
+      "volumeCaveat": "No keyword tool available (Tier-1 skill, no Ahrefs/SEMrush integration). Clusters below are derived from live SERP signals + intent reasoning, NOT tool-verified search volumes. Volumes are directional only — see evidenceGaps.",
+      "coreClusters": [
+        {
+          "cluster": "brand",
+          "keywords": [
+            "captains fish and chicken",
+            "captains fish and chicken cedar rapids",
+            "captains cedar rapids menu"
+          ],
+          "intent": "navigational"
+        },
+        {
+          "cluster": "category-local",
+          "keywords": [
+            "fish and chicken cedar rapids",
+            "fried fish cedar rapids",
+            "fried chicken cedar rapids",
+            "soul food cedar rapids",
+            "seafood cedar rapids"
+          ],
+          "intent": "commercial/local"
+        },
+        {
+          "cluster": "dish-entity",
+          "keywords": [
+            "fried catfish cedar rapids",
+            "catfish near me",
+            "broasted chicken cedar rapids",
+            "chicken wings cedar rapids",
+            "fried shrimp cedar rapids",
+            "hush puppies cedar rapids"
+          ],
+          "intent": "commercial/local"
+        },
+        {
+          "cluster": "occasion-intent",
+          "keywords": [
+            "fish fry cedar rapids",
+            "family dinner takeout cedar rapids",
+            "game day wings cedar rapids",
+            "late night food cedar rapids",
+            "lunch special cedar rapids",
+            "fried fish near me"
+          ],
+          "intent": "transactional/occasion"
+        },
+        {
+          "cluster": "geo-modifier",
+          "keywords": [
+            "... mound view",
+            "... 1st ave ne",
+            "... marion ia",
+            "... hiawatha ia",
+            "... near me"
+          ],
+          "intent": "local-modifier"
+        }
+      ],
+      "knowsAboutEntityStrings": [
+        "fried catfish",
+        "broasted chicken",
+        "fried fish",
+        "soul food",
+        "seafood",
+        "chicken wings",
+        "made-to-order fried fish",
+        "cornmeal-breaded catfish"
+      ],
+      "cuisineEntities": [
+        "Soul Food",
+        "Seafood",
+        "Southern (American)",
+        "Fried Chicken"
+      ],
+      "restaurantSchemaSubtype": "Restaurant (servesCuisine: Soul Food / Seafood)",
+      "geoAiCitationAngles": [
+        "Answer-unit: 'What is Captains Fish and Chicken known for?' -> catfish (most popular), made-to-order, cornmeal + fresh lemon-pepper breading",
+        "Answer-unit: 'fried fish + chicken on the NE side of Cedar Rapids' -> 1st Ave NE / Mound View, near Hy-Vee, onsite parking",
+        "Owner-authority answer-unit: Ray Aqel, restaurateur since 2006, first Iowa location"
+      ],
+      "occasionTaxonomyForPhase2": [
+        "quick weekday lunch",
+        "family dinner takeout",
+        "Friday fish fry",
+        "game-day wings",
+        "late-night (open to 10-11pm)"
+      ]
+    },
+    "localKnowledgeRecord": {
+      "singleLocation": true,
+      "neighborhood": "Mound View",
+      "corridor": "1st Ave NE (high-visibility arterial NE of downtown Cedar Rapids)",
+      "nearbyLandmark": "Hy-Vee (cited as adjacent landmark for prior tenant at 1616)",
+      "parking": "onsite parking (per LoopNet)",
+      "premises": "~1,895 sqft; kitchen + retail counter + large dining room + 2 restrooms",
+      "dineInCorrection": "Space HAS a large dining room -> dine-in seating exists; owner still says most orders go out (takeout-dominant). Corrects Phase-0 'limited/unconfirmed'.",
+      "nearbyTownsForGeoModifiers": [
+        "Marion, IA",
+        "Hiawatha, IA"
+      ],
+      "foldNote": "This is a single fixed-location restaurant, NOT a multi-city service-area business. Distance/drive-time matrix tables (founder P0 city-record) are largely N/A; neighborhood + occasion + corridor facts are the anti-doorway payload instead.",
+      "unfabricated": "No invented highways/landmarks/drive-times. Exact cross-street and lat/lng not captured (evidence gap)."
+    },
+    "checklist": [
+      {
+        "id": "FP-P0-city-knowledge",
+        "item": "City/location knowledge record (distance, drive-time, route, landmarks, vibe)",
+        "status": "partial",
+        "reason": "Single fixed-location restaurant; captured Mound View + 1st Ave NE corridor + Hy-Vee + parking + dining room. Distance/drive-time matrix N/A (no multi-city service area); lat/lng + exact cross-street not captured.",
+        "catalogRef": "founder-pattern-catalog P0 city/location record"
+      },
+      {
+        "id": "FP-P1-occasion-taxonomy",
+        "item": "Trigger-event/occasion page taxonomy keyed to customer moment",
+        "status": "satisfied",
+        "reason": "Identified occasions: quick lunch, family dinner takeout, Friday fish fry, game-day wings, late-night. Feeds Phase 2 restaurant page families.",
+        "catalogRef": "founder-pattern-catalog P1 occasion taxonomy"
+      },
+      {
+        "id": "FP-P1-occasion-catering",
+        "item": "Catering occasion page",
+        "status": "ignored",
+        "reason": "Owner confirmed NO catering — do not create a catering occasion/page.",
+        "catalogRef": "founder-pattern-catalog P1 occasion taxonomy"
+      },
+      {
+        "id": "FP-P0-entity-fields",
+        "item": "Rich business-entity research (servesCuisine, knowsAbout[], hours, menu, priceRange)",
+        "status": "satisfied-except-price",
+        "reason": "Cuisine + knowsAbout strings + hours + menu captured. priceRange unknown (owner disclaimed delivery-app prices).",
+        "catalogRef": "founder-pattern-catalog P0 business entity enrichment"
+      },
+      {
+        "id": "FP-P1-price-transparency",
+        "item": "Price/number transparency answer units",
+        "status": "gap",
+        "reason": "No owner-authoritative prices; delivery-app prices disclaimed. Cannot build price-range answer units until provided.",
+        "catalogRef": "founder-pattern-catalog P1 price transparency"
+      },
+      {
+        "id": "FP-P2-truth-gated-proof",
+        "item": "Truth-gated ratings/testimonials (emit only if real)",
+        "status": "satisfied",
+        "reason": "Review volume confirmed thin (Yelp 1 review; FB 17 recommends; no located Google rating). NO aggregateRating schema to emit; no fabricated reviews. Even '100% 5-star' reframing is too thin at 1 review.",
+        "catalogRef": "founder-pattern-catalog P2 truth-gated proof"
+      },
+      {
+        "id": "FP-P2-eeat-owner",
+        "item": "E-E-A-T owner-author scaffold",
+        "status": "satisfied",
+        "reason": "Named owner Ray Aqel, restaurateur since 2006, multi-state track record; press citations (Gazette, KHAK) available for author/authority surface.",
+        "catalogRef": "founder-pattern-catalog P2 E-E-A-T scaffold"
+      },
+      {
+        "id": "RES-competitors",
+        "item": "Local competitor set identified",
+        "status": "satisfied",
+        "reason": "SugaPeach (primary), Harold's Chicken, SoulGood, Chicago Grill + Yelp long-tail.",
+        "catalogRef": "Phase 1 contract: competitorNotes"
+      },
+      {
+        "id": "RES-gbp-citations",
+        "item": "GBP claim status + NAP citation consistency",
+        "status": "gap",
+        "reason": "NAP consistent across Yelp/Uber Eats/DoorDash/Grubhub/Postmates, but Google Business Profile claim status + Google rating NOT located after 3 attempts. Hand to launch-phase verification.",
+        "catalogRef": "local-SEO citations"
+      },
+      {
+        "id": "FP-build-patterns",
+        "item": "Deploy-blocking validation gate / matrix mesh / two-tier llms.txt / perf-a11y-security bundle",
+        "status": "downstream",
+        "reason": "These are engine/build patterns (founder P0-P1), not Phase-1 research deliverables. Carried to Phase 2 (plan) and Phase 4 (build). llms.txt treated as low-priority hygiene per the catalog's June-2026 GEO caveat.",
+        "catalogRef": "founder-pattern-catalog P0/P1 engine-floor patterns"
+      }
+    ],
+    "evidenceGaps": [
+      "Keyword search VOLUMES are not tool-verified (no keyword tool); clusters are SERP+intent reasoned, directional only.",
+      "Google Business Profile claim status and Google star rating/review count could NOT be located via web search (3 attempts).",
+      "Competitor long-tail (I'm Soul Hungry, Pee Wees, Royceann's, Black Sheep Social Club, Pick Up N Go, Rodney's Kitchen, Shugga's) not individually verified for open/closed, catering-only, or menu overlap.",
+      "SoulGood Southern Diner at 3100 6th St SW vs Captains' out-of-scope 2nd location at the same address — relationship ambiguous (prior tenant / adjacent unit / co-address).",
+      "No owner-authoritative menu prices -> no priceRange / price answer units.",
+      "Exact cross-street and lat/lng for 1616 not captured; neighborhood-level only.",
+      "Press-sourced menu additions (liver, mashed potatoes, mac & cheese) and seasoning/signature claims still pending owner confirmation (carried from Phase 0 v2).",
+      "Nearby-town pull (Marion, Hiawatha) assumed as geo-modifiers, not confirmed by owner as actual customer draw."
+    ],
+    "handoffToPhase2": [
+      "Restaurant page-matrix families: menu-category pages + occasion pages (quick lunch / family dinner / Friday fish fry / game-day wings / late-night) + intent pages — NOT service x location (single location).",
+      "Anti-doorway payload = neighborhood + corridor + occasion facts (no fabricated drive-time matrix).",
+      "Conversion surface constraints from Phase 0 still bind: no lead-form endpoint (form can't ship), call-only CTA, trust grid omitted, no prices.",
+      "Competitor differentiation angle: owner-since-2006 + catfish signature + made-to-order + real brand site vs SugaPeach/Harold's."
+    ]
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "phase": 0,
+  "artifactPath": "D:/website/captains-e2e-test/discovery/phase-0-discovery.json",
+  "artifactHash": "4908784bc9b3e680cc7884270be0bc3c62b14b6e979ebfc2ab5716226a5dd664",
+  "specialist": "local-business-discovery",
+  "completedAt": "2026-07-05T23:01:27.879Z",
+  "contract": "interview transcript summary, business identity, confirmed facts, unverified claims, missing answers, no build output",
+  "artifact": {
+    "schemaVersion": 1,
+    "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+    "phase": 0,
+    "specialist": "local-business-discovery",
+    "capturedAt": "2026-07-05",
+    "buildOutputCreated": false,
+    "interviewSummary": "Phase 0 discovery for Captains Fish and Chicken, a counter-service soul-food / fried-fish restaurant at 1616 1st Ave NE, Cedar Rapids IA 52402 (owner Ray Aqel, opened Oct 2024). NAP and hours were corroborated across Yelp, Uber Eats, DoorDash, Grubhub, Postmates and local press (Cedar Rapids Gazette, KHAK); web hours match the brief exactly. Web research surfaced a real second location (3100 6th St SW, opened May 16 2025, phone 319-362-3114); the owner confirmed it is real but scoped it OUT — this website is for 1616 1st Ave NE only. Owner confirmed the web menu items are accurate but stated the delivery-app prices are NOT his and must not be presented as authoritative. Owner confirmed his multi-state track record (opened and sold the same concept in MN, IL, MI before Iowa). Owner corrected the web/Yelp implication of catering: there is NO catering. No halal or dietary claims. No current promotions. Brand: no logo (must be created), colors navy #0a3a5c and gold #f2a516, and no professional photos (all imagery must be generated in Phase 6). Conversion-surface gaps flagged and load-bearing for downstream gates: no lead-form endpoint and no business email (lead form cannot ship), phone is voice-only (dual-CTA degrades to call-only), fewer than six hard trust facts (trust grid omitted), and no analytics configured. No domain and no hosting chosen yet. Local neighborhood/competitor detail was not provided by the owner and is deferred to Phase 1 research.",
+    "businessIdentity": {
+      "name": "Captains Fish and Chicken",
+      "legalName": "Captains Fish and Chicken, INC",
+      "vertical": "restaurant",
+      "cuisine": "soul food / fried fish and chicken",
+      "serviceModel": "counter-service; order at counter; primarily takeout / to-go",
+      "owner": "Ray Aqel",
+      "yearEstablished": 2024,
+      "openedDate": "2024-10",
+      "inScopeLocation": {
+        "streetAddress": "1616 1st Ave NE",
+        "city": "Cedar Rapids",
+        "state": "IA",
+        "postalCode": "52402",
+        "phone": "(319) 221-1040"
+      },
+      "outOfScopeLocation": {
+        "streetAddress": "3100 6th St SW",
+        "city": "Cedar Rapids",
+        "state": "IA",
+        "postalCode": "52404",
+        "phone": "319-362-3114",
+        "openedDate": "2025-05-16",
+        "note": "Real second location, owner-confirmed. Excluded from this site per single-location brief scope. Do not reference in NAP or schema for this build."
+      },
+      "hours": {
+        "sunday": "11:00-20:00",
+        "monday": "11:00-22:00",
+        "tuesday": "11:00-22:00",
+        "wednesday": "11:00-22:00",
+        "thursday": "11:00-22:00",
+        "friday": "11:00-23:00",
+        "saturday": "11:00-23:00"
+      },
+      "brand": {
+        "logo": "none — must be created",
+        "colors": {
+          "navy": "#0a3a5c",
+          "gold": "#f2a516"
+        },
+        "photos": "none — no professional food/interior/exterior photos; generate all imagery in Phase 6",
+        "tagline": null
+      }
+    },
+    "userConfirmedFacts": [
+      {
+        "fact": "Name: Captains Fish and Chicken (legal entity: Captains Fish and Chicken, INC)",
+        "source": "brief + owner + web NAP"
+      },
+      {
+        "fact": "In-scope address: 1616 1st Ave NE, Cedar Rapids, IA 52402",
+        "source": "brief + owner + web NAP"
+      },
+      {
+        "fact": "Phone: (319) 221-1040 — regular voice line, NOT SMS/text-capable",
+        "source": "owner"
+      },
+      {
+        "fact": "Owner: Ray Aqel",
+        "source": "brief + owner + press"
+      },
+      {
+        "fact": "Opened October 2024 (soft opening late Oct 2024)",
+        "source": "brief + press"
+      },
+      {
+        "fact": "Hours: Sun 11:00-20:00; Mon-Thu 11:00-22:00; Fri-Sat 11:00-23:00 (web matches brief)",
+        "source": "brief + owner + web"
+      },
+      {
+        "fact": "Counter-service model; primarily takeout / to-go",
+        "source": "owner"
+      },
+      {
+        "fact": "Owner opened and sold the same concept in Minnesota, Illinois, and Michigan before Iowa; first Iowa location",
+        "source": "owner-confirmed (previously web claim)"
+      },
+      {
+        "fact": "Menu items are accurate (see menu object). Chicken: fried chicken, tenders, boneless wings, bone-in wings, gizzards. Seafood: perch, tilapia, catfish, cod, calamari, crab cakes, shrimp. Sides: okra, hush puppies, onion rings, breaded mushrooms, fries, cheese curds. Dessert: chocolate cake.",
+        "source": "owner-confirmed items"
+      },
+      {
+        "fact": "Everything made fresh to order; restaurant recommends calling ahead for faster service",
+        "source": "owner + press"
+      },
+      {
+        "fact": "Second location at 3100 6th St SW is real (opened May 2025) but OUT OF SCOPE; site is 1616 only",
+        "source": "owner ruling + press"
+      },
+      {
+        "fact": "No catering offered",
+        "source": "owner (corrects web/Yelp implication)"
+      },
+      {
+        "fact": "No halal or dietary claims",
+        "source": "owner"
+      },
+      {
+        "fact": "No current promotions or specials",
+        "source": "owner"
+      },
+      {
+        "fact": "Brand colors: navy #0a3a5c and gold #f2a516; no logo yet (create); no professional photos",
+        "source": "owner"
+      },
+      {
+        "fact": "Three value props: made fresh to order; does both fish and chicken right; family-owned",
+        "source": "owner"
+      },
+      {
+        "fact": "Mid-page CTA banner line: 'Call ahead — your order's hot when you arrive.'",
+        "source": "owner"
+      },
+      {
+        "fact": "Online ordering happens via third-party delivery apps (DoorDash, Uber Eats, Grubhub, Postmates); these are CTAs, not owned pages",
+        "source": "owner + web"
+      },
+      {
+        "fact": "No Google Ads; no Google Analytics configured",
+        "source": "owner"
+      },
+      {
+        "fact": "No domain and no hosting chosen yet",
+        "source": "owner"
+      }
+    ],
+    "unverifiedClaims": [
+      {
+        "claim": "Menu prices shown on delivery apps",
+        "status": "explicitly NOT owner-authoritative — must not be presented as the restaurant's prices",
+        "source": "Uber Eats / DoorDash / Grubhub / Zmenu"
+      },
+      {
+        "claim": "Square site https://captains-fish-and-chicken.square.site/ belongs to the business",
+        "status": "owner unsure — treat as NOT owned; do not link or rely on it",
+        "source": "web search"
+      },
+      {
+        "claim": "Dedicated dine-in seating at 1616",
+        "status": "not confirmed; owner says counter-service, mostly to-go — assume limited/none until confirmed",
+        "source": "inference"
+      },
+      {
+        "claim": "Catering (implied by a Yelp reviewer)",
+        "status": "REFUTED by owner — no catering",
+        "source": "Yelp"
+      },
+      {
+        "claim": "Signature dishes per early reviews (catfish, shrimp, wings, cheese curds, chocolate cake)",
+        "status": "plausible, review-sourced, not owner-ranked",
+        "source": "KHAK / Yelp"
+      }
+    ],
+    "missingAnswers": [
+      {
+        "item": "Lead-form external endpoint (e.g. Web3Forms https URL) AND a business email",
+        "impact": "BLOCKER for lead form — site.leadForm cannot ship; contact surface reduces to phone + map + directions",
+        "ownerStatus": "none set up"
+      },
+      {
+        "item": "SMS/text-capable number",
+        "impact": "dual-CTA degrades to call-only; site.ctaSecondary omitted",
+        "ownerStatus": "phone is voice-only"
+      },
+      {
+        "item": "Sixth-plus hard trust fact",
+        "impact": "trust grid OMITTED (<6 genuine facts); press mentions + owner story still usable on About/press",
+        "ownerStatus": "provided ~5"
+      },
+      {
+        "item": "Owner-authoritative menu prices",
+        "impact": "menu shown without prices unless provided",
+        "ownerStatus": "not provided; delivery-app prices disclaimed"
+      },
+      {
+        "item": "Domain + hosting / deploy target",
+        "impact": "required at Phase 7 launch",
+        "ownerStatus": "none yet"
+      },
+      {
+        "item": "Analytics (GA4) setup",
+        "impact": "no measurement at launch unless configured; optional",
+        "ownerStatus": "none"
+      },
+      {
+        "item": "Local neighborhoods / landmarks drawn from; local competitors",
+        "impact": "deferred to Phase 1 research (keyword/competitor)",
+        "ownerStatus": "not answered — Phase 1 will research"
+      },
+      {
+        "item": "Real food/interior/exterior photography",
+        "impact": "none exist; Phase 6 imagery must generate all visuals",
+        "ownerStatus": "none"
+      },
+      {
+        "item": "Logo",
+        "impact": "must be created; colors given (navy #0a3a5c, gold #f2a516)",
+        "ownerStatus": "none"
+      }
+    ],
+    "conversionSurfaceFlags": {
+      "leadFormCanShip": false,
+      "leadFormBlockReason": "no external form endpoint and no business email",
+      "dualCta": "call-only (no SMS)",
+      "ctaPrimary": "tel:+13192211040",
+      "ctaSecondary": null,
+      "offers": "omitted (no current promotions)",
+      "trustGrid": "omitted (fewer than 6 hard trust facts)",
+      "realTrustFacts": [
+        "Featured in the Cedar Rapids Gazette",
+        "Covered by KHAK",
+        "Owner's multi-state track record (opened/sold the same concept in MN, IL, MI)",
+        "Everything made fresh to order",
+        "Family-owned"
+      ],
+      "valueProps": [
+        "made fresh to order",
+        "does both fish and chicken right",
+        "family-owned"
+      ],
+      "ctaBanner": {
+        "headline": "Call ahead — your order's hot when you arrive."
+      },
+      "analytics": "none (no GA4, no Google Ads)"
+    },
+    "fulfillment": {
+      "counterService": true,
+      "primarilyTakeout": true,
+      "dineIn": "limited/unconfirmed",
+      "phoneAhead": true,
+      "thirdPartyDelivery": [
+        "DoorDash",
+        "Uber Eats",
+        "Grubhub",
+        "Postmates"
+      ],
+      "firstPartyOnlineOrdering": "none confirmed (Square site unverified)"
+    },
+    "menu": {
+      "pricesAuthoritative": false,
+      "categories": {
+        "chicken": [
+          "fried chicken",
+          "chicken tenders",
+          "boneless wings",
+          "bone-in wings",
+          "gizzards"
+        ],
+        "seafood": [
+          "perch",
+          "tilapia",
+          "catfish",
+          "cod",
+          "calamari",
+          "crab cakes",
+          "shrimp"
+        ],
+        "sides": [
+          "okra",
+          "hush puppies",
+          "onion rings",
+          "breaded mushrooms",
+          "fries",
+          "cheese curds"
+        ],
+        "dessert": [
+          "chocolate cake"
+        ]
+      }
+    },
+    "researchHandoffToPhase1": [
+      "Local competitors (fish / chicken / soul-food) in Cedar Rapids",
+      "Local keyword and entity research for Cedar Rapids and its neighborhoods",
+      "Capture press citation URLs (Cedar Rapids Gazette, KHAK) for the About/press surface",
+      "Verify Google Business Profile claim status for 1616 1st Ave NE",
+      "Confirm menu structure and capture owner-authoritative prices if later provided"
+    ],
+    "sources": [
+      "https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids",
+      "https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids-2",
+      "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+      "https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802887/",
+      "https://www.grubhub.com/restaurant/captains-fish-and-chicken-3100-6th-st-sw-cedar-rapids/11805992",
+      "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/",
+      "https://khak.com/captains-fish-chicken-cedar-rapids/",
+      "https://khak.com/captains-fish-chicken-cedar-rapids-restaurant/",
+      "https://www.thegazette.com/lifestyles/food-drink/captain-s-fish-and-chicken-opens-second-location-in-cedar-rapids/article_3232d23b-7b86-5882-807b-edd10fb1ce3a.html",
+      "https://www.zmenu.com/captains-fish-and-chicken-cedar-rapids-online-menu/"
+    ]
+  }
+}

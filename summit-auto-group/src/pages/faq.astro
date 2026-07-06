@@ -1,0 +1,40 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import Faq from '../components/Faq.astro';
+import { webPage } from '../lib/schema';
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'FAQ', path: '/faq' },
+];
+
+const description =
+  'Answers to common questions about buying, financing, trading in, and servicing a vehicle at Summit Auto Group in Denver, Colorado.';
+
+// GEO-shaped FAQs: entity-first, concrete, answerable by an AI assistant.
+const faqs = [
+  { question: 'Where is Summit Auto Group located?', answer: 'Summit Auto Group is at 4820 Federal Blvd, Denver, CO 80221, serving the Denver, Aurora, and Lakewood metro area.' },
+  { question: 'What are Summit Auto Group’s hours?', answer: 'We’re open Monday–Saturday 9:00am–7:00pm and Sunday 10:00am–5:00pm for both sales and service.' },
+  { question: 'Do you sell certified pre-owned vehicles?', answer: 'Yes. Every vehicle passes our 172-point inspection and reconditioning process, and many qualify as certified pre-owned with extended coverage.' },
+  { question: 'Can I service my car here if I bought it elsewhere?', answer: 'Yes. Our Denver service department is open to all makes and models regardless of where you purchased the vehicle.' },
+  { question: 'Do you offer financing for bad credit?', answer: 'We work with 14 lenders across a wide range of credit situations, including first-time buyers and credit rebuilders. Pre-qualification uses a soft credit check with no score impact.' },
+  { question: 'Can I buy a car online and have it delivered?', answer: 'Yes. You can complete financing remotely and we deliver across Denver, Aurora, and Lakewood, or arrange a virtual test drive.' },
+  { question: 'How much is my trade-in worth?', answer: 'Bring your vehicle in for a free, no-obligation appraisal based on live regional market data. The written offer is good for 7 days and can be applied to your down payment.' },
+];
+
+const schemas = [
+  webPage({ name: 'Summit Auto Group FAQ', path: '/faq', description }),
+];
+---
+
+<PageLayout
+  title="Frequently Asked Questions | Summit Auto Group Denver"
+  description={description}
+  breadcrumbs={crumbs}
+  eyebrow="Answers"
+  heroTitle="Frequently asked questions"
+  heroSubtitle="The things Denver drivers ask us most — buying, financing, trade-ins, and service."
+  schemas={schemas}
+>
+  <Faq faqs={faqs} heading="Buying, financing & service" />
+</PageLayout>

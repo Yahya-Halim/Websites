@@ -1,0 +1,58 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import { getEntry } from 'astro:content';
+import { webPage } from '../lib/schema';
+
+const bizEntry = await getEntry('business', 'biz');
+const biz = bizEntry?.data;
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Contact', path: '/contact' },
+];
+
+const description =
+  'Contact Summit Auto Group in Denver, CO. Call (303) 555-0142, get directions to 4820 Federal Blvd, or check our sales and service hours.';
+
+const schemas = [
+  webPage({ name: 'Contact Summit Auto Group', path: '/contact', description, type: 'ContactPage' }),
+];
+---
+
+<PageLayout
+  title="Contact Summit Auto Group | Denver, CO"
+  description={description}
+  breadcrumbs={crumbs}
+  eyebrow="We’re here to help"
+  heroTitle="Contact Summit Auto Group"
+  heroSubtitle="Questions about a vehicle, financing, or service? Reach us however’s easiest."
+  schemas={schemas}
+>
+  <div class="prose">
+    <dl class="kv">
+      <dt>Phone</dt>
+      <dd><a href={`tel:${(biz?.phone ?? '').replace(/[^0-9+]/g, '')}`}>{biz?.phone}</a></dd>
+      <dt>Email</dt>
+      <dd><a href={`mailto:${biz?.email}`}>{biz?.email}</a></dd>
+      <dt>Address</dt>
+      <dd>{biz?.address?.street}, {biz?.address?.city}, {biz?.address?.state} {biz?.address?.zip}</dd>
+      <dt>Sales &amp; service hours</dt>
+      <dd>{biz?.hours?.displayText}</dd>
+    </dl>
+
+    <div class="btn-row">
+      <a class="btn gold" href={biz?.directionsUrl}>Get directions</a>
+      <a class="btn" href={`tel:${(biz?.phone ?? '').replace(/[^0-9+]/g, '')}`}>Call now</a>
+    </div>
+
+    <div class="band">
+      <h2>Which location works for you?</h2>
+      <p>We’re one dealership with delivery and virtual test drives across the metro.</p>
+      <ul>
+        <li><a href="/locations/denver">Denver (flagship lot)</a></li>
+        <li><a href="/locations/aurora">Aurora</a></li>
+        <li><a href="/locations/lakewood">Lakewood</a></li>
+      </ul>
+    </div>
+  </div>
+</PageLayout>

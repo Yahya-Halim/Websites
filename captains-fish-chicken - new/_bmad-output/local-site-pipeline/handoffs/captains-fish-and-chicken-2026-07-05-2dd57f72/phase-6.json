@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "briefHash": "359358364d9f5e67d657646fc9ace680d97ca53edf80137e4072e00f08c3eec0",
+  "phase": 6,
+  "exitedAt": "2026-07-05T19:45:24.573Z",
+  "specialistInvoked": "higgsfield",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-6.json",
+    "artifactHash": "12198acd15932d77458e797898618080ee68857b2154e8401602cd149917f622",
+    "contract": "Higgsfield manifest, selections, exports, verification report"
+  },
+  "nextPhaseAllowed": [
+    7
+  ],
+  "nextPhaseHint": 7,
+  "blocking": []
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "links": [
+    {
+      "slug": "/",
+      "anchor": "Home",
+      "context": "inline"
+    },
+    {
+      "slug": "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+      "anchor": "Order Online",
+      "context": "inline"
+    },
+    {
+      "slug": "tel:+13192211040",
+      "anchor": "Call",
+      "context": "inline"
+    },
+    {
+      "slug": "https://www.google.com/maps/dir/?api=1&destination=1616%201st%20Ave%20NE%2C%20Cedar%20Rapids%2C%20IA%2052402",
+      "anchor": "Directions",
+      "context": "inline"
+    }
+  ]
+}

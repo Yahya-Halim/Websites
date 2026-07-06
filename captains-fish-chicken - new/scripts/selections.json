@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-05T00:00:00.000Z",
+  "slots": {
+    "logo": { "kind": "provided", "source": "public/logo.svg", "note": "Provided vector wordmark authored in Phase 6." },
+    "dish-catfish": { "kind": "blocked-for-real-photo", "note": "Awaiting real owner photo of the actual catfish plate." },
+    "dish-wings": { "kind": "blocked-for-real-photo", "note": "Awaiting real owner photo of the actual wings." },
+    "family-deal": { "kind": "blocked-for-real-photo", "note": "Awaiting real owner photo of the actual family spread." }
+  }
+}

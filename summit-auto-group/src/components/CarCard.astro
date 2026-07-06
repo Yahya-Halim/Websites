@@ -1,0 +1,63 @@
+---
+interface Props {
+  id: string;
+  data: {
+    year: number;
+    make: string;
+    model: string;
+    price: number;
+    mileage: number;
+    condition: string;
+    status: string;
+    features: string[];
+  };
+}
+
+const { id, data } = Astro.props;
+const href = `/inventory/${id}`;
+const price = data.price.toLocaleString('en-US');
+const miles = data.mileage.toLocaleString('en-US');
+---
+
+<a class="car-card" href={href}>
+  <div class="car-media" data-status={data.status}>
+    <span class="badge">{data.condition}</span>
+    {data.status !== 'available' && <span class="badge badge-status">{data.status}</span>}
+    <span class="photo-note">Photo</span>
+  </div>
+  <div class="car-info">
+    <h3>{data.year} {data.make} {data.model}</h3>
+    <p class="price">${price}</p>
+    <p class="miles">{miles} mi</p>
+    <ul class="feat">
+      {data.features.slice(0, 3).map((f) => <li>{f}</li>)}
+    </ul>
+    <span class="view">View details →</span>
+  </div>
+</a>
+
+<style>
+  .car-card {
+    display: flex; flex-direction: column; border: 1px solid var(--line, #e3e8e5);
+    border-radius: 0.75rem; overflow: hidden; text-decoration: none; color: inherit; background: #fff;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .car-card:hover { box-shadow: 0 8px 24px rgba(11, 61, 46, 0.12); transform: translateY(-2px); }
+  .car-media {
+    position: relative; aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, #0b3d2e, #1b6b52); display: flex; align-items: center; justify-content: center;
+  }
+  .photo-note { color: rgba(255, 255, 255, 0.5); font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  .badge {
+    position: absolute; top: 0.6rem; left: 0.6rem; background: var(--gold, #f2a900); color: #1a1400;
+    font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.5rem; border-radius: 0.35rem;
+  }
+  .badge-status { left: auto; right: 0.6rem; background: #12241d; color: #fff; text-transform: capitalize; }
+  .car-info { padding: 1rem; display: flex; flex-direction: column; gap: 0.15rem; }
+  .car-info h3 { margin: 0; font-size: 1.05rem; color: var(--brand, #0b3d2e); }
+  .price { margin: 0.3rem 0 0; font-size: 1.25rem; font-weight: 700; color: var(--ink, #12241d); }
+  .miles { margin: 0; color: var(--muted, #5a6b63); font-size: 0.9rem; }
+  .feat { list-style: none; padding: 0; margin: 0.6rem 0; display: flex; flex-wrap: wrap; gap: 0.35rem; }
+  .feat li { font-size: 0.72rem; background: var(--bg-soft, #f2f6f4); color: var(--brand-2, #1b6b52); padding: 0.15rem 0.5rem; border-radius: 0.35rem; }
+  .view { margin-top: auto; font-weight: 600; color: var(--brand-2, #1b6b52); font-size: 0.9rem; }
+</style>

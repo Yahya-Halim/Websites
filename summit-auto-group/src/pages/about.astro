@@ -1,0 +1,63 @@
+---
+import PageLayout from '../components/PageLayout.astro';
+import { getEntry } from 'astro:content';
+import { webPage } from '../lib/schema';
+
+const bizEntry = await getEntry('business', 'biz');
+const biz = bizEntry?.data;
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+];
+
+const description =
+  'Summit Auto Group is a family-owned Denver dealership founded in 2009. Meet the team and learn how our 172-point inspection and no-pressure approach earned Colorado drivers’ trust.';
+
+const schemas = [
+  webPage({ name: 'About Summit Auto Group', path: '/about', description, type: 'AboutPage' }),
+];
+---
+
+<PageLayout
+  title="About Summit Auto Group | Family-Owned Denver Dealership"
+  description={description}
+  breadcrumbs={crumbs}
+  eyebrow="Family-owned since 2009"
+  heroTitle="About Summit Auto Group"
+  heroSubtitle="Fifteen years of straight talk, fair prices, and hand-picked vehicles on Federal Blvd in Denver."
+  schemas={schemas}
+>
+  <div class="prose">
+    <p>
+      Summit Auto Group opened its doors in {biz?.yearEstablished ?? '2009'} with a simple idea: buying a
+      used car in Denver shouldn’t feel like a fight. Owner {biz?.owner ?? 'Marcus Delgado'} started with a
+      dozen hand-picked vehicles and a promise — every car we sell is one we’d put our own family in.
+    </p>
+
+    <h2>What makes us different</h2>
+    <ul>
+      <li><strong>172-point inspection.</strong> Every vehicle is reconditioned and inspected before it hits the lot.</li>
+      <li><strong>Transparent pricing.</strong> Our internet price is the price — no surprise fees at the desk.</li>
+      <li><strong>In-house financing.</strong> We work with 14 lenders and can help across a wide range of credit situations.</li>
+      <li><strong>On-site service.</strong> Our factory-trained technicians keep your car running long after you drive off.</li>
+    </ul>
+
+    <h2>Serving the Front Range</h2>
+    <p>
+      From our flagship lot on Federal Blvd we serve drivers across
+      <a href="/locations/denver">Denver</a>, <a href="/locations/aurora">Aurora</a>, and
+      <a href="/locations/lakewood">Lakewood</a> — with AWD SUVs, trucks, and EVs built for Colorado roads.
+    </p>
+
+    <div class="band">
+      <h2>Come see us</h2>
+      <p>{biz?.address?.street}, {biz?.address?.city}, {biz?.address?.state} {biz?.address?.zip}</p>
+      <p>{biz?.hours?.displayText}</p>
+      <div class="btn-row">
+        <a class="btn" href="/inventory">Browse inventory</a>
+        <a class="btn ghost" href="/contact">Contact us</a>
+      </div>
+    </div>
+  </div>
+</PageLayout>

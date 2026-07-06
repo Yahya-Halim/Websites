@@ -1,0 +1,71 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { menu, telHref, telDisplay, orderUrl, slugify, money } from '../../../lib/site';
+
+export function getStaticPaths() {
+  return menu.map((s) => ({ params: { section: s.slug }, props: { section: s } }));
+}
+const { section } = Astro.props;
+const others = menu.filter((s) => s.slug !== section.slug);
+
+const title = `${section.name} | Captains Fish and Chicken Menu, Cedar Rapids`;
+const description = `${section.name} at Captains Fish and Chicken in Cedar Rapids — ${section.items.map((i) => i.name).slice(0, 6).join(', ')}${section.items.length > 6 ? ' and more' : ''}. Fried fresh to order. Call ${telDisplay}.`;
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
+    { '@type': 'ListItem', position: 2, name: 'Menu', item: '/menu/' },
+    { '@type': 'ListItem', position: 3, name: section.name, item: `/menu/${section.slug}/` },
+  ],
+};
+const sectionLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MenuSection',
+  name: section.name,
+  hasMenuItem: section.items.map((i) => ({
+    '@type': 'MenuItem', name: i.name, ...(i.description ? { description: i.description } : {}),
+    offers: i.prices.map((p) => ({ '@type': 'Offer', name: p.label, price: p.price.toFixed(2), priceCurrency: 'USD' })),
+  })),
+};
+---
+<Base title={title} description={description} jsonLd={[breadcrumb, sectionLd]}>
+  <section class="section section--navy-deep" style="padding-block:52px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / <a href="/menu/">Menu</a> / {section.name}</nav>
+      <span class="eyebrow" style="margin-top:14px">Made fresh to order</span>
+      <h1 class="display h-xl" style="margin-top:10px">{section.name}</h1>
+      {section.description && <p class="lead mt-s">{section.description}</p>}
+      <div class="hero__cta mt-m">
+        <a class="btn" href={telHref}>Call {telDisplay}</a>
+        <a class="btn btn--ghost" href={orderUrl} target="_blank" rel="noopener">Order Online</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap-narrow">
+      <div class="grid grid--2">
+        {section.items.map((i) => (
+          <a class="card card--link" href={`/menu/${section.slug}/${slugify(i.name)}/`}>
+            <h3>{i.name}</h3>
+            {i.description && <p class="card__desc">{i.description}</p>}
+            <div class="menu-item__prices" style="justify-content:flex-start;margin-top:6px">{i.prices.map((p) => <span class="price-pill">{p.label} {money(p.price)}</span>)}</div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--paper">
+    <div class="wrap">
+      <h2 class="display h-md" style="color:var(--navy-800)">More on the menu</h2>
+      <div class="grid grid--4 mt-m">
+        {others.map((s) => (
+          <a class="card card--link" href={`/menu/${s.slug}/`}><h3>{s.name}</h3><p class="card__desc">{s.items.length} options</p></a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

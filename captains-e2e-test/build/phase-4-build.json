@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "phase": 4,
+  "specialist": "content-writer",
+  "specialistMapping": "content-writer -> vendored seo-content-writer (Yahya decision). Site BUILD performed by the localevolve-factory engine (init -> wire -> build); content authored from the approved Phase 2 matrix.",
+  "capturedAt": "2026-07-05",
+  "resumeContext": "Resumed after the F12 engine fix (restaurant route templates now ship). F13 collision (schema floor vs bare-bones business) resolved with declared .example test fixtures — see build/phase-4-fixture-decision.md.",
+
+  "commandsRun": [
+    { "cmd": "node packages/engine/bin/factory.js init restaurant D:/website/captains-e2e-test/site", "result": "success", "note": "re-scaffolded with the new restaurant route templates (menu/[slug], occasions/[slug], neighborhoods/[slug], [slug], menu/index, contact)" },
+    { "cmd": "factory wire", "result": "success (exit 0)", "note": "validated business.json + site.json against Zod schemas; emitted 6 SEO artifacts (llms.txt, llms-full.txt, robots.txt, localbusiness.jsonld [@type Restaurant], website.jsonld, internal-links.json). Legacy-mode advisory (no graph) only." },
+    { "cmd": "factory build (astro build)", "result": "success (exit 0)", "note": "32 page(s) built in 2.88s; sitemap-index.xml created. dist/ verified: 32 index.html pages." }
+  ],
+
+  "filesChanged": {
+    "dataAuthored": [
+      "src/data/business.json", "src/data/site.json", "src/data/menu.json (12 sections)",
+      "src/data/occasions.json (6)", "src/data/landings.json (10)", "src/data/neighborhoods.json (1)"
+    ],
+    "wireArtifacts": [
+      "public/llms.txt", "public/llms-full.txt", "public/robots.txt",
+      "src/content/_generated/localbusiness.jsonld", "src/content/_generated/website.jsonld",
+      "src/content/_generated/internal-links.json"
+    ],
+    "buildOutput": "dist/ (32 HTML routes + sitemap-index.xml + assets)",
+    "scaffoldRoot": "D:/website/captains-e2e-test/site"
+  },
+
+  "routesGenerated": [
+    { "path": "/", "kind": "home (engine-injected)" },
+    { "path": "/menu/", "kind": "menu-hub" },
+    { "path": "/contact/", "kind": "contact" },
+    { "path": "/menu/catfish/", "kind": "menu-category" },
+    { "path": "/menu/fried-chicken/", "kind": "menu-category" },
+    { "path": "/menu/chicken-tenders/", "kind": "menu-category" },
+    { "path": "/menu/wings/", "kind": "menu-category" },
+    { "path": "/menu/gizzards-and-liver/", "kind": "menu-category" },
+    { "path": "/menu/perch/", "kind": "menu-category" },
+    { "path": "/menu/tilapia/", "kind": "menu-category" },
+    { "path": "/menu/cod/", "kind": "menu-category" },
+    { "path": "/menu/shrimp/", "kind": "menu-category" },
+    { "path": "/menu/seafood-basket/", "kind": "menu-category" },
+    { "path": "/menu/sides/", "kind": "menu-category" },
+    { "path": "/menu/desserts/", "kind": "menu-category" },
+    { "path": "/occasions/family-dinner/", "kind": "occasion" },
+    { "path": "/occasions/friday-fish-fry/", "kind": "occasion" },
+    { "path": "/occasions/game-day-wings/", "kind": "occasion" },
+    { "path": "/occasions/quick-lunch/", "kind": "occasion" },
+    { "path": "/occasions/late-night/", "kind": "occasion (reframed 'open late' + exact hours)" },
+    { "path": "/occasions/weekend-dinner/", "kind": "occasion" },
+    { "path": "/neighborhoods/mound-view/", "kind": "neighborhood (local-landing, real facts)" },
+    { "path": "/fried-fish-cedar-rapids/", "kind": "intent-landing" },
+    { "path": "/fried-chicken-cedar-rapids/", "kind": "intent-landing" },
+    { "path": "/soul-food-cedar-rapids/", "kind": "intent-landing" },
+    { "path": "/seafood-cedar-rapids/", "kind": "intent-landing" },
+    { "path": "/best-catfish-cedar-rapids/", "kind": "intent-landing" },
+    { "path": "/how-we-cook/", "kind": "story-landing" },
+    { "path": "/what-to-order/", "kind": "story-landing" },
+    { "path": "/about/", "kind": "info-landing (AboutPage)" },
+    { "path": "/faq/", "kind": "faq-landing (FAQPage)" },
+    { "path": "/how-to-order/", "kind": "info-landing" }
+  ],
+
+  "internalRouteCount": 32,
+  "externalRouteCount": 0,
+
+  "buildResult": {
+    "status": "SUCCESS",
+    "pagesBuilt": 32,
+    "buildTimeSeconds": 2.88,
+    "distVerified": "32 index.html pages on disk",
+    "sitemap": "sitemap-index.xml generated",
+    "businessSchemaType": "Restaurant",
+    "note": "The approved 32-page Phase 2 matrix built exactly — the F12 engine fix (restaurant route templates) is verified end-to-end by a real astro build. The engine's Phase-2 matrix is the acceptance fixture and it is satisfied 32/32."
+  },
+
+  "buildCopyConstraintsApplied": [
+    "Dine-in CORRECTED at build time (Phase 3 artifact was sealed): /faq and /how-to-order state 'a dining room at the storefront, but counter-service and takeout-first' — NO dine-in service claim.",
+    "/occasions/late-night reframed to 'Open Late' with exact hours (10pm Mon-Thu, 11pm Fri-Sat); no comparative claims.",
+    "No menu prices rendered (owner-unverified; menu ships priceless -> Menu JSON-LD correctly omitted since not all items priced).",
+    "Call-only CTA site-wide (ctaPrimary tel:, no ctaSecondary SMS).",
+    "Lead form dropped: /contact ships phone + address + hours + map/directions only (site.leadForm omitted).",
+    "Trust grid omitted site-wide (<6 real facts; site.trustBar omitted).",
+    "Delivery apps (DoorDash/Uber Eats/Grubhub/Postmates) named in prose, not internal routes."
+  ],
+
+  "fixtureValuesUsed": {
+    "ref": "build/phase-4-fixture-decision.md (Yahya-authorized)",
+    "values": {
+      "business.domain": "https://captainsfishandchicken.example (synthetic .example)",
+      "business.email": "owner@captainsfishandchicken.example (synthetic)",
+      "business.analytics.gaId": "G-XXXXXXXXXX (deliberate do-not-ship placeholder)",
+      "business.paymentAccepted": "Cash and major cards (owner-UNVERIFIED)"
+    },
+    "note": "These would fail the Phase 5 do-not-ship gate BY DESIGN. Real data (maps/directions URLs to 1616, Facebook sameAs) authored normally."
+  },
+
+  "minorObservations": [
+    "hoursSchema is 2-bucket (weekday + sunday); Captains' 3-window hours (Mon-Thu / Fri-Sat / Sun) are lossy in the structured openingHours (weekday=Mon-Thu, sunday=Sun; Fri-Sat's later close lives in displayText only, which IS accurate). Candidate minor finding (F14?) if a 3rd bucket matters for openingHoursSpecification fidelity."
+  ],
+
+  "handoffToPhase5": "Out of scope for this test run (paused at the build-quality review gate). When resumed, Phase 5 validate WILL flag the fixture do-not-ship values (domain/email/.example, gaId placeholder) by design, plus surface the hours-coarseness observation."
+}

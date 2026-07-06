@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "briefHash": "99586787c7428c8135245cb97b7ba96549ec95a2ebf9dc162ae377f320864bbf",
+  "brief": {
+    "engagement": "captains-e2e-test",
+    "business": "Captains Fish and Chicken",
+    "businessType": "counter-service soul-food / fried-fish restaurant",
+    "serviceModel": "counter-service",
+    "scope": "single location",
+    "location": {
+      "streetAddress": "1616 1st Ave NE",
+      "city": "Cedar Rapids",
+      "state": "IA",
+      "postalCode": "52402",
+      "singleLocationInScope": true
+    },
+    "phone": "(319) 221-1040",
+    "owner": "Ray Aqel",
+    "openedDate": "2024-10",
+    "hoursRaw": "Sun 11am-8pm, Mon-Thu 11am-10pm, Fri-Sat 11am-11pm",
+    "hours": {
+      "sunday": "11:00-20:00",
+      "monday": "11:00-22:00",
+      "tuesday": "11:00-22:00",
+      "wednesday": "11:00-22:00",
+      "thursday": "11:00-22:00",
+      "friday": "11:00-23:00",
+      "saturday": "11:00-23:00"
+    },
+    "provenance": "Seed facts supplied by engagement owner. Everything else must come from the Phase 0 interview or Phase 1 research. No prior Captain's build referenced.",
+    "seedFactsOnly": true
+  },
+  "currentPhase": 4,
+  "completedPhases": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "phaseArtifacts": {
+    "0": {
+      "path": "D:/website/captains-e2e-test/discovery/phase-0-discovery.json",
+      "hash": "4908784bc9b3e680cc7884270be0bc3c62b14b6e979ebfc2ab5716226a5dd664",
+      "completedAt": "2026-07-05T23:01:27.879Z"
+    },
+    "1": {
+      "path": "D:/website/captains-e2e-test/research/phase-1-research.json",
+      "hash": "cb5a91398454d0c5b0a318ada5fe9197bd9414e7d1bd14b3e1e72a195cdfaf45",
+      "completedAt": "2026-07-05T23:49:52.724Z"
+    },
+    "2": {
+      "path": "D:/website/captains-e2e-test/plan/phase-2-page-matrix.json",
+      "hash": "6c422d7a8108c34938878bf341a470cd626e7c544f2189bbadc0b975888afcd2",
+      "completedAt": "2026-07-06T00:04:07.464Z"
+    },
+    "3": {
+      "path": "D:/website/captains-e2e-test/design/phase-3-design-plan.json",
+      "hash": "ffdbe7153047f390abd0fbbfe544699ddf5fa11be6d60cce3923b72bd35a6fcc",
+      "completedAt": "2026-07-06T01:35:30.853Z"
+    },
+    "4": {
+      "path": "D:/website/captains-e2e-test/build/phase-4-build.json",
+      "hash": "3915a77ba6c3277bd4cf9c6ad2946bae46ade04fba55d53b517ab1fc33181ceb",
+      "completedAt": "2026-07-06T19:34:10.016Z"
+    }
+  },
+  "phaseSpecialists": {
+    "0": "local-business-discovery",
+    "1": "keyword-research",
+    "2": "location-matrix-planner",
+    "3": "local-ai-visibility",
+    "4": "content-writer"
+  },
+  "startedAt": "2026-07-05T21:30:44.753Z",
+  "updatedAt": "2026-07-06T19:34:10.024Z",
+  "overrides": []
+}

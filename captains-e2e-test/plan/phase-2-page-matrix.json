@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "phase": 2,
+  "specialist": "location-matrix-planner",
+  "capturedAt": "2026-07-05",
+
+  "planningNote": "location-matrix-planner SKILL is service x location-centric and says 'skip for single-location, single-service.' The runner's restaurant rule (build-local-site.md gates; local-seo-master lines 41-49) OVERRIDES that default: restaurants use occasion/menu/search-intent page families, not service x location. This plan follows the runner rule while applying the SKILL's page-kind CRO-block map, anti-doorway quota, and fold-not-fabricate discipline. Design seam flagged (like the Phase 4 content-writer gap).",
+
+  "pageMatrixStrategy": {
+    "model": "restaurant occasion + menu-category + search-intent page families (single fixed location; NOT service x location)",
+    "pageFamilies": [
+      "core / trust / conversion",
+      "menu-category",
+      "search-intent landing",
+      "occasion",
+      "neighborhood (local)",
+      "differentiator / story"
+    ],
+    "rationale": "Single fixed location => no service x location multiplication. Depth comes from menu breadth (11 proteins + sides + desserts), local search-intent landings, an occasion taxonomy keyed to customer moments, one real neighborhood page, and differentiator/story pages. Matches the runner's restaurant page-family requirement."
+  },
+
+  "pageMatrix": [
+    { "path": "/", "title": "Captains Fish and Chicken — Cedar Rapids", "kind": "home", "family": "core", "parent": null, "croBlocks": "home", "schemaTypes": ["Restaurant", "WebSite", "WebPage"], "unique": "Brand intro, catfish signature, made-to-order, hours, order CTAs, occasion links." },
+    { "path": "/menu", "title": "Menu", "kind": "menu-hub", "family": "core", "parent": "/", "croBlocks": "informational", "schemaTypes": ["Menu", "WebPage", "BreadcrumbList"], "unique": "Full menu hub linking every category; hasMenu schema." },
+    { "path": "/about", "title": "About — Ray Aqel & Captains", "kind": "about", "family": "core", "parent": "/", "croBlocks": "informational", "schemaTypes": ["AboutPage", "Person", "Organization"], "unique": "Owner Ray Aqel, restaurateur since 2006, MN/IL/MI track record, first Iowa location. E-E-A-T." },
+    { "path": "/contact", "title": "Contact & Hours", "kind": "contact", "family": "core", "parent": "/", "croBlocks": "contact", "schemaTypes": ["ContactPage", "Restaurant"], "unique": "NAP, hours, map, directions. LEAD FORM BLOCKED (no endpoint) — see conversionSurfaceBlockers." },
+    { "path": "/order", "title": "How to Order", "kind": "order-guide", "family": "core", "parent": "/", "croBlocks": "informational", "schemaTypes": ["WebPage"], "unique": "Dine-in, call-ahead ((319) 221-1040), delivery apps as external CTAs (DoorDash/Uber Eats/Grubhub/Postmates)." },
+    { "path": "/faq", "title": "FAQ", "kind": "faq", "family": "core", "parent": "/", "croBlocks": "informational", "schemaTypes": ["FAQPage"], "unique": "Real Q/A: what's most popular (catfish), hours, parking, dine-in, how to order." },
+
+    { "path": "/menu/fried-chicken", "title": "Fried Chicken", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection", "WebPage"], "unique": "Fried chicken, cornmeal + fresh lemon-pepper breading, made to order." },
+    { "path": "/menu/chicken-tenders", "title": "Chicken Tenders", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Hand-breaded tenders; pairing with sides." },
+    { "path": "/menu/wings", "title": "Wings — Boneless & Bone-In", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Boneless and bone-in wings; game-day angle." },
+    { "path": "/menu/gizzards-and-liver", "title": "Gizzards & Liver", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Soul-food classics; niche entity coverage." },
+    { "path": "/menu/catfish", "title": "Fried Catfish", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "The most popular item; cornmeal breading; cross-links to /best-catfish-cedar-rapids." },
+    { "path": "/menu/perch", "title": "Perch", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Fried perch; portion/pairing." },
+    { "path": "/menu/tilapia", "title": "Tilapia", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Fried tilapia." },
+    { "path": "/menu/cod", "title": "Cod", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Fried cod; generous portions (review-noted)." },
+    { "path": "/menu/shrimp", "title": "Shrimp", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Hand-breaded shrimp (review-noted)." },
+    { "path": "/menu/seafood-basket", "title": "Seafood Baskets (Calamari, Crab Cakes & More)", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Absorbs calamari + crab cakes (too thin standalone); combination baskets." },
+    { "path": "/menu/sides", "title": "Sides", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Okra, hush puppies, onion rings, breaded mushrooms, fries, cheese curds; mashed potatoes + mac & cheese pending owner confirm." },
+    { "path": "/menu/desserts", "title": "Desserts", "kind": "menu-category", "family": "menu", "parent": "/menu", "croBlocks": "detail", "schemaTypes": ["MenuSection"], "unique": "Chocolate cake." },
+
+    { "path": "/fried-fish-cedar-rapids", "title": "Fried Fish in Cedar Rapids", "kind": "intent-landing", "family": "intent", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Category landing: fish varieties, made-to-order, NE-side location." },
+    { "path": "/fried-chicken-cedar-rapids", "title": "Fried Chicken in Cedar Rapids", "kind": "intent-landing", "family": "intent", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Category landing vs Harold's/SugaPeach; differentiation." },
+    { "path": "/soul-food-cedar-rapids", "title": "Soul Food in Cedar Rapids", "kind": "intent-landing", "family": "intent", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Soul-food positioning; catfish, gizzards, sides." },
+    { "path": "/seafood-cedar-rapids", "title": "Seafood in Cedar Rapids", "kind": "intent-landing", "family": "intent", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Seafood entity landing; perch/tilapia/catfish/cod/shrimp." },
+    { "path": "/best-catfish-cedar-rapids", "title": "Best Fried Catfish in Cedar Rapids", "kind": "intent-landing", "family": "intent", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage", "FAQPage"], "unique": "Signature deep-dive: most popular, prep, why it eats like fried chicken (Gazette). GEO answer-unit." },
+
+    { "path": "/occasions/family-dinner", "title": "Family Dinner Takeout", "kind": "occasion", "family": "occasion", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Feed-the-family angle; combos + sides; call-ahead." },
+    { "path": "/occasions/friday-fish-fry", "title": "Friday Fish Fry", "kind": "occasion", "family": "occasion", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Friday fish tradition; open till 11pm Fri." },
+    { "path": "/occasions/game-day-wings", "title": "Game-Day Wings", "kind": "occasion", "family": "occasion", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Wings for game day; bulk orders by phone." },
+    { "path": "/occasions/quick-lunch", "title": "Quick Lunch", "kind": "occasion", "family": "occasion", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Fast counter-service lunch; call-ahead for speed." },
+    { "path": "/occasions/late-night", "title": "Late-Night Food", "kind": "occasion", "family": "occasion", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Open to 10pm (Mon-Thu) / 11pm (Fri-Sat); late-night fried food." },
+    { "path": "/occasions/weekend-dinner", "title": "Weekend Dinner", "kind": "occasion", "family": "occasion", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Weekend hours + platters." },
+
+    { "path": "/neighborhoods/mound-view", "title": "Captains in Mound View (NE Cedar Rapids)", "kind": "local-landing", "family": "neighborhood", "parent": "/", "croBlocks": "local-landing", "schemaTypes": ["WebPage"], "unique": "REAL local facts: 1st Ave NE corridor, near Hy-Vee, onsite parking, large dining room. >=1 local fact, >=2 proximity lines, >=1 local FAQ, >=400 unique chars. NAP keeps HQ city." },
+
+    { "path": "/how-we-cook", "title": "How We Cook — Made to Order", "kind": "story", "family": "story", "parent": "/about", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "Cornmeal + fresh-ground lemon-pepper breading, fried fresh to order; differentiator + GEO answer-unit." },
+    { "path": "/what-to-order", "title": "First Time? What to Order", "kind": "story", "family": "story", "parent": "/", "croBlocks": "detail", "schemaTypes": ["WebPage"], "unique": "First-timer guide: catfish (most popular), chicken, cheese curds, chocolate cake." }
+  ],
+
+  "internalPageCount": 32,
+
+  "foldedPages": [
+    { "path": "/neighborhoods/marion-ia", "reason": "No real captured town facts for Marion (owner did not confirm draw); fabricating local facts is prohibited (KG7). Folds to a light mention on /order + home." },
+    { "path": "/neighborhoods/hiawatha-ia", "reason": "No real captured town facts for Hiawatha; same fold rule." },
+    { "path": "/menu/calamari", "reason": "Too thin standalone; folded into /menu/seafood-basket." },
+    { "path": "/menu/crab-cakes", "reason": "Too thin standalone; folded into /menu/seafood-basket." },
+    { "path": "/occasions/catering", "reason": "IGNORED — owner confirmed NO catering. Do not build." },
+    { "path": "/reviews", "reason": "Only 1 Yelp review + 17 FB recommends; too thin for a proof page; minimal social proof surfaces on home instead." }
+  ],
+
+  "requiredCroBlocks": {
+    "byKind": {
+      "home": ["hero + 3-value-prop strip", "dual CTA (tel + sms)", "sticky mobile call/text bar (singleton)", ">=1 mid-page CTA banner", "trust grid >=6 (OMITTED — <6 real facts, logged)", "<=6-field lead form -> external endpoint (BLOCKED — no endpoint)"],
+      "contact": ["lead form -> external endpoint (BLOCKED — no endpoint)", "dual CTA (tel + sms)", "sticky bar"],
+      "local-landing": ["hero (single H1)", "dual CTA", "sticky bar", ">=1 local fact", ">=2 proximity lines", ">=1 local FAQ", ">=400 unique chars", "trust grid (omitted)"],
+      "detail": ["hero", "dual CTA", "sticky bar", "trust grid (omitted)"],
+      "informational": ["hero", "dual CTA", "sticky bar"],
+      "menu-hub": ["hero", "dual CTA", "sticky bar", "hasMenu links"]
+    },
+    "siteSingletons": ["sticky mobile call/text bar mounted once in layout"],
+    "omittedByRule": ["trust grid (site-wide — <6 real facts)", "offer callout (no offers)", "financing block (N/A restaurant)"],
+    "valueProps": ["made fresh to order", "does both fish and chicken right", "family-owned"],
+    "ctaBanner": { "headline": "Call ahead — your order's hot when you arrive." }
+  },
+
+  "conversionSurfaceBlockers": [
+    { "id": "CSB-lead-form", "severity": "blocking-at-build", "detail": "Home + Contact require a <=6-field lead form posting to an external https endpoint. NO endpoint captured -> the cro-block-presence gate FAILS these pages at Phase 4/5. Decision for Yahya: (a) provide a Web3Forms (or similar) endpoint + business email before build, OR (b) explicitly accept an exception to drop the lead form (home/contact ship contact-by-phone/map only). I will NOT soften the gate — the plan flags it." },
+    { "id": "CSB-dual-cta", "severity": "gate-risk", "detail": "Dual-CTA requires tel: AND sms:. NO sms number -> degrades to call-only. The SKILL treats the text affordance as a required block on home. Decision for Yahya: accept call-only (documented exception) OR provide an sms-capable number." },
+    { "id": "CSB-trust-grid", "severity": "allowed-omission", "detail": "Trust grid OMITTED — <6 real facts. This IS the SKILL's own omit-and-log rule; not a blocker. Brand-story facts (owner-since-2006, press, made-to-order) surface on /about + /how-we-cook instead." }
+  ],
+
+  "imageSlotPlan": [
+    { "id": "logo", "for": "site", "subject": "Captains wordmark/emblem — nautical + fish/chicken, navy #0a3a5c + gold #f2a516", "source": "create (no logo exists)" },
+    { "id": "hero-home", "for": "/", "subject": "Fried fish + chicken platter, appetizing, brand-colored", "source": "generate (no real photos)" },
+    { "id": "img-catfish", "for": "/menu/catfish", "subject": "Golden cornmeal-breaded fried catfish", "source": "generate" },
+    { "id": "img-fried-chicken", "for": "/menu/fried-chicken", "subject": "Fried chicken pieces", "source": "generate" },
+    { "id": "img-wings", "for": "/menu/wings", "subject": "Bone-in + boneless wings basket", "source": "generate" },
+    { "id": "img-shrimp", "for": "/menu/shrimp", "subject": "Hand-breaded fried shrimp", "source": "generate" },
+    { "id": "img-fish-variety", "for": "/seafood-cedar-rapids", "subject": "Perch/tilapia/cod fried fish assortment", "source": "generate" },
+    { "id": "img-sides", "for": "/menu/sides", "subject": "Hush puppies, okra, fries, cheese curds", "source": "generate" },
+    { "id": "img-desserts", "for": "/menu/desserts", "subject": "Chocolate cake slice", "source": "generate" },
+    { "id": "img-family-dinner", "for": "/occasions/family-dinner", "subject": "Family-size takeout spread", "source": "generate" },
+    { "id": "img-friday-fish-fry", "for": "/occasions/friday-fish-fry", "subject": "Fish fry plate", "source": "generate" },
+    { "id": "img-game-day", "for": "/occasions/game-day-wings", "subject": "Wings platter, game-day setting", "source": "generate" },
+    { "id": "img-how-we-cook", "for": "/how-we-cook", "subject": "Breading/frying action, made-to-order", "source": "generate" },
+    { "id": "img-owner", "for": "/about", "subject": "Kitchen/cook action (NO real owner photo — use non-identifying representational imagery, do NOT fabricate a portrait of Ray Aqel)", "source": "generate — representational only" },
+    { "id": "img-storefront", "for": "/neighborhoods/mound-view", "subject": "Counter-service restaurant exterior/interior on an arterial", "source": "generate — REPRESENTATIONAL; must NOT be passed off as a real photo of the actual 1616 storefront (truthfulness constraint for Phase 6)" }
+  ],
+
+  "imageryTruthfulnessConstraint": "No real photos exist. All imagery is AI-generated and must be representational — appetizing generic food shots are fine, but generated storefront/interior/owner images must NOT misrepresent the specific real premises or person. Carry this constraint to Phase 6 (higgsfield). Prefer food-forward imagery over fabricated specific-location shots.",
+
+  "crossLinkPlan": {
+    "mesh": "4-way founder mesh adapted for restaurant: (1) occasion -> related menu items (e.g. friday-fish-fry -> catfish/perch/cod); (2) menu-category -> related occasions + intent landing; (3) dish -> intent landing (catfish -> best-catfish-cedar-rapids); (4) all -> home hub + /menu hub; (5) local (mound-view) -> home + order.",
+    "hubs": ["/", "/menu"],
+    "note": "Every non-business schema node references the single {domain}/#business @id (founder P0 hub-and-spoke), wired in Phase 3/4."
+  },
+
+  "minimumPageCountRationale": "32 internal pages, all carrying genuine unique content: 6 core/trust/conversion + 12 menu-category (11 proteins consolidated + sides + desserts) + 5 search-intent landings + 6 occasion + 1 real neighborhood + 2 differentiator/story. Clears the runner's 25-500 depth gate WITHOUT doorway padding. Single location => no service x location multiplication; depth comes from menu breadth + occasion taxonomy + local intent per the runner's restaurant rule. Thin/absent-fact pages FOLDED (Marion, Hiawatha, calamari, crab-cakes, catering, reviews) rather than shipped thin or fabricated (KG7).",
+
+  "checklist": [
+    { "id": "FP-P1-occasion-taxonomy", "item": "Occasion page family keyed to customer moment", "status": "satisfied", "reason": "6 occasion pages (family-dinner, friday-fish-fry, game-day-wings, quick-lunch, late-night, weekend-dinner).", "catalogRef": "founder-pattern-catalog P1 occasion taxonomy" },
+    { "id": "FP-P1-occasion-catering", "item": "Catering occasion page", "status": "ignored", "reason": "Owner confirmed NO catering — folded, not built.", "catalogRef": "founder-pattern-catalog P1 occasion taxonomy" },
+    { "id": "FP-P0-city-knowledge", "item": "City/location knowledge record", "status": "partial", "reason": "Single location; /neighborhoods/mound-view carries real corridor/landmark facts. Marion + Hiawatha FOLDED (no real town facts). Distance/drive-time matrix N/A.", "catalogRef": "founder-pattern-catalog P0 city record" },
+    { "id": "FP-P0-schema-stack", "item": "Per-page-kind JSON-LD stack -> single @id", "status": "planned", "reason": "schemaTypes assigned per page; hub-and-spoke @id wired Phase 3/4.", "catalogRef": "founder-pattern-catalog P0 schema stack" },
+    { "id": "FP-P0-entity-enrichment", "item": "Rich business entity (servesCuisine, hasMenu, knowsAbout, openingHours)", "status": "planned", "reason": "Restaurant + servesCuisine(Soul Food/Seafood) + hasMenu + knowsAbout planned for Phase 3/4.", "catalogRef": "founder-pattern-catalog P0 entity enrichment" },
+    { "id": "FP-P0-matrix-mesh", "item": "4-way cross-link mesh", "status": "planned", "reason": "crossLinkPlan defined (occasion/menu/dish/intent/local).", "catalogRef": "founder-pattern-catalog P0 matrix mesh" },
+    { "id": "FP-P0-deploy-gate", "item": "Deploy-blocking validation gate", "status": "downstream", "reason": "Enforced in Phase 5 (seo-geo-ai-validation).", "catalogRef": "founder-pattern-catalog P0 deploy gate" },
+    { "id": "FP-P1-price-transparency", "item": "Price/number answer units", "status": "gap", "reason": "No owner-authoritative prices; cannot build price answer units. Flagged.", "catalogRef": "founder-pattern-catalog P1 price transparency" },
+    { "id": "FP-P2-truth-gated-proof", "item": "Truth-gated ratings/testimonials", "status": "satisfied", "reason": "Trust grid + aggregateRating OMITTED (thin real reviews). No fabrication.", "catalogRef": "founder-pattern-catalog P2 truth-gated proof" },
+    { "id": "FP-P2-eeat", "item": "E-E-A-T owner-author scaffold", "status": "partial", "reason": "/about + /how-we-cook + owner story (since 2006) planned; editorial-policy page deferred (small single-location restaurant).", "catalogRef": "founder-pattern-catalog P2 E-E-A-T" },
+    { "id": "CRO-blocks-per-kind", "item": "Per-kind required CRO blocks", "status": "planned-with-blockers", "reason": "Mapped per kind; lead form (home/contact) BLOCKED by missing endpoint; dual-CTA degrades to call-only (no sms). See conversionSurfaceBlockers.", "catalogRef": "location-matrix-planner CRO map" },
+    { "id": "anti-doorway-fold", "item": "Anti-doorway fold discipline", "status": "satisfied", "reason": "Thin/absent-fact pages folded (6), none fabricated.", "catalogRef": "location-matrix-planner anti-doorway quota" }
+  ],
+
+  "handoffToPhase3": [
+    "Design/architecture for 32 pages across 6 families; Astro static build.",
+    "Schema stack per page-kind referencing {domain}/#business @id.",
+    "Resolve conversionSurfaceBlockers BEFORE Phase 4 build gate: lead-form endpoint (home/contact) + sms decision.",
+    "Imagery truthfulness constraint carried to Phase 6.",
+    "Brand colors navy #0a3a5c + gold #f2a516; logo to be created."
+  ]
+}

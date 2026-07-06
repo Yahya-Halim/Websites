@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "briefHash": "99586787c7428c8135245cb97b7ba96549ec95a2ebf9dc162ae377f320864bbf",
+  "phase": 3,
+  "exitedAt": "2026-07-06T01:35:30.853Z",
+  "specialistInvoked": "local-ai-visibility",
+  "outputs": {
+    "artifactPath": "D:/website/captains-e2e-test/design/phase-3-design-plan.json",
+    "artifactHash": "ffdbe7153047f390abd0fbbfe544699ddf5fa11be6d60cce3923b72bd35a6fcc",
+    "contract": "design/content/build plan, selected architecture, asset needs"
+  },
+  "nextPhaseAllowed": [
+    4
+  ],
+  "nextPhaseHint": 4,
+  "blocking": []
+}

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "service-and-maintenance",
+    "slug": "service-and-maintenance",
+    "name": "Service & Maintenance",
+    "description": "Our factory-trained technicians handle oil changes, brakes, tires, batteries, diagnostics, and manufacturer-scheduled maintenance for every make and model — not just the cars we sell.",
+    "faqs": [
+      { "question": "Do I have to buy a car from you to use your service department?", "answer": "No. Our Denver service center is open to all makes and models whether or not you purchased from Summit Auto Group." },
+      { "question": "How long does a standard oil change take?", "answer": "Most oil-and-filter changes are completed in 30–45 minutes. We recommend booking ahead on Saturdays, our busiest day." },
+      { "question": "Do you offer a warranty on repairs?", "answer": "Yes. All service work is backed by a 12-month/12,000-mile parts-and-labor warranty." }
+    ],
+    "crossLinks": [
+      { "slug": "extended-warranties", "anchor": "extended warranty coverage", "context": "related" },
+      { "slug": "trade-in-appraisal", "anchor": "trade in your current vehicle", "context": "related" }
+    ],
+    "seo": {
+      "title": "Auto Service & Maintenance in Denver | Summit Auto Group",
+      "description": "Factory-trained technicians for oil changes, brakes, tires, and diagnostics on all makes at Summit Auto Group in Denver, CO. 12-month/12,000-mile warranty.",
+      "canonical": "https://summitautogroup.example/services/service-and-maintenance"
+    }
+  },
+  {
+    "id": "trade-in-appraisal",
+    "slug": "trade-in-appraisal",
+    "name": "Trade-In Appraisal",
+    "description": "Get a transparent, no-obligation appraisal for your current vehicle in about 20 minutes. We use live regional market data so your trade value reflects what your car is really worth in Colorado.",
+    "faqs": [
+      { "question": "Can I trade in a car that isn't paid off?", "answer": "Yes. We can pay off your existing loan and roll any remaining balance into your new financing — we'll walk you through the numbers first." },
+      { "question": "What should I bring to a trade-in appraisal?", "answer": "Bring your title or loan payoff info, current registration, both key fobs, and any service records to maximize your offer." },
+      { "question": "Is the appraisal really free?", "answer": "Always. There's no cost and no obligation to buy — the written offer is good for 7 days." }
+    ],
+    "crossLinks": [
+      { "slug": "service-and-maintenance", "anchor": "service and maintenance", "context": "related" }
+    ],
+    "seo": {
+      "title": "Free Trade-In Appraisal in Denver | Summit Auto Group",
+      "description": "Get a fast, no-obligation trade-in appraisal at Summit Auto Group in Denver, CO. Live market data, payoff assistance, and a written offer good for 7 days.",
+      "canonical": "https://summitautogroup.example/services/trade-in-appraisal"
+    }
+  },
+  {
+    "id": "extended-warranties",
+    "slug": "extended-warranties",
+    "name": "Extended Warranties & Protection",
+    "description": "Protect your investment with flexible extended service contracts, GAP coverage, and tire-and-wheel protection. We explain exactly what's covered — no pressure, no fine-print surprises.",
+    "faqs": [
+      { "question": "What does an extended warranty actually cover?", "answer": "Coverage tiers range from powertrain-only to bumper-to-bumper. We give you a plain-English breakdown of every plan before you decide." },
+      { "question": "Can I add coverage after I buy the car?", "answer": "Yes, in most cases you can add an extended service contract within a set mileage window after purchase. Ask our finance team for current eligibility." },
+      { "question": "Are extended warranties refundable?", "answer": "Most plans are prorated and refundable if you sell the vehicle or cancel early. We'll confirm the terms in writing." }
+    ],
+    "crossLinks": [
+      { "slug": "financing", "anchor": "vehicle financing options", "context": "inline" }
+    ],
+    "seo": {
+      "title": "Extended Warranties & Vehicle Protection in Denver | Summit Auto Group",
+      "description": "Extended service contracts, GAP coverage, and tire-and-wheel protection explained in plain English at Summit Auto Group, Denver, CO.",
+      "canonical": "https://summitautogroup.example/services/extended-warranties"
+    }
+  }
+]

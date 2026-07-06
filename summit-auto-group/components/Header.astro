@@ -1,0 +1,95 @@
+---
+import { getEntry } from 'astro:content';
+
+interface Props {
+  /** Optional override for the business collection entry id. Defaults to 'biz'. */
+  businessId?: string;
+}
+
+const { businessId = 'biz' } = Astro.props;
+const businessEntry = await getEntry('business', businessId);
+const business = businessEntry?.data;
+const businessName = business && business.name ? business.name : 'Your Business';
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+---
+
+<header class="site-header">
+  <a href="/" class="brand">
+    {businessName}
+  </a>
+  {site?.nav && (
+    <nav>
+      <ul>
+        {site.nav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
+  {site?.cta && (
+    <a class="cta" href={site.cta.href}>{site.cta.text}</a>
+  )}
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .brand {
+    flex: 1 1 12rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  nav {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .cta {
+    background: var(--accent-color, #f60);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  @media (max-width: 48rem) {
+    .site-header {
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1rem;
+    }
+    .brand {
+      flex: 1 0 100%;
+    }
+    nav {
+      order: 3;
+      flex: 1 0 100%;
+      padding-bottom: 0.25rem;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+    }
+  }
+</style>

@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import { menu, telHref, telDisplay, orderUrl, slugify, money } from '../lib/site';
+const deals = menu.find((s) => s.slug === 'family-deals')!;
+const combos = menu.find((s) => s.slug === 'combos')!;
+const title = 'Family & Party Deals | Captains Fish and Chicken, Cedar Rapids';
+const description = 'Big-batch fish and chicken deals in Cedar Rapids: Fish-Only Family Deal, Captain’s Family Meal Deal, combo dinners and half/full pans. Feed the whole table — call (319) 221-1040.';
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Deals</nav>
+      <span class="eyebrow" style="margin-top:14px">Feed the whole crew</span>
+      <h1 class="display h-xl" style="margin-top:10px">Family &amp; party deals</h1>
+      <p class="lead mt-s">Big portions of fried fish, chicken and sides, fried fresh to order. Perfect for game day, family dinner or a party — call ahead so it’s hot and ready.</p>
+      <div class="hero__cta mt-m"><a class="btn" href={telHref}>Call {telDisplay}</a><a class="btn btn--ghost" href={orderUrl} target="_blank" rel="noopener">Order Online</a></div>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap">
+      <span class="eyebrow">The big deals</span>
+      <h2 class="display h-lg" style="margin-top:10px">{deals.name}</h2>
+      <div class="grid grid--3 mt-l">
+        {deals.items.map((i) => (
+          <div class="deal">
+            <h3>{i.name}</h3>
+            {i.description && <p style="color:rgba(255,248,238,.85);margin:8px 0 12px">{i.description}</p>}
+            <div class="pill-row">{i.prices.map((p) => <span class="price-pill">{p.label} {money(p.price)}</span>)}</div>
+          </div>
+        ))}
+      </div>
+      <h2 class="display h-lg mt-l" style="margin-top:56px">{combos.name}</h2>
+      <p class="lead mt-s">{combos.description}</p>
+      <div class="grid grid--2 mt-m">
+        {combos.items.map((i) => (
+          <a class="card card--link" href={`/menu/combos/${slugify(i.name)}/`}>
+            <h3>{i.name}</h3>{i.description && <p class="card__desc">{i.description}</p>}
+            <div class="pill-row" style="margin-top:6px">{i.prices.map((p) => <span class="price-pill">{p.label} {money(p.price)}</span>)}</div>
+          </a>
+        ))}
+      </div>
+      <div class="center mt-l"><a class="btn btn--navy btn--lg" href="/catering/">Planning something bigger? See catering →</a></div>
+    </div>
+  </section>
+</Base>

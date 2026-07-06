@@ -1,0 +1,49 @@
+{
+  "phase": 7,
+  "name": "LAUNCH",
+  "specialist": "local-launch-checklist",
+  "goNoGo": "NO-GO — pending owner inputs (GA4 id, domain, price confirmation, email)",
+  "launchChecklist": [
+    { "item": "Build passes (factory build)", "status": "PASS" },
+    { "item": "Single / route renders real content", "status": "PASS" },
+    { "item": "Restaurant JSON-LD (address, geo, hours, offers)", "status": "PASS" },
+    { "item": "WebSite + WebPage JSON-LD", "status": "PASS" },
+    { "item": "llms.txt + llms-full.txt", "status": "PASS" },
+    { "item": "robots.txt", "status": "PASS" },
+    { "item": "sitemap-index.xml + sitemap-0.xml", "status": "PASS" },
+    { "item": "sameAs (Facebook, Yelp, Tripadvisor)", "status": "PASS" },
+    { "item": "Logo asset present + referenced", "status": "PASS" },
+    { "item": "Imagery verify (higgsfield-workflow verify)", "status": "PASS (3 dish slots deferred)" },
+    { "item": "factory validate do-not-ship gate", "status": "FAIL — GA4 placeholder (blocker #1)" },
+    { "item": "Domain confirmed", "status": "BLOCKED — assumed, unconfirmed (blocker #2)" },
+    { "item": "Menu prices owner-verified", "status": "BLOCKED — aggregator-sourced (blocker #3)" },
+    { "item": "Official email", "status": "BLOCKED — guessed (blocker #4)" },
+    { "item": "Real hero + dish photos", "status": "DEFERRED — awaiting owner photos / Higgsfield run" },
+    { "item": "aggregateRating schema", "status": "DEFERRED — need real rating + count (do not fabricate)" }
+  ],
+  "deployTarget": {
+    "type": "Static host (dist/ output)",
+    "candidates": ["Netlify", "Vercel", "Cloudflare Pages"],
+    "command": "factory build -> deploy dist/",
+    "note": "Point the confirmed domain at the host; set astro.config site to the real domain (from business.json)."
+  },
+  "postLaunchVerification": [
+    "Submit sitemap-index.xml to Google Search Console; request indexing of /",
+    "Google Rich Results Test on the Restaurant JSON-LD",
+    "Confirm GA4 is collecting once the real id is in place",
+    "Verify NAP matches the Google Business Profile exactly (name/address/phone)",
+    "Lighthouse pass (perf/SEO/a11y) on the deployed /",
+    "Spot-check menu prices against in-store after owner confirmation"
+  ],
+  "blockersDoc": "LAUNCH-BLOCKERS.md",
+  "checklist": [
+    { "id": "launch-build-green", "status": "done" },
+    { "id": "launch-schema-emitted", "status": "done" },
+    { "id": "launch-imagery-verified", "status": "done" },
+    { "id": "launch-blockers-documented", "status": "done", "note": "LAUNCH-BLOCKERS.md written" },
+    { "id": "launch-ga-id", "status": "open", "reason": "Owner must supply real GA4 id" },
+    { "id": "launch-domain", "status": "open", "reason": "Owner must confirm domain" },
+    { "id": "launch-prices", "status": "open", "reason": "Owner must verify menu prices" },
+    { "id": "launch-yahya-approval", "status": "ignored", "reason": "Advanced via audited override this walkthrough; real Yahya sign-off required pre-launch" }
+  ]
+}

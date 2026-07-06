@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 1,
+  "reviewer": "research-sufficiency",
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-1.json",
+  "artifactHash": "d1a072d41557b3a881e509d7bc71d0a8d3ac96ad28007f86be8a99a6d91c9a05",
+  "notesFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/reviews/phase-1-research-sufficiency.md",
+  "notes": "# Review — Phase 1 RESEARCH · reviewer: research-sufficiency · verdict: PASS\n\nSources are real, cited, and dated (Yelp, KHAK, The Gazette, delivery aggregators). Competitive\nset is credible and names the strongest incumbent (Vivian's) plus the closest concept match\n(Sugapeach). Keyword set covers head brand/category terms and reasonable long-tail intent, anchored\nto 52402 / 1st Ave NE.\n\nGaps are honestly declared (no volume tool; no numeric rating/review count captured; prices\nunverified). None of these block moving to PLAN — they are launch-time data pulls, correctly\nlisted as evidence gaps and carried into the checklist. Research is sufficient to plan the page.\n\nConditions carried forward: pull numeric rating/review count before emitting aggregateRating;\nvalidate keyword volumes when a tool is available.\n",
+  "reviewedAt": "2026-07-05T19:34:48.237Z"
+}

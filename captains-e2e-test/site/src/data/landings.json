@@ -1,0 +1,243 @@
+[
+  {
+    "slug": "fried-fish-cedar-rapids",
+    "kind": "intent",
+    "title": "Fried Fish in Cedar Rapids",
+    "headline": "Fried fish, made to order in Cedar Rapids",
+    "body": "Captains Fish and Chicken fries catfish, perch, tilapia, cod, and shrimp to order, with cornmeal breading and fresh-ground lemon pepper. Counter-service on the northeast side, takeout-first.",
+    "sections": [
+      { "heading": "Our fish", "text": "Catfish is the most-ordered; we also fry perch, tilapia, cod, and shrimp — all breaded and fried fresh when you order." }
+    ],
+    "faqs": [
+      { "question": "What fried fish do you serve?", "answer": "Catfish, perch, tilapia, cod, and shrimp." },
+      { "question": "Where are you located?", "answer": "1616 1st Ave NE, on the northeast side of Cedar Rapids." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "Fried catfish", "context": "related" },
+      { "slug": "/best-catfish-cedar-rapids/", "anchor": "Our most popular fish", "context": "related" },
+      { "slug": "/seafood-cedar-rapids/", "anchor": "Seafood in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Fried Fish in Cedar Rapids — Captains Fish and Chicken",
+      "description": "Cornmeal-breaded catfish, perch, tilapia, cod, and shrimp fried to order on the northeast side of Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.example/fried-fish-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "fried-chicken-cedar-rapids",
+    "kind": "intent",
+    "title": "Fried Chicken in Cedar Rapids",
+    "headline": "Fried chicken, wings, and tenders in Cedar Rapids",
+    "body": "Captains fries chicken, wings (bone-in and boneless), tenders, gizzards, and liver to order. Counter-service and takeout-first at 1616 1st Ave NE.",
+    "sections": [
+      { "heading": "Chicken done right", "text": "Bone-in fried chicken, tenders, and both bone-in and boneless wings, breaded and fried fresh when you order." }
+    ],
+    "faqs": [
+      { "question": "Do you have both fish and chicken?", "answer": "Yes — Captains does both fish and chicken, made fresh to order." },
+      { "question": "Do you serve wings?", "answer": "Yes — bone-in and boneless." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/fried-chicken/", "anchor": "Fried chicken", "context": "related" },
+      { "slug": "/menu/wings/", "anchor": "Wings", "context": "related" },
+      { "slug": "/menu/chicken-tenders/", "anchor": "Chicken tenders", "context": "related" }
+    ],
+    "seo": {
+      "title": "Fried Chicken in Cedar Rapids — Captains Fish and Chicken",
+      "description": "Fried chicken, wings, and tenders made to order on the northeast side of Cedar Rapids. Counter-service, takeout-first.",
+      "canonical": "https://captainsfishandchicken.example/fried-chicken-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "soul-food-cedar-rapids",
+    "kind": "intent",
+    "title": "Soul Food in Cedar Rapids",
+    "headline": "Southern soul food on the northeast side",
+    "body": "Fried catfish, chicken, gizzards, liver, and Southern sides like hush puppies and okra — family-owned soul food, made fresh to order in Cedar Rapids.",
+    "sections": [
+      { "heading": "Southern classics", "text": "From catfish and gizzards to hush puppies and fried okra, Captains cooks Southern soul-food staples to order." }
+    ],
+    "faqs": [
+      { "question": "What makes it soul food?", "answer": "Southern-style fried fish and chicken with classic sides like hush puppies, okra, and cornbread-style breading." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "Fried catfish", "context": "related" },
+      { "slug": "/menu/gizzards-and-liver/", "anchor": "Gizzards & liver", "context": "related" },
+      { "slug": "/menu/sides/", "anchor": "Southern sides", "context": "related" }
+    ],
+    "seo": {
+      "title": "Soul Food in Cedar Rapids — Captains Fish and Chicken",
+      "description": "Family-owned Southern soul food — fried catfish, chicken, gizzards, and classic sides made to order in northeast Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.example/soul-food-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "seafood-cedar-rapids",
+    "kind": "intent",
+    "title": "Seafood in Cedar Rapids",
+    "headline": "Fried seafood, made to order",
+    "body": "Catfish, perch, tilapia, cod, shrimp, calamari, and crab cakes — fried seafood made to order at Captains on 1st Ave NE.",
+    "sections": [
+      { "heading": "On the seafood menu", "text": "Beyond catfish and shrimp, we fry perch, tilapia, cod, calamari, and crab cakes, plus combination seafood baskets." }
+    ],
+    "faqs": [
+      { "question": "What seafood do you have?", "answer": "Catfish, perch, tilapia, cod, shrimp, calamari, crab cakes, and combination baskets." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/shrimp/", "anchor": "Fried shrimp", "context": "related" },
+      { "slug": "/menu/seafood-basket/", "anchor": "Seafood baskets", "context": "related" },
+      { "slug": "/fried-fish-cedar-rapids/", "anchor": "Fried fish", "context": "related" }
+    ],
+    "seo": {
+      "title": "Seafood in Cedar Rapids — Captains Fish and Chicken",
+      "description": "Fried catfish, shrimp, perch, cod, calamari, and crab cakes made to order in northeast Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.example/seafood-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "best-catfish-cedar-rapids",
+    "kind": "intent",
+    "title": "Best Fried Catfish in Cedar Rapids",
+    "headline": "Our catfish is the favorite",
+    "body": "Fried catfish is Captains' most-ordered item — cornmeal breading with fresh-ground lemon pepper, fried fresh when you order. According to owner Ray Aqel, the catfish takes on a flavor profile close to the fried chicken.",
+    "sections": [
+      { "heading": "How we do catfish", "text": "Cornmeal breading, fresh-ground lemon-pepper seasoning, and frying to order — that's the catfish regulars come back for." }
+    ],
+    "faqs": [
+      { "question": "What's your most popular dish?", "answer": "The fried catfish is the most-ordered item on the menu." },
+      { "question": "How is the catfish seasoned?", "answer": "Cornmeal breading with fresh-ground lemon pepper, fried to order." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "See the catfish", "context": "related" },
+      { "slug": "/how-we-cook/", "anchor": "How we cook", "context": "related" },
+      { "slug": "/fried-fish-cedar-rapids/", "anchor": "More fried fish", "context": "related" }
+    ],
+    "seo": {
+      "title": "Best Fried Catfish in Cedar Rapids — Captains Fish and Chicken",
+      "description": "Captains' most-ordered dish: cornmeal-breaded fried catfish with fresh-ground lemon pepper, fried to order in Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.example/best-catfish-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "how-we-cook",
+    "kind": "story",
+    "title": "How We Cook",
+    "headline": "Made fresh to order",
+    "body": "At Captains, fish and chicken are breaded and fried when you order — not held under a lamp. Our fish gets a cornmeal breading with fresh-ground lemon pepper. Because it's cooked to order, calling ahead means it's hot when you arrive.",
+    "sections": [
+      { "heading": "Fresh to order", "text": "Frying to order takes a few extra minutes, which is why we recommend calling ahead at (319) 221-1040." },
+      { "heading": "Cornmeal and lemon pepper", "text": "The fish breading is cornmeal with fresh-ground lemon pepper — the seasoning owner Ray Aqel built the concept around." }
+    ],
+    "faqs": [
+      { "question": "Is the food made to order?", "answer": "Yes — everything is breaded and fried fresh when you order." },
+      { "question": "Why call ahead?", "answer": "Because it's cooked to order, calling ahead means your food is ready and hot when you arrive." }
+    ],
+    "crossLinks": [
+      { "slug": "/best-catfish-cedar-rapids/", "anchor": "Our catfish", "context": "related" },
+      { "slug": "/what-to-order/", "anchor": "What to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "How We Cook — Captains Fish and Chicken",
+      "description": "Fish and chicken breaded and fried to order, with cornmeal and fresh-ground lemon pepper. Call ahead so it's hot when you arrive.",
+      "canonical": "https://captainsfishandchicken.example/how-we-cook/"
+    }
+  },
+  {
+    "slug": "what-to-order",
+    "kind": "story",
+    "title": "First Time? What to Order",
+    "headline": "New to Captains? Start here",
+    "body": "First visit? Start with the fried catfish — it's the most-ordered item. Fried chicken and wings are close behind, cheese curds are a favorite side, and chocolate cake finishes the meal.",
+    "sections": [
+      { "heading": "Crowd favorites", "text": "Catfish, fried chicken, wings, cheese curds, and chocolate cake are the ones regulars come back for." }
+    ],
+    "faqs": [
+      { "question": "What should I order first?", "answer": "The fried catfish — it's the most popular dish. Add cheese curds and, if you have room, chocolate cake." }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/catfish/", "anchor": "Fried catfish", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/how-we-cook/", "anchor": "How we cook", "context": "related" }
+    ],
+    "seo": {
+      "title": "What to Order at Captains Fish and Chicken",
+      "description": "New to Captains in Cedar Rapids? Start with the fried catfish, wings, cheese curds, and chocolate cake.",
+      "canonical": "https://captainsfishandchicken.example/what-to-order/"
+    }
+  },
+  {
+    "slug": "about",
+    "kind": "info",
+    "title": "About Captains Fish and Chicken",
+    "headline": "Family-owned, made fresh to order",
+    "body": "Captains Fish and Chicken is a family-owned, counter-service soul-food restaurant at 1616 1st Ave NE in Cedar Rapids. Owner Ray Aqel has run the same fish-and-chicken concept in Minnesota, Illinois, and Michigan and has managed restaurants since 2006; Cedar Rapids is his first Iowa location. Everything is made fresh to order.",
+    "sections": [
+      { "heading": "The owner", "text": "Ray Aqel built the Captains concept across three states before bringing it to Cedar Rapids, cooking fish and chicken to order with a cornmeal-and-lemon-pepper breading." }
+    ],
+    "faqs": [
+      { "question": "Who owns Captains?", "answer": "Ray Aqel, who has run the same concept in Minnesota, Illinois, and Michigan and has managed restaurants since 2006." },
+      { "question": "When did the Cedar Rapids location open?", "answer": "October 2024 — it's the concept's first Iowa location." }
+    ],
+    "crossLinks": [
+      { "slug": "/how-we-cook/", "anchor": "How we cook", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & hours", "context": "related" }
+    ],
+    "seo": {
+      "title": "About — Captains Fish and Chicken, Cedar Rapids",
+      "description": "Family-owned soul-food restaurant on the northeast side of Cedar Rapids. Owner Ray Aqel has run the concept since 2006; Cedar Rapids is the first Iowa location.",
+      "canonical": "https://captainsfishandchicken.example/about/"
+    },
+    "schemaType": "AboutPage"
+  },
+  {
+    "slug": "faq",
+    "kind": "faq",
+    "title": "Frequently Asked Questions",
+    "headline": "Captains Fish and Chicken — FAQ",
+    "body": "Answers to common questions about ordering, hours, and what's on the menu at Captains Fish and Chicken.",
+    "faqs": [
+      { "question": "What are your hours?", "answer": "Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, and Sun 11am–8pm." },
+      { "question": "Where are you located?", "answer": "1616 1st Ave NE, on the northeast side of Cedar Rapids, with onsite parking." },
+      { "question": "What's the most popular dish?", "answer": "The fried catfish is the most-ordered item." },
+      { "question": "Is the food made to order?", "answer": "Yes — fish and chicken are breaded and fried fresh when you order. Call ahead at (319) 221-1040 for faster pickup." },
+      { "question": "Do you have seating, or is it takeout only?", "answer": "There is a dining room at the 1616 storefront, but Captains is counter-service and most orders go out — takeout-first. Call ahead for the fastest pickup." },
+      { "question": "Do you take reservations?", "answer": "No — Captains is a counter-service restaurant." },
+      { "question": "Can I get delivery?", "answer": "Yes — delivery is available through DoorDash, Uber Eats, Grubhub, and Postmates during open hours." }
+    ],
+    "crossLinks": [
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" }
+    ],
+    "seo": {
+      "title": "FAQ — Captains Fish and Chicken, Cedar Rapids",
+      "description": "Hours, location, ordering, delivery, and menu questions for Captains Fish and Chicken in Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.example/faq/"
+    },
+    "schemaType": "FAQPage"
+  },
+  {
+    "slug": "how-to-order",
+    "kind": "info",
+    "title": "How to Order",
+    "headline": "How to order from Captains",
+    "body": "Captains is counter-service and takeout-first. There is a dining room at the 1616 storefront, but most orders go out. Because everything is fried to order, calling ahead at (319) 221-1040 is the fastest way to order. Delivery is available through DoorDash, Uber Eats, Grubhub, and Postmates.",
+    "sections": [
+      { "heading": "Call ahead", "text": "Call (319) 221-1040, place your order, and it's ready hot when you arrive at 1616 1st Ave NE." },
+      { "heading": "Delivery", "text": "Order delivery through DoorDash, Uber Eats, Grubhub, or Postmates during open hours." }
+    ],
+    "faqs": [
+      { "question": "What's the fastest way to order?", "answer": "Call ahead at (319) 221-1040 — since food is fried to order, calling ahead means it's ready when you arrive." },
+      { "question": "Do you deliver?", "answer": "Yes — through DoorDash, Uber Eats, Grubhub, and Postmates during open hours." },
+      { "question": "Can I eat there?", "answer": "There's a dining room at the storefront, but Captains is counter-service and takeout-first." }
+    ],
+    "crossLinks": [
+      { "slug": "/contact/", "anchor": "Contact & hours", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" }
+    ],
+    "seo": {
+      "title": "How to Order — Captains Fish and Chicken",
+      "description": "Call ahead at (319) 221-1040 or order delivery via DoorDash, Uber Eats, Grubhub, or Postmates. Counter-service, takeout-first in Cedar Rapids.",
+      "canonical": "https://captainsfishandchicken.example/how-to-order/"
+    }
+  }
+]

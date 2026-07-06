@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "briefHash": "359358364d9f5e67d657646fc9ace680d97ca53edf80137e4072e00f08c3eec0",
+  "phase": 0,
+  "exitedAt": "2026-07-05T19:32:55.169Z",
+  "specialistInvoked": "local-business-discovery",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-0.json",
+    "artifactHash": "d46008ab86b948ac0df0776abf961904210fc295c6a8d069a1f103f4da48ffca",
+    "contract": "interview transcript summary, business identity, confirmed facts, unverified claims, missing answers, no build output"
+  },
+  "nextPhaseAllowed": [
+    1
+  ],
+  "nextPhaseHint": 1,
+  "blocking": []
+}

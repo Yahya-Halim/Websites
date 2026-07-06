@@ -1,0 +1,89 @@
+---
+import PageLayout from '../../components/PageLayout.astro';
+import CarCard from '../../components/CarCard.astro';
+import Faq from '../../components/Faq.astro';
+import { getCollection } from 'astro:content';
+import { webPage, service } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const locations = await getCollection('locations');
+  return locations.map((l) => ({ params: { location: l.data.slug }, props: { loc: l } }));
+}
+
+const { loc } = Astro.props;
+const d = loc.data;
+const path = `/locations/${d.slug}`;
+
+// Location x service matrix: the services this location landing page promotes.
+const services = await getCollection('services');
+// Feature a couple of in-stock vehicles matching the location's inventory focus.
+const cars = (await getCollection('cars')).filter((c) => c.data.status === 'available').slice(0, 3);
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Locations', path: '/locations' },
+  { name: `${d.city}, ${d.state}`, path },
+];
+
+const faqs = [
+  { question: `Do you deliver to ${d.city}?`, answer: `Yes — Summit Auto Group delivers purchased vehicles throughout ${d.city} and the surrounding Denver metro, and we offer virtual test drives if you can’t make it to the lot.` },
+  { question: `What kinds of vehicles are popular with ${d.city} drivers?`, answer: `${d.city} shoppers gravitate toward ${(d.inventoryFocus ?? ['SUVs', 'trucks']).join(', ')}. We stock and source these regularly.` },
+  { question: `Can I service my vehicle if I live in ${d.city}?`, answer: `Absolutely. Our Denver service center on Federal Blvd is a short drive from ${d.city} and welcomes all makes and models.` },
+];
+
+const schemas = [
+  webPage({ name: d.seo.title, path, description: d.seo.description }),
+  service({
+    name: `Used Car Sales in ${d.city}`,
+    description: d.seo.description,
+    serviceType: 'Used Car Dealer',
+    areaServed: [{ name: d.city, region: d.state }],
+  }),
+];
+---
+
+<PageLayout
+  title={d.seo.title}
+  description={d.seo.description}
+  breadcrumbs={crumbs}
+  eyebrow={`${d.city}, ${d.state}`}
+  heroTitle={`Serving ${d.city} drivers`}
+  heroSubtitle={d.seo.description}
+  schemas={schemas}
+>
+  <div class="prose">
+    <p>
+      Summit Auto Group is minutes from {d.city} at 4820 Federal Blvd in Denver. Whether you’re after
+      {(d.inventoryFocus ?? ['a reliable SUV']).join(', ')}, our team makes buying, financing, and
+      servicing simple — with delivery available across {d.city}.
+    </p>
+
+    <h2>Everything {d.city} drivers need, in one place</h2>
+    <ul>
+      {services.map((s) => (
+        <li><a href={`/services/${s.data.slug}`}>{s.data.name}</a> — {s.data.description}</li>
+      ))}
+      <li><a href="/financing">Financing</a> — 14 lenders, soft-pull pre-qualification, no score impact.</li>
+    </ul>
+  </div>
+
+  {cars.length > 0 && (
+    <>
+      <h2 style="color:var(--brand)">Popular near {d.city}</h2>
+      <div class="grid">
+        {cars.map((c) => <CarCard id={c.id} data={c.data} />)}
+      </div>
+    </>
+  )}
+
+  <Faq faqs={faqs} heading={`${d.city} — FAQs`} />
+
+  <div class="band">
+    <h2>Visit us from {d.city}</h2>
+    <p>4820 Federal Blvd, Denver, CO 80221 · Mon–Sat 9–7, Sun 10–5</p>
+    <div class="btn-row">
+      <a class="btn" href="/inventory">Browse inventory</a>
+      <a class="btn ghost" href="/contact">Get directions</a>
+    </div>
+  </div>
+</PageLayout>

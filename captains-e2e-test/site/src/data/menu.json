@@ -1,0 +1,123 @@
+[
+  {
+    "slug": "catfish",
+    "name": "Fried Catfish",
+    "order": 1,
+    "description": "Our most popular fish — cornmeal breading with fresh-ground lemon pepper, fried to order.",
+    "items": [
+      { "name": "Fried Catfish", "description": "Cornmeal-breaded catfish, fried fresh to order. The most-ordered item on the menu." }
+    ],
+    "crossLinks": [
+      { "slug": "/best-catfish-cedar-rapids/", "anchor": "Why our catfish is the favorite", "context": "related" },
+      { "slug": "/menu/shrimp/", "anchor": "Add fried shrimp", "context": "related" }
+    ]
+  },
+  {
+    "slug": "fried-chicken",
+    "name": "Fried Chicken",
+    "order": 2,
+    "description": "Bone-in fried chicken, breaded and fried fresh to order.",
+    "items": [
+      { "name": "Fried Chicken", "description": "Breaded and fried to order." }
+    ]
+  },
+  {
+    "slug": "chicken-tenders",
+    "name": "Chicken Tenders",
+    "order": 3,
+    "description": "Breaded chicken tenders, made to order.",
+    "items": [
+      { "name": "Chicken Tenders", "description": "Hand-breaded tenders, fried to order." }
+    ]
+  },
+  {
+    "slug": "wings",
+    "name": "Wings",
+    "order": 4,
+    "description": "Bone-in and boneless wings.",
+    "items": [
+      { "name": "Bone-In Wings", "description": "Classic bone-in wings, fried to order." },
+      { "name": "Boneless Wings", "description": "Breaded boneless wings, fried to order." }
+    ]
+  },
+  {
+    "slug": "gizzards-and-liver",
+    "name": "Gizzards & Liver",
+    "order": 5,
+    "description": "Southern fried classics.",
+    "items": [
+      { "name": "Gizzards", "description": "Breaded and fried to order." },
+      { "name": "Liver", "description": "Breaded and fried to order." }
+    ]
+  },
+  {
+    "slug": "perch",
+    "name": "Perch",
+    "order": 6,
+    "description": "Fried perch.",
+    "items": [
+      { "name": "Fried Perch", "description": "Cornmeal-breaded perch, fried to order." }
+    ]
+  },
+  {
+    "slug": "tilapia",
+    "name": "Tilapia",
+    "order": 7,
+    "description": "Fried tilapia.",
+    "items": [
+      { "name": "Fried Tilapia", "description": "Breaded tilapia, fried to order." }
+    ]
+  },
+  {
+    "slug": "cod",
+    "name": "Cod",
+    "order": 8,
+    "description": "Fried cod.",
+    "items": [
+      { "name": "Fried Cod", "description": "Breaded cod, fried to order." }
+    ]
+  },
+  {
+    "slug": "shrimp",
+    "name": "Shrimp",
+    "order": 9,
+    "description": "Fried shrimp.",
+    "items": [
+      { "name": "Fried Shrimp", "description": "Breaded shrimp, fried to order." }
+    ]
+  },
+  {
+    "slug": "seafood-basket",
+    "name": "Seafood Baskets",
+    "order": 10,
+    "description": "Calamari, crab cakes, and combination baskets.",
+    "items": [
+      { "name": "Calamari", "description": "Breaded calamari, fried to order." },
+      { "name": "Crab Cakes", "description": "Fried crab cakes." },
+      { "name": "Seafood Basket", "description": "A mix of our fried seafood." }
+    ]
+  },
+  {
+    "slug": "sides",
+    "name": "Sides",
+    "order": 11,
+    "description": "Southern sides.",
+    "items": [
+      { "name": "Hush Puppies" },
+      { "name": "Okra", "description": "Fried okra." },
+      { "name": "Onion Rings" },
+      { "name": "Breaded Mushrooms" },
+      { "name": "Fries" },
+      { "name": "Cheese Curds" }
+    ]
+  },
+  {
+    "slug": "desserts",
+    "name": "Desserts",
+    "order": 12,
+    "description": "Something sweet to finish.",
+    "items": [
+      { "name": "Chocolate Cake" }
+    ]
+  }
+]

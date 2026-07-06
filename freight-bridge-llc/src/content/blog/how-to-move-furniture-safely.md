@@ -13,7 +13,7 @@ Moving furniture is one of those tasks that feels straightforward until you're s
 Before you touch a single piece of furniture, gather your supplies. You'll need:
 
 - **Furniture sliders** – These little discs slide under legs and let you glide heavy pieces across floors without scratching.
-- **Moving blankets or furniture pads** – Never skip these. A $15 blanket can save a $2,000 sofa.
+- **Moving blankets or furniture pads** – Never skip these. A cheap blanket can save an expensive sofa.
 - **Stretch wrap and packing tape** – Wrap drawers, doors, and delicate parts so nothing shifts mid-transport.
 - **Furniture dolly or hand truck** – Your spine will thank you later.
 - **Screwdrivers, Allen wrenches, and a cordless drill** – For disassembling what you can.

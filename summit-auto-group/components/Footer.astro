@@ -1,0 +1,48 @@
+---
+import { getEntry } from 'astro:content';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+---
+
+<footer class="site-footer">
+  <p class="copyright">
+    {site?.footer?.copyrightText ?? `© ${business?.copyrightYears ?? new Date().getFullYear()} ${business?.name ?? ''}`}
+  </p>
+  {site?.footer?.links && site.footer.links.length > 0 && (
+    <nav class="footer-nav">
+      <ul>
+        {site.footer.links.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
+</footer>
+
+<style>
+  .site-footer {
+    padding: 2rem 1.5rem;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    color: #6b6b6b;
+  }
+  .copyright {
+    margin: 0 0 0.75rem;
+    font-size: 0.875rem;
+  }
+  .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+</style>

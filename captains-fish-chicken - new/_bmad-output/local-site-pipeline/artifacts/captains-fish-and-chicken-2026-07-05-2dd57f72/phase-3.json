@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 3,
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-3.json",
+  "artifactHash": "5aabadc5b9b8db77de6745b9f899bc3415bc35e81b0837ce37f005d53db6a241",
+  "specialist": "local-ai-visibility",
+  "completedAt": "2026-07-05T19:36:32.335Z",
+  "contract": "design/content/build plan, selected architecture, asset needs",
+  "artifact": {
+    "phase": 3,
+    "name": "DESIGN",
+    "specialist": "local-ai-visibility",
+    "selectedArchitecture": {
+      "stack": "Astro 6 (static) + @localevolve/local-biz-factory-engine integration + @astrojs/sitemap",
+      "routing": "Engine integration injects the single `/` route; @engine aliases resolve Base/Header/Footer/Hero/TrustBar/OfferCallout/CtaBanner/LeadForm from the engine package.",
+      "dataFlow": "src/data/{business,site,menu,occasions}.json -> content.config.ts (Zod-validated collections) -> injected index.astro renders CRO blocks; `factory wire` emits LocalBusiness+WebSite+WebPage JSON-LD, llms.txt, llms-full.txt, robots.txt; optional `factory graph-seed` projects Menu schema + facts.json.",
+      "decision": "Use the engine happy-path as intended. Do NOT eject the integration or hand-roll src/pages (that was the prior build's approach and is explicitly out of scope)."
+    },
+    "designContentBuildPlan": {
+      "brand": {
+        "theme": "Nautical 'Captain' identity derived fresh from the business name — deep-sea navy, brass/gold accent, warm cream ground.",
+        "primaryColor": "#0a3a5c",
+        "accentColor": "#f2a516",
+        "bgColor": "#fef8ee",
+        "secondaryColor": "#06263c",
+        "textColor": "#1a1a1a",
+        "rationale": "Navy+gold is the natural derivation of a fish-house 'Captain' brand; chosen from the name, not copied from any prior build."
+      },
+      "voice": "Warm, hometown, appetite-forward. Emphasize fresh-to-order, seafood variety, big family/party portions, fast counter service, late weekend hours.",
+      "contentBlocks": {
+        "tagline": "Fresh-to-order fried fish, chicken & seafood in Cedar Rapids",
+        "valueProps": [
+          "Made fresh to order",
+          "Catfish, perch, tilapia, cod & jumbo shrimp",
+          "Family & party deals"
+        ],
+        "trustBar": [
+          "Made fresh to order",
+          "8+ seafood choices",
+          "Whole, party & boneless wings",
+          "Family & party deals",
+          "Open late Fri & Sat",
+          "Locally owned on 1st Ave NE"
+        ],
+        "offers": [
+          "Fish-Only Family Deal $49.99",
+          "Captain's Family Meal Deal $59.99",
+          "Combo Dinner — choose 2 ($18.99) or 3 ($21.99)"
+        ],
+        "ctaBanner": "Hungry now? Call ahead and we'll have it hot and ready.",
+        "leadForm": "Large-order & catering inquiry (name, phone, details)"
+      },
+      "menuPlan": "All 14 aggregator sections authored into menu.json with per-item price variants (meal vs bulk/only). Prices flagged owner-unverified in facts + LAUNCH-BLOCKERS."
+    },
+    "assetNeeds": [
+      {
+        "asset": "logo",
+        "source": "owner (preferred) or generated placeholder",
+        "status": "pending"
+      },
+      {
+        "asset": "hero image",
+        "source": "Higgsfield generate",
+        "status": "planned"
+      },
+      {
+        "asset": "real food photos (catfish, wings, family spread)",
+        "source": "owner",
+        "status": "blocked-awaiting-photos"
+      },
+      {
+        "asset": "GA4 measurement id",
+        "source": "owner",
+        "status": "blocking-launch"
+      },
+      {
+        "asset": "domain",
+        "source": "owner",
+        "status": "blocking-launch"
+      },
+      {
+        "asset": "official email",
+        "source": "owner",
+        "status": "blocking-launch"
+      }
+    ]
+  }
+}

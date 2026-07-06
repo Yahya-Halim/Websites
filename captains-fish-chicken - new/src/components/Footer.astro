@@ -1,0 +1,42 @@
+---
+import { business, telHref, telDisplay, orderUrl, directionsUrl } from '../lib/site';
+const year = business.copyrightYears;
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div class="footer-brand">
+        <img src="/images/logo-lg.png" width="160" height="107" alt="Captains Fish and Chicken logo" />
+        <p style="max-width:34ch;color:rgba(255,248,238,.75)">Fresh-to-order fried fish, chicken &amp; seafood on 1st Ave NE in Cedar Rapids. Catfish, wings, shrimp and big family deals — made fresh, every order.</p>
+        <p style="margin-top:14px">
+          <a href={telHref} style="font-family:var(--font-display);font-size:1.6rem;color:var(--gold-bright);display:inline">{telDisplay}</a>
+        </p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="/menu/">Full Menu</a>
+        <a href="/deals/">Family &amp; Party Deals</a>
+        <a href="/catering/">Catering &amp; Large Orders</a>
+        <a href="/areas/">Areas We Serve</a>
+        <a href="/guides/">Guides &amp; Tips</a>
+        <a href="/about/">Our Story</a>
+        <a href="/faq/">FAQ</a>
+      </div>
+      <div>
+        <h4>Visit &amp; Order</h4>
+        <p style="color:rgba(255,248,238,.82);margin:0 0 10px">
+          1616 1st Ave NE<br />Cedar Rapids, IA 52402
+        </p>
+        <p style="color:rgba(255,248,238,.82);margin:0 0 12px;font-size:.9rem">
+          Mon–Thu 11am–10pm<br />Fri–Sat 11am–11pm<br />Sun 11am–8pm
+        </p>
+        <a href={orderUrl} target="_blank" rel="noopener">Order on Uber Eats →</a>
+        <a href={directionsUrl} target="_blank" rel="noopener">Get Directions →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© {year} Captains Fish and Chicken · 1616 1st Ave NE, Cedar Rapids, IA 52402</span>
+      <span>Made fresh to order. Menu &amp; prices subject to change.</span>
+    </div>
+  </div>
+</footer>

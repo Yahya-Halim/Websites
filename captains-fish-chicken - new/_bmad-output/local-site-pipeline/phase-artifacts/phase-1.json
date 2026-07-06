@@ -1,0 +1,61 @@
+{
+  "phase": 1,
+  "name": "RESEARCH",
+  "specialist": "keyword-research",
+  "researchSources": [
+    { "url": "https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids", "used": "category, NAP, positioning, review sentiment" },
+    { "url": "https://www.yelp.com/menu/captains-fish-and-chicken-cedar-rapids-2", "used": "full menu + prices (aggregator, unverified)" },
+    { "url": "https://khak.com/captains-fish-chicken-cedar-rapids/", "used": "owner, opening date, concept history, signature dishes" },
+    { "url": "https://www.thegazette.com/restaurants/captains-fish-and-chicken-opens-second-location-in-cedar-rapids/", "used": "second-location context, added sides (mashed potatoes, mac & cheese), site history (former Gutamex Elenita / Brick City Grill)" },
+    { "url": "https://www.yelp.com/search?find_desc=Fried+Fish&find_loc=Cedar+Rapids,+IA", "used": "competitive set for fried fish" },
+    { "url": "https://www.yelp.com/search?cflt=soulfood&find_loc=Cedar+Rapids,+IA", "used": "competitive set for soul food" }
+  ],
+  "competitorNotes": [
+    { "name": "Vivian's Soul Food", "note": "Established Cedar Rapids soul-food incumbent; reputation for 'best fried chicken in Iowa'; catfish + sweet potatoes + cornbread. Strongest brand to differentiate from." },
+    { "name": "Sugapeach Chicken & Fish Fry", "note": "Closest concept competitor (chicken + fish fry). Direct head-to-head on keywords." },
+    { "name": "Royceann's Soul Food", "note": "Soul-food competitor; overlaps on catfish/chicken searches." },
+    { "name": "Odie's / Stinky's / Teddy's Bar & Grill", "note": "Bar-and-grill all-you-can-eat Friday fish fry; capture Friday fish-fry intent rather than everyday fried seafood." },
+    { "name": "Captains differentiators", "note": "Broadest seafood variety in class (perch, tilapia, catfish, cod, red snapper, calamari, crab cakes, jumbo shrimp), made fresh to order, large family/party deals, late hours (11pm Fri/Sat), two Cedar Rapids locations." }
+  ],
+  "keywordEntityFindings": {
+    "primaryLocalKeywords": [
+      "fish and chicken cedar rapids",
+      "fried catfish cedar rapids",
+      "fried chicken cedar rapids",
+      "fried seafood cedar rapids",
+      "soul food cedar rapids",
+      "chicken wings cedar rapids"
+    ],
+    "longTailIntent": [
+      "catfish near me cedar rapids",
+      "family fish dinner cedar rapids",
+      "jumbo shrimp cedar rapids",
+      "cheese curds cedar rapids",
+      "fish fry near me 52402",
+      "1st ave ne restaurants cedar rapids",
+      "late night food cedar rapids"
+    ],
+    "geoEntities": ["Cedar Rapids", "Linn County", "52402", "1st Ave NE", "Iowa"],
+    "menuEntities": ["catfish", "perch", "tilapia", "cod", "red snapper", "calamari", "crab cakes", "jumbo shrimp", "gizzards", "livers", "whole wings", "party wings", "boneless wings", "chicken tenders", "hush puppies", "okra", "cheese curds", "mac & cheese bites", "family meal deals"],
+    "brandEntities": ["Captains Fish and Chicken", "Ray Aqel", "made fresh to order"],
+    "strategyNote": "Head term 'fish and chicken cedar rapids' matches the brand name and category exactly — own it. GEO/AI angle: exhaustively structure the menu (schema.org Menu + facts.json) so AI answer engines can cite specific dishes and prices. Anchor on the 1st Ave NE location and 52402 for map-pack relevance."
+  },
+  "sourceDates": {
+    "yelpRetrieved": "2026-07-05",
+    "khakArticle": "2024-10 (opening coverage)",
+    "gazetteArticle": "second-location coverage (2025)",
+    "note": "All aggregator data retrieved 2026-07-05; opening-era editorial from 2024-2025."
+  },
+  "evidenceGaps": [
+    "No keyword search-volume tool was run; keyword set is judgment-based from category + geography and needs volume validation",
+    "Numeric Yelp/Google star rating and review count not captured — required before an aggregateRating schema block can be emitted (do NOT fabricate)",
+    "No citation/backlink audit performed",
+    "Menu prices are aggregator-sourced and unverified by the owner"
+  ],
+  "checklist": [
+    { "id": "research-nap-consistent", "status": "done", "note": "NAP consistent across Yelp, Tripadvisor, Facebook, delivery apps" },
+    { "id": "research-competitors-identified", "status": "done", "note": "Primary soul-food/fish-fry competitors identified" },
+    { "id": "research-keywords-drafted", "status": "done", "note": "Head + long-tail local keyword set drafted" },
+    { "id": "research-review-numbers", "status": "open", "reason": "Numeric rating + review count still needed for aggregateRating; deferred to owner/GBP pull" }
+  ]
+}

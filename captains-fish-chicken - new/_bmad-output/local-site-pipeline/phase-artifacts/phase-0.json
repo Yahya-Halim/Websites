@@ -1,0 +1,49 @@
+{
+  "phase": 0,
+  "name": "DISCOVER",
+  "specialist": "local-business-discovery",
+  "buildOutputCreated": false,
+  "interviewSummary": "No live owner interview available this session. Business identity re-discovered from public web sources (Yelp business + menu pages, KHAK local news article, delivery aggregators). Captains Fish and Chicken is a counter-service soul-food restaurant specializing in fried fish, chicken, and seafood made fresh to order, at 1616 1st Ave NE, Cedar Rapids, IA. Owner Ray Aqel opened it in late October 2024 as his first Iowa location (the same concept was previously run in Minnesota, Illinois, and Michigan). A second Cedar Rapids location at 3100 6th St SW exists but is out of scope for this site.",
+  "businessIdentity": {
+    "name": "Captains Fish and Chicken",
+    "category": "Soul food / fried fish, chicken and seafood (counter service)",
+    "owner": "Ray Aqel",
+    "opened": "Late October 2024",
+    "address": "1616 1st Ave NE, Cedar Rapids, IA 52402",
+    "phone": "(319) 221-1040",
+    "hours": "Sun 11am-8pm; Mon-Thu 11am-10pm; Fri-Sat 11am-11pm",
+    "positioning": "Fresh-to-order fried seafood and chicken; generous portions and family/party deals; a newer independent spot with strong early word-of-mouth on catfish, wings, tenders, shrimp and cheese curds."
+  },
+  "userConfirmedFacts": [
+    "Address: 1616 1st Ave NE, Cedar Rapids, IA 52402 (provided by operator; matches Yelp/Tripadvisor/UberEats)",
+    "Phone: (319) 221-1040 (Yelp, Facebook, aggregators agree)",
+    "Owner: Ray Aqel (KHAK article)",
+    "Opened late October 2024 (KHAK article)",
+    "Cuisine: fried fish/seafood + chicken, soul food, made fresh to order (KHAK + Yelp category)",
+    "Hours: Sun 11-8, Mon-Thu 11-10, Fri-Sat 11-11 (Google/Yelp)",
+    "Second location 3100 6th St SW exists and is OUT OF SCOPE for this site"
+  ],
+  "unverifiedClaims": [
+    "Menu item list and prices captured from Yelp/delivery aggregators — delivery prices are typically marked up vs in-store and the item list may be stale; owner must confirm before launch",
+    "Dessert lineup: aggregator lists cheesecake/caramel cheesecake/banana pudding/carrot cake/caramel coconut/lemon cake, but the KHAK article praised a 'chocolate cake' — dessert list needs owner confirmation",
+    "No official website/domain located — captainsfishandchicken.com is a guess, not confirmed registered",
+    "No public email address found",
+    "Geo latitude/longitude approximate (to be set from the verified street address)",
+    "Reservations / payment methods not confirmed (assumed counter-service, cards accepted)"
+  ],
+  "missingAnswers": [
+    "Real GA4 measurement id (G-XXXXXXXX) — required to pass the do-not-ship gate",
+    "Confirmed domain to launch on",
+    "Official business email",
+    "Owner price confirmation for the full menu",
+    "Real food photography + a logo file",
+    "Confirm the Friday/Saturday 11pm close (engine 2-block hours schema caps the weekday block; displayText will carry the accurate hours)"
+  ],
+  "sourceUrls": [
+    "https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids",
+    "https://www.yelp.com/menu/captains-fish-and-chicken-cedar-rapids-2",
+    "https://khak.com/captains-fish-chicken-cedar-rapids/",
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/",
+    "https://www.tripadvisor.com/Restaurant_Review-g37743-d28991845-Reviews-Captains_Fish_And_Chicken_Inc-Cedar_Rapids_Iowa.html"
+  ]
+}

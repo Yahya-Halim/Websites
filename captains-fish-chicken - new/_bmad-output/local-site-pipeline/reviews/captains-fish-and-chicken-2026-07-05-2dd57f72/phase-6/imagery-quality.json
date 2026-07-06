@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 6,
+  "reviewer": "imagery-quality",
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-6.json",
+  "artifactHash": "12198acd15932d77458e797898618080ee68857b2154e8401602cd149917f622",
+  "notesFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/reviews/phase-6-imagery-quality.md",
+  "notes": "# Review — Phase 6 IMAGERY · reviewer: imagery-quality · verdict: PASS\n\nThe one required slot (logo) is resolved with a clean, legible vector wordmark that matches the\nbrand palette, and placing it cleared the asset-reference advisory in `factory validate`. Imagery\nverify returns ok with the three dish slots correctly deferred as blocked-for-real-photo.\n\nThe important quality call: dish photos were NOT generated and passed off as the restaurant's real\nfood. For a real client, fabricated plates are a trust and accuracy risk, so blocking them awaiting\nowner photos is exactly right. Hero is prompted and queued rather than faked. No fabricated imagery\nshipped. PASS to launch.\n\nCarried: generate the hero via Higgsfield when credentials are available; collect real dish photos\nfrom the owner before promoting specific menu items with imagery.\n",
+  "reviewedAt": "2026-07-05T19:45:24.770Z"
+}

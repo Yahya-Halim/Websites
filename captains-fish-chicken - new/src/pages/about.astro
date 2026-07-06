@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { telHref, telDisplay, orderUrl } from '../lib/site';
+const title = 'Our Story | Captains Fish and Chicken, Cedar Rapids';
+const description = 'The story of Captains Fish and Chicken — owner Ray Aqel’s fried-seafood house on 1st Ave NE in Cedar Rapids, opened October 2024. Made fresh to order, big portions, generous deals.';
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap-narrow">
+      <nav class="crumbs"><a href="/">Home</a> / About</nav>
+      <span class="eyebrow" style="margin-top:14px">Our story</span>
+      <h1 class="display h-xl" style="margin-top:10px">A Cedar Rapids fish house</h1>
+      <p class="lead mt-s">Fresh-fried seafood and chicken, done the way a fish house should — hot, crispy and generous.</p>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap-narrow stack" style="--s:22px">
+      <p class="lead">Owner <strong>Ray Aqel</strong> opened Captains Fish and Chicken at <strong>1616 1st Ave NE</strong> in October 2024 — his first Iowa location, in the space that previously housed Gutamex Restaurant Elenita and Brick City Grill. It wasn’t his first go at the concept: Ray has opened and run the same fried-fish-and-chicken idea in Minnesota, Illinois and Michigan.</p>
+      <p>The idea is simple and old-school: everything is <strong>made fresh to order</strong>. Baskets of catfish, perch, tilapia, cod, red snapper, jumbo shrimp, wings and hand-breaded tenders are dropped when you order them, so what lands on your tray is hot and crisp — never sitting under a heat lamp. Because it’s cooked to order, we tell folks to call ahead at {telDisplay} for faster pickup.</p>
+      <p>Cedar Rapids caught on quickly. Local outlets <a href="https://khak.com/captains-fish-chicken-cedar-rapids/" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:700">KHAK</a> and <a href="https://www.thegazette.com/restaurants/captains-fish-and-chicken-opens-second-location-in-cedar-rapids/" target="_blank" rel="noopener" style="color:var(--gold-deep);font-weight:700">The Gazette</a> both covered the opening — and a fast-following second location across town — with early praise going to the catfish, wings, tenders, shrimp and cheese curds.</p>
+      <p>Come hungry: between the seafood variety, the wings, and the family and party deals, Captains is built to feed one person or the whole table.</p>
+      <div class="hero__cta mt-m"><a class="btn btn--lg" href={telHref}>Call {telDisplay}</a><a class="btn btn--navy btn--lg" href={orderUrl} target="_blank" rel="noopener">Order Online</a></div>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,76 @@
+---
+import PageLayout from '../../components/PageLayout.astro';
+import Faq from '../../components/Faq.astro';
+import { getCollection } from 'astro:content';
+import { webPage, service } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map((s) => ({ params: { service: s.data.slug }, props: { svc: s, slugs: services.map((x) => x.data.slug) } }));
+}
+
+const { svc, slugs } = Astro.props;
+const d = svc.data;
+const path = `/services/${d.slug}`;
+
+// Cross-links resolve to sibling service pages or top-level pages (e.g. /financing).
+const serviceSlugs = new Set<string>(slugs);
+const hrefFor = (slug: string) => (serviceSlugs.has(slug) ? `/services/${slug}` : `/${slug}`);
+
+const areaServed = [
+  { name: 'Denver', region: 'CO' },
+  { name: 'Aurora', region: 'CO' },
+  { name: 'Lakewood', region: 'CO' },
+];
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Services', path: '/services' },
+  { name: d.name, path },
+];
+
+const schemas = [
+  webPage({ name: d.seo.title, path, description: d.seo.description }),
+  service({ name: d.name, description: d.description, serviceType: d.name, areaServed }),
+];
+---
+
+<PageLayout
+  title={d.seo.title}
+  description={d.seo.description}
+  breadcrumbs={crumbs}
+  eyebrow="Service"
+  heroTitle={d.name}
+  heroSubtitle={d.description}
+  schemas={schemas}
+>
+  <div class="prose">
+    <p>
+      Summit Auto Group provides {d.name.toLowerCase()} for drivers across
+      <a href="/locations/denver">Denver</a>, <a href="/locations/aurora">Aurora</a>, and
+      <a href="/locations/lakewood">Lakewood</a>. Here’s what to expect and how to get started.
+    </p>
+
+    {d.crossLinks && d.crossLinks.length > 0 && (
+      <>
+        <h2>Related at Summit</h2>
+        <ul>
+          {d.crossLinks.map((cl) => (
+            <li>Also see our <a href={hrefFor(cl.slug)}>{cl.anchor}</a>.</li>
+          ))}
+        </ul>
+      </>
+    )}
+
+    <div class="band">
+      <h2>Ready when you are</h2>
+      <p>Call our Denver team or stop by 4820 Federal Blvd. We serve every make and model.</p>
+      <div class="btn-row">
+        <a class="btn" href="/contact">Book now</a>
+        <a class="btn ghost" href="/services">All services</a>
+      </div>
+    </div>
+  </div>
+
+  <Faq faqs={d.faqs ?? []} heading={`${d.name} — FAQs`} />
+</PageLayout>

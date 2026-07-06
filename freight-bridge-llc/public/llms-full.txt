@@ -55,7 +55,6 @@ Credit Card, Wire Transfer, ACH, Invoice (Net 30)
 
 ## Licenses & Credentials
 - USDOT: 4166904
-- MC Number: 1734786
 - Operating Authority: Interstate freight hauling in all 50 states
 - Insurance: Full cargo and liability coverage
 - Years in Business: 5+ years (established 2020)

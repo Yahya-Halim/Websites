@@ -1,0 +1,134 @@
+[
+  {
+    "id": "2021-toyota-rav4-xle",
+    "make": "Toyota",
+    "model": "RAV4 XLE",
+    "year": 2021,
+    "price": 27995,
+    "mileage": 32450,
+    "condition": "Excellent",
+    "vin": "2T3W1RFV5MW123456",
+    "status": "available",
+    "features": ["All-Wheel Drive", "Adaptive Cruise Control", "Apple CarPlay & Android Auto", "Blind Spot Monitor", "Backup Camera", "Lane Departure Alert"],
+    "inspectionPassed": true,
+    "images": ["/images/inventory/rav4-xle-front.jpg", "/images/inventory/rav4-xle-interior.jpg"],
+    "featuredImage": "/images/inventory/rav4-xle-front.jpg",
+    "dateAdded": "2026-05-12",
+    "body": "A one-owner 2021 Toyota RAV4 XLE with a clean CARFAX, factory AWD, and Toyota Safety Sense 2.0. Ideal for Colorado winters and weekend trips to the mountains.",
+    "seo": {
+      "title": "2021 Toyota RAV4 XLE for Sale in Denver | Summit Auto Group",
+      "description": "Certified 2021 Toyota RAV4 XLE with AWD, 32,450 miles, and a clean CARFAX at Summit Auto Group in Denver, CO. Priced at $27,995.",
+      "canonical": "https://summitautogroup.example/inventory/2021-toyota-rav4-xle"
+    }
+  },
+  {
+    "id": "2020-honda-cr-v-ex",
+    "make": "Honda",
+    "model": "CR-V EX",
+    "year": 2020,
+    "price": 26490,
+    "mileage": 41200,
+    "condition": "Good",
+    "vin": "7FARW2H58LE123457",
+    "status": "available",
+    "features": ["All-Wheel Drive", "Power Sunroof", "Honda Sensing", "Heated Front Seats", "Dual-Zone Climate", "Remote Start"],
+    "inspectionPassed": true,
+    "images": ["/images/inventory/crv-ex-front.jpg", "/images/inventory/crv-ex-rear.jpg"],
+    "featuredImage": "/images/inventory/crv-ex-front.jpg",
+    "dateAdded": "2026-05-18",
+    "body": "Reliable and fuel-efficient 2020 Honda CR-V EX with AWD, a power sunroof, and the full Honda Sensing safety suite. A dependable family SUV that passed our 172-point inspection.",
+    "seo": {
+      "title": "2020 Honda CR-V EX AWD for Sale in Denver | Summit Auto Group",
+      "description": "2020 Honda CR-V EX with AWD, sunroof, and Honda Sensing. 41,200 miles, inspected and reconditioned. $26,490 at Summit Auto Group, Denver.",
+      "canonical": "https://summitautogroup.example/inventory/2020-honda-cr-v-ex"
+    }
+  },
+  {
+    "id": "2022-ford-f-150-lariat",
+    "make": "Ford",
+    "model": "F-150 Lariat",
+    "year": 2022,
+    "price": 44980,
+    "mileage": 28750,
+    "condition": "Excellent",
+    "vin": "1FTFW1E85NFA12345",
+    "status": "available",
+    "features": ["4x4", "Max Tow Package", "Leather-Trimmed Seats", "B&O Premium Sound", "360-Degree Camera", "SYNC 4 Navigation"],
+    "inspectionPassed": true,
+    "images": ["/images/inventory/f150-lariat-front.jpg", "/images/inventory/f150-lariat-bed.jpg"],
+    "featuredImage": "/images/inventory/f150-lariat-front.jpg",
+    "dateAdded": "2026-06-02",
+    "body": "A capable 2022 Ford F-150 Lariat 4x4 with the Max Tow Package, leather interior, and the 3.5L EcoBoost V6. Built for work and ready for the high country.",
+    "seo": {
+      "title": "2022 Ford F-150 Lariat 4x4 for Sale in Denver | Summit Auto Group",
+      "description": "2022 Ford F-150 Lariat 4x4 with Max Tow, EcoBoost V6, and leather. 28,750 miles. $44,980 at Summit Auto Group in Denver, CO.",
+      "canonical": "https://summitautogroup.example/inventory/2022-ford-f-150-lariat"
+    }
+  },
+  {
+    "id": "2019-subaru-outback-premium",
+    "make": "Subaru",
+    "model": "Outback Premium",
+    "year": 2019,
+    "price": 21990,
+    "mileage": 58300,
+    "condition": "Good",
+    "vin": "4S4BSAFC5K3212345",
+    "status": "available",
+    "features": ["Symmetrical All-Wheel Drive", "EyeSight Driver Assist", "Roof Rails", "Heated Seats", "Apple CarPlay", "X-Mode"],
+    "inspectionPassed": true,
+    "images": ["/images/inventory/outback-premium-front.jpg", "/images/inventory/outback-premium-interior.jpg"],
+    "featuredImage": "/images/inventory/outback-premium-front.jpg",
+    "dateAdded": "2026-06-09",
+    "body": "The 2019 Subaru Outback Premium pairs standard symmetrical AWD with EyeSight safety and generous ground clearance — a Colorado favorite for trailheads and daily driving alike.",
+    "seo": {
+      "title": "2019 Subaru Outback Premium AWD for Sale in Denver | Summit Auto Group",
+      "description": "2019 Subaru Outback Premium with symmetrical AWD and EyeSight. 58,300 miles, inspected. $21,990 at Summit Auto Group, Denver, CO.",
+      "canonical": "https://summitautogroup.example/inventory/2019-subaru-outback-premium"
+    }
+  },
+  {
+    "id": "2023-tesla-model-3-rwd",
+    "make": "Tesla",
+    "model": "Model 3 RWD",
+    "year": 2023,
+    "price": 32900,
+    "mileage": 14100,
+    "condition": "Excellent",
+    "vin": "5YJ3E1EA7PF123458",
+    "status": "pending",
+    "features": ["Autopilot", "Glass Panoramic Roof", "Premium Audio", "Supercharging Capable", "Heated Seats", "15-inch Touchscreen"],
+    "inspectionPassed": true,
+    "images": ["/images/inventory/model3-front.jpg", "/images/inventory/model3-interior.jpg"],
+    "featuredImage": "/images/inventory/model3-front.jpg",
+    "dateAdded": "2026-06-20",
+    "body": "A low-mileage 2023 Tesla Model 3 RWD with Autopilot, a glass roof, and plenty of range for the Front Range commute. Sale pending — call to check availability.",
+    "seo": {
+      "title": "2023 Tesla Model 3 RWD for Sale in Denver | Summit Auto Group",
+      "description": "2023 Tesla Model 3 RWD with Autopilot and just 14,100 miles at Summit Auto Group, Denver. $32,900. Sale pending — call (303) 555-0142.",
+      "canonical": "https://summitautogroup.example/inventory/2023-tesla-model-3-rwd"
+    }
+  },
+  {
+    "id": "2018-jeep-wrangler-unlimited",
+    "make": "Jeep",
+    "model": "Wrangler Unlimited Sport",
+    "year": 2018,
+    "price": 28750,
+    "mileage": 67900,
+    "condition": "Good",
+    "vin": "1C4HJXDG7JW123459",
+    "status": "available",
+    "features": ["4x4", "Removable Hardtop", "Tow Hooks", "All-Terrain Tires", "Skid Plates", "Apple CarPlay"],
+    "inspectionPassed": true,
+    "images": ["/images/inventory/wrangler-front.jpg", "/images/inventory/wrangler-trail.jpg"],
+    "featuredImage": "/images/inventory/wrangler-front.jpg",
+    "dateAdded": "2026-06-27",
+    "body": "A trail-ready 2018 Jeep Wrangler Unlimited Sport 4x4 with a removable hardtop and all-terrain tires. Inspected, serviced, and ready for the next adventure.",
+    "seo": {
+      "title": "2018 Jeep Wrangler Unlimited Sport 4x4 for Sale in Denver | Summit Auto Group",
+      "description": "2018 Jeep Wrangler Unlimited Sport 4x4 with removable hardtop and all-terrain tires. 67,900 miles. $28,750 at Summit Auto Group, Denver, CO.",
+      "canonical": "https://summitautogroup.example/inventory/2018-jeep-wrangler-unlimited"
+    }
+  }
+]

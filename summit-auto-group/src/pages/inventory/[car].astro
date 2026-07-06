@@ -1,0 +1,106 @@
+---
+import PageLayout from '../../components/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import { webPage, vehicle } from '../../lib/schema';
+
+export async function getStaticPaths() {
+  const cars = await getCollection('cars');
+  return cars.map((c) => ({ params: { car: c.id }, props: { car: c } }));
+}
+
+const { car } = Astro.props;
+const d = car.data;
+const path = `/inventory/${car.id}`;
+const title = `${d.year} ${d.make} ${d.model}`;
+const price = d.price.toLocaleString('en-US');
+const miles = d.mileage.toLocaleString('en-US');
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Inventory', path: '/inventory' },
+  { name: title, path },
+];
+
+const schemas = [
+  webPage({ name: d.seo.title, path, description: d.seo.description }),
+  vehicle({
+    year: d.year, make: d.make, model: d.model, price: d.price, mileage: d.mileage,
+    vin: d.vin, condition: d.condition, path, description: d.body ?? d.seo.description,
+  }),
+];
+
+const statusLabel = d.status === 'available' ? 'Available now' : d.status;
+---
+
+<PageLayout
+  title={d.seo.title}
+  description={d.seo.description}
+  breadcrumbs={crumbs}
+  eyebrow={statusLabel}
+  heroTitle={title}
+  heroSubtitle={`$${price} · ${miles} miles · ${d.condition} condition`}
+  schemas={schemas}
+>
+  <div class="vehicle">
+    <div class="v-media" data-status={d.status}>
+      <span class="v-badge">{d.condition}</span>
+      <span class="v-photo">Photo gallery available on request</span>
+    </div>
+
+    <div class="v-buy">
+      <p class="v-price">${price}</p>
+      <p class="v-sub">{d.year} {d.make} {d.model} · {miles} mi</p>
+      <div class="btn-row">
+        <a class="btn gold" href="/financing">Get pre-qualified</a>
+        <a class="btn" href="/contact">Schedule test drive</a>
+      </div>
+      <p class="v-fine">{d.inspectionPassed ? '✓ Passed our 172-point inspection' : 'Inspection in progress'}</p>
+    </div>
+  </div>
+
+  <div class="prose">
+    {d.body && <p>{d.body}</p>}
+
+    <h2>Specifications</h2>
+    <dl class="kv">
+      <dt>Year</dt><dd>{d.year}</dd>
+      <dt>Make</dt><dd>{d.make}</dd>
+      <dt>Model</dt><dd>{d.model}</dd>
+      <dt>Mileage</dt><dd>{miles} miles</dd>
+      <dt>Condition</dt><dd>{d.condition}</dd>
+      <dt>VIN</dt><dd>{d.vin}</dd>
+      <dt>Status</dt><dd style="text-transform:capitalize">{d.status}</dd>
+    </dl>
+
+    <h2>Features &amp; options</h2>
+    <ul>
+      {d.features.map((f) => <li>{f}</li>)}
+    </ul>
+
+    <div class="band">
+      <h2>Make it yours</h2>
+      <p>Apply your <a href="/services/trade-in-appraisal">trade-in</a> as a down payment, add an
+        <a href="/services/extended-warranties">extended warranty</a>, and let our
+        <a href="/services/service-and-maintenance">service team</a> keep it running for years.</p>
+      <div class="btn-row">
+        <a class="btn" href="/inventory">Back to inventory</a>
+        <a class="btn ghost" href="/financing">Financing options</a>
+      </div>
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  .vehicle { display: grid; gap: 1.25rem; grid-template-columns: 1.6fr 1fr; margin-bottom: 1.5rem; }
+  .v-media {
+    position: relative; aspect-ratio: 16 / 9; border-radius: 0.75rem; overflow: hidden;
+    background: linear-gradient(135deg, #0b3d2e, #1b6b52); display: flex; align-items: flex-end; padding: 1rem;
+  }
+  .v-badge { position: absolute; top: 0.75rem; left: 0.75rem; background: var(--gold, #f2a900); color: #1a1400; font-weight: 700; font-size: 0.8rem; padding: 0.25rem 0.6rem; border-radius: 0.4rem; }
+  .v-photo { color: rgba(255,255,255,0.7); font-size: 0.85rem; }
+  .v-buy { border: 1px solid var(--line, #e3e8e5); border-radius: 0.75rem; padding: 1.25rem; align-self: start; }
+  .v-price { font-size: 2rem; font-weight: 800; color: var(--brand, #0b3d2e); margin: 0; }
+  .v-sub { color: var(--muted, #5a6b63); margin: 0.15rem 0 0.5rem; }
+  .v-fine { font-size: 0.85rem; color: var(--brand-2, #1b6b52); margin-top: 0.75rem; }
+  @media (max-width: 46rem) { .vehicle { grid-template-columns: 1fr; } }
+</style>

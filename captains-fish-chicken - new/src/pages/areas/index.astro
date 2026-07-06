@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import areas from '../../data/areas.json';
+import { telHref, telDisplay, orderUrl } from '../../lib/site';
+const title = 'Areas We Serve | Captains Fish and Chicken, Cedar Rapids';
+const description = 'Captains Fish and Chicken serves fried fish, chicken and seafood across the Cedar Rapids metro — neighborhoods and nearby towns. Find fresh-fried catfish, wings and shrimp near you.';
+const byType = (t: string) => (areas as any[]).filter((a) => a.type === t);
+const groups = [
+  { label: 'Cedar Rapids neighborhoods', items: byType('neighborhood') },
+  { label: 'Nearby towns', items: byType('town') },
+  { label: 'Districts & areas', items: byType('district') },
+];
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Areas We Serve</nav>
+      <span class="eyebrow" style="margin-top:14px">Cedar Rapids metro</span>
+      <h1 class="display h-xl" style="margin-top:10px">Areas we serve</h1>
+      <p class="lead mt-s">Fresh-fried fish, chicken and seafood from our 1st Ave NE kitchen — pickup, delivery and catering across Cedar Rapids and the surrounding towns. Find your neighborhood below.</p>
+      <div class="hero__cta mt-m"><a class="btn" href={telHref}>Call {telDisplay}</a><a class="btn btn--ghost" href={orderUrl} target="_blank" rel="noopener">Order Online</a></div>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap">
+      {(areas as any[]).length === 0 && <p class="lead">Area guides coming soon.</p>}
+      {groups.filter((g) => g.items.length > 0).map((g) => (
+        <div style="margin-bottom:44px">
+          <h2 class="display h-md" style="color:var(--navy-800)">{g.label}</h2>
+          <div class="grid grid--4 mt-m">
+            {g.items.map((a: any) => (
+              <a class="card card--link" href={`/areas/${a.slug}/`}><h3 style="font-size:1.15rem">{a.name}</h3><p class="card__desc">{a.intro}</p></a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

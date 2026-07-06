@@ -1,0 +1,11 @@
+{
+  "business": "Captains Fish and Chicken",
+  "archetype": "restaurant",
+  "scopeLocation": "1616 1st Ave NE, Cedar Rapids, IA 52402",
+  "objective": "SEO/GEO/AI-optimized local marketing website for the 1st Ave NE location, built via the localevolve-factory engine happy-path (single converting landing page + machine-readable menu/schema).",
+  "outOfScope": ["Second location at 3100 6th St SW", "Online ordering system (link out to existing delivery partners)"],
+  "dataSourcing": "Re-discovered fresh from public web sources this session (Yelp, KHAK article, delivery aggregators). No prior build reused.",
+  "knownLaunchBlockers": ["Real GA4 measurement id", "Owner-verified menu prices", "Confirmed domain", "Official email", "Real food photography + logo asset"],
+  "createdBy": "operator walkthrough session",
+  "createdDate": "2026-07-05"
+}

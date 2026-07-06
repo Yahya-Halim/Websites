@@ -1,0 +1,30 @@
+{
+  "id": "site",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Menu", "href": "/menu" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "links": [
+      { "label": "Menu", "href": "/menu" },
+      { "label": "About", "href": "/about" },
+      { "label": "How to Order", "href": "/how-to-order" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "copyrightText": "© 2024–2026 Captains Fish and Chicken"
+  },
+  "schemaMap": {},
+  "cta": { "text": "Call to order", "href": "tel:+13192211040" },
+  "ctaPrimary": { "text": "Call (319) 221-1040", "href": "tel:+13192211040" },
+  "valueProps": [
+    { "label": "Made fresh to order" },
+    { "label": "Fish and chicken done right" },
+    { "label": "Family-owned" }
+  ],
+  "ctaBanner": {
+    "headline": "Call ahead — your order's hot when you arrive.",
+    "sublabel": "Counter-service, takeout-first. Call (319) 221-1040."
+  }
+}

@@ -1,0 +1,26 @@
+# Captains Fish and Chicken
+> Fresh-to-order fried fish and chicken on the northeast side of Cedar Rapids.
+
+## NAP
+- Name: Captains Fish and Chicken
+- Address: 1616 1st Ave NE, Cedar Rapids, IA 52402
+- Phone: +1-319-221-1040
+- Email: owner@captainsfishandchicken.example
+
+## Hours
+Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm
+
+## Domain
+https://captainsfishandchicken.example
+
+## Description
+Captains Fish and Chicken is a family-owned, counter-service soul-food restaurant at 1616 1st Ave NE in Cedar Rapids, serving fried catfish, fish, chicken, wings, and Southern sides made fresh to order. Owner Ray Aqel has run the same concept in Minnesota, Illinois, and Michigan and has managed restaurants since 2006; Cedar Rapids is his first Iowa location. Takeout-first, with delivery on the major apps.
+
+## Owner
+Ray Aqel
+
+## Payment Accepted
+Cash and major cards
+
+## Year Established
+2024

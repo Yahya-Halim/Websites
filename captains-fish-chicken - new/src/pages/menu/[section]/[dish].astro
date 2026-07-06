@@ -1,0 +1,97 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { menu, telHref, telDisplay, orderUrl, slugify, money, fromPrice } from '../../../lib/site';
+
+export function getStaticPaths() {
+  const paths = [];
+  for (const section of menu) {
+    for (const item of section.items) {
+      paths.push({ params: { section: section.slug, dish: slugify(item.name) }, props: { section, item } });
+    }
+  }
+  return paths;
+}
+const { section, item } = Astro.props;
+
+const serveCopy: Record<string, string> = {
+  wings: 'Fried to order and tossed hot — crispy skin, juicy inside. Grab a meal or a bulk order for the crew.',
+  chicken: 'Hand-breaded and dropped fresh, so it comes out golden and hot every time.',
+  shrimp: 'Breaded and fried to order for a crunchy shell and a snappy, tender bite.',
+  seafood: 'Breaded and fried fresh to order, served hot and crisp with your choice of sides and bread.',
+  'gizzards-livers': 'A Southern classic, fried fresh and seasoned — crispy outside, rich inside.',
+  combos: 'Mix and match your favorites into one plate with fries and bread — built your way.',
+  'family-deals': 'A big-batch portion built to feed the whole table, fried fresh when you order.',
+  sides: 'The perfect sidekick — fried fresh and ready to round out any basket.',
+  desserts: 'A sweet finish to your fried-seafood feast.',
+  drinks: 'An ice-cold pour to wash it all down.',
+};
+const serve = serveCopy[section.slug] ?? 'Made fresh to order at Captains Fish and Chicken.';
+
+const sides = (menu.find((s) => s.slug === 'sides')?.items ?? []).filter((i) => ['Hush Puppies', 'Fries', 'Okra', 'Cheese Curds', 'Onion Rings'].includes(i.name)).slice(0, 4);
+const related = section.items.filter((i) => i.name !== item.name).slice(0, 4);
+
+const title = `${item.name} | Captains Fish and Chicken, Cedar Rapids`;
+const description = `${item.name} at Captains Fish and Chicken in Cedar Rapids — ${serve} From ${money(fromPrice(item))}. Call ${telDisplay} or order online.`;
+
+const breadcrumb = {
+  '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: '/' },
+    { '@type': 'ListItem', position: 2, name: 'Menu', item: '/menu/' },
+    { '@type': 'ListItem', position: 3, name: section.name, item: `/menu/${section.slug}/` },
+    { '@type': 'ListItem', position: 4, name: item.name, item: `/menu/${section.slug}/${slugify(item.name)}/` },
+  ],
+};
+const itemLd = {
+  '@context': 'https://schema.org', '@type': 'MenuItem', name: item.name,
+  ...(item.description ? { description: item.description } : { description: serve }),
+  offers: item.prices.map((p) => ({ '@type': 'Offer', name: p.label, price: p.price.toFixed(2), priceCurrency: 'USD', availability: 'https://schema.org/InStock' })),
+};
+---
+<Base title={title} description={description} jsonLd={[breadcrumb, itemLd]}>
+  <section class="section section--navy-deep" style="padding-block:52px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / <a href="/menu/">Menu</a> / <a href={`/menu/${section.slug}/`}>{section.name}</a> / {item.name}</nav>
+      <span class="eyebrow" style="margin-top:14px">{section.name} · Cedar Rapids</span>
+      <h1 class="display h-xl" style="margin-top:10px">{item.name}</h1>
+      <p class="lead mt-s">{item.description ?? serve}</p>
+      <div class="pill-row mt-m">{item.prices.map((p) => <span class="price-pill" style="font-size:1rem;padding:8px 16px">{p.label} · {money(p.price)}</span>)}</div>
+      <div class="hero__cta mt-m">
+        <a class="btn" href={telHref}>Call to Order · {telDisplay}</a>
+        <a class="btn btn--ghost" href={orderUrl} target="_blank" rel="noopener">Order Online</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="wrap-narrow">
+      <h2 class="display h-md" style="color:var(--navy-800)">How we serve it</h2>
+      <p class="lead mt-s">{serve} At Captains Fish and Chicken we drop every order fresh, so your {item.name.toLowerCase()} arrives hot and crisp — never sitting under a heat lamp. Call ahead at {telDisplay} for faster pickup.</p>
+
+      {sides.length > 0 && (
+        <div class="mt-l">
+          <h3 class="display h-md" style="color:var(--navy-800);font-size:1.4rem">Pairs well with</h3>
+          <div class="grid grid--4 mt-s">
+            {sides.map((sd) => (
+              <a class="card card--link" href={`/menu/sides/${slugify(sd.name)}/`}><h3 style="font-size:1.05rem">{sd.name}</h3><span class="price-pill" style="align-self:flex-start">from {money(fromPrice(sd))}</span></a>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  {related.length > 0 && (
+    <section class="section section--paper">
+      <div class="wrap">
+        <h2 class="display h-md" style="color:var(--navy-800)">More {section.name.toLowerCase()}</h2>
+        <div class="grid grid--4 mt-m">
+          {related.map((r) => (
+            <a class="card card--link" href={`/menu/${section.slug}/${slugify(r.name)}/`}><h3 style="font-size:1.1rem">{r.name}</h3><span class="price-pill" style="align-self:flex-start">from {money(fromPrice(r))}</span></a>
+          ))}
+        </div>
+        <div class="mt-l"><a class="btn btn--navy" href={`/menu/${section.slug}/`}>All {section.name} →</a></div>
+      </div>
+    </section>
+  )}
+</Base>

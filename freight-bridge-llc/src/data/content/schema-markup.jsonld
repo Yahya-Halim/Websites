@@ -40,11 +40,6 @@
           "@type": "PropertyValue",
           "name": "USDOT Number",
           "value": "4166904"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "MC Number",
-          "value": "1734786"
         }
       ],
       "numberOfEmployees": "Experienced crew",
@@ -127,11 +122,6 @@
           "@type": "PropertyValue",
           "name": "USDOT Number",
           "value": "4166904"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "MC Number",
-          "value": "1734786"
         }
       ],
       "numberOfEmployees": "Experienced crew",
@@ -252,11 +242,6 @@
           "@type": "PropertyValue",
           "name": "USDOT Number",
           "value": "4166904"
-        },
-        {
-          "@type": "PropertyValue",
-          "name": "MC Number",
-          "value": "1734786"
         }
       ],
       "numberOfEmployees": "Experienced crew",

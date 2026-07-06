@@ -1,0 +1,14 @@
+# Captains Fish and Chicken
+> Fresh-to-order fried fish, chicken & seafood in Cedar Rapids
+
+## NAP
+- Name: Captains Fish and Chicken
+- Address: 1616 1st Ave NE, Cedar Rapids, IA 52402
+- Phone: (319) 221-1040
+- Email: hello@captainsfishandchicken.com
+
+## Hours
+Mon-Thu 11am-10pm | Fri-Sat 11am-11pm | Sun 11am-8pm
+
+## Domain
+https://captainsfishandchicken.com

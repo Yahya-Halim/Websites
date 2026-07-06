@@ -22,19 +22,11 @@ A trustworthy company like Freight Bridge LLC will walk you through every piece 
 
 ## Pricing for Long-Distance Moves
 
-Interstate moving costs are based on three factors: **weight**, **distance**, and **services**.
+Interstate moving costs are based on three factors: **weight**, **distance**, and **services**. Because every move is different, we don't publish one-size-fits-all prices — competitors vary widely, and we prefer to give you an honest, custom quote based on exactly what you're moving.
 
-### By Weight and Distance
-- **Cross-country (2,000+ miles):** $4,000–$8,000 for a 1-bedroom; $6,000–$12,000 for a 3-bedroom
-- **Mid-range (500–1,000 miles):** $2,500–$5,000 for a 1-bedroom; $4,000–$8,000 for a 3-bedroom
-- **Short interstate (under 500 miles):** $1,500–$3,500 for a 1-bedroom; $3,000–$6,000 for a 3-bedroom
+> **🍂 Summer-to-Fall Special: 10% off all long-distance moves booked between now and the end of fall.** Call for a custom quote and lock in your discount.
 
-For example, moving from the Quad Cities to Nashville for a 2-bedroom home typically costs between $3,000 and $5,000. A move from Des Moines to Denver is similar. Going from Sioux City to Seattle could run $6,000 to $10,000.
-
-### Additional Costs
-- **Full packing service:** $500–$2,000
-- **Storage (if needed):** $100–$300 per month
-- **Bulky item fees:** $100–$500 for items like pianos or pool tables
+The best way to get an accurate price is to call us directly. We'll ask about your home size, destination, and any special items so you get a binding estimate with no surprises.
 
 ## Timing Your Long-Distance Move
 
@@ -69,9 +61,9 @@ Plan to live out of this suitcase for at least a week after pickup.
 
 ## Protecting Your Belongings
 
-**Released Value (free):** Covers 60 cents per pound per item. A $2,000 dining table weighing 100 pounds gets you $60 if damaged. Not real insurance.
+**Released Value (free):** Covers a minimal amount per pound per item — far below the actual value of most furniture. Not real insurance.
 
-**Full Value Protection (costs extra):** The mover is liable for replacement value. Typically 1–2% of your shipment's declared value. For a $30,000 household, that's $300 to $600—a small price for peace of mind.
+**Full Value Protection (costs extra):** The mover is liable for replacement value. Typically a small percentage of your shipment's declared value. For most households, the added cost is modest compared to the peace of mind it provides.
 
 ## Iowa-Specific Considerations
 

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 4,
+  "reviewer": "build-quality",
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-4.json",
+  "artifactHash": "97012497f7dc7462af36084c7ee7cc169b3329bd99daa4ec27a43272afc7f98c",
+  "notesFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/reviews/phase-4-build-quality.md",
+  "notes": "# Review — Phase 4 BUILD · reviewer: build-quality · verdict: PASS\n\nBuild exits 0; the single `/` route renders real, on-brand content (business name, value props,\nfamily deals, NAP, call CTA all present in dist/index.html). The engine integration was used as\nintended — no ejected routes, no hand-rolled src/pages. JSON-LD is a proper Restaurant entity with\naddress, geo, dual opening-hours blocks, and the three family deals projected as makesOffer. llms.txt,\nrobots.txt and sitemap all generated.\n\nvalidate exits 1, but every finding is expected and correctly classified: the ONLY hard ship-blocker\nis the GA4 placeholder (by design — a real id is a launch input, not a build defect); the missing\nlogo is a Phase-6 imagery task; the no-validThrough offers are LOW/evergreen. Nothing here is a code\nor content defect. Build quality is acceptable to proceed to VALIDATE.\n",
+  "reviewedAt": "2026-07-05T19:41:34.668Z"
+}

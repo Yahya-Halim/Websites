@@ -1,0 +1,36 @@
+[
+  {
+    "slug": "mound-view",
+    "name": "Mound View",
+    "headline": "Captains Fish and Chicken in Mound View, NE Cedar Rapids",
+    "body": "Captains Fish and Chicken sits on the 1st Avenue NE corridor in the Mound View area on the northeast side of Cedar Rapids — an easy counter-service stop for fried fish and chicken to go.",
+    "localFacts": [
+      "On the 1st Avenue NE corridor, a main northeast-side arterial",
+      "Near the neighborhood Hy-Vee",
+      "Onsite parking at the 1616 1st Ave NE storefront"
+    ],
+    "proximityTrustLines": [
+      "A quick stop for northeast-side lunch and dinner pickups along 1st Ave NE.",
+      "Call-ahead orders are ready fast for regulars on this side of town."
+    ],
+    "townFaqs": [
+      {
+        "question": "Is there parking at the 1st Ave NE location?",
+        "answer": "Yes — the storefront at 1616 1st Ave NE has onsite parking, plus street parking along 1st Avenue NE."
+      },
+      {
+        "question": "What part of Cedar Rapids is Captains in?",
+        "answer": "The northeast side, on the 1st Avenue NE corridor near Hy-Vee."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "Browse the full menu", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Captains Fish and Chicken — Mound View, NE Cedar Rapids",
+      "description": "Fried fish and chicken to go on the 1st Avenue NE corridor in northeast Cedar Rapids, near Hy-Vee with onsite parking.",
+      "canonical": "https://captainsfishandchicken.example/neighborhoods/mound-view/"
+    }
+  }
+]

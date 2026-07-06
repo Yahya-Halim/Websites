@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-f333953f",
+  "phase": 2,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-e2e-test/plan/phase-2-page-matrix.json",
+  "artifactHash": "6c422d7a8108c34938878bf341a470cd626e7c544f2189bbadc0b975888afcd2",
+  "notesFile": "D:/website/captains-e2e-test/plan/phase-2-approval-notes.md",
+  "notes": "# Phase 2 approval notes — page matrix\n\n**Actor:** Yahya\n**Run:** captains-fish-and-chicken-2026-07-05-f333953f\n**Artifact approved:** plan/phase-2-page-matrix.json\n**Date:** 2026-07-05\n\n## What is approved\nThe page matrix and strategy: 32 internal pages across 6 restaurant families (core, menu-category, search-intent, occasion, neighborhood, story), fold decisions, CRO-block map, and image-slot plan. Approved to proceed to Phase 3 (DESIGN).\n\n## CONDITIONAL — unresolved blockers carried forward (NOT cleared by this approval)\nThis approval does NOT resolve the conversion-surface blockers. They remain OPEN action-items that MUST be decided before the Phase 4 build gate:\n\n- **CSB-lead-form (blocking at build):** Home + Contact require a lead form -> external https endpoint. None exists. These pages WILL FAIL the cro-block-presence gate at Phase 4/5 until the owner provides a Web3Forms (or similar) endpoint + business email, OR Yahya records an explicit exception to drop the form (contact = phone/map only).\n- **CSB-dual-cta (gate risk):** No SMS number -> dual-CTA degrades to call-only. Accept call-only (documented) or provide an SMS-capable number before build.\n- **CSB-trust-grid:** Omitted per the <6-facts rule. No action (allowed).\n\nDesign may proceed without these; the build gate cannot. They will be re-surfaced before Phase 4 and are the subject of the 4->5 preflight.\n",
+  "approvedAt": "2026-07-06T01:32:52.672Z",
+  "expiresAt": "2026-07-13T01:32:52.672Z"
+}

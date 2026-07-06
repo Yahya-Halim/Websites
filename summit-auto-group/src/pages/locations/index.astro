@@ -1,0 +1,46 @@
+---
+import PageLayout from '../../components/PageLayout.astro';
+import { getCollection } from 'astro:content';
+import { webPage, itemList } from '../../lib/schema';
+
+const locations = await getCollection('locations');
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Locations', path: '/locations' },
+];
+
+const description =
+  'Summit Auto Group serves Denver, Aurora, and Lakewood, Colorado with used and certified pre-owned vehicles, financing, trade-ins, and full-service maintenance.';
+
+const schemas = [
+  webPage({ name: 'Areas We Serve', path: '/locations', description, type: 'CollectionPage' }),
+  itemList(
+    'Summit Auto Group Service Areas',
+    locations.map((l) => ({ name: `${l.data.city}, ${l.data.state}`, path: `/locations/${l.data.slug}` })),
+  ),
+];
+---
+
+<PageLayout
+  title="Areas We Serve — Denver, Aurora & Lakewood | Summit Auto Group"
+  description={description}
+  breadcrumbs={crumbs}
+  eyebrow="Locations"
+  heroTitle="Serving the Denver metro"
+  heroSubtitle="One dealership on Federal Blvd, delivering to drivers across the Front Range."
+  schemas={schemas}
+>
+  <div class="grid">
+    {locations.map((l) => (
+      <div class="card">
+        <h3>{l.data.city}, {l.data.state}</h3>
+        <p>{l.data.seo.description}</p>
+        {l.data.inventoryFocus && (
+          <p><strong>Popular here:</strong> {l.data.inventoryFocus.join(', ')}</p>
+        )}
+        <a class="card-link" href={`/locations/${l.data.slug}`}>{l.data.city} details →</a>
+      </div>
+    ))}
+  </div>
+</PageLayout>

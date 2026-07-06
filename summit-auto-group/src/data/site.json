@@ -1,0 +1,26 @@
+{
+  "id": "site",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Inventory", "href": "/inventory" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Financing", "href": "/financing" },
+    { "label": "Locations", "href": "/locations" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "links": [
+      { "label": "Inventory", "href": "/inventory" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Financing", "href": "/financing" },
+      { "label": "Locations", "href": "/locations" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" },
+      { "label": "FAQ", "href": "/faq" }
+    ],
+    "copyrightText": "© 2009–2026 Summit Auto Group · 4820 Federal Blvd, Denver, CO 80221"
+  },
+  "schemaMap": {},
+  "cta": { "text": "Schedule Test Drive", "href": "tel:+13035550142" }
+}

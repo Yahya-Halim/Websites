@@ -1,0 +1,29 @@
+{
+  "engagement": "captains-e2e-test",
+  "business": "Captains Fish and Chicken",
+  "businessType": "counter-service soul-food / fried-fish restaurant",
+  "serviceModel": "counter-service",
+  "scope": "single location",
+  "location": {
+    "streetAddress": "1616 1st Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "postalCode": "52402",
+    "singleLocationInScope": true
+  },
+  "phone": "(319) 221-1040",
+  "owner": "Ray Aqel",
+  "openedDate": "2024-10",
+  "hoursRaw": "Sun 11am-8pm, Mon-Thu 11am-10pm, Fri-Sat 11am-11pm",
+  "hours": {
+    "sunday": "11:00-20:00",
+    "monday": "11:00-22:00",
+    "tuesday": "11:00-22:00",
+    "wednesday": "11:00-22:00",
+    "thursday": "11:00-22:00",
+    "friday": "11:00-23:00",
+    "saturday": "11:00-23:00"
+  },
+  "provenance": "Seed facts supplied by engagement owner. Everything else must come from the Phase 0 interview or Phase 1 research. No prior Captain's build referenced.",
+  "seedFactsOnly": true
+}

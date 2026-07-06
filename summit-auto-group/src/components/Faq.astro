@@ -1,0 +1,24 @@
+---
+import { faqPage } from '../lib/schema';
+
+interface Props {
+  faqs: { question: string; answer: string }[];
+  heading?: string;
+}
+
+const { faqs, heading = 'Frequently asked questions' } = Astro.props;
+---
+
+{faqs.length > 0 && (
+  <section class="faq">
+    <h2>{heading}</h2>
+    {faqs.map((f) => (
+      <details class="faq-item">
+        <summary>{f.question}</summary>
+        <p>{f.answer}</p>
+      </details>
+    ))}
+    {/* FAQPage schema — mainEntity text matches the visible <details> content exactly. */}
+    <script type="application/ld+json" set:html={JSON.stringify(faqPage(faqs))} />
+  </section>
+)}

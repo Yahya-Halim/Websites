@@ -1,0 +1,197 @@
+---
+import Base from '@engine/layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderFaqJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+// CRO blocks (T4) composed into the menu-category kind.
+import Hero from '@engine/components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+// One static page per menu-collection section, keyed by the entry's own
+// `slug` field. Empty collection → no paths → route generates nothing (the
+// scaffold default ships an empty menu.json and still builds).
+export async function getStaticPaths() {
+  const sections = await getCollection('menu');
+  return sections.map((section) => ({
+    params: { slug: section.data.slug },
+    props: { section },
+  }));
+}
+
+const { section } = Astro.props;
+const s = section.data;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+// site.json drives the CRO blocks (hero dual-CTA, trust bar, conditional promos).
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const name = s.name;
+const description = s.description ?? '';
+// seo is optional on menu sections; fall back to data-derived metadata.
+const businessName = business?.name ?? '';
+const title = s.seo?.title ?? `${name} — ${businessName}`;
+const metaDescription = s.seo?.description ?? description;
+const faqs = s.faqs ?? [];
+const crossLinks = s.crossLinks ?? [];
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site
+  ? new URL(`/menu/${s.slug}/`, Astro.site).href
+  : `/menu/${s.slug}/`;
+const websiteUrl = business?.domain ?? siteRoot;
+const menuUrl = Astro.site ? new URL('/menu/', Astro.site).href : '/menu/';
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description: metaDescription,
+  websiteName: businessName,
+  websiteUrl,
+});
+
+// Home → Menu → {name}. Menu crumb carries the real /menu/ hub url.
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Menu', url: menuUrl },
+    { name },
+  ],
+});
+
+const faqLd = renderFaqJsonLd({ faqs });
+
+// Prices render ONLY when the item carries owner-authoritative price data
+// (prices is optional — omit-never-fabricate; no placeholder amounts).
+const priceLine = (prices) =>
+  (prices ?? []).map((p) => (prices.length > 1 ? `${p.label} $${p.price.toFixed(2)}` : `$${p.price.toFixed(2)}`)).join(' · ');
+---
+
+<Base title={title} description={metaDescription} jsonLd={[webPageLd, breadcrumbLd, faqLd]}>
+  <article class="menu-section">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading={name}
+      subheading={description}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    <section class="items" aria-labelledby="items-heading">
+      <h2 id="items-heading">On the menu</h2>
+      <ul>
+        {s.items.map((item) => (
+          <li>
+            <span class="item-name">{item.name}</span>
+            {item.spicy && <span class="item-flag" aria-label="spicy">🌶</span>}
+            {item.dietary && item.dietary.length > 0 && (
+              <span class="item-dietary">{item.dietary.join(', ')}</span>
+            )}
+            {item.description && <p class="item-description">{item.description}</p>}
+            {item.prices && item.prices.length > 0 && (
+              <span class="item-prices">{priceLine(item.prices)}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    {faqs.length > 0 && (
+      <section class="faqs" aria-labelledby="faqs-heading">
+        <h2 id="faqs-heading">Frequently asked questions</h2>
+        <dl>
+          {faqs.map((faq) => (
+            <>
+              <dt>{faq.question}</dt>
+              <dd>{faq.answer}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {crossLinks.length > 0 && (
+      <nav class="related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related</h2>
+        <ul>
+          {crossLinks.map((link) => (
+            <li><a href={link.slug}>{link.anchor}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+  </article>
+</Base>
+
+<style>
+  .menu-section {
+    padding: 2rem 0;
+  }
+  .items {
+    margin-top: 2rem;
+  }
+  .items ul {
+    list-style: none;
+    padding: 0;
+  }
+  .items li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .item-name {
+    font-weight: 600;
+  }
+  .item-flag {
+    margin-left: 0.35rem;
+  }
+  .item-dietary {
+    margin-left: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  .item-description {
+    margin: 0.25rem 0 0;
+    color: #444;
+    line-height: 1.5;
+  }
+  .item-prices {
+    display: block;
+    margin-top: 0.25rem;
+    font-weight: 500;
+  }
+  .faqs {
+    margin-top: 2.5rem;
+  }
+  .faqs dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .faqs dd {
+    margin: 0.25rem 0 0;
+    line-height: 1.5;
+  }
+  .related {
+    margin-top: 2rem;
+  }
+</style>

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "phase": 2,
+  "reviewer": "page-matrix-depth",
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-2.json",
+  "artifactHash": "3f4a91b6ddab0bd7775623a1a63658ece006c4788809d8577e48c9e750f4d933",
+  "notesFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/reviews/phase-2-page-matrix-depth.md",
+  "notes": "# Review — Phase 2 PLAN · reviewer: page-matrix-depth · verdict: PASS\n\nThe single-route matrix is correct FOR THIS ENGINE. The restaurant archetype injects only `/`,\nso inventing /menu, /deals, /visit HTML routes would mean ejecting the integration — the exact\n\"old work\" path we were told not to repeat. The plan instead folds menu/deals/visit into the\nlanding plus machine-readable schema (Menu, LocalBusiness, Offer), which is the intended GEO/AI\nsurface. That is depth in the right layer (structured data) rather than page-count padding.\n\nAnti-doorway check: no thin matrix pages are generated, so there is nothing to fail the\ndo-not-ship unique-content requirement. Good.\n\nOne carried condition: the folded-menu decision means the menu is not human-browsable as its own\npage at launch. That is an engine limitation, documented in the artifact and acceptable for v0.x —\nflag it to the owner so expectations are set. Real-photo slots are correctly marked\nblocked-awaiting-photos rather than fabricated. PASS.\n",
+  "reviewedAt": "2026-07-05T19:35:48.512Z"
+}

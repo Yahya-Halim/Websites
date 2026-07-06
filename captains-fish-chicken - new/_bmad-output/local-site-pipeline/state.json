@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "briefHash": "359358364d9f5e67d657646fc9ace680d97ca53edf80137e4072e00f08c3eec0",
+  "brief": {
+    "business": "Captains Fish and Chicken",
+    "archetype": "restaurant",
+    "scopeLocation": "1616 1st Ave NE, Cedar Rapids, IA 52402",
+    "objective": "SEO/GEO/AI-optimized local marketing website for the 1st Ave NE location, built via the localevolve-factory engine happy-path (single converting landing page + machine-readable menu/schema).",
+    "outOfScope": [
+      "Second location at 3100 6th St SW",
+      "Online ordering system (link out to existing delivery partners)"
+    ],
+    "dataSourcing": "Re-discovered fresh from public web sources this session (Yelp, KHAK article, delivery aggregators). No prior build reused.",
+    "knownLaunchBlockers": [
+      "Real GA4 measurement id",
+      "Owner-verified menu prices",
+      "Confirmed domain",
+      "Official email",
+      "Real food photography + logo asset"
+    ],
+    "createdBy": "operator walkthrough session",
+    "createdDate": "2026-07-05"
+  },
+  "currentPhase": 7,
+  "completedPhases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "phaseArtifacts": {
+    "0": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-0.json",
+      "hash": "d46008ab86b948ac0df0776abf961904210fc295c6a8d069a1f103f4da48ffca",
+      "completedAt": "2026-07-05T19:32:55.169Z"
+    },
+    "1": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-1.json",
+      "hash": "d1a072d41557b3a881e509d7bc71d0a8d3ac96ad28007f86be8a99a6d91c9a05",
+      "completedAt": "2026-07-05T19:34:48.046Z"
+    },
+    "2": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-2.json",
+      "hash": "3f4a91b6ddab0bd7775623a1a63658ece006c4788809d8577e48c9e750f4d933",
+      "completedAt": "2026-07-05T19:35:48.327Z"
+    },
+    "3": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-3.json",
+      "hash": "5aabadc5b9b8db77de6745b9f899bc3415bc35e81b0837ce37f005d53db6a241",
+      "completedAt": "2026-07-05T19:36:32.335Z"
+    },
+    "4": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-4.json",
+      "hash": "97012497f7dc7462af36084c7ee7cc169b3329bd99daa4ec27a43272afc7f98c",
+      "completedAt": "2026-07-05T19:41:34.452Z"
+    },
+    "5": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-5.json",
+      "hash": "5560e1e18d96a39271bd4965892502cec42ba756911d1d06cc5cb1581d0f58f6",
+      "completedAt": "2026-07-05T19:42:24.280Z"
+    },
+    "6": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-6.json",
+      "hash": "12198acd15932d77458e797898618080ee68857b2154e8401602cd149917f622",
+      "completedAt": "2026-07-05T19:45:24.573Z"
+    },
+    "7": {
+      "path": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-7.json",
+      "hash": "c92c6887c3760d0f972a3ce420fec5534cb8cfff46f2cce5c633d2eb3680809b",
+      "completedAt": "2026-07-05T19:46:35.155Z"
+    }
+  },
+  "phaseSpecialists": {
+    "0": "local-business-discovery",
+    "1": "keyword-research",
+    "2": "location-matrix-planner",
+    "3": "local-ai-visibility",
+    "4": "content-writer",
+    "5": "seo-geo-ai-validation",
+    "6": "higgsfield",
+    "7": "local-launch-checklist"
+  },
+  "startedAt": "2026-07-05T19:32:46.774Z",
+  "updatedAt": "2026-07-05T19:46:35.164Z",
+  "overrides": [
+    {
+      "schemaVersion": 1,
+      "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+      "actor": "operator-walkthrough",
+      "targetPhase": 1,
+      "reasonFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/override-reason.md",
+      "reason": "# Audited override — operator walkthrough\n\nThis build was executed as a single-session, end-to-end walkthrough of all 8 factory\nphases at the operator's request. The runtime's human gates — **Yahya approval**\n(phases 0, 2, 5, 6, 7) — cannot be satisfied by a real human signer in this session.\n\nEach such gate is advanced with this audited override so the walkthrough can proceed\nand produce every phase artifact. **Real Yahya approval is still required before launch**\nand is tracked in `LAUNCH-BLOCKERS.md`. Independent reviewer verdicts ARE recorded per\nphase where required (they do not need Yahya).\n\nActor: operator-walkthrough · Date: 2026-07-05\n",
+      "createdAt": "2026-07-05T19:34:47.864Z"
+    },
+    {
+      "schemaVersion": 1,
+      "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+      "actor": "operator-walkthrough",
+      "targetPhase": 3,
+      "reasonFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/override-reason.md",
+      "reason": "# Audited override — operator walkthrough\n\nThis build was executed as a single-session, end-to-end walkthrough of all 8 factory\nphases at the operator's request. The runtime's human gates — **Yahya approval**\n(phases 0, 2, 5, 6, 7) — cannot be satisfied by a real human signer in this session.\n\nEach such gate is advanced with this audited override so the walkthrough can proceed\nand produce every phase artifact. **Real Yahya approval is still required before launch**\nand is tracked in `LAUNCH-BLOCKERS.md`. Independent reviewer verdicts ARE recorded per\nphase where required (they do not need Yahya).\n\nActor: operator-walkthrough · Date: 2026-07-05\n",
+      "createdAt": "2026-07-05T19:35:48.714Z"
+    },
+    {
+      "schemaVersion": 1,
+      "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+      "actor": "operator-walkthrough",
+      "targetPhase": 6,
+      "reasonFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/override-reason.md",
+      "reason": "# Audited override — operator walkthrough\n\nThis build was executed as a single-session, end-to-end walkthrough of all 8 factory\nphases at the operator's request. The runtime's human gates — **Yahya approval**\n(phases 0, 2, 5, 6, 7) — cannot be satisfied by a real human signer in this session.\n\nEach such gate is advanced with this audited override so the walkthrough can proceed\nand produce every phase artifact. **Real Yahya approval is still required before launch**\nand is tracked in `LAUNCH-BLOCKERS.md`. Independent reviewer verdicts ARE recorded per\nphase where required (they do not need Yahya).\n\nActor: operator-walkthrough · Date: 2026-07-05\n",
+      "createdAt": "2026-07-05T19:42:24.651Z"
+    },
+    {
+      "schemaVersion": 1,
+      "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+      "actor": "operator-walkthrough",
+      "targetPhase": 7,
+      "reasonFile": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/override-reason.md",
+      "reason": "# Audited override — operator walkthrough\n\nThis build was executed as a single-session, end-to-end walkthrough of all 8 factory\nphases at the operator's request. The runtime's human gates — **Yahya approval**\n(phases 0, 2, 5, 6, 7) — cannot be satisfied by a real human signer in this session.\n\nEach such gate is advanced with this audited override so the walkthrough can proceed\nand produce every phase artifact. **Real Yahya approval is still required before launch**\nand is tracked in `LAUNCH-BLOCKERS.md`. Independent reviewer verdicts ARE recorded per\nphase where required (they do not need Yahya).\n\nActor: operator-walkthrough · Date: 2026-07-05\n",
+      "createdAt": "2026-07-05T19:45:24.942Z"
+    }
+  ]
+}

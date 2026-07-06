@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "wings",
+    "name": "Wings",
+    "order": 1,
+    "description": "Whole, party and boneless wings, fried fresh to order.",
+    "items": [
+      { "name": "Whole Wings", "description": "Bone-in whole wings.", "prices": [{ "label": "Meal", "price": 8.99 }, { "label": "Wings only (bulk)", "price": 32.99 }] },
+      { "name": "Party Wings", "description": "Split party-style wings.", "prices": [{ "label": "Meal", "price": 14.99 }, { "label": "Chicken only (bulk)", "price": 45.99 }] },
+      { "name": "Boneless Wings", "description": "Breaded boneless bites.", "prices": [{ "label": "Meal", "price": 12.99 }, { "label": "Bulk", "price": 26.99 }] }
+    ]
+  },
+  {
+    "slug": "chicken",
+    "name": "Chicken",
+    "order": 2,
+    "description": "Fried chicken and hand-breaded tenders.",
+    "items": [
+      { "name": "Chicken Leg & Thigh Mix", "description": "Fried leg-and-thigh mix.", "prices": [{ "label": "Meal (mix)", "price": 12.99 }, { "label": "Chicken only (bulk)", "price": 39.99 }] },
+      { "name": "Chicken Tenders", "description": "Hand-breaded tenders.", "prices": [{ "label": "Meal", "price": 12.99 }, { "label": "20 pieces only", "price": 59.99 }] }
+    ]
+  },
+  {
+    "slug": "shrimp",
+    "name": "Shrimp",
+    "order": 3,
+    "description": "Breaded jumbo, medium and popcorn shrimp.",
+    "items": [
+      { "name": "Jumbo Shrimp", "description": "Breaded jumbo shrimp.", "prices": [{ "label": "7 pc (½ lb)", "price": 15.99 }, { "label": "14 pc (1 lb)", "price": 25.99 }] },
+      { "name": "Medium Shrimp", "description": "Breaded medium shrimp.", "prices": [{ "label": "½ lb", "price": 13.99 }, { "label": "1 lb", "price": 21.99 }] },
+      { "name": "Popcorn Shrimp Basket", "prices": [{ "label": "Basket", "price": 10.99 }] }
+    ]
+  },
+  {
+    "slug": "seafood",
+    "name": "Seafood",
+    "order": 4,
+    "description": "Catfish, perch, tilapia, cod, red snapper, calamari and crab cakes.",
+    "items": [
+      { "name": "Catfish, Perch & Tilapia Fillets", "description": "Your pick of catfish, perch or tilapia fillets.", "prices": [{ "label": "2 pc", "price": 13.99 }, { "label": "3 pc", "price": 16.99 }, { "label": "4 pc", "price": 21.99 }] },
+      { "name": "Perch (bone-in)", "prices": [{ "label": "2 pc", "price": 13.99 }, { "label": "3 pc", "price": 15.99 }, { "label": "4 pc", "price": 19.99 }] },
+      { "name": "Catfish Nuggets", "prices": [{ "label": "1 lb", "price": 14.99 }] },
+      { "name": "Cod", "prices": [{ "label": "2 pc", "price": 14.99 }, { "label": "3 pc", "price": 19.99 }, { "label": "4 pc", "price": 23.99 }] },
+      { "name": "Red Snapper", "prices": [{ "label": "2 pc", "price": 14.99 }, { "label": "3 pc", "price": 19.99 }, { "label": "4 pc", "price": 23.99 }] },
+      { "name": "Crab Cakes", "prices": [{ "label": "4 pc meal", "price": 14.99 }] },
+      { "name": "Calamari Rings", "prices": [{ "label": "12 pc", "price": 13.99 }] }
+    ]
+  },
+  {
+    "slug": "gizzards-livers",
+    "name": "Gizzards & Livers",
+    "order": 5,
+    "items": [
+      { "name": "Gizzards", "prices": [{ "label": "1 lb", "price": 13.99 }] },
+      { "name": "Livers", "prices": [{ "label": "1 lb", "price": 13.99 }] }
+    ]
+  },
+  {
+    "slug": "combos",
+    "name": "Combo Dinners",
+    "order": 6,
+    "description": "Mix and match your favorites.",
+    "items": [
+      { "name": "Combo Dinner", "description": "Your choice of items with fries and bread.", "prices": [{ "label": "Choice of 2 items", "price": 18.99 }, { "label": "Choice of 3 items", "price": 21.99 }] }
+    ]
+  },
+  {
+    "slug": "family-deals",
+    "name": "Family & Party Deals",
+    "order": 7,
+    "description": "Big-batch portions to feed the whole table.",
+    "items": [
+      { "name": "Fish-Only Family Deal", "description": "Catfish, perch and tilapia family portion.", "prices": [{ "label": "Family deal", "price": 49.99 }] },
+      { "name": "Catfish Nuggets Pan", "prices": [{ "label": "Half pan", "price": 49.99 }, { "label": "Full pan", "price": 89.99 }] },
+      { "name": "Captain's Family Meal Deal", "description": "Large fries plus two items.", "prices": [{ "label": "Deal", "price": 59.99 }] }
+    ]
+  },
+  {
+    "slug": "sides",
+    "name": "Sides & Extras",
+    "order": 8,
+    "items": [
+      { "name": "Okra", "prices": [{ "label": "Order", "price": 6.99 }] },
+      { "name": "Hush Puppies", "prices": [{ "label": "10 pc", "price": 6.99 }] },
+      { "name": "Breaded Mushrooms", "prices": [{ "label": "10 pc", "price": 6.99 }] },
+      { "name": "Mac & Cheese Bites", "prices": [{ "label": "10 pc", "price": 6.99 }] },
+      { "name": "Cheese Sticks", "prices": [{ "label": "5 pc", "price": 6.99 }] },
+      { "name": "Cheese Curds", "prices": [{ "label": "Order", "price": 6.99 }] },
+      { "name": "Pizza Puff", "prices": [{ "label": "Each", "price": 6.99 }] },
+      { "name": "Onion Rings", "prices": [{ "label": "10 pc", "price": 6.99 }] },
+      { "name": "Fries", "prices": [{ "label": "Small", "price": 3.99 }, { "label": "Large", "price": 6.99 }, { "label": "Half pan", "price": 16.99 }, { "label": "Full pan", "price": 27.99 }] },
+      { "name": "Side Gizzards", "prices": [{ "label": "Side", "price": 7.99 }] },
+      { "name": "Side Livers", "prices": [{ "label": "Side", "price": 7.99 }] },
+      { "name": "Side Catfish Nuggets", "prices": [{ "label": "Side", "price": 7.99 }] },
+      { "name": "A la Carte Chicken", "prices": [{ "label": "Wing", "price": 2.45 }, { "label": "Leg", "price": 3.99 }, { "label": "Thigh", "price": 3.99 }] },
+      { "name": "Add-ons", "prices": [{ "label": "Extra sauce", "price": 0.5 }, { "label": "Cheese sauce", "price": 1.49 }, { "label": "Extra bread (1 pc)", "price": 0.5 }] }
+    ]
+  },
+  {
+    "slug": "desserts",
+    "name": "Desserts",
+    "order": 9,
+    "items": [
+      { "name": "Cheesecake", "prices": [{ "label": "Each", "price": 3.99 }] },
+      { "name": "Caramel Cheesecake", "prices": [{ "label": "Each", "price": 3.99 }] },
+      { "name": "Banana Pudding", "prices": [{ "label": "Each", "price": 3.99 }] },
+      { "name": "Carrot Cake", "prices": [{ "label": "Each", "price": 3.99 }] },
+      { "name": "Caramel Coconut Cake", "prices": [{ "label": "Each", "price": 3.99 }] },
+      { "name": "Lemon Cake", "prices": [{ "label": "Each", "price": 3.99 }] }
+    ]
+  },
+  {
+    "slug": "drinks",
+    "name": "Drinks",
+    "order": 10,
+    "items": [
+      { "name": "Water", "prices": [{ "label": "Bottle", "price": 0.99 }] },
+      { "name": "Canned Soda", "prices": [{ "label": "Can", "price": 1.49 }] },
+      { "name": "Bottled Soda", "prices": [{ "label": "Bottle", "price": 2.49 }] },
+      { "name": "Mystic", "prices": [{ "label": "Each", "price": 3.99 }] },
+      { "name": "Calypso", "prices": [{ "label": "Each", "price": 3.99 }] }
+    ]
+  }
+]

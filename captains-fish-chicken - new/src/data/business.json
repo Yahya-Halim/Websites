@@ -1,0 +1,62 @@
+{
+  "id": "business",
+  "name": "Captains Fish and Chicken",
+  "tagline": "Fresh-to-order fried fish, chicken & seafood in Cedar Rapids",
+  "phone": "(319) 221-1040",
+  "email": "hello@captainsfishandchicken.com",
+  "domain": "https://captainsfishandchicken.com",
+  "owner": "Ray Aqel",
+  "slogan": "Made fresh to order, every order.",
+  "description": "Captains Fish and Chicken is a locally owned counter-service restaurant on 1st Ave NE in Cedar Rapids, serving fried fish, chicken and seafood made fresh to order. The menu spans catfish, perch, tilapia, cod, red snapper, calamari, crab cakes and jumbo shrimp alongside whole, party and boneless wings, chicken tenders and gizzards, with generous family and party deals. Owner Ray Aqel opened the 1st Ave NE location in October 2024.",
+  "address": {
+    "street": "1616 1st Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "stateFullName": "Iowa",
+    "zip": "52402",
+    "country": "US"
+  },
+  "geo": {
+    "latitude": 41.9803,
+    "longitude": -91.6584
+  },
+  "hours": {
+    "weekday": {
+      "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    "sunday": {
+      "days": ["Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    },
+    "displayText": "Mon-Thu 11am-10pm | Fri-Sat 11am-11pm | Sun 11am-8pm"
+  },
+  "servesCuisine": "Seafood, Soul Food, Fried Chicken, American",
+  "priceRange": "$$",
+  "acceptsReservations": false,
+  "ownerAlsoOwns": "Captains Fish and Chicken second location at 3100 6th St SW, Cedar Rapids, IA",
+  "yearEstablished": "2024",
+  "copyrightYears": "2024-2026",
+  "paymentAccepted": "Cash, Visa, Mastercard, Debit",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Captains%20Fish%20and%20Chicken%2C%201616%201st%20Ave%20NE%2C%20Cedar%20Rapids%2C%20IA%2052402",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=1616%201st%20Ave%20NE%2C%20Cedar%20Rapids%2C%20IA%2052402",
+  "sameAs": [
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/",
+    "https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids",
+    "https://www.tripadvisor.com/Restaurant_Review-g37743-d28991845-Reviews-Captains_Fish_And_Chicken_Inc-Cedar_Rapids_Iowa.html"
+  ],
+  "brand": {
+    "primaryColor": "#0a3a5c",
+    "accentColor": "#f2a516",
+    "bgColor": "#fef8ee",
+    "secondaryColor": "#06263c",
+    "textColor": "#1a1a1a",
+    "logoFilename": "logo.svg",
+    "logoAlt": "Captains Fish and Chicken logo"
+  },
+  "analytics": {
+    "gaId": "G-XXXXXXXXXX"
+  }
+}

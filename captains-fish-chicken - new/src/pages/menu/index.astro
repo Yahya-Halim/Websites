@@ -1,0 +1,77 @@
+---
+import Base from '../../layouts/Base.astro';
+import { menu, telHref, telDisplay, orderUrl, slugify, money, fromPrice } from '../../lib/site';
+
+const title = 'Full Menu | Captains Fish and Chicken, Cedar Rapids';
+const description = 'The full Captains Fish and Chicken menu: fried catfish, perch, tilapia, cod, red snapper, jumbo shrimp, wings, tenders, gizzards, sides and family deals. Made fresh to order in Cedar Rapids.';
+
+const menuLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Menu',
+  name: 'Captains Fish and Chicken Menu',
+  hasMenuSection: menu.map((s) => ({
+    '@type': 'MenuSection',
+    name: s.name,
+    hasMenuItem: s.items.map((i) => ({
+      '@type': 'MenuItem',
+      name: i.name,
+      ...(i.description ? { description: i.description } : {}),
+      offers: i.prices.map((p) => ({ '@type': 'Offer', name: p.label, price: p.price.toFixed(2), priceCurrency: 'USD' })),
+    })),
+  })),
+};
+---
+<Base title={title} description={description} jsonLd={[menuLd]}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Menu</nav>
+      <span class="eyebrow" style="margin-top:14px">Fried fresh to order</span>
+      <h1 class="display h-xl" style="margin-top:10px">The full menu</h1>
+      <p class="lead mt-s">{menu.reduce((n, s) => n + s.items.length, 0)} items across {menu.length} categories — catfish to crab cakes, wings to family deals. Prices are in-store; delivery apps may vary.</p>
+      <div class="hero__cta mt-m">
+        <a class="btn" href={telHref}>Call to Order · {telDisplay}</a>
+        <a class="btn btn--ghost" href={orderUrl} target="_blank" rel="noopener">Order Online</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="subnav">
+    <div class="wrap"><ul>{menu.map((s) => <li><a href={`#${s.slug}`}>{s.name}</a></li>)}</ul></div>
+  </div>
+
+  <section class="section section--cream">
+    <div class="wrap-narrow">
+      {menu.map((s) => (
+        <div id={s.slug} style="margin-bottom:52px">
+          <div class="card__row" style="align-items:center">
+            <h2 class="display h-md" style="color:var(--navy-800)"><a href={`/menu/${s.slug}/`}>{s.name}</a></h2>
+            <a href={`/menu/${s.slug}/`} style="color:var(--gold-deep);font-weight:700;font-size:.9rem;white-space:nowrap">View {s.name} →</a>
+          </div>
+          {s.description && <p class="card__desc" style="margin-top:6px">{s.description}</p>}
+          <div class="mt-s">
+            {s.items.map((i) => (
+              <div class="menu-item">
+                <div>
+                  <a href={`/menu/${s.slug}/${slugify(i.name)}/`} class="menu-item__name" style="color:var(--navy-800)">{i.name}</a>
+                  {i.description && <div class="menu-item__desc">{i.description}</div>}
+                </div>
+                <div class="menu-item__prices">{i.prices.map((p) => <span class="price-pill">{p.label} {money(p.price)}</span>)}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--navy-deep center">
+    <div class="wrap-narrow">
+      <h2 class="display h-lg">Order the whole spread</h2>
+      <p class="lead mt-s" style="margin-inline:auto">Call ahead so it's hot when you get here, or order online for pickup and delivery.</p>
+      <div class="hero__cta mt-m" style="justify-content:center">
+        <a class="btn btn--lg" href={telHref}>Call {telDisplay}</a>
+        <a class="btn btn--ghost btn--lg" href={orderUrl} target="_blank" rel="noopener">Order Online</a>
+      </div>
+    </div>
+  </section>
+</Base>

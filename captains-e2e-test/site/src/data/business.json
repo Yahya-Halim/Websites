@@ -1,0 +1,44 @@
+{
+  "id": "biz",
+  "name": "Captains Fish and Chicken",
+  "tagline": "Fresh-to-order fried fish and chicken on the northeast side of Cedar Rapids.",
+  "phone": "+1-319-221-1040",
+  "email": "owner@captainsfishandchicken.example",
+  "domain": "https://captainsfishandchicken.example",
+  "owner": "Ray Aqel",
+  "slogan": "Made fresh to order — fish and chicken done right.",
+  "description": "Captains Fish and Chicken is a family-owned, counter-service soul-food restaurant at 1616 1st Ave NE in Cedar Rapids, serving fried catfish, fish, chicken, wings, and Southern sides made fresh to order. Owner Ray Aqel has run the same concept in Minnesota, Illinois, and Michigan and has managed restaurants since 2006; Cedar Rapids is his first Iowa location. Takeout-first, with delivery on the major apps.",
+  "address": {
+    "street": "1616 1st Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "stateFullName": "Iowa",
+    "zip": "52402",
+    "country": "US"
+  },
+  "hours": {
+    "weekday": { "days": ["Mon", "Tue", "Wed", "Thu"], "opens": "11:00", "closes": "22:00" },
+    "sunday": { "days": ["Sun"], "opens": "11:00", "closes": "20:00" },
+    "displayText": "Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm"
+  },
+  "servesCuisine": "Soul Food, Seafood, Southern",
+  "acceptsReservations": false,
+  "yearEstablished": "2024",
+  "copyrightYears": "2024-2026",
+  "paymentAccepted": "Cash and major cards",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=1616+1st+Ave+NE%2C+Cedar+Rapids%2C+IA+52402",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=1616+1st+Ave+NE%2C+Cedar+Rapids%2C+IA+52402",
+  "sameAs": [
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/"
+  ],
+  "brand": {
+    "primaryColor": "#0a3a5c",
+    "accentColor": "#f2a516",
+    "bgColor": "#fdfbf6",
+    "secondaryColor": "#12557f",
+    "textColor": "#1a1a1a",
+    "logoFilename": "logo.svg",
+    "logoAlt": "Captains Fish and Chicken logo"
+  },
+  "analytics": { "gaId": "G-XXXXXXXXXX" }
+}

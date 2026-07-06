@@ -1,0 +1,26 @@
+# Summit Auto Group
+> Colorado's trusted source for quality used & certified pre-owned vehicles
+
+## NAP
+- Name: Summit Auto Group
+- Address: 4820 Federal Blvd, Denver, CO 80221
+- Phone: (303) 555-0142
+- Email: sales@summitautogroup.example
+
+## Hours
+Mon–Sat 9:00am–7:00pm · Sun 10:00am–5:00pm
+
+## Domain
+https://summitautogroup.example
+
+## Description
+Summit Auto Group is a family-owned Denver dealership offering hand-picked used cars, certified pre-owned vehicles, transparent in-house financing, and a full-service maintenance department for every make and model.
+
+## Owner
+Marcus Delgado
+
+## Payment Accepted
+Cash, Credit Card, Financing, Trade-In
+
+## Year Established
+2009

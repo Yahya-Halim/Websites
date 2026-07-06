@@ -1,0 +1,42 @@
+{
+  "phase": 2,
+  "name": "PLAN",
+  "specialist": "location-matrix-planner",
+  "pageMatrix": [
+    {
+      "route": "/",
+      "kind": "home-landing",
+      "primaryKeyword": "fish and chicken cedar rapids",
+      "intent": "brand + category + local convert (call / directions / order)",
+      "sections": ["Hero (h1 + dual CTA + valueProps)", "OfferCallout (family/party deals)", "TrustBar (≥6 trust signals)", "CtaBanner (mid-page call band)", "LeadForm (large-order / catering inquiry)"],
+      "schema": ["LocalBusiness/Restaurant JSON-LD", "WebSite JSON-LD", "WebPage JSON-LD", "Menu JSON-LD (from menu.json via graph projection)"]
+    }
+  ],
+  "foldedPages": [
+    { "concept": "Menu page", "foldedInto": "/ + schema.org Menu JSON-LD + facts.json", "reason": "Engine restaurant archetype (v0.x) injects only the `/` route. Full menu lives in src/data/menu.json — validated, emitted as machine-readable Menu schema for AI/search, and surfaced in llms.txt. A standalone /menu HTML route is a documented future extension, NOT built here (would require ejecting the engine integration, which is explicitly out of scope per 'build as intended')." },
+    { "concept": "Deals / occasions page", "foldedInto": "/ OfferCallout + occasions.json + facts", "reason": "Family Deal ($49.99), Captain's Family Meal ($59.99), combo dinners surfaced as on-page offers + schema." },
+    { "concept": "Visit / contact page", "foldedInto": "/ (NAP in Header/Footer + LocalBusiness schema + mapsUrl/directionsUrl)", "reason": "Single-location business; NAP + map link belong on the landing and in schema." }
+  ],
+  "requiredCroBlocks": [
+    { "block": "Hero", "data": "ctaPrimary (tel:), ctaSecondary (tel:), valueProps[3]", "purpose": "single H1 + call-first dual CTA above the fold" },
+    { "block": "OfferCallout", "data": "site.offers[]", "purpose": "family/party deals as scannable offers + Offer schema" },
+    { "block": "TrustBar", "data": "site.trustBar.items (min 6)", "purpose": "made-fresh-to-order, variety, hours, deals, locally owned, delivery" },
+    { "block": "CtaBanner", "data": "site.ctaBanner + ctaPrimary/Secondary", "purpose": "mid-page call band" },
+    { "block": "LeadForm", "data": "site.leadForm (https endpoint)", "purpose": "large-order / catering inquiry capture" }
+  ],
+  "imageSlotPlan": [
+    { "id": "logo", "required": true, "use": "Header/Footer brand mark + schema logo", "referenceStatus": "blocked-awaiting-photos", "note": "Need real logo from owner; placeholder mark generated in imagery phase if none supplied." },
+    { "id": "hero", "required": true, "use": "home hero background", "referenceStatus": "generate-from-scratch", "note": "Fried seafood + chicken spread, nautical mood." },
+    { "id": "dish-catfish", "required": false, "use": "signature catfish", "referenceStatus": "blocked-awaiting-photos", "note": "Prefer a REAL photo of the actual plate; do not fabricate a specific dish as if it were theirs." },
+    { "id": "dish-wings", "required": false, "use": "wings", "referenceStatus": "blocked-awaiting-photos" },
+    { "id": "family-deal", "required": false, "use": "family meal spread", "referenceStatus": "blocked-awaiting-photos" }
+  ],
+  "minimumPageCountRationale": "The engine's restaurant archetype ships a single injected `/` route by design; a richly-structured converting landing page plus machine-readable Menu/LocalBusiness schema is the intended v0.x output and is sufficient for a single-location counter-service restaurant. Additional HTML routes are a future engine capability, not a content gap. No thin/doorway matrix pages are created.",
+  "checklist": [
+    { "id": "plan-single-route-approved", "status": "done", "note": "Single `/` landing accepted as engine-intended output" },
+    { "id": "plan-cro-blocks-defined", "status": "done", "note": "5 CRO blocks mapped to site.json fields" },
+    { "id": "plan-menu-as-schema", "status": "done", "note": "Full menu planned as data + Menu schema, not a hand-built route" },
+    { "id": "plan-image-slots", "status": "done", "note": "5 image slots declared; real-photo slots marked blocked-awaiting-photos" },
+    { "id": "plan-multipage-deferred", "status": "ignored", "reason": "Standalone /menu, /deals, /visit HTML routes deferred — engine injects only `/`; building them would require ejecting the integration (out of scope: build as intended, no old-work copy)" }
+  ]
+}

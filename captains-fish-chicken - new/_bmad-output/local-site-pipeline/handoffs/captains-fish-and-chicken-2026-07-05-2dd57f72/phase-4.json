@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-05-2dd57f72",
+  "briefHash": "359358364d9f5e67d657646fc9ace680d97ca53edf80137e4072e00f08c3eec0",
+  "phase": 4,
+  "exitedAt": "2026-07-05T19:41:34.452Z",
+  "specialistInvoked": "content-writer",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-chicken - new/_bmad-output/local-site-pipeline/phase-artifacts/phase-4.json",
+    "artifactHash": "97012497f7dc7462af36084c7ee7cc169b3329bd99daa4ec27a43272afc7f98c",
+    "contract": "files changed, routes generated, commands run, build result"
+  },
+  "nextPhaseAllowed": [
+    5
+  ],
+  "nextPhaseHint": 5,
+  "blocking": []
+}

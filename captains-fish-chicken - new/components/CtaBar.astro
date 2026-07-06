@@ -1,0 +1,66 @@
+---
+/**
+ * CtaBar — the reusable dual-CTA surface (cro-gates Task 4).
+ *
+ * Renders BOTH a `tel:` call anchor (from `ctaPrimary.href`) AND a call-or-text
+ * anchor (`sms:` or a second `tel:`, from `ctaSecondary.href`). Mounted by many
+ * surfaces (Header/Hero/Footer/inline); the mounting surface passes a `surface`
+ * prop, echoed on the root as `data-cro-surface="<surface>"` alongside
+ * `data-cro-block="cta-bar"` for T7 detection.
+ *
+ * KG7: with neither CTA present → renders NOTHING (no marker).
+ */
+interface CtaLink {
+  text: string;
+  href: string;
+}
+
+interface Props {
+  /** Primary call CTA (T1 `ctaPrimary`: text + tel: href). */
+  ctaPrimary?: CtaLink;
+  /** Secondary call-or-text CTA (T1 `ctaSecondary`: text + sms:/tel: href). */
+  ctaSecondary?: CtaLink;
+  /** Mounting surface — echoed as data-cro-surface. */
+  surface: 'header' | 'hero' | 'footer' | 'inline';
+}
+
+const { ctaPrimary, ctaSecondary, surface } = Astro.props;
+const hasCta = Boolean(ctaPrimary || ctaSecondary);
+---
+
+{hasCta && (
+  <div class="cta-bar" data-cro-block="cta-bar" data-cro-surface={surface}>
+    {ctaPrimary && (
+      <a class="cta cta-primary" href={ctaPrimary.href}>{ctaPrimary.text}</a>
+    )}
+    {ctaSecondary && (
+      <a class="cta cta-secondary" href={ctaSecondary.href}>{ctaSecondary.text}</a>
+    )}
+  </div>
+)}
+
+<style>
+  .cta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+  .cta {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .cta-primary {
+    background: var(--accent-color, #f60);
+    color: #fff;
+  }
+  .cta-secondary {
+    background: transparent;
+    color: var(--accent-color, #f60);
+    border: 1px solid var(--accent-color, #f60);
+  }
+</style>

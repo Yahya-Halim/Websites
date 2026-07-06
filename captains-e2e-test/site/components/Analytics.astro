@@ -1,0 +1,97 @@
+---
+/**
+ * Analytics.astro — GA4 (+ optional Google Ads) HEAD component.
+ *
+ * cro-gates Task 5. This is the FIRST consumer of `business.analytics.gaId`
+ * (required-but-unconsumed until now). It emits:
+ *   1. a `preconnect` to the tag CDN,
+ *   2. the EXTERNAL gtag loader `<script src>` (counts toward the script-count
+ *      budget; NOT an inline snippet — it carries no data-factory-inline attr),
+ *   3. EXACTLY ONE attributed inline `<script data-factory-inline="analytics">`
+ *      holding the whole client contract: the gtag bootstrap +
+ *      `gtag('config', gaId)` (plus `gtag('config', conversionId)` when
+ *      `business.analytics.ads` is configured), tel:/sms: click tracking, and —
+ *      on the /thank-you page only — the deduped conversion.
+ *
+ * gaId RENDERING CONTRACT (the false-green lesson): the gaId is rendered
+ * VERBATIM. There is deliberately NO "is this a placeholder?" condition here —
+ * a placeholder id ships into dist unchanged, where T1's ship-schema and T8's
+ * dist scans catch it. Masking it here would hide the regression (false green).
+ *
+ * CONVERSION MECHANISM — ONE path: the `generate_lead` conversion fires on
+ * /thank-you PAGE LOAD (conversionPage=true), NOT on form submit. There is NO
+ * form-submit gtag hook anywhere. A same-session `lef_lead_converted`
+ * sessionStorage flag dedups it so a reload/back-forward does not double-count.
+ *
+ * Data source: gaId + ads come from `business.analytics` ONLY (real data).
+ */
+import { getEntry } from 'astro:content';
+
+interface Props {
+  /** When true (the /thank-you route), the inline snippet fires the deduped
+   *  generate_lead (+ Ads leadForm) conversion on page load. */
+  conversionPage?: boolean;
+}
+
+const { conversionPage = false } = Astro.props;
+
+const businessEntry = await getEntry('business', 'biz');
+const analytics = businessEntry?.data?.analytics;
+
+// gaId is VERBATIM — no placeholder gating. Absent analytics → render nothing.
+const gaId = analytics?.gaId;
+const ads = analytics?.ads;
+const conversionId = ads?.conversionId;
+const leadFormLabel = ads?.labels?.leadForm;
+const telClickLabel = ads?.labels?.telClick;
+
+// Ads send_to targets (conversionId/label), only when the label is configured.
+const telAdsSend = conversionId && telClickLabel ? `${conversionId}/${telClickLabel}` : null;
+const leadAdsSend = conversionId && leadFormLabel ? `${conversionId}/${leadFormLabel}` : null;
+
+// The SINGLE inline analytics snippet, assembled as one compact string so its
+// byte length is assertable and stays under the 2048-byte budget. It carries
+// data-factory-inline="analytics" so T8's inline-JS gate allowlists it.
+//
+//  - gtag bootstrap + config(s) — GA4 always; Ads config only when configured.
+//  - tel:/sms: clicks → gtag('event','contact', …) always; plus an Ads
+//    conversion (telClick label) when configured.
+//  - /thank-you (conversionPage) → gtag('event','generate_lead', …) plus the
+//    Ads leadForm conversion when configured, under the lef_lead_converted
+//    same-session dedup. No submit hook exists anywhere.
+const inlineParts: string[] = [
+  `window.dataLayer=window.dataLayer||[];`,
+  `function gtag(){dataLayer.push(arguments);}`,
+  `gtag('js',new Date());`,
+  `gtag('config','${gaId}');`,
+];
+if (conversionId) inlineParts.push(`gtag('config','${conversionId}');`);
+// tel/sms click tracking (delegated; survives DOM changes)
+inlineParts.push(
+  `document.addEventListener('click',function(e){` +
+    `var a=e.target.closest&&e.target.closest('a[href^="tel:"],a[href^="sms:"]');` +
+    `if(!a)return;` +
+    `gtag('event','contact',{transport_type:'beacon',contact_href:a.getAttribute('href')||''});` +
+    (telAdsSend ? `gtag('event','conversion',{send_to:'${telAdsSend}'});` : ``) +
+    `});`,
+);
+// conversion-on-thank-you (deduped) — the ONLY generate_lead path
+if (conversionPage) {
+  inlineParts.push(
+    `if(!sessionStorage.getItem('lef_lead_converted')){` +
+      `gtag('event','generate_lead',{transport_type:'beacon'});` +
+      (leadAdsSend ? `gtag('event','conversion',{send_to:'${leadAdsSend}'});` : ``) +
+      `sessionStorage.setItem('lef_lead_converted','1');` +
+      `}`,
+  );
+}
+const inlineSnippet = inlineParts.join('');
+---
+
+{gaId && (
+  <>
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+    <script is:inline data-factory-inline="analytics" set:html={inlineSnippet} />
+  </>
+)}

@@ -1,0 +1,44 @@
+{
+  "phase": 5,
+  "name": "VALIDATE",
+  "specialist": "seo-geo-ai-validation",
+  "validationRuns": [
+    {
+      "command": "factory validate",
+      "exit": 1,
+      "findings": [
+        { "id": "do-not-ship-guards / analytics.gaId", "severity": "SHIP-BLOCKER", "detail": "gaId G-XXXXXXXXXX matches the all-X reject-list; not a real GA4 id." },
+        { "id": "asset-references-exist / logo", "severity": "advisory", "detail": "brand.logoFilename -> public/logo.svg missing." },
+        { "id": "graph-presence", "severity": "advisory", "detail": "legacy mode (no src/graph); acceptable." },
+        { "id": "do-not-ship-guards / makesOffer validThrough x3", "severity": "LOW", "detail": "offers have no validThrough — treated as evergreen." }
+      ]
+    }
+  ],
+  "failures": [
+    { "id": "analytics.gaId placeholder", "disposition": "DEFERRED-TO-LAUNCH", "owner": "restaurant owner", "why": "Real GA4 measurement id is a launch input; the gate is working as intended by refusing to ship a placeholder. Tracked in LAUNCH-BLOCKERS.md." }
+  ],
+  "fixRounds": [
+    {
+      "round": 1,
+      "sourceChanges": "none required",
+      "triage": [
+        "GA blocker -> LAUNCH-BLOCKERS.md (needs owner's real G-XXXXXXXX)",
+        "logo advisory -> owned by Phase 6 IMAGERY (place public/logo.svg)",
+        "3 evergreen-offer LOW notes -> ACCEPTED; deals have no end date, so adding a fake validThrough would be wrong",
+        "graph legacy advisory -> ACCEPTED; legacy mode is a supported path for a menu without FAQ-shaped source data"
+      ],
+      "result": "No code/content defects found. Re-run after Phase 6 places the logo and after the owner supplies a real GA4 id; expected end state is a clean validate except any genuinely owner-pending inputs."
+    }
+  ],
+  "remainingAdvisories": [
+    "public/logo.svg missing (Phase 6)",
+    "graph-presence: legacy mode (accepted)",
+    "3 makesOffer entries evergreen / no validThrough (accepted)"
+  ],
+  "checklist": [
+    { "id": "validate-run", "status": "done", "note": "factory validate executed; findings captured" },
+    { "id": "validate-no-code-defects", "status": "done", "note": "no source/content defects; only owner-input + imagery items remain" },
+    { "id": "validate-ga-blocker", "status": "open", "reason": "Real GA4 id required before launch (owner)" },
+    { "id": "validate-logo", "status": "open", "reason": "logo.svg placed in Phase 6" }
+  ]
+}

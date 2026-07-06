@@ -1,0 +1,167 @@
+---
+import Base from '@engine/layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderFaqJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+// CRO blocks (T4) composed into the local-landing kind.
+import Hero from '@engine/components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+// One static page per neighborhoods-collection entry. The anti-doorway floor
+// (≥1 local fact, ≥2 proximity lines, ≥1 town FAQ) is enforced by the
+// collection schema — a town that cannot meet it is FOLDED by omitting its
+// entry (fold-not-fabricate), so every generated page here is fact-backed.
+export async function getStaticPaths() {
+  const neighborhoods = await getCollection('neighborhoods');
+  return neighborhoods.map((neighborhood) => ({
+    params: { slug: neighborhood.data.slug },
+    props: { neighborhood },
+  }));
+}
+
+const { neighborhood } = Astro.props;
+const n = neighborhood.data;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const businessName = business?.name ?? '';
+const title = n.seo.title;
+const metaDescription = n.seo.description;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site
+  ? new URL(`/neighborhoods/${n.slug}/`, Astro.site).href
+  : `/neighborhoods/${n.slug}/`;
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description: metaDescription,
+  websiteName: businessName,
+  websiteUrl,
+});
+
+// Home → Neighborhoods → {name}. Middle crumb url-less (no hub page).
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Neighborhoods' },
+    { name: n.name },
+  ],
+});
+
+// Schema mandates ≥1 town FAQ, so the FAQ block always renders here.
+const faqLd = renderFaqJsonLd({ faqs: n.townFaqs });
+---
+
+<Base title={title} description={metaDescription} jsonLd={[webPageLd, breadcrumbLd, faqLd]}>
+  <article class="neighborhood">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading={n.headline}
+      subheading={metaDescription}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    <section class="body">
+      <p>{n.body}</p>
+    </section>
+
+    <section class="local-facts" aria-labelledby="local-facts-heading">
+      <h2 id="local-facts-heading">Local to {n.name}</h2>
+      <ul>
+        {n.localFacts.map((fact) => (
+          <li>{fact}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="proximity" aria-label="Nearby trust lines">
+      {n.proximityTrustLines.map((line) => (
+        <p class="proximity-line">{line}</p>
+      ))}
+    </section>
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    <section class="faqs" aria-labelledby="faqs-heading">
+      <h2 id="faqs-heading">{n.name} questions</h2>
+      <dl>
+        {n.townFaqs.map((faq) => (
+          <>
+            <dt>{faq.question}</dt>
+            <dd>{faq.answer}</dd>
+          </>
+        ))}
+      </dl>
+    </section>
+
+    {n.crossLinks.length > 0 && (
+      <nav class="related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related</h2>
+        <ul>
+          {n.crossLinks.map((link) => (
+            <li><a href={link.slug}>{link.anchor}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+  </article>
+</Base>
+
+<style>
+  .neighborhood {
+    padding: 2rem 0;
+  }
+  .body {
+    max-width: 40rem;
+    line-height: 1.6;
+  }
+  .local-facts,
+  .faqs,
+  .related {
+    margin-top: 2.5rem;
+  }
+  .local-facts ul {
+    line-height: 1.7;
+  }
+  .proximity {
+    margin-top: 1.5rem;
+  }
+  .proximity-line {
+    font-style: italic;
+    color: #444;
+    margin: 0.4rem 0;
+  }
+  .faqs dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .faqs dd {
+    margin: 0.25rem 0 0;
+    line-height: 1.5;
+  }
+</style>

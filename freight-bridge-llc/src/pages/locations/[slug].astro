@@ -118,8 +118,8 @@ const haulNote =
     ? `That's a genuine long-haul lane, and we plan these runs honestly — firm timelines, no overpromising.`
     : `That's a long-distance, multi-day haul, and we're straight with you about transit time and cost before anything's booked.`;
 const driveVerb = drivable
-  ? `We reach ${location.city} the way an interstate carrier should — by running the road ourselves, picking up and delivering with our own truck and crew under USDOT ${business?.dotNumber} and MC ${business?.mcNumber}.`
-  : `As a licensed interstate carrier (USDOT ${business?.dotNumber} / MC ${business?.mcNumber}), we coordinate freight to and from ${location.city} as part of our nationwide network.`;
+  ? `We reach ${location.city} the way an interstate carrier should — by running the road ourselves, picking up and delivering with our own truck and crew under USDOT ${business?.dotNumber}.`
+  : `As a licensed interstate carrier (USDOT ${business?.dotNumber}), we coordinate freight to and from ${location.city} as part of our nationwide network.`;
 const freightPara1 = `${openerVariants[slugHash % openerVariants.length]} ${haulNote} ${driveVerb}`;
 const freightPara2 = `For shippers and dispatchers, that means dock-to-dock delivery with no terminal cross-docking and no extra hands on your load. We pick up freight booked through brokers and dispatch services and run it direct, with one point of contact from pickup to drop-off — not a call center and not a brokered handoff to whoever's cheapest that week. Whether it's a full truckload or a partial shipment moving between ${region} and the rest of the country, you get a binding quote up front and a carrier who answers the phone.`;
 
@@ -152,7 +152,7 @@ const prettify = (slug: string) => slug.replace(/-/g, ' ').replace(/\b\w/g, (c) 
 const generatedFaqs = [
   {
     question: `Does Freight Bridge LLC serve ${location.city}, ${stateAbbr}?`,
-    answer: `Yes. Freight Bridge LLC is a licensed interstate carrier based in Iowa City, Iowa — about ${distanceMi} miles ${direction} of ${location.city}. We handle interstate moves and freight hauling to and from ${location.city} and the surrounding ${region} market under USDOT ${business?.dotNumber} and MC ${business?.mcNumber}.`,
+    answer: `Yes. Freight Bridge LLC is a licensed interstate carrier based in Iowa City, Iowa — about ${distanceMi} miles ${direction} of ${location.city}. We handle interstate moves and freight hauling to and from ${location.city} and the surrounding ${region} market under USDOT ${business?.dotNumber}.`,
   },
   {
     question: `How does freight to or from ${location.city} work?`,
@@ -276,8 +276,6 @@ const reviewLd = {
       <div class="stat"><div class="stat-num">{business?.movesCompleted}</div><div class="stat-label">Moves Completed</div></div>
       <div class="stat"><div class="stat-num">50</div><div class="stat-label">States Served</div></div>
       <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Years in Business</div></div>
-      <div class="stat"><div class="stat-num">{business?.dotNumber}</div><div class="stat-label">USDOT Number</div></div>
-      <div class="stat"><div class="stat-num">{business?.mcNumber}</div><div class="stat-label">MC Authority</div></div>
     </div>
   </section>
 

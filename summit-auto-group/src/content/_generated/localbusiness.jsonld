@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "@id": "https://summitautogroup.example/#business",
+  "name": "Summit Auto Group",
+  "description": "Summit Auto Group is a family-owned Denver dealership offering hand-picked used cars, certified pre-owned vehicles, transparent in-house financing, and a full-service maintenance department for every make and model.",
+  "telephone": "(303) 555-0142",
+  "email": "sales@summitautogroup.example",
+  "url": "https://summitautogroup.example",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4820 Federal Blvd",
+    "addressLocality": "Denver",
+    "addressRegion": "CO",
+    "postalCode": "80221",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 39.7864,
+    "longitude": -105.025
+  },
+  "sameAs": [
+    "https://www.facebook.com/summitautogroup",
+    "https://www.instagram.com/summitautogroup",
+    "https://www.youtube.com/@summitautogroup"
+  ],
+  "paymentAccepted": "Cash, Credit Card, Financing, Trade-In",
+  "image": "https://summitautogroup.example/logo.svg",
+  "logo": "https://summitautogroup.example/logo.svg",
+  "foundingDate": "2009"
+}

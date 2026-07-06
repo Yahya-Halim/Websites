@@ -1,0 +1,35 @@
+---
+import Base from '../layouts/Base.astro';
+import { telHref, telDisplay, orderUrl, directionsUrl } from '../lib/site';
+const title = 'Visit Us | Captains Fish and Chicken, 1616 1st Ave NE, Cedar Rapids';
+const description = 'Find Captains Fish and Chicken at 1616 1st Ave NE, Cedar Rapids, IA 52402. Hours, directions, phone and online ordering. Open late Friday & Saturday.';
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:52px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Visit</nav>
+      <span class="eyebrow" style="margin-top:14px">Find us on 1st Ave NE</span>
+      <h1 class="display h-xl" style="margin-top:10px">Visit &amp; order</h1>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap">
+      <div class="info-row">
+        <div class="info-card">
+          <dl>
+            <dt>Address</dt><dd>1616 1st Ave NE<br />Cedar Rapids, IA 52402</dd>
+            <dt>Phone</dt><dd><a href={telHref} style="color:var(--navy-700);font-weight:700">{telDisplay}</a></dd>
+            <dt>Hours</dt><dd>Mon–Thu 11am–10pm<br />Fri–Sat 11am–11pm<br />Sun 11am–8pm</dd>
+            <dt>Order</dt><dd><a href={orderUrl} target="_blank" rel="noopener" style="color:var(--navy-700);font-weight:700">Uber Eats →</a></dd>
+            <dt>Service</dt><dd>Counter service · takeout · delivery. Made fresh to order — call ahead for faster pickup.</dd>
+          </dl>
+          <div class="pill-row mt-m"><a class="btn" href={directionsUrl} target="_blank" rel="noopener">Get Directions</a><a class="btn btn--navy" href={telHref}>Call {telDisplay}</a></div>
+        </div>
+        <div class="info-card" style="padding:0;overflow:hidden;min-height:340px">
+          <iframe title="Map to Captains Fish and Chicken" width="100%" height="100%" style="border:0;min-height:340px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1616+1st+Ave+NE,+Cedar+Rapids,+IA+52402&output=embed"></iframe>
+        </div>
+      </div>
+      <p class="card__desc mt-l">Captains Fish and Chicken sits on 1st Avenue NE just northeast of downtown Cedar Rapids, a short drive from Marion, Hiawatha and the surrounding metro. Looking for us near you? See <a href="/areas/" style="color:var(--gold-deep);font-weight:700">areas we serve</a>.</p>
+    </div>
+  </section>
+</Base>

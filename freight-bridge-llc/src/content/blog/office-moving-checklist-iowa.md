@@ -14,7 +14,7 @@ For Iowa businesses, office moves come with their own set of considerations. Whe
 
 **Form a moving committee.** Pick one person to be the move coordinator. This person will be the single point of contact for the moving company, the landlord, and department heads. Trying to manage a move by committee without a leader is a recipe for chaos.
 
-**Set your budget.** Office moves cost more than residential moves because of specialized equipment, IT disconnection and reconnection, and potential downtime. Budget $5,000 to $15,000 for a small office (up to 10 people) and $15,000 to $50,000 for a medium-sized office (10 to 50 people). Factor in moving labor, IT services, cleaning, and new furniture if needed.
+**Set your budget.** Office moves cost more than residential moves because of specialized equipment, IT disconnection and reconnection, and potential downtime. Costs vary widely based on office size, distance, and services needed. A small office relocation can range from a few thousand dollars to significantly more for a medium-sized office with complex IT requirements. Factor in moving labor, IT services, cleaning, and new furniture if needed.
 
 **Start looking for movers.** Not all moving companies handle commercial moves. You need a company with experience in office relocations—one that understands how to handle cubicle walls, server racks, and conference room tables. Freight Bridge LLC has been handling commercial moves across Iowa for years and understands the unique challenges of keeping a business operational during a transition.
 

@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import { menu, telHref, telDisplay, money } from '../lib/site';
+const fries = menu.find((s) => s.slug === 'sides')!.items.find((i) => i.name === 'Fries')!;
+const nuggetPan = menu.find((s) => s.slug === 'family-deals')!.items.find((i) => i.name === 'Catfish Nuggets Pan')!;
+const title = 'Catering & Large Orders | Captains Fish and Chicken, Cedar Rapids';
+const description = 'Catering and large fried-fish orders in Cedar Rapids — half and full pans of catfish nuggets and fries, family deals and party platters. Call (319) 221-1040 to plan your order.';
+const steps = [
+  { n: '1', t: 'Call ahead', d: `Ring us at ${telDisplay} with your headcount and pickup time. Big orders are made fresh, so give us a little lead time.` },
+  { n: '2', t: 'Pick your spread', d: 'Mix family deals, half/full pans of catfish nuggets or fries, wings, and sides to match your crowd.' },
+  { n: '3', t: 'Pick it up hot', d: 'We fry it fresh and have it boxed and ready at your pickup time — crisp, not steamed-soft.' },
+];
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Catering</nav>
+      <span class="eyebrow" style="margin-top:14px">Parties · offices · game day</span>
+      <h1 class="display h-xl" style="margin-top:10px">Catering &amp; large orders</h1>
+      <p class="lead mt-s">Feeding a team, a family reunion or the whole office? We fry big batches to order — half and full pans, family deals and party platters, all made fresh.</p>
+      <div class="hero__cta mt-m"><a class="btn btn--lg" href={telHref}>Call to Plan · {telDisplay}</a></div>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap">
+      <span class="eyebrow">How it works</span>
+      <h2 class="display h-lg" style="margin-top:10px">Three steps to feed the crowd</h2>
+      <div class="grid grid--3 mt-l">
+        {steps.map((s) => (
+          <div class="card"><span class="display" style="font-size:2.4rem;color:var(--gold)">{s.n}</span><h3>{s.t}</h3><p class="card__desc">{s.d}</p></div>
+        ))}
+      </div>
+      <div class="grid grid--2 mt-l">
+        <div class="deal"><h3>Full &amp; half pans</h3><p style="color:rgba(255,248,238,.85);margin:8px 0 12px">Catfish nuggets by the pan, plus pans of fries to match.</p><div class="pill-row">{nuggetPan.prices.map((p) => <span class="price-pill">Nuggets {p.label} {money(p.price)}</span>)}{fries.prices.filter((p) => p.label.includes('pan')).map((p) => <span class="price-pill">Fries {p.label} {money(p.price)}</span>)}</div></div>
+        <div class="deal"><h3>Family &amp; party deals</h3><p style="color:rgba(255,248,238,.85);margin:8px 0 12px">Scale up with our Fish-Only Family Deal and Captain’s Family Meal Deal.</p><a class="btn" href="/deals/">See all deals →</a></div>
+      </div>
+      <div class="center mt-l"><a class="btn btn--navy btn--lg" href={telHref}>Call {telDisplay} to arrange catering</a></div>
+    </div>
+  </section>
+</Base>

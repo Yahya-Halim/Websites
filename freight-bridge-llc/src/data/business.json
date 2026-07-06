@@ -16,10 +16,29 @@
     "zip": "52245",
     "country": "US"
   },
-  "geo": { "latitude": 41.6611, "longitude": -91.5302 },
+  "geo": {
+    "latitude": 41.6611,
+    "longitude": -91.5302
+  },
   "hours": {
-    "weekday": { "days": ["Mon", "Tue", "Wed", "Thu", "Fri"], "opens": "08:00", "closes": "18:00" },
-    "sunday": { "days": ["Sun"], "opens": "00:00", "closes": "00:00" },
+    "weekday": {
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "sunday": {
+      "days": [
+        "Sun"
+      ],
+      "opens": "00:00",
+      "closes": "00:00"
+    },
     "displayText": "Mon-Fri 8AM-6PM | Sat by appointment | Sun closed"
   },
   "yearEstablished": "2020",
@@ -33,7 +52,6 @@
     "https://www.bbb.org/us/ia/iowa-city/profile/moving-companies/freight-bridge-llc-0666-1000063275"
   ],
   "dotNumber": "4166904",
-  "mcNumber": "1734786",
   "truckCount": 1,
   "teamSize": "Experienced crew",
   "movesCompleted": "500+",
@@ -48,5 +66,7 @@
     "logoFilename": "freight-bridge-high-resolution-logo.png",
     "logoAlt": "Freight Bridge LLC Logo"
   },
-  "analytics": { "gaId": "G-SCSLVS4DX0" }
+  "analytics": {
+    "gaId": "G-SCSLVS4DX0"
+  }
 }

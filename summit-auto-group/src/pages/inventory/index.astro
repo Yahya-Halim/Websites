@@ -1,0 +1,51 @@
+---
+import PageLayout from '../../components/PageLayout.astro';
+import CarCard from '../../components/CarCard.astro';
+import { getCollection } from 'astro:content';
+import { webPage, itemList } from '../../lib/schema';
+
+const cars = await getCollection('cars');
+// Show available vehicles first, then pending/sold.
+const order = { available: 0, pending: 1, sold: 2 } as Record<string, number>;
+cars.sort((a, b) => (order[a.data.status] ?? 9) - (order[b.data.status] ?? 9));
+
+const crumbs = [
+  { name: 'Home', path: '/' },
+  { name: 'Inventory', path: '/inventory' },
+];
+
+const description =
+  'Browse Summit Auto Group’s used and certified pre-owned inventory in Denver — SUVs, trucks, sedans, and EVs, each backed by a 172-point inspection.';
+
+const schemas = [
+  webPage({ name: 'Vehicle Inventory', path: '/inventory', description, type: 'CollectionPage' }),
+  itemList(
+    'Summit Auto Group Inventory',
+    cars.map((c) => ({ name: `${c.data.year} ${c.data.make} ${c.data.model}`, path: `/inventory/${c.id}` })),
+  ),
+];
+---
+
+<PageLayout
+  title="Used & Certified Pre-Owned Inventory in Denver | Summit Auto Group"
+  description={description}
+  breadcrumbs={crumbs}
+  eyebrow="Inventory"
+  heroTitle="Current inventory"
+  heroSubtitle={`${cars.length} hand-picked vehicles, each reconditioned and inspected before it hits the lot.`}
+  schemas={schemas}
+>
+  <div class="grid">
+    {cars.map((c) => <CarCard id={c.id} data={c.data} />)}
+  </div>
+
+  <div class="band">
+    <h2>Don’t see it? We’ll find it.</h2>
+    <p>Tell us what you’re after and our buyers will source it from auction. Financing and
+      <a href="/services/trade-in-appraisal">trade-in appraisals</a> available on every vehicle.</p>
+    <div class="btn-row">
+      <a class="btn" href="/financing">Get pre-qualified</a>
+      <a class="btn ghost" href="/contact">Request a vehicle</a>
+    </div>
+  </div>
+</PageLayout>

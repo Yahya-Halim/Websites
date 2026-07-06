@@ -1,0 +1,196 @@
+---
+import Base from '../layouts/Base.astro';
+import { business, site, menu, telHref, telDisplay, orderUrl, directionsUrl, mapsUrl, slugify, money, fromPrice } from '../lib/site';
+
+const find = (section: string, name: string) => {
+  const sec = menu.find((s) => s.slug === section)!;
+  const item = sec.items.find((i) => i.name === name)!;
+  return { sec, item, url: `/menu/${sec.slug}/${slugify(item.name)}/` };
+};
+const featured = [
+  { ...find('seafood', 'Catfish, Perch & Tilapia Fillets'), tag: 'Signature' },
+  { ...find('shrimp', 'Jumbo Shrimp'), tag: 'Fan favorite' },
+  { ...find('wings', 'Whole Wings'), tag: 'Fried fresh' },
+  { ...find('chicken', 'Chicken Tenders'), tag: 'Hand-breaded' },
+];
+
+const title = 'Captains Fish and Chicken | Fried Fish, Chicken & Seafood in Cedar Rapids, IA';
+const description = 'Fresh-to-order fried catfish, perch, tilapia, jumbo shrimp, wings and chicken tenders on 1st Ave NE in Cedar Rapids. Big family & party deals. Call (319) 221-1040 or order online.';
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'What kind of fish does Captains Fish and Chicken serve?', acceptedAnswer: { '@type': 'Answer', text: 'Catfish, perch, tilapia, cod and red snapper, plus catfish nuggets, calamari, crab cakes and jumbo shrimp — all breaded and fried fresh to order.' } },
+    { '@type': 'Question', name: 'Where is Captains Fish and Chicken located?', acceptedAnswer: { '@type': 'Answer', text: 'At 1616 1st Ave NE, Cedar Rapids, IA 52402. Call (319) 221-1040.' } },
+    { '@type': 'Question', name: 'What are the hours?', acceptedAnswer: { '@type': 'Answer', text: 'Monday–Thursday 11am–10pm, Friday–Saturday 11am–11pm, and Sunday 11am–8pm.' } },
+    { '@type': 'Question', name: 'Can I order online for delivery or pickup?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — order on Uber Eats and other delivery apps, or call (319) 221-1040 to order ahead for pickup.' } },
+  ],
+};
+---
+<Base title={title} description={description} jsonLd={[faqLd]}>
+  <!-- HERO -->
+  <section class="hero" style="background-image:linear-gradient(180deg,rgba(4,32,47,.72),rgba(4,32,47,.55) 45%,rgba(4,32,47,.92)),url('/images/hero.jpg')">
+    <div class="wrap hero__inner">
+      <span class="eyebrow">Cedar Rapids · 1st Ave NE · Since 2024</span>
+      <h1 class="display h-xl">Fried fresh. <span class="text-gold">Never</span> under a heat lamp.</h1>
+      <p class="lead">Catfish, perch, tilapia, jumbo shrimp, wings and hand-breaded tenders — dropped when you order and served hot. Big family &amp; party deals to feed the whole table.</p>
+      <div class="hero__cta">
+        <a class="btn btn--lg" href={telHref}>Call to Order · {telDisplay}</a>
+        <a class="btn btn--ghost btn--lg" href={orderUrl} target="_blank" rel="noopener">Order Online</a>
+      </div>
+      <div class="hero__chips">
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Made fresh to order</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>8+ seafood choices</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Open late Fri &amp; Sat</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <section class="section section--paper" style="padding-block:36px">
+    <div class="wrap grid grid--3" style="gap:18px">
+      {site.trustBar.items.slice(0,3).map((t) => (
+        <div class="feature">
+          <span class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span>
+          <div><h3>{t.label}</h3><p>{t.detail}</p></div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- SIGNATURE CATCHES -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <span class="eyebrow">The good stuff</span>
+      <h2 class="display h-lg" style="margin-top:10px">Signature catches</h2>
+      <p class="lead mt-s">A few of the plates Cedar Rapids keeps coming back for.</p>
+      <div class="grid grid--4 mt-l">
+        {featured.map((f) => (
+          <a class="card card--link" href={f.url}>
+            <span class="tag">{f.tag}</span>
+            <h3>{f.item.name}</h3>
+            <p class="card__desc">{f.item.description ?? 'Breaded and fried fresh to order.'}</p>
+            <span class="price-pill" style="align-self:flex-start;margin-top:4px">from {money(fromPrice(f.item))}</span>
+          </a>
+        ))}
+      </div>
+      <div class="center mt-l"><a class="btn btn--navy btn--lg" href="/menu/">See the full menu</a></div>
+    </div>
+  </section>
+
+  <!-- DEALS -->
+  <section class="section section--navy-deep">
+    <div class="wrap">
+      <span class="eyebrow">Feed the whole crew</span>
+      <h2 class="display h-lg" style="margin-top:10px">Family &amp; party deals</h2>
+      <div class="grid grid--3 mt-l">
+        {site.offers.map((o) => (
+          <div class="deal">
+            <h3>{o.label}</h3>
+            <p style="color:rgba(255,248,238,.85);margin:10px 0 0">{o.detail}</p>
+          </div>
+        ))}
+      </div>
+      <div class="center mt-l"><a class="btn btn--lg" href="/deals/">All deals &amp; combos</a></div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section section--paper">
+    <div class="wrap">
+      <span class="eyebrow">Why Captains</span>
+      <h2 class="display h-lg" style="margin-top:10px">Big flavor, big portions, fried to order</h2>
+      <div class="grid grid--3 mt-l">
+        {site.trustBar.items.map((t) => (
+          <div class="feature">
+            <span class="feature__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><h3>{t.label}</h3><p>{t.detail}</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section section--navy">
+    <div class="wrap" style="display:grid;gap:34px;grid-template-columns:1fr">
+      <div>
+        <span class="eyebrow">Our story</span>
+        <h2 class="display h-lg" style="margin-top:10px">A Cedar Rapids fish house, made fresh</h2>
+        <p class="lead mt-m">Owner Ray Aqel opened Captains Fish and Chicken on 1st Ave NE in October 2024 — his first Iowa location, built on a fried-seafood concept he's run in Minnesota, Illinois and Michigan. Every basket is dropped to order, so what lands on your tray is hot, crisp and never sitting under a heat lamp.</p>
+        <p class="mt-s" style="color:rgba(255,248,238,.7)">Local media took notice fast — <a href="https://khak.com/captains-fish-chicken-cedar-rapids/" target="_blank" rel="noopener" style="color:var(--gold-bright);text-decoration:underline">KHAK</a> and <a href="https://www.thegazette.com/restaurants/captains-fish-and-chicken-opens-second-location-in-cedar-rapids/" target="_blank" rel="noopener" style="color:var(--gold-bright);text-decoration:underline">The Gazette</a> both covered the opening and a fast-following second location.</p>
+        <div class="mt-m"><a class="btn" href="/about/">More about us</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU CATEGORIES -->
+  <section class="section section--cream">
+    <div class="wrap">
+      <span class="eyebrow">Browse the menu</span>
+      <h2 class="display h-lg" style="margin-top:10px">{menu.length} categories, made fresh</h2>
+      <div class="grid grid--4 mt-l">
+        {menu.map((s) => (
+          <a class="card card--link" href={`/menu/${s.slug}/`}>
+            <h3>{s.name}</h3>
+            <p class="card__desc">{s.description ?? `${s.items.length} options`}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section section--paper">
+    <div class="wrap">
+      <span class="eyebrow">Find us</span>
+      <h2 class="display h-lg" style="margin-top:10px">Visit &amp; order</h2>
+      <div class="info-row mt-l">
+        <div class="info-card">
+          <dl>
+            <dt>Address</dt><dd>1616 1st Ave NE<br />Cedar Rapids, IA 52402</dd>
+            <dt>Phone</dt><dd><a href={telHref} style="color:var(--navy-700);font-weight:700">{telDisplay}</a></dd>
+            <dt>Hours</dt><dd>Mon–Thu 11am–10pm<br />Fri–Sat 11am–11pm<br />Sun 11am–8pm</dd>
+            <dt>Order</dt><dd><a href={orderUrl} target="_blank" rel="noopener" style="color:var(--navy-700);font-weight:700">Uber Eats →</a></dd>
+          </dl>
+          <div class="pill-row mt-m">
+            <a class="btn" href={directionsUrl} target="_blank" rel="noopener">Get Directions</a>
+            <a class="btn btn--navy" href={telHref}>Call {telDisplay}</a>
+          </div>
+        </div>
+        <div class="info-card" style="padding:0;overflow:hidden;min-height:300px">
+          <iframe title="Map to Captains Fish and Chicken" width="100%" height="100%" style="border:0;min-height:300px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=1616+1st+Ave+NE,+Cedar+Rapids,+IA+52402&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--cream">
+    <div class="wrap-narrow">
+      <span class="eyebrow">Good to know</span>
+      <h2 class="display h-lg" style="margin-top:10px">Frequently asked</h2>
+      <div class="faq mt-l">
+        {faqLd.mainEntity.map((q) => (
+          <details>
+            <summary>{q.name}</summary>
+            <p>{q.acceptedAnswer.text}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section--navy-deep center">
+    <div class="wrap-narrow">
+      <h2 class="display h-lg">Hungry now?</h2>
+      <p class="lead mt-s" style="margin-inline:auto">Call ahead and we'll have it hot and ready — or order online for pickup and delivery.</p>
+      <div class="hero__cta mt-m" style="justify-content:center">
+        <a class="btn btn--lg" href={telHref}>Call {telDisplay}</a>
+        <a class="btn btn--ghost btn--lg" href={orderUrl} target="_blank" rel="noopener">Order Online</a>
+      </div>
+    </div>
+  </section>
+</Base>

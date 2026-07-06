@@ -1,0 +1,44 @@
+{
+  "id": "site",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Order Online", "href": "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA" },
+    { "label": "Call", "href": "tel:+13192211040" },
+    { "label": "Directions", "href": "https://www.google.com/maps/dir/?api=1&destination=1616%201st%20Ave%20NE%2C%20Cedar%20Rapids%2C%20IA%2052402" }
+  ],
+  "footer": {
+    "links": [
+      { "label": "Call (319) 221-1040", "href": "tel:+13192211040" },
+      { "label": "Order on Uber Eats", "href": "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA" },
+      { "label": "Get Directions", "href": "https://www.google.com/maps/dir/?api=1&destination=1616%201st%20Ave%20NE%2C%20Cedar%20Rapids%2C%20IA%2052402" }
+    ],
+    "copyrightText": "© 2024-2026 Captains Fish and Chicken · 1616 1st Ave NE, Cedar Rapids, IA 52402"
+  },
+  "schemaMap": { "businessEntity": "Restaurant" },
+  "cta": { "text": "Call to Order", "href": "tel:+13192211040" },
+  "ctaPrimary": { "text": "Call to Order", "href": "tel:+13192211040" },
+  "valueProps": [
+    { "label": "Made fresh to order", "sublabel": "Fried when you order it — never sitting under a heat lamp" },
+    { "label": "8+ seafood choices", "sublabel": "Catfish, perch, tilapia, cod, red snapper, calamari, crab cakes & jumbo shrimp" },
+    { "label": "Family & party deals", "sublabel": "Big-batch fish, wings and combo dinners for the whole table" }
+  ],
+  "ctaBanner": {
+    "headline": "Hungry now? Call ahead and we'll have it hot and ready.",
+    "sublabel": "Fresh-to-order fish, chicken & seafood on 1st Ave NE in Cedar Rapids."
+  },
+  "offers": [
+    { "label": "Fish-Only Family Deal", "detail": "Catfish, perch and tilapia family portion — $49.99" },
+    { "label": "Captain's Family Meal Deal", "detail": "Large fries plus two items — $59.99" },
+    { "label": "Combo Dinner", "detail": "Your choice of 2 items $18.99, or 3 items $21.99" }
+  ],
+  "trustBar": {
+    "items": [
+      { "label": "Made fresh to order", "detail": "Every basket fried to order" },
+      { "label": "8+ seafood choices", "detail": "Catfish, perch, tilapia, cod, red snapper & more" },
+      { "label": "Whole, party & boneless wings", "detail": "Plus tenders and gizzards" },
+      { "label": "Family & party deals", "detail": "Feed the whole table" },
+      { "label": "Open late Fri & Sat", "detail": "Kitchen open until 11pm" },
+      { "label": "Locally owned on 1st Ave NE", "detail": "Cedar Rapids, opened 2024" }
+    ]
+  }
+}

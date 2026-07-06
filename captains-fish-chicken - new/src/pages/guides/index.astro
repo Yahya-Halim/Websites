@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import guides from '../../data/guides.json';
+import { telHref, telDisplay } from '../../lib/site';
+const title = 'Guides & Tips | Captains Fish and Chicken, Cedar Rapids';
+const description = 'Fish-fry guides, dish comparisons, ordering tips and Cedar Rapids food guides from Captains Fish and Chicken — how our seafood is fried fresh, what to order, and how to feed a crowd.';
+const cats = [...new Set((guides as any[]).map((g) => g.category))];
+---
+<Base title={title} description={description}>
+  <section class="section section--navy-deep" style="padding-block:56px">
+    <div class="wrap">
+      <nav class="crumbs"><a href="/">Home</a> / Guides</nav>
+      <span class="eyebrow" style="margin-top:14px">Read up, then order</span>
+      <h1 class="display h-xl" style="margin-top:10px">Guides &amp; tips</h1>
+      <p class="lead mt-s">Everything from “which fish should I get?” to feeding a game-day crowd — plus the story behind how we fry it all fresh to order.</p>
+      <div class="hero__cta mt-m"><a class="btn" href={telHref}>Call {telDisplay}</a></div>
+    </div>
+  </section>
+  <section class="section section--cream">
+    <div class="wrap">
+      {(guides as any[]).length === 0 && <p class="lead">Guides coming soon.</p>}
+      {cats.map((c) => (
+        <div style="margin-bottom:44px">
+          <h2 class="display h-md" style="color:var(--navy-800)">{c}</h2>
+          <div class="grid grid--3 mt-m">
+            {(guides as any[]).filter((g) => g.category === c).map((g: any) => (
+              <a class="card card--link" href={`/guides/${g.slug}/`}><span class="tag">{g.category}</span><h3>{g.title}</h3><p class="card__desc">{g.excerpt}</p></a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>
