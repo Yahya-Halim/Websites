@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 4,
+  "reviewer": "build-quality",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/phase-4-artifact.json",
+  "artifactHash": "3c44c8bbadcf050194d272e5e95014f773e9200c917501554994a7df980c23d5",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/review-build-quality.md",
+  "notesHash": "9b4f9895af8f3b7061812fe19c1025e76c1274465760d79dee4f2b4efea4d8d6",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-4\\build-quality-attempt-1.md",
+  "notesHeadings": [
+    "Phase 4 review — build-quality",
+    "Verified (all pass)",
+    "Non-blocking weaknesses",
+    "Blocking issues",
+    "Independence"
+  ],
+  "notes": "# Phase 4 review — build-quality\n\n**Reviewer:** build-quality (independent subagent; strictly READ-ONLY; did NOT produce the build)\n**Verdict:** PASS\n**Date:** 2026-07-07\n**Run:** captains-fish-and-chicken-2026-07-07-098c7de7\n\n## Verified (all pass)\n1. dist/ route count == 35, exactly matching the Phase 2 matrix (home, menu index + 14 sections,\n   6 occasions, 10 landings, 2 neighborhoods, contact).\n2. Menu JSON-LD emitted on /menu/ with hasMenuSection + 87 MenuItem entries, each with an Offer,\n   priceCurrency USD, numeric price.\n3. Truthfulness clean: calamari ABSENT; NewBo ABSENT; 3100 / 6th St SW ABSENT (dist + src);\n   dine-in FAQs correctly state takeout/delivery/catering-only; every hours display carries the\n   \"(please call to confirm)\" caveat.\n4. Zero dangling internal cross-links (all 39 distinct hrefs resolve to built routes).\n5. Occasions each 5-6 FAQs + 5-6 cross-links; /faq renders 9 FAQs.\n6. Neighborhood facts genuine (Coe College, I-380, Mound View, Wellington Heights, Hwy 100/7th Ave\n   to Marion ~5 mi/10 min).\n7. factory validate (read-only): ONLY blocking gate is do-not-ship-guards, populated entirely by the\n   declared identity fixtures (G-XXXXXXXXXX + .example) — EXPECTED per owner deferral.\n   route-completeness / schema-floor / cro-block-presence / sap-anti-doorway / graph-gate all pass.\n8. NAP consistent site-wide: (319) 221-1040, 1616 1st Ave NE on all 35 routes + llms.txt.\n\n## Non-blocking weaknesses\n- public/logo.svg missing (advisory; Phase 6 imagery fills it).\n- No Business Knowledge Graph (advisory; legacy mode).\n- F14 hours seam: business.json structured hours use the 2-bucket schema (Mon-Sat close 22:00) and\n  cannot represent the 3-window week (Fri-Sat 11pm); hours.displayText carries the accurate text\n  by design and every render is caveated \"please call to confirm.\" Cosmetic, documented.\n\n## Blocking issues\nOnly the EXPECTED identity-fixture do-not-ship gate (not a build defect; resolves at Phase 7 swap).\n\n## Independence\nReviewer ran strictly read-only (Read/Grep/ls/find + read-only factory validate); wrote no files,\nran no state-mutating commands, recorded no runner state.\n",
+  "reviewedAt": "2026-07-07T20:11:38.198Z"
+}

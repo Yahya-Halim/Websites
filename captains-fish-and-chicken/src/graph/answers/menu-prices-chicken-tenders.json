@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-chicken-tenders",
+  "questionRef": "questions/menu-prices-chicken-tenders",
+  "text": "Tenders Meal (3 pcs): Meal 12.99\nTenders Meal (6 pcs): Meal 21.99\nTenders Meal (10 pcs): Meal 34.99\nTenders Only (20 pcs): Only 59.99",
+  "cites": [
+    "menu/chicken-tenders"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/chicken-tenders.json",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-friday-fish-fry-1",
+  "questionRef": "questions/faq-occasions-friday-fish-fry-1",
+  "text": "The 10-piece fish family deal comfortably feeds a family of four to six as the main dish with sides. For larger gatherings, we offer bigger fish family deals up to a 50-piece. Call (319) 221-1040 and tell us your headcount.",
+  "cites": [
+    "occasions/friday-fish-fry"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

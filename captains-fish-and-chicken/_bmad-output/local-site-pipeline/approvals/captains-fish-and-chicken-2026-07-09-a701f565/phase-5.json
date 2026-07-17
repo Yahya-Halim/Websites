@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 5,
+  "actor": "Yahya",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+  "artifactHash": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268",
+  "notesFile": "C:/Users/Lenovo/AppData/Local/Temp/claude/D--plugin-localevolve-factory/ad68d563-d121-4a5d-83ed-f2d8405933d4/scratchpad/p5-approval-notes.md",
+  "notes": "# Phase 5 Approval — run v3 (captains-fish-and-chicken-2026-07-09-a701f565)\n\nApproved under the operator's standing directive of 2026-07-09: \"seal everything after using the new repo updates and implementation to the captains-fish-chicken website\". Real operator: geekeys343@gmail.com (actor recorded as Yahya per workflow contract).\n\nBasis:\n- factory validate exit 0 — all 6 blocking gates (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) + 5 advisories = 11/11. Independently re-run by the reviewer.\n- SEO/GEO audit: Blocking Findings None; 6 non-blocking advisories (OG/Twitter absence, structured hours omit Fri-Sat by owner-unconfirmed-hours constraint, 5 long titles, /menu/ meta length, hours caveat, dual phone formats) — none intersects a gate.\n- validation-fix-review PASS attempt 1 (artifactHash db0bd88a…, notes 5cb95c8d…): zero fixture flags, real identity (GA4 G-7W35DKNK6Z, real canonicals), failures [] / fixRounds [] honest (Phase 5 touched no src/), count-free review copy confirmed in dist.\n",
+  "approvedAt": "2026-07-11T00:25:29.785Z",
+  "expiresAt": "2026-07-18T00:25:29.785Z"
+}

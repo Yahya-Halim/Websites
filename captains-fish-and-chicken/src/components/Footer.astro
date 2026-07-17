@@ -1,0 +1,174 @@
+---
+// Project Footer — deep-navy footer with NAP, hours, gold-accented link
+// columns. Imported by the project-local Base layout (relative import).
+import { getEntry } from 'astro:content';
+import CtaBar from '@engine/components/CtaBar.astro';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const businessName = business?.name;
+const phone = business?.phone;
+const address = business?.address;
+const hoursText = business?.hours?.displayText;
+---
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    {(businessName || phone || address) && (
+      <div class="footer-nap">
+        {businessName && <p class="nap-name">{businessName}</p>}
+        {address && (
+          <address class="nap-address">
+            {address.street}<br />
+            {address.city}, {address.state} {address.zip}
+          </address>
+        )}
+        {phone && (
+          <p class="nap-phone">
+            <a href={`tel:${phone}`}>{phone}</a>
+          </p>
+        )}
+      </div>
+    )}
+
+    {hoursText && (
+      <div class="footer-hours">
+        <p class="footer-heading">Hours</p>
+        <p class="nap-hours">{hoursText}</p>
+      </div>
+    )}
+
+    {site?.footer?.links && site.footer.links.length > 0 && (
+      <nav class="footer-nav" aria-label="Footer">
+        <p class="footer-heading">Explore</p>
+        <ul>
+          {site.footer.links.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+  </div>
+
+  {(site?.ctaPrimary || site?.ctaSecondary) && (
+    <CtaBar surface="footer" ctaPrimary={site?.ctaPrimary} ctaSecondary={site?.ctaSecondary} />
+  )}
+
+  <p class="copyright">
+    {site?.footer?.copyrightText ?? `© ${business?.copyrightYears ?? new Date().getFullYear()} ${business?.name ?? ''}`}
+  </p>
+</footer>
+
+<style>
+  .site-footer {
+    position: relative;
+    margin-top: 3rem;
+    /* Bottom clearance for the sticky call bar is a mobile-only need. */
+    padding: 3rem 1.5rem;
+    background: var(--navy-900, #0b1e33);
+    color: rgba(255, 255, 255, 0.82);
+  }
+  /* Gold wave hem at the footer's top edge — the closing note of the nautical
+     motif that opens on the hero. */
+  .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background:
+      var(--wave-gold) repeat-x center / 24px 8px,
+      var(--navy-900, #0b1e33);
+  }
+  @media (max-width: 48rem) {
+    .site-footer {
+      padding-bottom: 5.5rem;
+    }
+  }
+  .footer-grid {
+    max-width: 72rem;
+    margin: 0 auto 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 2rem;
+    text-align: left;
+  }
+  /* Gold is reserved for CTA fills; column headings use steel on navy. */
+  .footer-heading {
+    color: var(--steel-200, #d5dfe9);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.85rem;
+    margin: 0 0 0.6rem;
+  }
+  .footer-nap .nap-name {
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+  }
+  .nap-address {
+    font-style: normal;
+    margin: 0 0 0.5rem;
+    line-height: 1.6;
+  }
+  .nap-phone {
+    margin: 0;
+  }
+  /* Phone is a call CTA — gold as a filled pill with navy text (the gold
+     rule: fill + navy-900 text, never gold text). */
+  .nap-phone a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    background: var(--gold-500, #f5b301);
+    color: var(--navy-900, #0b1e33);
+    border-radius: 999px;
+    padding: 0.35rem 1.1rem;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.05rem;
+    transition: background 0.15s ease;
+  }
+  .nap-phone a:hover {
+    background: var(--gold-600, #df9f00);
+  }
+  .nap-hours {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .footer-nav ul {
+    list-style: none;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-nav a {
+    display: inline-block;
+    padding: 0.6rem 0; /* ~45px tall link rows — 44px target floor */
+    color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+  }
+  .footer-nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .site-footer :global(.cta-bar) {
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    max-width: 72rem;
+  }
+  .copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.55);
+  }
+</style>

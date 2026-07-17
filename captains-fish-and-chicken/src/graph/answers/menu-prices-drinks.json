@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-drinks",
+  "questionRef": "questions/menu-prices-drinks",
+  "text": "Water: Each 0.99\nMystic: Each 3.99\nCalypos: Each 3.99",
+  "cites": [
+    "menu/drinks"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/drinks.json",
+  "lastVerified": "2026-07-07"
+}

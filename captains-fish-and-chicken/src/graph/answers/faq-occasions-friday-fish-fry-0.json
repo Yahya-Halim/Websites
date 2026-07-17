@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-friday-fish-fry-0",
+  "questionRef": "questions/faq-occasions-friday-fish-fry-0",
+  "text": "We fry fresh catfish fillet, perch, tilapia, and cod. Each is dropped fresh to order for a crispy golden finish. If you want a mix for the table, a fish family deal lets you feed a group, and you can call (319) 221-1040 to talk through options.",
+  "cites": [
+    "occasions/friday-fish-fry"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[0]",
+  "lastVerified": "2026-07-07"
+}

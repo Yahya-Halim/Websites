@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-seafood",
+  "question": "How much do Seafood cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/seafood.json",
+  "lastVerified": "2026-07-07"
+}

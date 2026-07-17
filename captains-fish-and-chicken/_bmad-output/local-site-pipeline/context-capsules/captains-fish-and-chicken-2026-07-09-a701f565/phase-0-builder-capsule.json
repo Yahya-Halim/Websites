@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 0,
+  "specialist": "local-business-discovery",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-business-discovery\\SKILL.md",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0.json",
+  "packetHash": "bae95982695ab650a5f4c0ab83f4373122b4648f8d50cbfb9d01fb582055cd83",
+  "mission": "Produce the Phase 0 artifact using the prepared workbench and sealed inputs only.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0.json",
+      "hash": "bae95982695ab650a5f4c0ab83f4373122b4648f8d50cbfb9d01fb582055cd83"
+    },
+    {
+      "kind": "specialist-skill",
+      "path": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-business-discovery\\SKILL.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\probe-set.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\web-footprint-findings.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\owner-questionnaire.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\discovery-notes.md"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed drafts from other phases",
+    "Direct edits to workflow state files"
+  ],
+  "requiredOutputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json",
+    "requiredArtifactFields": [
+      "interviewSummary",
+      "webFootprintFindings",
+      "businessIdentity",
+      "userConfirmedFacts",
+      "unverifiedClaims",
+      "missingAnswers",
+      "buildOutputCreated"
+    ]
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": true,
+    "requiredReviewers": []
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0-builder-report.json",
+    "requiredRole": "builder",
+    "requiredStatus": "completed"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "briefHash": "b8a5b99e0e40abc4d46529fcb4be1f2d4a47cf7b471c4675d0514dbf7b5ace42",
+  "phase": 1,
+  "exitedAt": "2026-07-07T19:11:40.065Z",
+  "specialistInvoked": "keyword-research",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-1/phase-1-artifact.json",
+    "artifactHash": "9e8a398e6656bd83e563a0538a8b3177d0db27dde83d555955d5ccb19563a3e1",
+    "contract": "research sources, competitor notes, keyword/entity findings, source dates, evidence gaps"
+  },
+  "nextPhaseAllowed": [
+    2
+  ],
+  "nextPhaseHint": 2,
+  "blocking": []
+}

@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "project": "Pita Kabab",
+    "runId": "pita-kabab-2026-07-12-b5881b47",
+    "phase": 3,
+    "amendment": 2,
+    "amendedOn": "2026-07-12",
+    "source": "ui-ux-pro-max --design-system output, adapted per design-system.md. Amendment 1: olive-green + warm-gold re-palette + density. Amendment 2 (Tatreez Modern — Palestinian carte, from a design-direction panel + cultural-authenticity/truthfulness guard): editorial Fraunces + IBM Plex Sans typography, deep-forest headings, warm parchment bands, and a Palestinian tatreez (najmet Beit Lahm cross-stitch) motif — gold-on-forest on the hero hem + footer, olive on light dividers/ticks. Green+gold identity, green canvas, and kabab-skewer logo all KEPT (refinement, not rebrand).",
+    "note": "Standalone token set; owner brand assets unconfirmed. NOT a Figma/design-token sync handoff. Build reference for Phase 4 tokens.css. Arabic (ahlan wa sahlan anchor + Naskh dish names) is specced but SHIPS HIDDEN behind an enableArabic flag until owner Ray Aqel verifies script/diacritics. Madder/sumac red DEFERRED (owner-gated: green+red+white flag risk + madder-on-forest only 2.28:1).",
+    "brandAssetStatus": "Logo: gold kabab-skewer-on-green-circle icon + Fraunces 'Pita Kabab' wordmark + 'Palestinian kitchen · Cedar Rapids' tagline (public/logo-icon.png). Owner-confirm/replace pending."
+  },
+  "color": {
+    "primary": "#1B6E3E",
+    "primaryEdge": "#14512E",
+    "onPrimary": "#FFFFFF",
+    "accent": "#E0A80D",
+    "onAccent": "#1C2B21",
+    "accentSoft": "#FBF3D6",
+    "onAccentSoft": "#4A3A08",
+    "forest": "#0F2A1E",
+    "parchment": "#F4EEE0",
+    "linen": "#F1ECDE",
+    "stitch": "#2F6B43",
+    "heroBand": "#1B6E3E",
+    "heroBandDeep": "#14512E",
+    "onHeroBand": "#FFFFFF",
+    "background": "#F7F9F3",
+    "surface": "#FFFFFF",
+    "foreground": "#1C2B21",
+    "mutedForeground": "#4C5A4E",
+    "border": "#DCE6D2",
+    "success": "#15803D",
+    "destructive": "#B91C1C",
+    "ring": "#1D4ED8",
+    "_deferred_threadMadder": "#9E3B2E (owner-gated, NOT shipped in amendment 2)"
+  },
+  "motif": {
+    "name": "Palestinian tatreez — najmet Beit Lahm (Bethlehem eight-point star) + saw-tooth running stitch",
+    "authoredAs": "inline SVG on a counted 4px grid (src/components/TatreezBand.astro); monochrome via currentColor",
+    "placements": "gold-on-forest saw hem on the hero + CTA banner + footer top (7.13:1); olive single-tone star dividers between home sections (5.99:1); olive running-stitch tick under section h2s; olive stitch bullet on eyebrows",
+    "discipline": "structural ornament only — never a field, button, or text; every node aria-hidden; not the sole signal for anything"
+  },
+  "contrast": {
+    "onPrimaryVsPrimary": "6.3:1 (AA/AAA — white on #1B6E3E)",
+    "onAccentVsAccent": "6.9:1 (AA — dark ink #1C2B21 on gold #E0A80D; white is NEVER placed on gold)",
+    "onAccentSoftVsAccentSoft": ">=8:1 (dark ink on pale gold eyebrow/badge fill)",
+    "onHeroBandVsHeroBand": "6.3:1 (white on green hero band)",
+    "foregroundVsSurface": ">=14:1",
+    "foregroundVsBackground": ">=13:1 (ink on green-tinted canvas)",
+    "mutedForegroundVsSurface": "7.4:1",
+    "policy": "WCAG AA floor: 4.5:1 body text, 3:1 large text and UI glyphs; gold is an accent/surface color used only with dark ink, never as text-on-white and never carrying white text; never color-alone meaning"
+  },
+  "typography": {
+    "display": {
+      "family": "Fraunces",
+      "weights": [400, 600],
+      "italic": true,
+      "fallback": "'Fraunces', Georgia, 'Times New Roman', serif",
+      "usage": "H1-H3, dish names, italic menu descriptors; variable optical sizing; display-only, never body/UI"
+    },
+    "body": {
+      "family": "IBM Plex Sans",
+      "weights": [400, 500, 600, 700],
+      "fallback": "'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif"
+    },
+    "mono": {
+      "family": "IBM Plex Mono",
+      "weights": [500, 600],
+      "usage": "tracked uppercase eyebrows only"
+    },
+    "arabic": {
+      "family": "IBM Plex Sans Arabic",
+      "weights": [400, 500, 600],
+      "usage": "DRAFT/GATED — ahlan wa sahlan anchor + Naskh dish names; ships hidden until owner sign-off"
+    },
+    "amendment2Note": "Retired Fredoka + Nunito. Fraunces (editorial serif) + IBM Plex Sans reads professional/carte; owner Google Fonts css2 URL validated 200.",
+    "scale": [14, 16, 18, 20, 24, 32, 40, 52],
+    "bodySize": "16-18px",
+    "lineHeight": {
+      "body": 1.55,
+      "heading": 1.15
+    },
+    "loading": "font-display: swap; preload Fredoka 600 and Nunito 400 only",
+    "deviation": "Generated Caveat/Quicksand pairing rejected (script headings fail legibility/hierarchy at h1 scale on a conversion site)"
+  },
+  "shape": {
+    "radiusControl": "14px",
+    "radiusCard": "18px",
+    "radiusPill": "999px",
+    "borderHairline": "1px solid #DCE6D2",
+    "buttonDepth": "4px solid darker bottom edge (#14512E), collapses 2px on press via transform"
+  },
+  "elevation": {
+    "card": "0 1px 2px rgba(20,40,25,0.06)",
+    "raised": "0 6px 20px rgba(20,40,25,0.10)",
+    "policy": "flat-with-definition; hairline borders over heavy shadows (Polaris)"
+  },
+  "spacing": {
+    "unit": "8px",
+    "ramp": [4, 8, 12, 16, 24, 32, 40, 48, 64],
+    "sectionGapMobile": "32px",
+    "sectionGapDesktop": "48px",
+    "cardPadding": "16-20px",
+    "containerPaddingMobile": "20px",
+    "containerPaddingDesktop": "24px",
+    "stickyBarReserve": "72px bottom padding on mobile body",
+    "densityNote": "Amendment 1 tightened section rhythm (was 48/80 mobile/desktop) to 32/48 and container padding to 20/24px to remove the sparse-whitespace feel flagged by the engagement owner. Full-bleed brand hero band replaces the empty cream hero to anchor the top of the page."
+  },
+  "layout": {
+    "breakpoints": [375, 768, 1024, 1440],
+    "contentMaxWidth": "70rem",
+    "proseMaxWidth": "65ch",
+    "approach": "mobile-first single column; full-bleed brand hero band, then card-on-canvas sections with alternating pale-gold/section-tinted bands to break up long white stretches",
+    "sectionRhythm": "32px mobile / 48px desktop between top-level sections; sections group visually via background bands instead of large empty gaps"
+  },
+  "motion": {
+    "micro": "150-300ms",
+    "functional": "100-200ms ease (Polaris)",
+    "signature": "single spring bounce on primary CTA press only",
+    "easingEnter": "ease-out",
+    "easingExit": "ease-in",
+    "reducedMotion": "prefers-reduced-motion drops bounce and scroll-reveals, keeps state feedback",
+    "constraint": "transform/opacity only; no layout-shifting animation"
+  },
+  "components": {
+    "ctaButton": "chunky 3D: primary green fill, 4px primaryEdge bottom edge, 48px min height, pill-to-14px radius",
+    "stickyCallBar": "singleton fixed bottom, 56px + safe-area inset, single-CTA default (Call), dual variant gated on SMS confirmation",
+    "badge": "pill, accentSoft (pale gold) fill with dark ink, or success fill with white text, icon + text (never color alone)",
+    "eyebrow": "small-caps gold-ink label over accentSoft chip introducing sections; adds density and hierarchy without imagery",
+    "heroBand": "full-bleed green band, white h1 + subhead + gold underline accent + primary CTA; anchors the top instead of empty cream",
+    "banner": "full-width green announcement/CTA band with gold accent underline and a white (surface) CTA button reading green",
+    "card": "surface white, radiusCard 18px, hairline sage border, card elevation; sits on green-tinted canvas",
+    "sectionBand": "alternating pale-gold (#FBF3D6) or white bands full-bleed behind grouped sections to reduce perceived whitespace",
+    "trustGrid": "2-col mobile / 3-col desktop cards; conditional >=6 owner-confirmed facts, omitted otherwise",
+    "leadForm": "<=6 fields, visible labels, blur validation, error below field, 44px+ inputs, semantic input types",
+    "icons": "Lucide SVG, 1.5px stroke, no emoji icons"
+  }
+}

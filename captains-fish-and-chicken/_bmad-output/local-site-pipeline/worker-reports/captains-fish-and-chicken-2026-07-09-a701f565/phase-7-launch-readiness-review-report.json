@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 7,
+  "reviewer": "launch-readiness",
+  "workerId": "phase7-launch-readiness-reviewer-a6b7a9d9",
+  "status": "completed",
+  "verdict": "pass",
+  "assumptions": [],
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7.json",
+  "packetHash": "2dda44042b29a02a2101252b0961101b9645bf451b28ba4db0a86acb54cc7e39",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-launch-readiness-review-capsule.json",
+  "capsuleHash": "4cc863e1b332f228ba372a37482dc4c330b32a9186e8bdc2063749e120e3b528",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\phase-7-artifact.json",
+  "artifactHash": "95552cf4999181c6299d484073248a2e77a1321683c60d45ebe03bcb0443efd9",
+  "artifactHashReviewed": "95552cf4999181c6299d484073248a2e77a1321683c60d45ebe03bcb0443efd9",
+  "integrityGate": "pass",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\review-launch-readiness-notes.md",
+  "independenceNote": "Fresh reviewer; did not build the artifact. Verified only from the capsule, the files it names, and read-only commands. Did not edit the phase artifact or any workflow-state file.",
+  "blockers": [],
+  "commandsRun": [
+    "sha256sum phase-7-artifact.json",
+    "ls -la dist/ ; find dist -name '*.html' | wc -l (=38)",
+    "npx factory validate (exit 0)",
+    "node dist-sweep-v2.mjs (independent HTML sweep over 38 pages)",
+    "node link-check.mjs (path-normalized internal-link sweep: 1201 checked, 0 broken)",
+    "curl -s https://captains-fish-chicken.netlify.app/{,menu/,menu/seafood/,menu/desserts/,menu/kids-meals/,contact/,robots.txt,sitemap-index.xml,sitemap-0.xml,llms.txt} then sha256 compare vs dist",
+    "grep review-count/stars/'call to confirm'/paymentAccepted/priceRange/representational over dist and live-root.html",
+    "npx --no-install lighthouse --version (=13.4.0)",
+    "npx --no-install lighthouse https://captains-fish-chicken.netlify.app/ --form-factor=mobile --only-categories=performance,accessibility,best-practices,seo (independent mobile run)"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-launch-readiness-review.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-launch-readiness-review-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\phase-7-artifact.json"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\review-launch-readiness-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-launch-readiness-review-report.json"
+  ],
+  "verification": [
+    "INTEGRITY: sha256(phase-7-artifact.json) = 95552cf4999181c6299d484073248a2e77a1321683c60d45ebe03bcb0443efd9 == capsule.artifactHash. PASS.",
+    "VALIDATE: `npx factory validate` reproduced exit 0.",
+    "DIST SWEEP (38 routes) reproduced exactly: 38 unique titles / 0 dup; 0 missing meta description; 0 canonical missing / 0 off-host (host captains-fish-chicken.netlify.app); 38 pages exactly one H1; GA4 G-7W35DKNK6Z on all 38 (0 missing); Restaurant JSON-LD 38; JSON-LD types R38/WS38/WP37/BC37/FAQ21/ContactPage1/Menu1, 0 parse errors; 152 img / 0 missing alt; 231 tel hrefs / 38 pages with tel CTA; 1201 internal links / 0 broken; 0 fixture leaks (.example, G-XXXXXXXXXX, 555-0147, placeholder); single NAP tuple (38 addr / 38 display phone; tel +13192211040 & +1-319-221-1040; display (319) 221-1040); 38 gtag('event','contact') pages. All match artifact.distSweep.",
+    "LIVE-MATCH (curl live vs dist sha256, all IDENTICAL): / = f6c19d7f9f46393913e4b24ae4a3fbc7ef1a2195e2bc1eaa8654cfd3745bb455; /menu/seafood/ = dde3ab25b8b81d829a1393da1fe0332b5747d2f10d3ffa0d5906c46741fb8712; /menu/ = a4132140cb9db65e49eed032a43ddf386000948c1d13ea044c51e42dff631e08; /menu/desserts/ = 81c136233c078c1cbb1f7822621e2a5fdadb1aa57b5d8c5e43068516cf2ac44c; /contact/ = 62de0fd601e75f920b8c7c9ec338018cf7a08dc14013d1f0f67b344fa1e1f4cf; /robots.txt = 357a1d20524a7335555bf446dada82d3fc4264ca1f806daf44cd32144d5a190e; plus /menu/kids-meals/, /sitemap-index.xml, /sitemap-0.xml, /llms.txt IDENTICAL. All 9 sampled routes byte-identical live==dist; the 'live serves this exact build' claim holds (and is conservative: /menu/ and /menu/seafood/ are identical though not listed in byteIdenticalToDist).",
+    "LIVE COUNT-FREE: live home has 0 '208 reviews' and 0 'NNN reviews'; shows '4.4 stars on Google'. The stale-draft '208 reviews live' contradiction does not reproduce. Live sitemap-0 = 38 URLs; live gtag/js?id=G-7W35DKNK6Z loads; live robots AI allow-list GPTBot/ClaudeBot/PerplexityBot/Google-Extended present.",
+    "TRUTHFULNESS FLOOR honored: 'call to confirm' hours caveat on all 38 dist pages; no fabricated review count in dist; no paymentAccepted schema anywhere (only priceRange '$$', an affordability tier, not a payment claim); representational-photo note on menu pages; public/logo.png placeholder present; artifact truthfulnessCaveats carry placeholder-logo, owner-unconfirmed-hours, estimated-prices, unknown-payment.",
+    "LIGHTHOUSE not inflated: artifact records mobile Home P89/A96/BP100/SEO92 and /menu/ P67/A95/BP100/SEO92 (Performance honestly sub-90, flagged as post-launch advisory, not rounded to a pass). Locally-installed Lighthouse = v13.4.0 (exact version cited). Independent mobile run of live / reproduced Accessibility 96 / Best-Practices 100 / SEO 92 EXACTLY, and Performance 56 (worse than recorded 89) - confirms measured, not inflated.",
+    "LAUNCH CHECKLIST: all 9 required ids present (identity, validation, imagery, conversion-actions, crawlability, analytics, local-presence, broken-links, mobile-lighthouse), each status=pass with concrete evidence + real caveat/owner next-action. deployTarget.method=owner-run, deployedByThisPhase=false with reason - deploy honestly recorded as owner-owned, not performed by this phase.",
+    "CONCERNS (minor, non-disqualifying): (1) no persisted Lighthouse report file in workbench/phase-7 (scores self-reported, but 3/4 categories reproduced exactly); (2) home mobile Performance 89 optimistic vs independent 56 - high-variance category, honest direction, expected post-launch optimization; (3) byteIdenticalToDist lists 8 routes vs prose 'nine' - all 9 empirically confirmed identical, so prose true / array under-enumerated. Nothing fabricated; no fixture leaked; integrity holds."
+  ]
+}

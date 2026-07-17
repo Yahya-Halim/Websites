@@ -1,0 +1,338 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 3,
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+  "artifactHash": "f0336ed10576443b4e41f797181abd9e085bdb33568b00c8b20a84bf0be78c54",
+  "specialist": "ui-ux-pro-max",
+  "completedAt": "2026-07-12T23:51:22.128Z",
+  "amendedAt": "2026-07-13T04:20:41.009Z",
+  "amendment": 2,
+  "contract": "UI UX Pro Max design system, design/content/build plan, selected architecture, asset needs, identity decision",
+  "artifact": {
+    "phase": 3,
+    "amendment": {
+      "index": 2,
+      "amendedOn": "2026-07-12",
+      "actor": "Yahya",
+      "history": [
+        "Amendment 1: re-palette pomegranate red -> olive-green + warm-gold; tighten layout density (green hero band, section bands, 32/48 rhythm); wire generated logo.",
+        "Amendment 2: 'more professional + rooted in the food region/culture' — Tatreez Modern (Palestinian carte), synthesized by a 5-direction design panel + a cultural-authenticity/truthfulness guard."
+      ],
+      "reason": "Amendment 2 — engagement-owner direction to feel more professional and specifically Palestinian/Levantine (not generic Middle Eastern). Applied: editorial Fraunces serif + IBM Plex Sans typography (retiring Fredoka/Nunito); deep-forest #0F2A1E headings; warm parchment #F4EEE0 menu-stock bands (replacing pale-gold); a Palestinian tatreez (najmet Beit Lahm cross-stitch) motif as gold-on-forest hero/footer saw-hems and olive section dividers/ticks; Palestinian-kitchen copy; a printed-carte menu layout. Green+gold identity, green canvas, and kabab-skewer logo KEPT — refinement, not rebrand.",
+      "scope": "typography (fonts), designSystem.palette (add forest/parchment/linen/stitch; madder deferred), tatreez motif, eyebrow/footer/hero-hem CSS, home + menu copy, carte menu rows. No change to identityDecision, page families, route count (41), or the omit-never-fabricate truthfulness floor.",
+      "guardGates": "Arabic (ahlan wa sahlan + Naskh dish names) ships HIDDEN behind enableArabic=false until owner Ray Aqel verifies script/diacritics; owner menu spellings (foul, mfatakeh, kalaya, kabab/kabob, 'Mediterranean Delight') frozen verbatim; madder/sumac red dropped (flag-palette + contrast); no fabricated tenure/awards/family-story."
+    },
+    "summary": "Phase 3 DESIGN artifact for Pita Kabab (run pita-kabab-2026-07-12-b5881b47), amendment 1. UI UX Pro Max design system for a Palestinian Mediterranean counter-service family restaurant, anchored on the Duolingo (primary) x Shopify Polaris (structural) reference style guides via the styleguide-library archetype matrix. Standalone token palette (owner brand assets unconfirmed) RE-PALETTED per owner direction: olive-green #1B6E3E single action accent with 3D chunky CTA buttons (white text 6.3:1), warm-gold #E0A80D accent used only with dark ink (6.9:1) for eyebrows/badges/underlines, green-tinted warm canvas #F7F9F3, full-bleed green hero band, alternating pale-gold section bands, Fredoka/Nunito rounded type pairing, WCAG AA floor, mobile-first with singleton sticky call bar. Layout density tightened (section rhythm 32/48, container padding 20/24, hero band replaces empty cream) to resolve the sparse-whitespace feedback. Architecture: Astro static output from engine restaurant archetype templates, 46 data-driven routes (41 unconditional floor). Brand mark generated via Higgsfield (green ring + gold emblem), owner-confirm/replace pending. Identity sealed as declared fixtures (pitakabab.example / owner@pitakabab.example / G-XXXXXXXXXX, paymentAccepted unknown, JSON-LD omission); Phase 5 gate expected to flag fixtures by design. All CRO contract slots and the 32-slot image plan reserved in the design.",
+    "checklist": [
+      {
+        "id": "read-phase2-page-matrix",
+        "status": "done",
+        "note": "Read packet.inputEvidence.phase2.pageMatrix (46 internal pages), pageMatrixStrategy (Restaurant Page-Family Matrix v1, 6 families), and artifactRecordPath before design work; designed against the approved families and route kinds."
+      },
+      {
+        "id": "read-phase2-image-slot-plan",
+        "status": "done",
+        "note": "Read imageSlotPlan (32 slots, representational-only constraints, 3 conditional) and requiredCroBlocks (engine cro-contract mirror); design reserves every visual and conversion slot including conditional omission behavior."
+      },
+      {
+        "id": "run-ui-ux-design-system",
+        "status": "done",
+        "note": "Ran vendored search.py --design-system for 'restaurant mediterranean palestinian counter-service family warm casual' (project Pita Kabab) plus typography/landing domain searches and --stack astro guidance; output and documented deviations captured in design-system.md."
+      },
+      {
+        "id": "consult-styleguide-library",
+        "status": "done",
+        "note": "Consulted references/styleguide-library.md archetype matrix; row 'Restaurant - casual/family/QSR' selects Duolingo primary with Polaris structural blend; Reference Style Guide section records the choice, fit rationale, rejected alternative (Apple HIG), and concrete borrowed cues."
+      },
+      {
+        "id": "capture-design-system-output",
+        "status": "done",
+        "note": "Design system persisted at the packet's artifactEvidencePaths.designSystem path and referenced in designSystem.designSystemPath; token values mirrored in workbench design-tokens.json as Phase 4 build reference."
+      },
+      {
+        "id": "write-phase4-build-notes",
+        "status": "done",
+        "note": "Phase 4 Build Notes cover page-matrix families to templates mapping, selected Astro architecture, 32-slot asset handoff, identityDecision/canonical metadata derivation from fixtures, and owner-input dependencies."
+      },
+      {
+        "id": "record-optional-figma-token-handoff",
+        "status": "done",
+        "note": "No Figma source exists for this run; optional designTokenSource/designTokenExportPath/designTokenHash/figmaSyncStatus fields omitted entirely per contract; figma-handoff.md records status not-configured."
+      },
+      {
+        "id": "record-identity-decision",
+        "status": "done",
+        "note": "identityDecision recorded as declared fixtures (mode fixture); real web-sourced candidates (pitakababcr.com, info@pitakababcr.com) documented in identity-decision.md with non-adoption rationale and swap path before/at Phase 5."
+      },
+      {
+        "id": "document-payment-policy",
+        "status": "done",
+        "note": "Payment policy owner-unconfirmed: paymentAccepted recorded as 'unknown' and omitted from JSON-LD; no fabricated payment claims anywhere in the design plan."
+      },
+      {
+        "id": "read-specialist-skill",
+        "status": "done",
+        "note": "Read the resolved ui-ux-pro-max SKILL.md and followed its numbered workflow (analyze -> --design-system -> styleguide library -> domain searches -> stack guidance -> UX floor checklist)."
+      },
+      {
+        "id": "fill-phase-artifact",
+        "status": "done",
+        "note": "All five required fields filled with contract-compliant evidence; designSystemPath matches packet artifactEvidencePaths.designSystem."
+      },
+      {
+        "id": "inspect-before-complete",
+        "status": "done",
+        "note": "inspect-artifact run against this artifact; weaknesses fixed until clean. complete-phase intentionally NOT run per dispatch stop condition."
+      }
+    ],
+    "designSystem": {
+      "designSystemPath": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+      "query": "restaurant mediterranean palestinian counter-service family warm casual",
+      "stack": "astro",
+      "specialist": "ui-ux-pro-max",
+      "referenceStyleGuide": {
+        "primary": "Duolingo",
+        "blend": "Shopify Polaris",
+        "selectionBasis": "styleguide-library.md archetype matrix row: Restaurant - casual / family / QSR -> Duolingo | Mailchimp - Polaris",
+        "borrowedCues": [
+          "single committed action color used only for primary CTAs (olive-green #1B6E3E — amendment 1; a culturally-fitting Mediterranean green chosen to match the generated brand mark, distinct from Duolingo's brighter green)",
+          "3D chunky pressable CTA button: solid green fill + 4px darker bottom edge #14512E collapsing on press (signature component)",
+          "two-role rounded type pairing: Fredoka display + Nunito body (open-font stand-ins for proprietary Feather Bold/DIN Round)",
+          "14px control / 18px card radius, pale-gold pill badges for hours and gated offers",
+          "Polaris card-on-canvas layout: white cards on green-tinted warm canvas #F7F9F3 with 1px hairline sage borders and whisper shadows",
+          "Polaris badge/banner patterns for trust signals and holiday-hours announcements, gold-accented",
+          "one celebratory micro-interaction only (CTA spring bounce), quick 100-200ms functional motion elsewhere"
+        ]
+      },
+      "palette": {
+        "primary": "#1B6E3E",
+        "primaryEdge": "#14512E",
+        "onPrimary": "#FFFFFF",
+        "accent": "#E0A80D",
+        "onAccent": "#1C2B21",
+        "accentSoft": "#FBF3D6",
+        "heroBand": "#1B6E3E",
+        "background": "#F7F9F3",
+        "surface": "#FFFFFF",
+        "foreground": "#1C2B21",
+        "mutedForeground": "#4C5A4E",
+        "border": "#DCE6D2",
+        "success": "#15803D",
+        "destructive": "#B91C1C",
+        "ring": "#1D4ED8",
+        "paletteRationale": "amendment 1 — olive-green + warm-gold reads as authentically Mediterranean/Palestinian (olive, herb, gold of grilled kabab and baklava) and matches the generated Higgsfield mark; gold is accent/surface only, always with dark ink, never white-on-gold and never gold text on white",
+        "standalone": "owner brand assets/rights unconfirmed; tokens stand alone, generated brand mark used as the harmonization anchor, pitakababcr.com referenced as warm-tone inspiration only"
+      },
+      "typography": {
+        "display": "Fraunces 400/600 + italic (editorial serif — H1-H3, dish names, italic descriptors; display-only)",
+        "body": "IBM Plex Sans 400/500/600/700, 17px, line-height 1.6",
+        "mono": "IBM Plex Mono 500/600 — tracked uppercase eyebrows only",
+        "arabic": "IBM Plex Sans Arabic 400/500/600 — DRAFT/GATED, hidden until owner sign-off",
+        "scale": [
+          14,
+          16,
+          18,
+          20,
+          24,
+          32,
+          40,
+          52
+        ],
+        "amendment2": "Retired Fredoka + Nunito for Fraunces + IBM Plex Sans (professional editorial 'printed carte' feel); Google Fonts css2 URL validated 200",
+        "deviation": "generated Caveat/Quicksand pairing rejected for h1-scale legibility on a conversion site"
+      },
+      "accessibilityFloor": "WCAG AA: 4.5:1 body text, 3:1 large text/UI, visible 2px focus rings, >=44px touch targets, prefers-reduced-motion honored, SVG icons only, semantic form labels",
+      "generatedPattern": "Hero-Centric + Conversion (full-bleed green hero band, CTA above the fold)",
+      "generatedStyle": "Vibrant & Block-based, moderated by Polaris card-on-canvas restraint; alternating pale-gold/white full-bleed section bands group content and cut perceived whitespace",
+      "layoutDensity": {
+        "amendment": 1,
+        "problem": "the text-only red/cream build read as sparse — large empty white stretches between sections, empty cream hero",
+        "fixes": [
+          "full-bleed green hero band (white h1 + subhead + gold underline + primary CTA) anchors the top instead of empty cream",
+          "section rhythm tightened to 32px mobile / 48px desktop (was 48/80)",
+          "container padding 20px mobile / 24px desktop (was 32/24), content max-width 70rem",
+          "alternating pale-gold (#FBF3D6) and white full-bleed section bands behind grouped sections so long pages never show unbroken empty canvas",
+          "gold small-caps eyebrows introduce sections, adding hierarchy/density without imagery",
+          "card radius 18px, card padding 16-20px for a tighter grid"
+        ],
+        "note": "Density comes from color banding, hero anchoring, and rhythm — not from fabricated content. Imagery slots (Phase 6) will fill remaining space later; nothing here ships a fake photo."
+      },
+      "deviationsFromGenerator": [
+        "canvas #FEF2F2 pink tint replaced with green-tinted warm canvas #F7F9F3 (Mediterranean palette, food rendering)",
+        "Caveat script headings replaced with Fredoka rounded display",
+        "scroll-snap and animated background patterns dropped (menu-page usability, LCP/CLS)"
+      ]
+    },
+    "designContentBuildPlan": {
+      "approach": "One shared component kit (chunky CTA button, pill badge, banner, card, sticky call bar, lead form) reused across all six page families; per-family section orders below; conditional CRO blocks render from data presence and are removed, never placeholder-filled.",
+      "siteWideSingletons": [
+        "sticky mobile call/text bar mounted once in the shared layout: 56px + safe-area inset, single-CTA (Call) default, dual Call/Text variant activates only on owner SMS confirmation; 72px mobile body bottom-padding reserve",
+        "header: logo slot + one red pill tel: CTA; footer: NAP (3100 6th St SW, Cedar Rapids, IA 52404) + tel: CTA + gated sms: slot"
+      ],
+      "pageFamilyPlans": [
+        {
+          "family": "core-home",
+          "routeKind": "home",
+          "sections": "hero (single h1 + subhead + primary CTA over home-hero image) -> 3-value-prop strip (site.valueProps, owner copy pending) -> menu-category highlights (cards linking all 7 categories) -> occasions rail (catering-led) -> trust grid (conditional >=6 confirmed facts, omitted cleanly otherwise) -> full-width CTA banner (site.ctaBanner over home-cta-banner-bg with dark scrim, >=4.5:1 text) -> neighborhoods teaser -> FAQ teaser -> lead form (conditional on endpoint) -> NAP block"
+        },
+        {
+          "family": "core-menu-hub",
+          "routeKind": "menu-hub",
+          "sections": "hero (menu-hub-hero) -> 7 category cards from menu.json with representational thumbs -> dual CTA band -> cross-links to top dish landings; absorbs folded gyro intent in copy"
+        },
+        {
+          "family": "core-contact",
+          "routeKind": "contact",
+          "sections": "NAP card with confirmed address + hours (owner-confirm dependency) -> map/directions CTA -> lead form (<=6 fields, conditional endpoint) -> parking note (unverified claim omitted until confirmed) -> dual CTA"
+        },
+        {
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "sections": "hero (category slot image) -> item rows from menu.json (name + description; PRICE COLUMN OMITTED until owner confirms - omit-never-fabricate) -> cross-links to dish landings and >=1 occasion -> CTA band; detail-kind CRO blocks"
+        },
+        {
+          "family": "occasion",
+          "routeKind": "occasion",
+          "sections": "hero (occasion slot image) -> occasion value copy -> offering blocks grounded in real menu sections -> >=4 cross-links (menu categories, catering siblings, contact) -> catering terms block (owner-confirm gated) -> lead form or tel CTA; halal-gated occasions (iftar, halal-catering) ship only after confirmation"
+        },
+        {
+          "family": "search-intent-landing",
+          "routeKind": "root-landing",
+          "sections": "answer-first block (query-as-heading + 2-3 sentence direct answer at 18px) -> dish/intent depth sections with slot image -> craft-claim captions gated -> cross-links to parent menu category + related dishes + occasion -> CTA band"
+        },
+        {
+          "family": "story-info-faq-landing",
+          "routeKind": "root-landing",
+          "sections": "GEO/AI-answer pattern: question h1, direct answer above first image, structured depth (comparison table for shawarma-vs-gyro, guide sections for what-is-palestinian-food), FAQPage/AboutPage schema hooks per landingKind; owner-unconfirmed claims omitted from About"
+        },
+        {
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "sections": "city-specific H1 -> >=1 genuine local fact card -> >=2 local-proximity trust lines (never reused HQ address line) -> shared representational delivery image (single image across all 8 towns) -> town-specific FAQ -> labeled address keeping HQ city -> CTA; anti-doorway minima are data-level, folds if facts cannot be captured"
+        }
+      ],
+      "croBlockDesignSpecs": {
+        "heroValueProps": "exactly 3 items, icon + short line, slot reserved - build gate fails until owner copy captured",
+        "ctaBanner": "full-width green (#1B6E3E) band with a gold accent underline and a white (surface) CTA button that reads green; tel: anchor + non-empty headline (owner copy pending); optional background image behind scrim later",
+        "trustGrid": "2-col mobile / 3-col desktop white cards; requires >=6 owner-confirmed facts; omitted site-wide otherwise with clean section stacking",
+        "leadForm": "max 6 fields (name, phone, date, party size, occasion, notes), visible labels, blur validation, error below field with recovery text, posts to site.leadForm.endpoint (not provisioned - conditional)",
+        "offerCallout": "pill badge component; renders only if site.offers non-empty (sole candidate kids $5.98, owner-confirm pending); empty slot removed per KG7",
+        "smsCta": "designed as gated variant; omitted until SMS capability confirmed for (319) 440-3709",
+        "telCta": "on every page via header/footer/sticky bar; number read from business.json pending canonical-phone confirmation"
+      },
+      "contentTone": "warm, family-forward, appetite-led, sentence-case punchy headlines (Fredoka), honest evidence-based copy only - no fabricated rankings, prices, claims, or local facts"
+    },
+    "selectedArchitecture": {
+      "stack": "Astro static site (static output, zero client-side framework)",
+      "source": "engine restaurant archetype templates (packages/engine/templates/archetypes/restaurant)",
+      "routes": {
+        "home": "shared pages/index.astro (1)",
+        "menuHub": "pages/menu/index.astro (1)",
+        "menuCategory": "pages/menu/[slug].astro from menu.json (7)",
+        "occasion": "pages/occasions/[slug].astro from occasions.json (10)",
+        "rootLanding": "pages/[slug].astro from landings.json (18, reserved slugs avoided)",
+        "neighborhood": "pages/neighborhoods/[slug].astro from neighborhoods.json (8)",
+        "contact": "pages/contact.astro (1)",
+        "total": 46
+      },
+      "dataCollections": [
+        "menu.json",
+        "occasions.json",
+        "landings.json",
+        "neighborhoods.json",
+        "site.json",
+        "business.json"
+      ],
+      "styling": "CSS custom properties in a single tokens.css (values mirrored from workbench design-tokens.json); shared .astro components for chunky CTA button, pill badge, banner, card, sticky call bar, lead form; no per-page restyling",
+      "images": "astro:assets <Image /> with explicit dimensions (CLS < 0.1), WebP/AVIF, lazy-load below fold",
+      "fonts": "Fredoka + Nunito, font-display: swap, preload two critical weights only",
+      "externalCtasNeverPages": [
+        "DoorDash store 41564223 (order CTA)",
+        "tel:(319) 440-3709 (owner-confirm pending)",
+        "sms: text link (owner-gated)",
+        "Google Maps directions",
+        "Facebook page"
+      ],
+      "routeCompleteness": "route count is a direct function of data entries (7+10+18+8+3=46) keeping the Phase 4 route-completeness comparison exact; 5 conditional pages drop by removing data entries, floor 41 pages"
+    },
+    "assetNeeds": {
+      "imageSlotPlan": {
+        "source": "sealed Phase 2 imageSlotPlan (packet.inputEvidence.phase2.imageSlotPlan)",
+        "totalSlots": 32,
+        "constraintPolicy": "representational only - no real-premises/staff/client-event depiction claims in imagery, captions, or alt text; no unverified claim overlays",
+        "conditionalSlots": [
+          {
+            "slotId": "occasion-iftar-hero",
+            "condition": "halal confirmation"
+          },
+          {
+            "slotId": "occasion-halal-catering-hero",
+            "condition": "halal confirmation"
+          },
+          {
+            "slotId": "landing-charcoal-process",
+            "condition": "craft-claim confirmation"
+          }
+        ],
+        "sharedSlots": [
+          {
+            "slotId": "neighborhood-shared-delivery",
+            "note": "ONE shared image across all 8 neighborhood pages - no fabricated per-town storefront photos"
+          }
+        ],
+        "artDirection": "warm natural light, appetite-forward close-ups, olive-green/gold/terracotta environments harmonizing with #F7F9F3 green-tinted canvas and #1B6E3E + #E0A80D accents; 3:2 or 16:9 hero crops with 4:3 mobile safety; 18px card radius on inset images"
+      },
+      "brandLogo": {
+        "slotId": "brand-logo",
+        "path": "reference-photos/logo-candidates/logo-v2.png (selected); public/logo.png (exported for build)",
+        "source": "Higgsfield nano_banana, generated 2026-07-12 via the logo-prompting formula (flat vector emblem, green ring + gold text, olive branch + kabab skewer + pita icon, CEDAR RAPIDS)",
+        "candidates": "4 variants in reference-photos/logo-candidates/logo-v1..v4.png; v2 selected (solid green ring + gold text — highest contrast, works at favicon size)",
+        "status": "generated; owner-confirm or replace pending — a generated brand mark is acceptable to ship (it is not a photo of the real premises); owner may swap for an official mark before launch",
+        "gate": "header/footer/schema placements on white/canvas, no recoloring; palette was chosen to match this mark so no accent-token conflict remains"
+      },
+      "ogImage": {
+        "slotId": "og-default-share",
+        "spec": "1200x630 brand-toned representational hero dish with logotype space"
+      },
+      "icons": "Lucide SVG set, 1.5px stroke, token-sized (icon-sm 20px / icon-md 24px); no emoji icons",
+      "fonts": "Fredoka 500/600 + Nunito 400/600/700 (Google Fonts or Fontsource self-host), font-display: swap",
+      "figma": "none - no Figma source for this run; optional design-token handoff fields omitted (see figma-handoff.md)"
+    },
+    "identityDecision": {
+      "mode": "fixture",
+      "domain": "https://pitakabab.example",
+      "email": "owner@pitakabab.example",
+      "gaId": "G-XXXXXXXXXX",
+      "paymentAccepted": "unknown",
+      "notesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identity-decision.md",
+      "realCandidatesNotAdopted": [
+        "domain pitakababcr.com (live owner-branded site; control unconfirmed)",
+        "email info@pitakababcr.com (published on live site; ownership unconfirmed)"
+      ],
+      "swapPath": "replace fixtures with owner-confirmed values before or at Phase 5; canonical URLs/sitemap/og:url/JSON-LD url derive from fixture domain until swapped",
+      "gateExpectation": "Phase 5 do-not-ship gate MUST flag these fixtures - that is the gate working as designed",
+      "paymentPolicy": "owner unconfirmed - recorded unknown; paymentAccepted omitted from JSON-LD; no fabricated payment claims"
+    }
+  },
+  "delegationOverride": {
+    "schemaVersion": 1,
+    "runId": "pita-kabab-2026-07-12-b5881b47",
+    "phase": 3,
+    "role": "builder",
+    "actor": "Yahya",
+    "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+    "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+    "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+    "createdAt": "2026-07-13T04:20:41.009Z",
+    "override": 2,
+    "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+  },
+  "runtimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+      "hash": "8e58adbb186c4103a228b343cb73349205a1f99ae0d54d3145bda915dd88c6ac",
+      "mtimeMs": 1783916399006.1475
+    }
+  }
+}

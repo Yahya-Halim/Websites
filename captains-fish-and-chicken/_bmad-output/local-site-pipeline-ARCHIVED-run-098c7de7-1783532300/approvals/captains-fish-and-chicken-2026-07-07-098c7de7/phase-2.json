@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 2,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-2/phase-2-artifact.json",
+  "artifactHash": "2e63d9126119aadf0187652a7418d9d2e16b315dd1ec9c531b5ac92883dbd0da",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-2/approval-notes.md",
+  "notes": "# Phase 2 approval — page matrix\n\n**Approved by:** operator (geekeys343@gmail.com), acting for owner Ray Aqel\n**Date:** 2026-07-07\n**Run:** captains-fish-and-chicken-2026-07-07-098c7de7\n\n## Ruling\nPhase 2 PLAN (35-route page matrix) approved to seal and advance to Phase 3 DESIGN.\n\n## Approved knowingly\n- 35 internal routes: 1 home + 15 menu (hub + 14 sections) + 6 occasions + 10 landings + 2 neighborhoods + 1 contact.\n- Call-only conversion: NO lead form, NO SMS (valid documented exception — restaurant archetype not bound by the auto-dealer CRO block gate).\n- Menu ships with owner-confirmed prices (Menu JSON-LD permitted).\n- Independent page-matrix-depth review PASSED; two authoring nits (NewBo, calamari) fixed pre-seal.\n\n## Load-bearing gaps still open\n- Identity fixtures (domain/email/GA4) deferred to launch per owner decision — Phase 5 gate will flag.\n- Canonical hours unconfirmed — /faq + /how-to-order must not assert unconfirmed hours.\n- Both neighborhood pages fold if genuine local facts fail at Phase 4 authoring.\n- Calamari excluded from all content (not on confirmed menu).\n\n## Owner directive recorded for Phase 6 IMAGERY (new this turn)\nOperator requested Higgsfield realistic images for the menu foods + marketing imagery for the site.\nExecute at Phase 6 via the higgsfield skill. Scope: per menu-category + signature dishes + occasion/\nmarketing heroes (NOT ~90 individual per-item renders — excessive/costly). All generated imagery is\nREPRESENTATIONAL — never presented as a real photo of Captains' actual plates or the 1616 premises;\nswap for real owner photos when available.\n",
+  "approvedAt": "2026-07-07T19:50:46.035Z",
+  "expiresAt": "2026-07-14T19:50:46.035Z"
+}

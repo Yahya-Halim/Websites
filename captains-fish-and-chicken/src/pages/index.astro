@@ -1,0 +1,540 @@
+---
+// Marketing home page (project-owned; wins over the engine-injected route).
+// Every claim, price, image, and link below traces to owner-confirmed data
+// (menu-confirmed.json via src/data/menu.json, Phase 0 sealed facts) — no
+// fabricated offers, no dine-in claims, hours always caveated.
+import Base from '../layouts/Base.astro';
+import { renderWebPageJsonLd } from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+import Hero from '../components/Hero.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import LeadForm from '@engine/components/LeadForm.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import FinancingBlock from '@engine/components/FinancingBlock.astro';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const title = business?.name ?? 'Welcome';
+const pageTitle = `${business?.name ?? 'Welcome'} — Fried Fish Takeout, Cedar Rapids`;
+const homeDescription = 'Fresh-to-order fried catfish, wings, shrimp & soul-food sides in Cedar Rapids. Family deals up to 50 pc, party pans & delivery. Call (319) 221-1040.';
+const description = business?.description ?? '';
+const tagline = business?.tagline ?? '';
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: siteRoot,
+  description,
+  websiteName: title,
+  websiteUrl,
+  speakableSelectors: ['.hero-copy h1', '.hero-subheading'],
+});
+
+// Animated hero background: 15s looped Higgsfield video (top-down 2D beach,
+// waves rolling on the shore, cartoon chickens enjoying summer; wide scene
+// with a playful mid-loop close-up). Poster doubles as the reduced-motion
+// and no-video fallback. CSS-crossfade frames kept below as an alternative.
+const heroVideo = {
+  src: '/videos/beach-loop.mp4',
+  poster: '/images/hero/beach-loop-a.webp',
+  alt: 'Top-down cartoon beach scene: turquoise waves meeting golden sand with chickens relaxing on beach towels and a floatie (illustration)',
+};
+// const heroFrames = [
+//   { src: '/images/hero/beach-loop-a.webp', alt: 'Top-down cartoon beach scene (illustration)' },
+//   { src: '/images/hero/beach-loop-b.webp', alt: '' },
+//   { src: '/images/hero/beach-loop-c.webp', alt: '' },
+// ];
+
+// ---------------------------------------------------------------------------
+// Signature dishes — real menu sections with their generated category imagery.
+// ---------------------------------------------------------------------------
+const SIGNATURES = [
+  {
+    slug: 'seafood',
+    label: 'Fried Catfish & Seafood',
+    blurb: 'Catfish fillet, steak & nuggets, wild-caught cod, perch, tilapia, red snapper, crab cakes.',
+    image: '/images/menu/seafood/catfish-fillet-perch-or-tilapia-3-pcs.jpg',
+  },
+  {
+    slug: 'whole-wings',
+    label: 'Whole & Party Wings',
+    blurb: 'Bone-in whole wings from 4-piece meals to 100-piece party orders.',
+    image: '/images/menu/whole-wings/wings-meal-6-pcs.jpg',
+  },
+  {
+    slug: 'shrimp',
+    label: 'Jumbo Shrimp',
+    blurb: 'Captains-breaded jumbo and medium shrimp, baskets and meals.',
+    image: '/images/menu/shrimp/jumbo-shrimp-1-2-lb-7-pcs.jpg',
+  },
+  {
+    slug: 'fish-family-deals',
+    label: 'Family Deals & Party Pans',
+    blurb: 'Fried fish family deals up to 50 pieces, half & full pans for gatherings.',
+    image: '/images/menu/fish-family-deals/catfish-perch-tilapia-10-pcs.jpg',
+  },
+];
+
+// Popular items strip — owner-confirmed prices pulled live from the menu data.
+const menuSections = await getCollection('menu');
+const pick = (sectionSlug, itemName) => {
+  const section = menuSections.find((s) => s.data.slug === sectionSlug);
+  const item = section?.data.items.find((i) => i.name === itemName);
+  return item ? { name: item.name, price: item.prices?.[0]?.price } : null;
+};
+const popular = [
+  pick('whole-wings', 'Wings Meal (4 pcs)'),
+  pick('seafood', 'Catfish Fillet, Perch or Tilapia (3 pcs)'),
+  pick('chicken-tenders', 'Tenders Meal (3 pcs)'),
+  pick('shrimp', 'Shrimp Basket'),
+  pick('family-meals-and-combos', "Captain's Family Meal Deal"),
+  pick('family-meals-and-combos', 'Combo Dinner — Your Choice of Two Items'),
+].filter(Boolean);
+
+// Occasion cards with generated heroes.
+const OCCASIONS = [
+  { href: '/occasions/family-dinner/', label: 'Family Dinner', image: '/images/hero/family-dinner.webp', blurb: 'Feed the whole table tonight.' },
+  { href: '/occasions/game-day-wings/', label: 'Game Day Wings', image: '/images/hero/game-day-wings.webp', blurb: 'Party wings for the watch party.' },
+  { href: '/occasions/office-and-party-catering/', label: 'Catering & Party Pans', image: '/images/hero/catering-party-pans.webp', blurb: 'Pans and family deals up to 50 pc.' },
+];
+
+// Ordering platforms (Phase 0 confirmed listings) — external CTAs, not pages.
+const ORDER_LINKS = [
+  { label: 'DoorDash', href: 'https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802887/' },
+  { label: 'Uber Eats', href: 'https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA' },
+  { label: 'Grubhub', href: 'https://www.grubhub.com/restaurant/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids/11640296' },
+];
+
+const phone = business?.phone ?? '';
+const telHref = `tel:${phone}`;
+const hoursText = business?.hours?.displayText ?? '';
+const mapsUrl = business?.mapsUrl ?? '#';
+const directionsUrl = business?.directionsUrl ?? '#';
+const address = business?.address;
+---
+
+<Base title={pageTitle} description={homeDescription} jsonLd={[webPageLd]}>
+  <Hero
+    heading={title}
+    subheading={tagline || description}
+    ctaPrimary={site?.ctaPrimary}
+    ctaSecondary={site?.ctaSecondary}
+    valueProps={site?.valueProps}
+    videoBackground={heroVideo}
+  />
+
+  {/* Conditional promo blocks — render ONLY when their data is present (KG7). */}
+  <OfferCallout offers={site?.offers} />
+  <FinancingBlock providers={site?.financing?.providers} />
+
+  {/* Signature dishes — real menu sections, generated category imagery. */}
+  <section class="signatures" aria-labelledby="signatures-heading">
+    <span class="eyebrow">Straight from the fryer</span>
+    <h2 id="signatures-heading">What we're known for</h2>
+    <ul>
+      {SIGNATURES.map((sig) => (
+        <li>
+          <a href={`/menu/${sig.slug}/`}>
+            <img src={sig.image} alt={`${sig.label} (representational image)`} width="512" height="384" loading="lazy" decoding="async" />
+            <span class="sig-label">{sig.label}</span>
+            <span class="sig-blurb">{sig.blurb}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  {/* Popular items — owner-confirmed prices straight from menu data. */}
+  {popular.length > 0 && (
+    <section class="popular" aria-labelledby="popular-heading">
+      <span class="eyebrow">Most ordered</span>
+      <h2 id="popular-heading">Local favorites</h2>
+      <ul>
+        {popular.map((item) => (
+          <li>
+            <span class="pop-name">{item.name}</span>
+            {typeof item.price === 'number' && <span class="pop-price">${item.price.toFixed(2)}</span>}
+          </li>
+        ))}
+      </ul>
+      <a class="see-menu" href="/menu/">See the full menu →</a>
+    </section>
+  )}
+
+  {/* Press quote — Gazette-attributed (sealed Phase 0/1 fact; citable GEO block). */}
+  <section class="press" aria-labelledby="press-heading">
+    <span class="eyebrow">Word on the dock</span>
+    <h2 id="press-heading">In the local press</h2>
+    <figure class="press-quote">
+      <blockquote>
+        “Customers say fried catfish tastes like chicken at this new Cedar Rapids restaurant.”
+      </blockquote>
+      <figcaption>— The Gazette, Cedar Rapids</figcaption>
+      <p class="press-detail">
+        The Gazette highlighted Captains' cornmeal breading and freshly ground lemon-pepper
+        seasoning — and named fried catfish the most popular item on the menu.
+      </p>
+    </figure>
+  </section>
+
+  {/* Mid-page full-width CTA band (site.ctaBanner) + call CTA. */}
+  <CtaBanner
+    ctaBanner={site?.ctaBanner}
+    ctaPrimary={site?.ctaPrimary}
+    ctaSecondary={site?.ctaSecondary}
+  />
+
+  {/* Occasions — generated occasion heroes. */}
+  <section class="occasions home-band" aria-labelledby="occasions-heading">
+    <span class="eyebrow">Catering &amp; occasions</span>
+    <h2 id="occasions-heading">Feeding a crowd?</h2>
+    <ul>
+      {OCCASIONS.map((occ) => (
+        <li>
+          <a href={occ.href}>
+            <img src={occ.image} alt={`${occ.label} (representational image)`} width="640" height="360" loading="lazy" decoding="async" />
+            <span class="occ-label">{occ.label}</span>
+            <span class="occ-blurb">{occ.blurb}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  {/* How to order — call-only conversion + external delivery CTAs. */}
+  <section class="how-order home-band" aria-labelledby="how-order-heading">
+    <span class="eyebrow">Get your order</span>
+    <h2 id="how-order-heading">How to order</h2>
+    <ol class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <strong>Call ahead</strong>
+        <p>Everything is fried fresh to order — call <a href={telHref}>{phone}</a> and your food is hot when you arrive.</p>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <strong>Pick up on 1st Ave NE</strong>
+        <p>{address?.street}, {address?.city}, {address?.state} {address?.zip}. <a href={directionsUrl} rel="noopener">Get directions</a>.</p>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <strong>Or get it delivered</strong>
+        <p class="delivery-links">
+          {ORDER_LINKS.map((link) => (
+            <a class="delivery-btn" href={link.href} rel="noopener nofollow">{link.label}</a>
+          ))}
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  {/* Hours + location. */}
+  <section class="visit" aria-labelledby="visit-heading">
+    <span class="eyebrow">Drop anchor</span>
+    <h2 id="visit-heading">Hours & location</h2>
+    <div class="visit-grid">
+      <div>
+        <p class="visit-hours">{hoursText}</p>
+        <p class="visit-address">
+          {address?.street}, {address?.city}, {address?.state} {address?.zip}
+          — <a href={mapsUrl} rel="noopener">view on map</a>
+        </p>
+        <p class="visit-note">Takeout · delivery · catering. Owner-operated since 2024.</p>
+        <p class="visit-truth">
+          One location only: 1616 1st Ave NE. Our former 6th St SW spot is now
+          <a href="/faq/">Pita Kabab</a> (same owner, different kitchen) —
+          <a href="/location/">see location details</a>.
+        </p>
+        <p class="visit-links">
+          <a href="/open-late-cedar-rapids/">Open late</a> ·
+          <a href="/catering-cedar-rapids/">Catering</a> ·
+          <a href="/how-to-order/">How to order</a>
+        </p>
+      </div>
+      <div class="visit-cta">
+        <a class="cta" href={telHref}>Call {phone}</a>
+      </div>
+    </div>
+  </section>
+
+  {/* Trust-signal grid (site.trustBar.items ≥6 when present — omitted, KG7). */}
+  <TrustBar items={site?.trustBar?.items} />
+
+  {/* Lead-capture form (site.leadForm — absent, call-only exception). */}
+  <LeadForm leadForm={site?.leadForm} />
+
+  <p class="image-note">Food photos are representational.</p>
+</Base>
+
+<style>
+  /* Match the interior pages' visual language (menu/occasion/landing pages):
+     left-aligned h2s, 2.5rem section rhythm, white steel-bordered cards on the
+     cloud background. Home adds imagery, not a different style. */
+  section {
+    margin-top: 2.5rem;
+  }
+  h2 {
+    text-align: left;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Signature dish cards */
+  .signatures ul,
+  .occasions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1.25rem;
+  }
+  .signatures a,
+  .occasions a {
+    display: flex;
+    flex-direction: column;
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    height: 100%;
+  }
+  .signatures a:hover,
+  .occasions a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  .signatures img,
+  .occasions img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .occasions img {
+    aspect-ratio: 16 / 9;
+  }
+  .sig-label,
+  .occ-label {
+    font-weight: 800;
+    color: var(--navy-700, #123253);
+    padding: 0.75rem 1rem 0.15rem;
+    font-size: 1.05rem;
+  }
+  .sig-blurb,
+  .occ-blurb {
+    padding: 0 1rem 1rem;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* Popular items — white card, same DNA as interior menu cards. */
+  .popular {
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+  }
+  .popular h2 {
+    margin-top: 0;
+  }
+  .popular ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 0.75rem;
+  }
+  .popular li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    background: var(--steel-100, #e8eef4);
+    border-radius: 999px;
+    padding: 0.55rem 1.1rem;
+  }
+  .pop-name {
+    color: var(--navy-700, #123253);
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-align: left;
+  }
+  .pop-price {
+    color: var(--navy-900, #0b1e33);
+    background: var(--gold-500, #f5b301);
+    font-weight: 800;
+    border-radius: 999px;
+    padding: 0.15rem 0.7rem;
+    white-space: nowrap;
+  }
+  .see-menu {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    color: var(--blue-500, #2d74b5);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .see-menu:hover {
+    text-decoration: underline;
+  }
+
+  /* How to order steps */
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+  }
+  .steps li {
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    padding: 1.25rem 1.25rem 1rem;
+    box-shadow: var(--shadow-sm);
+  }
+  /* Step badges are wayfinding, not CTAs — steel fill, navy numeral. */
+  .step-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--steel-100, #e8eef4);
+    color: var(--navy-700, #123253);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .steps strong {
+    display: block;
+    color: var(--navy-700, #123253);
+    margin-bottom: 0.25rem;
+  }
+  .steps p {
+    margin: 0;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.95rem;
+  }
+  .steps li .delivery-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  /* Navy fills stay in the shell — delivery links use the secondary-CTA
+     language: white pill, navy text, navy border. */
+  .delivery-btn {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    background: var(--white, #fff);
+    color: var(--navy-700, #123253);
+    border: 1.5px solid var(--navy-600, #1a4470);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    transition: background 0.15s ease;
+  }
+  .delivery-btn:hover {
+    background: var(--steel-100, #e8eef4);
+  }
+
+  /* Hours & location — white card, same DNA as interior cards. */
+  .visit {
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+  }
+  .visit h2 {
+    margin-top: 0;
+  }
+  .visit-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .visit-hours {
+    font-weight: 700;
+    color: var(--navy-700, #123253);
+    margin: 0 0 0.5rem;
+  }
+  .visit-address,
+  .visit-note {
+    margin: 0 0 0.35rem;
+    color: var(--ink-soft, #3c4f66);
+  }
+  .visit-cta .cta {
+    font-size: 1.05rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+  }
+
+  /* Press quote — white card, interior language. */
+  .press-quote {
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-left: 4px solid var(--blue-500, #2d74b5);
+    border-radius: var(--radius-md, 0.75rem);
+    box-shadow: var(--shadow-sm);
+    padding: 1.5rem;
+    margin: 0;
+  }
+  .press-quote blockquote {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy-700, #123253);
+    line-height: 1.45;
+  }
+  .press-quote figcaption {
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+  .press-detail {
+    margin: 0;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.95rem;
+    max-width: 65ch;
+  }
+
+  .visit-truth {
+    margin: 0.5rem 0 0.35rem;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.9rem;
+    max-width: 60ch;
+  }
+  .visit-links {
+    margin: 0;
+    font-weight: 600;
+  }
+
+  .image-note {
+    font-size: 0.8rem;
+    color: var(--ink-soft, #3c4f66);
+    margin-top: 2.5rem;
+  }
+</style>

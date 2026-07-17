@@ -1,0 +1,133 @@
+{
+  "provenance": "AGGREGATOR-SOURCED — captured from Yelp menu page for the 1616 location, cross-validated against res-discover.com (wings match). NOT owner-confirmed. Yelp menu page is not address-stamped and a second location shares a similar menu. Per truthfulness floor: treat as unverifiedClaims; do NOT publish prices or Menu JSON-LD until the owner confirms.",
+  "capturedDate": "2026-07-07",
+  "currency": "USD",
+  "categories": [
+    { "name": "Whole Wings", "items": [
+      { "name": "4 Piece Wings Meal (fries, coleslaw, bread)", "price": "8.99" },
+      { "name": "6 Piece Wings Meal", "price": "13.99" },
+      { "name": "10 Piece Wings Meal", "price": "19.99" },
+      { "name": "20 Piece Wings Only", "price": "32.99" },
+      { "name": "30 Piece Wings Only", "price": "49.99" },
+      { "name": "50 Piece Wings Only", "price": "84.99" },
+      { "name": "100 Piece Wings Only", "price": "159.99" }
+    ]},
+    { "name": "Party Wings", "items": [
+      { "name": "8 Piece Meal", "price": "14.99" },
+      { "name": "12 Piece Meal", "price": "18.99" },
+      { "name": "16 Piece Only", "price": "24.99" },
+      { "name": "20 Piece Only", "price": "28.99" },
+      { "name": "30 Piece Only", "price": "45.99" },
+      { "name": "50 Piece Only", "price": "79.99" }
+    ]},
+    { "name": "Boneless Chicken Bites", "items": [
+      { "name": "8 Piece Meal", "price": "12.99" },
+      { "name": "12 Piece Meal", "price": "18.99" },
+      { "name": "20 Piece Only", "price": "26.99" },
+      { "name": "30 Piece Only", "price": "49.99" },
+      { "name": "50 Piece Only", "price": "79.99" }
+    ]},
+    { "name": "Chicken (Leg & Thigh Mix)", "items": [
+      { "name": "4 Piece Meal", "price": "12.99" },
+      { "name": "6 Piece Meal", "price": "15.99" },
+      { "name": "10 Piece Meal", "price": "24.99" },
+      { "name": "20 Piece Only", "price": "39.99" },
+      { "name": "30 Piece Only", "price": "59.99" },
+      { "name": "50 Piece Only", "price": "89.99" }
+    ]},
+    { "name": "Chicken Tenders", "items": [
+      { "name": "3 Piece Meal", "price": "12.99" },
+      { "name": "6 Piece Meal", "price": "21.99" },
+      { "name": "10 Piece Meal", "price": "34.99" },
+      { "name": "20 Piece Only", "price": "59.99" }
+    ]},
+    { "name": "Shrimp", "items": [
+      { "name": "7 Jumbo Shrimp", "price": "15.99" },
+      { "name": "14 Jumbo Shrimp", "price": "25.99" },
+      { "name": "1/2 Lb Medium Shrimp", "price": "13.99" },
+      { "name": "1 Lb Medium Shrimp", "price": "21.99" },
+      { "name": "Shrimp Basket", "price": "10.99" }
+    ]},
+    { "name": "Gizzards & Livers", "items": [
+      { "name": "1 Lb Gizzards", "price": "13.99" },
+      { "name": "1 Lb Livers", "price": "13.99" }
+    ]},
+    { "name": "Seafood", "items": [
+      { "name": "2 Piece Catfish Fillet / Perch / Tilapia", "price": "13.99" },
+      { "name": "3 Piece Catfish Fillet / Perch / Tilapia", "price": "16.99" },
+      { "name": "4 Piece Catfish Fillet / Perch / Tilapia", "price": "21.99" },
+      { "name": "2 Piece Catfish Steak", "price": "13.99" },
+      { "name": "3 Piece Catfish Steak", "price": "19.99" },
+      { "name": "4 Piece Catfish Steak", "price": "19.99" },
+      { "name": "1 Lb Catfish Nuggets", "price": "14.99" },
+      { "name": "2 Piece Cod Fish", "price": "14.99" },
+      { "name": "3 Piece Cod Fish", "price": "19.99" },
+      { "name": "4 Piece Cod Fish", "price": "23.99" },
+      { "name": "4 Piece Crab Cakes Meal", "price": "14.99" },
+      { "name": "12 Piece Calamari Rings", "price": "13.99" },
+      { "name": "2 Piece Red Snapper", "price": "14.99" },
+      { "name": "3 Piece Red Snapper", "price": "19.99" },
+      { "name": "4 Piece Red Snapper", "price": "23.99" }
+    ]},
+    { "name": "Fish Only Family Deals", "items": [
+      { "name": "10 Piece Catfish / Perch / Tilapia", "price": "49.99" },
+      { "name": "20 Piece Catfish / Perch / Tilapia", "price": "69.99" },
+      { "name": "30 Piece Catfish / Perch / Tilapia", "price": "99.99" },
+      { "name": "40 Piece Catfish / Perch / Tilapia", "price": "139.99" },
+      { "name": "50 Piece Catfish / Perch / Tilapia", "price": "166.99" },
+      { "name": "Half Pan Catfish Nuggets", "price": "49.99" },
+      { "name": "Full Pan Catfish Nuggets", "price": "89.99" }
+    ]},
+    { "name": "Family Meal Deal", "items": [
+      { "name": "Captains Family Meal Deal", "price": "59.99" }
+    ]},
+    { "name": "Kids Meals", "items": [
+      { "name": "5 Piece Chicken Nuggets", "price": "6.99" },
+      { "name": "2 Piece Chicken Wings", "price": "6.99" },
+      { "name": "2 Piece Chicken Tenders", "price": "6.99" },
+      { "name": "Kids Pizza Puff", "price": "6.99" }
+    ]},
+    { "name": "Sides", "items": [
+      { "name": "Okra", "price": "6.99" },
+      { "name": "10 Piece Hush Puppies", "price": "6.99" },
+      { "name": "10 Piece Breaded Mushrooms", "price": "6.99" },
+      { "name": "10 Piece Mac and Cheese Bites", "price": "6.99" },
+      { "name": "5 Piece Cheese Sticks", "price": "6.99" },
+      { "name": "Cheese Curds", "price": "6.99" },
+      { "name": "Pizza Puff", "price": "6.99" },
+      { "name": "10 Piece Onion Rings", "price": "6.99" },
+      { "name": "Small Fries", "price": "3.99" },
+      { "name": "Large Fries", "price": "6.99" },
+      { "name": "Half Pan of Fries", "price": "16.99" },
+      { "name": "Full Pan of Fries", "price": "27.99" },
+      { "name": "Gizzards (side)", "price": "7.99" },
+      { "name": "Livers (side)", "price": "7.99" },
+      { "name": "Catfish Nuggets (side)", "price": "7.99" },
+      { "name": "1 Piece Wing", "price": "2.45" },
+      { "name": "1 Piece Leg", "price": "3.99" },
+      { "name": "1 Piece Thigh", "price": "3.99" },
+      { "name": "Extra Sauce", "price": "0.50" },
+      { "name": "Cheese Sauce", "price": "1.49" },
+      { "name": "1 Piece Extra Bread", "price": "0.50" }
+    ]},
+    { "name": "Desserts", "items": [
+      { "name": "Cheesecake", "price": "3.99" },
+      { "name": "Caramel Cheesecake", "price": "3.99" },
+      { "name": "Banana Pudding", "price": "3.99" },
+      { "name": "Carrot Cake", "price": "3.99" },
+      { "name": "Caramel Coconut", "price": "3.99" },
+      { "name": "Lemon Cake", "price": "3.99" }
+    ]},
+    { "name": "Drinks", "items": [
+      { "name": "Water", "price": "0.99" },
+      { "name": "Mystic", "price": "3.99" },
+      { "name": "Calypos", "price": "3.99" },
+      { "name": "Soda Can", "price": "1.49" },
+      { "name": "Soda Bottle", "price": "2.49" }
+    ]},
+    { "name": "Combo Dinners", "items": [
+      { "name": "Combo Dinner of Two Items", "price": "18.99" },
+      { "name": "Combo Dinner of Three Items", "price": "21.99" }
+    ]}
+  ]
+}

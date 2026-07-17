@@ -1,0 +1,50 @@
+{
+  "sweepDate": "2026-07-08",
+  "target": "Captains Fish and Chicken, 1616 1st Ave NE, Cedar Rapids, IA 52402",
+  "method": "5-agent parallel fresh re-sweep (run v2 under plugin 92aeaae); prior sealed run 098c7de7 used as change-detection baseline only",
+  "sourcesChecked": [
+    { "source": "Google Search / Maps knowledge panel (direct)", "status": "not-searched", "note": "bot-blocked (JS stubs/consent pages); data via mirrors labeled 'From Google'" },
+    { "source": "Wanderlog (Google mirror)", "status": "found", "note": "4.4 (208) 'on Google' — IDENTICAL to baseline; 6 Google categories; no website field on listing" },
+    { "source": "Yelp", "status": "found", "note": "biz page 403; search text: 'Soul Food', 5.0/1 review, title 'Updated March 2026'; menu URL in search carries '-2' slug (SW location) — not bound to 1616" },
+    { "source": "TripAdvisor", "status": "found", "note": "fetched: UNCLAIMED, 0 reviews, no hours/menu/photos/website; ZIP+4 52402-5431; cuisines American/Seafood/Fast Food" },
+    { "source": "Restaurantji", "status": "not-found", "note": "slug 404 + absent from Cedar Rapids seafood index — delisted or never listed" },
+    { "source": "res-discover.com (community/GBP mirror)", "status": "found", "note": "hours Sun 11-8 / M-Th 11-10 / F-Sa 11-11; service attrs incl. 'Dine-in' (contradicts owner takeout-only positioning — GBP attr review item)" },
+    { "source": "DoorDash", "status": "found", "note": "store 34802887 'Captains fish and chicken Inc'; 403 direct; hours per snippets match baseline" },
+    { "source": "Uber Eats", "status": "found", "note": "store AJApcCD3RUefziQ_OTCMSA; 403 direct; snippet hours '11:30 AM-11:00 PM daily' CONFLICTS with all other surfaces" },
+    { "source": "Postmates", "status": "found", "note": "FETCHED (only platform page readable): hours match baseline exactly; rating 3.5/53 (Uber pool); ZIP+4 52402-5431" },
+    { "source": "Grubhub / Seamless", "status": "found", "note": "id 11640296; JS shells, nothing readable on-page; separate SW listing 11805992 OUTRANKS 1616 in Grubhub search" },
+    { "source": "Facebook (official)", "status": "found", "note": "page id 61567698479294 'Captains Fish and Chicken, INC'; login-walled but posts fetchable; ACTIVELY POSTING PITA KABAB CONTENT (brand-signal confusion risk)" },
+    { "source": "Instagram / TikTok", "status": "not-found", "note": "@thecaptainfishchicken unverifiable (no bio/location on fetched profile); no TikTok" },
+    { "source": "Local press (KHAK + The Gazette)", "status": "found", "note": "KHAK 2024-10-28 opening; Gazette Dec 2024 catfish feature; May 2025 2nd-location pieces (Gazette copy updated 2026-04-11); Gazette: menu 'recently added mashed potatoes and mac and cheese as sides'" },
+    { "source": "Apple Maps", "status": "found", "note": "FETCHED: website field falls back to Yelp (no owned site); rating 57%/7 (Apple scale); ADDRESS ERROR: lists '1616 First Ave SE' (SE, wrong quadrant)" },
+    { "source": "Owned domain (DNS + SERP definitive check)", "status": "not-found", "note": "captainsfishandchicken.com/.net/.org + captainsfishchicken.com all ENOTFOUND (unregistered); zero owned domain in any SERP; name-collision domains belong to unrelated businesses (Chula Vista, Miami Gardens, Youngstown)" }
+  ],
+  "findings": [
+    { "fact": "NAP", "value": "Captains Fish and Chicken (legal 'INC' form on several listings), 1616 1st Ave NE, Cedar Rapids, IA 52402 (ZIP+4 52402-5431), (319) 221-1040", "confidence": "high", "sources": ["TripAdvisor (fetched)", "Postmates (fetched)", "res-discover", "search text"] },
+    { "fact": "Hours (unchanged vs baseline)", "value": "Sun 11-8, Mon-Thu 11-10, Fri-Sat 11-11 — identical on res-discover, Apple Maps, Postmates (fetched)", "confidence": "medium", "sources": ["3 concordant surfaces"], "caveat": "still no owner/official source; Uber Eats snippet conflicts ('11:30-11 daily')" },
+    { "fact": "Google rating", "value": "4.4 (208) — unchanged vs baseline", "confidence": "medium", "sources": ["Wanderlog 'From Google'"], "caveat": "identical count could be stale mirror cache" },
+    { "fact": "No owned website (definitive)", "value": "4 candidate domains unregistered (DNS ENOTFOUND); Apple Maps website field falls back to Yelp", "confidence": "high", "sources": ["DNS probes", "Apple Maps fetched"] },
+    { "fact": "CHANGED: second location converted", "value": "3100 6th St SW is no longer Captains — now 'Pita Kabab' (Mediterranean, same owner Ray Aqel, ph 319-440-3709); Captains FB page itself announced it ('old captains fish and chicken sw location')", "confidence": "high", "sources": ["Captains FB post (fetched)", "pitakababcr.com", "Gazette"] },
+    { "fact": "CHANGED: menu additions reported by press", "value": "Gazette (May 2025 article, updated 2026-04): 'recently added mashed potatoes and mac and cheese as sides' — NOT in the owner-confirmed menu paste of 2026-07-07", "confidence": "medium", "sources": ["The Gazette"], "caveat": "press-attributed; owner must confirm before menu changes" },
+    { "fact": "Press positioning", "value": "Gazette Dec 2024 feature: 'Customers say fried catfish tastes like chicken'; catfish most popular item; cornmeal breading, lemon-pepper seasoning; owner managed Chicago restaurants since 2006", "confidence": "medium", "sources": ["Gazette via Hoopla FB post"] },
+    { "fact": "Delivery platforms (CTAs)", "value": "DoorDash 34802887, Uber Eats/Postmates AJApcCD3..., Grubhub/Seamless 11640296 — all live for 1616; no closure signals anywhere", "confidence": "high", "sources": ["listings + fetched Postmates"] },
+    { "fact": "Delivery-pool rating", "value": "3.5/53 on Postmates/Uber pool (materially lower than Google 4.4)", "confidence": "medium", "sources": ["Postmates fetched"] },
+    { "fact": "Aggregator menus stale", "value": "DoorDash/UberEats/Grubhub snippets still list calamari (and red snapper) — calamari is NOT on the owner-confirmed menu", "confidence": "medium", "sources": ["search text"] }
+  ],
+  "discrepancies": [
+    { "topic": "Hours", "values": { "res-discover/AppleMaps/Postmates": "Sun 11-8, M-Th 11-10, F-Sa 11-11", "Uber Eats snippet": "11:30 AM-11:00 PM daily", "official": "none" }, "resolution": "owner confirmation still required; structured hours stay conservative (Mon-Thu + Sun only)" },
+    { "topic": "Menu delta", "values": { "owner paste 2026-07-07": "no mashed potatoes / mac and cheese sides (has mac-and-cheese BITES)", "Gazette (updated 2026-04)": "mashed potatoes + mac and cheese added as sides" }, "resolution": "OWNER-RESIDUE QUESTION: confirm current sides before menu ships in this run" },
+    { "topic": "Second location", "values": { "baseline": "3100 6th St SW = Captains #2 (excluded)", "fresh": "now Pita Kabab (same owner); Grubhub SW listing 11805992 still titled Captains and OUTRANKS the 1616 listing" }, "resolution": "still excluded; stale SW Captains listings are now a citation-hygiene risk for the owner (GBP cleanup item, out of site scope)" },
+    { "topic": "Apple Maps address error", "values": { "Apple": "1616 First Ave SE", "everything else": "1616 1st Ave NE" }, "resolution": "flag to owner for Apple Maps correction; site uses NE (authoritative)" },
+    { "topic": "Brand-signal noise", "values": { "Captains FB page": "actively posting Pita Kabab content", "restaurantjump slug": "'inc-52404' ties INC entity to SW zip" }, "resolution": "note for GBP/social hygiene; site copy stays 1616-only" },
+    { "topic": "Dine-in attribute", "values": { "res-discover (GBP mirror)": "lists Dine-in", "owner decision": "takeout/delivery/catering only" }, "resolution": "unchanged: no dine-in claims on site; GBP attribute review flagged to owner" }
+  ],
+  "ownerResidueQuestions": [
+    "MENU DELTA: Gazette reports mashed potatoes + mac and cheese were added as sides — confirm current sides list (add to menu, or keep the 2026-07-07 paste as-is)?",
+    "Hours: confirm Sun 11-8 / Mon-Thu 11-10 / Fri-Sat 11-11 (Uber Eats surface disagrees)",
+    "Domain/email/GA4: still deferred to launch per prior decision — unchanged?",
+    "Stale SW listings (Grubhub 11805992, Yelp '-2', RestaurantJump) still carry the Captains name for the Pita Kabab address — want a listing-cleanup checklist at launch?",
+    "Apple Maps shows the wrong quadrant (SE) — flag for owner correction",
+    "Real storefront/food photos + logo file still wanted to replace representational imagery"
+  ]
+}

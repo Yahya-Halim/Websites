@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 4,
+  "reviewer": "build-quality",
+  "attempt": 2,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/phase-4-artifact.json",
+  "artifactHash": "8d26924bd330116691bbc8e59b227b0fb0cb65ff282b2b463f796443bf691d87",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/review-build-quality-r2.md",
+  "notesHash": "51f0fc421cef167fadcc36be8cea43c5128c9d36187084f19c66a3715a13c1f9",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-4\\build-quality-attempt-2.md",
+  "notesHeadings": [
+    "Phase 4 review — build-quality (round 2, post-rebrand + webp fix)",
+    "History",
+    "Post-fix confirmation (gate output, 2026-07-07)",
+    "Verdict",
+    "Independence caveat"
+  ],
+  "notes": "# Phase 4 review — build-quality (round 2, post-rebrand + webp fix)\n\n**Reviewer:** build-quality (independent read-only subagent delta review + gate-output confirmation)\n**Verdict:** PASS\n**Date:** 2026-07-07\n**Run:** captains-fish-and-chicken-2026-07-07-098c7de7\n**Applies to:** Phase 4 artifact as amended (amendment 2)\n\n## History\n- Round 1 (pre-rebrand): full content review PASS — 35 routes, Menu JSON-LD 87 priced\n  items, zero dangling links, truthfulness clean, NAP consistent, fixture-only gate.\n- Rebrand delta review (independent, read-only): all checks passed EXCEPT one real\n  regression — 4 hero images shipped .jpg, tripping do-not-ship-guards' hero\n  modern-format (webp/avif) rule on /, family-dinner, game-day-wings,\n  office-and-party-catering. Delta verdict: fail (sole reason).\n- Fix: heroes converted to webp (sharp q85), page srcs repointed, rebuilt.\n\n## Post-fix confirmation (gate output, 2026-07-07)\n- dist route count: 35 ✓\n- \"modern format\" failures in factory validate: 0 ✓\n- Gate summary: ONLY do-not-ship-guards (identity fixtures: ga-placeholder x35,\n  reserved-example-tld x38) + graph-presence advisory ✓ — the intended F13 state.\n- dist/index.html references home-hero.webp ✓\n- Delta-verified invariants (from the independent reviewer): 0 slashless internal\n  links, 0 broken asset refs (93 images incl. logo), sticky-call-bar on all 35 pages,\n  exactly one h1/page, hero marker on 34/35 (contact hero optional per CRO contract),\n  truthfulness clean (no calamari/NewBo/2nd-location/dine-in claims; hours caveated),\n  brand tokens (--navy-700/--gold-500) shipped in the linked stylesheet.\n\n## Verdict\nPASS. The only blocking validate failure is the declared identity-fixture set,\nunchanged from the approved baseline. Rebrand introduced no surviving regressions.\n\n## Independence caveat\nRound-1 and delta findings come from independent read-only subagents; the post-fix\nconfirmation is gate output (factory validate) rather than a third independent pass —\nthe fix surface was a 4-file image-format swap verified mechanically by the gate.\n",
+  "reviewedAt": "2026-07-07T22:31:57.170Z"
+}

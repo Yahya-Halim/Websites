@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "workerId": "phase2-reviewer-page-matrix-depth-v3-fable-a9c47e12",
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 2,
+  "specialist": "page-matrix-depth",
+  "reviewer": "page-matrix-depth",
+  "verdict": "pass",
+  "status": "completed",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2.json",
+  "packetHash": "3b282720a468d5d572cb74e5cfeae170500e4d45a9b93ddd5a156a016904f49a",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2-page-matrix-depth-review-capsule.json",
+  "capsuleHash": "0268f7509c8f57ed901b7508f2afeae10de379213a2b4b95c02db0a40b2839ca",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\page-matrix-depth-review-notes.md",
+  "artifactHash": "119fd92c24a1ab16d6bab47bd3c02e27a54014a7a3feae5a532fec5214200c66",
+  "artifactHashReviewed": "2589da7ca284bde56ee19d9a02d01f5746ef70fb4746ceff2bb7473f8d0c5bb9",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\page-matrix-depth-review-notes.md",
+  "commandsRun": [
+    "Get-FileHash (SHA256) on phase-2-artifact.json, phase-2.json packet, and review capsule",
+    "node -e stable-hash recompute: sha256(JSON.stringify(packet minus delegation)+'\\n') and sha256(JSON.stringify(capsule)+'\\n')",
+    "node -e enumerate slugs from src/data/landings.json, occasions.json, neighborhoods.json, menu.json",
+    "node -e count menu items and priced items (87/87) across 14 sections in src/data/menu.json",
+    "node -e neighborhood anti-doorway floor check (body chars, localFacts, proximityTrustLines, townFaqs, crossLinks) and occasion FAQ/cross-link counts",
+    "Get-ChildItem src/pages recursive and dist recursive index.html route enumeration (38 routes)",
+    "Get-FileHash (SHA256) on final page-matrix-depth-review-notes.md"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2-page-matrix-depth-review-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\phase-2-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\landings.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\occasions.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\neighborhoods.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\menu.json",
+    "D:\\website\\captains-fish-and-chicken\\astro.config.mjs",
+    "D:\\website\\captains-fish-and-chicken\\src\\pages (structure listing)",
+    "D:\\website\\captains-fish-and-chicken\\dist (route listing)",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\delegation.mjs"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\page-matrix-depth-review-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2-page-matrix-depth-review-report.json"
+  ],
+  "assumptions": [
+    "Packet and capsule integrity is defined by the engine's stable-hash (compact JSON.stringify + newline, packet hashed without its delegation block), per packages/plugin/lib/local-site-workflow/delegation.mjs; both recomputed values matched the recorded hashes exactly.",
+    "Live-site route parity is verified by independent derivation from src/data files plus the local dist build output (38/38 match); no live-URL crawl was performed, consistent with capsule allowedInputs."
+  ],
+  "blockers": [],
+  "verification": [
+    "Sealed artifact raw-byte sha256 matches capsule artifactHash 2589da7ca284bde56ee19d9a02d01f5746ef70fb4746ceff2bb7473f8d0c5bb9; artifact not edited.",
+    "Route count 38 (within 25-500): 1 home + 1 menu hub + 14 menu sections + 6 occasions + 8 intent landings + 4 info/faq/story + 1 location + 2 neighborhoods + 1 contact; 0 external pages (ordering links held as CTAs).",
+    "Parity: 38 routes independently derived from landings.json (13) + occasions.json (6) + neighborhoods.json (2) + menu.json (14 sections) + home/menu-hub/contact (3) match the pageMatrix 1:1; dist/ contains exactly the same 38 index.html routes.",
+    "Reserved restaurant roots (menu, contact, occasions, neighborhoods) used only by their own families; no landing slug collision; all 38 paths in trailing-slash form matching astro.config.mjs trailingSlash 'always'.",
+    "Depth: 87/87 priced menu items across 14 sections; occasions carry featuredItems + 5-6 FAQs + 5-6 cross-links; both neighborhoods meet anti-doorway floors (2 localFacts, 2 proximityTrustLines, 2 townFaqs, ~955-978 char bodies); SW/Hiawatha/Robins/late-night/halal/vegetarian correctly folded.",
+    "copyAdvisories carry all five named Phase 1 findings: Chicago Grill returning-not-new, LJS June 2014, no '#1 on Yelp' claims, Pita Kabab disambiguation-only, review-count 208-vs-192 drift deferred to Phase 4 GBP verification.",
+    "Verdict PASS recorded in notes; notes sha256 119fd92c24a1ab16d6bab47bd3c02e27a54014a7a3feae5a532fec5214200c66; nothing touched after hashing."
+  ]
+}

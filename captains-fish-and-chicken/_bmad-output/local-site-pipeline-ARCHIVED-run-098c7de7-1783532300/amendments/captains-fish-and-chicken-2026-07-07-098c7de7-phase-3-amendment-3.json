@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 3,
+  "amendment": 3,
+  "actor": "operator-geekeys343",
+  "reasonFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-3/amend-reason-2.md",
+  "reason": "# Phase 3 amendment 2 — conform to hardened design-evidence gates (repo update 329ba8d)\n\n**Date:** 2026-07-07  |  **Actor:** operator (geekeys343@gmail.com)\n\nUpstream update 064b90d -> 329ba8d hardened the Phase 3 design-evidence contract:\ndesignSystem.designSystemPath must equal the packet's artifactEvidencePaths.designSystem\n(runtime-relative), and the evidence file must literally contain the query, stack,\nGenerated Guidance, and Local-Business Adaptations sections (scaffold text rejected).\n\nChanges:\n1. design-system.md REWRITTEN to describe the implemented navy/gold system (it still\n   carried the pre-amendment Captain Red text) — exact amended query + stack strings,\n   full Generated Guidance (tokens/contrast/type/components as implemented), and\n   Local-Business Adaptations (call-only, price pills, representational-imagery\n   discipline, F14 hours honesty, single-location NAP, logo fallback, a11y floor).\n2. designSystem.designSystemPath set to the runtime-relative evidence path.\n\nNo design, content, scope, or identity change — evidence conformance only.\n",
+  "previousArtifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-3/phase-3-artifact.json",
+  "previousArtifactHash": "06ff4c8c29dab2c0b7c1d05e9f451e3134cb6c252cd26293efc8c5d2ae3e6230",
+  "newArtifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-3/phase-3-artifact.json",
+  "newArtifactHash": "de086518bfae9493d34f188f7888b277e17803c254894a7c61f720c7d57d54b8",
+  "specialist": "ui-ux-pro-max",
+  "amendedAt": "2026-07-08T02:03:58.135Z",
+  "newRuntimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-3/design-system.md",
+      "hash": "83ac7a70e694ac086d6a35a536fe7c8cf628f1d41f706e467c00d3da74dfb8ee",
+      "mtimeMs": 1783476207845.979
+    }
+  }
+}

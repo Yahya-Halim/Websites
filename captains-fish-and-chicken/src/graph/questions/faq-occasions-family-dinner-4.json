@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-family-dinner-4",
+  "question": "Should I call ahead for a big family order?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

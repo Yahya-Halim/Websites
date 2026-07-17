@@ -1,0 +1,197 @@
+---
+import Base from '../../layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderFaqJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+// CRO blocks (T4) composed into the occasion kind.
+import Hero from '@engine/components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+// One static page per occasions-collection entry, keyed by the entry's own
+// `slug` field. Empty collection → no paths generated.
+export async function getStaticPaths() {
+  const occasions = await getCollection('occasions');
+  return occasions.map((occasion) => ({
+    params: { slug: occasion.data.slug },
+    props: { occasion },
+  }));
+}
+
+const { occasion } = Astro.props;
+const o = occasion.data;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+const legacyTelCta = site?.cta?.href?.startsWith('tel:') ? site.cta : undefined;
+const routeCtaPrimary = site?.ctaPrimary ?? legacyTelCta;
+const routeCtaSecondary = site?.ctaSecondary;
+
+// Featured items resolve against the menu collection by sectionSlug + index;
+// unresolvable references render nothing (data validation owns integrity).
+const menuSections = await getCollection('menu');
+const featured = o.featuredItems
+  .map(({ sectionSlug, itemIndex }) => {
+    const section = menuSections.find((s) => s.data.slug === sectionSlug);
+    const item = section?.data.items[itemIndex];
+    return item && section ? { item, sectionSlug: section.data.slug, sectionName: section.data.name } : null;
+  })
+  .filter(Boolean);
+
+const businessName = business?.name ?? '';
+const title = o.seo.title;
+const metaDescription = o.seo.description;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site
+  ? new URL(`/occasions/${o.slug}/`, Astro.site).href
+  : `/occasions/${o.slug}/`;
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description: metaDescription,
+  websiteName: businessName,
+  websiteUrl,
+});
+
+// Home → Occasions → {title}. Middle crumb url-less (no occasions hub page).
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Occasions' },
+    { name: o.title },
+  ],
+});
+
+// Occasion schema mandates ≥5 FAQs, so the FAQ block always renders here.
+const faqLd = renderFaqJsonLd({ faqs: o.faqs });
+---
+
+<Base title={title} description={metaDescription} jsonLd={[webPageLd, breadcrumbLd, faqLd]}>
+  <article class="occasion">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading={o.headline}
+      subheading={metaDescription}
+      ctaPrimary={routeCtaPrimary}
+      ctaSecondary={routeCtaSecondary}
+    />
+
+    <section class="body">
+      <p>{o.body}</p>
+    </section>
+
+    {featured.length > 0 && (
+      <section class="featured" aria-labelledby="featured-heading">
+        <h2 id="featured-heading">What to order</h2>
+        <ul>
+          {featured.map((f) => (
+            <li>
+              <a href={`/menu/${f.sectionSlug}/`}>{f.item.name}</a>
+              <span class="featured-section">from {f.sectionName}</span>
+              {f.item.description && <p>{f.item.description}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {o.howToSteps && o.howToSteps.length > 0 && (
+      <section class="how-to" aria-labelledby="how-to-heading">
+        <h2 id="how-to-heading">How it works</h2>
+        <ol>
+          {o.howToSteps.map((step) => (
+            <li>
+              <strong>{step.name}</strong>
+              <p>{step.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={routeCtaPrimary}
+      ctaSecondary={routeCtaSecondary}
+    />
+
+    <section class="faqs" aria-labelledby="faqs-heading">
+      <h2 id="faqs-heading">Frequently asked questions</h2>
+      <dl>
+        {o.faqs.map((faq) => (
+          <>
+            <dt>{faq.question}</dt>
+            <dd>{faq.answer}</dd>
+          </>
+        ))}
+      </dl>
+    </section>
+
+    {/* Occasion schema mandates ≥4 cross-links (the matrix mesh). */}
+    <nav class="related" aria-labelledby="related-heading">
+      <h2 id="related-heading">Related</h2>
+      <ul>
+        {o.crossLinks.map((link) => (
+          <li><a href={link.slug}>{link.anchor}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .occasion {
+    padding: 2rem 0;
+  }
+  .body {
+    max-width: 40rem;
+    line-height: 1.6;
+  }
+  .featured,
+  .how-to,
+  .faqs,
+  .related {
+    margin-top: 2.5rem;
+  }
+  .featured ul {
+    list-style: none;
+    padding: 0;
+  }
+  .featured li {
+    padding: 0.5rem 0;
+  }
+  .featured a {
+    font-weight: 600;
+  }
+  .featured-section {
+    margin-left: 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  .faqs dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .faqs dd {
+    margin: 0.25rem 0 0;
+    line-height: 1.5;
+  }
+</style>

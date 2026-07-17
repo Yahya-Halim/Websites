@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "workerId": "phase4-reviewer-build-quality-v3-cfb2054d",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 4,
+  "specialist": "build-quality",
+  "reviewer": "build-quality",
+  "status": "completed",
+  "verdict": "pass",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+  "packetHash": "c36db2815eaa89a6134d739844d08a5e81de13c1f5ada9f8ed0b70f316adb1f1",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-build-quality-review-capsule.json",
+  "capsuleHash": "6a6776c9e6d0e81c4397551abb3a7ace4f90fa41bcff5f2109261cba68af3d98",
+  "artifactHashReviewed": "74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\build-quality-review-notes.md",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\build-quality-review-notes.md",
+  "artifactHash": "cfbbf27e7f68b60d4658acf95272b2054d6caf7f304570982702c12f914edfba",
+  "commandsRun": [
+    "Get-FileHash -Algorithm SHA256 (capsule, packet, sealed artifact, design-tokens.json, review notes)",
+    "node stable-hash reproduction of packetHash (packet minus delegation) and capsuleHash per packages/plugin/lib/local-site-workflow/delegation.mjs",
+    "npm run build (independent rebuild in D:\\website\\captains-fish-and-chicken — exit 0, 38 pages)",
+    "node route-enumeration diff: dist/**/index.html vs packet inputEvidence.phase2.pageMatrix vs artifact routesGenerated (zero deltas)",
+    "grep sweeps of src/ and dist/: 208, numeric review counts, aggregateRating/reviewCount JSON-LD, calamari, dine-in/seating, #1/ranked/Yelp, Chicago Grill, LJS/Long John, Pita Kabab contexts, hours caveats, representational labels, canonical hrefs, GA snippet, internal trailing slashes, hero img formats",
+    "node item/price diff of src/data/menu.json vs frozen owner paste menu-confirmed.json (87/87 price matches)",
+    "curl of six live menu routes at https://captains-fish-chicken.netlify.app for live-vs-dist item name/price parity (identical; only section descriptions differ)"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-build-quality-review-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\phase-4-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\site.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\menu.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\business.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\layouts\\Base.astro",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-tokens.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline-ARCHIVED-run-098c7de7-1783532300\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-0\\menu-confirmed.json",
+    "D:\\website\\captains-fish-and-chicken\\dist (38 built pages, sitemap-index.xml)",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\delegation.mjs"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\build-quality-review-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-build-quality-review-report.json"
+  ],
+  "assumptions": [
+    "The frozen 2026-07-07 owner paste is menu-confirmed.json in the archived run 098c7de7 workbench (provenance field marks it OWNER-CONFIRMED and authoritative); its 15 categories map to the approved 14 site sections via the Family-Meal-Deal + Combo Dinners consolidation already live since 2026-07-08.",
+    "dist/ regeneration via npm run build is deterministic and permitted for independent verification per the dispatch guidance; the sealed phase artifact itself was not edited."
+  ],
+  "blockers": [],
+  "verification": [
+    "Capsule, packet (stable hash minus delegation), and sealed artifact (raw sha256) all match their recorded hashes.",
+    "a: exact 38-route parity — dist enumeration == Phase 2 matrix == artifact routesGenerated (zero missing/extra).",
+    "b: buildResult.status passed; commandsRun carries plain 'npm run build'; independent rebuild exit 0 with 38 pages.",
+    "c: no '208' or any numeric review count in src/ or dist/ copy; no aggregateRating/reviewCount JSON-LD; valueProp exactly '4.4 stars on Google' / 'Rated by Cedar Rapids diners on Google'; /faq/ 'Rated 4.4 on Google.' count-free; all 4.4 mentions Google-attributed.",
+    "d: menu.json 14 sections / 87 items; all 87 prices identical to owner paste; four small-section descriptions unique and non-boilerplate; live-vs-dist proves only descriptions changed this phase.",
+    "e: zero calamari; dine-in only as FAQ denials; no Yelp/list-position claims; zero Chicago Grill and LJS mentions; Pita Kabab disambiguation-only; hours caveated on every hours-bearing page; open-late claim qualified; representational note + alt labels on all 14 menu section pages.",
+    "f: business.json domain/email/gaId exact; 38/38 canonicals on real domain; GA G-7W35DKNK6Z on 38/38 pages.",
+    "g: zero slash-less internal page hrefs across all dist HTML.",
+    "h: every hero-block img/poster is .webp (no jpg/png in heroes).",
+    "i: design-tokens.json sha256 == 23452304c7e124f81929daca9cd46d42d2bfed8f0f23f9e04d35db8f7ac812d9; all 18 Base.astro custom properties match the export bidirectionally; Base.astro unmodified this phase (mtime 2026-07-07).",
+    "Notes file hashed after final write: cfbbf27e7f68b60d4658acf95272b2054d6caf7f304570982702c12f914edfba; nothing touched afterward."
+  ]
+}

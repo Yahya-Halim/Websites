@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-family-dinner-1",
+  "question": "How do I order family dinner for pickup?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

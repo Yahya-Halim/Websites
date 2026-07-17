@@ -1,0 +1,20 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "fromPhase": 4,
+  "toPhase": 5,
+  "attempt": 2,
+  "sourceArtifactHash": "8d26924bd330116691bbc8e59b227b0fb0cb65ff282b2b463f796443bf691d87",
+  "status": "failed",
+  "emittedAt": "2026-07-08T02:10:30.335Z",
+  "checksPassed": [
+    "inputSchema",
+    "briefAlignment",
+    "phaseAdjacency"
+  ],
+  "checksFailed": [
+    "blocking"
+  ],
+  "blockingReasons": [
+    "post-update re-check under 329ba8d hardened gates: factory validate still exits 1 solely on declared identity fixtures (gaId G-XXXXXXXXXX + .example domain/email) per owner deferral; Phase 5 factoryValidate contract requires exitCode 0 evidence log — real domain/email/GA4 must be wired and site rebuilt before Phase 5 seals; SEO/GEO audit evidence being pre-produced at the new evidence paths"
+  ]
+}

@@ -1,0 +1,160 @@
+---
+// Project-shadow Header (_OVERRIDES.md channel). Contract-identical to the
+// engine shared Header (same nav + dual-CTA CtaBar surface="header"), plus the
+// sealed Phase 3 amendment-1 brand mark: the Higgsfield-generated logo renders
+// as the header brand (emblem already contains the wordmark), linked to "/".
+// Falls back to the business name text if the logo file is absent.
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { getEntry } from 'astro:content';
+import CtaBar from '@engine/components/CtaBar.astro';
+
+interface Props {
+  businessId?: string;
+}
+
+const { businessId = 'biz' } = Astro.props;
+const businessEntry = await getEntry('business', businessId);
+const business = businessEntry?.data;
+const businessName = business && business.name ? business.name : 'Your Business';
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const logoFilename = business?.brand?.logoFilename;
+const logoAlt = business?.brand?.logoAlt ?? `${businessName} logo`;
+const hasLogo = Boolean(logoFilename) && existsSync(join(process.cwd(), 'public', logoFilename));
+
+const hasServicesHubRoute = existsSync(join(process.cwd(), 'src', 'pages', 'services', 'index.astro'));
+const readJsonArray = (path) => {
+  try {
+    const data = JSON.parse(readFileSync(path, 'utf8'));
+    return Array.isArray(data) ? data : [];
+  } catch {
+    return [];
+  }
+};
+const serviceEntries = hasServicesHubRoute
+  ? readJsonArray(join(process.cwd(), 'src', 'data', 'services.json'))
+  : [];
+const siteNav = [...(site?.nav ?? [])];
+const hasServicesNav = siteNav.some((item) => item.href.replace(/\/?$/, '/') === '/services/');
+const shouldExposeServices = hasServicesHubRoute && serviceEntries.length > 0 && !hasServicesNav;
+const headerNav = shouldExposeServices
+  ? [...siteNav, { label: 'Services', href: '/services/' }]
+  : siteNav;
+
+const legacyTelCta = site?.cta?.href?.startsWith('tel:') ? site.cta : undefined;
+const headerCtaPrimary = site?.ctaPrimary ?? legacyTelCta;
+const headerCtaSecondary = site?.ctaSecondary;
+const hasHeaderCta = Boolean(headerCtaPrimary || headerCtaSecondary);
+const legacyNonTelCta = !hasHeaderCta && site?.cta ? site.cta : undefined;
+---
+
+<header class="site-header">
+  <a href="/" class="brand" aria-label={businessName}>
+    {hasLogo && (
+      <img class="brand-icon" src={`/${logoFilename}`} alt="" width="48" height="48" aria-hidden="true" />
+    )}
+    <span class="brand-word">
+      <span class="brand-name">{businessName}</span>
+      <span class="brand-tag">Palestinian kitchen · Cedar Rapids</span>
+    </span>
+  </a>
+  {headerNav.length > 0 && (
+    <nav>
+      <ul>
+        {headerNav.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
+  {hasHeaderCta ? (
+    <CtaBar surface="header" ctaPrimary={headerCtaPrimary} ctaSecondary={headerCtaSecondary} />
+  ) : (
+    legacyNonTelCta && <a class="cta" href={legacyNonTelCta.href}>{legacyNonTelCta.text}</a>
+  )}
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.6rem 1.5rem;
+  }
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand-icon {
+    display: block;
+    height: 48px;
+    width: 48px;
+    border-radius: 999px;
+    flex: 0 0 auto;
+  }
+  .brand-word {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+  .brand-name {
+    font-family: var(--font-display, system-ui);
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--color-primary, #1b6e3e);
+  }
+  .brand-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-muted-foreground, #4c5a4e);
+    margin-top: 1px;
+  }
+  nav {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .cta {
+    background: var(--accent-color, #f60);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    text-decoration: none;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  @media (max-width: 48rem) {
+    .site-header {
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1rem;
+    }
+    nav {
+      order: 3;
+      flex: 1 0 100%;
+      padding-bottom: 0.25rem;
+    }
+    nav ul {
+      flex-wrap: wrap;
+      gap: 0.75rem 1rem;
+    }
+  }
+</style>

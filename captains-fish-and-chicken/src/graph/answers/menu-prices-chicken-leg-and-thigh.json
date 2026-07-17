@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-chicken-leg-and-thigh",
+  "questionRef": "questions/menu-prices-chicken-leg-and-thigh",
+  "text": "Chicken Mix Meal (4 pcs): Meal 12.99\nChicken Mix Meal (6 pcs): Meal 15.99\nChicken Mix Meal (10 pcs): Meal 24.99\nChicken Mix Only (20 pcs): Only 39.99\nChicken Mix Only (30 pcs): Only 59.99\nChicken Mix Only (50 pcs): Only 89.99",
+  "cites": [
+    "menu/chicken-leg-and-thigh"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/chicken-leg-and-thigh.json",
+  "lastVerified": "2026-07-07"
+}

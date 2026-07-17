@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-party-wings",
+  "question": "How much do Party Wings cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/party-wings.json",
+  "lastVerified": "2026-07-07"
+}

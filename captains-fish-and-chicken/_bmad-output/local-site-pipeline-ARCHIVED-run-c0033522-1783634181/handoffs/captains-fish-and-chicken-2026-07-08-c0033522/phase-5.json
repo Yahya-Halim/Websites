@@ -1,0 +1,78 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "briefHash": "739d57b06aec4a7c29a50f60cba3efb418607c3ec730bcaaa80de1792280b6ef",
+  "phase": 5,
+  "exitedAt": "2026-07-08T21:42:22.481Z",
+  "specialistInvoked": "seo-geo-ai-validation",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/phase-5-artifact.json",
+    "artifactHash": "fab4dd0d4e28755dae6a2129be9aa85a2890e6df0e7702d1cdb0523584508283",
+    "contract": "validation runs, factory validate evidence, SEO/GEO audit evidence, failures, fix rounds, remaining advisories",
+    "validationRuns": [
+      {
+        "id": "factory-validate-post-identity",
+        "command": "factory validate",
+        "status": "passed",
+        "exitCode": 0,
+        "note": "zero gates, zero advisories across the 38-route dist (post identity swap + rebuild)"
+      },
+      {
+        "id": "seo-geo-audit-v2",
+        "command": "/aaron-marketing:seo-geo dist/ --mode audit --full --tech --visibility",
+        "status": "passed",
+        "note": "38/38 pages; 0 blocking; 173 ld+json parsed 0 errors; menu prices reconciled; gtag once/page"
+      },
+      {
+        "id": "factory-validate-post-fixes",
+        "command": "factory validate",
+        "status": "passed",
+        "exitCode": 0,
+        "note": "re-confirmed exit 0 after advisory fixes (title + descriptions) and rebuild"
+      }
+    ],
+    "factoryValidate": {
+      "command": "factory validate",
+      "exitCode": 0,
+      "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/factory-validate.log",
+      "checkedGateIds": [
+        "schema-floor",
+        "route-completeness",
+        "cro-block-presence",
+        "do-not-ship-guards",
+        "sap-anti-doorway",
+        "graph-gate"
+      ]
+    },
+    "seoGeoAudit": {
+      "command": "/aaron-marketing:seo-geo dist/ --mode audit --full --tech --visibility",
+      "status": "passed",
+      "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/seo-geo-audit.md",
+      "blockingFindings": 0,
+      "advisoryFindings": 4,
+      "advisoriesFixedPreSeal": 3
+    },
+    "failures": [],
+    "fixRounds": [
+      {
+        "round": 1,
+        "scope": "SEO advisory fixes pre-seal",
+        "changes": [
+          "home <title> 74 -> 61 chars",
+          "/contact/ description 353 -> 161 chars (page-specific)",
+          "/menu/ description 40 -> 203 chars (rich menu summary)",
+          "both neighborhood descriptions 195 -> 153 chars"
+        ],
+        "revalidation": "factory build + factory validate exit 0"
+      }
+    ],
+    "remainingAdvisories": [
+      "Restaurant openingHoursSpecification covers Mon-Thu + Sun only (Fri-Sat omitted) — DELIBERATE sealed conservative-hours decision until the owner confirms the 11pm close; visible text + llms.txt carry the caveated full week",
+      "Plain-text \"Rated 4.4 on Google\" (~20 pages; correctly NOT aggregateRating schema) — verify against live GBP at launch and keep in sync"
+    ]
+  },
+  "nextPhaseAllowed": [
+    6
+  ],
+  "nextPhaseHint": 6,
+  "blocking": []
+}

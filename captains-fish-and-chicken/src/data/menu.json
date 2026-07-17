@@ -1,0 +1,976 @@
+[
+  {
+    "slug": "seafood",
+    "name": "Seafood",
+    "order": 1,
+    "description": "Fresh-to-order fried seafood — catfish fillet, catfish steak, catfish nuggets, wild-caught cod, perch, tilapia, red snapper, and crab cakes. Every meal comes with fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Catfish Fillet, Perch or Tilapia (2 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 13.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Fillet, Perch or Tilapia (3 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 16.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Fillet, Perch or Tilapia (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 21.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Steak, Bone In (2 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 13.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Steak, Bone In (3 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 15.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Steak, Bone In (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 19.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Nuggets (1 lb)",
+        "description": "Bite-sized catfish with a crispy coating.",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "name": "Cod Fish, Wild Caught (2 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "name": "Cod Fish, Wild Caught (3 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 19.99
+          }
+        ]
+      },
+      {
+        "name": "Cod Fish, Wild Caught (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 23.99
+          }
+        ]
+      },
+      {
+        "name": "Crab Cakes (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "name": "Red Snapper (2 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "name": "Red Snapper (3 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 19.99
+          }
+        ]
+      },
+      {
+        "name": "Red Snapper (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 23.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Fried Seafood — Catfish, Cod & Snapper | Captains Cedar Rapids",
+      "description": "Fresh fried catfish, wild-caught cod, perch, tilapia, red snapper, and crab cakes in Cedar Rapids. Meals with fries, coleslaw, and bread.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/seafood/"
+    }
+  },
+  {
+    "slug": "whole-wings",
+    "name": "Whole Wings",
+    "order": 2,
+    "description": "Bone-in whole wings fried to order. Meals come with fries, coleslaw, and bread; larger counts are wings only.",
+    "items": [
+      {
+        "name": "Wings Meal (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 8.99
+          }
+        ]
+      },
+      {
+        "name": "Wings Meal (6 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 13.99
+          }
+        ]
+      },
+      {
+        "name": "Wings Meal (10 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 19.99
+          }
+        ]
+      },
+      {
+        "name": "Wings Only (20 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 32.99
+          }
+        ]
+      },
+      {
+        "name": "Wings Only (30 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 49.99
+          }
+        ]
+      },
+      {
+        "name": "Wings Only (50 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 84.99
+          }
+        ]
+      },
+      {
+        "name": "Wings Only (100 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 159.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Whole Wings Fried to Order | Captains Cedar Rapids",
+      "description": "Bone-in whole wings from 4-piece meals to 100-piece party counts in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/whole-wings/"
+    }
+  },
+  {
+    "slug": "party-wings",
+    "name": "Party Wings",
+    "order": 3,
+    "description": "Smaller party-style wings, perfect for sharing and game day. Meals include fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Party Wings Meal (8 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 14.99
+          }
+        ]
+      },
+      {
+        "name": "Party Wings Meal (12 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 18.99
+          }
+        ]
+      },
+      {
+        "name": "Party Wings Only (16 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 24.99
+          }
+        ]
+      },
+      {
+        "name": "Party Wings Only (20 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 28.99
+          }
+        ]
+      },
+      {
+        "name": "Party Wings, Chicken Only (30 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 45.99
+          }
+        ]
+      },
+      {
+        "name": "Party Wings, Chicken Only (50 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 79.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Party Wings — Cedar Rapids | Captains Fish and Chicken",
+      "description": "Party wings by the 8, 12, 16, 20, 30, and 50 piece for game day and gatherings in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/party-wings/"
+    }
+  },
+  {
+    "slug": "boneless-chicken-bites",
+    "name": "Boneless Chicken Bites",
+    "order": 4,
+    "description": "Crispy boneless wings and chicken bites. Meals include fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Boneless Wings Meal (8 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 12.99
+          }
+        ]
+      },
+      {
+        "name": "Boneless Wings Meal (12 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 18.99
+          }
+        ]
+      },
+      {
+        "name": "Boneless Wings Only (20 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 26.99
+          }
+        ]
+      },
+      {
+        "name": "Boneless Wings Only (30 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 49.99
+          }
+        ]
+      },
+      {
+        "name": "Boneless Wings Only (50 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 79.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Boneless Chicken Bites | Captains Cedar Rapids",
+      "description": "Crispy boneless wings and chicken bites by the 8 to 50 piece in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/boneless-chicken-bites/"
+    }
+  },
+  {
+    "slug": "chicken-leg-and-thigh",
+    "name": "Chicken Leg & Thigh Mix",
+    "order": 5,
+    "description": "Bone-in dark-meat fried chicken. Meals include fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Chicken Mix Meal (4 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 12.99
+          }
+        ]
+      },
+      {
+        "name": "Chicken Mix Meal (6 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 15.99
+          }
+        ]
+      },
+      {
+        "name": "Chicken Mix Meal (10 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 24.99
+          }
+        ]
+      },
+      {
+        "name": "Chicken Mix Only (20 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 39.99
+          }
+        ]
+      },
+      {
+        "name": "Chicken Mix Only (30 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 59.99
+          }
+        ]
+      },
+      {
+        "name": "Chicken Mix Only (50 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 89.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Fried Chicken Leg & Thigh Mix | Captains Cedar Rapids",
+      "description": "Bone-in dark-meat fried chicken dinners and bulk counts in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/chicken-leg-and-thigh/"
+    }
+  },
+  {
+    "slug": "chicken-tenders",
+    "name": "Chicken Tenders",
+    "order": 6,
+    "description": "Hand-breaded chicken tenders fried to order. Meals include fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Tenders Meal (3 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 12.99
+          }
+        ]
+      },
+      {
+        "name": "Tenders Meal (6 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 21.99
+          }
+        ]
+      },
+      {
+        "name": "Tenders Meal (10 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 34.99
+          }
+        ]
+      },
+      {
+        "name": "Tenders Only (20 pcs)",
+        "prices": [
+          {
+            "label": "Only",
+            "price": 59.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Chicken Tenders — Cedar Rapids | Captains Fish and Chicken",
+      "description": "Fresh fried chicken tenders by the 3, 6, 10, and 20 piece in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/chicken-tenders/"
+    }
+  },
+  {
+    "slug": "shrimp",
+    "name": "Shrimp",
+    "order": 7,
+    "description": "Captains-breaded jumbo and medium shrimp. Meals include fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Jumbo Shrimp, 1/2 lb (7 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 15.99
+          }
+        ]
+      },
+      {
+        "name": "Jumbo Shrimp, 1 lb (14 pcs)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 25.99
+          }
+        ]
+      },
+      {
+        "name": "Medium Shrimp (1/2 lb)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 13.99
+          }
+        ]
+      },
+      {
+        "name": "Medium Shrimp (1 lb)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 21.99
+          }
+        ]
+      },
+      {
+        "name": "Shrimp Basket",
+        "description": "Popcorn shrimp basket.",
+        "prices": [
+          {
+            "label": "Basket",
+            "price": 10.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Fried Jumbo & Medium Shrimp | Captains Cedar Rapids",
+      "description": "Captains-breaded jumbo and medium fried shrimp and shrimp baskets in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/shrimp/"
+    }
+  },
+  {
+    "slug": "gizzards-and-livers",
+    "name": "Gizzards & Livers",
+    "order": 8,
+    "description": "Old-school soul-food classics you will not find at most takeout counters: chicken gizzards and livers sold by the pound, dropped in the fryer only after you order so they come out crisp outside and rich inside. Each meal comes with fries, coleslaw, and bread.",
+    "items": [
+      {
+        "name": "Gizzards (1 lb)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 13.99
+          }
+        ]
+      },
+      {
+        "name": "Livers (1 lb)",
+        "prices": [
+          {
+            "label": "Meal",
+            "price": 13.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Fried Gizzards & Livers — Cedar Rapids Soul Food | Captains",
+      "description": "Southern-style fried chicken gizzards and livers by the pound, with fries, coleslaw, and bread, at Captains in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/gizzards-and-livers/"
+    }
+  },
+  {
+    "slug": "fish-family-deals",
+    "name": "Fish Only Family Deals",
+    "order": 9,
+    "description": "Big-batch fried fish for the whole table — catfish, perch, and tilapia by the piece or the pan.",
+    "items": [
+      {
+        "name": "Catfish, Perch & Tilapia (10 pcs)",
+        "prices": [
+          {
+            "label": "Family",
+            "price": 49.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish, Perch & Tilapia (20 pcs)",
+        "prices": [
+          {
+            "label": "Family",
+            "price": 69.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish, Perch & Tilapia (30 pcs)",
+        "prices": [
+          {
+            "label": "Family",
+            "price": 99.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish, Perch & Tilapia (40 pcs)",
+        "prices": [
+          {
+            "label": "Family",
+            "price": 139.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish, Perch & Tilapia (50 pcs)",
+        "prices": [
+          {
+            "label": "Family",
+            "price": 166.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Nuggets, Half Pan",
+        "prices": [
+          {
+            "label": "Pan",
+            "price": 49.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Nuggets, Full Pan",
+        "prices": [
+          {
+            "label": "Pan",
+            "price": 89.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Fish Family Deals & Party Pans | Captains Cedar Rapids",
+      "description": "Fried fish family deals up to 50 pieces and catfish nugget pans for groups and catering in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/fish-family-deals/"
+    }
+  },
+  {
+    "slug": "family-meals-and-combos",
+    "name": "Family Meals & Combo Dinners",
+    "order": 10,
+    "description": "Mix-and-match combo dinners and the Captain's Family Meal Deal.",
+    "items": [
+      {
+        "name": "Captain's Family Meal Deal",
+        "description": "Large fries and your choice of two items.",
+        "prices": [
+          {
+            "label": "Deal",
+            "price": 59.99
+          }
+        ]
+      },
+      {
+        "name": "Combo Dinner — Your Choice of Two Items",
+        "description": "Choose two items to build a combo dinner.",
+        "prices": [
+          {
+            "label": "Combo",
+            "price": 18.99
+          }
+        ]
+      },
+      {
+        "name": "Combo Dinner — Your Choice of Three Items",
+        "description": "Mix and match any three items, served together.",
+        "prices": [
+          {
+            "label": "Combo",
+            "price": 21.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Family Meals & Combo Dinners | Captains Cedar Rapids",
+      "description": "Build-your-own combo dinners and the Captain's Family Meal Deal in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/family-meals-and-combos/"
+    }
+  },
+  {
+    "slug": "sides",
+    "name": "Side Orders",
+    "order": 11,
+    "description": "Southern-style sides and shareables.",
+    "items": [
+      {
+        "name": "Hush Puppies (10 pcs)",
+        "description": "Crispy, deep-fried cornbread balls.",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Breaded Mushrooms (10 pcs)",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Mac and Cheese Bites (10 pcs)",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Cheese Sticks (5 pcs)",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Cheese Curds",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Pizza Puff",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Onion Rings (10 pcs)",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Small Fries",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Large Fries",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Half Pan of Fries",
+        "prices": [
+          {
+            "label": "Pan",
+            "price": 16.99
+          }
+        ]
+      },
+      {
+        "name": "Full Pan of Fries",
+        "prices": [
+          {
+            "label": "Pan",
+            "price": 27.99
+          }
+        ]
+      },
+      {
+        "name": "Extra Sauce",
+        "prices": [
+          {
+            "label": "Add-on",
+            "price": 0.5
+          }
+        ]
+      },
+      {
+        "name": "Gizzards or Livers (side)",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 7.99
+          }
+        ]
+      },
+      {
+        "name": "Catfish Nuggets (side)",
+        "prices": [
+          {
+            "label": "Side",
+            "price": 7.99
+          }
+        ]
+      },
+      {
+        "name": "Wings (1 pc, side)",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 2.45
+          }
+        ]
+      },
+      {
+        "name": "Legs (1 pc, side)",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Thighs (1 pc, side)",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Sides — Hush Puppies & Onion Rings | Captains Cedar Rapids",
+      "description": "Southern sides in Cedar Rapids — hush puppies, mac and cheese bites, cheese curds, onion rings, and fries.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/sides/"
+    }
+  },
+  {
+    "slug": "kids-meals",
+    "name": "Kids Meals",
+    "order": 12,
+    "description": "Easy wins for the little ones while the grown-ups split a fish dinner: chicken nuggets, two-piece tenders, or a pizza puff, each fried fresh and served with fries at one kid-sized price.",
+    "items": [
+      {
+        "name": "Kids Chicken Nuggets (5 pcs)",
+        "description": "Served with fries.",
+        "prices": [
+          {
+            "label": "Kids",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Kids Chicken Tenders (2 pcs)",
+        "description": "Served with fries.",
+        "prices": [
+          {
+            "label": "Kids",
+            "price": 6.99
+          }
+        ]
+      },
+      {
+        "name": "Kids Pizza Puff",
+        "description": "Served with fries.",
+        "prices": [
+          {
+            "label": "Kids",
+            "price": 6.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Kids Meals — Cedar Rapids | Captains Fish and Chicken",
+      "description": "Kids chicken nuggets, tenders, and pizza puff served with fries in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/kids-meals/"
+    }
+  },
+  {
+    "slug": "desserts",
+    "name": "Desserts",
+    "order": 13,
+    "description": "Save room for a sweet finish to a fried fish or chicken dinner: creamy cheesecake, caramel cheesecake, carrot cake, caramel coconut, and lemon cake — single-slice add-ons that ride along with any takeout or catering order.",
+    "items": [
+      {
+        "name": "Cheesecake",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Caramel Cheesecake",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Carrot Cake",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Caramel Coconut",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Lemon Cake",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Desserts — Cheesecake & Cakes | Captains Cedar Rapids",
+      "description": "Cheesecake, caramel cheesecake, carrot cake, caramel coconut, and lemon cake in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/desserts/"
+    }
+  },
+  {
+    "slug": "drinks",
+    "name": "Drinks",
+    "order": 14,
+    "description": "Round out the order with a cold drink for the road: bottled water plus Mystic and Calypos fruit drinks, easy to grab with your pickup at the counter or add to a delivery order.",
+    "items": [
+      {
+        "name": "Water",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 0.99
+          }
+        ]
+      },
+      {
+        "name": "Mystic",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      },
+      {
+        "name": "Calypos",
+        "prices": [
+          {
+            "label": "Each",
+            "price": 3.99
+          }
+        ]
+      }
+    ],
+    "seo": {
+      "title": "Drinks — Cedar Rapids | Captains Fish and Chicken",
+      "description": "Bottled water, Mystic, and Calypos drinks to round out your fried fish and chicken order at Captains in Cedar Rapids.",
+      "canonical": "https://captains-fish-chicken.netlify.app/menu/drinks/"
+    }
+  }
+]

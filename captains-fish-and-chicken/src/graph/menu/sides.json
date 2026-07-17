@@ -1,0 +1,171 @@
+{
+  "kind": "menu",
+  "slug": "sides",
+  "name": "Side Orders",
+  "order": 11,
+  "description": "Southern-style sides and shareables.",
+  "items": [
+    {
+      "name": "Hush Puppies (10 pcs)",
+      "description": "Crispy, deep-fried cornbread balls.",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Breaded Mushrooms (10 pcs)",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Mac and Cheese Bites (10 pcs)",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Cheese Sticks (5 pcs)",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Cheese Curds",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Pizza Puff",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Onion Rings (10 pcs)",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Small Fries",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Large Fries",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Half Pan of Fries",
+      "prices": [
+        {
+          "label": "Pan",
+          "price": 16.99
+        }
+      ]
+    },
+    {
+      "name": "Full Pan of Fries",
+      "prices": [
+        {
+          "label": "Pan",
+          "price": 27.99
+        }
+      ]
+    },
+    {
+      "name": "Extra Sauce",
+      "prices": [
+        {
+          "label": "Add-on",
+          "price": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Gizzards or Livers (side)",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 7.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Nuggets (side)",
+      "prices": [
+        {
+          "label": "Side",
+          "price": 7.99
+        }
+      ]
+    },
+    {
+      "name": "Wings (1 pc, side)",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 2.45
+        }
+      ]
+    },
+    {
+      "name": "Legs (1 pc, side)",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Thighs (1 pc, side)",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Sides — Hush Puppies & Onion Rings | Captains Cedar Rapids",
+    "description": "Southern sides in Cedar Rapids — hush puppies, mac and cheese bites, cheese curds, onion rings, and fries.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/sides/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

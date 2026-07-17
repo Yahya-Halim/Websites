@@ -1,0 +1,91 @@
+{
+  "kind": "occasions",
+  "slug": "quick-lunch-takeout",
+  "title": "Quick Lunch Takeout in Cedar Rapids | Captains Fish and Chicken",
+  "headline": "A Fast, Fresh Lunch Ready When You Are",
+  "body": "Short lunch break? Captains Fish and Chicken on 1st Avenue NE gets you fed fast without dropping down to gas-station quality. Grab a two-item combo, a basket of crispy chicken tenders, or a golden catfish fillet with a side, and you've got a real lunch that hits, all fried fresh to order. It's the kind of quick meal that beats the same tired lunch spot and actually leaves you looking forward to noon. Working in Northeast Cedar Rapids or near Marion, the smartest move is to call ahead at (319) 221-1040 so your lunch is bagged and waiting when you swing by, no standing around while the clock ticks. Rather stay at your desk? Order delivery through DoorDash, Uber Eats, or Grubhub and let it come to you. Captains opened in 2024 under owner Ray Aqel and is rated 4.4 on Google, with the same promise behind the lunch rush as everything else: fish, chicken and seafood made fresh to order. Fast, fresh, and worth the short trip, even on your busiest day.",
+  "featuredItems": [
+    {
+      "sectionSlug": "family-meals-and-combos",
+      "itemIndex": 1
+    },
+    {
+      "sectionSlug": "chicken-tenders",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "whole-wings",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "sides",
+      "itemIndex": 0
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What are good quick lunch options?",
+      "answer": "For a fast lunch, try a two-item combo, a basket of chicken tenders, a 4-piece whole wings meal, or a single catfish fillet with a side. All are fried fresh to order and easy to eat on a break. Call (319) 221-1040 to order ahead."
+    },
+    {
+      "question": "How do I order lunch ahead so it's ready fast?",
+      "answer": "Call (319) 221-1040 and place your order before you head over. Since everything is fried fresh to order, a call ahead means your lunch is hot and bagged when you arrive at 1616 1st Ave NE, so you're not waiting on a short break."
+    },
+    {
+      "question": "Can I get lunch delivered to my workplace?",
+      "answer": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app, and have lunch delivered to your office or job site. Each app sets its own delivery times and fees."
+    },
+    {
+      "question": "Do you have lunch portions for one person?",
+      "answer": "Yes. Combos, tender baskets, and single fillets are sized for one, so you can grab exactly what you need without a big order. Call (319) 221-1040 if you'd like a recommendation."
+    },
+    {
+      "question": "Are you open for lunch?",
+      "answer": "We serve fresh takeout throughout the day. Hours can vary, so please call (319) 221-1040 to confirm current hours before you head over for lunch."
+    }
+  ],
+  "crossLinks": [
+    {
+      "slug": "/menu/chicken-tenders/",
+      "anchor": "chicken tenders",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/family-meals-and-combos/",
+      "anchor": "combos",
+      "context": "inline"
+    },
+    {
+      "slug": "/fish-and-chicken-near-me/",
+      "anchor": "fish and chicken near me",
+      "context": "related"
+    },
+    {
+      "slug": "/how-to-order/",
+      "anchor": "how to order",
+      "context": "related"
+    },
+    {
+      "slug": "/menu/",
+      "anchor": "full menu",
+      "context": "related"
+    }
+  ],
+  "heroAltText": "A quick lunch of crispy chicken tenders, a catfish fillet, and a side from Captains Fish and Chicken in Cedar Rapids",
+  "schemaTypes": [
+    "WebPage",
+    "FAQPage"
+  ],
+  "seo": {
+    "title": "Quick Lunch Takeout in Cedar Rapids | Captains Fish and Chicken",
+    "description": "Fast, fresh lunch takeout in Cedar Rapids. Combos, tenders, and catfish fried to order for quick pickup or delivery. Call (319) 221-1040 to order ahead.",
+    "canonical": "https://captains-fish-and-chicken.example/occasions/quick-lunch-takeout/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "Phase 4 sealed occasions.json authored from owner-confirmed offerings"
+}

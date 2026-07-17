@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-game-day-wings-3",
+  "question": "Do you have boneless options for the group?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/game-day-wings.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

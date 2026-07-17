@@ -1,0 +1,73 @@
+---
+/**
+ * TrustBar — the "Why Choose Us" trust-signal grid (cro-gates Task 4).
+ *
+ * Sourced from `site.trustBar.items[]` (T1 schema guarantees ≥6 when present).
+ * Renders the grid, emitting a per-item `data-cro-trust-item` marker on EACH
+ * rendered item so T7 can count them. KG7: empty/absent → renders NOTHING (no
+ * marker). When it renders, the root carries `data-cro-block="trust-bar"`.
+ */
+interface TrustItem {
+  label: string;
+  detail?: string;
+  icon?: string;
+}
+
+interface Props {
+  /** The `site.trustBar.items` array (≥6 when present). */
+  items?: TrustItem[];
+}
+
+const { items } = Astro.props;
+const hasItems = Array.isArray(items) && items.length > 0;
+---
+
+{hasItems && (
+  <section class="trust-bar" data-cro-block="trust-bar">
+    <h2 class="trust-bar-title">Why Choose Us</h2>
+    <ul class="trust-bar-grid">
+      {items!.map((item) => (
+        <li class="trust-item" data-cro-trust-item>
+          {item.icon && <span class="trust-item-icon" aria-hidden="true">{item.icon}</span>}
+          <span class="trust-item-label">{item.label}</span>
+          {item.detail && <span class="trust-item-detail">{item.detail}</span>}
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .trust-bar {
+    margin: 2.5rem 0;
+    text-align: center;
+  }
+  .trust-bar-title {
+    font-size: 1.5rem;
+    margin: 0 0 1.5rem;
+  }
+  .trust-bar-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
+  }
+  .trust-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .trust-item-icon {
+    font-size: 1.75rem;
+  }
+  .trust-item-label {
+    font-weight: 700;
+  }
+  .trust-item-detail {
+    color: #6b6b6b;
+    font-size: 0.9rem;
+  }
+</style>

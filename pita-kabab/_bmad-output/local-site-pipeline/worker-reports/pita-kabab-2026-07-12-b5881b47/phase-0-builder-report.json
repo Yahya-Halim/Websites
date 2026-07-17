@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 0,
+  "specialist": "local-business-discovery",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+  "packetHash": "5c2aa3625566ef588065029f5db4e82709cb785a8f039a22d18b2af0ff5917e8",
+  "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-capsule.json",
+  "capsuleHash": "f3de39c16f25b3b80e1a44f9d305b0f8b856ba7dfd4e6d9d67e1d84cee4b6eda",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+  "artifactHash": "53d094d068d264eba0cb4b0a5cf5dd1b015a2ca86944c18bd81b471ad4a0af10",
+  "workerId": "phase-0-builder-fable-5-2026-07-12",
+  "status": "completed",
+  "commandsRun": [
+    "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 0 --artifact D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json (ok: true, problems: [])",
+    "node -e sha256(phase-0-artifact.json) => 53d094d068d264eba0cb4b0a5cf5dd1b015a2ca86944c18bd81b471ad4a0af10"
+  ],
+  "filesRead": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-capsule.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-business-discovery\\SKILL.md",
+    "D:\\website\\pita-kabab\\brief.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\probe-set.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\web-footprint-findings.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\owner-questionnaire.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\discovery-notes.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs (phase 0 contract sections)",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs (inspectArtifact / runtime evidence sections)"
+  ],
+  "filesChanged": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\probe-set.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\web-footprint-findings.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\owner-questionnaire.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\discovery-notes.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json"
+  ],
+  "assumptions": [
+    "brief.json is a sealed input for this phase (referenced by the packet's probe context and the run's seed facts); its owner-supplied name/address/scope/same-owner facts were treated as authoritative userConfirmedFacts.",
+    "Yelp, DoorDash, Facebook, and Bizapedia block direct fetching (403/login/security-check); their per-source records rely on search snippets and owner-site links, and are marked unverified accordingly.",
+    "No owner interview was permitted in this dispatch; the residue-only interview is deferred to owner-questionnaire.md per capsule rules.",
+    "Canonical business data file deliberately NOT written: discovered data is unverified pending owner review and Yahya approval; Phase 0 contract forbids build output."
+  ],
+  "blockers": [],
+  "verification": [
+    "inspect-artifact phase 0: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it.' (first and only run; no weaknesses reported)",
+    "Artifact contains all 7 required fields non-null; buildOutputCreated=false; webFootprintFindings.sourcesChecked has 16 entries each with source+status in {found,not-found}; findings/discrepancies/ownerResidueQuestions arrays populated (10/5/17).",
+    "All five packet outputPaths files exist and are filled (probe-set, web-footprint-findings, owner-questionnaire, discovery-notes, phase-0-artifact).",
+    "complete-phase NOT run per dispatch stop condition; Yahya approval gate remains ahead."
+  ]
+}

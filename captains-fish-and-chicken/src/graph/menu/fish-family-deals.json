@@ -1,0 +1,80 @@
+{
+  "kind": "menu",
+  "slug": "fish-family-deals",
+  "name": "Fish Only Family Deals",
+  "order": 9,
+  "description": "Big-batch fried fish for the whole table — catfish, perch, and tilapia by the piece or the pan.",
+  "items": [
+    {
+      "name": "Catfish, Perch & Tilapia (10 pcs)",
+      "prices": [
+        {
+          "label": "Family",
+          "price": 49.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish, Perch & Tilapia (20 pcs)",
+      "prices": [
+        {
+          "label": "Family",
+          "price": 69.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish, Perch & Tilapia (30 pcs)",
+      "prices": [
+        {
+          "label": "Family",
+          "price": 99.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish, Perch & Tilapia (40 pcs)",
+      "prices": [
+        {
+          "label": "Family",
+          "price": 139.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish, Perch & Tilapia (50 pcs)",
+      "prices": [
+        {
+          "label": "Family",
+          "price": 166.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Nuggets, Half Pan",
+      "prices": [
+        {
+          "label": "Pan",
+          "price": 49.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Nuggets, Full Pan",
+      "prices": [
+        {
+          "label": "Pan",
+          "price": 89.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Fish Family Deals & Party Pans | Captains Cedar Rapids",
+    "description": "Fried fish family deals up to 50 pieces and catfish nugget pans for groups and catering in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/fish-family-deals/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

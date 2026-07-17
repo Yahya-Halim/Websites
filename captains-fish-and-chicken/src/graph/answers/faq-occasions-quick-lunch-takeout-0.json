@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-quick-lunch-takeout-0",
+  "questionRef": "questions/faq-occasions-quick-lunch-takeout-0",
+  "text": "For a fast lunch, try a two-item combo, a basket of chicken tenders, a 4-piece whole wings meal, or a single catfish fillet with a side. All are fried fresh to order and easy to eat on a break. Call (319) 221-1040 to order ahead.",
+  "cites": [
+    "occasions/quick-lunch-takeout"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/quick-lunch-takeout.json#faqs[0]",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-office-and-party-catering-3",
+  "questionRef": "questions/faq-occasions-office-and-party-catering-3",
+  "text": "For catering, call (319) 221-1040 directly. Phone ordering lets us confirm quantities, timing, and pickup for large orders. Smaller catering orders can also be placed for delivery through DoorDash, Uber Eats, or Grubhub.",
+  "cites": [
+    "occasions/office-and-party-catering"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/office-and-party-catering.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

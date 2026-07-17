@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 1,
+  "reviewer": "research-sufficiency",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1.json",
+  "packetHash": "1dbaf2590d53f90712e2bd1fbb16fc8122537e7bc6fddccac134cfdda9bcbc47",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1-research-sufficiency-review-capsule.json",
+  "capsuleHash": "d77229716cdc72eb01daa2dbde0e72034477fa192fb7904e94aa07b6c7365d15",
+  "artifactHashReviewed": "1c9a1cf67549096de780b8a9bc3bf6638bae039a5cac0e23688f01187ea14406",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\research-sufficiency-review-notes.md",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\research-sufficiency-review-notes.md",
+  "artifactHash": "280f8380fd7b888eae5f8b5c42cb97d1e859d4ffd48fb69132a85af04554ef69",
+  "verdict": "pass",
+  "workerId": "phase1-reviewer-research-sufficiency-v3-ad68d563-280f",
+  "status": "completed",
+  "commandsRun": [
+    "Get-FileHash -Algorithm SHA256 phase-1-artifact.json => 1c9a1cf67549096de780b8a9bc3bf6638bae039a5cac0e23688f01187ea14406 (matches capsule sealed artifactHash)",
+    "node -e stableHash(packet minus delegation) => 1dbaf2590d53f90712e2bd1fbb16fc8122537e7bc6fddccac134cfdda9bcbc47 (matches capsule packetHash); stableHash(capsule) => d77229716cdc72eb01daa2dbde0e72034477fa192fb7904e94aa07b6c7365d15 (matches dispatch capsuleHash)",
+    "WebSearch x3 read-only spot-checks 2026-07-09: LJS 3801 1st Ave SE closure June 2014, Chicago Grill 824 6th St SW returning brand + platform IDs, Two Bros 600 17th St NE open + hours",
+    "Get-FileHash -Algorithm SHA256 research-sufficiency-review-notes.md => 280f8380fd7b888eae5f8b5c42cb97d1e859d4ffd48fb69132a85af04554ef69"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1-research-sufficiency-review-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\phase-1-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\state.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\delegation.mjs"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\research-sufficiency-review-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1-research-sufficiency-review-report.json"
+  ],
+  "assumptions": [
+    "Packet and capsule hashes are canonical stableHash values (compact JSON.stringify + newline, delegation key excluded) per delegation.mjs packetHash()/stableHash(); raw file-bytes sha256 of phase-1.json differs by design because the orchestrator appends the delegation block after sealing.",
+    "The artifact hash is a raw file-bytes sha256; verified match before review."
+  ],
+  "blockers": [],
+  "verification": [
+    "Sealed artifact hash verified byte-for-byte against capsule before review; artifact not edited.",
+    "Gate criteria all PASS: sources fresh (2026-07-09) and attributed; competitor picture coherent (Two Bros 600 17th St NE, returning Chicago Grill 824 6th St SW with Center Point Rd quarantined, Harold's 4330 16th Ave SW, LJS closure correctly dated June 2014, Sugapeach summer-2026 relocation window); claims traceable; evidenceGaps count = 13 as expected; all demand metrics Estimated/N-A, none fabricated; omit-never-fabricate honored with three inherited-error corrections.",
+    "Three independent read-only WebSearch spot-checks (2026-07-09) reproduced the artifact's claims down to platform IDs and dates: LJS June 2014 closure (Gazette 8-store wave), Chicago Grill legacy Grubhub 1213083 / Tripadvisor d19864041 / Facebook 100039310943929 with no Center Point Rd location, Two Bros open at 600 17th St NE with matching hours and the @Tic Toc inspection record.",
+    "Three non-blocking advisories recorded in notes (A1 Taco Depot II occupies former LJS site; A2 Chicago Grill midnight-hours ambiguity; A3 do not upgrade the Estimated Yelp list-position claim).",
+    "Notes file hashed after final write; nothing touched after hashing."
+  ]
+}

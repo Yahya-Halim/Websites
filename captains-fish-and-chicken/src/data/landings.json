@@ -1,0 +1,731 @@
+[
+  {
+    "slug": "fried-catfish-cedar-rapids",
+    "kind": "intent",
+    "title": "Fried Catfish in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Fresh-to-order fried catfish in Cedar Rapids, made when you order",
+    "body": "Craving fried catfish in Cedar Rapids? Captains Fish and Chicken fries catfish fresh to order at 1616 1st Ave NE, so every fillet, steak, and basket of nuggets comes out hot, crisp, and never sitting under a heat lamp. Choose from delicate catfish fillet, meaty catfish steak, or bite-sized catfish nuggets, then round it out with classic sides. We are a takeout and delivery kitchen, which means you can call ahead for pickup or order in for the couch. Owner Ray Aqel opened Captains in 2024 with one simple idea: fish, chicken, and seafood should be made fresh to order, not batched hours before. Whether it is a Friday fish fry, a family dinner, or a quick lunch, our catfish is battered and dropped after you order. Call (319) 221-1040 to place a pickup order or to confirm current hours, or get it delivered through DoorDash, Uber Eats, or Grubhub. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Catfish, three ways",
+        "text": "Order catfish the way you like it. Our seafood menu features flaky catfish fillet, a heartier catfish steak, and shareable catfish nuggets, all breaded and fried fresh to order. Pair any of them with sides and a drink for a complete meal. Because nothing is pre-fried and held, your catfish arrives crisp on the outside and tender inside."
+      },
+      {
+        "heading": "Pickup or delivery in Cedar Rapids",
+        "text": "Getting your catfish is easy. Call (319) 221-1040 to arrange takeout pickup at 1616 1st Ave NE, or order delivery through DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours before you head over. We serve Cedar Rapids and nearby neighborhoods with takeout, delivery, and catering only."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you fry catfish fresh to order?",
+        "answer": "Yes. Every catfish fillet, steak, and order of nuggets is breaded and fried fresh to order, so it comes out hot and crisp rather than sitting under a heat lamp."
+      },
+      {
+        "question": "How do I order fried catfish for pickup?",
+        "answer": "Call (319) 221-1040 to place a takeout order for pickup at 1616 1st Ave NE, Cedar Rapids. Please call to confirm current hours."
+      },
+      {
+        "question": "Can I get catfish delivered in Cedar Rapids?",
+        "answer": "Yes. You can order delivery through DoorDash, Uber Eats, or Grubhub, in addition to calling ahead for pickup."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/seafood/",
+        "anchor": "See our full catfish and seafood menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/occasions/friday-fish-fry/",
+        "anchor": "Plan a Friday fish fry",
+        "context": "related"
+      },
+      {
+        "slug": "/how-to-order/",
+        "anchor": "How to order for pickup or delivery",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Fried Catfish Cedar Rapids | Fresh to Order | Captains",
+      "description": "Fresh-to-order fried catfish in Cedar Rapids at Captains Fish and Chicken. Fillet, steak, and nuggets. Call (319) 221-1040 for pickup or get delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/fried-catfish-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "fried-chicken-and-wings-cedar-rapids",
+    "kind": "intent",
+    "title": "Fried Chicken and Wings in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Fresh-to-order fried chicken and wings in Cedar Rapids",
+    "body": "Looking for fried chicken and wings in Cedar Rapids? Captains Fish and Chicken fries every piece fresh to order at 1616 1st Ave NE. From crispy whole wings and saucy party wings to boneless chicken bites, chicken tenders, and classic leg-and-thigh combos, our chicken is battered and dropped after you place your order, never pre-cooked and held. Owner Ray Aqel opened Captains in 2024 to serve fish, chicken, and seafood made fresh to order, and the fryer stays busy from lunch through dinner. Grab a wing meal for game day, feed the whole crew with a family combo, or keep it simple with tenders and a side. We are a takeout, delivery, and catering kitchen, so you can call ahead for pickup or order in. Call (319) 221-1040 to place a pickup order or to confirm current hours, or order delivery through DoorDash, Uber Eats, or Grubhub. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Wings and chicken, fried fresh",
+        "text": "Our menu covers every craving: whole wings in meal sizes from 4-piece to 10-piece, party wings by the box, boneless chicken bites, hand-battered chicken tenders, and leg-and-thigh pieces. Everything is fried fresh to order for maximum crunch. Add sides, a drink, or a kids meal to complete your order."
+      },
+      {
+        "heading": "Order for pickup, delivery, or the party",
+        "text": "Call (319) 221-1040 to arrange takeout pickup at 1616 1st Ave NE in Cedar Rapids, or order delivery through DoorDash, Uber Eats, or Grubhub. Feeding a crowd? Ask about party pans for catering. Please call to confirm current hours before ordering."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is the chicken fried fresh to order?",
+        "answer": "Yes. Our wings, tenders, boneless bites, and leg-and-thigh pieces are all breaded and fried fresh to order rather than pre-cooked and held."
+      },
+      {
+        "question": "What wing sizes do you offer?",
+        "answer": "We offer whole wings in meal sizes from a 4-piece up to a 10-piece, plus party wings by the box for sharing. See the menu for full details."
+      },
+      {
+        "question": "How do I order chicken and wings?",
+        "answer": "Call (319) 221-1040 for pickup at 1616 1st Ave NE, Cedar Rapids, or order delivery via DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/whole-wings/",
+        "anchor": "Browse whole wings meals",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/party-wings/",
+        "anchor": "Order party wings by the box",
+        "context": "inline"
+      },
+      {
+        "slug": "/occasions/game-day-wings/",
+        "anchor": "Wings for game day",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Fried Chicken & Wings Cedar Rapids | Captains Fish and Chicken",
+      "description": "Fresh-to-order fried chicken and wings in Cedar Rapids. Whole wings, party wings, tenders, and bites. Call (319) 221-1040 for pickup or get delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/fried-chicken-and-wings-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "seafood-takeout-cedar-rapids",
+    "kind": "intent",
+    "title": "Seafood Takeout in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Fresh-to-order seafood takeout and delivery in Cedar Rapids",
+    "body": "Want seafood takeout in Cedar Rapids? Captains Fish and Chicken fries fresh seafood to order at 1616 1st Ave NE, ready for pickup or delivery. Our seafood menu spans catfish fillet, perch, tilapia, cod, red snapper, catfish steak and nuggets, crab cakes, and jumbo shrimp. Everything is battered and dropped after you order, so your seafood is hot and crisp when you pick it up or when it lands at your door. Owner Ray Aqel opened Captains in 2024 with a fresh-to-order kitchen serving fish, chicken, and seafood. Whether you are planning a seafood feast, a Friday fish fry, or a quick weeknight dinner, we make it easy to take it home. We are a takeout, delivery, and catering kitchen only. Call (319) 221-1040 to place a pickup order or to confirm current hours, or order delivery through DoorDash, Uber Eats, or Grubhub. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "A full seafood lineup",
+        "text": "Choose from catfish fillet, perch, tilapia, cod, and red snapper, plus catfish steak, catfish nuggets, crab cakes, and jumbo shrimp. Order a shrimp basket for one or build a spread for the table. Add sides and drinks to complete your seafood takeout order. Everything is fried fresh to order."
+      },
+      {
+        "heading": "Takeout and delivery made simple",
+        "text": "Call (319) 221-1040 to place a takeout order for pickup at 1616 1st Ave NE, Cedar Rapids, or order delivery through DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours. For larger gatherings, ask about party pans for catering."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What seafood can I order for takeout?",
+        "answer": "Our seafood menu includes catfish fillet, perch, tilapia, cod, red snapper, catfish steak, catfish nuggets, crab cakes, and jumbo shrimp, all fried fresh to order."
+      },
+      {
+        "question": "Do you deliver seafood in Cedar Rapids?",
+        "answer": "Yes. You can order delivery through DoorDash, Uber Eats, or Grubhub, or call (319) 221-1040 for pickup."
+      },
+      {
+        "question": "Where do I pick up my seafood order?",
+        "answer": "Pickup is at 1616 1st Ave NE, Cedar Rapids, IA 52402. Please call (319) 221-1040 to confirm current hours before you arrive."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/seafood/",
+        "anchor": "Explore the full seafood menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/occasions/seafood-feast/",
+        "anchor": "Plan a seafood feast",
+        "context": "related"
+      },
+      {
+        "slug": "/menu/shrimp/",
+        "anchor": "Add jumbo shrimp",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Seafood Takeout Cedar Rapids | Captains Fish and Chicken",
+      "description": "Fresh-to-order seafood takeout in Cedar Rapids. Catfish, cod, snapper, shrimp, crab cakes. Call (319) 221-1040 for pickup or order delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/seafood-takeout-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "soul-food-cedar-rapids",
+    "kind": "intent",
+    "title": "Soul Food Favorites in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Fried fish, chicken, wings, and soul-food sides in Cedar Rapids",
+    "body": "Searching for soul-food favorites in Cedar Rapids? Captains Fish and Chicken brings the comfort classics: crispy fried fish, golden fried chicken, saucy wings, gizzards and livers, and a lineup of down-home sides, all made fresh to order at 1616 1st Ave NE. Owner Ray Aqel opened Captains in 2024 to serve fish, chicken, and seafood made fresh to order, and the menu reads like a plate of comfort food done right. Pair fried catfish or wings with classic sides, add a dessert, and you have a satisfying meal for one or the whole family. We are a takeout, delivery, and catering kitchen, so you can call ahead for pickup or order in for the couch. Bring everyone together with a family fish deal or a party pan for catering. Call (319) 221-1040 to place a pickup order or to confirm current hours, or order delivery through DoorDash, Uber Eats, or Grubhub. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Comfort classics, fried fresh",
+        "text": "Load up on fried catfish and other fish, fried chicken, whole and party wings, chicken tenders, and gizzards and livers, all fried fresh to order. Round out the plate with classic sides and finish with a dessert. It is comfort food made the way it should be, hot and to order."
+      },
+      {
+        "heading": "Feed the whole family",
+        "text": "Bring everyone to the table with a family fish deal or a mix of chicken and fish. For gatherings, ask about party pans for catering. Call (319) 221-1040 for pickup at 1616 1st Ave NE, Cedar Rapids, or order delivery via DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What soul-food style dishes do you serve?",
+        "answer": "We serve fried fish, fried chicken, wings, chicken tenders, gizzards and livers, and classic sides, all fried fresh to order, plus desserts to finish."
+      },
+      {
+        "question": "Can I order a family-size meal?",
+        "answer": "Yes. We offer family fish deals and family meals and combos, plus party pans for catering larger gatherings."
+      },
+      {
+        "question": "How do I place an order?",
+        "answer": "Call (319) 221-1040 for pickup at 1616 1st Ave NE, Cedar Rapids, or order delivery through DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/",
+        "anchor": "See the full menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/gizzards-and-livers/",
+        "anchor": "Order gizzards and livers",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/family-dinner/",
+        "anchor": "Plan a family dinner",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Soul Food Cedar Rapids | Fried Fish & Chicken | Captains",
+      "description": "Soul-food favorites in Cedar Rapids: fried fish, chicken, wings, gizzards, and classic sides, made fresh to order. Call (319) 221-1040 or get delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/soul-food-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "fish-and-chicken-near-me",
+    "kind": "intent",
+    "title": "Fish and Chicken Near Me in Cedar Rapids | Captains",
+    "headline": "Fish and chicken near you in Cedar Rapids, made fresh to order",
+    "body": "Searching for fish and chicken near me in Cedar Rapids? Captains Fish and Chicken is at 1616 1st Ave NE, frying fresh fish, chicken, wings, and seafood to order. If you are nearby in northeast Cedar Rapids or coming from Marion, we make it easy to grab a hot, crispy meal for pickup or delivery. Choose fried catfish, cod, snapper, or shrimp from the seafood side, or go for whole wings, party wings, tenders, and boneless bites on the chicken side. Everything is battered and dropped after you order. Owner Ray Aqel opened Captains in 2024 with one focus: fish, chicken, and seafood made fresh to order. We are a takeout, delivery, and catering kitchen, so call ahead for pickup or order in from the couch. Call (319) 221-1040 to place a pickup order or to confirm current hours, or order delivery through DoorDash, Uber Eats, or Grubhub. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Fish and chicken under one roof",
+        "text": "Can't decide between fish and chicken? Get both. Our menu pairs fried catfish, cod, snapper, and shrimp with wings, tenders, and boneless bites, all fried fresh to order. Mix and match with a family combo, add sides and a drink, and feed everyone in one order."
+      },
+      {
+        "heading": "Serving Cedar Rapids and nearby",
+        "text": "Find us at 1616 1st Ave NE, Cedar Rapids, IA 52402, convenient to northeast Cedar Rapids and Marion. Call (319) 221-1040 for pickup, or order delivery through DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours before you head over."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where are you located?",
+        "answer": "We are at 1616 1st Ave NE, Cedar Rapids, IA 52402, convenient to northeast Cedar Rapids and nearby Marion. Call (319) 221-1040 to confirm current hours."
+      },
+      {
+        "question": "Can I get both fish and chicken in one order?",
+        "answer": "Yes. You can mix fish, chicken, wings, and seafood in a single order, including family meals and combos that pair multiple items."
+      },
+      {
+        "question": "How do I order for pickup or delivery?",
+        "answer": "Call (319) 221-1040 for pickup, or order delivery through DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/",
+        "anchor": "Browse the full menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/family-meals-and-combos/",
+        "anchor": "See family meals and combos",
+        "context": "related"
+      },
+      {
+        "slug": "/neighborhoods/northeast-cedar-rapids/",
+        "anchor": "Serving northeast Cedar Rapids",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Fish and Chicken Near Me | Cedar Rapids | Captains",
+      "description": "Fish and chicken near you in Cedar Rapids at Captains Fish and Chicken, 1616 1st Ave NE. Fresh to order. Call (319) 221-1040 or get delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/fish-and-chicken-near-me/"
+    }
+  },
+  {
+    "slug": "party-wings-cedar-rapids",
+    "kind": "intent",
+    "title": "Party Wings in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Fresh-to-order party wings in Cedar Rapids for game day and gatherings",
+    "body": "Need party wings in Cedar Rapids? Captains Fish and Chicken fries party wings fresh to order at 1616 1st Ave NE, perfect for game day, office spreads, and get-togethers. Order party wings by the box or scale up with party pans for catering when you are feeding a crowd. Prefer whole wings? We have those too, in meal sizes from a 4-piece up to a 10-piece. Every wing is battered and dropped after you order, so they arrive crisp and hot, not soggy from sitting. Owner Ray Aqel opened Captains in 2024 to serve fish, chicken, and seafood made fresh to order, and wings are a house specialty. We are a takeout, delivery, and catering kitchen. Call (319) 221-1040 to place a pickup order, arrange catering, or confirm current hours, or order delivery through DoorDash, Uber Eats, or Grubhub. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Wings for the whole crew",
+        "text": "Grab party wings by the box for sharing, or stack up party pans for catering when you are hosting. Round out the spread with sides, kids meals, and drinks. Everything is fried fresh to order, so your wings show up crisp and hot for the whole table."
+      },
+      {
+        "heading": "Order ahead for game day",
+        "text": "Planning around kickoff? Call (319) 221-1040 to place your party wings order for pickup at 1616 1st Ave NE, Cedar Rapids, or order delivery through DoorDash, Uber Eats, or Grubhub. For big gatherings, ask about catering party pans. Please call to confirm current hours."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Do you offer party wings for large groups?",
+        "answer": "Yes. Order party wings by the box, and for larger gatherings ask about party pans for catering. Call (319) 221-1040 to arrange your order."
+      },
+      {
+        "question": "Are the wings fried fresh?",
+        "answer": "Yes. Every wing is breaded and fried fresh to order, so they arrive crisp and hot rather than sitting and turning soggy."
+      },
+      {
+        "question": "How far ahead should I order for game day?",
+        "answer": "Call (319) 221-1040 ahead of kickoff to place your order for pickup, or order delivery via DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/party-wings/",
+        "anchor": "Order party wings",
+        "context": "inline"
+      },
+      {
+        "slug": "/occasions/game-day-wings/",
+        "anchor": "Game-day wings",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/office-and-party-catering/",
+        "anchor": "Party pans for catering",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Party Wings Cedar Rapids | Game Day & Catering | Captains",
+      "description": "Fresh-to-order party wings in Cedar Rapids for game day and catering. Order by the box or in party pans. Call (319) 221-1040 or get delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/party-wings-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "how-to-order",
+    "kind": "info",
+    "title": "How to Order | Captains Fish and Chicken, Cedar Rapids",
+    "headline": "How to order pickup or delivery from Captains Fish and Chicken",
+    "body": "Ordering from Captains Fish and Chicken is simple, and everything is made fresh to order at 1616 1st Ave NE, Cedar Rapids. For pickup, call us directly at (319) 221-1040, tell us what you would like from the menu, and we will let you know when it will be ready. Because we fry fresh to order, a little lead time means your fish, chicken, wings, and seafood come out hot and crisp. For delivery, order through DoorDash, Uber Eats, or Grubhub and have your meal brought right to your door. We are a takeout, delivery, and catering kitchen, so whether you are grabbing a quick lunch, feeding the family, or catering a party with party pans, we have you covered. Hours are best confirmed by phone, so please call (319) 221-1040 to confirm current hours before you place a pickup order or head over. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Pickup by phone",
+        "text": "Call (319) 221-1040 to place a takeout order for pickup at 1616 1st Ave NE, Cedar Rapids, IA 52402. Let us know your items and we will give you a ready time. Since we fry fresh to order, calling ahead keeps your wait short and your food hot. Please call to confirm current hours."
+      },
+      {
+        "heading": "Delivery apps",
+        "text": "Prefer delivery? Order Captains Fish and Chicken through DoorDash, Uber Eats, or Grubhub and get fish, chicken, wings, and seafood delivered to your door. Availability and delivery times may vary by app and area."
+      },
+      {
+        "heading": "Catering and large orders",
+        "text": "Feeding a crowd? Ask about family fish deals up to 50 pieces and party pans for catering. Call (319) 221-1040 to plan a larger order and to confirm timing and current hours."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do I place a pickup order?",
+        "answer": "Call (319) 221-1040 and place your order for pickup at 1616 1st Ave NE, Cedar Rapids. We will give you a ready time. Please call to confirm current hours."
+      },
+      {
+        "question": "Which delivery apps do you use?",
+        "answer": "You can order delivery through DoorDash, Uber Eats, or Grubhub. Availability may vary by app and area."
+      },
+      {
+        "question": "Can you handle catering orders?",
+        "answer": "Yes. We offer family fish deals up to 50 pieces and party pans for catering. Call (319) 221-1040 to plan your order."
+      },
+      {
+        "question": "What are your hours?",
+        "answer": "Hours are best confirmed by phone. Please call (319) 221-1040 to confirm current hours before placing a pickup order."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/",
+        "anchor": "Browse the full menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/occasions/office-and-party-catering/",
+        "anchor": "Catering with party pans",
+        "context": "related"
+      },
+      {
+        "slug": "/contact/",
+        "anchor": "Contact and location details",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "How to Order | Pickup & Delivery | Captains Fish and Chicken",
+      "description": "How to order from Captains Fish and Chicken in Cedar Rapids: call (319) 221-1040 for pickup or order delivery via DoorDash, Uber Eats, or Grubhub.",
+      "canonical": "https://captains-fish-chicken.netlify.app/how-to-order/"
+    }
+  },
+  {
+    "slug": "about",
+    "kind": "info",
+    "title": "About Captains Fish and Chicken | Cedar Rapids",
+    "headline": "About Captains Fish and Chicken, made fresh to order in Cedar Rapids",
+    "body": "Captains Fish and Chicken opened in 2024 on 1st Avenue NE in Cedar Rapids, founded by owner Ray Aqel with one guiding idea: fish, chicken, and seafood should be made fresh to order. From the start, Ray built the kitchen around that promise. Nothing sits under a heat lamp waiting for a customer. When you order, we batter and drop it, so your catfish, cod, snapper, wings, tenders, and shrimp come out hot and crisp. You will find us at 1616 1st Ave NE, Cedar Rapids, IA 52402, serving the northeast side and neighboring Marion. We are a takeout, delivery, and catering kitchen, which keeps the focus on the food and on getting it to you fresh, whether you pick it up or have it delivered. Families come to us for fish deals up to 50 pieces and party pans for catering, and the everyday menu covers everything from a quick lunch to a full family dinner. Rated 4.4 on Google. Call (319) 221-1040 to place an order or to confirm current hours.",
+    "sections": [
+      {
+        "heading": "Our story",
+        "text": "Owner Ray Aqel opened Captains Fish and Chicken in 2024 on 1st Avenue NE in Cedar Rapids. The mission was simple and has not changed: serve fish, chicken, and seafood made fresh to order. That fresh-to-order approach is the reason every plate leaves the fryer hot and crisp rather than pre-cooked and held."
+      },
+      {
+        "heading": "What we serve",
+        "text": "Our menu spans fried fish and seafood, fried chicken and wings, tenders, boneless bites, gizzards and livers, a wide range of sides, kids meals, desserts, and drinks. For gatherings, we offer family fish deals up to 50 pieces and party pans for catering. We are a takeout, delivery, and catering kitchen serving Cedar Rapids."
+      },
+      {
+        "heading": "Where to find us",
+        "text": "Visit us for pickup at 1616 1st Ave NE, Cedar Rapids, IA 52402, or order delivery through DoorDash, Uber Eats, or Grubhub. We serve northeast Cedar Rapids and nearby Marion. Call (319) 221-1040 to confirm current hours."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who owns Captains Fish and Chicken?",
+        "answer": "Captains Fish and Chicken is owned by Ray Aqel, who opened the restaurant in 2024 on 1st Avenue NE in Cedar Rapids."
+      },
+      {
+        "question": "When did Captains open?",
+        "answer": "Captains Fish and Chicken opened in 2024 at 1616 1st Ave NE, Cedar Rapids, IA 52402."
+      },
+      {
+        "question": "Is there dine-in seating?",
+        "answer": "We are a takeout, delivery, and catering kitchen. You can call (319) 221-1040 for pickup or order delivery through DoorDash, Uber Eats, or Grubhub."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/made-fresh-to-order/",
+        "anchor": "What made fresh to order means",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/",
+        "anchor": "See the full menu",
+        "context": "related"
+      },
+      {
+        "slug": "/contact/",
+        "anchor": "Find our location and phone",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "About | Captains Fish and Chicken | Cedar Rapids",
+      "description": "Captains Fish and Chicken opened in 2024 on 1st Ave NE, Cedar Rapids, owner Ray Aqel. Fish, chicken, and seafood made fresh to order. Call (319) 221-1040.",
+      "canonical": "https://captains-fish-chicken.netlify.app/about/"
+    }
+  },
+  {
+    "slug": "faq",
+    "kind": "faq",
+    "title": "Frequently Asked Questions | Captains Fish and Chicken",
+    "headline": "Frequently asked questions about Captains Fish and Chicken",
+    "body": "Have a question about Captains Fish and Chicken in Cedar Rapids? Below are answers to the questions we hear most, covering our menu, how to order, delivery, catering, hours, location, and payment. We are a takeout, delivery, and catering kitchen at 1616 1st Ave NE, Cedar Rapids, IA 52402, frying fish, chicken, wings, and seafood fresh to order. For anything not covered here, or to confirm current hours, the fastest answer is a quick phone call to (319) 221-1040. Whether you are planning a quick lunch, a family dinner, or catering for a party, we are happy to help you put together the right order. Rated 4.4 on Google.",
+    "sections": [
+      {
+        "heading": "Menu and ordering",
+        "text": "Our menu includes fried fish and seafood, fried chicken, whole and party wings, tenders, boneless bites, gizzards and livers, sides, kids meals, desserts, and drinks. Everything is made fresh to order. Call (319) 221-1040 to place a pickup order, or order delivery through DoorDash, Uber Eats, or Grubhub."
+      },
+      {
+        "heading": "Hours, location, and payment",
+        "text": "Find us at 1616 1st Ave NE, Cedar Rapids, IA 52402. Hours are best confirmed by phone, so please call (319) 221-1040 to confirm current hours. For payment questions, please call ahead so we can confirm what we accept before you order."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is on the menu?",
+        "answer": "Our menu features fried fish and seafood such as catfish, cod, snapper, and shrimp, plus fried chicken, whole wings, party wings, tenders, boneless bites, gizzards and livers, a wide range of sides, kids meals, desserts, and drinks. Everything is fried fresh to order."
+      },
+      {
+        "question": "How do I place an order?",
+        "answer": "Call (319) 221-1040 to place a takeout order for pickup at 1616 1st Ave NE, Cedar Rapids. Let us know your items and we will give you a ready time. Please call to confirm current hours."
+      },
+      {
+        "question": "Do you deliver?",
+        "answer": "Yes. You can order delivery through DoorDash, Uber Eats, or Grubhub. Availability and delivery times may vary by app and area."
+      },
+      {
+        "question": "Do you offer catering?",
+        "answer": "Yes. We offer family fish deals up to 50 pieces and party pans for catering. Call (319) 221-1040 to plan a larger order or event."
+      },
+      {
+        "question": "What are your hours?",
+        "answer": "Hours are best confirmed by phone. Please call (319) 221-1040 to confirm current hours before placing a pickup order or heading over."
+      },
+      {
+        "question": "Where are you located?",
+        "answer": "We are located at 1616 1st Ave NE, Cedar Rapids, IA 52402, serving northeast Cedar Rapids and nearby Marion."
+      },
+      {
+        "question": "What forms of payment do you accept?",
+        "answer": "Please call (319) 221-1040 before ordering so we can confirm the payment methods we accept."
+      },
+      {
+        "question": "Do you have dine-in seating?",
+        "answer": "We are a takeout, delivery, and catering kitchen. You can call (319) 221-1040 for pickup or order delivery through DoorDash, Uber Eats, or Grubhub."
+      },
+      {
+        "question": "Do you have kids meals?",
+        "answer": "Yes. We offer kids meals, so you can order for the whole family in one go. See the menu for details."
+      },
+      {
+        "question": "Is the Captains Fish and Chicken on 6th St SW in Cedar Rapids still open?",
+        "answer": "No — that location closed as a Captains and now operates as Pita Kabab, a Mediterranean restaurant from the same owner. The one and only Captains is at 1616 1st Ave NE, (319) 221-1040."
+      },
+      {
+        "question": "Is Captains Fish and Chicken the same as Pita Kabab?",
+        "answer": "They share an owner (Ray Aqel) but are different restaurants: Captains serves fried fish, chicken, and seafood at 1616 1st Ave NE; Pita Kabab serves Mediterranean food at 3100 6th St SW."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/how-to-order/",
+        "anchor": "How to order pickup or delivery",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/",
+        "anchor": "See the full menu",
+        "context": "related"
+      },
+      {
+        "slug": "/contact/",
+        "anchor": "Contact and location",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "FAQ | Captains Fish and Chicken | Cedar Rapids",
+      "description": "Answers about Captains Fish and Chicken in Cedar Rapids: menu, ordering, delivery, catering, hours, location, and payment. Call (319) 221-1040 to confirm.",
+      "canonical": "https://captains-fish-chicken.netlify.app/faq/"
+    }
+  },
+  {
+    "slug": "made-fresh-to-order",
+    "kind": "story",
+    "title": "Made Fresh to Order | Captains Fish and Chicken",
+    "headline": "Why everything at Captains is made fresh to order",
+    "body": "At Captains Fish and Chicken, made fresh to order is not a slogan, it is how the kitchen runs. When owner Ray Aqel opened Captains in 2024 on 1st Avenue NE in Cedar Rapids, he built the whole operation around one promise: your fish, chicken, and seafood should be battered and dropped after you order, never pre-cooked and left sitting under a heat lamp. That choice changes everything you taste. A catfish fillet comes out flaky with a crisp, hot crust. Wings arrive crackling rather than soggy. Shrimp stay tender and juicy. It takes a few extra minutes, and that trade is the point, because those minutes are the difference between food that was made for you and food that was made hours ago for someone else. From a quick lunch to a full family dinner or a party pan for catering, everything we serve gets the same fresh-to-order treatment at 1616 1st Ave NE. Rated 4.4 on Google. Call (319) 221-1040 to order or to confirm current hours.",
+    "sections": [
+      {
+        "heading": "The fresh-to-order difference",
+        "text": "Frying to order means your food is never batched in advance and held. Batter goes on and the fryer does its work only after you place your order. That is why our catfish, cod, snapper, wings, tenders, and shrimp come out hot and crisp. It is a small wait for a big difference in taste and texture."
+      },
+      {
+        "heading": "Built into the business from day one",
+        "text": "Owner Ray Aqel opened Captains in 2024 with fresh-to-order as the foundation, not an afterthought. Every part of the menu, from single baskets to family fish deals up to 50 pieces and party pans for catering, follows the same standard. Call (319) 221-1040 for pickup at 1616 1st Ave NE, Cedar Rapids, or order delivery through DoorDash, Uber Eats, or Grubhub. Please call to confirm current hours."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does made fresh to order mean here?",
+        "answer": "It means we batter and fry your food only after you place your order, rather than pre-cooking it and holding it under a heat lamp. Your meal comes out hot and crisp."
+      },
+      {
+        "question": "Does fresh to order take longer?",
+        "answer": "It takes a few extra minutes, which is why we suggest calling (319) 221-1040 ahead for pickup. Those minutes are what make the food hot and crisp."
+      },
+      {
+        "question": "Is catering also made fresh to order?",
+        "answer": "Yes. Family fish deals up to 50 pieces and party pans for catering are all made fresh to order. Call (319) 221-1040 to plan your order."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/about/",
+        "anchor": "Read our story",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/",
+        "anchor": "See what we make fresh",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/friday-fish-fry/",
+        "anchor": "Fresh fish for Friday",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Made Fresh to Order | Captains Fish and Chicken",
+      "description": "Everything at Captains Fish and Chicken is made fresh to order in Cedar Rapids, battered and fried after you order. Call (319) 221-1040 or get delivery.",
+      "canonical": "https://captains-fish-chicken.netlify.app/made-fresh-to-order/"
+    }
+  },
+  {
+    "slug": "open-late-cedar-rapids",
+    "kind": "intent",
+    "title": "Open Late in Cedar Rapids — Captains Fish and Chicken",
+    "headline": "Craving fried fish or wings later in the evening?",
+    "body": "Most Cedar Rapids kitchens wind down early — Captains keeps frying into the evening. Our posted hours run to 10pm on weeknights and 11pm on Friday and Saturday (please call (319) 221-1040 to confirm tonight's hours before heading over — hours can change). Everything is fried fresh to order, so a late dinner here is not a heat-lamp gamble: catfish, whole wings, tenders, and shrimp baskets come out of the fryer when you order them. Call ahead and your food is hot and bagged when you arrive at 1616 1st Ave NE, or order through DoorDash, Uber Eats, or Grubhub for evening delivery. For a quick late bite, the Shrimp Basket and the 4-piece Wings Meal are the fastest movers; for a hungrier crew, family fish deals run all evening.",
+    "sections": [
+      {
+        "heading": "Posted evening hours",
+        "text": "Mon–Thu to 10pm; Fri–Sat to 11pm; Sun to 8pm — always call (319) 221-1040 to confirm before a late run, as hours can change."
+      },
+      {
+        "heading": "Late-night favorites",
+        "text": "Wings meals, chicken tenders, shrimp baskets, and catfish dinners — every order fried fresh, even at closing time."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How late is Captains Fish and Chicken open in Cedar Rapids?",
+        "answer": "Posted hours run to 10pm Monday–Thursday, 11pm Friday–Saturday, and 8pm Sunday. Please call (319) 221-1040 to confirm tonight's hours before you head over."
+      },
+      {
+        "question": "Can I get delivery late in the evening?",
+        "answer": "Yes — Captains is on DoorDash, Uber Eats, and Grubhub. Each app shows live availability and its own delivery cutoff for the evening."
+      },
+      {
+        "question": "Should I call ahead for a late pickup?",
+        "answer": "Yes. Everything is fried to order, so calling (319) 221-1040 a few minutes ahead means your food is hot and ready when you arrive."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/",
+        "anchor": "See the full menu",
+        "context": "related"
+      },
+      {
+        "slug": "/fish-and-chicken-near-me/",
+        "anchor": "Fish & chicken near you",
+        "context": "related"
+      },
+      {
+        "slug": "/how-to-order/",
+        "anchor": "How to order",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Open Late — Fried Fish & Wings Evenings | Captains Cedar Rapids",
+      "description": "Fried fish, wings, and shrimp into the evening in Cedar Rapids — posted to 10pm weeknights, 11pm Fri–Sat. Call (319) 221-1040 to confirm tonight's hours.",
+      "canonical": "https://captains-fish-chicken.netlify.app/open-late-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "catering-cedar-rapids",
+    "kind": "intent",
+    "title": "Catering in Cedar Rapids — Party Pans & Family Fish Deals",
+    "headline": "Fried fish and chicken catering for offices, parties, and family gatherings",
+    "body": "Feeding a crowd in Cedar Rapids? Captains caters the easy way: big-batch fried fish and chicken, packed hot and ready to serve. Fish Only Family Deals scale from 10 pieces to a full 50-piece spread of catfish, perch, and tilapia; catfish nuggets come by the half pan ($49.99) or full pan ($89.99); party wings stack from 16 to 50 pieces; and full pans of fries round out the table. There is no order form and no middleman markup — call (319) 221-1040, tell us your headcount and pickup time, and the kitchen fries everything fresh for your window. Office lunches, birthdays, game days, church gatherings, graduation parties — if it needs to feed ten to fifty people, a couple of pans from Captains handles it.",
+    "sections": [
+      {
+        "heading": "What to order for a crowd",
+        "text": "10–15 people: a 20-piece fish family deal + a half pan of catfish nuggets + a full pan of fries. 20–30 people: the 30- or 40-piece fish deal + 30 party wings. 40+: the 50-piece fish deal + 50 party wings + two full pans of fries."
+      },
+      {
+        "heading": "How catering orders work",
+        "text": "Call (319) 221-1040 with your headcount and pickup time. Everything is fried fresh for your window — no steam trays sitting for hours. Pickup at 1616 1st Ave NE; delivery-app orders work for smaller gatherings."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How much notice does a catering order need in Cedar Rapids?",
+        "answer": "Call (319) 221-1040 with your headcount and pickup window. Larger pans and 50-piece deals benefit from a few hours' notice so everything comes out of the fryer together."
+      },
+      {
+        "question": "How many people does a 50-piece fish family deal feed?",
+        "answer": "Plan roughly 2–3 pieces per adult: a 50-piece catfish, perch and tilapia deal comfortably anchors a spread for 20–25 people; add party wings and pan fries for larger groups."
+      },
+      {
+        "question": "Do you have party pans of sides?",
+        "answer": "Yes — fries come by the half pan ($16.99) and full pan ($27.99), and catfish nuggets by the half ($49.99) or full pan ($89.99)."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/occasions/office-and-party-catering/",
+        "anchor": "Catering & party pans occasion guide",
+        "context": "related"
+      },
+      {
+        "slug": "/menu/fish-family-deals/",
+        "anchor": "Fish family deals menu",
+        "context": "related"
+      },
+      {
+        "slug": "/menu/party-wings/",
+        "anchor": "Party wings menu",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Catering — Party Pans & 50-pc Fish Deals | Captains Cedar Rapids",
+      "description": "Fried fish and chicken catering in Cedar Rapids: family fish deals to 50 pieces, catfish nugget pans, party wings. Call (319) 221-1040 with your headcount.",
+      "canonical": "https://captains-fish-chicken.netlify.app/catering-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "location",
+    "kind": "info",
+    "title": "Our Location — Captains Fish and Chicken, Cedar Rapids",
+    "headline": "One location: 1616 1st Ave NE, Cedar Rapids",
+    "body": "Captains Fish and Chicken operates ONE location: 1616 1st Ave NE, Cedar Rapids, IA 52402, on the 1st Avenue NE corridor near the Mound View and Wellington Heights neighborhoods, minutes from downtown Cedar Rapids and Coe College with quick access from I-380. Call (319) 221-1040. For clarity, because older listings still circulate: our former second location at 3100 6th St SW closed as a Captains and now operates as Pita Kabab, a Mediterranean restaurant from the same owner, Ray Aqel. Any listing showing a Captains Fish and Chicken at 3100 6th St SW is out of date — all Captains orders, pickup, and catering run through the 1st Ave NE kitchen. We serve the whole metro through DoorDash, Uber Eats, and Grubhub delivery.",
+    "sections": [
+      {
+        "heading": "Getting here",
+        "text": "1616 1st Ave NE sits on the main 1st Avenue corridor — from I-380 take the downtown exits toward 1st Avenue and head northeast; the restaurant is a few minutes from downtown and Coe College."
+      },
+      {
+        "heading": "About the former 6th St SW location",
+        "text": "The 3100 6th St SW spot operated as a second Captains during 2025 and is now Pita Kabab (same owner, different menu). If an app or directory still lists a Captains there, the listing is stale — this page is the current, authoritative record: one Captains, at 1616 1st Ave NE."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many locations does Captains Fish and Chicken have?",
+        "answer": "One: 1616 1st Ave NE, Cedar Rapids, IA 52402, phone (319) 221-1040. The former 3100 6th St SW location is now Pita Kabab, a different restaurant from the same owner."
+      },
+      {
+        "question": "Is the Captains Fish and Chicken on 6th St SW still open?",
+        "answer": "No. That address closed as a Captains and now operates as Pita Kabab (Mediterranean, same owner). All Captains orders go through 1616 1st Ave NE — (319) 221-1040."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/contact/",
+        "anchor": "Contact & directions",
+        "context": "related"
+      },
+      {
+        "slug": "/about/",
+        "anchor": "About Captains",
+        "context": "related"
+      },
+      {
+        "slug": "/faq/",
+        "anchor": "Frequently asked questions",
+        "context": "related"
+      }
+    ],
+    "seo": {
+      "title": "Location — One Kitchen at 1616 1st Ave NE | Captains Cedar Rapids",
+      "description": "Captains Fish and Chicken has one location: 1616 1st Ave NE, Cedar Rapids. The former 6th St SW spot is now Pita Kabab. Call (319) 221-1040.",
+      "canonical": "https://captains-fish-chicken.netlify.app/location/"
+    }
+  }
+]

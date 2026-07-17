@@ -1,0 +1,53 @@
+{
+  "kind": "menu",
+  "slug": "chicken-tenders",
+  "name": "Chicken Tenders",
+  "order": 6,
+  "description": "Hand-breaded chicken tenders fried to order. Meals include fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Tenders Meal (3 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 12.99
+        }
+      ]
+    },
+    {
+      "name": "Tenders Meal (6 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 21.99
+        }
+      ]
+    },
+    {
+      "name": "Tenders Meal (10 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 34.99
+        }
+      ]
+    },
+    {
+      "name": "Tenders Only (20 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 59.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Chicken Tenders — Cedar Rapids | Captains Fish and Chicken",
+    "description": "Fresh fried chicken tenders by the 3, 6, 10, and 20 piece in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/chicken-tenders/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

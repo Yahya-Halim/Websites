@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-seafood-feast-4",
+  "question": "Should I call ahead for a large seafood order?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

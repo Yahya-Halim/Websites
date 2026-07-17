@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 4,
+  "specialist": "seo-content-writer",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-4.json",
+  "packetHash": "556a3e07caa3e963ac5dc0ff9e3d7b3d45e2af67245e914975397bd27399041a",
+  "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-4-builder-capsule.json",
+  "capsuleHash": "4f4e024ee5a6268d1836303225277e60066ae127e83b7307cfeb6e5c6704a14a",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-4\\phase-4-artifact.json",
+  "artifactHash": "",
+  "workerId": "",
+  "status": "blocked",
+  "commandsRun": [],
+  "filesRead": [],
+  "filesChanged": [],
+  "assumptions": [],
+  "blockers": [
+    "Replace this scaffold from the fresh sub-agent before sealing workflow state."
+  ],
+  "verification": []
+}

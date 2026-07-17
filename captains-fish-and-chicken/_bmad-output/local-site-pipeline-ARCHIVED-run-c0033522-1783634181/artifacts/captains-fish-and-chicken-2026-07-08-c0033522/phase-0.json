@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 0,
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-0/phase-0-artifact.json",
+  "artifactHash": "2a9d222f14d080b10e5f3f5ab32da71748224f0da9789d1ccac9d7ca08893122",
+  "specialist": "local-business-discovery",
+  "completedAt": "2026-07-08T17:48:37.019Z",
+  "contract": "interview transcript summary, web footprint findings, business identity, confirmed facts, unverified claims, missing answers, no build output",
+  "artifact": {
+    "phase": 0,
+    "summary": "Phase 0 DISCOVER (run v2, from-scratch under plugin 92aeaae). Fresh 5-agent web re-sweep on 2026-07-08 with change detection against the archived run. NAP/hours/rating stable. TWO REAL CHANGES FOUND: (1) the second location (3100 6th St SW) is no longer Captains — converted to 'Pita Kabab' (same owner Ray Aqel); stale Captains listings for that address are now a citation-hygiene risk; (2) The Gazette (updated 2026-04) reports mashed potatoes + mac and cheese were ADDED as sides — not in the owner's 2026-07-07 menu paste; owner confirmation required before the menu ships in this run. No owned domain exists (definitive DNS check). Owner statements from the archived run carried as declared owner-provided inputs.",
+    "checklist": [
+      {
+        "id": "derive-probe-set",
+        "done": true
+      },
+      {
+        "id": "run-web-footprint-sweep",
+        "done": true
+      },
+      {
+        "id": "three-buckets",
+        "done": true
+      },
+      {
+        "id": "emit-owner-questionnaire",
+        "done": true
+      },
+      {
+        "id": "read-specialist-skill",
+        "done": true
+      },
+      {
+        "id": "inspect-before-complete",
+        "done": false
+      }
+    ],
+    "interviewSummary": "Owner statements carried forward as declared owner-provided inputs (recorded in the run brief; originally given 2026-07-07): full priced menu (direct paste — authoritative), call-only contact (no lead form, no SMS), Google 4.4/208 citable with attribution, real brand logo (shark-captain emblem, navy/gold palette drives design), identity (domain/email/GA4) deferred to launch (fixtures through build; Phase 5 preflight expected to fail on them until real values arrive), home page style must match interior pages, 3100 6th St SW excluded. NEW residue for the owner this run: confirm the Gazette-reported sides additions (mashed potatoes, mac and cheese) before the menu ships; confirm hours (Uber Eats surface disagrees); listing-cleanup decision for stale SW 'Captains' listings now pointing at Pita Kabab.",
+    "webFootprintFindings": {
+      "sweepDate": "2026-07-08",
+      "detailFile": "web-footprint-findings.json",
+      "sourcesChecked": [
+        {
+          "source": "Google knowledge panel (direct)",
+          "status": "not-searched"
+        },
+        {
+          "source": "Wanderlog (Google mirror)",
+          "status": "found"
+        },
+        {
+          "source": "Yelp",
+          "status": "found"
+        },
+        {
+          "source": "TripAdvisor",
+          "status": "found"
+        },
+        {
+          "source": "Restaurantji",
+          "status": "not-found"
+        },
+        {
+          "source": "res-discover.com",
+          "status": "found"
+        },
+        {
+          "source": "DoorDash",
+          "status": "found"
+        },
+        {
+          "source": "Uber Eats",
+          "status": "found"
+        },
+        {
+          "source": "Postmates",
+          "status": "found"
+        },
+        {
+          "source": "Grubhub / Seamless",
+          "status": "found"
+        },
+        {
+          "source": "Facebook (official)",
+          "status": "found"
+        },
+        {
+          "source": "Instagram / TikTok",
+          "status": "not-found"
+        },
+        {
+          "source": "KHAK + The Gazette (press)",
+          "status": "found"
+        },
+        {
+          "source": "Apple Maps",
+          "status": "found"
+        },
+        {
+          "source": "Owned domain (DNS definitive)",
+          "status": "not-found"
+        }
+      ],
+      "findings": [
+        "NAP high-confidence and stable: Captains Fish and Chicken, 1616 1st Ave NE, Cedar Rapids IA 52402 (ZIP+4 -5431), (319) 221-1040",
+        "Hours stable across 3 concordant surfaces (Sun 11-8, M-Th 11-10, F-Sa 11-11); still no official source; Uber Eats snippet conflicts",
+        "Google 4.4 (208) unchanged (mirror-attributed)",
+        "No owned domain — definitive (4 candidate domains unregistered, Apple Maps website falls back to Yelp)",
+        "CHANGED: 3100 6th St SW converted to Pita Kabab (same owner); Captains FB page announced it",
+        "CHANGED: Gazette (updated 2026-04) reports mashed potatoes + mac and cheese added as sides (owner confirmation pending)",
+        "Press: Gazette Dec 2024 catfish feature; cornmeal breading + lemon pepper; owner managed Chicago restaurants since 2006",
+        "Delivery listings all live for 1616 (DoorDash/UberEats/Postmates/Grubhub/Seamless); no closure signals",
+        "Delivery-pool rating 3.5/53 (Postmates/Uber pool) — materially lower than Google 4.4",
+        "Aggregator menus stale (still list calamari — not on owner menu)"
+      ],
+      "discrepancies": [
+        "Hours: 3 surfaces concordant vs Uber Eats '11:30-11 daily' — owner to confirm; structured hours stay conservative",
+        "Menu delta: Gazette-reported sides additions vs owner paste — owner residue question",
+        "SW location: now Pita Kabab; stale Captains listings (Grubhub 11805992, Yelp '-2', RestaurantJump inc-52404) are citation-hygiene risks — owner cleanup item, out of site scope",
+        "Apple Maps address error: 'First Ave SE' (wrong quadrant) — owner correction item",
+        "Captains FB page actively posts Pita Kabab content — brand-signal noise",
+        "res-discover/GBP mirror lists 'Dine-in' attribute vs owner takeout-only decision — no dine-in claims on site; GBP attribute review flagged"
+      ],
+      "ownerResidueQuestions": [
+        "Confirm sides: add mashed potatoes + mac and cheese (Gazette) or keep 2026-07-07 paste as-is?",
+        "Confirm weekly hours (Uber Eats disagrees)",
+        "Identity (domain/email/GA4) still deferred to launch — unchanged?",
+        "Stale SW 'Captains' listings cleanup checklist wanted at launch?",
+        "Apple Maps wrong-quadrant correction",
+        "Real photos + logo file drop still pending"
+      ]
+    },
+    "businessIdentity": {
+      "displayName": "Captains Fish and Chicken",
+      "legalName": "Captains Fish and Chicken, INC",
+      "positioning": "Fish, Chicken & Seafood — made fresh to order",
+      "categories": [
+        "Fish & Chicken restaurant",
+        "Seafood",
+        "Soul food",
+        "Fast food / takeout"
+      ],
+      "address": {
+        "streetAddress": "1616 1st Ave NE",
+        "city": "Cedar Rapids",
+        "state": "IA",
+        "postalCode": "52402"
+      },
+      "phone": "(319) 221-1040",
+      "owner": "Ray Aqel",
+      "opened": "2024-10",
+      "yearEstablished": 2024,
+      "singleLocationInScope": true,
+      "excludedLocations": [
+        {
+          "address": "3100 6th St SW, Cedar Rapids, IA 52404",
+          "status": "CONVERTED — now Pita Kabab (same owner, ph 319-440-3709); stale Captains listings there are an owner cleanup item",
+          "reason": "out of single-location scope"
+        }
+      ],
+      "ownedWebPresence": [
+        "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/"
+      ],
+      "orderingPlatforms": [
+        "https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802887/",
+        "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+        "https://www.grubhub.com/restaurant/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids/11640296"
+      ]
+    },
+    "userConfirmedFacts": {
+      "name": "Captains Fish and Chicken",
+      "address": "1616 1st Ave NE, Cedar Rapids, IA 52402 (owner authoritative)",
+      "phone": "(319) 221-1040",
+      "menu": "Owner-confirmed full priced menu (paste 2026-07-07; carried as declared owner input) — pending ONE owner answer on the Gazette-reported sides additions",
+      "contactModel": "Call-only; no lead form; no SMS",
+      "socialProof": "Cite Google 4.4/208 with attribution",
+      "brand": "Owner-supplied shark-captain logo; navy/gold palette; home style must match interior pages",
+      "identity": "Domain/email/GA4 deferred to launch (declared fixtures through build)",
+      "scope": "Single location 1616 1st Ave NE; SW address excluded (now Pita Kabab)"
+    },
+    "unverifiedClaims": [
+      {
+        "claim": "Hours Sun 11-8 / M-Th 11-10 / F-Sa 11-11",
+        "source": "res-discover + Apple Maps + Postmates (concordant), Uber Eats conflicting",
+        "status": "display with call-to-confirm caveat; structured hours conservative (Mon-Thu + Sun only)"
+      },
+      {
+        "claim": "Google 4.4 (208)",
+        "source": "Wanderlog 'From Google' mirror",
+        "status": "cite WITH attribution (owner approved)"
+      },
+      {
+        "claim": "Mashed potatoes + mac and cheese added as sides",
+        "source": "The Gazette (updated 2026-04)",
+        "status": "press-attributed; do NOT add to menu until owner confirms"
+      },
+      {
+        "claim": "'Fried catfish tastes like chicken' / cornmeal + lemon pepper",
+        "source": "Gazette Dec 2024 feature",
+        "status": "usable as attributed press quote, not house claim"
+      },
+      {
+        "claim": "Dine-in available",
+        "source": "res-discover GBP-attribute mirror",
+        "status": "contradicts owner decision — not used"
+      },
+      {
+        "claim": "Delivery-pool rating 3.5/53",
+        "source": "Postmates (fetched)",
+        "status": "not cited on site (Google 4.4 is the approved stat)"
+      }
+    ],
+    "missingAnswers": [
+      "Owner confirmation of sides additions (mashed potatoes, mac and cheese) — BLOCKS final menu data in Phase 4",
+      "Official weekly hours confirmation",
+      "Real domain / business email / GA4 (deferred to launch by owner decision)",
+      "Logo file drop at public/logo.png (owner has the asset)",
+      "Real food/storefront photography (representational imagery in use)",
+      "Payment policy (still unknown — omitted from JSON-LD)",
+      "SW stale-listing cleanup decision"
+    ],
+    "buildOutputCreated": false
+  },
+  "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-0.json"
+}

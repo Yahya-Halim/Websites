@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "hours",
+  "questionRef": "questions/hours",
+  "text": "Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm (please call to confirm)",
+  "cites": [
+    "facts/hours"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/facts/hours.json",
+  "lastVerified": "2026-07-07"
+}

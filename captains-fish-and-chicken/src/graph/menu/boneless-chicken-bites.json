@@ -1,0 +1,62 @@
+{
+  "kind": "menu",
+  "slug": "boneless-chicken-bites",
+  "name": "Boneless Chicken Bites",
+  "order": 4,
+  "description": "Crispy boneless wings and chicken bites. Meals include fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Boneless Wings Meal (8 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 12.99
+        }
+      ]
+    },
+    {
+      "name": "Boneless Wings Meal (12 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 18.99
+        }
+      ]
+    },
+    {
+      "name": "Boneless Wings Only (20 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 26.99
+        }
+      ]
+    },
+    {
+      "name": "Boneless Wings Only (30 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 49.99
+        }
+      ]
+    },
+    {
+      "name": "Boneless Wings Only (50 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 79.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Boneless Chicken Bites | Captains Cedar Rapids",
+    "description": "Crispy boneless wings and chicken bites by the 8 to 50 piece in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/boneless-chicken-bites/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

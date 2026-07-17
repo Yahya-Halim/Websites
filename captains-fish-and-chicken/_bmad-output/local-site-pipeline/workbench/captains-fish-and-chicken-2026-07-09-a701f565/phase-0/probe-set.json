@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 0,
+  "business": "Captains Fish and Chicken",
+  "probes": [
+    {
+      "id": "nap-hours",
+      "question": "Confirm NAP, hours, maps/directions, and source disagreements.",
+      "sources": [
+        "Google Business Profile",
+        "Yelp",
+        "existing website",
+        "social profiles"
+      ]
+    },
+    {
+      "id": "trust-facts",
+      "question": "Find genuine trust facts; omit trust grid below six facts.",
+      "sources": [
+        "GBP reviews",
+        "local press",
+        "health/permit sources",
+        "owner materials"
+      ]
+    },
+    {
+      "id": "lead-form-endpoint",
+      "question": "Determine whether an external static-form endpoint exists.",
+      "sources": [
+        "owner materials",
+        "existing website"
+      ]
+    },
+    {
+      "id": "call-text-capability",
+      "question": "Determine call number and text/SMS capability without inventing channels.",
+      "sources": [
+        "GBP",
+        "existing website",
+        "owner confirmation"
+      ]
+    },
+    {
+      "id": "identity-decision",
+      "question": "Determine domain, email, GA id, payment policy, or declared fixtures.",
+      "sources": [
+        "owner confirmation",
+        "registrar/hosting notes",
+        "analytics access notes"
+      ]
+    }
+  ]
+}

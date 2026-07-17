@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 4,
+  "amendment": 2,
+  "actor": "operator-geekeys343",
+  "reasonFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/amend-reason.md",
+  "reason": "# Phase 4 amendment 1 — hero webp fix after delta review\n\n**Date:** 2026-07-07  |  **Actor:** operator (geekeys343@gmail.com)\n\nThe independent rebrand delta review (read-only) found ONE regression: the 4 wired\nhero images shipped as .jpg, tripping do-not-ship-guards' hero modern-format rule\n(webp/avif) on /, /occasions/family-dinner/, /occasions/game-day-wings/,\n/occasions/office-and-party-catering/ — new failures beyond the intended identity\nfixtures. Fix applied pre-amendment: heroes converted to webp via sharp, page srcs\nrepointed, rebuilt. factory validate now fails ONLY on the declared identity\nfixtures again (ga-placeholder + reserved-example-tld). All other delta checks\npassed (35 routes, 0 slashless links, 0 broken assets, CRO markers intact,\ntruthfulness clean, brand tokens shipped).\n",
+  "previousArtifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/phase-4-artifact.json",
+  "previousArtifactHash": "22d2b70cd015f9da5ee05078f1b07f212b8c2e9539bd8cbe06d274fb33dbd34f",
+  "newArtifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/phase-4-artifact.json",
+  "newArtifactHash": "8d26924bd330116691bbc8e59b227b0fb0cb65ff282b2b463f796443bf691d87",
+  "specialist": "seo-content-writer",
+  "amendedAt": "2026-07-07T22:31:17.330Z"
+}

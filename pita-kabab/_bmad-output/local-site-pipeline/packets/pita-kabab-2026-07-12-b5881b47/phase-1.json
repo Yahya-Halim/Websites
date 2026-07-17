@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 1,
+  "phaseName": "RESEARCH",
+  "createdAt": "2026-07-12T22:55:21.358Z",
+  "specialist": "keyword-research",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\seo-geo\\research\\keyword-research\\SKILL.md",
+  "requiredArtifactFields": [
+    "researchSources",
+    "competitorNotes",
+    "keywordEntityFindings",
+    "sourceDates",
+    "evidenceGaps"
+  ],
+  "checklist": [
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    },
+    {
+      "id": "review-notes-file",
+      "label": "Require reviewer notes to travel by --notes-file."
+    }
+  ],
+  "outputPaths": {
+    "workbench": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1",
+    "phaseArtifact": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json"
+  },
+  "artifactEvidencePaths": {},
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": [
+      "research-sufficiency"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "delegation": {
+    "role": "builder",
+    "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+    "packetHash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9",
+    "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+    "capsuleHash": "02b8a27ccebb0d52a9c7ca65d6c12535b96a91fe702ecc10be7f9b52211fda55",
+    "dispatchPromptPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder.md",
+    "requiredReportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+  }
+}

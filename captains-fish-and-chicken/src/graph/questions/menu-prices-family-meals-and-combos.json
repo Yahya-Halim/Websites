@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-family-meals-and-combos",
+  "question": "How much do Family Meals & Combo Dinners cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/family-meals-and-combos.json",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 2,
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/phase-2-artifact.json",
+  "artifactHash": "e4753185d6ffb1b42282eebdde719bbfcc394eb62c5e556451d2d2aacb8fab89",
+  "specialist": "location-matrix-planner",
+  "completedAt": "2026-07-08T19:24:18.910Z",
+  "contract": "page matrix, folded pages, required CRO blocks, image-slot plan, minimum page-count rationale",
+  "artifact": {
+    "phase": 2,
+    "summary": "Phase 2 PLAN (run v2). Restaurant single-location depth model rebuilt from the fresh Phase 1 research: 38 internal routes (was 35) — the proven menu x occasion x intent families PLUS three research-driven additions: /open-late-cedar-rapids (Captains open to 10-11pm yet absent from every late-night roundup), /catering-cedar-rapids (catering SERP is an open gap — only Popeyes-via-ezCater ranks; complements the catering occasion page with search-intent framing), and /location (one-location truth-assertion page for GEO disambiguation — stale listings still tell AI engines Captains has two locations; this page states the SW address is now Pita Kabab). External ordering links remain CTAs, not pages. Call-only conversion unchanged (restaurant archetype not bound by the auto-dealer CRO gate). Menu ships with owner-confirmed prices; the Gazette-reported sides additions stay OUT until the owner confirms.",
+    "checklist": [
+      {
+        "id": "founder-scope-single-location",
+        "status": "done",
+        "note": "Single 1616 1st Ave NE; SW address (now Pita Kabab) excluded; /location page asserts the single-location truth"
+      },
+      {
+        "id": "founder-confirmed-data-only",
+        "status": "done",
+        "note": "Menu pages from owner-confirmed menu (sides delta held out pending owner answer); occasions/landings grounded in Phase 0/1 sealed facts"
+      },
+      {
+        "id": "founder-call-only-exception",
+        "status": "done",
+        "note": "No lead form, single call CTA, no SMS — documented exception, unchanged"
+      },
+      {
+        "id": "founder-fold-not-fabricate",
+        "status": "done",
+        "note": "SW neighborhood page REJECTED (doorway risk — no genuine service-area facts beyond app delivery); Hiawatha/Robins/late-night-occasion folds carried over; halal/vegetarian still unconfirmed"
+      },
+      {
+        "id": "founder-anti-doorway-neighborhoods",
+        "status": "done",
+        "note": "2 neighborhood pages only (NE Cedar Rapids, Marion) — genuine facts re-validated in Phase 1 (Mound View, Wellington Heights, Coe College, I-380, Hwy 100)"
+      }
+    ],
+    "pageMatrixStrategy": {
+      "model": "Restaurant single-location depth: menu-category x occasion x search-intent families, with a genuine-fact neighborhood ring and a GEO truth-assertion page",
+      "pageFamilies": [
+        "Home (conversion hub)",
+        "Menu hub + 14 menu-category pages (owner-confirmed sections)",
+        "Occasion pages (6 buying moments)",
+        "Search-intent root landings (8: dish + near-me + soul-food + late-night + catering)",
+        "Story / info / FAQ / location-truth landings (5)",
+        "Neighborhood pages (2, anti-doorway floor)",
+        "Contact"
+      ],
+      "crossLinkPlan": "Menu sections <-> related occasions <-> matching intent landings; /catering-cedar-rapids <-> /occasions/office-and-party-catering (intent vs occasion framing); /open-late-cedar-rapids -> menu hub + near-me; /location -> contact + about + FAQ (disambiguation cluster); neighborhoods -> menu hub + nearest intent landing; home -> menu hub + top occasions + top intents. Occasions >=4 cross-links, intent landings >=2.",
+      "sapNote": "No service-area SAP pages. A SW-quadrant neighborhood page was considered (research: SW flank lost to rivals) and REJECTED — no genuine local facts beyond city-wide app delivery = doorway risk. SW delivery reach is copy on /fish-and-chicken-near-me instead."
+    },
+    "pageMatrix": [
+      {
+        "path": "/",
+        "kind": "home",
+        "title": "Captains Fish and Chicken — Fresh Fish, Chicken & Seafood in Cedar Rapids"
+      },
+      {
+        "path": "/menu",
+        "kind": "menu-hub",
+        "title": "Menu"
+      },
+      {
+        "path": "/menu/seafood",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/whole-wings",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/party-wings",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/boneless-chicken-bites",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/chicken-leg-and-thigh",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/chicken-tenders",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/shrimp",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/gizzards-and-livers",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/fish-family-deals",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/family-meals-and-combos",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/sides",
+        "kind": "menu-section",
+        "parent": "/menu",
+        "note": "Gazette-reported additions (mashed potatoes, mac and cheese) held OUT pending owner confirmation"
+      },
+      {
+        "path": "/menu/kids-meals",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/desserts",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/menu/drinks",
+        "kind": "menu-section",
+        "parent": "/menu"
+      },
+      {
+        "path": "/occasions/family-dinner",
+        "kind": "occasion"
+      },
+      {
+        "path": "/occasions/game-day-wings",
+        "kind": "occasion"
+      },
+      {
+        "path": "/occasions/office-and-party-catering",
+        "kind": "occasion"
+      },
+      {
+        "path": "/occasions/friday-fish-fry",
+        "kind": "occasion",
+        "note": "Phase 1: fish-fry SERP is bar/event-dominated with NO takeout player — strengthen year-round takeout angle; KHAK Lent roundup pitch noted for launch checklist"
+      },
+      {
+        "path": "/occasions/seafood-feast",
+        "kind": "occasion",
+        "note": "confirmed items only — NO calamari"
+      },
+      {
+        "path": "/occasions/quick-lunch-takeout",
+        "kind": "occasion"
+      },
+      {
+        "path": "/fried-catfish-cedar-rapids",
+        "kind": "landing-intent",
+        "note": "Phase 1: Captains already leads Yelp catfish list; Gazette quote citable with attribution"
+      },
+      {
+        "path": "/fried-chicken-and-wings-cedar-rapids",
+        "kind": "landing-intent"
+      },
+      {
+        "path": "/seafood-takeout-cedar-rapids",
+        "kind": "landing-intent",
+        "note": "fried-basket lane vs boil houses (Crab House, Juicy Crab Island)"
+      },
+      {
+        "path": "/soul-food-cedar-rapids",
+        "kind": "landing-intent",
+        "note": "field refilled (I'm Soul Hungry, Iowa Soul Food Market) — sharpen fish+chicken+soul-food breadth angle"
+      },
+      {
+        "path": "/fish-and-chicken-near-me",
+        "kind": "landing-intent",
+        "note": "carries city-wide delivery-reach copy incl. SW quadrant (apps deliver city-wide)"
+      },
+      {
+        "path": "/party-wings-cedar-rapids",
+        "kind": "landing-intent"
+      },
+      {
+        "path": "/open-late-cedar-rapids",
+        "kind": "landing-intent",
+        "note": "NEW (Phase 1 quick win): open to 10pm weeknights/11pm Fri-Sat yet absent from late-night roundups; copy caveats hours with call-to-confirm"
+      },
+      {
+        "path": "/catering-cedar-rapids",
+        "kind": "landing-intent",
+        "note": "NEW (Phase 1 quick win): 'fried chicken catering cedar rapids' + 'party pans' SERP open — only Popeyes-via-ezCater ranks; cross-links the catering occasion"
+      },
+      {
+        "path": "/how-to-order",
+        "kind": "landing-info"
+      },
+      {
+        "path": "/about",
+        "kind": "landing-info",
+        "note": "owner story: Ray Aqel, Chicago restaurants since 2006 (Gazette-attributed), opened Oct 2024"
+      },
+      {
+        "path": "/faq",
+        "kind": "landing-faq",
+        "note": "adds disambiguation FAQs: 'Is the 6th St SW Captains still open?' (no — now Pita Kabab, same owner); 'Is Captains the same as Pita Kabab?'"
+      },
+      {
+        "path": "/made-fresh-to-order",
+        "kind": "landing-story",
+        "note": "cornmeal breading + lemon pepper (Gazette-attributed press quotes)"
+      },
+      {
+        "path": "/location",
+        "kind": "landing-info",
+        "note": "NEW (GEO truth assertion): ONE location — 1616 1st Ave NE; explicit dated statement that 3100 6th St SW closed as Captains and is now Pita Kabab; map, directions, parking; counters stale two-location signals AI engines currently ingest"
+      },
+      {
+        "path": "/neighborhoods/northeast-cedar-rapids",
+        "kind": "neighborhood",
+        "note": "Mound View / Wellington Heights / Coe College / I-380 — genuine facts re-validated"
+      },
+      {
+        "path": "/neighborhoods/marion-ia",
+        "kind": "neighborhood",
+        "note": "~5 mi via Hwy 100/7th Ave; app delivery reach"
+      },
+      {
+        "path": "/contact",
+        "kind": "contact"
+      }
+    ],
+    "orderingCtasNotPages": [
+      "tel:+13192211040 (primary call CTA)",
+      "https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802887/",
+      "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+      "https://www.grubhub.com/restaurant/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids/11640296",
+      "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/"
+    ],
+    "foldedPages": [
+      {
+        "page": "/neighborhoods/southwest-cedar-rapids",
+        "reason": "REJECTED at planning: no genuine SW local facts beyond city-wide app delivery — doorway risk; SW reach handled as copy on /fish-and-chicken-near-me"
+      },
+      {
+        "page": "/neighborhoods/hiawatha-ia and /neighborhoods/robins-ia",
+        "reason": "insufficient distinct genuine local facts (carried from prior run)"
+      },
+      {
+        "page": "/occasions/late-night-eats",
+        "reason": "hours owner-unconfirmed; late-night intent handled by /open-late-cedar-rapids with call-to-confirm caveats instead of an 'open late' occasion claim"
+      },
+      {
+        "page": "/occasions/halal-meals and /occasions/vegetarian",
+        "reason": "no owner-confirmed positioning — folded, not fabricated"
+      },
+      {
+        "page": "/menu/captains-family-meal-deal (standalone)",
+        "reason": "single-item section folded into /menu/family-meals-and-combos"
+      }
+    ],
+    "requiredCroBlocks": {
+      "note": "Restaurant archetype carries no auto-dealer CRO block contract (croContractFor('restaurant',...) === null). Restaurant conversion elements planned per kind; call-only exception applies site-wide (owner decision, Phase 0 sealed).",
+      "layoutSingleton": [
+        "sticky mobile call bar (tel:, call-only)"
+      ],
+      "home": [
+        "hero + single call CTA + 3 value-props strip",
+        "signature dish cards",
+        "owner-price favorites band",
+        "CTA banner",
+        "occasion cards",
+        "how-to-order steps + delivery CTAs",
+        "hours+location block",
+        "style rule: matches interior pages (left h2s, white steel-bordered cards, navy shell-only, gold CTAs-only)"
+      ],
+      "menu-hub-and-sections": [
+        "priced item cards (Menu JSON-LD)",
+        "call CTA",
+        "order-online CTAs",
+        "representational-photos note"
+      ],
+      "occasion": [
+        "hero + call CTA",
+        ">=1 featured menu item",
+        ">=5 FAQ",
+        ">=4 cross-links"
+      ],
+      "landing-intent-story-info-faq": [
+        "hero + call CTA",
+        "body",
+        "FAQ where relevant",
+        ">=2 cross-links"
+      ],
+      "neighborhood": [
+        "single city H1",
+        ">=1 genuine local fact",
+        ">=2 proximity trust lines",
+        ">=1 town FAQ"
+      ],
+      "contact": [
+        "NAP + map + hours + directions + call CTA"
+      ],
+      "documentedExceptions": [
+        "lead-form OMITTED site-wide (no endpoint; owner call-only decision)",
+        "dual-CTA reduced to single call CTA (no SMS line)",
+        "trust content as 'why choose us' copy, not the auto-dealer 6-fact grid"
+      ]
+    },
+    "imageSlotPlan": [
+      {
+        "slot": "existing-93-asset-library",
+        "purpose": "REUSE: 87 menu-item renders + occasion/marketing heroes + og + logo produced in the archived run remain valid for the unchanged menu (same items/prices); Phase 6 re-verifies manifest/selections/exports against this run rather than regenerating (~186 credits saved)",
+        "representational": true
+      },
+      {
+        "slot": "home-hero-animated",
+        "purpose": "REUSE: beach-loop video + webp keyframes (owner-approved)",
+        "representational": true
+      },
+      {
+        "slot": "open-late-hero",
+        "purpose": "NEW if needed: evening storefront-glow illustration for /open-late-cedar-rapids (representational; or text-hero)",
+        "representational": true
+      },
+      {
+        "slot": "catering-intent-hero",
+        "purpose": "REUSE catering-party-pans hero on /catering-cedar-rapids",
+        "representational": true
+      },
+      {
+        "slot": "brand-logo",
+        "purpose": "OWNER FILE DROP still pending at public/logo.png (shark-captain emblem); raster placeholder in place",
+        "representational": false
+      },
+      {
+        "slot": "real-photography",
+        "purpose": "OPEN: owner photos to replace representational renders when supplied",
+        "representational": false
+      }
+    ],
+    "minimumPageCountRationale": "38 internal routes (>=25, <500): 1 home + 1 menu hub + 14 menu sections (owner-confirmed) + 6 occasions + 8 intent landings (6 carried + open-late + catering from Phase 1 quick wins) + 4 info/faq/story landings + 1 location truth page + 2 neighborhoods + 1 contact. Every addition traces to a sealed Phase 1 finding: late-night gap, catering SERP gap, and the two-location disambiguation need. External ordering links are CTAs (externalCount 0). If either neighborhood's facts fail at authoring the count drops to 36-37, still above floor."
+  },
+  "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-2.json"
+}

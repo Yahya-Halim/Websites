@@ -1,0 +1,18 @@
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://pitakabab.example/#website",
+  "url": "https://pitakabab.example",
+  "name": "Pita Kabab",
+  "publisher": {
+    "@id": "https://pitakabab.example/#business"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://pitakabab.example/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}

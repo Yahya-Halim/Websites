@@ -1,0 +1,614 @@
+[
+  {
+    "slug": "middle-eastern-restaurant-cedar-rapids",
+    "kind": "intent",
+    "title": "Middle Eastern Restaurant in Cedar Rapids - Pita Kabab",
+    "headline": "Middle Eastern restaurant in Cedar Rapids",
+    "body": "Looking for Middle Eastern food in Cedar Rapids? Pita Kabab is a counter-service Middle Eastern and Mediterranean restaurant at 3100 6th St SW, on the city's southwest side. The published menu runs from chicken shawarma and kabab sandwiches to full grilled platters, hummus and foul, wings, kids meals and baklava — order at the counter for dine-in or takeout, or get delivery through DoorDash.",
+    "sections": [
+      {
+        "heading": "What's on the menu",
+        "text": "Seven menu families cover the classics: sandwiches and wraps, rice bowls, grilled platters, the Mediterranean Delight mezze section, wings, kids meals and desserts. Everything is made to order at the counter."
+      },
+      {
+        "heading": "Where to find us",
+        "text": "3100 6th St SW, Cedar Rapids — the southwest corridor that runs toward the Eastern Iowa Airport, with published hours from 10am most days (closed Wednesday; call to confirm)."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is there a Middle Eastern restaurant on Cedar Rapids' southwest side?",
+        "answer": "Yes — Pita Kabab at 3100 6th St SW serves Middle Eastern and Mediterranean food, counter service, with takeout and DoorDash delivery."
+      },
+      {
+        "question": "What should I order first at a Middle Eastern restaurant?",
+        "answer": "Chicken shawarma is the crowd favorite entry point; hummus with pita and a kabab sandwich round out a first visit."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "See the full menu", "context": "related" },
+      { "slug": "/shawarma-cedar-rapids/", "anchor": "Shawarma in Cedar Rapids", "context": "related" },
+      { "slug": "/palestinian-restaurant-cedar-rapids/", "anchor": "Palestinian restaurant in Cedar Rapids", "context": "related" },
+      { "slug": "/first-visit-ordering-guide/", "anchor": "First visit? How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Middle Eastern Restaurant in Cedar Rapids - Pita Kabab",
+      "description": "Middle Eastern restaurant in Cedar Rapids: shawarma, kabobs, hummus and baklava at Pita Kabab, 3100 6th St SW. Counter service, takeout and delivery.",
+      "canonical": "https://pitakabab.example/middle-eastern-restaurant-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "palestinian-restaurant-cedar-rapids",
+    "kind": "intent",
+    "title": "Palestinian Restaurant in Cedar Rapids - Pita Kabab",
+    "headline": "Palestinian restaurant in Cedar Rapids",
+    "body": "Pita Kabab describes its kitchen as Palestinian family cooking — the restaurant's own site presents a menu of Palestinian and broader Levantine dishes: shawarma, kabab, falafel, hummus, foul and baklava, served counter-style at 3100 6th St SW in Cedar Rapids. If you have been searching for Palestinian food in Iowa's Creative Corridor, this is the table to try.",
+    "sections": [
+      {
+        "heading": "What makes Palestinian cooking distinct",
+        "text": "Palestinian food sits at the heart of Levantine cuisine: bread-centered meals, olive oil and tahini, grilled meats, and slow-cooked bean dishes like foul. Read our guide to Palestinian food for the full picture."
+      },
+      {
+        "heading": "From the family kitchen to 6th Street SW",
+        "text": "The restaurant's published story emphasizes family recipes. Details like the family's history and recipe origins are being confirmed with the owner — what you can verify today is the food itself, made to order at the counter."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is there a Palestinian restaurant in Cedar Rapids?",
+        "answer": "Pita Kabab at 3100 6th St SW presents its menu as Palestinian family cooking — shawarma, kabab, falafel, hummus and foul, served counter-style."
+      },
+      {
+        "question": "What Palestinian dishes should I try first?",
+        "answer": "Start with foul or hummus from the Mediterranean Delight section, then a kabab or shawarma plate."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/what-is-palestinian-food/", "anchor": "What is Palestinian food?", "context": "related" },
+      { "slug": "/menu/mediterranean-delight/", "anchor": "Hummus, foul & mezze", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/about/", "anchor": "About Pita Kabab", "context": "related" }
+    ],
+    "seo": {
+      "title": "Palestinian Restaurant in Cedar Rapids - Pita Kabab",
+      "description": "Palestinian food in Cedar Rapids: Pita Kabab serves shawarma, kabab, falafel, hummus and foul from a family kitchen tradition at 3100 6th St SW.",
+      "canonical": "https://pitakabab.example/palestinian-restaurant-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "shawarma-cedar-rapids",
+    "kind": "intent",
+    "title": "Shawarma in Cedar Rapids - Pita Kabab",
+    "headline": "Shawarma in Cedar Rapids",
+    "body": "Cedar Rapids has surprisingly few places to get real shawarma — and Pita Kabab makes it a house specialty. The published menu carries chicken shawarma sandwiches and shawarma platters: marinated meat carved thin, wrapped in pita or plated with sides. Find it at 3100 6th St SW on the southwest side, for dine-in, takeout or DoorDash delivery.",
+    "sections": [
+      {
+        "heading": "What is shawarma?",
+        "text": "Shawarma is Levantine street food at its best: stacked, seasoned meat roasted and carved into thin ribbons, then tucked into bread with sauces and pickles or served over rice. It is a cousin of the gyro but with its own spicing — see our shawarma vs gyro guide."
+      },
+      {
+        "heading": "How to order it at Pita Kabab",
+        "text": "Order a chicken shawarma sandwich for a one-hand lunch, or the shawarma platter when you want the full plate with sides. Counter service keeps it quick."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where can I get shawarma in Cedar Rapids?",
+        "answer": "Pita Kabab at 3100 6th St SW serves chicken shawarma sandwiches and shawarma platters from its published menu — one of the few dedicated Mediterranean counters in town."
+      },
+      {
+        "question": "What is the difference between shawarma and gyro?",
+        "answer": "Both are carved roasted meats, but shawarma comes from the Levant with Middle Eastern spicing while gyros are Greek, usually with tzatziki. Our comparison guide covers the details."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Sandwiches & wraps menu", "context": "related" },
+      { "slug": "/shawarma-vs-gyro/", "anchor": "Shawarma vs gyro: what's the difference?", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Shawarma platters", "context": "related" },
+      { "slug": "/occasions/lunch/", "anchor": "Quick lunch on the SW side", "context": "related" }
+    ],
+    "seo": {
+      "title": "Shawarma in Cedar Rapids - Pita Kabab",
+      "description": "Shawarma in Cedar Rapids: chicken shawarma sandwiches and platters at Pita Kabab, 3100 6th St SW. Counter service, takeout and DoorDash delivery.",
+      "canonical": "https://pitakabab.example/shawarma-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "kabob-cedar-rapids",
+    "kind": "intent",
+    "title": "Kabobs in Cedar Rapids - Pita Kabab",
+    "headline": "Kabobs in Cedar Rapids",
+    "body": "Kabob is in the name: Pita Kabab's published menu builds around grilled kabab — as a pita sandwich or on mix-grill platters with rice and sides. If you are hunting for kabobs (or kebabs — same skewer, different spelling) in Cedar Rapids, the counter at 3100 6th St SW is the specialist's stop on the southwest side.",
+    "sections": [
+      {
+        "heading": "Kabob, kebab, kabab — what's the difference?",
+        "text": "They are regional spellings of the same family of grilled, skewered meats. Levantine kitchens like this one typically serve seasoned ground-meat kabab and grilled cuts, plated with rice, salad and bread."
+      },
+      {
+        "heading": "Ways to order kabob here",
+        "text": "The kabab sandwich is the quick option; the mix grill platter samples several grilled meats in one plate — a good first-timer pick."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who serves kabobs in Cedar Rapids?",
+        "answer": "Pita Kabab at 3100 6th St SW — kabab sandwiches and grilled platters are core to the published menu."
+      },
+      {
+        "question": "What comes with a kabob platter?",
+        "answer": "Platters are full meals with sides; ask at the counter for the current accompaniments."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/platters/", "anchor": "Platters menu", "context": "related" },
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Kabab sandwiches", "context": "related" },
+      { "slug": "/occasions/family-dinner/", "anchor": "Family dinner", "context": "related" },
+      { "slug": "/shawarma-cedar-rapids/", "anchor": "Shawarma in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Kabobs in Cedar Rapids - Pita Kabab",
+      "description": "Kabobs in Cedar Rapids: grilled kabab sandwiches and mix-grill platters at Pita Kabab, 3100 6th St SW. Dine in, take out or order DoorDash delivery.",
+      "canonical": "https://pitakabab.example/kabob-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "falafel-cedar-rapids",
+    "kind": "intent",
+    "title": "Falafel in Cedar Rapids - Pita Kabab",
+    "headline": "Falafel in Cedar Rapids",
+    "body": "Golden, crisp and naturally vegetarian — falafel is the plant-based anchor of Pita Kabab's published menu. The falafel sandwich wraps fried chickpea fritters in warm pita, and it pairs naturally with hummus from the mezze section. Few Cedar Rapids kitchens make falafel a specialty; this counter at 3100 6th St SW does.",
+    "sections": [
+      {
+        "heading": "What is falafel?",
+        "text": "Falafel are fritters of ground chickpeas (or fava beans) with herbs and spices, fried until crisp. They are a centuries-old Levantine street food and one of the world's great vegetarian dishes."
+      },
+      {
+        "heading": "Vegetarian at Pita Kabab",
+        "text": "The falafel sandwich, hummus and foul are the published menu's vegetarian core — see the vegetarian Mediterranean guide for how to build a full meat-free meal."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where can I get falafel in Cedar Rapids?",
+        "answer": "Pita Kabab at 3100 6th St SW serves falafel sandwiches from its published menu, alongside vegetarian mezze like hummus and foul."
+      },
+      {
+        "question": "Is falafel vegetarian?",
+        "answer": "Yes — falafel is made from chickpeas and herbs. Ask at the counter about sauces if you are strictly vegan."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Sandwiches & wraps menu", "context": "related" },
+      { "slug": "/occasions/vegetarian-mediterranean/", "anchor": "Vegetarian Mediterranean meals", "context": "related" },
+      { "slug": "/hummus-cedar-rapids/", "anchor": "Hummus in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" }
+    ],
+    "seo": {
+      "title": "Falafel in Cedar Rapids - Pita Kabab",
+      "description": "Falafel in Cedar Rapids: crisp chickpea falafel sandwiches at Pita Kabab, 3100 6th St SW — a real vegetarian option on the SW side.",
+      "canonical": "https://pitakabab.example/falafel-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "hummus-cedar-rapids",
+    "kind": "intent",
+    "title": "Hummus in Cedar Rapids - Pita Kabab",
+    "headline": "Hummus in Cedar Rapids",
+    "body": "Restaurant hummus is a different food from the grocery-store tub — silkier, warmer, finished with olive oil and served with fresh pita. At Pita Kabab, hummus leads the Mediterranean Delight mezze section of the published menu, alongside foul and other traditional specialties, at 3100 6th St SW in southwest Cedar Rapids.",
+    "sections": [
+      {
+        "heading": "What goes into real hummus",
+        "text": "Chickpeas, tahini, lemon and garlic — blended smooth. In Levantine kitchens it is a meal starter, a side and a dip all at once."
+      },
+      {
+        "heading": "Build a mezze spread",
+        "text": "Pair hummus with foul, falafel and fresh pita for a table-filling vegetarian spread — it scales from a solo lunch to a catering tray."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who has good hummus in Cedar Rapids?",
+        "answer": "Pita Kabab at 3100 6th St SW serves hummus from its Mediterranean Delight mezze section, made for eating with fresh pita — not from a tub."
+      },
+      {
+        "question": "Is hummus vegetarian?",
+        "answer": "Yes — hummus is chickpeas, tahini, lemon and garlic, naturally vegetarian."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/mediterranean-delight/", "anchor": "Mediterranean Delight menu", "context": "related" },
+      { "slug": "/falafel-cedar-rapids/", "anchor": "Falafel in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/vegetarian-mediterranean/", "anchor": "Vegetarian Mediterranean meals", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Hummus in Cedar Rapids - Pita Kabab",
+      "description": "Hummus in Cedar Rapids: restaurant-style hummus with fresh pita from Pita Kabab's Mediterranean Delight mezze menu at 3100 6th St SW.",
+      "canonical": "https://pitakabab.example/hummus-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "baklava-cedar-rapids",
+    "kind": "intent",
+    "title": "Baklava in Cedar Rapids - Pita Kabab",
+    "headline": "Baklava in Cedar Rapids",
+    "body": "Baklava — crackling layers of phyllo, nuts and syrup — is how a shawarma or kabob meal is supposed to end. It anchors the desserts section of Pita Kabab's published menu at 3100 6th St SW, one of the few places in Cedar Rapids where baklava comes from the same counter as the meal before it.",
+    "sections": [
+      {
+        "heading": "What is baklava?",
+        "text": "A layered pastry of paper-thin phyllo dough, chopped nuts and fragrant syrup, baked until crisp. It is dense, sweet and best in small, satisfying portions."
+      },
+      {
+        "heading": "Dessert for a crowd",
+        "text": "Baklava travels and keeps well, which makes it an easy add-on to party platters and catering orders — mention it when you call in an order."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Where can I buy baklava in Cedar Rapids?",
+        "answer": "Pita Kabab at 3100 6th St SW lists baklava on its published desserts menu — call (319) 440-3709 to check today's availability."
+      },
+      {
+        "question": "Does baklava contain nuts?",
+        "answer": "Yes — traditional baklava is made with layered nuts. Ask at the counter if you have allergy questions."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/desserts/", "anchor": "Desserts menu", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" },
+      { "slug": "/what-is-palestinian-food/", "anchor": "What is Palestinian food?", "context": "related" }
+    ],
+    "seo": {
+      "title": "Baklava in Cedar Rapids - Pita Kabab",
+      "description": "Baklava in Cedar Rapids: layered phyllo, nuts and syrup from Pita Kabab's desserts menu at 3100 6th St SW. Call (319) 440-3709 for availability.",
+      "canonical": "https://pitakabab.example/baklava-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "chicken-over-rice-cedar-rapids",
+    "kind": "intent",
+    "title": "Chicken Over Rice in Cedar Rapids - Pita Kabab",
+    "headline": "Chicken over rice in Cedar Rapids",
+    "body": "Chicken over rice — the New York street-cart classic of seasoned chicken piled on spiced rice — barely exists in Cedar Rapids yet. The closest match on Pita Kabab's published menu is the bowls family: rice-based bowls built at the counter at 3100 6th St SW. The exact bowl lineup is being confirmed with the owner, so call (319) 440-3709 and ask for a chicken-and-rice bowl the way you like it.",
+    "sections": [
+      {
+        "heading": "What is chicken over rice?",
+        "text": "A New York street-cart staple: marinated chicken carved or chopped over turmeric-tinted rice, usually finished with white sauce and hot sauce. Its roots are the same Levantine shawarma-and-rice plates this kitchen already serves."
+      },
+      {
+        "heading": "Ordering the Cedar Rapids version",
+        "text": "Ask the counter for a rice bowl with chicken shawarma — the published menu's shawarma and bowls families cover the same craving, plated fresh instead of from a cart."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who serves chicken over rice in Cedar Rapids?",
+        "answer": "Dedicated chicken-over-rice spots are scarce here. Pita Kabab's published menu includes rice bowls and chicken shawarma — call (319) 440-3709 to ask for a chicken-and-rice bowl."
+      },
+      {
+        "question": "What sauce goes on chicken over rice?",
+        "answer": "Traditionally a creamy white sauce plus hot sauce. Ask at the counter what sauces are available for bowls."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/bowls/", "anchor": "Bowls menu", "context": "related" },
+      { "slug": "/shawarma-cedar-rapids/", "anchor": "Shawarma in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Sandwiches & wraps", "context": "related" },
+      { "slug": "/occasions/lunch/", "anchor": "Quick lunch on the SW side", "context": "related" }
+    ],
+    "seo": {
+      "title": "Chicken Over Rice in Cedar Rapids - Pita Kabab",
+      "description": "Craving chicken over rice in Cedar Rapids? Pita Kabab's rice bowls and chicken shawarma cover the street-cart classic, made to order at 3100 6th St SW.",
+      "canonical": "https://pitakabab.example/chicken-over-rice-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "best-mediterranean-food-cedar-rapids",
+    "kind": "intent",
+    "title": "Guide to Mediterranean Food in Cedar Rapids - Pita Kabab",
+    "headline": "A local's guide to Mediterranean food in Cedar Rapids",
+    "body": "\"What are good Mediterranean food options in Cedar Rapids?\" comes up in local groups all the time, and the honest answer is: the scene is small but real. Cedar Rapids has a handful of Mediterranean kitchens spread across town — and exactly one based on the southwest side: Pita Kabab at 3100 6th St SW. This guide lays out the landscape without fake rankings.",
+    "sections": [
+      {
+        "heading": "The Cedar Rapids Mediterranean map",
+        "text": "Options observed around the metro include Lebanese-style Pita'z (Hiawatha and NewBo City Market), Greek-leaning Zest Mediterranean Grill on the northeast side, long-running Gyro Hut on Mount Vernon Road, and Pita Kabab on 6th Street SW. Each leans a different direction — Greek gyros, Lebanese plates, or Pita Kabab's Palestinian-style shawarma, kabab and mezze."
+      },
+      {
+        "heading": "Where Pita Kabab fits",
+        "text": "It is the southwest side's Mediterranean counter: shawarma sandwiches, grilled kabab platters, hummus and foul, wings, kids meals and baklava, with counter service, takeout and DoorDash delivery. If you are near the airport corridor or Kirkwood, it is the close option."
+      },
+      {
+        "heading": "How to judge for yourself",
+        "text": "Order the dish each kitchen hangs its name on. Here, that means shawarma or kabab first — then branch into the mezze section on the next visit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What Mediterranean restaurants does Cedar Rapids have?",
+        "answer": "The metro's observed options include Pita'z, Zest Mediterranean Grill, Gyro Hut and Pita Kabab — with Pita Kabab being the southwest side's counter at 3100 6th St SW."
+      },
+      {
+        "question": "Which Mediterranean spot is best in Cedar Rapids?",
+        "answer": "That depends on what you are craving — Greek gyros, Lebanese plates or Palestinian-style shawarma and kabab. This guide describes each honestly rather than ranking them."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "Pita Kabab's full menu", "context": "related" },
+      { "slug": "/middle-eastern-restaurant-cedar-rapids/", "anchor": "Middle Eastern restaurant in Cedar Rapids", "context": "related" },
+      { "slug": "/shawarma-cedar-rapids/", "anchor": "Shawarma in Cedar Rapids", "context": "related" },
+      { "slug": "/first-visit-ordering-guide/", "anchor": "First visit? How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Guide to Mediterranean Food in Cedar Rapids - Pita Kabab",
+      "description": "An honest local guide to Mediterranean food in Cedar Rapids — who serves what across town, and where Pita Kabab's Palestinian-style menu fits in.",
+      "canonical": "https://pitakabab.example/best-mediterranean-food-cedar-rapids/"
+    }
+  },
+  {
+    "slug": "shawarma-vs-gyro",
+    "kind": "info",
+    "title": "Shawarma vs Gyro: What's the Difference? - Pita Kabab",
+    "headline": "Shawarma vs gyro: what's the difference?",
+    "body": "Shawarma and gyro look like twins — both are seasoned meat roasted on a rotating spit and carved into bread — but they come from different kitchens. Shawarma is Levantine (Lebanon, Palestine, Syria), seasoned with warm Middle Eastern spices and typically sauced with tahini or garlic sauce. Gyro is Greek, classically pork or a beef-lamb blend, finished with tzatziki. The bread, pickles and plates differ too.",
+    "sections": [
+      {
+        "heading": "Origin and seasoning",
+        "text": "Shawarma descends from Ottoman-era vertical roasting and spread through the Levant, picking up spice blends like baharat — cumin, cardamom, cinnamon, clove. Gyros took the same technique to Greece with oregano-forward Mediterranean seasoning."
+      },
+      {
+        "heading": "Sauces and bread",
+        "text": "Shawarma usually meets tahini or toum (garlic sauce) in a thinner pita or laffa; gyros get cool, yogurt-based tzatziki in a thicker, fluffier pita."
+      },
+      {
+        "heading": "Which should you order?",
+        "text": "If you want deeper spice and garlic-tahini richness, order shawarma. If you want tangy-cool yogurt against charred meat, that is gyro territory. At Pita Kabab the shawarma side of the family is the specialty — try the chicken shawarma sandwich."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are shawarma and gyro the same thing?",
+        "answer": "No — both are spit-roasted carved meats, but shawarma is Levantine with Middle Eastern spices and tahini or garlic sauce, while gyro is Greek with tzatziki."
+      },
+      {
+        "question": "Is shawarma always chicken?",
+        "answer": "No — beef and lamb shawarma are common across the Levant. Pita Kabab's published menu features chicken shawarma."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/shawarma-cedar-rapids/", "anchor": "Shawarma in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Sandwiches & wraps menu", "context": "related" },
+      { "slug": "/what-is-palestinian-food/", "anchor": "What is Palestinian food?", "context": "related" }
+    ],
+    "seo": {
+      "title": "Shawarma vs Gyro: What's the Difference? - Pita Kabab",
+      "description": "Shawarma vs gyro, explained: origins, seasoning, sauces and bread — and which to order first at a Levantine counter like Pita Kabab in Cedar Rapids.",
+      "canonical": "https://pitakabab.example/shawarma-vs-gyro/"
+    }
+  },
+  {
+    "slug": "what-is-palestinian-food",
+    "kind": "info",
+    "title": "What Is Palestinian Food? - Pita Kabab Cedar Rapids",
+    "headline": "What is Palestinian food?",
+    "body": "Palestinian food is the home-cooking branch of Levantine cuisine: olive oil and za'atar, warm flatbreads, grilled meats, slow-simmered beans and legendary hospitality portions. Signature dishes include musakhan (sumac chicken on flatbread), maqluba (the famous 'upside-down' rice pot), stuffed vegetables, and sweets like knafeh and baklava. It is generous, bread-first food built for sharing.",
+    "sections": [
+      {
+        "heading": "The staples",
+        "text": "Everyday Palestinian tables lean on hummus, foul (fava beans), falafel, olives, fresh vegetables and bread at every meal. Grilled kabab and carved shawarma are the celebratory center of the table."
+      },
+      {
+        "heading": "Signature dishes worth knowing",
+        "text": "Musakhan — roast chicken with sumac and onions over taboon bread. Maqluba — a layered pot of rice, meat and vegetables flipped upside down at the table. Warak dawali — stuffed grape leaves. Knafeh — the cheese-and-semolina dessert of Nablus."
+      },
+      {
+        "heading": "Tasting it in Cedar Rapids",
+        "text": "Pita Kabab's published menu carries the everyday classics — shawarma, kabab, falafel, hummus, foul and baklava — served counter-style at 3100 6th St SW. It is a straightforward first date with the cuisine."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are the most famous Palestinian dishes?",
+        "answer": "Musakhan, maqluba, stuffed grape leaves, falafel, hummus, foul and knafeh are among the best known — bread-centered, olive-oil-rich cooking made for sharing."
+      },
+      {
+        "question": "How is Palestinian food different from other Middle Eastern food?",
+        "answer": "It shares the Levantine pantry with Lebanese and Syrian cooking but leans on sumac, taboon bread and dishes like musakhan and maqluba that are distinctly Palestinian."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/palestinian-restaurant-cedar-rapids/", "anchor": "Palestinian restaurant in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/mediterranean-delight/", "anchor": "Hummus, foul & mezze", "context": "related" },
+      { "slug": "/shawarma-vs-gyro/", "anchor": "Shawarma vs gyro", "context": "related" }
+    ],
+    "seo": {
+      "title": "What Is Palestinian Food? - Pita Kabab Cedar Rapids",
+      "description": "Palestinian food explained: musakhan, maqluba, hummus, foul, falafel and knafeh — and where to taste the everyday classics in Cedar Rapids.",
+      "canonical": "https://pitakabab.example/what-is-palestinian-food/"
+    }
+  },
+  {
+    "slug": "first-visit-ordering-guide",
+    "kind": "info",
+    "title": "First Visit? How to Order at Pita Kabab",
+    "headline": "First visit? How to order at Pita Kabab",
+    "body": "Pita Kabab is counter service — walk in at 3100 6th St SW, order at the register, and your food is made fresh while you grab a seat or wait for a to-go bag. No reservations, no table service, no pressure. Here is how to make your first order a good one.",
+    "sections": [
+      {
+        "heading": "Step 1: pick your format",
+        "text": "Sandwich or wrap when you want it quick and handheld; a platter when you want the full plate with sides; a rice bowl when you want it hearty and fork-first."
+      },
+      {
+        "heading": "Step 2: pick your protein or go vegetarian",
+        "text": "Chicken shawarma and kabab are the signatures. Vegetarian? The falafel sandwich, hummus and foul are the published menu's meat-free core."
+      },
+      {
+        "heading": "Step 3: round it out",
+        "text": "Add hummus for the table, wings for a group, kids meals for the small ones and baklava to finish. Everything comes from one counter, so mixed orders are easy."
+      },
+      {
+        "heading": "Good to know",
+        "text": "Published hours are 10am–10pm most days, 11am–8pm Sunday, closed Wednesday — call (319) 440-3709 to confirm. Takeout can be called in ahead; delivery runs through DoorDash."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is Pita Kabab table service or counter service?",
+        "answer": "Counter service — order at the register, then dine in or take out. No reservations needed."
+      },
+      {
+        "question": "What should a first-timer order?",
+        "answer": "The chicken shawarma sandwich is the classic entry point; add hummus with pita and you have covered the essentials."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "Browse the full menu", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "Pickup, dine-in & delivery options", "context": "related" },
+      { "slug": "/occasions/family-dinner/", "anchor": "Family dinner", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "First Visit? How to Order at Pita Kabab",
+      "description": "New to Pita Kabab in Cedar Rapids? A quick guide to the counter-service format and what to order first — shawarma, platters, bowls and vegetarian picks.",
+      "canonical": "https://pitakabab.example/first-visit-ordering-guide/"
+    }
+  },
+  {
+    "slug": "how-to-order",
+    "kind": "info",
+    "title": "Order Pita Kabab: Pickup, Dine-In & Delivery",
+    "headline": "How to order from Pita Kabab",
+    "body": "Three ways to get Pita Kabab: order at the counter and dine in, call ahead for pickup at 3100 6th St SW, or get delivery through DoorDash — the restaurant's active delivery channel per its published ordering page. First-party online ordering is described by the restaurant as coming soon; until then, the phone is the fastest direct line: (319) 440-3709.",
+    "sections": [
+      {
+        "heading": "Pickup",
+        "text": "Call (319) 440-3709, place your order, and pick it up at the counter. Larger to-go orders benefit from extra notice — mention your timing when you call."
+      },
+      {
+        "heading": "Dine-in",
+        "text": "The restaurant's published pages describe casual dine-in seating alongside the counter — order first, then take a table."
+      },
+      {
+        "heading": "Delivery",
+        "text": "Delivery is handled through DoorDash — search for 'Pita Kabab' in the DoorDash app to see current delivery coverage and the platform's menu."
+      },
+      {
+        "heading": "Catering and big orders",
+        "text": "For trays and events, skip the apps and call — catering is quoted per event. See the catering page for details."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab deliver?",
+        "answer": "Yes, through DoorDash — that is the active delivery channel per the restaurant's published ordering page."
+      },
+      {
+        "question": "Can I order Pita Kabab online directly?",
+        "answer": "The restaurant describes first-party online ordering as coming soon; for now, call (319) 440-3709 for pickup or use DoorDash for delivery."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "Browse the menu first", "context": "related" },
+      { "slug": "/first-visit-ordering-guide/", "anchor": "First visit? How to order", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Order Pita Kabab: Pickup, Dine-In & Delivery",
+      "description": "How to order from Pita Kabab in Cedar Rapids: call (319) 440-3709 for pickup, dine in at 3100 6th St SW, or order delivery through DoorDash.",
+      "canonical": "https://pitakabab.example/how-to-order/"
+    }
+  },
+  {
+    "slug": "about",
+    "kind": "story",
+    "title": "About Pita Kabab - Family-Owned in Cedar Rapids",
+    "headline": "About Pita Kabab",
+    "body": "Pita Kabab is a Mediterranean and Middle Eastern restaurant at 3100 6th St SW in Cedar Rapids, Iowa — a counter-service kitchen serving shawarma, kabab, falafel, hummus, wings, kids meals and baklava. It shares ownership with Captains Fish and Chicken, a Cedar Rapids restaurant family, and took over this southwest-side address that Captains previously occupied.",
+    "sections": [
+      {
+        "heading": "The short version",
+        "text": "One counter, one kitchen, a focused menu of Mediterranean and Middle Eastern classics, and a southwest Cedar Rapids address on the 6th Street corridor. Dine in, take out, or order through DoorDash."
+      },
+      {
+        "heading": "The story, verified as we go",
+        "text": "The restaurant's own materials describe family recipes behind the menu. We publish details like founding dates and family history only as the owner confirms them — what is certain today is the address, the menu and the shared ownership with Captains Fish and Chicken."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Who owns Pita Kabab?",
+        "answer": "Pita Kabab shares ownership with Captains Fish and Chicken, another Cedar Rapids restaurant. Further ownership details are published as the owner confirms them."
+      },
+      {
+        "question": "Where is Pita Kabab located?",
+        "answer": "3100 6th St SW, Cedar Rapids, IA 52404 — on the southwest side's 6th Street corridor."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "See the menu", "context": "related" },
+      { "slug": "/palestinian-restaurant-cedar-rapids/", "anchor": "Palestinian restaurant in Cedar Rapids", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" },
+      { "slug": "/faq/", "anchor": "Frequently asked questions", "context": "related" }
+    ],
+    "seo": {
+      "title": "About Pita Kabab - Family-Owned in Cedar Rapids",
+      "description": "About Pita Kabab: a Mediterranean and Middle Eastern counter at 3100 6th St SW, Cedar Rapids, sharing ownership with Captains Fish and Chicken.",
+      "canonical": "https://pitakabab.example/about/"
+    },
+    "schemaType": "AboutPage"
+  },
+  {
+    "slug": "faq",
+    "kind": "faq",
+    "title": "Pita Kabab FAQ - Hours, Parking, Catering & More",
+    "headline": "Pita Kabab: frequently asked questions",
+    "body": "Quick answers about visiting Pita Kabab at 3100 6th St SW in Cedar Rapids — hours, ordering, delivery, catering and the menu. If your question is not covered, call (319) 440-3709 and the counter can help.",
+    "faqs": [
+      {
+        "question": "What are Pita Kabab's hours?",
+        "answer": "Published hours are Mon–Tue and Thu–Sat 10am–10pm, Sunday 11am–8pm, closed Wednesday. These are as published by the restaurant — please call (319) 440-3709 to confirm before a special trip."
+      },
+      {
+        "question": "Where is Pita Kabab?",
+        "answer": "3100 6th St SW, Cedar Rapids, IA 52404 — on the southwest side's 6th Street corridor, toward the airport side of town."
+      },
+      {
+        "question": "Does Pita Kabab deliver?",
+        "answer": "Yes — delivery runs through DoorDash, the restaurant's active delivery channel. Pickup orders can be called in at (319) 440-3709."
+      },
+      {
+        "question": "Is it table service or counter service?",
+        "answer": "Counter service — order at the register, then dine in casually or take your order to go. No reservations needed."
+      },
+      {
+        "question": "Does Pita Kabab cater?",
+        "answer": "Yes — catering for weddings, office lunches, graduation parties and more, quoted per event. Call (319) 440-3709 with your date and headcount."
+      },
+      {
+        "question": "Are there vegetarian options?",
+        "answer": "Yes — falafel sandwiches, hummus and foul from the published menu are vegetarian."
+      },
+      {
+        "question": "Is there a kids menu?",
+        "answer": "Yes — the published menu includes a kids meals section with smaller portions."
+      },
+      {
+        "question": "What payment methods are accepted?",
+        "answer": "Accepted payment methods are being confirmed with the owner — call (319) 440-3709 ahead of your visit if this matters for you."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Pita Kabab FAQ - Hours, Parking, Catering & More",
+      "description": "Answers to common Pita Kabab questions: hours, location, DoorDash delivery, counter service, catering, vegetarian options and the kids menu.",
+      "canonical": "https://pitakabab.example/faq/"
+    },
+    "schemaType": "FAQPage"
+  }
+]

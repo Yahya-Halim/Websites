@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "workerId": "phase5-reviewer-validation-fix-review-v3-cd6c069a",
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 5,
+  "specialist": "validation-fix-review",
+  "reviewer": "validation-fix-review",
+  "verdict": "pass",
+  "status": "completed",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+  "packetHash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-capsule.json",
+  "capsuleHash": "426bd6c28b8e2c1601eea8fb602ec857483e25c2c2c1159eac37a79ece80b4b8",
+  "artifactHashReviewed": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-fix-review-notes.md",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-fix-review-notes.md",
+  "artifactHash": "5cb95c8d7f76707cf94dc208cd13e04588a7959c93a54b01a17d46f9ee664dba",
+  "commandsRun": [
+    "sha256sum phase-5-artifact.json (verify sealed artifact)",
+    "Get-FileHash -Algorithm SHA256 phase-5-artifact.json + phase-5.json (cross-check)",
+    "sha256sum phase-5.json (raw byte hash of packet)",
+    "sha256sum phase-5-validation-fix-review-review-capsule.json (raw byte hash of capsule)",
+    "npx factory validate (independent re-run in D:\\website\\captains-fish-and-chicken; exit 0)",
+    "git status --short (repo root D:\\website; project dir untracked)",
+    "ls -l / find -printf mtimes on src/, dist/, phase-5 workbench, phase-4 artifact",
+    "grep/awk over dist/**/index.html: titles unique-count, canonicals, img alt, review-count, aggregateRating, og/twitter, title lengths, openingHoursSpecification day names, phone formats",
+    "sha256sum validation-fix-review-notes.md (final notes hash)"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\factory-validate.log",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\seo-geo-audit.md",
+    "dist/**/index.html (38 built routes, spot-check inspection)"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-fix-review-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-report.json"
+  ],
+  "assumptions": [
+    "Engine uses canonical (not byte-wise) hashing for packet and capsule identities; the sealed artifact is hashed byte-wise. The packet's self-referential delegation.packetHash (cb29eb40) equals the capsule packetHash and confirms canonical hashing; the raw byte hashes (packet 6494b52e, capsule 295cd1b3) differ by design and are not tampering.",
+    "Recorded the workflow-authoritative canonical capsuleHash 426bd6c2 per the report contract rather than the raw capsule byte hash.",
+    "The vendored /aaron-marketing:seo-geo audit narrative was not re-executed end-to-end; its concrete checkable dist/ claims were independently spot-checked and all held.",
+    "git could not diff the project dir (untracked under the D:\\website repo); no-src-edit verification relies on file mtimes."
+  ],
+  "blockers": [],
+  "verification": [
+    "Sealed Phase 5 artifact sha256 = db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268 matches capsule expected value (confirmed via sha256sum and PowerShell Get-FileHash). Artifact not edited.",
+    "Independent npx factory validate re-run in D:\\website\\captains-fish-and-chicken returned exit code 0; all 6 gates (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) pass plus 5 advisories (11/11), matching factory-validate.log and the artifact's factoryValidate block.",
+    "factory-validate.log contains the command, exit code, all 6 gate ids, and verbatim .factory/journal.ndjson + .factory/last-run.json for the run.",
+    "seo-geo-audit.md contains the command with the real target (https://captains-fish-chicken.netlify.app), a Status section (ready_with_concerns), 'Blocking Findings: None', an Advisory Findings section (6), and Fix Notes.",
+    "dist/ spot-checks reproduced: 38 routes; 38/38 unique titles; 38 canonicals each self-referencing the netlify.app origin; 138 <img> with 0 missing/empty alt; 0 files with '208 reviews' and no 'N reviews' count anywhere; 0 pages with aggregateRating; '4.4 stars' present count-free.",
+    "failures [] and fixRounds [] honest: newest src/ mtime is 18:13 local (Phase 4 generated JSON-LD) / 18:12 (site.json, menu.json); the Phase 5 window (factory-validate.log 18:42 -> artifact 18:46) modified no src/ file. Phase 5 did not touch src/.",
+    "All 6 advisories confirmed real and non-blocking: (1) 0 og/twitter tags; (2) openingHoursSpecification names only Mon/Tue/Wed/Thu/Sun, Fri/Sat absent, correctly left unfixed under owner-unconfirmed-hours constraint; (3) five long titles (69/68/67/66/66 decoded chars) confirmed; (4) /menu/ meta ~203 chars; (5) hours caveat carried; (6) dual phone formats +1-319-221-1040 and (319) 221-1040 both present. None intersects a factory gate.",
+    "Zero fixture flags: real GA4 G-7W35DKNK6Z on all pages, real canonicals, 0 .example identity, 0 aggregateRating; do-not-ship-guards gate PASS."
+  ]
+}

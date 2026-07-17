@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 5,
+  "specialist": "seo-geo-ai-validation",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-geo-ai-validation\\SKILL.md",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+  "packetHash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de",
+  "mission": "Produce the Phase 5 artifact using the prepared workbench and sealed inputs only.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+      "hash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de"
+    },
+    {
+      "kind": "specialist-skill",
+      "path": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-geo-ai-validation\\SKILL.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\factory-validate.log"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\seo-geo-audit.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-report.md"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed drafts from other phases",
+    "Direct edits to workflow state files"
+  ],
+  "requiredOutputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+    "requiredArtifactFields": [
+      "validationRuns",
+      "factoryValidate",
+      "seoGeoAudit",
+      "failures",
+      "fixRounds",
+      "remainingAdvisories"
+    ]
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": true,
+    "requiredReviewers": [
+      "validation-fix-review"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-builder-report.json",
+    "requiredRole": "builder",
+    "requiredStatus": "completed"
+  }
+}

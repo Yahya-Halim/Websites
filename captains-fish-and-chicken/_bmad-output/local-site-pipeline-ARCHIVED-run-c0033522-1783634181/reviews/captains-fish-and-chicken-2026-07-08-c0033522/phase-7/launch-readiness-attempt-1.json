@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 7,
+  "reviewer": "launch-readiness",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-7/phase-7-artifact.json",
+  "artifactHash": "c7634d84617a1ae1dc27c31991db9141564ea574d87eb42d4712d97f43b85800",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-7/review-launch-readiness.md",
+  "notesHash": "38b1cd830a95e869dd0b69867a50bfe6f11cc4814959011e4ddcbd181391b106",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-7\\launch-readiness-attempt-1.md",
+  "notesHeadings": [
+    "Phase 7 review — launch-readiness (run v2, FINAL GATE)",
+    "Independently verified against LIVE production",
+    "Non-blocking notes",
+    "Blocking issues"
+  ],
+  "notes": "# Phase 7 review — launch-readiness (run v2, FINAL GATE)\n\n**Reviewer:** launch-readiness (independent read-only subagent; did NOT produce the launch)\n**Verdict:** PASS (10/10 criteria; 19 live checks independently reproduced; zero blocking)\n**Date:** 2026-07-08\n\n## Independently verified against LIVE production\n- Exact home title + self-canonical on https://captains-fish-chicken.netlify.app\n- gtag G-7W35DKNK6Z loads exactly once + config call; zero fixtures live\n- 5 live tel:+13192211040 anchors (sealed evidence said 3 — live EXCEEDS claim)\n- robots.txt 200 (GPTBot/ClaudeBot/PerplexityBot/Google-Extended allowed) + sitemap-index 200; all 38 sitemap URLs on the production domain\n- llms.txt 200 with full NAP + business email + priced menu lines\n- 10/10 sampled routes 200 (incl. /location/, /open-late-cedar-rapids/, /catering-cedar-rapids/)\n- open-late.webp (25KB) + beach-loop.mp4 (6.4MB) serving real bytes\n- /location/ single-location truth + Pita Kabab disambiguation live; both FAQ disambiguation questions live\n- Deploy id 6a4ed26f521f950a4b65d24b PROVEN REAL via its live Netlify permalink; Netlify server headers confirmed\n- ownerFollowUps substantive and consistent with observed site state\n\n## Non-blocking notes\n- Sealed evidence undercounted tel anchors (3 vs 5 live) — favorable discrepancy.\n- /logo.png live but a 1.77MB placeholder pending the owner mark (disclosed follow-up).\n- Reviewer re-sampled 10/38 routes per gate scope; remaining covered by sitemap + sealed 38/38 sweep.\n\n## Blocking issues\nNone.\n",
+  "reviewedAt": "2026-07-08T22:49:45.462Z"
+}

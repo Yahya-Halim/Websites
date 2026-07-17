@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-quick-lunch-takeout-1",
+  "questionRef": "questions/faq-occasions-quick-lunch-takeout-1",
+  "text": "Call (319) 221-1040 and place your order before you head over. Since everything is fried fresh to order, a call ahead means your lunch is hot and bagged when you arrive at 1616 1st Ave NE, so you're not waiting on a short break.",
+  "cites": [
+    "occasions/quick-lunch-takeout"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/quick-lunch-takeout.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

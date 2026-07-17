@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 3,
+  "amendment": 2,
+  "actor": "Yahya",
+  "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-2-reason.md",
+  "reason": "# Phase 3 Amendment 2 — Reason\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nDate: 2026-07-12\nSpecialist: ui-ux-pro-max\n\n## Why\n\nEngagement-owner direction: make the site feel **more professional and based on\nthe food region and cultures** (specifically Palestinian/Levantine, not generic\n\"Middle Eastern\").\n\n## Process\n\nRan a design-direction workflow: 5 independent directions (Levantine editorial,\nTatreez modern, Old Jerusalem stone & arch, Contemporary Mediterranean bistro,\nLevantine souk warmth) → a design judge + a cultural-authenticity/truthfulness\nguard → one synthesized implementation spec. Winner: **Tatreez modern**\n(authenticity 9, brand-fit 9), grafting the Levantine-editorial typography and\nparchment stock. Every guard fix folded in.\n\n## What changed (scope)\n\n- **Typography:** Fraunces (editorial serif display) + IBM Plex Sans (body) +\n  IBM Plex Mono (tracked eyebrows) + IBM Plex Sans Arabic (draft/gated).\n  Retires Fredoka + Nunito. Google Fonts css2 URL validated 200.\n- **Palette additions:** --color-forest #0F2A1E (headings, footer, hero hem),\n  --color-parchment #F4EEE0 (menu-stock bands, replaces pale-gold),\n  --color-linen #F1ECDE, --color-stitch #2F6B43 (tatreez on light). Green + gold\n  + green canvas kept. Madder/sumac red DEFERRED (owner-gated).\n- **Motif:** Palestinian tatreez (najmet Beit Lahm star + saw-tooth), inline SVG\n  component. Gold-on-forest saw-hems (hero, CTA banner, footer top); olive star\n  dividers + h2 ticks + eyebrow bullets on light. Structural, aria-hidden.\n- **Copy:** \"a Palestinian kitchen in Cedar Rapids\", \"Palestinian kitchen ·\n  Cedar Rapids\" tag, warmer section headings — all owner-sourced/truthful.\n- **Menu:** printed-carte rows (Fraunces dish names, italic descriptors, hairline\n  rules, tabular prices). Per-item photos kept (owner requested them).\n- **Footer:** project-shadow Footer for readable light text on forest (the engine\n  Footer's scoped #6b6b6b/#222 fail on the dark ground).\n\n## Guard gates honored\n\n- Arabic (ahlan wa sahlan anchor + Naskh dish names) ships HIDDEN behind\n  `enableArabic=false` until owner Ray Aqel verifies script/diacritics.\n- Owner menu spellings frozen verbatim (foul, mfatakeh, kalaya, kabab/kabob,\n  \"Mediterranean Delight\").\n- Madder/sumac red dropped (green+red+white flag-palette risk + 2.28:1 on forest).\n- No fabricated tenure/awards/family-story; only owner-published claims shipped.\n\n## What did NOT change\n\nidentityDecision fixtures, page families, route count (41 built / 46 planned),\nomit-never-fabricate truthfulness floor, CRO slots, and the green+gold + kabab\nlogo identity.\n\n## Downstream\n\nPhase 4 remains unsealed (still blocked on the 5 conditional routes + Phase 5\nidentity fixtures); this amendment invalidates no sealed downstream approval.\nPhase 4 build already rebuilt against the amended tokens (41 routes, exit 0).\n",
+  "previousArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+  "previousArtifactHash": "cb33effcbb1d624b667238fd0938d0c8834ee9c734bab214aabf475d16e97a7f",
+  "newArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+  "newArtifactHash": "f0336ed10576443b4e41f797181abd9e085bdb33568b00c8b20a84bf0be78c54",
+  "specialist": "ui-ux-pro-max",
+  "amendedAt": "2026-07-13T04:20:41.009Z",
+  "delegationOverride": {
+    "schemaVersion": 1,
+    "runId": "pita-kabab-2026-07-12-b5881b47",
+    "phase": 3,
+    "role": "builder",
+    "actor": "Yahya",
+    "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+    "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+    "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+    "createdAt": "2026-07-13T04:20:41.009Z",
+    "override": 2,
+    "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+  },
+  "previousRuntimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+      "hash": "607efe55d6887ea0bb0cabc0119019048ed230d908a36848f1c02f50ada35214",
+      "mtimeMs": 1783908282634.7222
+    }
+  },
+  "newRuntimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+      "hash": "8e58adbb186c4103a228b343cb73349205a1f99ae0d54d3145bda915dd88c6ac",
+      "mtimeMs": 1783916399006.1475
+    }
+  }
+}

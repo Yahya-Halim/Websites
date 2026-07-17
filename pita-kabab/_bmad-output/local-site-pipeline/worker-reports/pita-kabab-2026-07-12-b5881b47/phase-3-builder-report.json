@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 3,
+  "specialist": "ui-ux-pro-max",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-3.json",
+  "packetHash": "da3827508f390b4b7a173eede6f2b51029a747a506ce3df17175b49352a84140",
+  "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder-capsule.json",
+  "capsuleHash": "d89e0b12b2b48ba4b42a7dc574b7b7dfc8170fac4ed0ff804fe27f05fb754aab",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+  "artifactHash": "0d5f95542f819c01072026c6f971c774ab4f0fdce89d5b7a59d1913f36f4e45b",
+  "workerId": "phase-3-builder-fable-5-2026-07-12",
+  "status": "completed",
+  "commandsRun": [
+    "python .../vendored/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/scripts/search.py \"restaurant mediterranean palestinian counter-service family warm casual\" --design-system -f markdown -p \"Pita Kabab\" (generated pattern Hero-Centric + Conversion, style Vibrant & Block-based, appetizing red + warm gold palette)",
+    "python .../scripts/search.py \"warm friendly rounded restaurant food\" --domain typography -n 4 (selected Fredoka+Nunito over generated Caveat/Quicksand)",
+    "python .../scripts/search.py \"hero cta conversion local business restaurant\" --domain landing -n 4",
+    "python .../scripts/search.py \"images performance static content collections\" --stack astro -n 5 (content collections, astro:assets Image, lazy-load, static .astro components)",
+    "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 3 --artifact D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json (ok: true, problems: [])",
+    "node -e sha256(phase-3-artifact.json) => 0d5f95542f819c01072026c6f971c774ab4f0fdce89d5b7a59d1913f36f4e45b"
+  ],
+  "filesRead": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder-capsule.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-3.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\references\\styleguide-library.md (archetype matrix + Duolingo + Polaris entries)",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs (phase 3 designSystem/identityDecision validators)",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs (inspectArtifact / phase-3 design evidence + Phase 4 Build Notes validators)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\templates\\archetypes\\restaurant (template tree listing for selectedArchitecture)",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\design-system.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identityDecision.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identity-decision.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\design-tokens.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\figma-handoff.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder-report.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json (report shape reference)"
+  ],
+  "filesChanged": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\design-system.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\design-tokens.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identityDecision.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identity-decision.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\figma-handoff.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder-report.json"
+  ],
+  "assumptions": [
+    "Reference style guide chosen strictly from the styleguide-library archetype matrix: 'Restaurant - casual/family/QSR' row -> Duolingo primary + Polaris structural blend (the library's own family-restaurant worked example); Apple HIG rejected as fine-dining-oriented for a counter-service value restaurant.",
+    "Owner brand assets/rights unconfirmed, so the token palette stands alone (pomegranate red #DC2626 action accent, warm gold #A16207, warm cream canvas); pitakababcr.com referenced only as warm-tone inspiration; accent token is revisited if the eventually approved owner logo conflicts.",
+    "Generated design-system output deviations are documented in design-system.md: Caveat script headings replaced with Fredoka (h1-scale legibility), pink #FEF2F2 canvas replaced with warm cream #FBF7F1 (food photography), scroll-snap and animated backgrounds dropped (menu-page usability, LCP/CLS).",
+    "design-tokens.json is a hand-authored Phase 4 build reference, not a Figma/token-pipeline export; optional designTokenSource/designTokenExportPath/designTokenHash/figmaSyncStatus artifact fields are omitted entirely because no Figma handoff exists for this run.",
+    "sms: half of the dual CTA is designed as a gated variant (single-CTA sticky bar default) because no SMS capability is evidenced for (319) 440-3709; the engine contract's conditional-block behavior governs activation."
+  ],
+  "blockers": [],
+  "verification": [
+    "inspect-artifact phase 3: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it.' (clean on first run).",
+    "All five required artifact fields non-null: designSystem (designSystemPath matching packet artifactEvidencePaths.designSystem, query + stack echoed in the evidence file sections), designContentBuildPlan (8 page-family plans + CRO block design specs + site-wide singletons), selectedArchitecture (Astro static, engine restaurant archetype templates, 46 routes = 7+10+18+8+3 data-driven), assetNeeds (32-slot plan with 3 conditional + 1 shared slot, logo approval gate, OG spec, icons, fonts), identityDecision (mode fixture).",
+    "design-system.md replaced the scaffold with all required sections filled: Query (verbatim query string), Stack (astro), Reference Style Guide (chosen guide + fit + borrowed cues), Generated Guidance, Local-Business Adaptations, Phase 4 Build Notes (descriptive, action-oriented, covering page-matrix families, selected architecture, asset handoff, identityDecision/canonical metadata).",
+    "identityDecision fixture values are overtly synthetic and gate-trippable: https://pitakabab.example / owner@pitakabab.example / G-XXXXXXXXXX; paymentAccepted 'unknown' with JSON-LD omission; identity-decision.md names the real unadopted candidates (pitakababcr.com, info@pitakababcr.com), the non-adoption rationale (owner confirmation pending, questionnaire open), the swap path (before/at Phase 5), and the expectation that the Phase 5 do-not-ship gate MUST flag the fixtures.",
+    "Design constraints from sealed inputs honored: every requiredCroBlocks slot reserved with conditional-omission behavior (trust grid, lead form, offer callout, sms CTA), 32-slot image plan mapped with representational-only policy and conditional gating intact, WCAG AA floor with computed contrast ratios recorded, mobile-first with singleton sticky call bar and 72px body reserve, menu prices omitted until owner confirmation.",
+    "No competitor brand colors shipped (Duolingo/Shopify greens are approach references only); no fabricated payment, price, craft, halal, or identity claims anywhere in the design artifacts.",
+    "complete-phase NOT run per dispatch stop condition (exactly one inspected phase artifact produced)."
+  ]
+}

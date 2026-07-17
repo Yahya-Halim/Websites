@@ -1,0 +1,475 @@
+/*
+ * Pita Kabab design tokens + global design CSS.
+ * Source of truth: _bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-tokens.json
+ * (sealed Phase 3 "UI UX Pro Max" design system.)
+ * AMENDMENT 1: olive-green x warm-gold, layout density.
+ * AMENDMENT 2 (Tatreez Modern — Palestinian carte): Fraunces + IBM Plex Sans
+ *   editorial type, deep-forest headings, warm parchment bands, and a Palestinian
+ *   tatreez (najmet Beit Lahm cross-stitch) motif — gold-on-forest on the hero hem
+ *   and footer, olive on light dividers/ticks. Green+gold identity + kabab logo kept.
+ *   Gold is decorative/forest-ground only (never gold text/hairline on light).
+ */
+
+:root {
+  /* Color — identity (kept from amendment 1) */
+  --color-primary: #1B6E3E;
+  --color-primary-edge: #14512E;
+  --color-on-primary: #FFFFFF;
+  --color-accent: #E0A80D;          /* gold — decorative fill / forest-ground thread only */
+  --color-on-accent: #1C2B21;
+  --color-accent-soft: #FBF3D6;     /* legacy pale-gold (retired from bands; kept for fallback) */
+  --color-hero-band: #1B6E3E;
+  --color-hero-band-deep: #14512E;
+  --color-on-hero-band: #FFFFFF;
+  --color-background: #F7F9F3;       /* green-tinted canvas (kept — refinement, not rebrand) */
+  --color-surface: #FFFFFF;
+  --color-foreground: #1C2B21;
+  --color-muted-foreground: #4C5A4E;
+  --color-border: #DCE6D2;
+  --color-success: #15803D;
+  --color-destructive: #B91C1C;
+  --color-ring: #1D4ED8;
+
+  /* Amendment 2 additions */
+  --color-forest: #0F2A1E;           /* deep editorial green: H1/H2, footer, hero hem plinth */
+  --color-parchment: #F4EEE0;        /* warm menu-stock band (replaces pale-gold sections) */
+  --color-linen: #F1ECDE;            /* even-weave panel tint */
+  --color-stitch: #2F6B43;           /* tatreez stroke on light grounds; eyebrow bullet */
+  /* --color-thread-madder: #9E3B2E;  DEFERRED, owner-gated. Not referenced in v2
+     (green+red+white flag risk on light; madder-on-forest only 2.28:1). */
+
+  /* Engine components consume --accent-color; map it to the CTA green. */
+  --accent-color: var(--color-primary);
+
+  /* Type — amendment 2: editorial Levantine "printed carte" */
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'Cascadia Code', monospace;
+  --font-arabic: 'IBM Plex Sans Arabic', 'Noto Naskh Arabic', serif; /* draft/gated only */
+
+  /* Shape */
+  --radius-control: 14px;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation */
+  --shadow-card: 0 1px 2px rgba(20, 40, 25, 0.06);
+  --shadow-raised: 0 6px 20px rgba(20, 40, 25, 0.10);
+
+  /* Spacing rhythm */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+
+  /* Tatreez gold saw-stitch tile (gold on transparent — sits on forest grounds). */
+  --tatreez-gold-saw: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='8'%20height='8'%20viewBox='0%200%208%208'%20shape-rendering='crispEdges'%3E%3Crect%20x='0.5'%20y='0.5'%20width='3'%20height='3'%20fill='%23E0A80D'/%3E%3Crect%20x='4.5'%20y='4.5'%20width='3'%20height='3'%20fill='%23E0A80D'/%3E%3C/svg%3E");
+}
+
+/* ---------- Base canvas & typography ---------- */
+
+html { overflow-x: hidden; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  font-optical-sizing: auto;
+}
+h1, h2 { color: var(--color-forest); }
+h3, h4, h5, h6 { color: var(--color-foreground); }
+
+body h1 { font-size: clamp(30px, 5.5vw, 48px); line-height: 1.1; letter-spacing: -0.01em; }
+body h2 { font-size: clamp(23px, 3.6vw, 30px); }
+body h3 { font-size: 20px; }
+
+body a {
+  color: var(--color-primary);
+  transition: color 200ms ease;
+}
+body a:hover { color: var(--color-primary-edge); }
+
+/* Visible focus for keyboard users (WCAG AA). */
+body :focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Eyebrow: tracked mono label + olive stitch bullet (tatreez) ---------- */
+
+body .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  background: none;
+  padding: 0;
+  margin: 0 0 0.55rem;
+}
+body .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--color-stitch);
+  margin-right: 0.55em;
+  flex: 0 0 auto;
+}
+
+/* Section heading tatreez tick: olive running-stitch under top-level h2s. */
+main section > h2 {
+  position: relative;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+main section > h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 34px;
+  height: 4px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-stitch) 0 4px,
+    transparent 4px 8px
+  );
+}
+
+/* ---------- Tatreez band component (najmet Beit Lahm star + saw) ---------- */
+
+.tatreez-divider {
+  display: block;
+  width: min(240px, 55%);
+  height: auto;
+  aspect-ratio: 240 / 44;   /* guarantee height when width is fluid (viewBox 240x44) */
+  margin: 2.5rem auto;
+  color: var(--color-primary); /* olive on light: 5.99:1 graphic */
+}
+@media (min-width: 768px) {
+  .tatreez-divider { margin: 3rem auto; }
+}
+
+/* ---------- Chunky pressable CTA (signature component) ---------- */
+
+body .cta-bar .cta,
+body .site-header .cta-bar .cta,
+body .sticky-call-bar .sticky-action {
+  border-radius: var(--radius-control);
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.4rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: 0.01em;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+body .cta-bar .cta-primary,
+body .sticky-call-bar .sticky-call {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  box-shadow: 0 4px 0 var(--color-primary-edge);
+}
+
+body .cta-bar .cta-primary:hover,
+body .sticky-call-bar .sticky-call:hover {
+  color: var(--color-on-primary);
+  transform: translateY(-1px);
+}
+
+body .cta-bar .cta-primary:active,
+body .sticky-call-bar .sticky-call:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 var(--color-primary-edge);
+}
+
+body .cta-bar .cta-secondary,
+body .sticky-call-bar .sticky-text {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+}
+
+/* Header CTA reads as a pill. */
+body .site-header .cta-bar .cta { border-radius: var(--radius-pill); }
+
+/* ---------- Header / footer chrome ---------- */
+
+body .site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+body .site-header .brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+body .site-header nav a {
+  color: var(--color-muted-foreground);
+  font-weight: 500;
+}
+body .site-header nav a:hover { color: var(--color-primary); }
+
+/* Footer: deep forest with a gold tatreez saw-band across the top. */
+body .site-footer {
+  position: relative;
+  background: var(--color-forest);
+  border-top: none;
+  color: #E6EFE6;
+  padding-top: calc(1.4rem + 12px);
+}
+body .site-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--tatreez-gold-saw) repeat-x center / 8px 8px;
+}
+body .site-footer a { color: #FFFFFF; }
+body .site-footer .nap-name { color: #FFFFFF; }
+
+/* ---------- Card-on-canvas ---------- */
+
+main .sections li,
+main .featured li,
+main .offer,
+main .content-section,
+body .value-props .value-prop {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4) var(--space-6);
+}
+
+main .sections li,
+main .featured li {
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+main .content-section { margin-top: var(--space-6); }
+
+/* FAQ blocks read as cards too. */
+main .faqs dl {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-4) var(--space-6) var(--space-6);
+}
+main .faqs dt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+main .faqs dd { color: var(--color-muted-foreground); }
+
+/* ---------- Hero: full-width green band + tatreez gold hem ---------- */
+
+body .hero[data-cro-block="hero"] {
+  position: relative;
+  background: var(--color-hero-band);
+  color: var(--color-on-hero-band);
+  text-align: center;
+  padding: var(--space-12) 1.25rem calc(var(--space-10) + 8px);
+  margin-inline: -1.25rem;
+  border-bottom: none;
+}
+@media (min-width: 48rem) {
+  body .hero[data-cro-block="hero"] {
+    margin-inline: -1.5rem;
+    padding: 3.25rem 1.5rem calc(var(--space-12) + 8px);
+  }
+}
+/* Gold tatreez saw hem on a deep-forest plinth. */
+body .hero[data-cro-block="hero"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  background: var(--color-forest) var(--tatreez-gold-saw) repeat-x center / 8px 8px;
+}
+body .hero[data-cro-block="hero"] .hero-copy {
+  max-width: 52rem;
+}
+/* Menu-category pages: category food photo behind the green hero band. */
+body .cat-hero .hero[data-cro-block="hero"] {
+  background-image:
+    linear-gradient(rgba(15, 42, 30, 0.82), rgba(15, 42, 30, 0.90)),
+    var(--cat-img);
+  background-size: cover;
+  background-position: center;
+}
+body .hero[data-cro-block="hero"] h1 { color: #FFFFFF; }
+body .hero[data-cro-block="hero"] .hero-subheading {
+  color: #E4F0E4;
+  font-size: 1.12rem;
+  font-family: var(--font-body);
+}
+body .hero[data-cro-block="hero"] .hero-copy .cta-bar { margin-top: 1.35rem; }
+body .hero[data-cro-block="hero"] .cta-bar .cta-primary {
+  background: var(--color-surface);
+  color: var(--color-primary-edge);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+body .hero[data-cro-block="hero"] .cta-bar .cta-primary:hover { color: var(--color-primary); }
+body .hero[data-cro-block="hero"] .cta-bar .cta-secondary {
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Arabic hospitality anchor (draft — hidden until owner sign-off). */
+body .hero[data-cro-block="hero"] .ahlan {
+  font-family: var(--font-arabic);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Value-prop strip: translucent chips on the green band. */
+body .hero[data-cro-block="hero"] .value-props {
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+body .hero[data-cro-block="hero"] .value-props .value-prop {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  box-shadow: none;
+  color: #FFFFFF;
+}
+body .hero[data-cro-block="hero"] .value-props .value-prop-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: #FFFFFF;
+}
+body .hero[data-cro-block="hero"] .value-props .value-prop-sublabel { color: #E4F0E4; }
+
+/* Value props outside the hero (fallback). */
+body .value-props { gap: var(--space-4); }
+body .value-props .value-prop-label { font-family: var(--font-display); font-weight: 600; }
+body .value-props .value-prop-sublabel { color: var(--color-muted-foreground); }
+
+/* ---------- CTA banner: full-width green band with gold tatreez hem ---------- */
+
+body .cta-banner {
+  position: relative;
+  background: var(--color-primary);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-raised);
+  border-top: none;
+  overflow: hidden;
+  padding: var(--space-8) var(--space-6);
+  color: #FFFFFF;
+}
+body .cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--color-forest) var(--tatreez-gold-saw) repeat-x center / 8px 8px;
+}
+body .cta-banner .cta-banner-headline {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  color: #FFFFFF;
+}
+body .cta-banner .cta-bar .cta-primary {
+  background: var(--color-surface);
+  color: var(--color-primary-edge);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+body .cta-banner .cta-bar .cta-primary:hover { color: var(--color-primary); }
+
+/* ---------- Sticky call bar ---------- */
+
+body .sticky-call-bar {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+/* ---------- Sections rhythm ---------- */
+
+main > * + *,
+main article > section + section,
+main article > section + nav {
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  main article > section + section,
+  main article > section + nav {
+    margin-top: var(--space-12);
+  }
+}
+
+/* Proximity trust lines (neighborhood pages). */
+main .proximity-line {
+  color: var(--color-muted-foreground);
+  border-left: 3px solid var(--color-stitch);
+  padding-left: var(--space-3);
+  font-style: normal;
+}
+
+/* Related-links nav */
+main .related ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  list-style: none;
+  padding: 0;
+}
+main .related li a {
+  display: inline-block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: var(--space-2) var(--space-4);
+  text-decoration: none;
+  font-weight: 500;
+}
+main .related li a:hover { border-color: var(--color-primary); }
+
+/* ---------- Motion restraint ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  body .cta-bar .cta,
+  body .sticky-call-bar .sticky-action {
+    transition: none;
+  }
+  body .cta-bar .cta-primary:hover,
+  body .cta-bar .cta-primary:active,
+  body .sticky-call-bar .sticky-call:hover,
+  body .sticky-call-bar .sticky-call:active {
+    transform: none;
+  }
+}

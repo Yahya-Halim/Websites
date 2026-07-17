@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-game-day-wings-0",
+  "questionRef": "questions/faq-occasions-game-day-wings-0",
+  "text": "A good rule of thumb is 6 to 8 wings per person for a group that's making wings the main event, or 4 to 5 if you're also serving tenders and sides. For a crowd of eight to ten, ordering party wings plus a 10pc whole wings meal keeps everyone fed. Call (319) 221-1040 and we'll help you size it.",
+  "cites": [
+    "occasions/game-day-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/game-day-wings.json#faqs[0]",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "site",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Menu", "href": "/menu/" },
+    { "label": "Catering", "href": "/occasions/catering/" },
+    { "label": "About", "href": "/about/" },
+    { "label": "FAQ", "href": "/faq/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "footer": {
+    "links": [
+      { "label": "Menu", "href": "/menu/" },
+      { "label": "Catering", "href": "/occasions/catering/" },
+      { "label": "How to Order", "href": "/how-to-order/" },
+      { "label": "About", "href": "/about/" },
+      { "label": "FAQ", "href": "/faq/" },
+      { "label": "Contact & Directions", "href": "/contact/" }
+    ],
+    "copyrightText": "© 2025–2026 Pita Kabab · 3100 6th St SW, Cedar Rapids, IA 52404"
+  },
+  "schemaMap": {},
+  "cta": { "text": "Call (319) 440-3709", "href": "tel:+13194403709" },
+  "ctaPrimary": { "text": "Call (319) 440-3709", "href": "tel:+13194403709" },
+  "valueProps": [
+    {
+      "label": "Palestinian family recipes",
+      "sublabel": "Shawarma, kabobs, falafel & mezze"
+    },
+    {
+      "label": "Made fresh daily",
+      "sublabel": "Hummus and sides prepared every morning"
+    },
+    {
+      "label": "Catering for any gathering",
+      "sublabel": "Office lunches, parties & family dinners"
+    }
+  ],
+  "ctaBanner": {
+    "headline": "Order ahead from Pita Kabab",
+    "sublabel": "Call now and pick up at 3100 6th St SW, Cedar Rapids"
+  }
+}

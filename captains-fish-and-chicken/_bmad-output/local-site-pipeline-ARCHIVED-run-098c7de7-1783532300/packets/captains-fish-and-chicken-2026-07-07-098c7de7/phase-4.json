@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 4,
+  "phaseName": "BUILD",
+  "createdAt": "2026-07-08T02:04:13.476Z",
+  "specialist": "seo-content-writer",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md",
+  "requiredArtifactFields": [
+    "filesChanged",
+    "routesGenerated",
+    "commandsRun",
+    "buildResult"
+  ],
+  "checklist": [
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    },
+    {
+      "id": "review-notes-file",
+      "label": "Require reviewer notes to travel by --notes-file."
+    }
+  ],
+  "outputPaths": {
+    "workbench": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-4",
+    "phaseArtifact": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-4\\phase-4-artifact.json"
+  },
+  "artifactEvidencePaths": {},
+  "regeneration": {
+    "attempt": 3
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": [
+      "build-quality"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation."
+}

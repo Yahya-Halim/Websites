@@ -1,0 +1,367 @@
+[
+  {
+    "slug": "catering",
+    "title": "Mediterranean Catering in Cedar Rapids - Pita Kabab",
+    "headline": "Mediterranean catering in Cedar Rapids",
+    "body": "Pita Kabab caters Mediterranean and Middle Eastern food across the Cedar Rapids area — shawarma, kabobs, falafel, hummus and more, built from the same published menu served at the counter at 3100 6th St SW. Every event is quoted individually: call (319) 440-3709 or stop in to talk through your headcount, date and menu. Catering packages and terms are being finalized with the owner, so pricing and package details are confirmed when you book rather than published here.",
+    "featuredItems": [
+      { "sectionSlug": "platters", "itemIndex": 0 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 0 },
+      { "sectionSlug": "sandwiches-wraps", "itemIndex": 1 }
+    ],
+    "faqs": [
+      {
+        "question": "How do I book catering from Pita Kabab?",
+        "answer": "Call (319) 440-3709 and describe your event — date, headcount and the dishes you have in mind. The restaurant quotes each event individually."
+      },
+      {
+        "question": "What kind of food does Pita Kabab cater?",
+        "answer": "The catering menu draws on the restaurant's published menu families: shawarma and kabab platters, falafel, hummus and mezze, wings, and baklava for dessert."
+      },
+      {
+        "question": "How far in advance should I order catering?",
+        "answer": "Lead times depend on the size of the order — call as early as you can and the restaurant will tell you what is possible for your date."
+      },
+      {
+        "question": "Does Pita Kabab deliver catering orders?",
+        "answer": "Ask about delivery and setup for your location when you book — arrangements are confirmed per event."
+      },
+      {
+        "question": "Can Pita Kabab handle vegetarian guests?",
+        "answer": "Yes — falafel, hummus and foul from the published menu are vegetarian, so mixed groups are easy to feed."
+      },
+      {
+        "question": "How much does catering cost?",
+        "answer": "Published catering pricing is pending owner confirmation, so every order is quoted when you call (319) 440-3709."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/occasions/wedding-catering/", "anchor": "Wedding catering", "context": "related" },
+      { "slug": "/occasions/corporate-catering/", "anchor": "Corporate & office lunch catering", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Platters menu", "context": "related" },
+      { "slug": "/menu/mediterranean-delight/", "anchor": "Hummus & mezze", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Mediterranean Catering in Cedar Rapids - Pita Kabab",
+      "description": "Mediterranean catering in Cedar Rapids from Pita Kabab: shawarma, kabobs, falafel, hummus and mezze for events of any size. Call (319) 440-3709 for a quote.",
+      "canonical": "https://pitakabab.example/occasions/catering/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "wedding-catering",
+    "title": "Wedding Catering Cedar Rapids - Pita Kabab",
+    "headline": "Wedding catering in Cedar Rapids",
+    "body": "Feed a wedding crowd something memorable: carved shawarma, grilled kabab platters, and a mezze spread of hummus and fresh pita. Pita Kabab builds wedding menus from its published menu families and quotes each celebration individually — call (319) 440-3709 with your date, venue and guest count to start planning. Rehearsal dinners and receptions welcome.",
+    "featuredItems": [
+      { "sectionSlug": "platters", "itemIndex": 1 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 0 },
+      { "sectionSlug": "desserts", "itemIndex": 0 }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab cater weddings in Cedar Rapids?",
+        "answer": "Yes — call (319) 440-3709 with your date, venue and headcount, and the restaurant will build a quote around the published menu families."
+      },
+      {
+        "question": "What wedding menu styles work best?",
+        "answer": "Mezze-style spreads (hummus, falafel, salads) alongside carved shawarma and mix-grill platters serve mixed crowds well — vegetarians included."
+      },
+      {
+        "question": "Can you serve both a rehearsal dinner and the reception?",
+        "answer": "Ask when you call — each event is scheduled and quoted individually."
+      },
+      {
+        "question": "Is there a dessert option for weddings?",
+        "answer": "Baklava from the published desserts menu makes a traditional sweet finish; discuss quantities when you book."
+      },
+      {
+        "question": "How early should we book wedding catering?",
+        "answer": "As early as possible for large events — call (319) 440-3709 and the restaurant will confirm what is possible for your date."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Platters menu", "context": "related" },
+      { "slug": "/menu/mediterranean-delight/", "anchor": "Hummus & mezze", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Wedding Catering Cedar Rapids - Pita Kabab",
+      "description": "Wedding catering in Cedar Rapids: shawarma, kabob platters and mezze spreads from Pita Kabab. Call (319) 440-3709 to plan your reception menu.",
+      "canonical": "https://pitakabab.example/occasions/wedding-catering/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "corporate-catering",
+    "title": "Corporate & Office Lunch Catering Cedar Rapids - Pita Kabab",
+    "headline": "Corporate & office lunch catering in Cedar Rapids",
+    "body": "Office lunches, client meetings and team events run better on shawarma. Pita Kabab caters corporate gatherings across Cedar Rapids with wrap trays, rice bowls, platters and mezze from its published menu — food that holds up on a conference table and covers vegetarian colleagues too. Call (319) 440-3709 to arrange an order for your office; each order is quoted individually.",
+    "featuredItems": [
+      { "sectionSlug": "sandwiches-wraps", "itemIndex": 1 },
+      { "sectionSlug": "bowls", "itemIndex": 0 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 0 }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab do office lunch catering?",
+        "answer": "Yes — sandwich and wrap trays, bowls, platters and mezze are all built from the published menu. Call (319) 440-3709 to set up an order."
+      },
+      {
+        "question": "How much notice does an office order need?",
+        "answer": "It depends on size — call ahead and the restaurant will confirm timing for your headcount."
+      },
+      {
+        "question": "Can you feed a team with mixed diets?",
+        "answer": "Yes — falafel, hummus and foul are vegetarian options from the published menu, alongside chicken and beef dishes."
+      },
+      {
+        "question": "Do you deliver to offices?",
+        "answer": "Ask about delivery for your office location when you book — arrangements are confirmed per order."
+      },
+      {
+        "question": "Is there a minimum order for corporate catering?",
+        "answer": "Order minimums and package terms are being finalized with the owner — the restaurant will confirm details when you call."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/lunch/", "anchor": "Quick Mediterranean lunch", "context": "related" },
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Sandwiches & wraps", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Corporate & Office Lunch Catering Cedar Rapids - Pita Kabab",
+      "description": "Corporate catering in Cedar Rapids: shawarma wrap trays, bowls and mezze for office lunches and meetings. Call Pita Kabab at (319) 440-3709.",
+      "canonical": "https://pitakabab.example/occasions/corporate-catering/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "graduation-party-catering",
+    "title": "Graduation Party Catering Cedar Rapids - Pita Kabab",
+    "headline": "Graduation party catering in Cedar Rapids",
+    "body": "Graduation season in Cedar Rapids means a house full of guests — feed them party platters instead of pizza. Pita Kabab caters graduation parties with mix-grill platters, wings, wraps and hummus spreads from its published menu, sized to your guest list. Call (319) 440-3709 with your party date and headcount for a quote.",
+    "featuredItems": [
+      { "sectionSlug": "platters", "itemIndex": 1 },
+      { "sectionSlug": "wings", "itemIndex": 0 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 0 }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab cater graduation parties?",
+        "answer": "Yes — call (319) 440-3709 with your date and guest count and the restaurant will quote a party menu from its published menu families."
+      },
+      {
+        "question": "What foods work for a graduation open house?",
+        "answer": "Party wings, mix-grill platters, wrap trays and hummus with pita hold up well for come-and-go guests."
+      },
+      {
+        "question": "Graduation weekends are busy — how early should I book?",
+        "answer": "Book as early as you can; May and June dates fill fast across town. The restaurant will confirm availability when you call."
+      },
+      {
+        "question": "Can you cover vegetarian guests at a party?",
+        "answer": "Yes — falafel, hummus and foul from the published menu are vegetarian."
+      },
+      {
+        "question": "Is delivery available for party orders?",
+        "answer": "Ask about delivery and setup when you book — arrangements are confirmed per event."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/game-day-catering/", "anchor": "Game day wings & platters", "context": "related" },
+      { "slug": "/menu/wings/", "anchor": "Wings menu", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Graduation Party Catering Cedar Rapids - Pita Kabab",
+      "description": "Graduation party catering in Cedar Rapids: platters, wings and mezze from Pita Kabab, sized to your open house. Call (319) 440-3709 for a quote.",
+      "canonical": "https://pitakabab.example/occasions/graduation-party-catering/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "family-dinner",
+    "title": "Family Dinner Deals - Pita Kabab Cedar Rapids",
+    "headline": "Family dinner at Pita Kabab",
+    "body": "Dinner for the whole family without the whole-family price tag: Pita Kabab's published menu includes a dedicated kids menu alongside full-size platters, sandwiches and bowls, so parents and kids can each get their own plate at the counter. It is counter service — order once, grab a table or take it home. Current family offers and kids-meal pricing are being confirmed with the owner; call (319) 440-3709 for today's details.",
+    "featuredItems": [
+      { "sectionSlug": "kids-meals", "itemIndex": 0 },
+      { "sectionSlug": "platters", "itemIndex": 0 },
+      { "sectionSlug": "sandwiches-wraps", "itemIndex": 0 }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab have a kids menu?",
+        "answer": "Yes — the published menu includes a kids meals section with smaller portions for younger guests."
+      },
+      {
+        "question": "Is Pita Kabab family-friendly for dine-in?",
+        "answer": "It is a casual counter-service restaurant — order at the counter, then eat in or take it to go."
+      },
+      {
+        "question": "Are there current family dinner deals?",
+        "answer": "Offer details are being confirmed with the owner and are not published here yet — call (319) 440-3709 to ask about today's family options."
+      },
+      {
+        "question": "What should picky eaters try first?",
+        "answer": "The kids menu is the easy start; chicken shawarma sandwiches and rice bowls are approachable picks from the main menu."
+      },
+      {
+        "question": "Can we order family dinner for pickup?",
+        "answer": "Yes — call ahead at (319) 440-3709 and pick up at 3100 6th St SW, or order delivery through DoorDash."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/kids-meals/", "anchor": "Kids meals menu", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Platters menu", "context": "related" },
+      { "slug": "/first-visit-ordering-guide/", "anchor": "First visit? How to order", "context": "related" },
+      { "slug": "/contact/", "anchor": "Contact & directions", "context": "related" }
+    ],
+    "seo": {
+      "title": "Family Dinner Deals - Pita Kabab Cedar Rapids",
+      "description": "Family dinner at Pita Kabab in Cedar Rapids: kids meals plus full-size platters and sandwiches, counter service, dine in or take out. Call (319) 440-3709.",
+      "canonical": "https://pitakabab.example/occasions/family-dinner/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "lunch",
+    "title": "Quick Mediterranean Lunch in SW Cedar Rapids - Pita Kabab",
+    "headline": "Quick Mediterranean lunch on the SW side",
+    "body": "Need a real lunch on Cedar Rapids' southwest side? Pita Kabab is counter service at 3100 6th St SW — order a shawarma wrap, falafel sandwich or rice bowl and be back on your way. Per the restaurant's published hours it opens at 10am most days (closed Wednesday — call to confirm), which makes early lunches easy for the 6th Street corridor, Kirkwood-area students and airport-side workers.",
+    "featuredItems": [
+      { "sectionSlug": "sandwiches-wraps", "itemIndex": 1 },
+      { "sectionSlug": "bowls", "itemIndex": 0 },
+      { "sectionSlug": "sandwiches-wraps", "itemIndex": 0 }
+    ],
+    "faqs": [
+      {
+        "question": "How fast is lunch at Pita Kabab?",
+        "answer": "It is counter service — order at the register and your food is made to order. Call ahead at (319) 440-3709 if you are on a tight break."
+      },
+      {
+        "question": "What time does Pita Kabab open for lunch?",
+        "answer": "Published hours say 10am most days and 11am Sunday, closed Wednesday — please call to confirm before you head over."
+      },
+      {
+        "question": "What are the go-to lunch orders?",
+        "answer": "Chicken shawarma sandwiches, falafel wraps and rice bowls are the quick, one-hand-friendly picks from the published menu."
+      },
+      {
+        "question": "Is there a vegetarian lunch option?",
+        "answer": "Yes — the falafel sandwich and hummus from the published menu are vegetarian."
+      },
+      {
+        "question": "Can I get lunch delivered?",
+        "answer": "Delivery runs through DoorDash; pickup orders can be called in at (319) 440-3709."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/sandwiches-wraps/", "anchor": "Sandwiches & wraps", "context": "related" },
+      { "slug": "/menu/bowls/", "anchor": "Bowls menu", "context": "related" },
+      { "slug": "/neighborhoods/near-kirkwood-community-college/", "anchor": "Near Kirkwood Community College", "context": "related" },
+      { "slug": "/occasions/corporate-catering/", "anchor": "Office lunch catering", "context": "related" }
+    ],
+    "seo": {
+      "title": "Quick Mediterranean Lunch in SW Cedar Rapids - Pita Kabab",
+      "description": "Quick counter-service Mediterranean lunch at 3100 6th St SW, Cedar Rapids: shawarma wraps, falafel and bowls. Open from 10am most days — call to confirm.",
+      "canonical": "https://pitakabab.example/occasions/lunch/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "game-day-catering",
+    "title": "Game Day Wings & Platters - Pita Kabab Cedar Rapids",
+    "headline": "Game day wings & platters",
+    "body": "Upgrade the watch party: Pita Kabab's published menu includes ten-piece party wings plus mix-grill platters, wrap trays and hummus that travel well and feed a living room full of fans. Order party-sized spreads for game day by calling (319) 440-3709 — pickup at 3100 6th St SW, or ask about arrangements for larger orders.",
+    "featuredItems": [
+      { "sectionSlug": "wings", "itemIndex": 0 },
+      { "sectionSlug": "platters", "itemIndex": 1 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 0 }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab have wings for game day?",
+        "answer": "Yes — the published menu includes party wings in a ten-piece size, plus platters and wraps that round out a spread."
+      },
+      {
+        "question": "How do I order a game-day spread?",
+        "answer": "Call (319) 440-3709 with your headcount and kickoff time; larger orders benefit from advance notice."
+      },
+      {
+        "question": "What travels well for a watch party?",
+        "answer": "Wings, mix-grill platters and hummus with pita all hold up on the ride and on the coffee table."
+      },
+      {
+        "question": "Can I mix vegetarian options into a game-day order?",
+        "answer": "Yes — falafel and hummus from the published menu are vegetarian and party-friendly."
+      },
+      {
+        "question": "Is game-day delivery available?",
+        "answer": "Regular orders can be delivered through DoorDash; for big party orders, ask about arrangements when you call."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/wings/", "anchor": "Wings menu", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Platters menu", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" },
+      { "slug": "/how-to-order/", "anchor": "How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Game Day Wings & Platters - Pita Kabab Cedar Rapids",
+      "description": "Game day food in Cedar Rapids: ten-piece party wings, mix-grill platters and hummus spreads from Pita Kabab. Call (319) 440-3709 to order for kickoff.",
+      "canonical": "https://pitakabab.example/occasions/game-day-catering/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  },
+  {
+    "slug": "vegetarian-mediterranean",
+    "title": "Vegetarian Mediterranean Meals - Pita Kabab Cedar Rapids",
+    "headline": "Vegetarian Mediterranean meals in Cedar Rapids",
+    "body": "Mediterranean food is one of the easiest cuisines to eat vegetarian, and Pita Kabab's published menu proves it: falafel sandwiches, hummus with fresh pita, and slow-simmered foul are all meat-free by tradition, not as an afterthought. Whether you are vegetarian yourself or feeding a mixed table, the counter at 3100 6th St SW has real options — call (319) 440-3709 with any ingredient questions.",
+    "featuredItems": [
+      { "sectionSlug": "sandwiches-wraps", "itemIndex": 0 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 0 },
+      { "sectionSlug": "mediterranean-delight", "itemIndex": 1 }
+    ],
+    "faqs": [
+      {
+        "question": "What vegetarian dishes does Pita Kabab serve?",
+        "answer": "From the published menu: falafel sandwiches, hummus, and foul (fava beans) are vegetarian staples."
+      },
+      {
+        "question": "Is falafel vegan?",
+        "answer": "Falafel itself is made from chickpeas and herbs; ask at the counter about sauces and sides if you are avoiding all animal products."
+      },
+      {
+        "question": "Can vegetarians and meat eaters order together easily?",
+        "answer": "Yes — it is one counter line, so a shawarma platter and a falafel wrap come out side by side."
+      },
+      {
+        "question": "Are the vegetarian dishes made in-house?",
+        "answer": "Preparation details are best confirmed with the counter staff — call (319) 440-3709 with specific ingredient or prep questions."
+      },
+      {
+        "question": "Do you have vegetarian catering options?",
+        "answer": "Yes — hummus, falafel and foul scale well for events; mention vegetarian counts when you request a catering quote."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/menu/mediterranean-delight/", "anchor": "Hummus & mezze menu", "context": "related" },
+      { "slug": "/falafel-cedar-rapids/", "anchor": "Falafel in Cedar Rapids", "context": "related" },
+      { "slug": "/hummus-cedar-rapids/", "anchor": "Hummus in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Vegetarian Mediterranean Meals - Pita Kabab Cedar Rapids",
+      "description": "Vegetarian Mediterranean food in Cedar Rapids: falafel, hummus and foul from Pita Kabab's menu at 3100 6th St SW. Call (319) 440-3709.",
+      "canonical": "https://pitakabab.example/occasions/vegetarian-mediterranean/"
+    },
+    "schemaTypes": ["WebPage", "FAQPage"]
+  }
+]

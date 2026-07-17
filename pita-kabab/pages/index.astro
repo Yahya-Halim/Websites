@@ -1,0 +1,87 @@
+---
+import Base from '@engine/layouts/Base.astro';
+// Injected from INSIDE the engine package (integration.ts injectRoute), so the
+// generator resolves via the @engine/generators Vite alias — NOT the package
+// subpath (that channel is for files scaffolded into consumer projects).
+import { renderWebPageJsonLd } from '@engine/generators';
+import { getEntry } from 'astro:content';
+// CRO blocks (T4) composed into the shared home landing (T14). Engine-injected
+// file → the @engine/components alias (same channel as Base/Header/Footer).
+import Hero from '@engine/components/Hero.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import LeadForm from '@engine/components/LeadForm.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import FinancingBlock from '@engine/components/FinancingBlock.astro';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const title = business?.name ?? 'Welcome';
+const description = business?.description ?? '';
+const tagline = business?.tagline ?? '';
+
+// Site root from the configured `site` (business.domain in astro.config.mjs);
+// falls back to '/' when unset so the block still renders during dev.
+const siteRoot = Astro.site ? Astro.site.href : '/';
+
+// `isPartOf` on the WebPage must reference the on-page WebSite node by @id.
+// renderWebSiteJsonLd builds that @id from the RAW business.domain
+// (`${domain}/#website`, single slash — domain carries no trailing slash),
+// while renderWebPageJsonLd builds `${websiteUrl}/#website`. Sourcing
+// websiteUrl from Astro.site.href (which normalizes with a TRAILING slash)
+// would yield `//#website` (double slash) and dangle the reference. Source
+// websiteUrl from business.domain so both @ids are byte-identical. Fall back
+// to siteRoot when the business entry is unavailable during dev (domain is a
+// schema-required field, so it is present in real builds).
+const websiteUrl = business?.domain ?? siteRoot;
+
+// Preserve pre-CRO projects that still carry the legacy single call CTA. Limit
+// the fallback to tel: links so homepage CTA bars keep their call intent.
+const legacyTelCta = site?.cta?.href?.startsWith('tel:') ? site.cta : undefined;
+const homepageCtaPrimary = site?.ctaPrimary ?? legacyTelCta;
+const homepageCtaSecondary = site?.ctaSecondary;
+
+// WebPage block for the home page. Sources the REQUIRED WebPageInput fields
+// (name, url, description, websiteName, websiteUrl); optional fields omitted —
+// default WebPage @type, no aboutName, no speakableSelectors.
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: siteRoot,
+  description,
+  websiteName: title,
+  websiteUrl,
+});
+---
+
+<Base title={title} description={description} jsonLd={[webPageLd]}>
+  {/* Hero owns the page's single <h1> + hero-surface dual CTA (data-cro-surface
+      ="hero") + the marked ValueProps strip (from site.valueProps, R3-F3). */}
+  <Hero
+    heading={title}
+    subheading={tagline || description}
+    ctaPrimary={homepageCtaPrimary}
+    ctaSecondary={homepageCtaSecondary}
+    valueProps={site?.valueProps}
+  />
+
+  {/* Conditional promo blocks — render ONLY when their data is present (KG7). */}
+  <OfferCallout offers={site?.offers} />
+  <FinancingBlock providers={site?.financing?.providers} />
+
+  {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+  <TrustBar items={site?.trustBar?.items} />
+
+  {/* Mid-page full-width CTA band (site.ctaBanner) + dual CTA. */}
+  <CtaBanner
+    ctaBanner={site?.ctaBanner}
+    ctaPrimary={homepageCtaPrimary}
+    ctaSecondary={homepageCtaSecondary}
+  />
+
+  {/* Lead-capture form → external provider endpoint (site.leadForm). */}
+  <LeadForm leadForm={site?.leadForm} />
+</Base>

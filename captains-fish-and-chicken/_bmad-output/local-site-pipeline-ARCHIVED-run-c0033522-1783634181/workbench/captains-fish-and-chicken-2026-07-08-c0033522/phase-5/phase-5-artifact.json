@@ -1,0 +1,87 @@
+{
+  "phase": 5,
+  "summary": "Phase 5 VALIDATE (run v2). The identity wall broke this phase: owner supplied real values (domain https://captains-fish-chicken.netlify.app, email captainsfishchicken@gmail.com, GA4 G-7W35DKNK6Z). Identity amended via the audited Phase 3 amend path, Phase 4 re-sealed with build-quality re-review, 4->5 preflight PASSED. factory validate: EXIT 0 — zero gates, zero advisories (first ship-clean validate of the engagement). Independent SEO/GEO audit of all 38 pages: PASSED with 0 blocking findings (173 JSON-LD blocks, 0 parse errors; 87/87 menu prices reconciled exactly; GA4 exactly once per page); 3 of 4 advisories fixed pre-seal (home title 74->61 chars; contact/menu/neighborhood description outliers), rebuild re-validated exit 0. Remaining advisories are deliberate (conservative Fri-Sat structured-hours omission pending owner confirmation) or launch-time (4.4 rating sync).",
+  "checklist": [
+    {
+      "id": "run-factory-validate",
+      "status": "done",
+      "note": "factory validate exit 0; log at evidence path with command, exit code, output, and all six gate ids"
+    },
+    {
+      "id": "run-seo-geo-audit",
+      "status": "done",
+      "note": "independent 38-page audit passed, 0 blocking; report at evidence path with command, status, findings, fix notes"
+    },
+    {
+      "id": "fix-then-revalidate",
+      "status": "done",
+      "note": "3 advisories fixed pre-seal (title + 3 description outliers); rebuild; validate re-confirmed exit 0"
+    },
+    {
+      "id": "founder-checklist",
+      "status": "done",
+      "note": "identity real (owner-supplied); truthfulness guards held (no calamari, no dine-in claims, hours caveated, SW only as disambiguation)"
+    }
+  ],
+  "validationRuns": [
+    {
+      "id": "factory-validate-post-identity",
+      "command": "factory validate",
+      "status": "passed",
+      "exitCode": 0,
+      "note": "zero gates, zero advisories across the 38-route dist (post identity swap + rebuild)"
+    },
+    {
+      "id": "seo-geo-audit-v2",
+      "command": "/aaron-marketing:seo-geo dist/ --mode audit --full --tech --visibility",
+      "status": "passed",
+      "note": "38/38 pages; 0 blocking; 173 ld+json parsed 0 errors; menu prices reconciled; gtag once/page"
+    },
+    {
+      "id": "factory-validate-post-fixes",
+      "command": "factory validate",
+      "status": "passed",
+      "exitCode": 0,
+      "note": "re-confirmed exit 0 after advisory fixes (title + descriptions) and rebuild"
+    }
+  ],
+  "factoryValidate": {
+    "command": "factory validate",
+    "exitCode": 0,
+    "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/factory-validate.log",
+    "checkedGateIds": [
+      "schema-floor",
+      "route-completeness",
+      "cro-block-presence",
+      "do-not-ship-guards",
+      "sap-anti-doorway",
+      "graph-gate"
+    ]
+  },
+  "seoGeoAudit": {
+    "command": "/aaron-marketing:seo-geo dist/ --mode audit --full --tech --visibility",
+    "status": "passed",
+    "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/seo-geo-audit.md",
+    "blockingFindings": 0,
+    "advisoryFindings": 4,
+    "advisoriesFixedPreSeal": 3
+  },
+  "failures": [],
+  "fixRounds": [
+    {
+      "round": 1,
+      "scope": "SEO advisory fixes pre-seal",
+      "changes": [
+        "home <title> 74 -> 61 chars",
+        "/contact/ description 353 -> 161 chars (page-specific)",
+        "/menu/ description 40 -> 203 chars (rich menu summary)",
+        "both neighborhood descriptions 195 -> 153 chars"
+      ],
+      "revalidation": "factory build + factory validate exit 0"
+    }
+  ],
+  "remainingAdvisories": [
+    "Restaurant openingHoursSpecification covers Mon-Thu + Sun only (Fri-Sat omitted) — DELIBERATE sealed conservative-hours decision until the owner confirms the 11pm close; visible text + llms.txt carry the caveated full week",
+    "Plain-text \"Rated 4.4 on Google\" (~20 pages; correctly NOT aggregateRating schema) — verify against live GBP at launch and keep in sync"
+  ]
+}

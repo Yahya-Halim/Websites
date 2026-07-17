@@ -1,0 +1,119 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "briefHash": "739d57b06aec4a7c29a50f60cba3efb418607c3ec730bcaaa80de1792280b6ef",
+  "phase": 0,
+  "exitedAt": "2026-07-08T17:48:37.019Z",
+  "specialistInvoked": "local-business-discovery",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-0/phase-0-artifact.json",
+    "artifactHash": "2a9d222f14d080b10e5f3f5ab32da71748224f0da9789d1ccac9d7ca08893122",
+    "contract": "interview transcript summary, web footprint findings, business identity, confirmed facts, unverified claims, missing answers, no build output",
+    "webFootprintFindings": {
+      "sweepDate": "2026-07-08",
+      "detailFile": "web-footprint-findings.json",
+      "sourcesChecked": [
+        {
+          "source": "Google knowledge panel (direct)",
+          "status": "not-searched"
+        },
+        {
+          "source": "Wanderlog (Google mirror)",
+          "status": "found"
+        },
+        {
+          "source": "Yelp",
+          "status": "found"
+        },
+        {
+          "source": "TripAdvisor",
+          "status": "found"
+        },
+        {
+          "source": "Restaurantji",
+          "status": "not-found"
+        },
+        {
+          "source": "res-discover.com",
+          "status": "found"
+        },
+        {
+          "source": "DoorDash",
+          "status": "found"
+        },
+        {
+          "source": "Uber Eats",
+          "status": "found"
+        },
+        {
+          "source": "Postmates",
+          "status": "found"
+        },
+        {
+          "source": "Grubhub / Seamless",
+          "status": "found"
+        },
+        {
+          "source": "Facebook (official)",
+          "status": "found"
+        },
+        {
+          "source": "Instagram / TikTok",
+          "status": "not-found"
+        },
+        {
+          "source": "KHAK + The Gazette (press)",
+          "status": "found"
+        },
+        {
+          "source": "Apple Maps",
+          "status": "found"
+        },
+        {
+          "source": "Owned domain (DNS definitive)",
+          "status": "not-found"
+        }
+      ],
+      "findings": [
+        "NAP high-confidence and stable: Captains Fish and Chicken, 1616 1st Ave NE, Cedar Rapids IA 52402 (ZIP+4 -5431), (319) 221-1040",
+        "Hours stable across 3 concordant surfaces (Sun 11-8, M-Th 11-10, F-Sa 11-11); still no official source; Uber Eats snippet conflicts",
+        "Google 4.4 (208) unchanged (mirror-attributed)",
+        "No owned domain — definitive (4 candidate domains unregistered, Apple Maps website falls back to Yelp)",
+        "CHANGED: 3100 6th St SW converted to Pita Kabab (same owner); Captains FB page announced it",
+        "CHANGED: Gazette (updated 2026-04) reports mashed potatoes + mac and cheese added as sides (owner confirmation pending)",
+        "Press: Gazette Dec 2024 catfish feature; cornmeal breading + lemon pepper; owner managed Chicago restaurants since 2006",
+        "Delivery listings all live for 1616 (DoorDash/UberEats/Postmates/Grubhub/Seamless); no closure signals",
+        "Delivery-pool rating 3.5/53 (Postmates/Uber pool) — materially lower than Google 4.4",
+        "Aggregator menus stale (still list calamari — not on owner menu)"
+      ],
+      "discrepancies": [
+        "Hours: 3 surfaces concordant vs Uber Eats '11:30-11 daily' — owner to confirm; structured hours stay conservative",
+        "Menu delta: Gazette-reported sides additions vs owner paste — owner residue question",
+        "SW location: now Pita Kabab; stale Captains listings (Grubhub 11805992, Yelp '-2', RestaurantJump inc-52404) are citation-hygiene risks — owner cleanup item, out of site scope",
+        "Apple Maps address error: 'First Ave SE' (wrong quadrant) — owner correction item",
+        "Captains FB page actively posts Pita Kabab content — brand-signal noise",
+        "res-discover/GBP mirror lists 'Dine-in' attribute vs owner takeout-only decision — no dine-in claims on site; GBP attribute review flagged"
+      ],
+      "ownerResidueQuestions": [
+        "Confirm sides: add mashed potatoes + mac and cheese (Gazette) or keep 2026-07-07 paste as-is?",
+        "Confirm weekly hours (Uber Eats disagrees)",
+        "Identity (domain/email/GA4) still deferred to launch — unchanged?",
+        "Stale SW 'Captains' listings cleanup checklist wanted at launch?",
+        "Apple Maps wrong-quadrant correction",
+        "Real photos + logo file drop still pending"
+      ]
+    },
+    "ownerResidueQuestions": [
+      "Confirm sides: add mashed potatoes + mac and cheese (Gazette) or keep 2026-07-07 paste as-is?",
+      "Confirm weekly hours (Uber Eats disagrees)",
+      "Identity (domain/email/GA4) still deferred to launch — unchanged?",
+      "Stale SW 'Captains' listings cleanup checklist wanted at launch?",
+      "Apple Maps wrong-quadrant correction",
+      "Real photos + logo file drop still pending"
+    ]
+  },
+  "nextPhaseAllowed": [
+    1
+  ],
+  "nextPhaseHint": 1,
+  "blocking": []
+}

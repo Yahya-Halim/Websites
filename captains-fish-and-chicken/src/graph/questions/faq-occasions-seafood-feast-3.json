@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-seafood-feast-3",
+  "question": "Can I get seafood delivered?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

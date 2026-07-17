@@ -1,0 +1,63 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "briefHash": "a2e9ae6c4df7f69be3e50dfd8e28169115c7dd2a8958ef7096aefa76bec2ddc7",
+  "phase": 2,
+  "exitedAt": "2026-07-09T22:49:18.455Z",
+  "specialistInvoked": "location-matrix-planner",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "phase2-builder-v3-routeparity-20260709-e4b7",
+    "reportPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/worker-reports/captains-fish-and-chicken-2026-07-09-a701f565/phase-2-builder-report.json",
+    "reportHash": "9a70004f3472e02f7bb49e898f9d4e1fa5ce5a68966f8d60e47b7010995bd0bc",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2.json",
+    "packetHash": "3b282720a468d5d572cb74e5cfeae170500e4d45a9b93ddd5a156a016904f49a",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2-builder-capsule.json",
+    "capsuleHash": "e3b5caed3070b7a29fb4382597d45109876325bdb85e698a3c17aa01c806c4c9",
+    "status": "completed",
+    "commandsRun": [
+      "node D:/plugin/localevolve-factory/packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project \"D:/website/captains-fish-and-chicken\" --phase 2 --artifact \"D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-2/phase-2-artifact.json\" --specialist location-matrix-planner (result: ok=true, problems=[], first attempt)",
+      "node -e route-derivation: derived the live route set from src/data (landings.json 13, occasions.json 6, neighborhoods.json 2, menu.json 14 sections + home/menu-hub/contact) and diffed against the planned pageMatrix => 38 planned / 38 live, in-plan-not-live=[], in-live-not-plan=[]",
+      "node -e sha256(phase-2-artifact.json) => 2589da7ca284bde56ee19d9a02d01f5746ef70fb4746ceff2bb7473f8d0c5bb9"
+    ],
+    "filesRead": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2-builder-capsule.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\location-matrix-planner\\SKILL.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\phase-1-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline-ARCHIVED-run-c0033522-1783634181\\workbench\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-2\\phase-2-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\landings.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\occasions.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\neighborhoods.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\menu.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs",
+      "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\schemas\\phase-envelopes.ts"
+    ],
+    "filesChanged": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\phase-2-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2-builder-report.json"
+    ],
+    "verification": [
+      "inspect-artifact for phase 2 with specialist location-matrix-planner returned ok=true, problems=[] on the final artifact (first attempt, no iterations needed).",
+      "All six requiredArtifactFields (pageMatrix, pageMatrixStrategy, foldedPages, requiredCroBlocks, imageSlotPlan, minimumPageCountRationale) present and non-null; pageMatrixStrategy names the model and 8 page families; imageSlotPlan has 6 slots; founder checklist present with no unexplained ignored items.",
+      "pageMatrix contains exactly 38 unique internal routes (>=25 floor, <=500 cap) and 0 external links (ordering/delivery links recorded under orderingCtasNotPages as CTAs); restaurant reserved root slugs (menu, contact, occasions, neighborhoods) used only as their own families.",
+      "Route parity with the LIVE site verified programmatically: the planned set was diffed against the route set derived from src/data (landings 13, occasions 6, neighborhoods 2, menu sections 14, plus home/menu-hub/contact) - 38/38 match, zero deltas in either direction, matching the archived approved matrix 1:1.",
+      "Phase 1 advisories embedded as page-level notes and a copyAdvisories block: Chicago Grill never 'new' (returning brand; no Center Point Rd location), LJS NE vacancy dated June 2014 (never recent), no 'ranked #1 on Yelp' claims (Estimated only), 3100 6th St SW = Pita Kabab disambiguation-only, and the matrix-level note that the home valueProp review count (208 vs 192 drift) requires Phase 4 verification against live GBP.",
+      "artifactHash computed from the final artifact bytes after the last edit; the artifact was not touched after hashing."
+    ],
+    "specialist": "location-matrix-planner"
+  },
+  "outputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\phase-2-artifact.json",
+    "artifactHash": "2589da7ca284bde56ee19d9a02d01f5746ef70fb4746ceff2bb7473f8d0c5bb9",
+    "contract": "page matrix, folded pages, required CRO blocks, image-slot plan, minimum page-count rationale"
+  },
+  "nextPhaseAllowed": [
+    3
+  ],
+  "nextPhaseHint": 3,
+  "blocking": []
+}

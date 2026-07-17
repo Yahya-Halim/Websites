@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "briefHash": "739d57b06aec4a7c29a50f60cba3efb418607c3ec730bcaaa80de1792280b6ef",
+  "phase": 2,
+  "exitedAt": "2026-07-08T19:24:18.910Z",
+  "specialistInvoked": "location-matrix-planner",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/phase-2-artifact.json",
+    "artifactHash": "e4753185d6ffb1b42282eebdde719bbfcc394eb62c5e556451d2d2aacb8fab89",
+    "contract": "page matrix, folded pages, required CRO blocks, image-slot plan, minimum page-count rationale"
+  },
+  "nextPhaseAllowed": [
+    3
+  ],
+  "nextPhaseHint": 3,
+  "blocking": []
+}

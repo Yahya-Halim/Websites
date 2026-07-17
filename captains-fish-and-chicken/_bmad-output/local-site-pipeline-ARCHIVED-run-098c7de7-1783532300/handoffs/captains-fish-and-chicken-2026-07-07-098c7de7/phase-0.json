@@ -1,0 +1,136 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "briefHash": "b8a5b99e0e40abc4d46529fcb4be1f2d4a47cf7b471c4675d0514dbf7b5ace42",
+  "phase": 0,
+  "exitedAt": "2026-07-07T19:04:49.384Z",
+  "specialistInvoked": "local-business-discovery",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-0/phase-0-artifact.json",
+    "artifactHash": "77d2ff1ad8fbb12182c0e1c414fef545b6f4697cbb3e3a65876766cec82a54b8",
+    "contract": "interview transcript summary, web footprint findings, business identity, confirmed facts, unverified claims, missing answers, no build output",
+    "webFootprintFindings": {
+      "sweepDate": "2026-07-07",
+      "detailFile": "web-footprint-findings.json",
+      "sourcesChecked": [
+        {
+          "source": "Google Business Profile / Google Search",
+          "status": "found"
+        },
+        {
+          "source": "Yelp business page",
+          "status": "found"
+        },
+        {
+          "source": "Yelp menu page",
+          "status": "found"
+        },
+        {
+          "source": "DoorDash",
+          "status": "found"
+        },
+        {
+          "source": "Uber Eats",
+          "status": "found"
+        },
+        {
+          "source": "Grubhub",
+          "status": "found"
+        },
+        {
+          "source": "Seamless",
+          "status": "found"
+        },
+        {
+          "source": "Postmates",
+          "status": "found"
+        },
+        {
+          "source": "Slice",
+          "status": "not-found"
+        },
+        {
+          "source": "ChowNow",
+          "status": "not-found"
+        },
+        {
+          "source": "Facebook",
+          "status": "found"
+        },
+        {
+          "source": "Instagram",
+          "status": "not-found"
+        },
+        {
+          "source": "TikTok",
+          "status": "not-found"
+        },
+        {
+          "source": "Snapchat",
+          "status": "found"
+        },
+        {
+          "source": "Own website / dedicated domain",
+          "status": "not-found"
+        },
+        {
+          "source": "KHAK (local press)",
+          "status": "found"
+        },
+        {
+          "source": "The Gazette (local press)",
+          "status": "found"
+        },
+        {
+          "source": "TripAdvisor",
+          "status": "found"
+        },
+        {
+          "source": "res-discover.com (community mirror)",
+          "status": "found"
+        },
+        {
+          "source": "Wanderlog / Roadtrippers / Wheree (aggregators)",
+          "status": "found"
+        }
+      ],
+      "findings": [
+        "NAP high-confidence: Captains Fish and Chicken, 1616 1st Ave NE, Cedar Rapids, IA 52402, (319) 221-1040",
+        "Owner Ray Aqel; prior fish-chicken restaurants in MN/IL/MI; first Iowa location",
+        "Opened October 2024 in the former Brick City Grill space",
+        "Full fried fish + chicken + wings + seafood + sides menu confirmed with prices (owner paste)",
+        "Ordering on DoorDash, Uber Eats, Grubhub, Seamless, Postmates (CTAs, not pages)",
+        "Facebook is the only owned web presence; no dedicated domain exists",
+        "Google rating 4.4 / 208 reviews (aggregator-attributed 'From Google')"
+      ],
+      "discrepancies": [
+        "Hours: res-discover (unofficial) shows Sun 11-8 / Mon-Thu 11-10 / Fri-Sat 11-11; search text hinted ~9:40pm close some days; no official source — owner to confirm",
+        "Category varies by directory (Soul Food / Fast Food / Seafood / American) — positioning chosen as 'Fish, Chicken & Seafood'",
+        "Menu-price provenance was aggregator until owner supplied confirmed prices on 2026-07-07 (now resolved)",
+        "SECOND LOCATION 3100 6th St SW 52404 (ph 319-362-3114, opened May 2025) is a distinct business location — EXCLUDED from this single-location build"
+      ],
+      "ownerResidueQuestions": [
+        "Real domain, business email, GA4 measurement ID (owner will provide)",
+        "Confirm exact official weekly hours",
+        "Brand assets: logo, colors, real food/storefront photos",
+        "Dine-in seating available? (takeout/delivery/catering already supported)",
+        "Payment policy confirmation (cards / mobile pay)",
+        "Confirm the 3 hero value-props and any current promotion",
+        "Trust facts to reach >=6 genuine (else trust grid omits)"
+      ]
+    },
+    "ownerResidueQuestions": [
+      "Real domain, business email, GA4 measurement ID (owner will provide)",
+      "Confirm exact official weekly hours",
+      "Brand assets: logo, colors, real food/storefront photos",
+      "Dine-in seating available? (takeout/delivery/catering already supported)",
+      "Payment policy confirmation (cards / mobile pay)",
+      "Confirm the 3 hero value-props and any current promotion",
+      "Trust facts to reach >=6 genuine (else trust grid omits)"
+    ]
+  },
+  "nextPhaseAllowed": [
+    1
+  ],
+  "nextPhaseHint": 1,
+  "blocking": []
+}

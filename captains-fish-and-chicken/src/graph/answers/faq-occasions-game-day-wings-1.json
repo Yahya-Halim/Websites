@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-game-day-wings-1",
+  "questionRef": "questions/faq-occasions-game-day-wings-1",
+  "text": "Call (319) 221-1040 and order ahead so we can time your wings to your kickoff. Everything is fried fresh to order, so a heads-up call means hot wings ready right when you need them at 1616 1st Ave NE.",
+  "cites": [
+    "occasions/game-day-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/game-day-wings.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

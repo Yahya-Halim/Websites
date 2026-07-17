@@ -1,0 +1,24 @@
+{
+  "status": "not-configured",
+  "artifactFieldsWhenAvailable": {
+    "designTokenSource": {
+      "type": "repo"
+    },
+    "designTokenExportPath": null,
+    "designTokenHash": null,
+    "componentMappingRefs": [],
+    "figmaSyncStatus": {
+      "status": "not-configured",
+      "details": "Figma MCP / Code Connect are optional; leave optional artifact fields out when no handoff exists."
+    }
+  },
+  "notes": [
+    "Optional. These names match the Phase 3/4/5 artifact contract exactly.",
+    "Only copy artifactFieldsWhenAvailable into phase-3-artifact.json after filling real non-placeholder values.",
+    "Required before copying: designTokenSource.path, designTokenExportPath, and a 64-character designTokenHash.",
+    "Add designTokenSource.format or designTokenSource.figmaFileUrl only when those values are real and non-empty.",
+    "Do not seal failed Figma sync evidence; omit optional Figma fields or fix the sync/export first.",
+    "If no Figma/design-token handoff exists, omit these optional fields from the sealed phase artifact.",
+    "Do not store Figma access tokens, OAuth credentials, or private file dumps here."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-family-dinner-0",
+  "questionRef": "questions/faq-occasions-family-dinner-0",
+  "text": "Our family meals and combos are portioned for a hungry household. A single family deal comfortably covers a family of four, and the three-item combo stretches further for larger groups. If you're feeding five or more, ask about our fish family deals when you call (319) 221-1040 and we'll help you size the order.",
+  "cites": [
+    "occasions/family-dinner"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[0]",
+  "lastVerified": "2026-07-07"
+}

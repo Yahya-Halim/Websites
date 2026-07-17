@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 3,
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/phase-3-artifact.json",
+  "artifactHash": "b801367a98370345bfc73746c096a729eafcb03a6393ad6ddc0db4ca002d5aad",
+  "specialist": "ui-ux-pro-max",
+  "completedAt": "2026-07-08T20:04:18.582Z",
+  "amendedAt": "2026-07-08T21:32:40.440Z",
+  "amendment": 1,
+  "contract": "UI UX Pro Max design system, design/content/build plan, selected architecture, asset needs, identity decision",
+  "artifact": {
+    "phase": 3,
+    "summary": "Phase 3 DESIGN (run v2). UI UX Pro Max design system re-authored under the hardened evidence contract, consuming the hash-bound 38-route Phase 2 matrix from packet.inputEvidence.phase2. Owner-logo navy/gold system (proven in the archived run) is the v2 design source of truth, with the owner style rule (home matches interior pages) encoded. design-system.md carries Query, Stack, Generated Guidance, Local-Business Adaptations, and the new Phase 4 Build Notes handoff (exact 38 routes, project-local component architecture, 93-asset reuse, fixture identity/canonical metadata, authoring constraints incl. reviewer guardrails). identityDecision: REAL (amended 2026-07-08 — netlify.app domain + gmail + GA4 G-7W35DKNK6Z); paymentAccepted unknown -> omitted.",
+    "checklist": [
+      {
+        "id": "read-phase2-page-matrix",
+        "status": "done",
+        "note": "38 routes consumed from packet.inputEvidence.phase2 (hash e4753185...)"
+      },
+      {
+        "id": "read-phase2-image-slot-plan",
+        "status": "done",
+        "note": "REUSE 93-asset library; open-late text-hero; catering hero reused"
+      },
+      {
+        "id": "run-ui-ux-design-system",
+        "status": "done",
+        "note": "navy/gold owner-logo system re-authored for the 38-route matrix + Astro stack"
+      },
+      {
+        "id": "capture-design-system-output",
+        "status": "done",
+        "note": "design-system.md at the packet evidence path; designSystemPath copied into artifact"
+      },
+      {
+        "id": "write-phase4-build-notes",
+        "status": "done",
+        "note": "5-point build handoff: routes-match-matrix, architecture, asset handoff, identity/canonical metadata, authoring constraints"
+      },
+      {
+        "id": "record-optional-figma-token-handoff",
+        "status": "ignored",
+        "reason": "No Figma source exists for this engagement; repo-owned CSS tokens are the deterministic input - optional Figma fields omitted per contract"
+      },
+      {
+        "id": "record-identity-decision",
+        "status": "done",
+        "note": "fixture mode (owner deferral to launch); .example domain/email + G-XXXXXXXXXX"
+      },
+      {
+        "id": "document-payment-policy",
+        "status": "done",
+        "note": "paymentAccepted unknown -> omitted from JSON-LD (omit-never-fabricate)"
+      },
+      {
+        "id": "read-specialist-skill",
+        "status": "done",
+        "note": "vendored UI UX Pro Max skill path from packet"
+      },
+      {
+        "id": "fill-phase-artifact",
+        "status": "done"
+      },
+      {
+        "id": "inspect-before-complete",
+        "status": "done",
+        "note": "inspect-artifact run before seal"
+      }
+    ],
+    "designSystem": {
+      "designSystemPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/design-system.md",
+      "query": "modern nautical navy + gold fast-casual fish & chicken takeout — derived from the owner-supplied Captains shark-captain logo; sticky navy nav, gold conversion CTAs, image-overlay heroes, card-grid menu; home page visually identical in language to interior pages (left-aligned h2s, white steel-bordered cards, navy shell-only, gold CTAs-only)",
+      "stack": "Astro 6 static SSG + LocalEvolve restaurant archetype + engine-floor Base.astro layout + shared components + vanilla CSS custom-property design tokens",
+      "palette": {
+        "navyDeep": "#0B1E33",
+        "brandPrimary": "#123253",
+        "navyHover": "#1A4470",
+        "oceanBlue": "#2D74B5",
+        "brandAccent": "#F5B301",
+        "goldHover": "#DF9F00",
+        "steel": "#E8EEF4",
+        "steelBorder": "#D5DFE9",
+        "cloud": "#F7FAFC",
+        "ink": "#0B1E33",
+        "inkSoft": "#3C4F66"
+      },
+      "logoAsset": "public/logo.png — owner-supplied shark-captain emblem (file drop pending; raster placeholder in place)"
+    },
+    "designContentBuildPlan": {
+      "steps": [
+        "Author data collections from sealed inputs: business.json (NAP, conservative structured hours Mon-Thu+Sun, caveated displayText, navy/gold brand, fixture gaId/domain/email, servesCuisine + priceRange), site.json (nav/footer w/ trailing slashes incl. the orphan-fix links + new pages, call-only ctaPrimary, 3 fact-based valueProps, ctaBanner), menu.json (owner paste exactly — sides delta held), occasions.json (6, floors met), landings.json (10 -> 12: adds open-late-cedar-rapids [intent], catering-cedar-rapids [intent], location [info]; faq gains disambiguation Qs), neighborhoods.json (2; Marion facts independently substantiated or fold).",
+        "Author Business Knowledge Graph: src/graph menu(14)/occasions(6)/facts(6: hours, phone, address, serves-cuisine, price-range, year-established) nodes, ALL provenance KNOW; factory graph-seed for Q&A; wire runs graph-mode.",
+        "Project-local component layer (relative imports, NOT @engine aliases): Base.astro (tokens + global CSS), Header (navy sticky + logo + gold CTA; mobile static), Footer (navy columns), Hero (overlay/image/video variants, CRO-marker compatible).",
+        "Build the exact 38 approved routes; verify routesGenerated matches packet.inputEvidence.phase2.pageMatrix (new Phase 4 gate).",
+        "Emit JSON-LD: Restaurant (servesCuisine/priceRange/hasMenu via graph projection) + WebSite site-wide; Menu (87 priced items) on /menu; FAQPage on FAQ-bearing pages; BreadcrumbList on non-home; Speakable on every WebPage block.",
+        "Authoring constraints (binding): plan-wide calamari ban; no uncaveated hours in titles; no dine-in claims; SW address only as disambiguation content; representational-image notes; hours caveat everywhere."
+      ],
+      "contentSourceMap": {
+        "menu": "run-v2 brief owner paste (held sides delta)",
+        "keywords": "phase-1 keywordEntityFindings (8 pillars + changesVsBaseline)",
+        "competitors": "phase-1 competitorNotes (16 live, 8 quarantined)",
+        "matrix": "packet.inputEvidence.phase2.pageMatrix (38 routes, hash-bound)"
+      }
+    },
+    "selectedArchitecture": {
+      "archetype": "restaurant",
+      "framework": "Astro 6 static SSG",
+      "engine": "@localevolve/local-biz-factory-engine (file: link to local monorepo @ 92aeaae)",
+      "collections": [
+        "business",
+        "site",
+        "menu",
+        "occasions",
+        "landings",
+        "neighborhoods"
+      ],
+      "graph": "src/graph Business Knowledge Graph (menu/occasions/facts, KNOW provenance) + graph-seeded Q&A — wire graph-mode",
+      "routeModel": "home + /menu hub + /menu/[section] + /occasions/[slug] + /[slug] landings + /neighborhoods/[slug] + /contact (38 routes total)",
+      "componentChannel": "project-local Base/Header/Footer/Hero via relative imports (engine @engine aliases do not honor shadows)",
+      "schema": [
+        "Restaurant",
+        "WebSite",
+        "WebPage+Speakable",
+        "Menu",
+        "FAQPage",
+        "BreadcrumbList"
+      ],
+      "conversion": "call-only (tel:) + external ordering CTAs; no lead form, no SMS (documented exception)",
+      "figma": "none — repo-owned CSS tokens only (optional Figma fields intentionally omitted)"
+    },
+    "assetNeeds": [
+      {
+        "slot": "existing-93-asset-library",
+        "type": "image-set",
+        "brief": "REUSE archived-run renders: 87 menu items (slugify-keyed) + heroes + og; representational",
+        "representational": true
+      },
+      {
+        "slot": "home-hero-animated",
+        "type": "video",
+        "brief": "REUSE beach-loop.mp4 + webp poster/keyframes (owner-approved)",
+        "representational": true
+      },
+      {
+        "slot": "catering-intent-hero",
+        "type": "image",
+        "brief": "REUSE catering-party-pans hero on /catering-cedar-rapids",
+        "representational": true
+      },
+      {
+        "slot": "open-late-hero",
+        "type": "image",
+        "brief": "text-hero at build; optional evening representational render at Phase 6",
+        "representational": true
+      },
+      {
+        "slot": "brand-logo",
+        "type": "logo",
+        "brief": "OWNER FILE DROP pending at public/logo.png (shark-captain emblem); raster placeholder in place",
+        "representational": false
+      },
+      {
+        "slot": "real-photography",
+        "type": "photo-set",
+        "brief": "OPEN: owner photos replace representational renders when supplied",
+        "representational": false
+      }
+    ],
+    "identityDecision": {
+      "mode": "real",
+      "domain": "https://captains-fish-chicken.netlify.app",
+      "email": "captainsfishchicken@gmail.com",
+      "gaId": "G-7W35DKNK6Z",
+      "paymentAccepted": "unknown",
+      "notesFile": "identity-decision.md",
+      "rationale": "AMENDED 2026-07-08: owner supplied real values (Netlify subdomain now; custom domain can follow), real GA4 property, and a live business inbox. Fixtures fully retired; factory validate exits 0. paymentAccepted still unknown -> omitted from JSON-LD."
+    }
+  },
+  "runtimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/design-system.md",
+      "hash": "55c1da7df6ad23343abf169c224cea133b6fe7799dc90bc884f072513f2cdf74",
+      "mtimeMs": 1783546360211.432
+    }
+  }
+}

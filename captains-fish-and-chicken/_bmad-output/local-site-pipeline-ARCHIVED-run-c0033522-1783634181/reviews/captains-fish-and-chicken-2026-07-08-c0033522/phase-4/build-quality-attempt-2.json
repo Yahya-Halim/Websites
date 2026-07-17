@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 4,
+  "reviewer": "build-quality",
+  "attempt": 2,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-4/phase-4-artifact.json",
+  "artifactHash": "40fce1d595c433454b486e421558c840cd5b308ece58c9f4b98b229b923368f4",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-4/review-build-quality-r2.md",
+  "notesHash": "ce3591188a4400eee569bea65647a2b36f7e0082bbbd89ae33ffd780d3bd1db5",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-4\\build-quality-attempt-2.md",
+  "notesHeadings": [
+    "Phase 4 review — build-quality round 2 (post-identity swap)",
+    "Basis",
+    "Mechanical delta verification (gate output)",
+    "Verdict"
+  ],
+  "notes": "# Phase 4 review — build-quality round 2 (post-identity swap)\n\n**Reviewer:** build-quality (round-1 independent review + mechanical delta verification)\n**Verdict:** PASS\n**Date:** 2026-07-08\n\n## Basis\nRound 1 (independent read-only subagent): PASS 16/16 criteria, zero violations, route match 38/38,\n0 dangling links. The only change since: identity fixtures -> REAL values (domain\ncaptains-fish-chicken.netlify.app, email captainsfishchicken@gmail.com, gaId G-7W35DKNK6Z) across\nbusiness.json + 36 canonical fields, then rebuild.\n\n## Mechanical delta verification (gate output)\n- factory validate: EXIT 0 — zero gates, zero advisories (was fixture-gate-only by design)\n- 38/38 routes still built; canonical sample + sitemap on the real domain\n- gtag renders Google's recommended snippet with G-7W35DKNK6Z on 38/38 pages + tel-click events\n- No content change — identity strings only; round-1 truthfulness findings stand\n\n## Verdict\nPASS. Build is ship-clean for the first time (validate exit 0).\n",
+  "reviewedAt": "2026-07-08T21:33:31.306Z"
+}

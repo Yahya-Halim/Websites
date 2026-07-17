@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-fish-family-deals",
+  "questionRef": "questions/menu-prices-fish-family-deals",
+  "text": "Catfish, Perch & Tilapia (10 pcs): Family 49.99\nCatfish, Perch & Tilapia (20 pcs): Family 69.99\nCatfish, Perch & Tilapia (30 pcs): Family 99.99\nCatfish, Perch & Tilapia (40 pcs): Family 139.99\nCatfish, Perch & Tilapia (50 pcs): Family 166.99\nCatfish Nuggets, Half Pan: Pan 49.99\nCatfish Nuggets, Full Pan: Pan 89.99",
+  "cites": [
+    "menu/fish-family-deals"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/fish-family-deals.json",
+  "lastVerified": "2026-07-07"
+}

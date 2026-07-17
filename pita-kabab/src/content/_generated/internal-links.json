@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "links": [
+    {
+      "slug": "/",
+      "anchor": "Home",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/",
+      "anchor": "Menu",
+      "context": "inline"
+    },
+    {
+      "slug": "/occasions/catering/",
+      "anchor": "Catering",
+      "context": "inline"
+    },
+    {
+      "slug": "/about/",
+      "anchor": "About",
+      "context": "inline"
+    },
+    {
+      "slug": "/faq/",
+      "anchor": "FAQ",
+      "context": "inline"
+    },
+    {
+      "slug": "/contact/",
+      "anchor": "Contact",
+      "context": "inline"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-party-wings",
+  "questionRef": "questions/menu-prices-party-wings",
+  "text": "Party Wings Meal (8 pcs): Meal 14.99\nParty Wings Meal (12 pcs): Meal 18.99\nParty Wings Only (16 pcs): Only 24.99\nParty Wings Only (20 pcs): Only 28.99\nParty Wings, Chicken Only (30 pcs): Only 45.99\nParty Wings, Chicken Only (50 pcs): Only 79.99",
+  "cites": [
+    "menu/party-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/party-wings.json",
+  "lastVerified": "2026-07-07"
+}

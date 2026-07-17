@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-friday-fish-fry-3",
+  "question": "Can I get a fish fry delivered?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

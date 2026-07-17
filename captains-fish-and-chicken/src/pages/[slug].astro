@@ -1,0 +1,185 @@
+---
+import Base from '../layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderFaqJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+// CRO blocks (T4) composed into the landing kinds (intent/story/info/faq).
+import Hero from '../components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+// Root-level content landings: one static page per landings-collection entry
+// (search-intent pages, story/differentiator pages, info pages like about /
+// faq / how-to-order). Keyed by the entry's own `slug` field. Astro gives
+// file-defined static routes (/, /menu/, /contact/) precedence over this
+// dynamic root route, so reserved paths cannot be shadowed. Empty collection
+// → no paths generated.
+export async function getStaticPaths() {
+  const landings = await getCollection('landings');
+  return landings.map((landing) => ({
+    params: { slug: landing.data.slug },
+    props: { landing },
+  }));
+}
+
+const { landing } = Astro.props;
+const l = landing.data;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const businessName = business?.name ?? '';
+const title = l.seo.title;
+const metaDescription = l.seo.description;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site
+  ? new URL(`/${l.slug}/`, Astro.site).href
+  : `/${l.slug}/`;
+const websiteUrl = business?.domain ?? siteRoot;
+
+// schemaType lets an entry claim a more specific WebPage subtype
+// (e.g. AboutPage for /about, FAQPage when the page IS the FAQ).
+// Generated landing heroes (Higgsfield, representational) — only landings with an
+// exported hero render an image; the rest keep the text hero.
+const LANDING_HERO_IMAGES = {
+  'open-late-cedar-rapids': '/images/hero/open-late.webp',
+  'catering-cedar-rapids': '/images/hero/catering-party-pans.webp',
+};
+const landingHeroSrc = LANDING_HERO_IMAGES[l.slug];
+const landingHeroImage = landingHeroSrc
+  ? { src: landingHeroSrc, alt: `${l.title} (representational image)`, width: 1600, height: 900 }
+  : undefined;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description: metaDescription,
+  websiteName: businessName,
+  websiteUrl,
+  ...(l.schemaType ? { schemaType: l.schemaType } : {}),
+  speakableSelectors: ['.hero-copy h1', '.hero-subheading'],
+});
+
+// Home → {title}. Final current-page crumb is url-less.
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: l.title },
+  ],
+});
+
+const faqLd = renderFaqJsonLd({ faqs: l.faqs });
+---
+
+<Base title={title} description={metaDescription} jsonLd={[webPageLd, breadcrumbLd, faqLd]}>
+  <article class={`landing landing--${l.kind}`}>
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading={l.headline}
+      subheading={metaDescription}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+      image={landingHeroImage}
+    />
+
+    <section class="body">
+      <p>{l.body}</p>
+    </section>
+
+    {l.sections.length > 0 && (
+      <section class="content-sections">
+        {l.sections.map((section) => (
+          <section class="content-section">
+            <span class="eyebrow">THE CATCH</span>
+            <h2>{section.heading}</h2>
+            <p>{section.text}</p>
+          </section>
+        ))}
+      </section>
+    )}
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    {l.faqs.length > 0 && (
+      <section class="faqs" aria-labelledby="faqs-heading">
+<span class="eyebrow">GOOD TO KNOW</span>
+        <h2 id="faqs-heading">Frequently asked questions</h2>
+        <dl>
+          {l.faqs.map((faq) => (
+            <>
+              <dt>{faq.question}</dt>
+              <dd>{faq.answer}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {l.crossLinks.length > 0 && (
+      <nav class="related" aria-labelledby="related-heading">
+<span class="eyebrow">SET YOUR COURSE</span>
+        <h2 id="related-heading">Related</h2>
+        <ul>
+          {l.crossLinks.map((link) => (
+            <li><a href={link.slug}>{link.anchor}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
+    {/* Truthfulness floor: visible disclosure wherever a generated image
+        shows (catering = food render, open-late = illustration). */}
+    {landingHeroImage && <p class="image-note">Imagery is representational.</p>}
+  </article>
+</Base>
+
+<style>
+  .landing {
+    padding: 2rem 0;
+  }
+  .body p {
+    max-width: 65ch;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  .content-sections {
+    margin-top: 2.5rem;
+  }
+  .content-section {
+    max-width: 65ch;
+  }
+  /* h2 size inherits the Base clamp — a pinned 1.4rem inverted the hierarchy
+     against the FAQ/Related headings below. */
+  .content-section p {
+    line-height: 1.7;
+  }
+  .faqs,
+  .related {
+    margin-top: 2.5rem;
+  }
+  .image-note {
+    font-size: 0.8rem;
+    color: var(--ink-soft, #3c4f66);
+    margin-top: 2.5rem;
+  }
+</style>

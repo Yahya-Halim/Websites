@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-family-meals-and-combos",
+  "questionRef": "questions/menu-prices-family-meals-and-combos",
+  "text": "Captain's Family Meal Deal: Deal 59.99\nCombo Dinner — Your Choice of Two Items: Combo 18.99\nCombo Dinner — Your Choice of Three Items: Combo 21.99",
+  "cites": [
+    "menu/family-meals-and-combos"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/family-meals-and-combos.json",
+  "lastVerified": "2026-07-07"
+}

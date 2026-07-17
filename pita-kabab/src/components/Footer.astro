@@ -1,0 +1,125 @@
+---
+// Project-shadow Footer (_OVERRIDES.md channel). Contract-identical to the engine
+// shared Footer (same NAP block, CtaBar surface="footer", copyright, footer nav),
+// restyled for the amendment-2 deep-forest ground with light AAA text — the engine
+// Footer's scoped #6b6b6b / #222 colors are unreadable on forest. The gold tatreez
+// saw-band across the top and the forest background come from tokens.css
+// (body .site-footer + ::before). Renders only sealed Phase 0 data — no fabrication.
+import { getEntry } from 'astro:content';
+import CtaBar from '@engine/components/CtaBar.astro';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const businessName = business?.name;
+const phone = business?.phone;
+const address = business?.address;
+const serviceArea = business?.serviceArea;
+const hoursText = business?.hours?.displayText;
+const legacyTelCta = site?.cta?.href?.startsWith('tel:') ? site.cta : undefined;
+const footerCtaPrimary = site?.ctaPrimary ?? legacyTelCta;
+const footerCtaSecondary = site?.ctaSecondary;
+const copyrightText = site?.footer?.copyrightText
+  ?? `© ${business?.copyrightYears ?? ''} ${business?.name ?? ''}`.trim();
+---
+
+<footer class="site-footer">
+  {(businessName || phone || address || serviceArea || hoursText) && (
+    <div class="footer-nap">
+      {businessName && <p class="nap-name">{businessName}</p>}
+      {phone && (
+        <p class="nap-phone">
+          <a href={`tel:${phone}`}>{phone}</a>
+        </p>
+      )}
+      {address && (
+        <address class="nap-address">
+          {address.street}<br />
+          {address.city}, {address.state} {address.zip}
+        </address>
+      )}
+      {!address && serviceArea && (
+        <p class="nap-service-area">
+          {serviceArea.description
+            ? serviceArea.description
+            : serviceArea.areas.map((a) => a.name).join(', ')}
+        </p>
+      )}
+      {hoursText && <p class="nap-hours">{hoursText}</p>}
+    </div>
+  )}
+
+  {(footerCtaPrimary || footerCtaSecondary) && (
+    <CtaBar surface="footer" ctaPrimary={footerCtaPrimary} ctaSecondary={footerCtaSecondary} />
+  )}
+
+  <p class="copyright">{copyrightText}</p>
+  {site?.footer?.links && site.footer.links.length > 0 && (
+    <nav class="footer-nav">
+      <ul>
+        {site.footer.links.map((item) => (
+          <li><a href={item.href}>{item.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  )}
+</footer>
+
+<style>
+  .site-footer {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    color: #E6EFE6;            /* 13.03:1 on forest (AAA) */
+  }
+  .footer-nap {
+    margin: 0 0 1.25rem;
+    line-height: 1.6;
+  }
+  .nap-name {
+    font-family: var(--font-display, Georgia, serif);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #FFFFFF;            /* 15.33:1 (AAA) */
+    margin: 0 0 0.35rem;
+  }
+  .nap-phone { margin: 0 0 0.25rem; }
+  .nap-phone a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .nap-address {
+    font-style: normal;
+    margin: 0 0 0.25rem;
+    color: #E6EFE6;
+  }
+  .nap-service-area,
+  .nap-hours {
+    margin: 0 0 0.25rem;
+    color: #E6EFE6;
+  }
+  .site-footer :global(.cta-bar) {
+    justify-content: center;
+    margin: 0 0 1.25rem;
+  }
+  .copyright {
+    margin: 0 0 0.75rem;
+    font-size: 0.875rem;
+    color: #C7D6C7;            /* 8.6:1 on forest (AAA) */
+  }
+  .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  .footer-nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+  }
+  .footer-nav a:hover { text-decoration: underline; }
+</style>

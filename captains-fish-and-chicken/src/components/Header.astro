@@ -1,0 +1,287 @@
+---
+// Project Header — modern sticky navy nav with the Captains logo and a gold
+// call CTA. Imported by the project-local Base layout (relative import; the
+// @engine alias does not honor shadows).
+import { getEntry } from 'astro:content';
+import CtaBar from '@engine/components/CtaBar.astro';
+
+interface Props {
+  businessId?: string;
+}
+
+const { businessId = 'biz' } = Astro.props;
+const businessEntry = await getEntry('business', businessId);
+const business = businessEntry?.data;
+const businessName = business && business.name ? business.name : 'Your Business';
+const logoFilename = business?.brand?.logoFilename;
+const logoAlt = business?.brand?.logoAlt ?? `${businessName} logo`;
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const hasDualCta = Boolean(site?.ctaPrimary || site?.ctaSecondary);
+
+// Static current-page marker (trailingSlash "always" keeps paths comparable).
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <a href="/" class="brand">
+    {logoFilename && (
+      <img class="brand-logo" src={`/${logoFilename}`} alt={logoAlt} width="48" height="48" loading="eager" decoding="async" />
+    )}
+    <span class="brand-word">
+      <span class="brand-name">{businessName}</span>
+      <span class="brand-tag">Seafood · Fried Chicken · Cedar Rapids</span>
+    </span>
+  </a>
+  {site?.nav && (
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg class="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+      <span class="nav-toggle-label">Menu</span>
+    </button>
+  )}
+  {site?.nav && (
+    <nav id="site-nav" aria-label="Main">
+      <ul>
+        {site.nav.map((item) => (
+          <li>
+            <a href={item.href} aria-current={item.href === currentPath ? 'page' : undefined}>
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )}
+  {hasDualCta ? (
+    <CtaBar surface="header" ctaPrimary={site?.ctaPrimary} ctaSecondary={site?.ctaSecondary} />
+  ) : (
+    site?.cta && <a class="cta" href={site.cta.href}>{site.cta.text}</a>
+  )}
+</header>
+
+<script src="/js/nav-toggle.js" defer is:inline></script>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.6rem 1.5rem;
+    background: linear-gradient(180deg, var(--navy-900, #0b1e33), var(--navy-700, #123253));
+    color: #fff;
+    box-shadow: 0 2px 12px rgba(11, 30, 51, 0.35);
+  }
+  .brand {
+    flex: 0 1 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: #fff;
+  }
+  .brand-logo {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: inset 0 0 0 1.5px rgba(245, 179, 1, 0.55);
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.35));
+  }
+  /* Icon + HTML-text wordmark lockup: display-face name over a mono tagline. */
+  .brand-word {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.05;
+  }
+  .brand-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+  .brand-tag {
+    font-family: var(--font-mono);
+    font-weight: 500;
+    font-size: 0.6rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--gold-500, #f5b301);
+    white-space: nowrap;
+    margin-top: 0.15rem;
+  }
+  nav {
+    max-width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hamburger toggle — hidden on desktop; the mobile media query reveals it
+     once JS has enhanced the header. */
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    gap: 0.45rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-family: var(--font-mono, monospace);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.5rem 0.85rem;
+    min-height: 44px;
+    cursor: pointer;
+  }
+  .nav-toggle .icon-close {
+    display: none;
+  }
+  .nav-toggle[aria-expanded='true'] .icon-open {
+    display: none;
+  }
+  .nav-toggle[aria-expanded='true'] .icon-close {
+    display: inline;
+  }
+  /* Compact the gold pill inside the header so it never dominates the bar. */
+  .site-header :global(.cta-bar .cta),
+  .site-header .cta {
+    padding: 0.45rem 1rem;
+    font-size: 0.92rem;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.25rem;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.88);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.65rem 0.85rem; /* 45px tall — clears the 44px target floor */
+    border-radius: 999px;
+    transition: background 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+  }
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+  }
+  nav a[aria-current='page'] {
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+  }
+  @media (max-width: 72rem) {
+    .brand-name {
+      font-size: 1.2rem;
+    }
+    nav a {
+      padding: 0.65rem 0.6rem;
+      font-size: 0.9rem;
+    }
+  }
+  /* Narrow phones: drop the tagline + icon frame breathing room so the brand
+     row never crowds the call action. */
+  @media (max-width: 30rem) {
+    .brand-tag {
+      display: none;
+    }
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+    }
+    .brand-name {
+      font-size: 1.1rem;
+    }
+  }
+  /* Below single-row fit the header wraps to 2-3 rows; a multi-row sticky
+     bar eats the viewport, so sticky is desktop-only. */
+  @media (max-width: 68rem) {
+    .site-header {
+      position: static;
+    }
+  }
+  @media (max-width: 48rem) {
+    .site-header {
+      position: static; /* free the small viewport; sticky bar covers the call action */
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+    /* The mobile sticky call bar owns the call CTA — drop the header one. */
+    .site-header :global(.cta-bar),
+    .site-header .cta {
+      display: none;
+    }
+
+    /* --- No-JS fallback: the horizontal scroll strip (unchanged behavior). --- */
+    nav {
+      order: 3;
+      flex: 1 0 100%;
+      padding-bottom: 0.35rem;
+      /* Fade hint that the nav strip scrolls horizontally. */
+      -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent);
+      mask-image: linear-gradient(90deg, #000 88%, transparent);
+    }
+    nav ul {
+      flex-wrap: nowrap;
+      gap: 0.15rem;
+      /* Trailing spacer: at full scroll the last item clears the mask fade. */
+      padding-right: 2.5rem;
+    }
+
+    /* --- JS-enhanced: single-row sticky header + hamburger dropdown. --- */
+    .site-header[data-enhanced] {
+      position: sticky;
+      top: 0;
+    }
+    .site-header[data-enhanced] .nav-toggle {
+      display: inline-flex;
+      order: 2;
+    }
+    /* Collapsed dropdown: full-width row below the bar, height-animated open. */
+    .site-header[data-enhanced] nav {
+      order: 3;
+      flex: 1 0 100%;
+      overflow: hidden;
+      max-height: 0;
+      padding-bottom: 0;
+      -webkit-mask-image: none;
+      mask-image: none;
+      transition: max-height 0.25s ease;
+    }
+    .site-header[data-enhanced][data-open] nav {
+      max-height: min(72vh, 30rem);
+      overflow-y: auto;
+      padding-bottom: 0.4rem;
+    }
+    /* Stacked full-width rows when open (overrides the scroll-strip ul). */
+    .site-header[data-enhanced] nav ul {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0.15rem;
+      padding: 0.4rem 0 0.2rem;
+    }
+    .site-header[data-enhanced] nav a {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 0.75rem;
+      font-size: 1rem;
+      border-radius: 0.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-family-dinner-3",
+  "questionRef": "questions/faq-occasions-family-dinner-3",
+  "text": "We do. Our kids meals are sized right for smaller appetites, so you can add one or two alongside the family deal and keep everyone at the table happy.",
+  "cites": [
+    "occasions/family-dinner"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

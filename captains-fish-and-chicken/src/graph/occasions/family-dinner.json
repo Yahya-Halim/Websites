@@ -1,0 +1,95 @@
+{
+  "kind": "occasions",
+  "slug": "family-dinner",
+  "title": "Family Dinner Takeout in Cedar Rapids | Captains Fish and Chicken",
+  "headline": "Feed the Whole Family Fresh Fish and Fried Chicken Tonight",
+  "body": "When it's your turn to feed the crew and nobody wants to cook, Captains Fish and Chicken on 1st Avenue NE makes family dinner easy. Everything is fried fresh to order, so the golden catfish, juicy fried chicken, and crispy tenders show up hot instead of tired. Our family meals and combos are built to stretch across a hungry table without anyone reaching for the last piece too soon. Pair a family deal with a stack of sides, add a couple of kids meals for the little ones, and dinner is handled. Cedar Rapids families in the Northeast neighborhood and nearby Marion order from us because it tastes homemade but skips the mess. Call (319) 221-1040 to order ahead for pickup, or have it delivered through DoorDash, Uber Eats, or Grubhub. Owner Ray Aqel opened Captains in 2024 with one promise that still holds: fish, chicken and seafood made fresh to order, every single time. Rated 4.4 on Google, we're the weeknight answer when everyone's hungry and the clock is not on your side.",
+  "featuredItems": [
+    {
+      "sectionSlug": "family-meals-and-combos",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "family-meals-and-combos",
+      "itemIndex": 2
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "chicken-leg-and-thigh",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "kids-meals",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "sides",
+      "itemIndex": 0
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many people does a family meal feed?",
+      "answer": "Our family meals and combos are portioned for a hungry household. A single family deal comfortably covers a family of four, and the three-item combo stretches further for larger groups. If you're feeding five or more, ask about our fish family deals when you call (319) 221-1040 and we'll help you size the order."
+    },
+    {
+      "question": "How do I order family dinner for pickup?",
+      "answer": "The easiest way is to call (319) 221-1040 and order ahead. Since everything is fried fresh to order, calling gives the kitchen time to have your dinner hot and bagged when you arrive at 1616 1st Ave NE."
+    },
+    {
+      "question": "Can I get family dinner delivered?",
+      "answer": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Open your preferred app, search for Captains Fish and Chicken, and build your order. Delivery times and fees are set by each app."
+    },
+    {
+      "question": "Do you have options for kids?",
+      "answer": "We do. Our kids meals are sized right for smaller appetites, so you can add one or two alongside the family deal and keep everyone at the table happy."
+    },
+    {
+      "question": "Should I call ahead for a big family order?",
+      "answer": "Yes, please call ahead for larger orders. A quick call to (319) 221-1040 lets us prep everything fresh and have it ready at your pickup time instead of making you wait."
+    }
+  ],
+  "crossLinks": [
+    {
+      "slug": "/menu/family-meals-and-combos/",
+      "anchor": "family meals and combos",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/kids-meals/",
+      "anchor": "kids meals",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/",
+      "anchor": "see the full menu",
+      "context": "related"
+    },
+    {
+      "slug": "/how-to-order/",
+      "anchor": "how to order",
+      "context": "related"
+    },
+    {
+      "slug": "/occasions/friday-fish-fry/",
+      "anchor": "everyday fish fry",
+      "context": "related"
+    }
+  ],
+  "heroAltText": "A family-sized spread of fresh fried catfish, fried chicken, and sides from Captains Fish and Chicken in Cedar Rapids",
+  "schemaTypes": [
+    "WebPage",
+    "FAQPage"
+  ],
+  "seo": {
+    "title": "Family Dinner Takeout in Cedar Rapids | Captains Fish and Chicken",
+    "description": "Fresh-to-order family dinners in Cedar Rapids. Fried catfish, chicken, tenders, and kids meals for pickup or delivery. Call (319) 221-1040 to order ahead.",
+    "canonical": "https://captains-fish-and-chicken.example/occasions/family-dinner/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "Phase 4 sealed occasions.json authored from owner-confirmed offerings"
+}

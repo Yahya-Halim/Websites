@@ -1,0 +1,220 @@
+[
+  {
+    "slug": "sandwiches-wraps",
+    "name": "Sandwiches & Wraps",
+    "order": 1,
+    "description": "Pita-wrapped sandwiches from Pita Kabab's published menu — falafel, chicken shawarma and kabab.",
+    "items": [
+      {
+        "name": "Falafel sandwich",
+        "description": "Crisp chickpea falafel folded into warm pita — a naturally vegetarian classic.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "name": "Chicken shawarma sandwich",
+        "description": "Seasoned chicken shawarma carved and wrapped in pita."
+      },
+      {
+        "name": "Kabab sandwich",
+        "description": "Grilled kabab tucked into pita."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What comes on a shawarma sandwich at Pita Kabab?",
+        "answer": "Ask at the counter for the current toppings and sauces — sandwiches are made to order. Call (319) 440-3709 if you have questions before you arrive."
+      },
+      {
+        "question": "Is the falafel sandwich vegetarian?",
+        "answer": "Yes — falafel is made from chickpeas and herbs, so the falafel sandwich is a vegetarian option on the published menu."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/shawarma-cedar-rapids/", "anchor": "Shawarma in Cedar Rapids", "context": "related" },
+      { "slug": "/falafel-cedar-rapids/", "anchor": "Falafel in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/lunch/", "anchor": "Quick Mediterranean lunch", "context": "related" }
+    ],
+    "seo": {
+      "title": "Shawarma, Kabob & Falafel Sandwiches - Pita Kabab",
+      "description": "Pita sandwiches and wraps at Pita Kabab in Cedar Rapids: falafel, chicken shawarma and kabab, made to order at the counter. Call (319) 440-3709.",
+      "canonical": "https://pitakabab.example/menu/sandwiches-wraps/"
+    }
+  },
+  {
+    "slug": "bowls",
+    "name": "Bowls",
+    "order": 2,
+    "description": "Rice and salad bowls from Pita Kabab's published menu.",
+    "items": [
+      {
+        "name": "Rice bowls",
+        "description": "Hearty rice-based bowls from the published menu. The full bowl lineup is pending owner confirmation — call for today's options."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/chicken-over-rice-cedar-rapids/", "anchor": "Chicken over rice in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/lunch/", "anchor": "Quick Mediterranean lunch", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Platters", "context": "related" }
+    ],
+    "seo": {
+      "title": "Mediterranean Bowls - Pita Kabab",
+      "description": "Rice and salad bowls at Pita Kabab in Cedar Rapids. Counter-service Mediterranean bowls made to order — call (319) 440-3709 for today's options.",
+      "canonical": "https://pitakabab.example/menu/bowls/"
+    }
+  },
+  {
+    "slug": "platters",
+    "name": "Platters",
+    "order": 3,
+    "description": "Full platters from Pita Kabab's published menu — shawarma, mix grill and seafood mix grill.",
+    "items": [
+      {
+        "name": "Shawarma platter",
+        "description": "Carved shawarma served platter-style with sides."
+      },
+      {
+        "name": "Mix grill platter",
+        "description": "A sampler platter of grilled meats."
+      },
+      {
+        "name": "Seafood mix grill",
+        "description": "A grilled seafood platter from the published menu."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many people does a platter feed?",
+        "answer": "Platters are individual dinners; for groups, ask about catering trays when you call (319) 440-3709."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/kabob-cedar-rapids/", "anchor": "Kabobs in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/family-dinner/", "anchor": "Family dinner", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Grilled Kabob & Shawarma Platters - Pita Kabab",
+      "description": "Kabob, shawarma, mix grill and seafood platters at Pita Kabab in Cedar Rapids — full meals from the published menu. Call (319) 440-3709.",
+      "canonical": "https://pitakabab.example/menu/platters/"
+    }
+  },
+  {
+    "slug": "mediterranean-delight",
+    "name": "Mediterranean Delight",
+    "order": 4,
+    "description": "Mezze and traditional specialties from Pita Kabab's published menu — hummus, foul, mfatakeh, kalaya and chicken liver.",
+    "items": [
+      {
+        "name": "Hummus",
+        "description": "Classic chickpea and tahini dip served with pita.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "name": "Foul",
+        "description": "Slow-simmered fava beans — a Levantine breakfast-and-anytime staple.",
+        "dietary": ["vegetarian"]
+      },
+      {
+        "name": "Mfatakeh"
+      },
+      {
+        "name": "Kalaya"
+      },
+      {
+        "name": "Chicken liver"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is in the Mediterranean Delight section?",
+        "answer": "It is the mezze and traditional-specialties corner of the published menu: hummus, foul, mfatakeh, kalaya and chicken liver. Ask the counter about each day's preparations."
+      },
+      {
+        "question": "Are there vegetarian options?",
+        "answer": "Yes — hummus and foul are vegetarian, and the falafel sandwich on the sandwiches menu is vegetarian too."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/hummus-cedar-rapids/", "anchor": "Hummus in Cedar Rapids", "context": "related" },
+      { "slug": "/occasions/vegetarian-mediterranean/", "anchor": "Vegetarian Mediterranean meals", "context": "related" },
+      { "slug": "/what-is-palestinian-food/", "anchor": "What is Palestinian food?", "context": "related" }
+    ],
+    "seo": {
+      "title": "Mediterranean Delight - Pita Kabab",
+      "description": "Hummus, foul, mfatakeh, kalaya and chicken liver — the mezze and traditional specialties section of Pita Kabab's menu in Cedar Rapids.",
+      "canonical": "https://pitakabab.example/menu/mediterranean-delight/"
+    }
+  },
+  {
+    "slug": "wings",
+    "name": "Wings",
+    "order": 5,
+    "description": "Seasoned wings from Pita Kabab's published menu, including a ten-piece party size.",
+    "items": [
+      {
+        "name": "Party wings (10 pc)",
+        "description": "A ten-piece order of seasoned wings from the published menu — a group-friendly pick."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/occasions/game-day-catering/", "anchor": "Game day wings & platters", "context": "related" },
+      { "slug": "/menu/platters/", "anchor": "Platters", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Wings - Pita Kabab",
+      "description": "Seasoned wings at Pita Kabab in Cedar Rapids, including ten-piece party wings — order at the counter or call (319) 440-3709.",
+      "canonical": "https://pitakabab.example/menu/wings/"
+    }
+  },
+  {
+    "slug": "kids-meals",
+    "name": "Kids Meals",
+    "order": 6,
+    "description": "Smaller portions for younger guests from Pita Kabab's published kids menu.",
+    "items": [
+      {
+        "name": "Kids meal",
+        "description": "Kid-sized portions from the published kids menu. Current combos are pending owner confirmation — ask at the counter."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/occasions/family-dinner/", "anchor": "Family dinner at Pita Kabab", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/first-visit-ordering-guide/", "anchor": "First visit? How to order", "context": "related" }
+    ],
+    "seo": {
+      "title": "Kids Meals - Pita Kabab",
+      "description": "Kids meals at Pita Kabab in Cedar Rapids — smaller portions for younger guests, made to order. Call (319) 440-3709 with questions.",
+      "canonical": "https://pitakabab.example/menu/kids-meals/"
+    }
+  },
+  {
+    "slug": "desserts",
+    "name": "Desserts",
+    "order": 7,
+    "description": "Desserts from Pita Kabab's published menu, led by baklava.",
+    "items": [
+      {
+        "name": "Baklava",
+        "description": "Layered phyllo pastry with nuts and syrup — the classic Levantine dessert."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does Pita Kabab have baklava?",
+        "answer": "Yes — baklava is on the published desserts menu. Call (319) 440-3709 to check today's availability before you visit."
+      }
+    ],
+    "crossLinks": [
+      { "slug": "/baklava-cedar-rapids/", "anchor": "Baklava in Cedar Rapids", "context": "related" },
+      { "slug": "/menu/", "anchor": "Full menu", "context": "related" },
+      { "slug": "/occasions/catering/", "anchor": "Catering in Cedar Rapids", "context": "related" }
+    ],
+    "seo": {
+      "title": "Baklava & Desserts - Pita Kabab",
+      "description": "Baklava and desserts at Pita Kabab in Cedar Rapids — finish a shawarma or kabob meal the traditional way. Call (319) 440-3709.",
+      "canonical": "https://pitakabab.example/menu/desserts/"
+    }
+  }
+]

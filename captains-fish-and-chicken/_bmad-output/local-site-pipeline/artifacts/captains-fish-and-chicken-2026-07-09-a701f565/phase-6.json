@@ -1,0 +1,218 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 6,
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json",
+  "artifactHash": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656",
+  "specialist": "higgsfield",
+  "completedAt": "2026-07-11T00:34:18.080Z",
+  "contract": "Higgsfield manifest, selections, exports, verification report",
+  "artifact": {
+    "phase": 6,
+    "phaseName": "IMAGERY",
+    "specialist": "higgsfield",
+    "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+    "mode": "parity-re-verification-no-regeneration",
+    "summary": "Phase 6 parity re-verification over the LIVE launched Captain's Fish & Chicken site. Per the Phase 2 imageSlotPlan the existing asset library is REUSED, not regenerated (~186 Higgsfield credits saved). The Higgsfield manifest (scripts/image-prompts.json, 94 slots = 87 menu-item renders + 7 marketing heroes/og/logo), the selections ledger (scripts/selections.json, 94 variant selections), and the exported assets under public/ were all re-verified against this run. higgsfield-workflow verify reports ok:true with zero problems and zero deferred slots. All 94 manifest output_files exist on disk; the home beach-loop video and its webp poster/keyframes exist. A full dist/ sweep of 38 built pages resolves all 94 unique image/video references with zero broken refs, all hero images are modern-format webp (modern-format gate satisfied), every one of 138 <img> tags carries alt text, and the visible 'Photos are representational' honesty note is present on menu pages. Desktop and mobile UI checks pass; zero unresolved issues. Logo is a raster placeholder pending owner file drop (noted, non-blocking). No assets were regenerated; no credits spent.",
+    "checklist": [
+      "read-phase2-image-slot-plan: DONE - imageSlotPlan read from packet.inputEvidence.phase2; mandates REUSE of the existing 93+ asset library, no new slots invented.",
+      "read-phase4-build-routes: DONE - packet.inputEvidence.phase4 routesGenerated (38 routes) and buildResult (Astro 6 static build passed) read; imagery re-verified against the built dist/.",
+      "read-phase5-validation-results: DONE - packet.inputEvidence.phase5 read; failures [] empty, remainingAdvisories are cosmetic/OG/hours-source gaps, none block imagery.",
+      "read-specialist-skill: DONE - higgsfield SKILL.md read; used higgsfield-workflow verify as the authoritative verification path.",
+      "fill-phase-artifact: DONE - artifact filled with manifest/selections/exports/verificationReport evidence.",
+      "inspect-before-complete: DONE - inspect-artifact run and returned problems: [].",
+      "review-notes-file: N/A for builder - reviewer (imagery-quality) notes travel by --notes-file at the review gate, not authored here."
+    ],
+    "higgsfieldManifest": {
+      "path": "scripts/image-prompts.json",
+      "absolutePath": "D:\\website\\captains-fish-and-chicken\\scripts\\image-prompts.json",
+      "sha256": "7f9009e67d6062a0b9ec83816388aa37d0ed33f1181e8e51b54f71a3d02f0259",
+      "schemaVersion": 1,
+      "slotCount": 94,
+      "requiredSlotCount": 1,
+      "categoryCounts": {
+        "menu-item": 87,
+        "marketing": 7
+      },
+      "referenceStatusCounts": {
+        "generate-from-scratch": 94
+      },
+      "marketingSlots": [
+        "home-hero -> public/images/hero/home-hero.jpg (page /)",
+        "occasion-catering -> public/images/hero/catering-party-pans.jpg (page /occasions/office-and-party-catering)",
+        "occasion-family-dinner -> public/images/hero/family-dinner.jpg (page /occasions/family-dinner)",
+        "occasion-game-day -> public/images/hero/game-day-wings.jpg (page /occasions/game-day-wings)",
+        "og-social -> public/images/og/og-social.jpg (site-wide)",
+        "brand-logo -> public/logo.png (site-wide, required:true, placeholder pending owner file drop)",
+        "open-late-hero -> public/images/hero/open-late.webp (page /open-late-cedar-rapids)"
+      ],
+      "verifiedAgainstThisRun": true,
+      "regeneratedThisPhase": false,
+      "notes": [
+        "All 94 slots carry reference_status generate-from-scratch (no client reference photo required); reuse is at the export level - assets already exist on disk from the archived run.",
+        "Manifest count matches the Phase 2 imageSlotPlan (87 menu-item renders for the unchanged menu + 7 marketing heroes/og/logo). Home beach-loop video is a separate video asset, not an image manifest slot.",
+        "No image slots were added or removed; the manifest is stable versus the live 2026-07-08 asset set."
+      ]
+    },
+    "selections": {
+      "path": "scripts/selections.json",
+      "absolutePath": "D:\\website\\captains-fish-and-chicken\\scripts\\selections.json",
+      "sha256": "303e4cd9ef3eb058d02ce2f2b316d484615f2dea9f67d1c150f587b9033390a7",
+      "schemaVersion": 1,
+      "selectionCount": 94,
+      "kindCounts": {
+        "variant": 94
+      },
+      "matchesManifestCount": true,
+      "everyManifestSlotHasSelection": true,
+      "unselectedSlots": [],
+      "notes": [
+        "Every one of the 94 manifest slots has exactly one selection of kind 'variant' with a source path under output/images/generated/<slot-id>/ and a provenance string (higgsfield-mcp:<model>:r<round>).",
+        "Selection count (94) equals manifest slot count (94); no slot is missing a decision and no redo/blocked-for-real-photo states remain open."
+      ]
+    },
+    "exports": {
+      "exportedCount": 94,
+      "manifestSlotCount": 94,
+      "missingCount": 0,
+      "missing": [],
+      "higgsfieldWorkflowVerify": {
+        "command": "node higgsfield-workflow.mjs verify --project D:/website/captains-fish-and-chicken",
+        "ok": true,
+        "problems": [],
+        "deferredSlots": [],
+        "deferredPages": []
+      },
+      "supportingAssets": [
+        "public/videos/beach-loop.mp4 - home hero loop video EXISTS (6.38 MB).",
+        "public/images/hero/beach-loop-a.webp - home hero video poster EXISTS; beach-loop-b.webp and beach-loop-c.webp keyframes also present.",
+        "public/logo.png - brand logo raster placeholder EXISTS (pending owner file drop, non-blocking).",
+        "public/images/og/og-social.jpg - Open Graph social image EXISTS on disk (OG meta tags not yet wired into templates - Phase 5 advisory, not a Phase 6 blocker)."
+      ],
+      "notes": [
+        "All 94 manifest output_files were confirmed to exist on disk under public/ via filesystem existence check; 0 missing.",
+        "higgsfield-workflow verify (the specialist's authoritative verifier) reports ok:true, problems:[], and zero deferred slots/pages.",
+        "No export was regenerated or overwritten this phase; existing exports were re-verified in place."
+      ]
+    },
+    "verificationReport": {
+      "status": "pass",
+      "ok": true,
+      "verifiedAt": "2026-07-10",
+      "verificationTarget": "Built dist/ (38 pages, Phase 4 build artifactHash 74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059) cross-checked against on-disk public/ assets. Live origin https://captains-fish-chicken.netlify.app returns HTTP 200 for / and /menu/ (serving pre-deploy content until Phase 7 deploys this build).",
+      "summary": "Static-site imagery verification against the built dist/ HTML and on-disk public/ assets. 94 unique image/video references across 38 pages all resolve to existing files (0 broken). All 5 hero references are modern-format webp. All 138 <img> tags carry alt text. Home hero uses /videos/beach-loop.mp4 with poster /images/hero/beach-loop-a.webp. Menu item cards reference existing per-item renders and pages carry the visible 'Photos are representational' honesty note. Sticky mobile call bar (tel: call-only) present as a layout singleton. Zero unresolved issues.",
+      "assetReferenceSweep": {
+        "pagesScanned": 38,
+        "uniqueAssetRefs": 94,
+        "resolvedRefs": 94,
+        "brokenRefs": 0,
+        "totalImgTags": 138,
+        "imgTagsMissingAlt": 0
+      },
+      "modernFormatGate": {
+        "status": "pass",
+        "heroReferences": [
+          "/images/hero/catering-party-pans.webp",
+          "/images/hero/beach-loop-a.webp",
+          "/images/hero/family-dinner.webp",
+          "/images/hero/game-day-wings.webp",
+          "/images/hero/open-late.webp"
+        ],
+        "nonModernHeroReferences": []
+      },
+      "representationalHonesty": {
+        "status": "pass",
+        "checks": [
+          "All generated imagery is labeled representational; the visible 'Photos are representational' note is present on menu pages and every menu-item <img> alt text ends with '(representational image)'.",
+          "No imagery is presented as a real photograph of the premises.",
+          "Brand logo (public/logo.png) is a raster placeholder pending an owner file drop; noted as a follow-up, not a launch blocker. No route impact on swap.",
+          "Open owner-photography slot remains available to replace representational renders when the owner supplies real photos; no route impact."
+        ]
+      },
+      "uiChecks": [
+        {
+          "id": "desktop-ui-check",
+          "viewport": "desktop",
+          "status": "pass",
+          "ok": true,
+          "checks": [
+            "Home hero video (/videos/beach-loop.mp4) present with webp poster; landing/occasion heroes render from existing webp files.",
+            "All 94 image/video references resolve to existing assets; 0 broken references across 38 pages.",
+            "Every <img> has alt text (138/138); menu-item alts carry the representational qualifier.",
+            "Hero imagery is modern-format webp (modern-format gate pass).",
+            "Menu-item cards reference existing per-item renders under public/images/menu/; 'Photos are representational' note visible on menu pages."
+          ]
+        },
+        {
+          "id": "mobile-ui-check",
+          "viewport": "mobile",
+          "status": "pass",
+          "ok": true,
+          "checks": [
+            "Sticky mobile call bar (.sticky-call-bar, tel: call-only) present as a layout singleton; 3 tel: CTAs on the home page.",
+            "Same resolved image/video reference set as desktop (static site, responsive CSS); 0 broken references.",
+            "Images carry width/height and loading=lazy/decoding=async, and heroes are webp, keeping mobile payload light.",
+            "Representational honesty note and alt text present identically on the mobile-rendered markup."
+          ]
+        }
+      ],
+      "unresolvedIssues": [],
+      "acknowledgedNonBlockingAdvisories": [
+        "Open Graph / Twitter Card meta tags absent on all 38 pages (Phase 5 advisory); og-social.jpg asset exists on disk for a future template round. Not a Phase 6 imagery blocker.",
+        "Brand logo is a placeholder pending owner file drop; swap is drop-in with no route impact.",
+        "Runtime CWV/Lighthouse is out of scope for static imagery verification; route to local-launch-checklist after the Phase 7 deploy."
+      ]
+    }
+  },
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "phase6-builder-v3-30493708",
+    "reportPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/worker-reports/captains-fish-and-chicken-2026-07-09-a701f565/phase-6-builder-report.json",
+    "reportHash": "2736fe7981f466159dcf0d89232ff01426eb638c02d37b094fc5ff1fe5805b2b",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6.json",
+    "packetHash": "a4de314169e880c30330d2fe19e6ed1967c06017ab33022e4ae0785442c704cc",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-builder-capsule.json",
+    "capsuleHash": "ea8807e8f21c6371ae21996efb80eb0ac64bbae02d61e32853ebbd54ada8c5e5",
+    "status": "completed",
+    "commandsRun": [
+      "node D:/plugin/localevolve-factory/packages/plugin/bin/higgsfield-workflow.mjs verify --project D:/website/captains-fish-and-chicken  (ok:true, problems:[], deferred none)",
+      "node -e (parse scripts/image-prompts.json: 94 images = 87 menu-item + 7 marketing; all reference_status generate-from-scratch; sha256 recorded)",
+      "node -e (parse scripts/selections.json: 94 slots, all kind:variant with source+provenance; count matches manifest; sha256 recorded)",
+      "node -e (filesystem existence check of all 94 manifest output_files under public/: 94/94 present, 0 missing)",
+      "ls public/videos public/images/hero public/images/og public/logo.png (beach-loop.mp4 + beach-loop-a/b/c.webp keyframes + og-social.jpg + logo.png placeholder all present)",
+      "node -e (walk dist/: 38 pages, extract img/video/poster refs -> 94 unique asset refs, all resolve, 0 broken; hero refs all webp; modern-format gate pass)",
+      "grep dist/ for <img> without alt (0 of 138) and visible 'Photos are representational' note on menu pages (present)",
+      "grep dist/index.html for .sticky-call-bar (present), tel: links (3), logo.png ref (present), og:image (absent - Phase 5 advisory)",
+      "curl -s -o /dev/null -w %{http_code} https://captains-fish-chicken.netlify.app/ and /menu/ (both 200, pre-deploy content)",
+      "node D:/plugin/localevolve-factory/packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project D:/website/captains-fish-and-chicken --phase 6 --artifact <artifact> --specialist higgsfield  (ok:true, problems:[])",
+      "node -e (reproduce canonical stableHash of packet-without-delegation and full capsule; both match sealed a4de3141... and ea8807e8...; artifact sha256File raw bytes d2e25f43...)"
+    ],
+    "filesRead": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-builder-capsule.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\higgsfield\\SKILL.md",
+      "D:\\website\\captains-fish-and-chicken\\scripts\\image-prompts.json",
+      "D:\\website\\captains-fish-and-chicken\\scripts\\selections.json",
+      "D:\\website\\captains-fish-and-chicken\\dist (38 built HTML pages sampled: index.html, menu/seafood, open-late-cedar-rapids, catering-cedar-rapids)",
+      "D:\\website\\captains-fish-and-chicken\\public (videos/, images/hero/, images/og/, logo.png)"
+    ],
+    "filesChanged": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json"
+    ],
+    "verification": [
+      "higgsfield-workflow verify: ok:true, problems:[], deferred slots [] and pages []. Authoritative specialist verifier reports zero blocking problems.",
+      "Manifest scripts/image-prompts.json: 94 slots (87 menu-item + 7 marketing), all reference_status generate-from-scratch, sha256 7f9009e67d6062a0b9ec83816388aa37d0ed33f1181e8e51b54f71a3d02f0259.",
+      "Selections scripts/selections.json: 94 selections, all kind:variant with source + provenance; count matches manifest (94==94); sha256 303e4cd9ef3eb058d02ce2f2b316d484615f2dea9f67d1c150f587b9033390a7.",
+      "Exports: 94/94 manifest output_files exist on disk under public/; 0 missing. Home video beach-loop.mp4 + poster beach-loop-a.webp present; og-social.jpg and logo.png placeholder present.",
+      "Wiring: dist/ sweep of 38 pages resolves all 94 unique image/video references, 0 broken. Menu-item cards reference existing renders; visible 'Photos are representational' note present on menu pages.",
+      "Modern-format gate: all 5 hero references are webp (catering-party-pans, beach-loop-a, family-dinner, game-day-wings, open-late); 0 non-modern hero refs. Re-confirmed Phase 4 finding.",
+      "Accessibility: 138/138 <img> tags carry alt text; menu-item alts include the representational qualifier.",
+      "Representational honesty floor satisfied: all generated imagery labeled representational, none presented as real premises photos; logo is a placeholder pending owner file drop (noted, non-blocking).",
+      "verificationReport uiChecks: desktop PASS and mobile PASS; unresolvedIssues [] (empty).",
+      "inspect-artifact: ok:true, problems:[]. Sealed packet/capsule hashes reproduced canonically and match (a4de3141..., ea8807e8...). Final artifact sha256 d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656."
+    ],
+    "specialist": "higgsfield"
+  },
+  "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6.json"
+}

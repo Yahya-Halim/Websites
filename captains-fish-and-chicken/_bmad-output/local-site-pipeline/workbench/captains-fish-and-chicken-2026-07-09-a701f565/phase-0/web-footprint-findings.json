@@ -1,0 +1,183 @@
+{
+  "sweepDate": "2026-07-09",
+  "business": "Captains Fish and Chicken",
+  "locationInScope": "1616 1st Ave NE, Cedar Rapids, IA 52402",
+  "sourcesChecked": [
+    {
+      "source": "Owned website (https://captains-fish-chicken.netlify.app)",
+      "status": "found",
+      "notes": "LIVE — verified by direct fetch 2026-07-09. NEW since prior sweeps: launched 2026-07-08 by this engagement (v2 build, 38 routes). Shows NAP (1616 1st Ave NE, (319) 221-1040), caveated hours (Mon-Thu 11-10, Fri-Sat 11-11, Sun 11-8 'confirmation recommended'), full priced menu (Wings Meal $8.99, Catfish Fillet 3pc $16.99, family meals to 50 pc), phone-first ordering, DoorDash/UberEats/Grubhub links, 4.4-star/208-review Google citation with attribution, 'representational' photo disclaimers, beach-themed hero illustrations (logo placeholder still live)."
+    },
+    {
+      "source": "Google Business Profile (via SERP + Wanderlog mirror; GBP not directly fetchable)",
+      "status": "found",
+      "notes": "Wanderlog mirrors Google Maps: 4.4 stars / 192 reviews for 1616 1st Ave NE. Hours mirrored: Mon-Thu 11AM-10PM, Fri-Sat 11AM-11PM, Sun 11AM-8PM. Owner brief cites 4.4/208 — see discrepancy on review count. No website field visible in mirrors checked."
+    },
+    {
+      "source": "Yelp — NE listing (yelp.com/biz/captains-fish-and-chicken-cedar-rapids)",
+      "status": "found",
+      "notes": "Listing exists, 'Updated March 2026', categorized Soul Food, 1616 1st Ave NE. Direct fetch blocked (HTTP 403); details from SERP only."
+    },
+    {
+      "source": "Yelp — SW listing (yelp.com/biz/captains-fish-and-chicken-cedar-rapids-2)",
+      "status": "found",
+      "notes": "STALE: separate Yelp listing for 'Captains Fish and Chicken, 3100 6th St SW' (Seafood) still live per SERP ('Updated March 2026'). That address is now Pita Kabab (same owner). Out of engagement scope but a live stale listing."
+    },
+    {
+      "source": "TripAdvisor (Restaurant_Review-g37743-d28991845)",
+      "status": "found",
+      "notes": "Listing 'CAPTAINS FISH AND CHICKEN, INC, Cedar Rapids' exists. Direct fetch blocked (HTTP 403); no rating/hours captured this sweep."
+    },
+    {
+      "source": "DoorDash (store/captains-fish-and-chicken-inc-cedar-rapids-34802887)",
+      "status": "found",
+      "notes": "Store listing exists for the NE address per SERP. Direct fetch blocked (HTTP 403)."
+    },
+    {
+      "source": "Uber Eats (store at 1616 1st Ave NE, id AJApcCD3RUefziQ_OTCMSA)",
+      "status": "found",
+      "notes": "Store listing exists, address-matched to 1616 1st Ave NE. Direct fetch blocked (HTTP 403)."
+    },
+    {
+      "source": "Postmates (same store id as Uber Eats)",
+      "status": "found",
+      "notes": "Mirror of the Uber Eats store for 1616 1st Ave NE."
+    },
+    {
+      "source": "Grubhub — NE listing (restaurant/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids/11640296)",
+      "status": "found",
+      "notes": "Listing exists for 1616 1st Ave NE, phone (319) 221-1040, takeout offered."
+    },
+    {
+      "source": "Grubhub — SW listing (restaurant/captains-fish-and-chicken-3100-6th-st-sw-cedar-rapids/11805992)",
+      "status": "found",
+      "notes": "STALE: Grubhub still lists a Captains store at 3100 6th St SW — that location is now Pita Kabab. Stale delivery listing."
+    },
+    {
+      "source": "Seamless (menu/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids/11640296)",
+      "status": "found",
+      "notes": "Grubhub-network mirror of the NE listing."
+    },
+    {
+      "source": "Facebook (facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294)",
+      "status": "found",
+      "notes": "Page 'Captains Fish and Chicken, INC | Cedar Rapids IA' exists. SERP shows 100% recommend (17 reviews). Not directly fetchable (auth wall)."
+    },
+    {
+      "source": "Local press — KHAK opening article (khak.com/captains-fish-chicken-cedar-rapids/)",
+      "status": "found",
+      "notes": "Published 2024-10-28. Opening at 1616 1st Ave NE (former Gutamex Restaurant Elenita / Brick City Grill space). Owner Ray Aqel; previously opened and sold the same restaurant model in MN, IL, MI; first Iowa location. Soft opening late Oct 2024; menu breadth described; fresh-to-order."
+    },
+    {
+      "source": "Local press — KHAK second-location article (khak.com/captains-fish-chicken-cedar-rapids-restaurant/)",
+      "status": "found",
+      "notes": "Published 2025-05-14. Second Captains location soft-opened 2025-05-13 at 3100 6th St SW (former Bea's Cafe, next to Checkers Tavern); phone for THAT location 319-362-3114 — never use for NE. That location has since become Pita Kabab (same owner)."
+    },
+    {
+      "source": "The Gazette (Cedar Rapids)",
+      "status": "not-found",
+      "notes": "No Gazette article surfaced directly this sweep; SERP summaries attribute Ray Aqel/opening details to Gazette reporting but the article itself was not retrieved. The live site carries a Gazette press mention (cornmeal breading, lemon-pepper seasoning) sourced during v2. Gazette sides-delta question to owner remains unanswered."
+    },
+    {
+      "source": "res-discover.com aggregator microsite (captains-fish-and-chicken.res-discover.com)",
+      "status": "found",
+      "notes": "Aggregator-generated microsite presenting itself as the restaurant's official website ('The official site is https://captains-fish-and-chicken.res-discover.com/'). Correct NAP and hours (Mon-Thu 11-10, Fri-Sat 11-11, Sun 11-8); menu prices mirrored ($8.99-$84.99 wings dinners, banana pudding, lemon cake). Competes with the real owned site in SERPs."
+    },
+    {
+      "source": "Zmenu (zmenu.com/captains-fish-and-chicken-cedar-rapids-online-menu/)",
+      "status": "found",
+      "notes": "Menu-mirror listing exists per SERP (52402). Direct fetch blocked (HTTP 403)."
+    },
+    {
+      "source": "Wheree (captains-fish-and-chicken.wheree.com)",
+      "status": "found",
+      "notes": "Directory listing exists ('Updated March 2026'). Direct fetch blocked (HTTP 403)."
+    },
+    {
+      "source": "Wanderlog (wanderlog.com/place/details/13212168)",
+      "status": "found",
+      "notes": "Google Maps mirror: 4.4 stars / 192 reviews, NAP matches NE location, hours Mon-Thu 11-10, Fri-Sat 11-11, Sun 11-8. No website listed."
+    },
+    {
+      "source": "WanderBoat (SW address listing)",
+      "status": "found",
+      "notes": "STALE: lists 'Captains Fish and Chicken INC - 3100 6th St SW' — address is now Pita Kabab."
+    },
+    {
+      "source": "SERP index check for captains-fish-chicken.netlify.app",
+      "status": "not-found",
+      "notes": "Exact-domain web search does not yet surface the owned site (launched 2026-07-08, one day before this sweep — expected indexing lag). Site verified live by direct fetch. GSC submission/backlink from GBP website field would accelerate indexing."
+    },
+    {
+      "source": "Pita Kabab cross-check (pitakababcr.com, Yelp, DoorDash)",
+      "status": "found",
+      "notes": "Confirms 3100 6th St SW is now Pita Kabab (Mediterranean, same owner), phone (319) 440-3709, own site pitakababcr.com. Disambiguation content on the Captains site stands; SW remains out of scope."
+    },
+    {
+      "source": "MenuPix (menupix.com id 34009008)",
+      "status": "found",
+      "notes": "Menu directory listing for 52402 exists per SERP; not fetched."
+    }
+  ],
+  "findings": [
+    "NAP is consistent across all in-scope sources: Captains Fish and Chicken, 1616 1st Ave NE, Cedar Rapids, IA 52402, (319) 221-1040.",
+    "The business now HAS a live owned web presence: https://captains-fish-chicken.netlify.app (launched 2026-07-08 by this engagement, verified live 2026-07-09). This is the headline CHANGE versus all prior sweeps.",
+    "The owned site is not yet visible in SERP index checks (one day post-launch); aggregators (res-discover) still outrank/claim official-site status.",
+    "Aggregator/mirror hours agree: Mon-Thu 11AM-10PM, Fri-Sat 11AM-11PM, Sun 11AM-8PM — but remain owner-unconfirmed; live site correctly caveats them.",
+    "Google rating mirrored at 4.4 stars (Wanderlog mirror shows 192 reviews; owner cited 208 on 2026-07-07 — rating value consistent, count differs, mirror likely stale).",
+    "Facebook page active with 100% recommend across 17 reviews (SERP snapshot).",
+    "Press (KHAK 2024-10-28): owner Ray Aqel, first Iowa location, opened Oct 2024 in former Gutamex/Brick City Grill space, fresh-to-order model previously run in MN/IL/MI.",
+    "Menu breadth corroborated by press and aggregators: fried chicken, tenders, wings, gizzards, perch, tilapia, catfish, cod, calamari, crab cakes, shrimp; sides okra, hush puppies, onion rings, breaded mushrooms, fries, mac & cheese; desserts banana pudding, lemon cake, chocolate cake.",
+    "One SERP summary mentioned an 'estimated health score of 98 out of 100' — origin unverified aggregator metric; do not use on-site.",
+    "Delivery coverage for the NE location: DoorDash, Uber Eats, Postmates, Grubhub, Seamless all list the store."
+  ],
+  "discrepancies": [
+    {
+      "topic": "Stale SW-location listings",
+      "detail": "Yelp (captains-fish-and-chicken-cedar-rapids-2), Grubhub (11805992), and WanderBoat still carry live 'Captains Fish and Chicken' listings at 3100 6th St SW, but that location is now Pita Kabab (same owner). Risk: customer and AI-answer confusion between locations.",
+      "perSourceValues": {
+        "Yelp SW": "Captains Fish and Chicken, 3100 6th St SW (Seafood) — live, 'Updated March 2026'",
+        "Grubhub SW": "Captains Fish and Chicken, 3100 6th St SW — live store 11805992",
+        "WanderBoat": "Captains Fish and Chicken INC, 3100 6th St SW 52404",
+        "Reality": "3100 6th St SW is Pita Kabab (Mediterranean), phone (319) 440-3709, since ~late 2025"
+      },
+      "resolution": "Owner action required: request closure/'moved' status on stale SW listings. Site-side disambiguation content already stands; SW stays out of scope."
+    },
+    {
+      "topic": "Google review count",
+      "detail": "Owner cited Google 4.4/208 (2026-07-07, carried on the live site with attribution). Wanderlog's Google mirror shows 4.4/192. Rating value agrees; count differs — mirror snapshot age unknown.",
+      "perSourceValues": {
+        "Owner (brief.json, 2026-07-07)": "4.4 stars / 208 reviews",
+        "Wanderlog Google-mirror (checked 2026-07-09)": "4.4 stars / 192 reviews"
+      },
+      "resolution": "Non-blocking. Keep the on-site citation attributed and dated as owner-provided; refresh from GBP directly at next owner touchpoint."
+    },
+    {
+      "topic": "Official-website claim by aggregator",
+      "detail": "res-discover.com microsite declares itself the restaurant's official site while the true owned site is captains-fish-chicken.netlify.app.",
+      "perSourceValues": {
+        "res-discover": "claims official-site status at captains-fish-and-chicken.res-discover.com",
+        "Owned": "https://captains-fish-chicken.netlify.app (live, engagement-launched)"
+      },
+      "resolution": "Owner action: set GBP website field to the owned URL (and any future custom domain); consider requesting correction/removal of the aggregator microsite claim."
+    },
+    {
+      "topic": "Hours confirmation",
+      "detail": "All aggregators agree on Mon-Thu 11-10, Fri-Sat 11-11, Sun 11-8, but the owner has never confirmed hours directly. Structured-data hours on the live site remain conservative (Mon-Thu + Sun) with caveated display text.",
+      "perSourceValues": {
+        "Aggregators (GBP mirror, res-discover, Wanderlog)": "Mon-Thu 11AM-10PM, Fri-Sat 11AM-11PM, Sun 11AM-8PM",
+        "Owner": "unconfirmed — call-to-confirm stance stands"
+      },
+      "resolution": "Keep call-to-confirm caveat until owner confirms; questionnaire item remains open."
+    }
+  ],
+  "ownerResidueQuestions": [
+    "Confirm the weekly hours (aggregators show Mon-Thu 11-10, Fri-Sat 11-11, Sun 11-8) so structured hours can drop the conservative caveat.",
+    "Gazette sides delta: does the printed sides list match your current menu paste (2026-07-07)? Menu ships as paste until answered.",
+    "Logo file drop: the shark-captain logo file (navy/gold) is still pending; a placeholder is live.",
+    "Authorize/ask Yelp and Grubhub to close or mark moved the stale 3100 6th St SW 'Captains' listings (now Pita Kabab).",
+    "Set the GBP website field to https://captains-fish-chicken.netlify.app (accelerates indexing; counters the res-discover official-site claim).",
+    "Any plan for a custom domain to replace the netlify.app subdomain?",
+    "Confirm call-only remains the contact policy (no lead form, no SMS) — unchanged from your declaration."
+  ]
+}

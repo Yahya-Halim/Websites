@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-quick-lunch-takeout-2",
+  "questionRef": "questions/faq-occasions-quick-lunch-takeout-2",
+  "text": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app, and have lunch delivered to your office or job site. Each app sets its own delivery times and fees.",
+  "cites": [
+    "occasions/quick-lunch-takeout"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/quick-lunch-takeout.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

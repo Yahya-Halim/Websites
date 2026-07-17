@@ -1,0 +1,180 @@
+---
+/**
+ * LeadForm — the lead-capture form (cro-gates Task 4).
+ *
+ * Posts to the EXTERNAL form service VERBATIM: `<form action={leadForm.endpoint}>`
+ * (the T1 https:// endpoint, e.g. Web3Forms), NOT `/thank-you/`. The provider
+ * redirects the visitor to the absolute `redirectTo` (default `/thank-you/`)
+ * carried in a hidden `redirect` field — `name="redirect"` is the Web3Forms
+ * convention (a cross-task constant). Never renders a <form> with empty/absent
+ * action.
+ *
+ * Fields: ≤6 typed inputs (type=tel/email/text or a <select>), plus a
+ * preferred-contact <select> whose FIRST option is an empty placeholder, and an
+ * action-verb submit button.
+ *
+ * Spam-resistant field contract (INLINE + self-contained — this component does
+ * NOT pull in T5's spam-guard module; it DUPLICATES the two canonical field
+ * NAMES inline so T4/T5 share no file):
+ *   - honeypot `<input name="company_website" tabindex="-1" autocomplete="off">`
+ *     inside a visually-hidden wrapper;
+ *   - timestamp `<input type="hidden" name="form_rendered_at" value="">` set
+ *     client-side by a tiny inline script snippet carrying data-factory-inline=
+ *     "spam-guard" (the T8 perf-gate allowlist token), under 2048 bytes. The
+ *     snippet sets the timestamp ONLY — no redirect logic (the provider handles
+ *     redirect via the hidden field).
+ *
+ * KG7: absent leadForm (or a missing endpoint) → renders NOTHING (no <form>, no
+ * marker). When it renders, the root carries `data-cro-block="lead-form"`.
+ */
+interface LeadFormField {
+  name: string;
+  label: string;
+  type: 'text' | 'tel' | 'email' | 'select';
+  required?: boolean;
+  options?: string[];
+}
+
+interface LeadFormConfig {
+  /** REQUIRED external https:// endpoint (the <form action>). */
+  endpoint: string;
+  /** Where the provider redirects on success. Default '/thank-you/'. */
+  redirectTo?: string;
+  fields: LeadFormField[];
+  submitLabel: string;
+}
+
+interface Props {
+  leadForm?: LeadFormConfig;
+}
+
+const { leadForm } = Astro.props;
+
+// KG7 + AC7: only render when there is a real external endpoint to post to.
+const endpoint = leadForm?.endpoint;
+const hasForm = Boolean(leadForm && typeof endpoint === 'string' && endpoint.trim().length > 0);
+
+// Cap at 6 typed fields (schema max is 6; belt-and-suspenders on render).
+const fields = (leadForm?.fields ?? []).slice(0, 6);
+
+// Absolute redirect URL for the hidden `redirect` field. The provider needs an
+// absolute URL to bounce back to; derive it from Astro.site when configured,
+// else fall back to the raw redirectTo (relative during dev).
+const redirectTo = leadForm?.redirectTo ?? '/thank-you/';
+const absoluteRedirectUrl = Astro.site
+  ? new URL(redirectTo, Astro.site).href
+  : redirectTo;
+---
+
+{hasForm && (
+  <form class="lead-form" data-cro-block="lead-form" action={endpoint} method="POST">
+    {/* Web3Forms redirect convention: name="redirect", absolute success URL. */}
+    <input type="hidden" name="redirect" value={absoluteRedirectUrl} />
+
+    {/* Honeypot — visually hidden, off-tab, off-autocomplete. Duplicated inline
+        (NOT imported from spam-guard.ts): field name is the shared constant. */}
+    <div class="visually-hidden" aria-hidden="true">
+      <label>
+        Company website
+        <input
+          type="text"
+          name="company_website"
+          tabindex="-1"
+          autocomplete="off"
+        />
+      </label>
+    </div>
+
+    {/* Timestamp — set client-side by the inline spam-guard script below. */}
+    <input type="hidden" name="form_rendered_at" value="" />
+
+    {fields.map((field) => (
+      <p class="lead-field">
+        <label for={`lf-${field.name}`}>{field.label}</label>
+        {field.type === 'select' ? (
+          <select id={`lf-${field.name}`} name={field.name} required={field.required ?? true}>
+            <option value="">Select…</option>
+            {(field.options ?? []).map((option) => (
+              <option value={option}>{option}</option>
+            ))}
+          </select>
+        ) : (
+          <input
+            id={`lf-${field.name}`}
+            name={field.name}
+            type={field.type}
+            required={field.required ?? true}
+          />
+        )}
+      </p>
+    ))}
+
+    {/* Preferred-contact channel — first option is an empty placeholder. */}
+    <p class="lead-field">
+      <label for="lf-preferred-contact">Preferred contact method</label>
+      <select id="lf-preferred-contact" name="preferred_contact" required>
+        <option value="">Select…</option>
+        <option value="phone">Phone call</option>
+        <option value="text">Text message</option>
+        <option value="email">Email</option>
+      </select>
+    </p>
+
+    <button type="submit" class="lead-submit">{leadForm!.submitLabel ?? 'Get My Free Quote'}</button>
+
+    {/* Sole inline script snippet in the nine components. Sets form_rendered_at
+        ONLY; no redirect logic. Allowlisted by the T8 perf gate via data-factory-inline. */}
+    <script is:inline data-factory-inline="spam-guard">
+      (function () {
+        var f = document.currentScript.closest('form');
+        if (!f) return;
+        var t = f.querySelector('input[name="form_rendered_at"]');
+        if (t) t.value = String(Date.now());
+      })();
+    </script>
+  </form>
+)}
+
+<style>
+  .lead-form {
+    display: grid;
+    gap: 1rem;
+    max-width: 32rem;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .lead-field {
+    display: grid;
+    gap: 0.35rem;
+    margin: 0;
+  }
+  .lead-field label {
+    font-weight: 600;
+  }
+  .lead-field input,
+  .lead-field select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    font: inherit;
+  }
+  .lead-submit {
+    justify-self: start;
+    padding: 0.65rem 1.5rem;
+    border: none;
+    border-radius: 0.375rem;
+    background: var(--accent-color, #f60);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+  }
+</style>

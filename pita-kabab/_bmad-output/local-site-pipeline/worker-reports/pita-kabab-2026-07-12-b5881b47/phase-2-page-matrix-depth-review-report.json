@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 2,
+  "reviewer": "page-matrix-depth",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+  "packetHash": "083aebeda84c8c6a540acbb00bf847ec092a7efa23f15a2c11c6054a9c6e2f2c",
+  "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-2-page-matrix-depth-review-capsule.json",
+  "capsuleHash": "b7e39821b559b8cffbf0dbc50f226f4545c5fdd5011858eb2de6899369829678",
+  "artifactHashReviewed": "519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6",
+  "notesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\page-matrix-depth-review-notes.md",
+  "verdict": "pass",
+  "workerId": "phase-2-page-matrix-depth-reviewer-fable-5-2026-07-12",
+  "status": "completed",
+  "commandsRun": [
+    "Get-FileHash SHA256 packet phase-2.json => b9ae823f... (raw file); node stable-hash (compact JSON + \\n, delegation stanza excluded, per delegation.mjs packetHash) => 083aebeda84c8c6a540acbb00bf847ec092a7efa23f15a2c11c6054a9c6e2f2c (matches capsule; raw-file difference is the post-hash delegation append, by design)",
+    "Get-FileHash SHA256 phase-2-artifact.json => 519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6 (matches capsule artifactHash, state.json, and sealed envelope artifacts/phase-2.json)",
+    "node stable-hash of review capsule => b7e39821b559b8cffbf0dbc50f226f4545c5fdd5011858eb2de6899369829678 (matches scaffold capsuleHash)",
+    "Get-FileHash SHA256 phase-0-artifact.json => 53d094d068d264eba0cb4b0a5cf5dd1b015a2ca86944c18bd81b471ad4a0af10; phase-1-artifact.json => 23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47 (both match state.json sealed hashes; spot-checks ran against the sealed record)"
+  ],
+  "filesRead": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-2-page-matrix-depth-review-capsule.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\page-matrix-plan.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\web-footprint-findings.json (menu-item spot-check only)",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\artifacts\\pita-kabab-2026-07-12-b5881b47\\phase-2.json (sealed envelope, hash cross-check)",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\state.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-page-matrix-depth-review-report.json (scaffold)",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\location-matrix-planner\\SKILL.md",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\delegation.mjs (packetHash scheme verification)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\schemas\\archetypes\\restaurant.ts",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\templates\\archetypes\\restaurant\\src\\pages (template tree listing)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\templates\\shared\\pages\\index.astro (existence check)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\generators\\cro-contract.ts",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\lib\\cro-block-validator.ts (unregistered-archetype skip path)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\lib\\sap-quota-validator.ts (archetype gating + quota thresholds)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\lib\\c6-evaluator.ts (archetype-agnostic 400-char/0.70 rules)",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\schemas\\content-file.ts"
+  ],
+  "filesChanged": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\page-matrix-depth-review-notes.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-page-matrix-depth-review-report.json"
+  ],
+  "assumptions": [
+    "Sealed Phase 0/1 workbench artifacts (hash-matched to state.json) are the authoritative evidence baseline for grounding spot-checks; the Phase 0 evidence file web-footprint-findings.json was consulted only to confirm a menu-item claim the Phase 0 artifact references as its evidence file.",
+    "Engine source in D:\\plugin\\localevolve-factory (current working tree, branch main) reflects the archetype the Phase 4 build will use."
+  ],
+  "blockers": [],
+  "verification": [
+    "VERDICT PASS. All seven gate criteria satisfied; full reasoning in the notes file.",
+    "Depth: 46 internal pages (41 unconditional + 5 owner-gated) under named strategy 'Restaurant Page-Family Matrix v1'; all restaurant families used (menu-category 7, occasion 10, search-intent 10, neighborhood 8, story/info 8, core 3); family counts sum to 46; floor 41 >= 25 with every conditional dropped; inside 25-500.",
+    "Evidence grounding: 12 pages spot-checked against sealed Phase 1 keyword/entity findings and Phase 0 facts (catering, palestinian, shawarma, iftar, halal-restaurant, near-airport, marion/fairfax/ely/swisher, best-mediterranean, how-we-cook, halal-heritage, menu categories, vegetarian) — every evidenceBasis traces faithfully; no invented facts; halal/craft/phone/SMS/hours/prices/catering-terms/owner-name/yearEstablished/parking all flagged unverified or owner-gated per the sealed record; 'Estimated' labels carried honestly.",
+    "Anti-doorway: 8 neighborhood pages each with distinct competitor-gap basis and fold-if-facts-missing dependency; 7 neighborhood candidates among 13 total folds with credible named reasons (incumbent, contested, factless, unresolved geography); conservative sizing explicitly tied to the local-pack evidence gap; engine neighborhood Zod schema minima (localFacts>=1, proximityTrustLines>=2, townFaqs>=1) verified in restaurant.ts so plan-time and build-time folds agree.",
+    "External links: DoorDash/tel/sms/maps/Facebook appear only as CTAs; zero external entries in pageMatrix.",
+    "Route mapping: all 7 route kinds verified against real templates in packages/engine/templates (restaurant archetype + shared index.astro) — the 2026-07-05 F12 gap (no restaurant route templates) is fixed; route count = data entries (7 menu + 10 occasions + 18 landings + 8 neighborhoods + 3 fixed = 46); reserved root slugs avoided per RESERVED_ROOT_LANDING_SLUGS; landing kinds and occasion minima match the schema exactly; 5 conditional pages clearly flagged.",
+    "requiredCroBlocks and imageSlotPlan (32 slots, representational-only) present and coherent with owner dependencies flagged; Yahya/founder checklist referenced with post-seal gates named.",
+    "NON-BLOCKING CAVEAT (W1, from notes): cro-contract.ts registers only 'auto-dealer', so the cro-block-presence gate SKIPS for restaurant builds (and sap-anti-doorway is auto-dealer-only); the artifact's claim that the gate 'fails any page missing a required block' mirrors specialist SKILL.md wording but is not yet true for this archetype. Machine enforcement for restaurant = Zod schema minima + archetype-agnostic C6 content-file rules (>=400 chars, <0.70 near-dup). Downstream phases must treat the CRO block plan as review-enforced until a restaurant CRO contract is registered in the engine.",
+    "Integrity: artifact/packet/capsule/Phase-0/Phase-1 hashes all verified (see commandsRun); packet raw-file hash difference explained by the by-design post-hash delegation append."
+  ]
+}

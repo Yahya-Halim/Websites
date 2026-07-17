@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 3,
+  "phaseName": "DESIGN",
+  "createdAt": "2026-07-07T19:41:19.443Z",
+  "specialist": "ui-ux-pro-max",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md",
+  "requiredArtifactFields": [
+    "designSystem",
+    "designContentBuildPlan",
+    "selectedArchitecture",
+    "assetNeeds",
+    "identityDecision"
+  ],
+  "checklist": [
+    {
+      "id": "run-ui-ux-design-system",
+      "label": "Run UI UX Pro Max design-system guidance for the approved page matrix and local-business stack."
+    },
+    {
+      "id": "capture-design-system-output",
+      "label": "Persist the UI UX Pro Max design-system output and reference it in the Phase 3 artifact."
+    },
+    {
+      "id": "record-optional-figma-token-handoff",
+      "label": "If Figma or design tokens are available, record references, token paths, and hashes without making live Figma access required."
+    },
+    {
+      "id": "record-identity-decision",
+      "label": "Record real identity or declared fixtures before Phase 4 build."
+    },
+    {
+      "id": "document-payment-policy",
+      "label": "Record payment policy as known or unknown; do not fabricate payment claims."
+    },
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    }
+  ],
+  "outputPaths": {
+    "workbench": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3",
+    "phaseArtifact": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\phase-3-artifact.json",
+    "designSystem": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\design-system.md",
+    "identityDecision": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\identityDecision.json",
+    "identityDecisionNotes": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\identity-decision.md",
+    "designTokens": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\design-tokens.json",
+    "figmaHandoff": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\figma-handoff.md"
+  },
+  "artifactEvidencePaths": {},
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": []
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation."
+}

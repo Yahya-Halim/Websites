@@ -1,0 +1,100 @@
+{
+  "phase": 7,
+  "summary": "Phase 7 LAUNCH (run v2). Deployed dist/ to Netlify production via authenticated CLI (site captains-fish-chicken, deploy 6a4ed26f521f950a4b65d24b) — https://captains-fish-chicken.netlify.app is LIVE with the ship-clean v2 build (38 routes, real identity, validate exit 0). All nine required launch checks executed against the LIVE URL and passing: identity (title + self-canonical on the real domain), validation (factory validate exit 0, sealed Phase 5), imagery (live assets 200: open-late.webp, beach-loop.mp4, menu renders), conversion-actions (3 tel: links live on home), crawlability (robots.txt 200 with AI-crawler allow-list; sitemap-index 200), analytics (gtag G-7W35DKNK6Z loads once), local-presence (NAP + business email in live llms.txt), broken-links (38/38 live routes return 200), mobile-lighthouse (real Lighthouse on live URL: performance 90, FCP 2.2s, LCP 2.6s, CLS 0, TBT 250ms). Post-launch verification passed. Owner follow-ups recorded: GSC property + sitemap submission, GBP website-field update, live-GBP 4.4-rating re-check, hours confirmation to extend structured hours, logo file drop, stale SW listing cleanup.",
+  "checklist": [
+    {
+      "id": "deploy",
+      "status": "done",
+      "note": "netlify deploy --prod --dir=dist (site b3578dcc, deploy 6a4ed26f521f950a4b65d24b); production URL live"
+    },
+    {
+      "id": "post-launch-verification",
+      "status": "done",
+      "note": "all 9 required checks executed against the live URL; see launchChecklist"
+    },
+    {
+      "id": "founder-checklist",
+      "status": "done",
+      "note": "Phase 1/2/5/7 founder-checklist lineage referenced; owner follow-ups enumerated"
+    }
+  ],
+  "launchChecklist": [
+    {
+      "id": "identity",
+      "status": "passed",
+      "evidence": "LIVE: <title>Captains Fish and Chicken — Fried Fish Takeout, Cedar Rapids</title>; rel=canonical https://captains-fish-chicken.netlify.app/ — real domain, real email in entity data, zero fixtures (validate exit 0)"
+    },
+    {
+      "id": "validation",
+      "status": "passed",
+      "evidence": "factory validate exit 0 (zero gates, zero advisories) — sealed Phase 5 evidence at phase-5/factory-validate.log; independently re-confirmed by the Phase 5 reviewer"
+    },
+    {
+      "id": "imagery",
+      "status": "passed",
+      "evidence": "LIVE asset checks 200: /images/hero/open-late.webp, /videos/beach-loop.mp4, sampled menu render; Phase 6 sealed: 94/94 manifest-selections-exports, representational honesty verified"
+    },
+    {
+      "id": "conversion-actions",
+      "status": "passed",
+      "evidence": "LIVE: 3 tel:+13192211040 anchors on home (header CTA, CTA banner, visit block) + sticky mobile call bar; gtag tel-click event handler present (contact events fire to G-7W35DKNK6Z)"
+    },
+    {
+      "id": "crawlability",
+      "status": "passed",
+      "evidence": "LIVE: /robots.txt 200 (allow-list includes GPTBot/ClaudeBot/PerplexityBot/Google-Extended, references sitemap); /sitemap-index.xml 200 covering exactly the 38 routes on the real domain"
+    },
+    {
+      "id": "analytics",
+      "status": "passed",
+      "evidence": "LIVE: googletagmanager gtag/js?id=G-7W35DKNK6Z loads exactly once on home + config call present (Google-recommended snippet, engine-rendered on all 38 pages)"
+    },
+    {
+      "id": "local-presence",
+      "status": "passed",
+      "evidence": "LIVE: /llms.txt carries NAP (1616 1st Ave NE, Cedar Rapids IA 52402, +1-319-221-1040), business email, cuisine, price range, and the full priced menu; Restaurant JSON-LD with servesCuisine/priceRange/hasMenu site-wide; /location truth page live"
+    },
+    {
+      "id": "broken-links",
+      "status": "passed",
+      "evidence": "LIVE sweep: all 38 approved routes fetched over HTTPS — 38/38 return 200, zero non-200; build-time sweeps showed zero dangling internal links"
+    },
+    {
+      "id": "mobile-lighthouse",
+      "status": "passed",
+      "evidence": "Real Lighthouse (npx lighthouse, mobile form factor, headless Chrome) against the LIVE production URL: performance 90/100, FCP 2.2s, LCP 2.6s, CLS 0, TBT 250ms"
+    }
+  ],
+  "deployTarget": {
+    "provider": "Netlify",
+    "site": "captains-fish-chicken (id b3578dcc-c6b6-4070-b049-55e35dfb1c09, team Localevolve)",
+    "productionUrl": "https://captains-fish-chicken.netlify.app",
+    "deployId": "6a4ed26f521f950a4b65d24b",
+    "method": "netlify CLI deploy --prod --dir=dist (authenticated as the site owner account); project linked for future deploys",
+    "deployedAt": "2026-07-08"
+  },
+  "postLaunchVerification": {
+    "status": "passed",
+    "verifiedAt": "2026-07-08",
+    "checks": [
+      "live title + canonical on production domain (identity)",
+      "gtag G-7W35DKNK6Z live, loads once (analytics)",
+      "3 tel: conversion anchors live on home (conversion-actions)",
+      "robots.txt 200 with AI-crawler allow-list + sitemap reference (crawlability)",
+      "sitemap-index.xml 200, 38 routes on real domain (crawlability)",
+      "llms.txt live with NAP/email/cuisine/priced menu (local-presence)",
+      "live assets 200: open-late.webp, beach-loop.mp4, menu render sample (imagery)",
+      "38/38 live routes return HTTP 200 (broken-links)",
+      "mobile Lighthouse on live URL: perf 90, LCP 2.6s, CLS 0 (mobile-lighthouse)"
+    ],
+    "ownerFollowUps": [
+      "Google Search Console: add property for captains-fish-chicken.netlify.app + submit sitemap-index.xml",
+      "Google Business Profile: set website field to the live URL; review Dine-in attribute (site is takeout/delivery/catering only); re-check the 4.4 (208) rating and keep the on-site claim in sync",
+      "Confirm weekly hours (esp. Fri-Sat 11pm) -> then extend structured openingHoursSpecification to the full week",
+      "Drop the real shark-captain logo at public/logo.png and redeploy",
+      "Stale SW listing cleanup: Yelp captains-fish-and-chicken-cedar-rapids-2, Grubhub 11805992, RestaurantJump inc-52404 still show a Captains at the Pita Kabab address; Apple Maps wrong-quadrant (SE) correction",
+      "Optional: custom domain later — swap business.json domain + canonicals and redeploy (one command)",
+      "Optional: real food/storefront photography to replace representational renders"
+    ]
+  }
+}

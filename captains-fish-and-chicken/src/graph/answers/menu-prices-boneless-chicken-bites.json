@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-boneless-chicken-bites",
+  "questionRef": "questions/menu-prices-boneless-chicken-bites",
+  "text": "Boneless Wings Meal (8 pcs): Meal 12.99\nBoneless Wings Meal (12 pcs): Meal 18.99\nBoneless Wings Only (20 pcs): Only 26.99\nBoneless Wings Only (30 pcs): Only 49.99\nBoneless Wings Only (50 pcs): Only 79.99",
+  "cites": [
+    "menu/boneless-chicken-bites"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/boneless-chicken-bites.json",
+  "lastVerified": "2026-07-07"
+}

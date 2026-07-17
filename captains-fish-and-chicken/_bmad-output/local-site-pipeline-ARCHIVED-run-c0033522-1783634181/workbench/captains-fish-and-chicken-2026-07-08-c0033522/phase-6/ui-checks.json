@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-08",
+  "uiChecks": [
+    {
+      "viewport": "desktop",
+      "status": "pass",
+      "notes": "open-late hero loads; single h1; no overflow; home 8 sections, video hero, 0 broken imgs"
+    },
+    {
+      "viewport": "mobile",
+      "status": "pass",
+      "notes": "375x812: sticky call bar fixed+visible; header static; single h1; 0 broken imgs; no overflow"
+    }
+  ],
+  "unresolvedIssues": []
+}

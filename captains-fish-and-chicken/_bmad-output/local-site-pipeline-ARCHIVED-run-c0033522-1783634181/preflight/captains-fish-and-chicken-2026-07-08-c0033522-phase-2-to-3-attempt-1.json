@@ -1,0 +1,17 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "fromPhase": 2,
+  "toPhase": 3,
+  "attempt": 1,
+  "sourceArtifactHash": "e4753185d6ffb1b42282eebdde719bbfcc394eb62c5e556451d2d2aacb8fab89",
+  "status": "passed",
+  "emittedAt": "2026-07-08T20:00:35.001Z",
+  "checksPassed": [
+    "inputSchema",
+    "blocking",
+    "briefAlignment",
+    "phaseAdjacency"
+  ],
+  "checksFailed": [],
+  "blockingReasons": []
+}

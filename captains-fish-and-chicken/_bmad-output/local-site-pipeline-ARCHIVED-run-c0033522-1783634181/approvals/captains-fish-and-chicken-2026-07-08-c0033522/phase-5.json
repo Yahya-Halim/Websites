@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 5,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/phase-5-artifact.json",
+  "artifactHash": "fab4dd0d4e28755dae6a2129be9aa85a2890e6df0e7702d1cdb0523584508283",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/approval-notes.md",
+  "notes": "# Phase 5 approval — run v2\n\n**Approved by:** operator (geekeys343@gmail.com), acting for owner Ray Aqel — Yahya actor per gate\n**Date:** 2026-07-08\n\n## Ruling\nPhase 5 VALIDATE approved. factory validate exit 0 (independently re-confirmed by reviewer);\nSEO/GEO audit passed with zero blocking; identity fully real (captains-fish-chicken.netlify.app,\ncaptainsfishchicken@gmail.com, GA4 G-7W35DKNK6Z); 3 advisories fixed pre-seal.\n\n## Accepted remaining advisories\n1. Conservative structured hours (Fri-Sat omitted from JSON-LD) until owner confirms the 11pm close.\n2. \"Rated 4.4 on Google\" plain-text claim to re-verify against live GBP at launch.\n",
+  "approvedAt": "2026-07-08T22:28:00.351Z",
+  "expiresAt": "2026-07-15T22:28:00.351Z"
+}

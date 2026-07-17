@@ -1,0 +1,317 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 7,
+  "phaseName": "LAUNCH",
+  "createdAt": "2026-07-16T01:17:49.902Z",
+  "specialist": "local-launch-checklist",
+  "specialistSkillPath": "C:\\Users\\Lenovo\\.claude\\plugins\\cache\\localevolve-factory\\localevolve-factory\\9ea6578e8fd4\\skills\\local-launch-checklist\\SKILL.md",
+  "requiredArtifactFields": [
+    "launchChecklist",
+    "deployTarget",
+    "postLaunchVerification"
+  ],
+  "checklist": [
+    {
+      "id": "read-phase3-launch-identity",
+      "label": "Read packet.inputEvidence.phase3.identityDecision before launch checks; never ship declared fixtures or placeholder identity."
+    },
+    {
+      "id": "read-phase5-validation-results",
+      "label": "Read packet.inputEvidence.phase5 validation evidence before launch readiness; unresolved failures remain blocking."
+    },
+    {
+      "id": "read-phase6-imagery-proof",
+      "label": "Read packet.inputEvidence.phase6 verificationReport, exports, and selections before launch QA."
+    },
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    },
+    {
+      "id": "review-notes-file",
+      "label": "Require reviewer notes to travel by --notes-file."
+    }
+  ],
+  "inputEvidence": {
+    "phase3": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-09-a701f565/phase-3.json",
+      "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+      "artifactHash": "ee63a4a2d93405f3e5c1e4343b1fcc6f923853d9d1a2120bd19330dbb4f90c9c",
+      "identityDecision": {
+        "mode": "real",
+        "domain": "https://captains-fish-chicken.netlify.app",
+        "email": "captainsfishchicken@gmail.com",
+        "gaId": "G-7W35DKNK6Z",
+        "paymentAccepted": "unknown",
+        "provenance": "All owner-supplied, live since 2026-07-08, validate exit 0. Payment policy unknown - owner never stated; do not fabricate payment claims.",
+        "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identity-decision.md"
+      }
+    },
+    "phase5": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-09-a701f565/phase-5.json",
+      "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+      "artifactHash": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268",
+      "validationRuns": [
+        {
+          "id": "factory-validate",
+          "command": "npx factory validate",
+          "target": "D:/website/captains-fish-and-chicken (Phase 4 build: dist/, 38 routes)",
+          "startedAt": "2026-07-09T23:36:28.751Z",
+          "finishedAt": "2026-07-09T23:36:29.222Z",
+          "status": "passed",
+          "detail": "Exit code 0. 11/11 validators passed: 6 blocking gates (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) and 5 advisories (has-generated-llms-txt, has-generated-robots-txt, no-todo-markers-in-artifacts, asset-references-exist, graph-presence). errorCount 0, warningCount 0.",
+          "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log"
+        },
+        {
+          "id": "seo-geo-audit",
+          "command": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility",
+          "target": "dist/ (38 routes, Phase 4 artifactHash 74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059) + live origin crawl surfaces",
+          "startedAt": "2026-07-09",
+          "finishedAt": "2026-07-09",
+          "status": "passed",
+          "detail": "Status ready_with_concerns: Blocking Findings: None; 6 non-blocking advisories. Measured: 38/38 unique titles and meta descriptions; one self-referencing live-origin canonical per page; single h1 per page; JSON-LD 0 parse errors (Restaurant 38, WebSite 38, WebPage 37, BreadcrumbList 37, FAQPage 21, Menu 1, ContactPage 1); single consistent NAP tuple; 0 broken internal links; 138 images 0 missing alt; tel: CTA on every page; real GA4 id everywhere; zero fixture flags; count-free review claim; robots.txt AI-crawler allow-list (GPTBot, ClaudeBot, PerplexityBot, Google-Extended); llms.txt 8 sections well-formed; sitemap 38/38 on-origin, no funnel paths; live 200 on /, /robots.txt, /llms.txt, /sitemap-index.xml, /menu/, /contact/, /faq/; live robots.txt identical to dist.",
+          "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md"
+        }
+      ],
+      "factoryValidate": {
+        "command": "npx factory validate",
+        "exitCode": 0,
+        "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log",
+        "checkedGateIds": [
+          "schema-floor",
+          "route-completeness",
+          "cro-block-presence",
+          "do-not-ship-guards",
+          "sap-anti-doorway",
+          "graph-gate"
+        ],
+        "gateResults": {
+          "schema-floor": "pass",
+          "route-completeness": "pass",
+          "cro-block-presence": "pass",
+          "do-not-ship-guards": "pass",
+          "sap-anti-doorway": "pass",
+          "graph-gate": "pass"
+        },
+        "advisoryValidatorResults": {
+          "has-generated-llms-txt": "pass",
+          "has-generated-robots-txt": "pass",
+          "no-todo-markers-in-artifacts": "pass",
+          "asset-references-exist": "pass",
+          "graph-presence": "pass"
+        },
+        "engineVersion": "0.1.0",
+        "startedAt": "2026-07-09T23:36:28.751Z",
+        "finishedAt": "2026-07-09T23:36:29.222Z",
+        "success": true
+      },
+      "seoGeoAudit": {
+        "command": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility",
+        "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md",
+        "status": "ready_with_concerns",
+        "blockingFindings": [],
+        "blockingFindingsCount": 0,
+        "advisoryFindingsCount": 6,
+        "auditTarget": "dist/ (Phase 4 build, 38 routes) cross-checked against https://captains-fish-chicken.netlify.app crawl surfaces",
+        "fixtureFlags": 0
+      },
+      "failures": [],
+      "fixRounds": [],
+      "remainingAdvisories": [
+        "Open Graph / Twitter Card meta tags are absent on all 38 pages (no og:title/og:description/og:url/og:type/og:image or twitter:*); social and chat-app link previews degrade. Not a factory gate; add an OG block in a future template round.",
+        "Structured openingHoursSpecification covers only Mon-Thu 11:00-22:00 and Sun 11:00-20:00 while the caveated display text also claims Fri-Sat 11am-11pm (source gap: business.json hours has no structured Fri-Sat entry). Deliberately not fixed: hours are owner-unconfirmed and the sealed constraint forbids adding hours claims; resolve when the owner confirms hours.",
+        "Five titles are 66-69 characters and may truncate in SERPs: /occasions/office-and-party-catering/ (69), /catering-cedar-rapids/ (68), /open-late-cedar-rapids/ (67), /fried-chicken-and-wings-cedar-rapids/ (66), /menu/seafood/ (66).",
+        "/menu/ meta description is 203 characters and will truncate around ~165 in SERPs; the clipped tail is non-primary (delivery-apps mention).",
+        "Hours remain owner-unconfirmed; every page and llms.txt correctly keep the 'please call to confirm' caveat until the owner confirms.",
+        "Dual visible phone display formats: tel: CTAs show +1-319-221-1040 while body copy shows (319) 221-1040; same number and schema-consistent, cosmetic only. Runtime CWV/Lighthouse is out of factory-validate scope and was not measured; route to local-launch-checklist after the Phase 7 deploy."
+      ],
+      "runtimeEvidence": {
+        "factoryValidateLog": {
+          "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log",
+          "hash": "905e4747a3149b492b922a386bdeb8fe615c4a3419577cf2ae71a94ec1d2e8dc",
+          "mtimeMs": 1783640525870.0247
+        },
+        "seoGeoAuditReport": {
+          "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md",
+          "hash": "c16321e86c5438b60d812e6b9180f2d08941b6d171c5900709f87bf87751ffca",
+          "mtimeMs": 1783640805256.322
+        }
+      }
+    },
+    "phase6": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-09-a701f565/phase-6.json",
+      "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json",
+      "artifactHash": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656",
+      "higgsfieldManifest": {
+        "path": "scripts/image-prompts.json",
+        "absolutePath": "D:\\website\\captains-fish-and-chicken\\scripts\\image-prompts.json",
+        "sha256": "7f9009e67d6062a0b9ec83816388aa37d0ed33f1181e8e51b54f71a3d02f0259",
+        "schemaVersion": 1,
+        "slotCount": 94,
+        "requiredSlotCount": 1,
+        "categoryCounts": {
+          "menu-item": 87,
+          "marketing": 7
+        },
+        "referenceStatusCounts": {
+          "generate-from-scratch": 94
+        },
+        "marketingSlots": [
+          "home-hero -> public/images/hero/home-hero.jpg (page /)",
+          "occasion-catering -> public/images/hero/catering-party-pans.jpg (page /occasions/office-and-party-catering)",
+          "occasion-family-dinner -> public/images/hero/family-dinner.jpg (page /occasions/family-dinner)",
+          "occasion-game-day -> public/images/hero/game-day-wings.jpg (page /occasions/game-day-wings)",
+          "og-social -> public/images/og/og-social.jpg (site-wide)",
+          "brand-logo -> public/logo.png (site-wide, required:true, placeholder pending owner file drop)",
+          "open-late-hero -> public/images/hero/open-late.webp (page /open-late-cedar-rapids)"
+        ],
+        "verifiedAgainstThisRun": true,
+        "regeneratedThisPhase": false,
+        "notes": [
+          "All 94 slots carry reference_status generate-from-scratch (no client reference photo required); reuse is at the export level - assets already exist on disk from the archived run.",
+          "Manifest count matches the Phase 2 imageSlotPlan (87 menu-item renders for the unchanged menu + 7 marketing heroes/og/logo). Home beach-loop video is a separate video asset, not an image manifest slot.",
+          "No image slots were added or removed; the manifest is stable versus the live 2026-07-08 asset set."
+        ]
+      },
+      "selections": {
+        "path": "scripts/selections.json",
+        "absolutePath": "D:\\website\\captains-fish-and-chicken\\scripts\\selections.json",
+        "sha256": "303e4cd9ef3eb058d02ce2f2b316d484615f2dea9f67d1c150f587b9033390a7",
+        "schemaVersion": 1,
+        "selectionCount": 94,
+        "kindCounts": {
+          "variant": 94
+        },
+        "matchesManifestCount": true,
+        "everyManifestSlotHasSelection": true,
+        "unselectedSlots": [],
+        "notes": [
+          "Every one of the 94 manifest slots has exactly one selection of kind 'variant' with a source path under output/images/generated/<slot-id>/ and a provenance string (higgsfield-mcp:<model>:r<round>).",
+          "Selection count (94) equals manifest slot count (94); no slot is missing a decision and no redo/blocked-for-real-photo states remain open."
+        ]
+      },
+      "exports": {
+        "exportedCount": 94,
+        "manifestSlotCount": 94,
+        "missingCount": 0,
+        "missing": [],
+        "higgsfieldWorkflowVerify": {
+          "command": "node higgsfield-workflow.mjs verify --project D:/website/captains-fish-and-chicken",
+          "ok": true,
+          "problems": [],
+          "deferredSlots": [],
+          "deferredPages": []
+        },
+        "supportingAssets": [
+          "public/videos/beach-loop.mp4 - home hero loop video EXISTS (6.38 MB).",
+          "public/images/hero/beach-loop-a.webp - home hero video poster EXISTS; beach-loop-b.webp and beach-loop-c.webp keyframes also present.",
+          "public/logo.png - brand logo raster placeholder EXISTS (pending owner file drop, non-blocking).",
+          "public/images/og/og-social.jpg - Open Graph social image EXISTS on disk (OG meta tags not yet wired into templates - Phase 5 advisory, not a Phase 6 blocker)."
+        ],
+        "notes": [
+          "All 94 manifest output_files were confirmed to exist on disk under public/ via filesystem existence check; 0 missing.",
+          "higgsfield-workflow verify (the specialist's authoritative verifier) reports ok:true, problems:[], and zero deferred slots/pages.",
+          "No export was regenerated or overwritten this phase; existing exports were re-verified in place."
+        ]
+      },
+      "verificationReport": {
+        "status": "pass",
+        "ok": true,
+        "verifiedAt": "2026-07-10",
+        "verificationTarget": "Built dist/ (38 pages, Phase 4 build artifactHash 74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059) cross-checked against on-disk public/ assets. Live origin https://captains-fish-chicken.netlify.app returns HTTP 200 for / and /menu/ (serving pre-deploy content until Phase 7 deploys this build).",
+        "summary": "Static-site imagery verification against the built dist/ HTML and on-disk public/ assets. 94 unique image/video references across 38 pages all resolve to existing files (0 broken). All 5 hero references are modern-format webp. All 138 <img> tags carry alt text. Home hero uses /videos/beach-loop.mp4 with poster /images/hero/beach-loop-a.webp. Menu item cards reference existing per-item renders and pages carry the visible 'Photos are representational' honesty note. Sticky mobile call bar (tel: call-only) present as a layout singleton. Zero unresolved issues.",
+        "assetReferenceSweep": {
+          "pagesScanned": 38,
+          "uniqueAssetRefs": 94,
+          "resolvedRefs": 94,
+          "brokenRefs": 0,
+          "totalImgTags": 138,
+          "imgTagsMissingAlt": 0
+        },
+        "modernFormatGate": {
+          "status": "pass",
+          "heroReferences": [
+            "/images/hero/catering-party-pans.webp",
+            "/images/hero/beach-loop-a.webp",
+            "/images/hero/family-dinner.webp",
+            "/images/hero/game-day-wings.webp",
+            "/images/hero/open-late.webp"
+          ],
+          "nonModernHeroReferences": []
+        },
+        "representationalHonesty": {
+          "status": "pass",
+          "checks": [
+            "All generated imagery is labeled representational; the visible 'Photos are representational' note is present on menu pages and every menu-item <img> alt text ends with '(representational image)'.",
+            "No imagery is presented as a real photograph of the premises.",
+            "Brand logo (public/logo.png) is a raster placeholder pending an owner file drop; noted as a follow-up, not a launch blocker. No route impact on swap.",
+            "Open owner-photography slot remains available to replace representational renders when the owner supplies real photos; no route impact."
+          ]
+        },
+        "uiChecks": [
+          {
+            "id": "desktop-ui-check",
+            "viewport": "desktop",
+            "status": "pass",
+            "ok": true,
+            "checks": [
+              "Home hero video (/videos/beach-loop.mp4) present with webp poster; landing/occasion heroes render from existing webp files.",
+              "All 94 image/video references resolve to existing assets; 0 broken references across 38 pages.",
+              "Every <img> has alt text (138/138); menu-item alts carry the representational qualifier.",
+              "Hero imagery is modern-format webp (modern-format gate pass).",
+              "Menu-item cards reference existing per-item renders under public/images/menu/; 'Photos are representational' note visible on menu pages."
+            ]
+          },
+          {
+            "id": "mobile-ui-check",
+            "viewport": "mobile",
+            "status": "pass",
+            "ok": true,
+            "checks": [
+              "Sticky mobile call bar (.sticky-call-bar, tel: call-only) present as a layout singleton; 3 tel: CTAs on the home page.",
+              "Same resolved image/video reference set as desktop (static site, responsive CSS); 0 broken references.",
+              "Images carry width/height and loading=lazy/decoding=async, and heroes are webp, keeping mobile payload light.",
+              "Representational honesty note and alt text present identically on the mobile-rendered markup."
+            ]
+          }
+        ],
+        "unresolvedIssues": [],
+        "acknowledgedNonBlockingAdvisories": [
+          "Open Graph / Twitter Card meta tags absent on all 38 pages (Phase 5 advisory); og-social.jpg asset exists on disk for a future template round. Not a Phase 6 imagery blocker.",
+          "Brand logo is a placeholder pending owner file drop; swap is drop-in with no route impact.",
+          "Runtime CWV/Lighthouse is out of scope for static imagery verification; route to local-launch-checklist after the Phase 7 deploy."
+        ]
+      }
+    }
+  },
+  "outputPaths": {
+    "workbench": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7",
+    "phaseArtifact": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\phase-7-artifact.json"
+  },
+  "artifactEvidencePaths": {},
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": true,
+    "requiredReviewers": [
+      "launch-readiness"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "delegation": {
+    "role": "builder",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7.json",
+    "packetHash": "2dda44042b29a02a2101252b0961101b9645bf451b28ba4db0a86acb54cc7e39",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder-capsule.json",
+    "capsuleHash": "b3011c498e72828d9703591e703cb35c9b5a2dcd59898a01a2434e2cda2aa9a0",
+    "dispatchPromptPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder.md",
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder-report.json"
+  }
+}

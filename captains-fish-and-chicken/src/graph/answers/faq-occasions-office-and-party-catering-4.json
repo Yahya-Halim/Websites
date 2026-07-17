@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-office-and-party-catering-4",
+  "questionRef": "questions/faq-occasions-office-and-party-catering-4",
+  "text": "Smaller catering orders can be delivered through DoorDash, Uber Eats, and Grubhub, subject to each app's size limits and fees. For the largest fish family deals and pans, pickup at 1616 1st Ave NE is the most reliable option, and calling ahead ensures it's ready and fresh.",
+  "cites": [
+    "occasions/office-and-party-catering"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/office-and-party-catering.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

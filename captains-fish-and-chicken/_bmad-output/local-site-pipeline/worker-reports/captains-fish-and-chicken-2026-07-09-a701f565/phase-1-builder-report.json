@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "workerId": "phase1-builder-v3-fresh-verify-20260709-f5c1",
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 1,
+  "specialist": "keyword-research",
+  "status": "completed",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1.json",
+  "packetHash": "1dbaf2590d53f90712e2bd1fbb16fc8122537e7bc6fddccac134cfdda9bcbc47",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1-builder-capsule.json",
+  "capsuleHash": "865c4918f5f9a3fdf3d3933ddad4095976043a7785951ef8268be8198147532a",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\phase-1-artifact.json",
+  "artifactHash": "1c9a1cf67549096de780b8a9bc3bf6638bae039a5cac0e23688f01187ea14406",
+  "commandsRun": [
+    "node D:/plugin/localevolve-factory/packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project \"D:/website/captains-fish-and-chicken\" --phase 1 --artifact \"D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-1/phase-1-artifact.json\" --specialist keyword-research (result: ok=true, problems=[])",
+    "node -e sha256(phase-1-artifact.json) => 1c9a1cf67549096de780b8a9bc3bf6638bae039a5cac0e23688f01187ea14406",
+    "WebSearch x10 fresh verification queries executed 2026-07-09 (brand SERP, Chicago Grill/Center Point Rd, Two Bros 600 17th St NE, LJS 1st Ave SE + Williams Blvd, Sugapeach relocation, Harold's 4330 16th Ave SW, Chicago Grill history, owned-site index check, head-term SERP sample, Pita Kabab)"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1-builder-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\seo-geo\\research\\keyword-research\\SKILL.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline-ARCHIVED-run-c0033522-1783634181\\workbench\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-1\\phase-1-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline-ARCHIVED-run-c0033522-1783634181\\workbench\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-1\\review-research-sufficiency.md",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\schemas\\phase-envelopes.ts"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1\\phase-1-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-1-builder-report.json"
+  ],
+  "assumptions": [
+    "The archived, reviewer-passed 2026-07-08 Phase 1 artifact qualifies as a sealed prior-run research source per the dispatch guidance; it was used as baseline only, with load-bearing claims independently re-verified by fresh 2026-07-09 web checks.",
+    "The envelope shape rule (array fields as arrays of plain strings) applies to the five required artifact fields; competitorNotes and keywordEntityFindings are objects whose every array member is a plain string, which satisfies the rule while preserving reviewability.",
+    "SERP result-page titles and dated update stamps (e.g. Yelp 'Updated June 2026', review counts in page titles) are treated as Measured platform-displayed values; all demand metrics are labeled Estimated or N/A since no keyword-volume tool was connected."
+  ],
+  "blockers": [],
+  "verification": [
+    "inspect-artifact run for phase 1 with specialist keyword-research returned ok=true with problems=[] on the final artifact (first attempt, no iterations needed).",
+    "All five requiredArtifactFields (researchSources, competitorNotes, keywordEntityFindings, sourceDates, evidenceGaps) present and non-null; every source in researchSources has a corresponding sourceDates entry.",
+    "Load-bearing sealed-research claims re-verified with fresh 2026-07-09 WebSearch: Chicago Grill returning brand CONFIRMED at 824 6th St SW (Center Point Rd detail from dispatch context found unsupported and quarantined to evidenceGaps); Two Bros open at 600 17th St NE CONFIRMED; LJS Williams Blvd open CONFIRMED and 1st Ave SE closure CORRECTED to June 2014 (Corridor Business Journal); Sugapeach summer-2026 relocation CONFIRMED in progress; Harold's operating CONFIRMED; stale Captains SW Yelp/Grubhub listings re-confirmed live and ranking.",
+    "Truthfulness floor honored: omit-never-fabricate; unresolved items (13) recorded in evidenceGaps; no search-volume figures fabricated (all Estimated/N-A).",
+    "artifactHash computed from final artifact bytes after the last edit; artifact untouched since hashing."
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 1,
+  "reviewer": "research-sufficiency",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-1/phase-1-artifact.json",
+  "artifactHash": "a0ac6507af3347d0ba9b8a5ef2859d88782baa02539f1c21332b61659bace5cb",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-1/review-research-sufficiency.md",
+  "notesHash": "73dc640f6e2aee160af851b368ec7f34ff8a639fb1455b02ff353583888cf629",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-1\\research-sufficiency-attempt-1.md",
+  "notesHeadings": [
+    "Phase 1 review — research-sufficiency (run v2)",
+    "Spot verifications (all 4 confirmed via independent live searches)",
+    "Criteria: 8/8 pass",
+    "Non-blocking weaknesses (carry-forward to Phase 4 authoring)",
+    "Blocking issues",
+    "Independence caveat"
+  ],
+  "notes": "# Phase 1 review — research-sufficiency (run v2)\n\n**Reviewer:** research-sufficiency (independent read-only subagent; did NOT produce the artifact)\n**Verdict:** PASS\n**Date:** 2026-07-08\n\n## Spot verifications (all 4 confirmed via independent live searches)\n1. Chicago Grill Chicken & Fish live at 824 6th St SW — confirmed (own site chicagogrillcr.com, Yelp June 2026, DoorDash store 448775).\n2. Two Bros relocated to 600 17th St NE — confirmed (Yelp live listing; old SW listing marked CLOSED July 2025; phone + hours match verbatim).\n3. Sugapeach relocating summer 2026 — confirmed (Gazette April 2026 + Q103; co-owner quote appears verbatim in coverage).\n4. Harold's Chicken at 4330 16th Ave SW since Feb 11 2025 — confirmed (Gazette/KHAK; owner names match).\n\n## Criteria: 8/8 pass\nDated diverse sources; real competitors with closed/changed quarantined (8 entries); zero fabricated\nmetrics (Sugapeach 131 Yelp reviews checked exact); BOFU-first quick wins; single-location scope with\nPita Kabab as confusion entity; all 5 required evidence gaps present (+7 more); complete GEO layer;\nhonest baseline corrections (Harold's date, Hiphop removal).\n\n## Non-blocking weaknesses (carry-forward to Phase 4 authoring)\n- Chicago Grill likely a RETURNING/rebranded occupant of 824 6th St SW (older Grubhub id 1213083 +\n  Tripadvisor page predate Two Bros there) — site copy must NOT call it a \"new\" entrant; competitive\n  conclusion unchanged.\n- Sugapeach \"4.5/1302 (Restaurant Guru)\" carried as Estimated without source snippet — do not cite on-site.\n- Several soul-food entrants named without individual URLs — do not cite individually without re-verification.\n- One WebFetch entry typed inside a SERP queries array (provenance-typing nit).\n\n## Blocking issues\nNone.\n\n## Independence caveat\nReviewer used the same search-index class as producers (correlated index staleness possible); verified\n4 of ~15 competitor entries + 1 platform metric; no GBP/API/location access.\n",
+  "reviewedAt": "2026-07-08T18:31:04.959Z"
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-office-and-party-catering-2",
+  "questionRef": "questions/faq-occasions-office-and-party-catering-2",
+  "text": "For large catering orders, please call (319) 221-1040 as early as you can, at minimum several hours ahead and more for very big orders. Since everything is fried fresh to order, advance notice lets us prep it fresh and have it ready at your scheduled pickup time at 1616 1st Ave NE.",
+  "cites": [
+    "occasions/office-and-party-catering"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/office-and-party-catering.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

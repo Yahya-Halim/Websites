@@ -1,0 +1,335 @@
+---
+// Marketing home page (project-owned; wins over the engine-injected route).
+// Section order follows the sealed Phase 3 designContentBuildPlan (core-home):
+// hero + 3 value props -> menu-category highlights -> occasions rail (catering-
+// led) -> trust grid (conditional, currently omitted: <6 owner-confirmed facts)
+// -> full-width CTA banner -> neighborhoods teaser -> FAQ teaser -> lead form
+// (conditional, no endpoint provisioned) -> NAP block. Every claim traces to
+// sealed Phase 0 evidence; owner-unconfirmed copy is flagged in the workbench
+// value-props-decision.md. No prices, no halal/craft claims, no fabricated
+// offers (KG7 omit-never-fabricate).
+import Base from '../layouts/Base.astro';
+import { renderWebPageJsonLd } from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+import Hero from '@engine/components/Hero.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import LeadForm from '@engine/components/LeadForm.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import FinancingBlock from '@engine/components/FinancingBlock.astro';
+import TatreezBand from '../components/TatreezBand.astro';
+
+// Arabic hospitality anchor + Naskh dish names ship hidden until owner Ray Aqel
+// verifies the script/diacritics (Phase 3 amendment-2 guard gate). Flip to true
+// only after owner sign-off.
+const enableArabic = false;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const pageTitle = 'Pita Kabab - Mediterranean Restaurant in Cedar Rapids, IA';
+const homeDescription =
+  'Pita Kabab serves Mediterranean & Middle Eastern food in Cedar Rapids: shawarma, kabobs, falafel, hummus and baklava at 3100 6th St SW. Call (319) 440-3709.';
+
+const legacyTelCta = site?.cta?.href?.startsWith('tel:') ? site.cta : undefined;
+const homepageCtaPrimary = site?.ctaPrimary ?? legacyTelCta;
+const homepageCtaSecondary = site?.ctaSecondary;
+
+// Menu highlights: all 7 categories, hub-ordered (order asc, then slug).
+const menuSectionsRaw = await getCollection('menu');
+const menuSections = [...menuSectionsRaw].sort((a, b) => {
+  const ao = a.data.order ?? Number.POSITIVE_INFINITY;
+  const bo = b.data.order ?? Number.POSITIVE_INFINITY;
+  if (ao !== bo) return ao < bo ? -1 : 1;
+  return a.data.slug < b.data.slug ? -1 : a.data.slug > b.data.slug ? 1 : 0;
+});
+
+// Occasions rail, catering-led.
+const occasionsRaw = await getCollection('occasions');
+const occasions = [...occasionsRaw].sort((a, b) => {
+  if (a.data.slug === 'catering') return -1;
+  if (b.data.slug === 'catering') return 1;
+  return a.data.slug < b.data.slug ? -1 : 1;
+});
+
+// Neighborhoods teaser.
+const neighborhoods = await getCollection('neighborhoods');
+
+// FAQ teaser: first three answers from the sealed /faq landing data.
+const landings = await getCollection('landings');
+const faqLanding = landings.find((l) => l.data.slug === 'faq');
+const faqTeaser = (faqLanding?.data.faqs ?? []).slice(0, 3);
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: pageTitle,
+  url: siteRoot,
+  description: homeDescription,
+  websiteName: business?.name ?? 'Pita Kabab',
+  websiteUrl,
+  speakableSelectors: ['.hero-copy h1', '.hero-subheading'],
+});
+
+// External order CTA (never a page): DoorDash store linked from the owner's
+// published /order/ page (sealed Phase 0 evidence).
+const doordashUrl = 'https://www.doordash.com/store/pita-kabab-cedar-rapids-41564223/';
+---
+
+<Base title={pageTitle} description={homeDescription} jsonLd={[webPageLd]}>
+  {/* Hero: single h1 + subhead + primary call CTA + exactly-3 value props. */}
+  <Hero
+    heading="Pita Kabab — a Palestinian kitchen in Cedar Rapids"
+    subheading="Shawarma, kabobs, falafel, hummus, foul and baklava — made fresh daily, to order at the counter at 3100 6th St SW. Dine in, take out, or get DoorDash delivery."
+    ctaPrimary={homepageCtaPrimary}
+    ctaSecondary={homepageCtaSecondary}
+    valueProps={site?.valueProps}
+  />
+
+  {/* Conditional promo blocks — render ONLY when their data is present (KG7).
+      site.offers and site.financing are deliberately absent (owner-unconfirmed). */}
+  <OfferCallout offers={site?.offers} />
+  <FinancingBlock providers={site?.financing?.providers} />
+
+  {/* Menu-category highlights: cards linking all 7 categories. */}
+  <section class="menu-highlights" aria-labelledby="menu-highlights-heading">
+    <span class="eyebrow">From our kitchen</span>
+    <h2 id="menu-highlights-heading">Shawarma, kabobs, falafel, and hummus</h2>
+    <ul class="card-grid">
+      {menuSections.map((section) => (
+        <li class="menu-card">
+          <a href={`/menu/${section.data.slug}/`}>
+            <img
+              class="menu-thumb"
+              src={`/images/${section.data.slug}.webp`}
+              alt={`${section.data.name} at Pita Kabab`}
+              width="720"
+              height="540"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="menu-card-title">{section.data.name}</span>
+          </a>
+          {section.data.description && <p>{section.data.description}</p>}
+        </li>
+      ))}
+    </ul>
+    <p class="section-more"><a href="/menu/">See the full menu →</a></p>
+  </section>
+
+  <TatreezBand />
+
+  {/* Occasions rail, catering-led. */}
+  <section class="occasions-rail home-band" aria-labelledby="occasions-heading">
+    <span class="eyebrow">Occasions &amp; catering</span>
+    <h2 id="occasions-heading">Catering for the whole table</h2>
+    <ul class="card-grid">
+      {occasions.map((occasion) => (
+        <li>
+          <a href={`/occasions/${occasion.data.slug}/`}>{occasion.data.headline}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  {/* Why-Choose-Us trust grid — conditional on >=6 owner-confirmed facts.
+      site.trustBar is absent (all candidates owner-unverified), so this
+      renders nothing and the section stack stays clean. */}
+  <TrustBar items={site?.trustBar?.items} />
+
+  {/* Mid-page full-width CTA band + call CTA. */}
+  <CtaBanner
+    ctaBanner={site?.ctaBanner}
+    ctaPrimary={homepageCtaPrimary}
+    ctaSecondary={homepageCtaSecondary}
+  />
+
+  {/* Neighborhoods teaser. */}
+  <section class="neighborhoods-teaser" aria-labelledby="neighborhoods-heading">
+    <span class="eyebrow">Service area</span>
+    <h2 id="neighborhoods-heading">Serving the Cedar Rapids metro from 6th Street SW</h2>
+    <p>
+      Based on the southwest side, minutes from the airport corridor — and an easy
+      order for the whole metro.
+    </p>
+    <ul class="pill-list">
+      {neighborhoods.map((n) => (
+        <li><a href={`/neighborhoods/${n.data.slug}/`}>{n.data.name}</a></li>
+      ))}
+    </ul>
+  </section>
+
+  {/* FAQ teaser. */}
+  {faqTeaser.length > 0 && (
+    <section class="faq-teaser home-band" aria-labelledby="faq-teaser-heading">
+      <span class="eyebrow">Good to know</span>
+      <h2 id="faq-teaser-heading">Questions, answered</h2>
+      <dl>
+        {faqTeaser.map((faq) => (
+          <>
+            <dt>{faq.question}</dt>
+            <dd>{faq.answer}</dd>
+          </>
+        ))}
+      </dl>
+      <p class="section-more"><a href="/faq/">More questions answered →</a></p>
+    </section>
+  )}
+
+  {/* Lead form — conditional on site.leadForm.endpoint (external service).
+      No endpoint is provisioned, so this renders nothing (documented exception:
+      contact = phone + map + hours + directions). */}
+  <LeadForm leadForm={site?.leadForm} />
+
+  <TatreezBand />
+
+  {/* NAP block. */}
+  <section class="nap-block" aria-labelledby="nap-heading">
+    <span class="eyebrow">Visit</span>
+    <h2 id="nap-heading">Visit us on 6th Street</h2>
+    <div class="nap-card">
+      <p class="nap-line"><strong>{business?.name}</strong></p>
+      {business?.address && (
+        <p class="nap-line">
+          {business.address.street}, {business.address.city}, {business.address.state}{' '}
+          {business.address.zip}
+        </p>
+      )}
+      {business?.hours?.displayText && <p class="nap-line">{business.hours.displayText}</p>}
+      <p class="nap-line">
+        <a href={site?.ctaPrimary?.href ?? 'tel:+13194403709'}>Call (319) 440-3709</a>
+        {' · '}
+        {business?.directionsUrl && <a href={business.directionsUrl}>Get directions</a>}
+        {' · '}
+        <a href={doordashUrl} rel="noopener">Order delivery on DoorDash</a>
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Amendment 2: alternating warm parchment (menu-stock) bands break up long
+     white stretches. Bleeds to the container padding edge (matches the hero). */
+  .home-band {
+    background: var(--color-parchment, #F4EEE0);
+    border-radius: var(--radius-card, 16px);
+    padding: 2rem 1.5rem;
+    margin-inline: -1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .home-band {
+      margin-inline: -1.5rem;
+      padding: 2.25rem 2rem;
+    }
+  }
+  .card-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+  }
+  .card-grid li {
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #eadfd3);
+    border-radius: var(--radius-card, 18px);
+    box-shadow: var(--shadow-card, 0 1px 2px rgba(41, 37, 36, 0.06));
+    padding: 1rem 1.25rem;
+  }
+  .card-grid a {
+    font-family: var(--font-display, inherit);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: block;
+    color: var(--color-primary, #1b6e3e);
+  }
+  .card-grid p {
+    margin: 0.4rem 0 0;
+    color: var(--color-muted-foreground, #57534e);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  /* Menu cards carry a food thumbnail; edge-to-edge image, padded text. */
+  .menu-card {
+    padding: 0 0 1rem !important;
+    overflow: hidden;
+  }
+  .menu-thumb {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .menu-card-title {
+    display: block;
+    padding: 0.75rem 1.25rem 0;
+  }
+  .menu-card p {
+    padding: 0 1.25rem;
+  }
+  .pill-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+    margin: 1rem 0 0;
+    padding: 0;
+  }
+  .pill-list a {
+    display: inline-block;
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #eadfd3);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .faq-teaser dl {
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #eadfd3);
+    border-radius: var(--radius-card, 20px);
+    padding: 1rem 1.5rem 1.5rem;
+    margin: 1.5rem 0 0;
+  }
+  .faq-teaser dt {
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+  .faq-teaser dd {
+    margin: 0.25rem 0 0;
+    color: var(--color-muted-foreground, #57534e);
+  }
+  .section-more {
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  .nap-card {
+    background: var(--color-surface, #fff);
+    border: 1px solid var(--color-border, #eadfd3);
+    border-radius: var(--radius-card, 20px);
+    padding: 1.25rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .nap-line {
+    margin: 0.35rem 0;
+  }
+</style>
+
+<style is:global>
+  /* Home-only: dress the green hero band with the representational food photo
+     behind a green overlay (only loads on the home page — this style ships with
+     index.astro). Overlay keeps white text >=4.5:1 over the image. */
+  body .hero[data-cro-block="hero"] {
+    background-image:
+      linear-gradient(rgba(16, 54, 30, 0.82), rgba(16, 54, 30, 0.88)),
+      url('/images/home-hero.webp');
+    background-size: cover;
+    background-position: center;
+  }
+</style>

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-game-day-wings-4",
+  "questionRef": "questions/faq-occasions-game-day-wings-4",
+  "text": "Yes. For a big game-day order, calling (319) 221-1040 ahead of time lets the kitchen fry everything fresh and have it bagged hot at your pickup time instead of during the rush.",
+  "cites": [
+    "occasions/game-day-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/game-day-wings.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

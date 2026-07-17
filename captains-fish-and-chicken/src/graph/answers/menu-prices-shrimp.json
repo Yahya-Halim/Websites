@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-shrimp",
+  "questionRef": "questions/menu-prices-shrimp",
+  "text": "Jumbo Shrimp, 1/2 lb (7 pcs): Meal 15.99\nJumbo Shrimp, 1 lb (14 pcs): Meal 25.99\nMedium Shrimp (1/2 lb): Meal 13.99\nMedium Shrimp (1 lb): Meal 21.99\nShrimp Basket: Basket 10.99",
+  "cites": [
+    "menu/shrimp"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/shrimp.json",
+  "lastVerified": "2026-07-07"
+}

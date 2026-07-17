@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 6,
+  "reviewer": "imagery-quality",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/phase-6-artifact.json",
+  "artifactHash": "a80c833fa2f9e2222dfc195530084e8c3a981e5cb2be6035d56d8717cf36883d",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/review-imagery-quality.md",
+  "notesHash": "a20653b89f3359ec8a9db6d4b1b961f7aefb161ff987e5b5964d622fd127a9ef",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-6\\imagery-quality-attempt-1.md",
+  "notesHeadings": [
+    "Phase 6 review — imagery-quality (run v2)",
+    "Independently verified",
+    "Non-blocking notes",
+    "Blocking issues"
+  ],
+  "notes": "# Phase 6 review — imagery-quality (run v2)\n\n**Reviewer:** imagery-quality (independent read-only subagent; did NOT produce the phase)\n**Verdict:** PASS (6/6 criteria; zero blocking)\n**Date:** 2026-07-08\n\n## Independently verified\n- Manifest 94 slots == selections 94 == 0 missing outputs (counted by reviewer's own script)\n- higgsfield-workflow verify RE-RUN by reviewer: ok=true, problems=[], deferred=[]\n- 5 sampled menu images on disk at 173-207KB; open-late.webp (25KB) exists and is wired into the built page\n- Representational honesty: 14/14 image-bearing menu pages carry \"(representational image)\" alts + the visible note; zero premises/real-photo claims site-wide\n- ui-checks.json (desktop + mobile pass, zero unresolved) mirrors the artifact; disk-verifiable claims corroborated\n- beach-loop.mp4 (6.4MB) present; video hero has autoplay/muted/loop/poster + prefers-reduced-motion fallback hiding the video\n\n## Non-blocking notes\n- UI-check evidence is textual (no screenshots) — every disk-checkable claim verified\n- Menu hub page carries no representational note (shows no generated imagery — not a violation)\n- public/logo.png remains the disclosed placeholder pending the owner file drop\n\n## Blocking issues\nNone.\n",
+  "reviewedAt": "2026-07-08T22:30:53.145Z"
+}

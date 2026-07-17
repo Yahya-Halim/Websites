@@ -1,0 +1,549 @@
+[
+  {
+    "slug": "family-dinner",
+    "title": "Family Dinner Takeout in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Feed the Whole Family Fresh Fish and Fried Chicken Tonight",
+    "body": "When it's your turn to feed the crew and nobody wants to cook, Captains Fish and Chicken on 1st Avenue NE makes family dinner easy. Everything is fried fresh to order, so the golden catfish, juicy fried chicken, and crispy tenders show up hot instead of tired. Our family meals and combos are built to stretch across a hungry table without anyone reaching for the last piece too soon. Pair a family deal with a stack of sides, add a couple of kids meals for the little ones, and dinner is handled. Cedar Rapids families in the Northeast neighborhood and nearby Marion order from us because it tastes homemade but skips the mess. Call (319) 221-1040 to order ahead for pickup, or have it delivered through DoorDash, Uber Eats, or Grubhub. Owner Ray Aqel opened Captains in 2024 with one promise that still holds: fish, chicken and seafood made fresh to order, every single time. Rated 4.4 on Google, we're the weeknight answer when everyone's hungry and the clock is not on your side.",
+    "featuredItems": [
+      {
+        "sectionSlug": "family-meals-and-combos",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "family-meals-and-combos",
+        "itemIndex": 2
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "chicken-leg-and-thigh",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "kids-meals",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "sides",
+        "itemIndex": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many people does a family meal feed?",
+        "answer": "Our family meals and combos are portioned for a hungry household. A single family deal comfortably covers a family of four, and the three-item combo stretches further for larger groups. If you're feeding five or more, ask about our fish family deals when you call (319) 221-1040 and we'll help you size the order."
+      },
+      {
+        "question": "How do I order family dinner for pickup?",
+        "answer": "The easiest way is to call (319) 221-1040 and order ahead. Since everything is fried fresh to order, calling gives the kitchen time to have your dinner hot and bagged when you arrive at 1616 1st Ave NE."
+      },
+      {
+        "question": "Can I get family dinner delivered?",
+        "answer": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Open your preferred app, search for Captains Fish and Chicken, and build your order. Delivery times and fees are set by each app."
+      },
+      {
+        "question": "Do you have options for kids?",
+        "answer": "We do. Our kids meals are sized right for smaller appetites, so you can add one or two alongside the family deal and keep everyone at the table happy."
+      },
+      {
+        "question": "Should I call ahead for a big family order?",
+        "answer": "Yes, please call ahead for larger orders. A quick call to (319) 221-1040 lets us prep everything fresh and have it ready at your pickup time instead of making you wait."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/family-meals-and-combos/",
+        "anchor": "family meals and combos",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/kids-meals/",
+        "anchor": "kids meals",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/",
+        "anchor": "see the full menu",
+        "context": "related"
+      },
+      {
+        "slug": "/how-to-order/",
+        "anchor": "how to order",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/friday-fish-fry/",
+        "anchor": "everyday fish fry",
+        "context": "related"
+      }
+    ],
+    "heroAltText": "A family-sized spread of fresh fried catfish, fried chicken, and sides from Captains Fish and Chicken in Cedar Rapids",
+    "schemaTypes": [
+      "WebPage",
+      "FAQPage"
+    ],
+    "seo": {
+      "title": "Family Dinner Takeout in Cedar Rapids | Captains Fish and Chicken",
+      "description": "Fresh-to-order family dinners in Cedar Rapids. Fried catfish, chicken, tenders, and kids meals for pickup or delivery. Call (319) 221-1040 to order ahead.",
+      "canonical": "https://captains-fish-chicken.netlify.app/occasions/family-dinner/"
+    }
+  },
+  {
+    "slug": "game-day-wings",
+    "title": "Game Day Wings in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Party Wings and Crispy Tenders for Every Game Day",
+    "body": "Game day in Cedar Rapids hits different with a hot box of wings on the table. At Captains Fish and Chicken on 1st Avenue NE, our party wings are fried fresh to order and built for the couch crowd, so you get that shattering crunch instead of soggy delivery wings that showed up cold. Feeding a full watch party? Stack party wings with whole wings, throw in some boneless chicken bites for the folks who want it easy, and load up on sides like fries so nobody's left snacking on air at halftime. It's the kind of spread that keeps the room loud for all four quarters. We fry to order, so plan your kickoff and call (319) 221-1040 to lock in a pickup time, or send it straight to your door through DoorDash, Uber Eats, or Grubhub. Captains opened in 2024 under owner Ray Aqel and is rated 4.4 on Google, with a simple promise behind every basket: fish, chicken and seafood made fresh to order. Whether it's a two-person matchup or a house full of fans in Northeast Cedar Rapids or Marion, we've got the wings to carry the game.",
+    "featuredItems": [
+      {
+        "sectionSlug": "party-wings",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "whole-wings",
+        "itemIndex": 2
+      },
+      {
+        "sectionSlug": "boneless-chicken-bites",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "chicken-tenders",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "sides",
+        "itemIndex": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many wings should I order for a watch party?",
+        "answer": "A good rule of thumb is 6 to 8 wings per person for a group that's making wings the main event, or 4 to 5 if you're also serving tenders and sides. For a crowd of eight to ten, ordering party wings plus a 10pc whole wings meal keeps everyone fed. Call (319) 221-1040 and we'll help you size it."
+      },
+      {
+        "question": "How do I order wings for game day?",
+        "answer": "Call (319) 221-1040 and order ahead so we can time your wings to your kickoff. Everything is fried fresh to order, so a heads-up call means hot wings ready right when you need them at 1616 1st Ave NE."
+      },
+      {
+        "question": "Can you deliver wings to my party?",
+        "answer": "Yes. We're on DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your app and order for delivery. Each app sets its own delivery times and fees."
+      },
+      {
+        "question": "Do you have boneless options for the group?",
+        "answer": "We do. Our boneless chicken bites and chicken tenders are great for guests who'd rather skip the bone, and they round out a wing spread nicely."
+      },
+      {
+        "question": "Should I call ahead for a large wing order?",
+        "answer": "Yes. For a big game-day order, calling (319) 221-1040 ahead of time lets the kitchen fry everything fresh and have it bagged hot at your pickup time instead of during the rush."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/party-wings/",
+        "anchor": "party wings",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/whole-wings/",
+        "anchor": "whole wings",
+        "context": "inline"
+      },
+      {
+        "slug": "/party-wings-cedar-rapids/",
+        "anchor": "party wings in Cedar Rapids",
+        "context": "related"
+      },
+      {
+        "slug": "/menu/boneless-chicken-bites/",
+        "anchor": "boneless chicken bites",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/office-and-party-catering/",
+        "anchor": "catering for bigger parties",
+        "context": "related"
+      }
+    ],
+    "heroAltText": "A game-day spread of crispy party wings, boneless bites, and fries from Captains Fish and Chicken in Cedar Rapids",
+    "schemaTypes": [
+      "WebPage",
+      "FAQPage"
+    ],
+    "seo": {
+      "title": "Game Day Wings in Cedar Rapids | Captains Fish and Chicken",
+      "description": "Fresh-fried party wings and tenders for game day in Cedar Rapids. Order ahead for pickup at (319) 221-1040 or get delivery via DoorDash, Uber Eats, Grubhub.",
+      "canonical": "https://captains-fish-chicken.netlify.app/occasions/game-day-wings/"
+    }
+  },
+  {
+    "slug": "office-and-party-catering",
+    "title": "Office and Party Catering in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Fish Family Deals, Party Wings, and Pans to Feed the Whole Room",
+    "body": "Catering a Cedar Rapids office lunch, a birthday, or a full-blown party? Captains Fish and Chicken on 1st Avenue NE feeds a crowd without cutting corners. Our fish family deals scale from a 10-piece all the way up to a 50-piece, so whether it's a small team meeting or a packed backyard, there's a size that fits. Add party wings by the batch, drop in a couple of nugget pans, and round it out with big sides, and you've got a spread that keeps a room full of people happy. Everything is fried fresh to order, which means it arrives crisp and hot, not sitting in steam. Owner Ray Aqel built Captains in 2024 on one idea, and it holds up at scale: fish, chicken and seafood made fresh to order, rated 4.4 on Google. Because larger orders take real kitchen time, always call ahead at (319) 221-1040 so we can prep your catering fresh and have it ready at your pickup time. Prefer delivery for smaller catering orders? We're on DoorDash, Uber Eats, and Grubhub. Serving Northeast Cedar Rapids, Marion, and everywhere in between, we make big-group ordering simple.",
+    "featuredItems": [
+      {
+        "sectionSlug": "fish-family-deals",
+        "itemIndex": 4
+      },
+      {
+        "sectionSlug": "fish-family-deals",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "fish-family-deals",
+        "itemIndex": 5
+      },
+      {
+        "sectionSlug": "party-wings",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "family-meals-and-combos",
+        "itemIndex": 2
+      },
+      {
+        "sectionSlug": "sides",
+        "itemIndex": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How many people does a 50-piece fish family deal feed?",
+        "answer": "A 50-piece fish family deal generally serves around 15 to 20 people as a main dish, especially when paired with sides. For a smaller group of six to eight, the 10-piece fish family deal is a better fit. Call (319) 221-1040 and tell us your headcount and we'll recommend the right size."
+      },
+      {
+        "question": "What should I order to cater an office lunch for 20?",
+        "answer": "For about 20 people, a 50-piece fish family deal plus a batch or two of party wings and a couple of large sides usually does it. If some of your group prefers chicken, add a three-item family combo. Call (319) 221-1040 and we'll build the order to your headcount."
+      },
+      {
+        "question": "How far in advance should I call for catering?",
+        "answer": "For large catering orders, please call (319) 221-1040 as early as you can, at minimum several hours ahead and more for very big orders. Since everything is fried fresh to order, advance notice lets us prep it fresh and have it ready at your scheduled pickup time at 1616 1st Ave NE."
+      },
+      {
+        "question": "How do I order catering, by phone or app?",
+        "answer": "For catering, call (319) 221-1040 directly. Phone ordering lets us confirm quantities, timing, and pickup for large orders. Smaller catering orders can also be placed for delivery through DoorDash, Uber Eats, or Grubhub."
+      },
+      {
+        "question": "Can catering be delivered?",
+        "answer": "Smaller catering orders can be delivered through DoorDash, Uber Eats, and Grubhub, subject to each app's size limits and fees. For the largest fish family deals and pans, pickup at 1616 1st Ave NE is the most reliable option, and calling ahead ensures it's ready and fresh."
+      },
+      {
+        "question": "Do you offer pans for parties?",
+        "answer": "Yes. Our nugget pans and fish family deals are made for feeding groups, and party wings can be added by the batch. Call (319) 221-1040 to combine pans, wings, and sides into one catering order sized to your party."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/fish-family-deals/",
+        "anchor": "fish family deals",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/party-wings/",
+        "anchor": "party wings",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/family-meals-and-combos/",
+        "anchor": "family meals and combos",
+        "context": "related"
+      },
+      {
+        "slug": "/how-to-order/",
+        "anchor": "how to order",
+        "context": "related"
+      },
+      {
+        "slug": "/contact/",
+        "anchor": "contact us",
+        "context": "related"
+      },
+      {
+        "slug": "/menu/sides/",
+        "anchor": "sides for the group",
+        "context": "related"
+      }
+    ],
+    "heroAltText": "A large catering spread of fish family deals, party wings, and pans from Captains Fish and Chicken in Cedar Rapids",
+    "schemaTypes": [
+      "WebPage",
+      "FAQPage"
+    ],
+    "seo": {
+      "title": "Office and Party Catering in Cedar Rapids | Captains Fish and Chicken",
+      "description": "Cater your Cedar Rapids office lunch or party with fish family deals up to 50pc, party wings, and pans. Call (319) 221-1040 to order ahead and size your order.",
+      "canonical": "https://captains-fish-chicken.netlify.app/occasions/office-and-party-catering/"
+    }
+  },
+  {
+    "slug": "friday-fish-fry",
+    "title": "Friday Fish Fry in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "A Fresh Fish Fry Any Friday, All Year Round",
+    "body": "You don't need a special season for a good fish fry. At Captains Fish and Chicken on 1st Avenue NE, we fry fresh fish to order every day of the year, so Friday night in Cedar Rapids always has an easy answer. Choose from fresh catfish fillet, perch, tilapia, or cod, all dropped crispy and golden and never left sitting under a heat lamp. Whether you want a single fillet with fries or a full fish family deal to cover the whole table, we've got the fry that satisfies. It's the kind of honest, fresh-cooked fish that keeps folks in Northeast Cedar Rapids and Marion coming back week after week. Because it's fried fresh to order, call (319) 221-1040 to order ahead for pickup and skip the wait, or have your fish fry delivered through DoorDash, Uber Eats, or Grubhub. Captains opened in 2024 under owner Ray Aqel with a straightforward promise: fish, chicken and seafood made fresh to order, and we're rated 4.4 on Google. Make it a standing Friday tradition, no occasion required.",
+    "featuredItems": [
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 1
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 2
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 7
+      },
+      {
+        "sectionSlug": "fish-family-deals",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "sides",
+        "itemIndex": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What kinds of fish can I get for a fish fry?",
+        "answer": "We fry fresh catfish fillet, perch, tilapia, and cod. Each is dropped fresh to order for a crispy golden finish. If you want a mix for the table, a fish family deal lets you feed a group, and you can call (319) 221-1040 to talk through options."
+      },
+      {
+        "question": "How many does a fish family deal feed for a fish fry?",
+        "answer": "The 10-piece fish family deal comfortably feeds a family of four to six as the main dish with sides. For larger gatherings, we offer bigger fish family deals up to a 50-piece. Call (319) 221-1040 and tell us your headcount."
+      },
+      {
+        "question": "How do I order a fish fry for Friday pickup?",
+        "answer": "Call (319) 221-1040 and order ahead. Since we fry fresh to order, calling gives the kitchen time to have your fish hot and ready when you arrive at 1616 1st Ave NE, especially on a busy Friday evening."
+      },
+      {
+        "question": "Can I get a fish fry delivered?",
+        "answer": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app. Each app sets its own delivery times and fees."
+      },
+      {
+        "question": "Is the fish fry only on Fridays?",
+        "answer": "Not at all. We fry fresh fish every day, all year round, so you can enjoy a fish fry any day you like. Friday is just a favorite. Call (319) 221-1040 to confirm current hours before you head over."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/seafood/",
+        "anchor": "seafood menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/fish-family-deals/",
+        "anchor": "fish family deals",
+        "context": "inline"
+      },
+      {
+        "slug": "/fried-catfish-cedar-rapids/",
+        "anchor": "fried catfish in Cedar Rapids",
+        "context": "related"
+      },
+      {
+        "slug": "/made-fresh-to-order/",
+        "anchor": "made fresh to order",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/family-dinner/",
+        "anchor": "family dinner ideas",
+        "context": "related"
+      }
+    ],
+    "heroAltText": "Crispy golden fried catfish, perch, and cod with fries from Captains Fish and Chicken in Cedar Rapids",
+    "schemaTypes": [
+      "WebPage",
+      "FAQPage"
+    ],
+    "seo": {
+      "title": "Friday Fish Fry in Cedar Rapids | Captains Fish and Chicken",
+      "description": "A fresh fish fry any Friday, all year round. Fried catfish, perch, tilapia, and cod for pickup or delivery in Cedar Rapids. Call (319) 221-1040 to order ahead.",
+      "canonical": "https://captains-fish-chicken.netlify.app/occasions/friday-fish-fry/"
+    }
+  },
+  {
+    "slug": "seafood-feast",
+    "title": "Seafood Feast in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "Shrimp, Crab Cakes, and Red Snapper Fried Fresh to Order",
+    "body": "When you're in the mood to treat yourself, a seafood feast from Captains Fish and Chicken on 1st Avenue NE delivers. Start with jumbo shrimp fried to a golden crunch, add a couple of crab cakes packed with flavor, and go big with fresh red snapper or a crisp piece of cod. Everything is fried fresh to order, so the seafood arrives hot and crackling instead of steamed soft in a bag. Build a spread just for yourself or lay it out for the table, pairing your seafood with sides for a full plate that feels like a night out without leaving home. Cedar Rapids seafood lovers in the Northeast neighborhood and nearby Marion order from us when they want it done right. Call (319) 221-1040 to order ahead for pickup and get it at peak crispiness, or have your feast delivered through DoorDash, Uber Eats, or Grubhub. Owner Ray Aqel opened Captains in 2024 on a single promise: fish, chicken and seafood made fresh to order, and we're rated 4.4 on Google. Fresh seafood, no fuss, made the way you'd want it.",
+    "featuredItems": [
+      {
+        "sectionSlug": "shrimp",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "shrimp",
+        "itemIndex": 4
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 10
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 11
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 7
+      },
+      {
+        "sectionSlug": "sides",
+        "itemIndex": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What's on the seafood feast?",
+        "answer": "Our seafood lineup features jumbo shrimp, a shrimp basket, crab cakes, fresh red snapper, and cod, all fried fresh to order. Mix and match to build the feast you want, and add sides to round out the plate. Call (319) 221-1040 if you'd like help putting it together."
+      },
+      {
+        "question": "How much seafood should I order to feed a group?",
+        "answer": "For a shared seafood feast, plan on a mix such as a shrimp basket plus a couple of crab cakes and a red snapper for two to three people, scaling up from there. Tell us your headcount at (319) 221-1040 and we'll help you size the order."
+      },
+      {
+        "question": "How do I order a seafood feast for pickup?",
+        "answer": "Call (319) 221-1040 and order ahead so the kitchen can time your seafood to your arrival. Because everything is fried fresh to order, calling ahead means it's hot and crispy when you pick up at 1616 1st Ave NE."
+      },
+      {
+        "question": "Can I get seafood delivered?",
+        "answer": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your preferred app to order. Delivery times and fees are set by each app."
+      },
+      {
+        "question": "Should I call ahead for a large seafood order?",
+        "answer": "Yes. For a bigger seafood feast, calling (319) 221-1040 ahead lets us prep everything fresh and have it ready at your pickup time instead of making you wait during a rush."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/shrimp/",
+        "anchor": "shrimp menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/seafood/",
+        "anchor": "seafood menu",
+        "context": "inline"
+      },
+      {
+        "slug": "/seafood-takeout-cedar-rapids/",
+        "anchor": "seafood takeout in Cedar Rapids",
+        "context": "related"
+      },
+      {
+        "slug": "/made-fresh-to-order/",
+        "anchor": "made fresh to order",
+        "context": "related"
+      },
+      {
+        "slug": "/occasions/friday-fish-fry/",
+        "anchor": "everyday fish fry",
+        "context": "related"
+      }
+    ],
+    "heroAltText": "A seafood feast of jumbo fried shrimp, crab cakes, and red snapper from Captains Fish and Chicken in Cedar Rapids",
+    "schemaTypes": [
+      "WebPage",
+      "FAQPage"
+    ],
+    "seo": {
+      "title": "Seafood Feast in Cedar Rapids | Captains Fish and Chicken",
+      "description": "A fresh seafood feast in Cedar Rapids: jumbo shrimp, crab cakes, red snapper, and cod fried to order. Pickup or delivery. Call (319) 221-1040 to order ahead.",
+      "canonical": "https://captains-fish-chicken.netlify.app/occasions/seafood-feast/"
+    }
+  },
+  {
+    "slug": "quick-lunch-takeout",
+    "title": "Quick Lunch Takeout in Cedar Rapids | Captains Fish and Chicken",
+    "headline": "A Fast, Fresh Lunch Ready When You Are",
+    "body": "Short lunch break? Captains Fish and Chicken on 1st Avenue NE gets you fed fast without dropping down to gas-station quality. Grab a two-item combo, a basket of crispy chicken tenders, or a golden catfish fillet with a side, and you've got a real lunch that hits, all fried fresh to order. It's the kind of quick meal that beats the same tired lunch spot and actually leaves you looking forward to noon. Working in Northeast Cedar Rapids or near Marion, the smartest move is to call ahead at (319) 221-1040 so your lunch is bagged and waiting when you swing by, no standing around while the clock ticks. Rather stay at your desk? Order delivery through DoorDash, Uber Eats, or Grubhub and let it come to you. Captains opened in 2024 under owner Ray Aqel and is rated 4.4 on Google, with the same promise behind the lunch rush as everything else: fish, chicken and seafood made fresh to order. Fast, fresh, and worth the short trip, even on your busiest day.",
+    "featuredItems": [
+      {
+        "sectionSlug": "family-meals-and-combos",
+        "itemIndex": 1
+      },
+      {
+        "sectionSlug": "chicken-tenders",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "seafood",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "whole-wings",
+        "itemIndex": 0
+      },
+      {
+        "sectionSlug": "sides",
+        "itemIndex": 0
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What are good quick lunch options?",
+        "answer": "For a fast lunch, try a two-item combo, a basket of chicken tenders, a 4-piece whole wings meal, or a single catfish fillet with a side. All are fried fresh to order and easy to eat on a break. Call (319) 221-1040 to order ahead."
+      },
+      {
+        "question": "How do I order lunch ahead so it's ready fast?",
+        "answer": "Call (319) 221-1040 and place your order before you head over. Since everything is fried fresh to order, a call ahead means your lunch is hot and bagged when you arrive at 1616 1st Ave NE, so you're not waiting on a short break."
+      },
+      {
+        "question": "Can I get lunch delivered to my workplace?",
+        "answer": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app, and have lunch delivered to your office or job site. Each app sets its own delivery times and fees."
+      },
+      {
+        "question": "Do you have lunch portions for one person?",
+        "answer": "Yes. Combos, tender baskets, and single fillets are sized for one, so you can grab exactly what you need without a big order. Call (319) 221-1040 if you'd like a recommendation."
+      },
+      {
+        "question": "Are you open for lunch?",
+        "answer": "We serve fresh takeout throughout the day. Hours can vary, so please call (319) 221-1040 to confirm current hours before you head over for lunch."
+      }
+    ],
+    "crossLinks": [
+      {
+        "slug": "/menu/chicken-tenders/",
+        "anchor": "chicken tenders",
+        "context": "inline"
+      },
+      {
+        "slug": "/menu/family-meals-and-combos/",
+        "anchor": "combos",
+        "context": "inline"
+      },
+      {
+        "slug": "/fish-and-chicken-near-me/",
+        "anchor": "fish and chicken near me",
+        "context": "related"
+      },
+      {
+        "slug": "/how-to-order/",
+        "anchor": "how to order",
+        "context": "related"
+      },
+      {
+        "slug": "/menu/",
+        "anchor": "full menu",
+        "context": "related"
+      }
+    ],
+    "heroAltText": "A quick lunch of crispy chicken tenders, a catfish fillet, and a side from Captains Fish and Chicken in Cedar Rapids",
+    "schemaTypes": [
+      "WebPage",
+      "FAQPage"
+    ],
+    "seo": {
+      "title": "Quick Lunch Takeout in Cedar Rapids | Captains Fish and Chicken",
+      "description": "Fast, fresh lunch takeout in Cedar Rapids. Combos, tenders, and catfish fried to order for quick pickup or delivery. Call (319) 221-1040 to order ahead.",
+      "canonical": "https://captains-fish-chicken.netlify.app/occasions/quick-lunch-takeout/"
+    }
+  }
+]

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.astro/
+.factory/
+reference-photos/
+output/images/generated/
+.auth/
+.DS_Store
+*.log

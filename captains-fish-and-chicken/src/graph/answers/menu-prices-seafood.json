@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-seafood",
+  "questionRef": "questions/menu-prices-seafood",
+  "text": "Catfish Fillet, Perch or Tilapia (2 pcs): Meal 13.99\nCatfish Fillet, Perch or Tilapia (3 pcs): Meal 16.99\nCatfish Fillet, Perch or Tilapia (4 pcs): Meal 21.99\nCatfish Steak, Bone In (2 pcs): Meal 13.99\nCatfish Steak, Bone In (3 pcs): Meal 15.99\nCatfish Steak, Bone In (4 pcs): Meal 19.99\nCatfish Nuggets (1 lb): Meal 14.99\nCod Fish, Wild Caught (2 pcs): Meal 14.99\nCod Fish, Wild Caught (3 pcs): Meal 19.99\nCod Fish, Wild Caught (4 pcs): Meal 23.99\nCrab Cakes (4 pcs): Meal 14.99\nRed Snapper (2 pcs): Meal 14.99\nRed Snapper (3 pcs): Meal 19.99\nRed Snapper (4 pcs): Meal 23.99",
+  "cites": [
+    "menu/seafood"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/seafood.json",
+  "lastVerified": "2026-07-07"
+}

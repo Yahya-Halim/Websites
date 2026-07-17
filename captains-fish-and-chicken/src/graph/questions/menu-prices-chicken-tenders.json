@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-chicken-tenders",
+  "question": "How much do Chicken Tenders cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/chicken-tenders.json",
+  "lastVerified": "2026-07-07"
+}

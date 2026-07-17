@@ -1,0 +1,508 @@
+---
+// Project shadow of the engine Base layout (_OVERRIDES.md channel).
+// Contract-identical head/body composition (title/description/robots/jsonLd,
+// canonical, Analytics, generated LocalBusiness + WebSite JSON-LD, Header /
+// Footer / site-wide StickyCallBar singleton) — plus the Captains brand design
+// tokens and a modern global stylesheet derived from the owner-supplied logo
+// palette (deep navy / gold / steel / white).
+import { getEntry } from 'astro:content';
+// Project-local Header/Footer (the @engine alias hardpoints into the engine
+// package, so component "shadows" are only honored via explicit relative
+// imports — this layout is the project's styling root).
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+// Project override of the engine Analytics: adds get_directions + order_click
+// GA4 events (relative import required to shadow the @engine hardpoint).
+import Analytics from '../components/Analytics.astro';
+import StickyCallBar from '@engine/components/StickyCallBar.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  robots?: string;
+  jsonLd?: (string | null | undefined)[];
+}
+
+const { title, description, robots, jsonLd } = Astro.props;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+const stickyCtaPrimary = site?.ctaPrimary;
+const stickyCtaSecondary = site?.ctaSecondary;
+
+const jsonLdBlocks = (jsonLd ?? []).filter(Boolean) as string[];
+
+const canonicalHref = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site).href
+  : Astro.url.pathname;
+
+import localbusinessLd from '/src/content/_generated/localbusiness.jsonld?raw';
+import websiteLd from '/src/content/_generated/website.jsonld?raw';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title ?? 'Untitled'}</title>
+    {description && <meta name="description" content={description} />}
+    {robots && <meta name="robots" content={robots} />}
+    <link rel="canonical" href={canonicalHref} />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/logo-icon.png" />
+
+    {/* Fish-market editorial type: Oswald (condensed display board) + IBM Plex
+       Sans (body) + IBM Plex Mono (eyebrow micro-labels). display=swap keeps the
+       video-hero LCP text painting immediately with the fallback stack. */}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+    />
+
+    <Analytics />
+
+    <script type="application/ld+json" set:html={localbusinessLd} />
+    <script type="application/ld+json" set:html={websiteLd} />
+    {jsonLdBlocks.map((block) => (
+      <script type="application/ld+json" set:html={block} />
+    ))}
+  </head>
+  <body>
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <StickyCallBar ctaPrimary={stickyCtaPrimary} ctaSecondary={stickyCtaSecondary} />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    /* Captains brand tokens — owner navy/gold logo palette, warmed with a
+       sand "shore/paper" surface for the fish-market editorial re-theme
+       (navy = deep sea shell, sand = shore paper, gold = the catch). */
+    --navy-900: #0b1e33;
+    --navy-700: #123253;
+    --navy-600: #1a4470;
+    --blue-500: #2d74b5;
+    --gold-500: #f5b301;
+    --gold-600: #df9f00;
+    --steel-100: #e8eef4;
+    --steel-200: #d5dfe9;
+    --cloud: #f7fafc;
+    --white: #ffffff;
+    --ink: #0b1e33;
+    --ink-soft: #3c4f66;
+
+    /* Warm surface set (the re-theme's sand shore). Cards stay white; the page
+       canvas and alternating bands go warm to break long white stretches. */
+    --sand: #f5efe3;        /* page canvas — warm shore (was cold --cloud) */
+    --sand-band: #ede2cf;   /* deeper warm band for alternating sections */
+    --sand-line: #e4d9c4;   /* warm hairline on sand grounds */
+
+    /* Type roles: display (condensed board) / body / mono eyebrow. */
+    --font-display: 'Oswald', 'Arial Narrow', 'Helvetica Neue', system-ui, sans-serif;
+    --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+    /* 4px-derived spacing ramp for tighter, composed section rhythm. */
+    --space-2: 0.5rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;    /* section rhythm — mobile */
+    --space-12: 3rem;   /* section rhythm — desktop */
+
+    /* Nautical wave motif tiles (currentColor is not usable in url(), so two
+       explicit strokes): GOLD wave on navy grounds (hero/CTA/footer hems),
+       INK-navy wave on light grounds (h2 ticks, eyebrow bullets — gold on
+       light fails even decoratively, so the light-ground mark goes navy). */
+    --wave-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0 6 Q6 0 12 6 T24 6' fill='none' stroke='%23f5b301' stroke-width='2'/%3E%3C/svg%3E");
+    --wave-ink: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='8' viewBox='0 0 24 8'%3E%3Cpath d='M0 6 Q6 0 12 6 T24 6' fill='none' stroke='%23123253' stroke-width='2'/%3E%3C/svg%3E");
+
+    /* Engine components consume this var for CTAs and accents. Gold carries
+       the conversion color; navy carries structure. */
+    --accent-color: var(--gold-500);
+
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --shadow-sm: 0 1px 2px rgba(11, 30, 51, 0.08), 0 2px 8px rgba(11, 30, 51, 0.06);
+    --shadow-md: 0 2px 6px rgba(11, 30, 51, 0.1), 0 10px 28px rgba(11, 30, 51, 0.12);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* Visible keyboard focus everywhere (generated a11y checklist). Blue works
+     on white/cloud; navy surfaces flip to a gold OUTLINE (outline ≠ text —
+     the gold-as-fill-only rule governs text/fills, not focus rings). */
+  :where(a, button, [tabindex]):focus-visible {
+    outline: 3px solid var(--blue-500);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  /* Navy shell surfaces flip to gold rings. The sticky bar's TRAY is white,
+     so it keeps the blue default; hero scrim gets white; gold band gets navy. */
+  .site-header a:focus-visible,
+  .site-footer a:focus-visible {
+    outline-color: var(--gold-500);
+  }
+  .hero-with-image a:focus-visible {
+    outline-color: var(--white);
+  }
+  .cta-banner a:focus-visible {
+    outline-color: var(--navy-900);
+  }
+
+  ::selection {
+    background: var(--navy-700);
+    color: #fff;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--sand);
+    line-height: 1.6;
+    font-size: 1.0625rem; /* 17px editorial body */
+    -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.5rem 3.5rem;
+  }
+  /* Tighter, composed section rhythm (32px mobile / 48px desktop) replacing the
+     flat 2.5rem cadence, so pages read as a paced editorial rather than an even
+     template stack. */
+  main > article > section + section,
+  main > article > nav + section,
+  main > article > section + nav {
+    margin-top: var(--space-8);
+  }
+  @media (min-width: 48rem) {
+    main > article > section + section,
+    main > article > nav + section,
+    main > article > section + nav {
+      margin-top: var(--space-12);
+    }
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--navy-700);
+    line-height: 1.1;
+    letter-spacing: 0.01em; /* Oswald is condensed — open it slightly */
+    font-weight: 600;
+    text-transform: none;
+  }
+  h1 { font-size: clamp(2.1rem, 5.5vw, 3.3rem); font-weight: 700; }
+  h2 { font-size: clamp(1.5rem, 3.2vw, 2.05rem); margin-top: 2.5rem; }
+
+  /* Nautical tick under every section h2 — a short navy wave rule on light
+     grounds (decorative navy, never gold-on-light). */
+  main h2 {
+    position: relative;
+  }
+  main h2::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 6px;
+    margin-top: 0.55rem;
+    background: var(--wave-ink) repeat-x left center / 12px 6px;
+    opacity: 0.85;
+  }
+
+  a { color: var(--blue-500); }
+
+  /* ------- Fish-market editorial density kit (shared classes) ------- */
+
+  /* Eyebrow: tracked mono micro-label + a small navy wave bullet, placed above
+     a section h2 to add hierarchy/vertical density without imagery. */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--blue-500);
+    margin: 0 0 0.4rem;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 16px;
+    height: 8px;
+    flex: 0 0 auto;
+    background: var(--wave-ink) repeat-x left center / 12px 8px;
+  }
+  /* On navy/scrim grounds the eyebrow + its wave flip to gold thread. */
+  .hero-with-image .eyebrow,
+  .band-navy .eyebrow {
+    color: var(--gold-500);
+  }
+  .hero-with-image .eyebrow::before,
+  .band-navy .eyebrow::before {
+    background: var(--wave-gold) repeat-x left center / 12px 8px;
+  }
+
+  /* Alternating warm band — bleeds to the container padding edge to break long
+     white/sand stretches on tall pages. */
+  .home-band {
+    background: var(--sand-band);
+    border: 1px solid var(--sand-line);
+    border-radius: var(--radius-lg);
+    padding: 1.6rem 1.25rem;
+    margin-inline: -1.5rem;
+  }
+  @media (min-width: 48rem) {
+    .home-band {
+      padding: 2.25rem 1.75rem;
+    }
+  }
+
+  /* Gold wave hem: an 8px gold-wave strip on a navy plinth, used at the bottom
+     edge of the hero, the CTA band, and the top edge of the footer to carry the
+     nautical motif across the page (the analog of Pita's tatreez saw-hem). */
+  .wave-hem {
+    height: 10px;
+    background:
+      var(--wave-gold) repeat-x center / 24px 8px,
+      var(--navy-900);
+  }
+
+  /* Gold conversion buttons everywhere the engine renders a .cta / cta-bar.
+     Pressable pill: solid gold-600 underside, presses flat on :active —
+     feedback survives reduced motion via the hover darken alone. */
+  .cta,
+  .cta-primary,
+  .sticky-call {
+    background: var(--gold-500) !important;
+    color: var(--navy-900) !important;
+    /* !important through here: the engine CtaBar's scoped rules share (0,1,0)
+       specificity and win on cascade order without it. */
+    font-weight: 800 !important;
+    border-radius: 999px !important;
+    min-height: 2.75rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer;
+    box-shadow: 0 3px 0 var(--gold-600), var(--shadow-sm);
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .cta:hover,
+  .cta-primary:hover,
+  .sticky-call:hover {
+    background: var(--gold-600) !important;
+  }
+  .cta:active,
+  .cta-primary:active,
+  .sticky-call:active {
+    transform: translateY(3px);
+    box-shadow: 0 0 0 var(--gold-600), var(--shadow-sm);
+  }
+
+  /* Secondary CTA + the sticky bar's text action: the engine default is gold
+     text on white (fails contrast). White pill, navy text, navy border. */
+  .cta-secondary,
+  .sticky-text {
+    background: var(--white) !important;
+    color: var(--navy-700) !important;
+    border: 1.5px solid var(--navy-600) !important;
+    border-radius: 999px !important;
+    font-weight: 800;
+    box-shadow: none !important;
+  }
+  .cta-secondary:hover,
+  .sticky-text:hover {
+    background: var(--steel-100) !important;
+  }
+
+  /* Engine CtaBanner band — gold band must carry navy-900 text (gold-on-white
+     and white-on-gold both fail contrast; the design system's gold rule). */
+  .cta-banner {
+    background: var(--gold-500) !important;
+    color: var(--navy-900) !important;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-sm);
+    margin: 2.5rem 0 !important; /* section rhythm; engine default is 2rem */
+  }
+  .cta-banner .cta-banner-headline {
+    color: var(--navy-900);
+    letter-spacing: -0.01em;
+  }
+  .cta-banner .cta-banner-sublabel {
+    color: rgba(11, 30, 51, 0.78);
+    opacity: 1 !important;
+    font-weight: 600;
+  }
+  /* Gold pill on a gold band is invisible — the band's CTA flips to a white
+     pill with navy text (white is neutral; gold stays the band). */
+  .cta-banner .cta,
+  .cta-banner .cta-primary {
+    background: var(--white) !important;
+    color: var(--navy-900) !important;
+    box-shadow: var(--shadow-sm) !important;
+  }
+  .cta-banner .cta:hover,
+  .cta-banner .cta-primary:hover {
+    background: var(--steel-100) !important;
+  }
+
+  /* Engine StickyCallBar — align the mobile bar with the card system. */
+  .sticky-call-bar {
+    border-top-color: var(--steel-200) !important;
+    box-shadow: 0 -4px 16px rgba(11, 30, 51, 0.14) !important;
+  }
+  .sticky-call-bar .sticky-action {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+  }
+
+  /* Engine ValueProps — token colors instead of the engine's gray defaults.
+     (The image-hero variant re-skins these as scrim chips in Hero.astro.) */
+  .value-props .value-prop-label {
+    color: var(--navy-700);
+  }
+  .value-props .value-prop-sublabel {
+    color: var(--ink-soft) !important;
+  }
+
+  /* Full-width call CTAs on small screens (thumb-first audience). The header
+     pill is display:none at this width; the sticky bar manages its own flex. */
+  @media (max-width: 40rem) {
+    .cta-bar .cta {
+      flex: 1 1 100%;
+    }
+  }
+
+  /* Defensive token alignment for engine CRO blocks that currently render
+     nothing (trust bar, offers, financing) — the moment their data appears
+     they must land on-system, not in engine defaults. */
+  .trust-bar,
+  .trust-bar .trust-item {
+    text-align: left !important;
+    align-items: flex-start !important;
+  }
+  .trust-bar .trust-item {
+    background: var(--white);
+    border: 1px solid var(--steel-200);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem 1.25rem;
+  }
+  .trust-bar .trust-item-detail {
+    color: var(--ink-soft) !important;
+  }
+  .offer {
+    background: var(--white);
+    border: 1px solid var(--steel-200) !important;
+    border-left: 4px solid var(--blue-500) !important;
+    border-radius: var(--radius-md) !important;
+    box-shadow: var(--shadow-sm);
+  }
+  .offer .offer-detail {
+    color: var(--ink-soft) !important;
+  }
+  .offer .offer-cta {
+    color: var(--navy-700) !important;
+    font-weight: 700;
+  }
+  .financing-provider a {
+    color: var(--blue-500) !important;
+  }
+
+  /* FAQ blocks — card styling for every dt/dd the pages render. */
+  .faqs dl {
+    display: grid;
+    gap: 0;
+    margin: 1.25rem 0 0;
+  }
+  .faqs dt {
+    font-weight: 700;
+    color: var(--navy-700);
+    background: var(--white);
+    border: 1px solid var(--steel-200);
+    border-bottom: none;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    padding: 0.9rem 1.1rem 0.35rem;
+    margin: 0;
+  }
+  .faqs dd {
+    background: var(--white);
+    border: 1px solid var(--steel-200);
+    border-top: none;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    margin: 0 0 0.75rem;
+    padding: 0.1rem 1.1rem 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  /* Related / cross-link chips. */
+  .related ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    padding: 0;
+    margin: 1rem 0 0;
+  }
+  .related a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    background: var(--white);
+    border: 1px solid var(--steel-200);
+    color: var(--navy-700);
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 0.45rem 1rem;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  /* Blue, not gold — gold never decorates borders. */
+  .related a:hover {
+    border-color: var(--blue-500);
+    background: var(--steel-100);
+  }
+
+  /* Generic body sections get comfortable measure. */
+  .body p,
+  .sections p {
+    max-width: 65ch;
+    color: var(--ink-soft);
+  }
+</style>

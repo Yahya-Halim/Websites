@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-family-dinner-3",
+  "question": "Do you have options for kids?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

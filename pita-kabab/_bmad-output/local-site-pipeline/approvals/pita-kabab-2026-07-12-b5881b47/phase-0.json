@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 0,
+  "actor": "Yahya",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+  "artifactHash": "53d094d068d264eba0cb4b0a5cf5dd1b015a2ca86944c18bd81b471ad4a0af10",
+  "notesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-approval-notes.md",
+  "notes": "# Phase 0 Approval — Yahya\n\nDate: 2026-07-12\nRun: pita-kabab-2026-07-12-b5881b47\nArtifact: phase-0-artifact.json (sealed 2026-07-12)\n\nYahya approved Phase 0 DISCOVER via chat (\"approved\") after the approval request\nsurfaced the load-bearing open gaps explicitly:\n\n1. Domain decision unresolved — pitakababcr.com live and owner-branded; control\n   of domain/DNS/hosting/info@ mailbox unconfirmed; replace/rebuild/coexist\n   decision pending. Identity floor must land by end of Phase 3.\n2. Hard Phase 4 blocker acknowledged: owner must supply 3 hero value props and\n   1 mid-page banner line.\n3. Lead form ships only with an owner-supplied external endpoint; fallback is\n   phone/email CTAs only.\n4. No GA4 measurement id found; owner id or provisioning consent required.\n5. Trust grid requires >=6 owner-confirmed facts or is omitted.\n\n17 owner-residue questions remain open in owner-questionnaire.md; answers due\nbefore Phase 3 identity decision / Phase 4 build. All web-sourced facts remain\nin unverifiedClaims until owner confirms.\n",
+  "approvedAt": "2026-07-12T22:55:14.258Z",
+  "expiresAt": "2026-07-19T22:55:14.258Z"
+}

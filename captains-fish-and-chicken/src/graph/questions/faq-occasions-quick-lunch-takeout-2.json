@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-quick-lunch-takeout-2",
+  "question": "Can I get lunch delivered to my workplace?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/quick-lunch-takeout.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

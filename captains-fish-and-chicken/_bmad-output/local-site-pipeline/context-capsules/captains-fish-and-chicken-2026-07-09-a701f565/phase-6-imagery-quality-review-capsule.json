@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 6,
+  "reviewer": "imagery-quality",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6.json",
+  "packetHash": "a4de314169e880c30330d2fe19e6ed1967c06017ab33022e4ae0785442c704cc",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json",
+  "artifactHash": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656",
+  "mission": "Review Phase 6 artifact for the imagery-quality gate.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6.json",
+      "hash": "a4de314169e880c30330d2fe19e6ed1967c06017ab33022e4ae0785442c704cc"
+    },
+    {
+      "kind": "sealed-artifact",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json",
+      "hash": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed artifact drafts",
+    "Direct edits to workflow state files"
+  ],
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-imagery-quality-review-report.json",
+    "requiredRole": "reviewer",
+    "requiredStatus": "completed"
+  }
+}

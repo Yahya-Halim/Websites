@@ -1,0 +1,80 @@
+{
+  "kind": "menu",
+  "slug": "whole-wings",
+  "name": "Whole Wings",
+  "order": 2,
+  "description": "Bone-in whole wings fried to order. Meals come with fries, coleslaw, and bread; larger counts are wings only.",
+  "items": [
+    {
+      "name": "Wings Meal (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 8.99
+        }
+      ]
+    },
+    {
+      "name": "Wings Meal (6 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "name": "Wings Meal (10 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 19.99
+        }
+      ]
+    },
+    {
+      "name": "Wings Only (20 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 32.99
+        }
+      ]
+    },
+    {
+      "name": "Wings Only (30 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 49.99
+        }
+      ]
+    },
+    {
+      "name": "Wings Only (50 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 84.99
+        }
+      ]
+    },
+    {
+      "name": "Wings Only (100 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 159.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Whole Wings Fried to Order | Captains Cedar Rapids",
+    "description": "Bone-in whole wings from 4-piece meals to 100-piece party counts in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/whole-wings/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

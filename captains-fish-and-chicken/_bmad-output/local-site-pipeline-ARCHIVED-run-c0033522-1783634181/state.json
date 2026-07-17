@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "briefHash": "739d57b06aec4a7c29a50f60cba3efb418607c3ec730bcaaa80de1792280b6ef",
+  "brief": {
+    "engagement": "captains-fish-and-chicken",
+    "business": "Captains Fish and Chicken",
+    "businessType": "fried fish and chicken restaurant",
+    "serviceModel": "counter-service restaurant",
+    "scope": "single location",
+    "location": {
+      "streetAddress": "1616 1st Ave NE",
+      "city": "Cedar Rapids",
+      "state": "IA",
+      "postalCode": "52402",
+      "singleLocationInScope": true
+    },
+    "provenance": "Address and business name supplied by the engagement owner (authoritative). FROM-SCRATCH RE-RUN 2026-07-08 under plugin 92aeaae (evidence-chained packets): all phases redone; web footprint re-swept fresh. Owner statements carried forward as declared owner-provided inputs (not web claims): the full priced menu (owner paste 2026-07-07), call-only contact (no lead form, no SMS), cite Google 4.4/208 attributed, real brand logo (shark-captain emblem, navy/gold), identity (domain/email/GA4) deferred to launch, home page style must match interior pages, second location 3100 6th St SW excluded.",
+    "seedFactsOnly": true,
+    "ignorePriorWork": false,
+    "priorRunArchive": "_bmad-output/local-site-pipeline-ARCHIVED-run-098c7de7-1783532300"
+  },
+  "currentPhase": 7,
+  "completedPhases": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "phaseArtifacts": {
+    "0": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-0/phase-0-artifact.json",
+      "hash": "2a9d222f14d080b10e5f3f5ab32da71748224f0da9789d1ccac9d7ca08893122",
+      "completedAt": "2026-07-08T17:48:37.019Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-0.json"
+    },
+    "1": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-1/phase-1-artifact.json",
+      "hash": "a0ac6507af3347d0ba9b8a5ef2859d88782baa02539f1c21332b61659bace5cb",
+      "completedAt": "2026-07-08T18:28:19.789Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-1.json"
+    },
+    "2": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/phase-2-artifact.json",
+      "hash": "e4753185d6ffb1b42282eebdde719bbfcc394eb62c5e556451d2d2aacb8fab89",
+      "completedAt": "2026-07-08T19:24:18.910Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-2.json"
+    },
+    "3": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/phase-3-artifact.json",
+      "hash": "b801367a98370345bfc73746c096a729eafcb03a6393ad6ddc0db4ca002d5aad",
+      "completedAt": "2026-07-08T20:04:18.582Z",
+      "amendedAt": "2026-07-08T21:32:40.440Z"
+    },
+    "4": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-4/phase-4-artifact.json",
+      "hash": "40fce1d595c433454b486e421558c840cd5b308ece58c9f4b98b229b923368f4",
+      "completedAt": "2026-07-08T21:33:13.510Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-4-regeneration-1.json",
+      "regeneration": 1
+    },
+    "5": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/phase-5-artifact.json",
+      "hash": "fab4dd0d4e28755dae6a2129be9aa85a2890e6df0e7702d1cdb0523584508283",
+      "completedAt": "2026-07-08T21:42:22.481Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-5.json"
+    },
+    "6": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/phase-6-artifact.json",
+      "hash": "a80c833fa2f9e2222dfc195530084e8c3a981e5cb2be6035d56d8717cf36883d",
+      "completedAt": "2026-07-08T22:28:41.124Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-6.json"
+    },
+    "7": {
+      "path": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-7/phase-7-artifact.json",
+      "hash": "c7634d84617a1ae1dc27c31991db9141564ea574d87eb42d4712d97f43b85800",
+      "completedAt": "2026-07-08T22:46:43.092Z",
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-7.json"
+    }
+  },
+  "phaseSpecialists": {
+    "0": "local-business-discovery",
+    "1": "keyword-research",
+    "2": "location-matrix-planner",
+    "3": "ui-ux-pro-max",
+    "4": "seo-content-writer",
+    "5": "seo-geo-ai-validation",
+    "6": "higgsfield",
+    "7": "local-launch-checklist"
+  },
+  "pendingRegenerations": {},
+  "startedAt": "2026-07-08T17:38:45.352Z",
+  "updatedAt": "2026-07-08T22:46:43.100Z",
+  "overrides": [],
+  "amendments": [
+    {
+      "schemaVersion": 1,
+      "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+      "phase": 3,
+      "amendment": 1,
+      "actor": "operator-geekeys343",
+      "reasonFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/amend-reason-identity.md",
+      "reason": "# Phase 3 amendment — identity fixtures retired for real values\n\n**Date:** 2026-07-08  |  **Actor:** operator (geekeys343@gmail.com), acting for owner Ray Aqel\n\nOwner supplied the real identity, completing the deferred decision:\n- domain: https://captains-fish-chicken.netlify.app (Netlify subdomain \"for now\"; custom domain can follow post-launch)\n- email: captainsfishchicken@gmail.com (owner-designated business inbox)\n- gaId: G-7W35DKNK6Z (real GA4 property; the engine renders Google's recommended gtag snippet + tel-click events)\n\nApplied: business.json identity + all 36 seo.canonical values swapped to the real domain; rebuilt;\nfactory validate now exits 0 (zero gates, zero advisories). identityDecision.json, the Phase 3\nartifact, and design-system.md Phase 4 Build Notes updated fixture -> real. No other design,\ncontent, or scope change.\n",
+      "previousArtifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/phase-3-artifact.json",
+      "previousArtifactHash": "78ff5510ab17dfebffffdce5f085b91148b4f5fba6533b956de405aed6fbdff5",
+      "newArtifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/phase-3-artifact.json",
+      "newArtifactHash": "b801367a98370345bfc73746c096a729eafcb03a6393ad6ddc0db4ca002d5aad",
+      "specialist": "ui-ux-pro-max",
+      "amendedAt": "2026-07-08T21:32:40.440Z",
+      "previousRuntimeEvidence": {
+        "designSystem": {
+          "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/design-system.md",
+          "hash": "1ee91b90d50bfbf51b995d5518198d396da3d3cb1ab6821a71b62aa034ba11f4",
+          "mtimeMs": 1783540925886.131
+        }
+      },
+      "newRuntimeEvidence": {
+        "designSystem": {
+          "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/design-system.md",
+          "hash": "55c1da7df6ad23343abf169c224cea133b6fe7799dc90bc884f072513f2cdf74",
+          "mtimeMs": 1783546360211.432
+        }
+      },
+      "invalidatedPhases": [
+        4
+      ],
+      "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-3-amendment-1.json"
+    }
+  ]
+}

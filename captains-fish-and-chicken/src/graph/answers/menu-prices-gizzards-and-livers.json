@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-gizzards-and-livers",
+  "questionRef": "questions/menu-prices-gizzards-and-livers",
+  "text": "Gizzards (1 lb): Meal 13.99\nLivers (1 lb): Meal 13.99",
+  "cites": [
+    "menu/gizzards-and-livers"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/gizzards-and-livers.json",
+  "lastVerified": "2026-07-07"
+}

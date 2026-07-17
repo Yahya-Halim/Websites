@@ -1,0 +1,20 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "briefHash": "739d57b06aec4a7c29a50f60cba3efb418607c3ec730bcaaa80de1792280b6ef",
+  "phase": 3,
+  "exitedAt": "2026-07-08T21:32:40.440Z",
+  "specialistInvoked": "ui-ux-pro-max",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/phase-3-artifact.json",
+    "artifactHash": "b801367a98370345bfc73746c096a729eafcb03a6393ad6ddc0db4ca002d5aad",
+    "contract": "UI UX Pro Max design system, design/content/build plan, selected architecture, asset needs, identity decision",
+    "amendment": 1,
+    "previousArtifactHash": "78ff5510ab17dfebffffdce5f085b91148b4f5fba6533b956de405aed6fbdff5"
+  },
+  "nextPhaseAllowed": [
+    3,
+    4
+  ],
+  "nextPhaseHint": 3,
+  "blocking": []
+}

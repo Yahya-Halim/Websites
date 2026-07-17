@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://captains-fish-chicken.netlify.app/#business",
+  "name": "Captains Fish and Chicken",
+  "description": "Captains Fish and Chicken serves fresh-to-order fried fish, chicken, wings, and seafood for takeout and delivery in Cedar Rapids, Iowa. Catfish, perch, tilapia, cod, red snapper, jumbo shrimp, whole and party wings, tenders, gizzards and livers, plus family fish deals and party pans for catering. Owner-operated by Ray Aqel on 1st Avenue NE since 2024.",
+  "telephone": "+1-319-221-1040",
+  "email": "captainsfishchicken@gmail.com",
+  "url": "https://captains-fish-chicken.netlify.app",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1616 1st Ave NE",
+    "addressLocality": "Cedar Rapids",
+    "addressRegion": "IA",
+    "postalCode": "52402",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.9847,
+    "longitude": -91.6521
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "11:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/"
+  ],
+  "servesCuisine": "Seafood, Fried Chicken, Soul Food",
+  "priceRange": "$$",
+  "hasMenu": "https://captains-fish-chicken.netlify.app/menu/",
+  "image": "https://captains-fish-chicken.netlify.app/logo-icon.png",
+  "logo": "https://captains-fish-chicken.netlify.app/logo-icon.png",
+  "foundingDate": "2024"
+}

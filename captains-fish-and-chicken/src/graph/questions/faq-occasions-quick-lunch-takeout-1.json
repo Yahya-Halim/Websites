@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-quick-lunch-takeout-1",
+  "question": "How do I order lunch ahead so it's ready fast?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/quick-lunch-takeout.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

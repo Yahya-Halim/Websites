@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 6,
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/phase-6-artifact.json",
+  "artifactHash": "a80c833fa2f9e2222dfc195530084e8c3a981e5cb2be6035d56d8717cf36883d",
+  "specialist": "higgsfield",
+  "completedAt": "2026-07-08T22:28:41.124Z",
+  "contract": "Higgsfield manifest, selections, exports, verification report",
+  "artifact": {
+    "phase": 6,
+    "summary": "Phase 6 IMAGERY (run v2). Library strategy per approved Phase 2 imageSlotPlan: REUSE the archived run's 93-render library (menu unchanged — 87 menu items + heroes + og + logo placeholder) plus ONE new render this run (open-late night hero: captain-hat chicken with takeout bag under a gold lantern, brand palette; 2 credits). Manifest 94 slots; selections 94/94; exports 94/94 on disk; higgsfield-workflow verify ok with zero problems and zero deferred slots. Landing heroes wired via the LANDING_HERO_IMAGES map ([slug].astro); catering landing reuses the party-pans hero. UI verification: desktop + mobile (375x812) checks both PASS with zero unresolved issues. All generated imagery is representational — \"(representational image)\" alt text + visible per-page notes; public/logo.png remains the generated placeholder pending the owner shark-captain file drop; real owner photography remains invited.",
+    "checklist": [
+      {
+        "id": "intake",
+        "status": "done",
+        "note": "intake catalog present (no client reference photos supplied; generation-only slots)"
+      },
+      {
+        "id": "manifest",
+        "status": "done",
+        "note": "94 slots at scripts/image-prompts.json (93 reused + open-late-hero added this run)"
+      },
+      {
+        "id": "generate",
+        "status": "done",
+        "note": "library reused per approved plan (~186 credits saved); 1 new render (2 credits) via Higgsfield MCP nano_banana_pro"
+      },
+      {
+        "id": "select",
+        "status": "done",
+        "note": "94/94 selections at scripts/selections.json (kind variant, provenance recorded)"
+      },
+      {
+        "id": "export",
+        "status": "done",
+        "note": "94/94 output files on disk incl. public/images/hero/open-late.webp (1600x900 webp q85)"
+      },
+      {
+        "id": "verify",
+        "status": "done",
+        "note": "higgsfield-workflow verify: ok=true, problems=[], deferred=[]; desktop+mobile UI checks pass, zero unresolved"
+      }
+    ],
+    "higgsfieldManifest": {
+      "path": "scripts/image-prompts.json",
+      "slots": 94,
+      "breakdown": {
+        "menuItems": 87,
+        "marketingAndHeroes": 7
+      },
+      "newThisRun": [
+        "open-late-hero (flat-2D night scene, brand palette, representational)"
+      ],
+      "reusedFromArchivedRun": 93
+    },
+    "selections": {
+      "path": "scripts/selections.json",
+      "selected": 94,
+      "kinds": "all variant picks with provenance higgsfield-mcp:nano_banana_pro"
+    },
+    "exports": {
+      "outputsOnDisk": 94,
+      "missing": 0,
+      "destinations": [
+        "public/images/menu/** (87)",
+        "public/images/hero/*.webp (incl. open-late.webp new)",
+        "public/images/og/og-social.jpg",
+        "public/logo.png (placeholder pending owner file)",
+        "public/videos/beach-loop.mp4 (owner-approved looped hero)"
+      ],
+      "exportTool": "higgsfield-workflow export (sharp resize/convert) + sharp webp for heroes"
+    },
+    "verificationReport": {
+      "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/imagery-verification-report.md",
+      "status": "passed",
+      "higgsfieldWorkflowVerify": {
+        "ok": true,
+        "problems": [],
+        "deferredSlots": 0,
+        "deferredPages": 0
+      },
+      "uiChecks": [
+        {
+          "viewport": "desktop",
+          "status": "pass",
+          "notes": "open-late hero loads (webp, correct representational alt); single h1; no horizontal overflow; home renders 8 sections with video hero; 0 broken images"
+        },
+        {
+          "viewport": "mobile",
+          "status": "pass",
+          "notes": "375x812: sticky call bar fixed and visible; header static (CTA delegated by design); single h1; 0 broken images; no horizontal overflow"
+        }
+      ],
+      "unresolvedIssues": [],
+      "honesty": "All generated imagery representational and labeled; never presented as photos of the actual premises or dishes; logo placeholder pending owner file drop; owner photography invited to replace renders."
+    }
+  },
+  "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-6.json"
+}

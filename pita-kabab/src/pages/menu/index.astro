@@ -1,0 +1,130 @@
+---
+import Base from '../../layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderMenuJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+import Hero from '@engine/components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+const sectionsRaw = await getCollection('menu');
+// Hub ordering mirrors the Menu JSON-LD rule: `order` ascending, order-less
+// sections after all ordered ones, then slug (deterministic).
+const sections = [...sectionsRaw].sort((a, b) => {
+  const ao = a.data.order ?? Number.POSITIVE_INFINITY;
+  const bo = b.data.order ?? Number.POSITIVE_INFINITY;
+  if (ao !== bo) return ao < bo ? -1 : 1;
+  return a.data.slug < b.data.slug ? -1 : a.data.slug > b.data.slug ? 1 : 0;
+});
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+const legacyTelCta = site?.cta?.href?.startsWith('tel:') ? site.cta : undefined;
+const routeCtaPrimary = site?.ctaPrimary ?? legacyTelCta;
+const routeCtaSecondary = site?.ctaSecondary;
+
+const businessName = business?.name ?? '';
+const title = `Menu — ${businessName}`;
+const description = `Full menu for ${businessName}.`;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site ? new URL('/menu/', Astro.site).href : '/menu/';
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description,
+  websiteName: businessName,
+  websiteUrl,
+});
+
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Menu' },
+  ],
+});
+
+// Menu JSON-LD only when EVERY item is priced: schema.org Offers require real
+// amounts, and prices are optional data (omit-never-fabricate). A menu with
+// any unpriced item omits the Menu type entirely (KG7) — HTML still renders.
+const allPriced = sections.length > 0
+  && sections.every((s) => s.data.items.every((i) => i.prices && i.prices.length > 0));
+const menuLd = allPriced && business
+  ? renderMenuJsonLd(sections.map((s) => s.data), business)
+  : null;
+---
+
+<Base title={title} description={description} jsonLd={[webPageLd, breadcrumbLd, menuLd]}>
+  <article class="menu-hub">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading="Menu"
+      subheading={description}
+      ctaPrimary={routeCtaPrimary}
+      ctaSecondary={routeCtaSecondary}
+    />
+
+    {sections.length > 0 && (
+      <section class="sections" aria-labelledby="sections-heading">
+        <h2 id="sections-heading">Browse the menu</h2>
+        <ul>
+          {sections.map((section) => (
+            <li>
+              <a href={`/menu/${section.data.slug}/`}>{section.data.name}</a>
+              {section.data.description && <p>{section.data.description}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={routeCtaPrimary}
+      ctaSecondary={routeCtaSecondary}
+    />
+  </article>
+</Base>
+
+<style>
+  .menu-hub {
+    padding: 2rem 0;
+  }
+  .sections {
+    margin-top: 2rem;
+  }
+  .sections ul {
+    list-style: none;
+    padding: 0;
+  }
+  .sections li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  .sections a {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .sections p {
+    margin: 0.25rem 0 0;
+    color: #444;
+    line-height: 1.5;
+  }
+</style>

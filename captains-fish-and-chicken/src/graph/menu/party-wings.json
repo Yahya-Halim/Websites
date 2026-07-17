@@ -1,0 +1,71 @@
+{
+  "kind": "menu",
+  "slug": "party-wings",
+  "name": "Party Wings",
+  "order": 3,
+  "description": "Smaller party-style wings, perfect for sharing and game day. Meals include fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Party Wings Meal (8 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 14.99
+        }
+      ]
+    },
+    {
+      "name": "Party Wings Meal (12 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 18.99
+        }
+      ]
+    },
+    {
+      "name": "Party Wings Only (16 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 24.99
+        }
+      ]
+    },
+    {
+      "name": "Party Wings Only (20 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 28.99
+        }
+      ]
+    },
+    {
+      "name": "Party Wings, Chicken Only (30 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 45.99
+        }
+      ]
+    },
+    {
+      "name": "Party Wings, Chicken Only (50 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 79.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Party Wings — Cedar Rapids | Captains Fish and Chicken",
+    "description": "Party wings by the 8, 12, 16, 20, 30, and 50 piece for game day and gatherings in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/party-wings/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

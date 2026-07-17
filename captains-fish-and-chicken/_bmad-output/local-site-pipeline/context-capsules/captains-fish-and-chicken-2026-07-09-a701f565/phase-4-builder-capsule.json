@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 4,
+  "specialist": "seo-content-writer",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+  "packetHash": "c36db2815eaa89a6134d739844d08a5e81de13c1f5ada9f8ed0b70f316adb1f1",
+  "mission": "Produce the Phase 4 artifact using the prepared workbench and sealed inputs only.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+      "hash": "c36db2815eaa89a6134d739844d08a5e81de13c1f5ada9f8ed0b70f316adb1f1"
+    },
+    {
+      "kind": "specialist-skill",
+      "path": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\phase-4-artifact.json"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed drafts from other phases",
+    "Direct edits to workflow state files"
+  ],
+  "requiredOutputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\phase-4-artifact.json",
+    "requiredArtifactFields": [
+      "filesChanged",
+      "routesGenerated",
+      "commandsRun",
+      "buildResult"
+    ]
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": [
+      "build-quality"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-report.json",
+    "requiredRole": "builder",
+    "requiredStatus": "completed"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "phase": 3,
+  "summary": "Phase 3 DESIGN for Captains Fish and Chicken. UI UX Pro Max design system authored (design-system.md): appetite-driving Southern menu-board aesthetic, owner-logo navy + gold palette (amended 2026-07-07: owner supplied the real brand logo, superseding the Captain Red exploration), Archivo Black/Inter type, accessibility floor, call-and-order conversion (no lead form, no SMS — restaurant archetype). Architecture: LocalEvolve restaurant archetype on Astro static. Identity recorded as DECLARED FIXTURES (domain/email .example, gaId G-XXXXXXXXXX) per owner's decision to defer real values to launch — Phase 5 do-not-ship gate will flag them.",
+  "checklist": [
+    {
+      "id": "run-ui-ux-design-system",
+      "status": "done",
+      "note": "UI UX Pro Max guidance run for the 35-route restaurant matrix + Astro stack; output at design-system.md"
+    },
+    {
+      "id": "capture-design-system-output",
+      "status": "done",
+      "note": "design-system.md + brand tokens persisted and referenced"
+    },
+    {
+      "id": "identity-floor",
+      "status": "done",
+      "note": "identityDecision recorded as fixture mode; real values deferred to Phase 7 per owner"
+    },
+    {
+      "id": "call-only-design",
+      "status": "done",
+      "note": "Conversion designed call-only; no lead form / SMS fabricated"
+    }
+  ],
+  "designSystem": {
+    "designSystemPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-3/design-system.md",
+    "query": "modern nautical navy + gold fast-casual fish & chicken takeout — derived from the owner-supplied Captains shark-captain logo; sticky navy nav, gold conversion CTAs, image-overlay heroes, card-grid menu",
+    "stack": "Astro 6 static SSG + LocalEvolve restaurant archetype + engine-floor Base.astro layout + shared components + vanilla CSS custom-property design tokens",
+    "palette": {
+      "brandPrimary": "#123253",
+      "brandAccent": "#F5B301",
+      "navyDeep": "#0B1E33",
+      "oceanBlue": "#2D74B5",
+      "steel": "#E8EEF4",
+      "cloud": "#F7FAFC",
+      "ink": "#0B1E33"
+    },
+    "typography": {
+      "display": "Archivo Black (fallback system-ui/Arial Black)",
+      "body": "Inter (fallback system-ui)",
+      "base": "16px",
+      "lineHeight": 1.5
+    },
+    "accessibility": [
+      "contrast>=4.5:1",
+      "visible focus rings",
+      "touch targets>=44px",
+      "alt text on all food images",
+      "sequential headings",
+      "prefers-reduced-motion",
+      "color-not-sole-signal"
+    ],
+    "components": [
+      "sticky call bar (call-only)",
+      "header (call + order-online)",
+      "hero",
+      "menu section card (price-forward)",
+      "occasion/landing cards",
+      "FAQ accordion",
+      "cross-link chips",
+      "map+hours block",
+      "footer NAP"
+    ],
+    "logoAsset": "public/logo.png — owner-supplied shark-captain emblem (operator to place file; raster; recraft vector plan-gated)"
+  },
+  "designContentBuildPlan": {
+    "steps": [
+      "Wire brand tokens into the theme: set --accent-color to #C1272D and add the token block via the template override channel; wire secondary/cream/ink/harbor.",
+      "Author content data files from Phase 0/2 sealed inputs: business.json (NAP, hours.displayText, owner Ray Aqel, geo, opened 2024), site.json (nav, footer, cta=Call, order links, schemaMap), menu.json (14 owner-confirmed priced sections), occasions.json (6, each >=5 FAQ + >=4 cross-links + >=1 featured item), landings.json (10; intent/story/info/faq), neighborhoods.json (2; real local facts or fold).",
+      "Build the 35 routes via the restaurant archetype templates (menu hub + [slug], occasions/[slug], root [slug], neighborhoods/[slug], contact, home).",
+      "Emit LocalBusiness + Menu (all items priced) + FAQPage + BreadcrumbList JSON-LD; NAP single-location; never surface 3100 6th St SW.",
+      "Run factory wire + build; then Phase 5 factory validate + SEO/GEO audit.",
+      "Authoring constraints: NO calamari (not on confirmed menu); NewBo excluded from neighborhood facts (use Mound View/Wellington Heights); do not assert unconfirmed hours; dine-in copy withheld (takeout/delivery/catering only)."
+    ],
+    "contentSourceMap": {
+      "menu": "phase-0/menu-confirmed.json (owner-authoritative)",
+      "keywords": "phase-1 keywordEntityFindings (8 pillars)",
+      "competitors": "phase-1 competitorNotes",
+      "matrix": "phase-2 pageMatrix (35 routes)"
+    }
+  },
+  "selectedArchitecture": {
+    "archetype": "restaurant",
+    "framework": "Astro 6 static SSG",
+    "engine": "@localevolve/local-biz-factory-engine restaurant templates + engine-floor Base layout + shared components",
+    "collections": [
+      "business",
+      "site",
+      "menu",
+      "occasions",
+      "landings",
+      "neighborhoods"
+    ],
+    "routeModel": "home + /menu hub + /menu/[section] + /occasions/[slug] + /[slug] landings + /neighborhoods/[slug] + /contact",
+    "schema": [
+      "LocalBusiness",
+      "Restaurant",
+      "Menu",
+      "FAQPage",
+      "BreadcrumbList",
+      "WebPage"
+    ],
+    "conversion": "call-only (tel:) + order-online CTAs (DoorDash/Uber Eats/Grubhub); no lead form, no SMS (documented exception; restaurant archetype not bound by auto-dealer CRO gate)",
+    "figma": "none — repo-owned tokens only (optional Figma handoff intentionally omitted)"
+  },
+  "assetNeeds": [
+    {
+      "slot": "home-hero",
+      "type": "image",
+      "brief": "Signature spread — fried catfish + wings + shrimp",
+      "representational": true
+    },
+    {
+      "slot": "brand-logo",
+      "type": "logo",
+      "brief": "Captains wordmark/mark, Captain Red + Fry Gold",
+      "representational": true
+    },
+    {
+      "slot": "signature-catfish",
+      "type": "image",
+      "brief": "Fried catfish plate (hero dish)",
+      "representational": true
+    },
+    {
+      "slot": "signature-wings",
+      "type": "image",
+      "brief": "Whole/party wings basket",
+      "representational": true
+    },
+    {
+      "slot": "signature-shrimp",
+      "type": "image",
+      "brief": "Jumbo shrimp basket",
+      "representational": true
+    },
+    {
+      "slot": "fish-family-platter",
+      "type": "image",
+      "brief": "Fish family deal / party pan spread",
+      "representational": true
+    },
+    {
+      "slot": "soul-food-sides",
+      "type": "image",
+      "brief": "Hush puppies, mac & cheese bites, onion rings",
+      "representational": true
+    },
+    {
+      "slot": "occasion-catering",
+      "type": "image",
+      "brief": "Catering party-pan hero",
+      "representational": true
+    },
+    {
+      "slot": "occasion-family-dinner",
+      "type": "image",
+      "brief": "Family dinner hero",
+      "representational": true
+    },
+    {
+      "slot": "og-social",
+      "type": "image",
+      "brief": "Open Graph share image",
+      "representational": true
+    },
+    {
+      "slot": "storefront",
+      "type": "image",
+      "brief": "PLACEHOLDER — prefer a REAL owner photo of 1616 1st Ave NE; generated storefront must NOT be presented as an actual photo of the premises",
+      "representational": true
+    }
+  ],
+  "identityDecision": {
+    "mode": "fixture",
+    "domain": "https://captains-fish-and-chicken.example",
+    "email": "hello@captains-fish-and-chicken.example",
+    "gaId": "G-XXXXXXXXXX",
+    "paymentAccepted": "unknown",
+    "notesFile": "identity-decision.md",
+    "rationale": "Owner directed deferral of real domain/email/GA4 to launch. Overtly-synthetic reserved .example + placeholder gaId; Phase 5 do-not-ship gate WILL flag these (intended). paymentAccepted unknown -> omitted from JSON-LD."
+  }
+}

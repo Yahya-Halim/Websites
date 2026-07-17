@@ -1,0 +1,355 @@
+{
+  "sweepDate": "2026-07-12",
+  "method": "Probe-guided sweep per probe-set.json. WebSearch + WebFetch. Yelp/DoorDash direct fetches blocked (HTTP 403 bot detection); those sources assessed via search-result snippets and owner-site links. Omit-never-fabricate applied; aggregator/site prices recorded as unverified until owner confirms.",
+  "sourcesChecked": [
+    {
+      "source": "Existing website (pitakababcr.com)",
+      "status": "found",
+      "url": "https://pitakababcr.com/",
+      "retrievedAt": "2026-07-12",
+      "notes": "Live multi-page site: /, /menu/, /order/, /catering/, /contact/, /family-dinner/, /blog/shawarma-vs-gyro/. NAP, hours, email, halal claims, catering terms extracted. No contact/lead form found on any fetched page; no social links; no visible form endpoint. Brief said no domain was supplied - owner control of this domain is unconfirmed."
+    },
+    {
+      "source": "Google Business Profile / Google Maps",
+      "status": "found",
+      "url": "https://maps.google.com/ (listing not directly fetched)",
+      "retrievedAt": "2026-07-12",
+      "notes": "Search snippet reports Google rating 4.9 with 8 reviews for Pita Kabab, Cedar Rapids. Listing existence inferred from search results; claim status, hours, attributes, and photos NOT verified. Owner must confirm GBP claim/ownership."
+    },
+    {
+      "source": "Yelp",
+      "status": "found",
+      "url": "https://www.yelp.com/biz/pita-kabab-cedar-rapids",
+      "retrievedAt": "2026-07-12",
+      "notes": "Listing title: 'PITA KABAB - Updated May 2026 - 13 Photos - 3100 6th St SW, Cedar Rapids, Iowa - Mediterranean'. ~2 reviews per search snippet; positive ('Finally a Mediterranean Halal Arabic restaurant in Cedar Rapids'; friendly owner and wife; big space). Direct fetch 403; rating value and claimed status unverified."
+    },
+    {
+      "source": "Facebook",
+      "status": "found",
+      "url": "https://www.facebook.com/p/Pita-Kabab-61587297356118/",
+      "retrievedAt": "2026-07-12",
+      "notes": "Business page exists (id 61587297356118). Details (followers, hours, posts) not retrievable without login. Positive community-group posts: 'Pita Kabab on 6th St SW serves good food' (group 199945990364320) and 'Pita Kabob serves high quality Mediterranean food' (group 238242870660873). Owner site does not link the page."
+    },
+    {
+      "source": "Instagram",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "site:instagram.com search returned no dedicated Cedar Rapids business profile; only a generic tag page. No Instagram link on owner site."
+    },
+    {
+      "source": "DoorDash",
+      "status": "found",
+      "url": "https://www.doordash.com/store/pita-kabab-cedar-rapids-41564223/",
+      "retrievedAt": "2026-07-12",
+      "notes": "Active store, linked from owner site /order/ page (full link includes /100095805/). Store name cased 'Pita kabab' on DoorDash. Direct fetch 403; menu/ratings on platform unverified. Owner site: delivery is via DoorDash; first-party online ordering 'coming soon'."
+    },
+    {
+      "source": "Uber Eats",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No Pita Kabab Cedar Rapids store surfaced in search; not linked from owner site."
+    },
+    {
+      "source": "Grubhub",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No Pita Kabab listing. STALE: Grubhub still lists 'Captains Fish and Chicken' at 3100 6th St SW (https://www.grubhub.com/restaurant/captains-fish-and-chicken-3100-6th-st-sw-cedar-rapids/11805992). See discrepancies."
+    },
+    {
+      "source": "Seamless",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No Pita Kabab listing. STALE: Seamless mirror of the Captains listing at this address (https://www.seamless.com/menu/captains-fish-and-chicken-3100-6th-st-sw-cedar-rapids/11805992)."
+    },
+    {
+      "source": "Slice",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No listing surfaced (expected - Slice is pizza-focused)."
+    },
+    {
+      "source": "ChowNow",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No Pita Kabab ChowNow storefront surfaced."
+    },
+    {
+      "source": "TripAdvisor",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No Pita Kabab page. STALE: 'CAPTAINS FISH AND CHICKEN, INC' page exists for this address (https://www.tripadvisor.com/Restaurant_Review-g37743-d28991845-Reviews-Captains_Fish_And_Chicken_Inc-Cedar_Rapids_Iowa.html)."
+    },
+    {
+      "source": "Local press - Cedar Rapids Gazette",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No Gazette coverage of Pita Kabab found. Gazette covered Captains Fish and Chicken opening its second location at 3100 Sixth St SW on May 16, 2025 (https://www.thegazette.com/restaurants/captains-fish-and-chicken-opens-second-location-in-cedar-rapids/). CAUTION: Gazette 'Chew on This' article about 'Pita'z' (210 3rd Ave SE) is a DIFFERENT business - do not conflate."
+    },
+    {
+      "source": "Local press - KCRG",
+      "status": "not-found",
+      "url": null,
+      "retrievedAt": "2026-07-12",
+      "notes": "No KCRG coverage surfaced for Pita Kabab."
+    },
+    {
+      "source": "Roadtrippers directory",
+      "status": "found",
+      "url": "https://maps.roadtrippers.com/us/cedar-rapids-ia/food-drink/pita-kabab-cedar-rapids-ia--0",
+      "retrievedAt": "2026-07-12",
+      "notes": "Directory listing exists under the Pita Kabab name; details not extracted."
+    },
+    {
+      "source": "Bizapedia (Iowa corporate registry aggregator)",
+      "status": "found",
+      "url": "https://www.bizapedia.com/ia/pita-kabab-inc.html",
+      "retrievedAt": "2026-07-12",
+      "notes": "Page titled 'PITA KABAB INC in Cedar Rapids, IA' exists, suggesting an Iowa corporation 'PITA KABAB INC'. Page body blocked by security check; incorporation date, agent, and officers unverified. Verify directly with Iowa Secretary of State or owner."
+    }
+  ],
+  "findings": [
+    {
+      "probeId": "nap-hours",
+      "claim": "Business name 'Pita Kabab' at 3100 6th St SW, Cedar Rapids, IA 52404",
+      "sources": ["https://pitakababcr.com/", "https://www.yelp.com/biz/pita-kabab-cedar-rapids"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "corroborates-owner-seed-fact"
+    },
+    {
+      "probeId": "nap-hours",
+      "claim": "Phone (319) 440-3709 (tel:3194403709 link on owner site menu page)",
+      "sources": ["https://pitakababcr.com/", "https://pitakababcr.com/menu/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "nap-hours",
+      "claim": "Email info@pitakababcr.com",
+      "sources": ["https://pitakababcr.com/", "https://pitakababcr.com/catering/", "https://pitakababcr.com/contact/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "nap-hours",
+      "claim": "Hours: Mon-Tue 10 AM-10 PM, Wed closed, Thu-Sat 10 AM-10 PM, Sun 11 AM-8 PM",
+      "sources": ["https://pitakababcr.com/", "https://pitakababcr.com/contact/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified",
+      "note": "Single-source (owner site only); GBP/Yelp/DoorDash hours not retrievable to cross-check."
+    },
+    {
+      "probeId": "domain-email-hosting",
+      "claim": "Live website at pitakababcr.com with pages: home, /menu/, /order/, /catering/, /contact/, /family-dinner/, /blog/shawarma-vs-gyro/; no contact form, no social links, no visible analytics/form-service identifiers",
+      "sources": ["https://pitakababcr.com/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified",
+      "note": "Brief stated no domain was supplied; owner control of domain and mailbox must be confirmed."
+    },
+    {
+      "probeId": "cuisine-service-model",
+      "claim": "Mediterranean / Middle Eastern restaurant serving Palestinian family recipes; casual counter service; dine-in, takeout, delivery (via DoorDash), and full-service catering",
+      "sources": ["https://pitakababcr.com/", "https://pitakababcr.com/order/", "https://www.yelp.com/biz/pita-kabab-cedar-rapids"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "trust-facts",
+      "claim": "Family-owned; owner Ray Aqel; recipes passed down through generations",
+      "sources": ["https://pitakababcr.com/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "trust-facts",
+      "claim": "Halal-certified meat for chicken and beef dishes (asserted on owner site; certifying body not named)",
+      "sources": ["https://pitakababcr.com/", "https://pitakababcr.com/menu/", "https://pitakababcr.com/catering/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "trust-facts",
+      "claim": "Google rating 4.9 with 8 reviews",
+      "sources": ["search-snippet (Google listing not directly fetched)"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified",
+      "note": "Low review count; weak as a standalone trust fact and volatile. Attribute and date if used."
+    },
+    {
+      "probeId": "trust-facts",
+      "claim": "Charcoal-grilled kabobs, vertical-spit shawarma, hummus made fresh every morning, scratch cooking daily",
+      "sources": ["https://pitakababcr.com/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "trust-facts",
+      "claim": "Iowa corporate entity 'PITA KABAB INC' appears to exist",
+      "sources": ["https://www.bizapedia.com/ia/pita-kabab-inc.html (title only; page body blocked)"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "trust-facts",
+      "claim": "Opened in 2025 by Ray Aqel, who also owns Captains Fish and Chicken",
+      "sources": ["search-engine synthesis across pitakababcr.com and related results"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified",
+      "note": "Consistent with brief's same-owner seed fact and with Captains occupying the address until at least May 2025. Exact opening date is owner residue; needed for business.yearEstablished."
+    },
+    {
+      "probeId": "menu-services",
+      "claim": "Menu families and price ranges on owner site: Sandwiches $6.99-$12.99 (falafel, chicken shawarma, kabab); Bowls $13.99-$15.99; Platters $14.99-$29.99 (shawarma, mix grill, seafood mix grill); Mediterranean Delight (hummus, foul, mfatakeh, kalaya, chicken liver); Wings (10pc party $18.99); Kids $5.98-$6.99; Desserts (baklava $4.99)",
+      "sources": ["https://pitakababcr.com/menu/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified",
+      "note": "Owner-site prices, not aggregator prices, but currency/accuracy still needs owner confirmation before republishing."
+    },
+    {
+      "probeId": "menu-services",
+      "claim": "Catering: minimum 10 people, up to 200+ guests; Quick Catering and Traditional Feast tiers (Mansaf, Oozi, Qedrah, stuffed lamb); 50% deposit; 24h/1wk/2wk notice tiers; delivery and setup within Cedar Rapids metro",
+      "sources": ["https://pitakababcr.com/catering/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified"
+    },
+    {
+      "probeId": "offers-promotions",
+      "claim": "No time-limited quantified promotion found. Standing price anchors only: kids meals from $5.98; illustrative family-of-four total $40.95 ('under $50'); meals ready in ~10 minutes; large orders (10+) need 2-hour notice",
+      "sources": ["https://pitakababcr.com/family-dinner/", "https://pitakababcr.com/order/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "web-answered-unverified",
+      "note": "Per omit-never-fabricate: site.offers should be omitted unless the owner declares a real dated promotion."
+    },
+    {
+      "probeId": "lead-form-endpoint",
+      "claim": "No lead/contact form exists on the current site; catering and large orders are handled by phone/email. No external form-service endpoint discovered.",
+      "sources": ["https://pitakababcr.com/contact/", "https://pitakababcr.com/catering/", "https://pitakababcr.com/order/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "owner-only-residue",
+      "note": "site.leadForm.endpoint is REQUIRED for a lead form to ship; must be provisioned (e.g., Web3Forms) with the owner."
+    },
+    {
+      "probeId": "call-text-capability",
+      "claim": "Callable number (319) 440-3709 evidenced by tel: link; NO evidence of SMS/text capability on any source",
+      "sources": ["https://pitakababcr.com/menu/", "https://pitakababcr.com/contact/"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "owner-only-residue",
+      "note": "Dual-CTA requires both tel: and sms:; do not invent an SMS channel."
+    },
+    {
+      "probeId": "brand-assets",
+      "claim": "No logo files, brand-color spec, or rights-cleared photography located. Yelp reports 13 photos (rights unknown). GBP/Facebook photos not retrievable.",
+      "sources": ["https://www.yelp.com/biz/pita-kabab-cedar-rapids"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "owner-only-residue"
+    },
+    {
+      "probeId": "analytics-ads",
+      "claim": "No GA4 measurement id or Google Ads configuration discoverable from public pages",
+      "sources": ["https://pitakababcr.com/ (markdown extraction; scripts not inspectable)"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "owner-only-residue"
+    },
+    {
+      "probeId": "payment-policy",
+      "claim": "No payment-method attributes retrievable (GBP/Yelp attribute panels blocked)",
+      "sources": [],
+      "retrievedAt": "2026-07-12",
+      "bucket": "owner-only-residue"
+    },
+    {
+      "probeId": "sap-locations",
+      "claim": "Single location in scope per brief; restaurant archetype implies menu/catering page families rather than service-area SAP towns. No service-area towns declared anywhere.",
+      "sources": ["D:\\website\\pita-kabab\\brief.json"],
+      "retrievedAt": "2026-07-12",
+      "bucket": "corroborates-owner-seed-fact"
+    }
+  ],
+  "discrepancies": [
+    {
+      "id": "stale-captains-listings",
+      "topic": "Former tenant listings still live at 3100 6th St SW",
+      "perSource": {
+        "yelp-captains": "Yelp keeps 'CAPTAINS FISH AND CHICKEN' (Updated March 2026) at 3100 6th St SW - https://www.yelp.com/biz/captains-fish-and-chicken-cedar-rapids-2",
+        "grubhub": "Captains menu listing at this address - https://www.grubhub.com/restaurant/captains-fish-and-chicken-3100-6th-st-sw-cedar-rapids/11805992",
+        "seamless": "Mirror of the Grubhub Captains listing - https://www.seamless.com/menu/captains-fish-and-chicken-3100-6th-st-sw-cedar-rapids/11805992",
+        "tripadvisor": "Captains Fish And Chicken Inc page - https://www.tripadvisor.com/Restaurant_Review-g37743-d28991845-Reviews-Captains_Fish_And_Chicken_Inc-Cedar_Rapids_Iowa.html",
+        "wanderboat": "Captains Fish and Chicken INC listed at this address - https://wanderboat.ai/restaurants/united-states/cedar-rapids/captains-fish-and-chicken-inc/O8jnhe9QTvGziroCf0IFYw",
+        "owner-site": "pitakababcr.com makes no mention of Captains or the prior tenant",
+        "captains-engagement": "captains-fish-chicken.netlify.app carries disambiguation content for this address per brief.json"
+      },
+      "phoneConflict": "Stale Captains listings carry (319) 362-3114; Pita Kabab sources carry (319) 440-3709",
+      "resolutionNeeded": "Owner (same owner of both businesses) must close/relocate the Captains listings for this address and confirm which phone rings at the location; NAP consistency is blocked until cleanup.",
+      "retrievedAt": "2026-07-12"
+    },
+    {
+      "id": "hours-single-source",
+      "topic": "Hours only evidenced by the owner site",
+      "perSource": {
+        "owner-site": "Mon-Tue 10-10, Wed closed, Thu-Sat 10-10, Sun 11-8",
+        "gbp": "not retrievable (listing not directly fetched)",
+        "yelp": "not retrievable (403)",
+        "doordash": "not retrievable (403)"
+      },
+      "resolutionNeeded": "Owner confirms weekly hours (especially the Wednesday closure and Sunday 11-8) and aligns GBP/DoorDash/Facebook.",
+      "retrievedAt": "2026-07-12"
+    },
+    {
+      "id": "brief-vs-web-domain",
+      "topic": "Brief says no domain/email/phone/hours/menu supplied, yet a complete site exists at pitakababcr.com",
+      "perSource": {
+        "brief": "seedFactsOnly: name + address only; 'No domain, email, GA4, phone, hours, menu, or brand assets supplied yet'",
+        "web": "pitakababcr.com is live with all of the above published"
+      },
+      "resolutionNeeded": "Owner confirms who registered/controls pitakababcr.com and the info@ mailbox, and whether this engagement replaces, rebuilds, or coexists with that site.",
+      "retrievedAt": "2026-07-12"
+    },
+    {
+      "id": "name-casing-doordash",
+      "topic": "DoorDash store cased 'Pita kabab' vs 'Pita Kabab' elsewhere",
+      "perSource": {
+        "doordash": "Pita kabab",
+        "owner-site": "Pita Kabab",
+        "yelp": "PITA KABAB"
+      },
+      "resolutionNeeded": "Cosmetic; owner may fix casing in DoorDash merchant portal.",
+      "retrievedAt": "2026-07-12"
+    },
+    {
+      "id": "pitaz-conflation-risk",
+      "topic": "Distinct business 'Pita'z' (210 3rd Ave SE, Cedar Rapids) has Gazette press coverage",
+      "perSource": {
+        "gazette": "'Chew on This: Pita'z and Lincoln Wine Bar add Cedar Rapids spots' refers to Pita'z, NOT Pita Kabab",
+        "yelp": "Separate listing https://www.yelp.com/biz/pitaz-cedar-rapids"
+      },
+      "resolutionNeeded": "None from owner; internal rule - never cite Pita'z coverage as Pita Kabab press.",
+      "retrievedAt": "2026-07-12"
+    }
+  ],
+  "ownerResidueQuestions": [
+    "Who registered and controls pitakababcr.com (registrar, DNS, hosting) and the info@pitakababcr.com mailbox? Should the new build replace the current site at that domain?",
+    "Provide (or authorize provisioning of) an external form-service endpoint (e.g., Web3Forms https URL) for the lead form - REQUIRED before a lead form can ship on a static site.",
+    "Can (319) 440-3709 receive text messages, or is there a separate SMS-capable number? (Needed for the sms: secondary CTA; the dual-CTA cannot ship without a real SMS channel.)",
+    "Confirm canonical phone (319) 440-3709, and confirm the old Captains number (319) 362-3114 no longer represents this address.",
+    "Confirm weekly hours exactly: Mon-Tue 10-10, Wed closed, Thu-Sat 10-10, Sun 11-8?",
+    "GA4: does a property/measurement ID exist for pitakababcr.com? Provide the G- id or authorize creating one.",
+    "Google Ads: do you run ads? If yes, provide conversionId and the leadForm/telClick conversion labels; if no, we ship GA4-only.",
+    "Provide exactly 3 hero value props (short label + optional sublabel) and one mid-page CTA-banner headline in your own words - the home page fails its build gate until this copy exists.",
+    "Any current dated promotion with a quantified detail (e.g., '$X off', 'free drink with combo', validFrom/validThrough)? None found on the web; if none, we omit offers.",
+    "Any financing/payment-plan partners (unlikely for a restaurant; catering deposits are not financing)? If none, financing is omitted.",
+    "Trust facts to confirm for the trust grid (need >= 6 real ones or the grid is omitted): (a) halal certification - which certifying body, and may we name it? (b) exact opening date of Pita Kabab at this address (for yearEstablished), (c) family-owned wording, (d) owner name spelling 'Ray Aqel', (e) charcoal grill / vertical-spit shawarma claims, (f) 'recipes passed down through generations' - is this accurate as printed?",
+    "Which options should the lead-form services dropdown offer (e.g., catering inquiry, large group order 10+, general question)? And which preferred-contact channels should it list (call / text / email)?",
+    "What payment methods are accepted (cash, card, tap, other)?",
+    "Provide brand assets: logo file(s), brand colors, and photos you own the rights to (food, interior, owner). May we use the photos already on the current site and GBP?",
+    "Confirm the delivery/ordering strategy: DoorDash-only today, first-party online ordering 'coming soon' - which should the new site promote?",
+    "Confirm catering terms as published (10-person minimum, 200+ capacity, 50% deposit, 24h/1wk/2wk notice tiers) before we republish them.",
+    "Will you claim/verify the Google Business Profile for Pita Kabab and close or relocate the stale Captains listings (Yelp, Grubhub, Seamless, TripAdvisor) for 3100 6th St SW? We can prepare the request list."
+  ]
+}

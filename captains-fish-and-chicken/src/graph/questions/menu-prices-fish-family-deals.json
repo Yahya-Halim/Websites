@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-fish-family-deals",
+  "question": "How much do Fish Only Family Deals cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/fish-family-deals.json",
+  "lastVerified": "2026-07-07"
+}

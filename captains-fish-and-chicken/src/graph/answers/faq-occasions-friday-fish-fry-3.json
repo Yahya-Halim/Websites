@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-friday-fish-fry-3",
+  "questionRef": "questions/faq-occasions-friday-fish-fry-3",
+  "text": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app. Each app sets its own delivery times and fees.",
+  "cites": [
+    "occasions/friday-fish-fry"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

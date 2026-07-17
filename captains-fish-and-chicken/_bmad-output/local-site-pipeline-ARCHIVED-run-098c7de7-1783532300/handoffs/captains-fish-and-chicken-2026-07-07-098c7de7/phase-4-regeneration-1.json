@@ -1,0 +1,79 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "briefHash": "b8a5b99e0e40abc4d46529fcb4be1f2d4a47cf7b471c4675d0514dbf7b5ace42",
+  "phase": 4,
+  "exitedAt": "2026-07-07T22:25:42.630Z",
+  "specialistInvoked": "seo-content-writer",
+  "outputs": {
+    "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-4/phase-4-artifact.json",
+    "artifactHash": "22d2b70cd015f9da5ee05078f1b07f212b8c2e9539bd8cbe06d274fb33dbd34f",
+    "contract": "files changed, routes generated, commands run, build result",
+    "routesGenerated": [
+      "/",
+      "/menu",
+      "/menu/seafood",
+      "/menu/whole-wings",
+      "/menu/party-wings",
+      "/menu/boneless-chicken-bites",
+      "/menu/chicken-leg-and-thigh",
+      "/menu/chicken-tenders",
+      "/menu/shrimp",
+      "/menu/gizzards-and-livers",
+      "/menu/fish-family-deals",
+      "/menu/family-meals-and-combos",
+      "/menu/sides",
+      "/menu/kids-meals",
+      "/menu/desserts",
+      "/menu/drinks",
+      "/occasions/family-dinner",
+      "/occasions/game-day-wings",
+      "/occasions/office-and-party-catering",
+      "/occasions/friday-fish-fry",
+      "/occasions/seafood-feast",
+      "/occasions/quick-lunch-takeout",
+      "/fried-catfish-cedar-rapids",
+      "/fried-chicken-and-wings-cedar-rapids",
+      "/seafood-takeout-cedar-rapids",
+      "/soul-food-cedar-rapids",
+      "/fish-and-chicken-near-me",
+      "/party-wings-cedar-rapids",
+      "/how-to-order",
+      "/about",
+      "/faq",
+      "/made-fresh-to-order",
+      "/neighborhoods/northeast-cedar-rapids",
+      "/neighborhoods/marion-ia",
+      "/contact"
+    ],
+    "buildResult": {
+      "status": "success",
+      "pagesBuilt": 35,
+      "expectedRoutes": 35,
+      "buildExitCode": 0,
+      "sitemap": true,
+      "validate": {
+        "exitCode": 1,
+        "blockingGate": "do-not-ship-guards",
+        "reason": "declared identity fixtures (gaId G-XXXXXXXXXX + .example domain) rendered in output — INTENDED per owner's deferral of real domain/email/GA4 to launch; resolved at Phase 7 by swapping real values then rebuilding",
+        "passingGates": [
+          "route-completeness",
+          "schema-floor",
+          "cro-block-presence",
+          "sap-anti-doorway",
+          "graph-gate"
+        ],
+        "advisories": [
+          "asset-references-exist: public/logo.svg missing (Phase 6 imagery)",
+          "graph-presence: legacy mode"
+        ]
+      }
+    },
+    "regeneration": 1,
+    "supersedesHandoff": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-4.json"
+  },
+  "nextPhaseAllowed": [
+    5
+  ],
+  "nextPhaseHint": 5,
+  "blocking": []
+}

@@ -1,0 +1,22 @@
+{
+  "engagement": "captains-fish-and-chicken",
+  "business": "Captains Fish and Chicken",
+  "businessType": "fried fish and chicken restaurant",
+  "serviceModel": "counter-service restaurant",
+  "scope": "single location",
+  "location": {
+    "streetAddress": "1616 1st Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "postalCode": "52402",
+    "singleLocationInScope": true
+  },
+  "provenance": "Address and business name supplied by the engagement owner (authoritative). RUN v3 (2026-07-09) under plugin 9ea6578 — the sub-agent context-capsule contract: every phase is dispatched to a fresh sub-agent from the packet's dispatch prompt and sealed with a hash-bound worker report; reviews carry reviewer worker reports. Prior runs archived (098c7de7, c0033522). The v2 run LAUNCHED the site: https://captains-fish-chicken.netlify.app is LIVE (real identity: that domain, captainsfishchicken@gmail.com, GA4 G-7W35DKNK6Z; validate exit 0; Netlify site b3578dcc linked). Owner statements carried as declared owner inputs: full priced menu (paste 2026-07-07; Gazette sides delta unanswered — menu ships as paste), call-only contact (no lead form, no SMS), Google 4.4/208 citable with attribution, owner shark-captain logo (navy/gold palette; file drop still pending, placeholder live), home page style must match interior pages, hours owner-unconfirmed (structured hours conservative Mon-Thu+Sun; displayText caveated), 3100 6th St SW excluded (now Pita Kabab, same owner — disambiguation content stands).",
+  "seedFactsOnly": true,
+  "ignorePriorWork": false,
+  "priorRunArchives": [
+    "_bmad-output/local-site-pipeline-ARCHIVED-run-098c7de7-1783532300",
+    "_bmad-output/local-site-pipeline-ARCHIVED-run-c0033522-1783634181"
+  ],
+  "liveBaseline": "https://captains-fish-chicken.netlify.app (v2 build, 38 routes, deployed 2026-07-08)"
+}

@@ -1,0 +1,316 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 1,
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-1/phase-1-artifact.json",
+  "artifactHash": "9e8a398e6656bd83e563a0538a8b3177d0db27dde83d555955d5ccb19563a3e1",
+  "specialist": "keyword-research",
+  "completedAt": "2026-07-07T19:11:40.065Z",
+  "contract": "research sources, competitor notes, keyword/entity findings, source dates, evidence gaps",
+  "artifact": {
+    "phase": 1,
+    "summary": "Phase 1 RESEARCH for Captains Fish and Chicken. 3-agent SERP-grounded sweep (keywords, competitors, GEO/entity) on 2026-07-07. Eight local keyword pillars identified; nearest same-concept rival is Sugapeach Chicken & Fish Fry (North Liberty), clearest win is Long John Silver's (frozen menu). No paid volume tool connected, so all volume/difficulty metrics are Estimated or N/A — none fabricated. Scope held to the single 1616 1st Ave NE location; 3100 6th St SW excluded.",
+    "checklist": [
+      {
+        "id": "founder-scope-single-location",
+        "status": "done",
+        "note": "Single 1616 1st Ave NE location only; 3100 6th St SW excluded from all clusters"
+      },
+      {
+        "id": "founder-confirmed-offerings-only",
+        "status": "done",
+        "note": "Keywords/entities derived only from owner-confirmed menu"
+      },
+      {
+        "id": "founder-metric-honesty",
+        "status": "done",
+        "note": "All volume/difficulty Estimated or N/A; no fabricated numbers; competitors are real SERP-grounded businesses"
+      },
+      {
+        "id": "founder-truthful-claims",
+        "status": "done",
+        "note": "Comparative claims flagged Estimated; closed competitors (Vivian's, Just Like Home) excluded as live rivals"
+      }
+    ],
+    "researchSources": [
+      {
+        "source": "WebSearch SERP sampling (keyword pillars)",
+        "type": "serp",
+        "date": "2026-07-07",
+        "queries": [
+          "fried fish near me Cedar Rapids",
+          "fried chicken wings Cedar Rapids takeout",
+          "catfish soul food Cedar Rapids",
+          "seafood shrimp Cedar Rapids",
+          "wings catering party pans Cedar Rapids",
+          "family meal deal Cedar Rapids delivery"
+        ]
+      },
+      {
+        "source": "WebSearch SERP sampling (competitors)",
+        "type": "serp",
+        "date": "2026-07-07",
+        "queries": [
+          "fish and chicken Cedar Rapids",
+          "soul food Cedar Rapids",
+          "Sugapeach Chicken Fish Fry",
+          "Crab House Cedar Rapids",
+          "Long John Silver's Cedar Rapids"
+        ]
+      },
+      {
+        "source": "WebSearch SERP sampling (GEO/entity)",
+        "type": "serp",
+        "date": "2026-07-07",
+        "queries": [
+          "best catfish Cedar Rapids",
+          "fish fry near me open late",
+          "Harold's Chicken Cedar Rapids",
+          "1616 1st Ave NE neighborhood"
+        ]
+      },
+      {
+        "source": "Yelp category pages (Fried Fish / Catfish / Soul Food / Wings / Seafood, Cedar Rapids)",
+        "type": "aggregator",
+        "date": "2026-05/2026-07"
+      },
+      {
+        "source": "Restaurant Guru / Restaurantji / OpenTable / Wanderlog / res-discover (directory cluster)",
+        "type": "aggregator",
+        "date": "2026-07"
+      },
+      {
+        "source": "DoorDash / Uber Eats / Grubhub / Postmates store + category pages",
+        "type": "delivery",
+        "date": "2026-07"
+      },
+      {
+        "source": "KHAK local press (opening coverage, owner Ray Aqel)",
+        "type": "press",
+        "date": "2024-10-28"
+      },
+      {
+        "source": "The Gazette local press",
+        "type": "press",
+        "date": "2024-10 / 2025-05"
+      }
+    ],
+    "competitorNotes": {
+      "primaryRival": {
+        "name": "Sugapeach Chicken & Fish Fry",
+        "type": "local-independent",
+        "url": "https://sugapeach.com/",
+        "note": "Closest same-concept independent (est. 2016, CR roots, now North Liberty ~20-25 min away). Owns 'soul food'/'chicken fish fry' organic + own domain + delivery brand. WIN: Captains owns NE Cedar Rapids proximity + full seafood variety (perch/tilapia/red snapper/calamari/crab cakes/gizzards/livers/jumbo shrimp) + family fish deals up to 50pc + party pans that Sugapeach under-features."
+      },
+      "clearestWin": {
+        "name": "Long John Silver's",
+        "type": "national-chain",
+        "note": "Only national fried-fish brand locally; frozen pollock/cod fish & chips, no fresh catfish/perch/tilapia/snapper, no real chicken program, SW-side only. Captains wins on fresh-to-order + seafood variety + fish-AND-chicken breadth at comparable takeout price."
+      },
+      "otherLocalIndependents": [
+        {
+          "name": "Crab House Seafood Boil & Bar",
+          "note": "Dominates 'seafood/shrimp' SERP but Cajun boil concept, not fried fish+chicken+soul food; SW-side. Don't out-boil — own fried-basket + catfish + wings + soul food terms it ignores."
+        },
+        {
+          "name": "Harold's Chicken",
+          "note": "Reopened 2026 (1st Ave SE / 16th Ave SW); direct wings/fried-chicken rival."
+        },
+        {
+          "name": "Two Bros Chicken & Fish / Hiphop Fish & Chicken / Juicy Crab Island / Iowa Soul Food Market / Mama Pearls (gizzards & livers)",
+          "note": "SERP-grounded local adjacents."
+        }
+      ],
+      "nationalChains": [
+        "KFC (multiple, incl. 1st Ave SE near corridor)",
+        "Popeyes",
+        "Wingstop",
+        "Buffalo Wild Wings (2)",
+        "It's Just Wings (ghost kitchen)",
+        "Krispy Krunchy Chicken",
+        "Chester's Chicken",
+        "Red Lobster"
+      ],
+      "aggregatorsDominatingSerps": [
+        "Yelp Top-10 category pages",
+        "Tripadvisor cuisine pages",
+        "DoorDash/Uber Eats/Grubhub/Postmates",
+        "Restaurant Guru / Restaurantji / OpenTable / Wanderlog / res-discover"
+      ],
+      "excludedClosedOrWrongMarket": [
+        "Vivian's Soul Food (CLOSED 2022)",
+        "Just Like Home (closed)",
+        "SoulGood Southern Dining (closed)",
+        "Royceann's Soul Food (Iowa City, not CR)"
+      ],
+      "strategicRead": "Aggregators + 'best/top 10' lists own most head SERPs; Captains has NO owned domain ranking (Yelp/Zmenu/DoorDash/Facebook answer branded queries today). Play: (1) reclaim branded + menu/hours/phone navigational SERPs with an owned schema-rich site; (2) win item-level + near-me long tails aggregators answer poorly; (3) become AI-citable via FAQ/list/definition content. BOFU-first (branded, near-me, catering, family deals)."
+    },
+    "keywordEntityFindings": {
+      "pillars": [
+        {
+          "pillar": "Fried Fish",
+          "topTerms": [
+            "fried fish Cedar Rapids",
+            "fried catfish Cedar Rapids IA",
+            "catfish nuggets near me",
+            "fried perch tilapia cod Cedar Rapids",
+            "Friday fish fry Cedar Rapids takeout"
+          ]
+        },
+        {
+          "pillar": "Fried Chicken & Wings",
+          "topTerms": [
+            "chicken wings Cedar Rapids",
+            "party wings Cedar Rapids",
+            "boneless wings and tenders near me",
+            "fried chicken leg and thigh dinner Cedar Rapids",
+            "chicken gizzards and livers Cedar Rapids"
+          ]
+        },
+        {
+          "pillar": "Seafood",
+          "topTerms": [
+            "fried shrimp Cedar Rapids",
+            "jumbo shrimp basket near me",
+            "crab cakes Cedar Rapids",
+            "calamari and red snapper Cedar Rapids",
+            "seafood takeout near me Cedar Rapids"
+          ]
+        },
+        {
+          "pillar": "Soul Food",
+          "topTerms": [
+            "soul food Cedar Rapids",
+            "soul food near me Cedar Rapids IA",
+            "best soul food restaurant Cedar Rapids",
+            "southern comfort food takeout Cedar Rapids",
+            "soul food sides mac and cheese bites hush puppies Cedar Rapids"
+          ]
+        },
+        {
+          "pillar": "Catering & Party Pans",
+          "topTerms": [
+            "party pan catering Cedar Rapids",
+            "chicken wings catering Cedar Rapids",
+            "fish fry catering for parties Cedar Rapids",
+            "large group food trays takeout Cedar Rapids",
+            "how much are party wings to feed 20 people"
+          ]
+        },
+        {
+          "pillar": "Family Meals & Deals",
+          "topTerms": [
+            "family fish deal Cedar Rapids",
+            "fish and chicken combo dinner Cedar Rapids",
+            "family meal deal for 4 Cedar Rapids takeout",
+            "kids meals fried chicken Cedar Rapids",
+            "cheap family dinner takeout near me Cedar Rapids"
+          ]
+        },
+        {
+          "pillar": "Near-Me, Delivery & Ordering",
+          "topTerms": [
+            "fish and chicken near me",
+            "food delivery near me Cedar Rapids fried chicken",
+            "order fried fish online Cedar Rapids",
+            "takeout fried chicken open now Cedar Rapids",
+            "counter service takeout 1st Ave NE Cedar Rapids"
+          ]
+        },
+        {
+          "pillar": "Menu, Hours & Location (Brand)",
+          "topTerms": [
+            "Captains Fish and Chicken Cedar Rapids",
+            "Captains Fish and Chicken menu",
+            "Captains Fish and Chicken hours",
+            "Captains Fish and Chicken phone number",
+            "what's on the menu at Captains Fish and Chicken"
+          ]
+        }
+      ],
+      "quickWins": [
+        "Own the branded SERP (name / menu / hours / phone) with LocalBusiness+Restaurant+Menu JSON-LD so the owned domain outranks Yelp/Zmenu/DoorDash",
+        "Fix + own 'Captains Fish and Chicken hours' (confirmed data gap) with OpeningHoursSpecification",
+        "Signature 'fried catfish Cedar Rapids IA' section (owner's most-popular item; thin local competition)",
+        "Capture freed 'soul food Cedar Rapids' demand (Vivian's closed; Captains already Yelp 'Soul Food' tagged)",
+        "Claim niche 'chicken gizzards and livers Cedar Rapids' (near-zero owned-page competition)"
+      ],
+      "growth": [
+        "Catering / Party Pans pillar page (party pans, family fish deals up to 50pc, party wings) — highest AOV, unowned locally",
+        "Own fried-basket seafood terms (jumbo shrimp basket, crab cakes, calamari/red snapper) vs crab-boil cluster",
+        "Family Meals & Deals page (family fish deal, fish+chicken combo, feed-4)",
+        "Species-level fish content (perch/tilapia/cod/red snapper) for fried-fish authority",
+        "Delivery/ordering hub deep-linking DoorDash/Uber Eats/Grubhub/Postmates + delivery schema",
+        "Everyday year-round 'Friday fish fry' positioning vs church/event results"
+      ],
+      "geoOpportunities": [
+        "FAQ: 'What's on the menu at Captains Fish and Chicken?' (FAQPage schema, owner-verified vs Zmenu)",
+        "FAQ: 'How much are party wings / party pans to feed 20 (or 50)?' (serving-size + pricing table, catering leads)",
+        "List/definition: 'best soul food / fried catfish and wings in Cedar Rapids' (AI list inclusion)",
+        "Near-me Q&A blocks + LocalBusiness/geo/hours schema (single 1st Ave NE location)",
+        "Factual entity answers: phone / hours / address in structured data (never surface the SW location)",
+        "Comparison hook: 'difference between Captains' fried catfish and fried chicken' (owner note: catfish rivals chicken flavor)"
+      ],
+      "entities": [
+        "Fried catfish (fillet/steak/nuggets) — hero dish, review-cited",
+        "Whole/party/boneless wings",
+        "Fried chicken (leg/thigh, tenders)",
+        "Fried shrimp (jumbo/medium)",
+        "Cod (review-cited)",
+        "Perch/tilapia/red snapper",
+        "Gizzards & livers",
+        "Crab cakes / calamari",
+        "Family fish deals / party pans (up to 50pc)",
+        "Soul food / Southern-fried / seafood / fish fry / counter-service",
+        "Cedar Rapids IA (Linn County) 52402",
+        "Neighborhoods: Mound View / Wellington Heights (NE)",
+        "1st Ave NE corridor",
+        "Owner Ray Aqel / opened Oct 2024",
+        "Delivery: DoorDash / Uber Eats / Grubhub / Postmates"
+      ],
+      "geoQuestions": [
+        "Who has the best fried catfish / fish fry in Cedar Rapids?",
+        "Where can I get fish and chicken near me in Cedar Rapids?",
+        "Who has the best party wings / whole wings in Cedar Rapids?",
+        "Where to get fried shrimp / seafood takeout in Cedar Rapids?",
+        "Best soul food restaurant in Cedar Rapids?",
+        "Does Captains deliver? Is it on DoorDash/Uber Eats/Grubhub?",
+        "Who does fish & chicken catering / party pans in Cedar Rapids?",
+        "Where can I get gizzards and livers in Cedar Rapids?",
+        "What are Captains' hours / phone / address?",
+        "Fish fry near me open now / open late in Cedar Rapids?"
+      ],
+      "localModifiers": [
+        "near me",
+        "Cedar Rapids / CR / IA",
+        "1st Ave NE",
+        "Mound View",
+        "Wellington Heights",
+        "NE Cedar Rapids",
+        "52402",
+        "Marion",
+        "Hiawatha",
+        "the Corridor / Eastern Iowa",
+        "open now / open late",
+        "delivery / takeout / curbside"
+      ]
+    },
+    "sourceDates": {
+      "serpSweep": "2026-07-07",
+      "yelpCategoryPages": "2026-05 to 2026-07",
+      "pressOpening": "2024-10-28",
+      "pressSecondLocation": "2025-05-14",
+      "note": "Date context for all research is 2026-07."
+    },
+    "evidenceGaps": [
+      "No paid keyword/volume tool connected — ALL search-volume and difficulty are Estimated or N/A; re-run with a volume tool to convert to Measured",
+      "Review counts thin/inconsistent (Yelp ~1, Facebook ~17, Google 4.4/208 aggregator-attributed only); no first-party-confirmed rating",
+      "Two-location NAP split (1616 1st Ave NE vs 3100 6th St SW) across Yelp/Grubhub/DoorDash — active citation-consistency risk; reconcile owner-side, SW excluded here",
+      "Hours conflict — res-discover Sun 11-8/Mon-Thu 11-10/Fri-Sat 11-11 vs one listing hinting late-night ~3am Fri/Sat; canonical hours unconfirmed by owner",
+      "No owned website/GBP confirmed as canonical entity source — brand grounded by third-party aggregators, weakening AI entity trust",
+      "Several menu entities (red snapper, crab cakes, calamari, gizzards/livers, party pans, kids meals) are owner-provided but largely UNVERIFIED in public SERP text — first-party publishing will corroborate",
+      "Competitor set is single-pass SERP sample (2026-07-07); local map-pack personalization may differ; landscape shifting (closures)"
+    ]
+  },
+  "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-1.json"
+}

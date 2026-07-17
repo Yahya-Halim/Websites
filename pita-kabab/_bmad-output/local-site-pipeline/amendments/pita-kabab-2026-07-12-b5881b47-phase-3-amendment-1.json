@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 3,
+  "amendment": 1,
+  "actor": "Yahya",
+  "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-reason.md",
+  "reason": "# Phase 3 Amendment 1 — Reason\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nDate: 2026-07-12\nSpecialist: ui-ux-pro-max\n\n## Why\n\nEngagement-owner design direction delivered in chat after the first Phase 4 build\npreview:\n\n1. **Re-palette to green + yellow/gold.** The sealed design used pomegranate red\n   `#DC2626`. The owner directed an olive-green + warm-gold scheme. This also fits\n   a Palestinian Mediterranean restaurant far better (olive, herb, the gold of\n   grilled kabab and baklava) and matches the brand mark generated this session.\n2. **Reduce whitespace / tighten layout.** The red/cream text-only build (pre-imagery)\n   read as too sparse — large empty white stretches between sections and an empty\n   cream hero.\n3. **Brand logo now exists.** Generated via Higgsfield (logo-prompting formula),\n   4 variants, v2 selected — so the previously owner-pending `brand-logo` slot is\n   now filled (owner-confirm/replace still allowed before launch).\n\n## What changed (scope)\n\n- `designSystem.palette` → olive-green `#1B6E3E` primary (white text 6.3:1),\n  gold `#E0A80D` accent used only with dark ink (6.9:1), green-tinted canvas\n  `#F7F9F3`, sage borders. All WCAG AA re-verified.\n- Layout density: full-bleed green hero band, alternating pale-gold/white section\n  bands, gold small-caps eyebrows, section rhythm 32/48 (was 48/80), container\n  padding 20/24, 70rem max-width, 18px card radius.\n- CRO CTA banner recolored green + gold; sticky bar and header CTA green.\n- `assetNeeds.brandLogo` → generated Higgsfield mark (v2), exported to\n  `public/logo.png`, wired to `business.brand.logoFilename`.\n- Image art direction re-toned to the green/gold canvas.\n- `design-tokens.json` and `design-system.md` updated in lockstep; amendment\n  annotated inline in both.\n\n## What did NOT change\n\nidentityDecision fixtures (pitakabab.example / owner@pitakabab.example /\nG-XXXXXXXXXX, paymentAccepted unknown), the six page families, the 46/41 route\ncounts, the omit-never-fabricate truthfulness floor, and all owner-input\ndependencies (value props, lead-form endpoint, prices, halal/craft gating).\n\n## Downstream\n\nPhase 4 was not yet sealed (it was blocked on the 5 conditional-route parity\nissue), so this amendment invalidates no sealed downstream approval or review.\nPhase 4 build will be re-run against the amended tokens.\n",
+  "previousArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+  "previousArtifactHash": "0d5f95542f819c01072026c6f971c774ab4f0fdce89d5b7a59d1913f36f4e45b",
+  "newArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+  "newArtifactHash": "cb33effcbb1d624b667238fd0938d0c8834ee9c734bab214aabf475d16e97a7f",
+  "specialist": "ui-ux-pro-max",
+  "amendedAt": "2026-07-13T02:05:29.783Z",
+  "delegationOverride": {
+    "schemaVersion": 1,
+    "runId": "pita-kabab-2026-07-12-b5881b47",
+    "phase": 3,
+    "role": "builder",
+    "actor": "Yahya",
+    "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+    "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+    "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+    "createdAt": "2026-07-13T02:05:29.783Z",
+    "override": 1,
+    "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-1.json"
+  },
+  "previousRuntimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+      "hash": "9f9e379d9ed3a06e8418b33313db4a85ac7c636ff9d2e653bf0796b5166d347e",
+      "mtimeMs": 1783900061209.5645
+    }
+  },
+  "newRuntimeEvidence": {
+    "designSystem": {
+      "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+      "hash": "607efe55d6887ea0bb0cabc0119019048ed230d908a36848f1c02f50ada35214",
+      "mtimeMs": 1783908282634.7222
+    }
+  }
+}

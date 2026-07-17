@@ -1,0 +1,8 @@
+{
+  "mode": "fixture",
+  "domain": "https://captains-fish-and-chicken.example",
+  "email": "hello@captains-fish-and-chicken.example",
+  "gaId": "G-XXXXXXXXXX",
+  "paymentAccepted": "unknown",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-3\\identity-decision.md"
+}

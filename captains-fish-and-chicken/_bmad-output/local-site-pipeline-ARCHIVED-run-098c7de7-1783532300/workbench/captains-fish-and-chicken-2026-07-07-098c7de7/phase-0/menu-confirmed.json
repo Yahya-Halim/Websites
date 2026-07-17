@@ -1,0 +1,125 @@
+{
+  "provenance": "OWNER-CONFIRMED — supplied by the engagement owner/operator on 2026-07-07 (direct paste of the current menu with prices and descriptions). Authoritative. Supersedes menu-captured.json (aggregator). Prices may ship; Menu JSON-LD permitted.",
+  "confirmedDate": "2026-07-07",
+  "currency": "USD",
+  "mealNote": "Meal items include fries, coleslaw and 1 piece bread. No substitutions.",
+  "categories": [
+    { "name": "Whole Wings", "note": "Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Wings Meal (4 pcs)", "price": "8.99" },
+      { "name": "Wings Meal (6 pcs)", "price": "13.99", "popular": true },
+      { "name": "Wings Meal (10 pcs)", "price": "19.99" },
+      { "name": "Wings Only (20 pcs)", "price": "32.99" },
+      { "name": "Wings Only (30 pcs)", "price": "49.99" },
+      { "name": "Wings Only (50 pcs)", "price": "84.99" },
+      { "name": "Wings Only (100 pcs)", "price": "159.99" }
+    ]},
+    { "name": "Party Wings", "note": "Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Wings Meal (8 pcs)", "price": "14.99" },
+      { "name": "Wings Meal (12 pcs)", "price": "18.99" },
+      { "name": "Wings Only (16 pcs)", "price": "24.99" },
+      { "name": "Wings Only (20 pcs)", "price": "28.99" },
+      { "name": "Chicken Only (30 pcs)", "price": "45.99" },
+      { "name": "Chicken Only (50 pcs)", "price": "79.99" }
+    ]},
+    { "name": "Boneless Chicken Bites", "note": "Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Boneless Wings Meal (8 pcs)", "price": "12.99" },
+      { "name": "Boneless Wings Meal (12 pcs)", "price": "18.99" },
+      { "name": "Boneless Wings Only (20 pcs)", "price": "26.99" },
+      { "name": "Boneless Wings Only (30 pcs)", "price": "49.99" },
+      { "name": "Boneless Wings Only (50 pcs)", "price": "79.99" }
+    ]},
+    { "name": "Chicken Leg and Thigh Mix", "note": "Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Chicken Mix Meal (4 pcs)", "price": "12.99" },
+      { "name": "Chicken Mix Meal (6 pcs)", "price": "15.99", "popular": true },
+      { "name": "Chicken Mix Meal (10 pcs)", "price": "24.99" },
+      { "name": "Chicken Mix Only (20 pcs)", "price": "39.99" },
+      { "name": "Chicken Mix Only (30 pcs)", "price": "59.99" },
+      { "name": "Chicken Mix Only (50 pcs)", "price": "89.99" }
+    ]},
+    { "name": "Chicken Tenders", "note": "Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Tenders Meal (3 pcs)", "price": "12.99", "popular": true },
+      { "name": "Tenders Meal (6 pcs)", "price": "21.99" },
+      { "name": "Tenders Meal (10 pcs)", "price": "34.99" },
+      { "name": "Tenders Only (20 pcs)", "price": "59.99" }
+    ]},
+    { "name": "Shrimp", "note": "Captains breaded. Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Jumbo Shrimp 1/2 Lb (7 pcs)", "price": "15.99" },
+      { "name": "Jumbo Shrimp 1 Lb (14 pcs)", "price": "25.99" },
+      { "name": "Medium Shrimp (1/2 Lb)", "price": "13.99" },
+      { "name": "Medium Shrimp (1 Lb)", "price": "21.99" },
+      { "name": "Shrimp Basket (popcorn shrimp)", "price": "10.99" }
+    ]},
+    { "name": "Gizzards", "note": "Fries, coleslaw and 1 piece bread. No substitutions.", "items": [
+      { "name": "Gizzards (1 Lb)", "price": "13.99", "popular": true },
+      { "name": "Livers (1 Lb)", "price": "13.99" }
+    ]},
+    { "name": "Seafood Meal", "note": "Fries, coleslaw and 1 piece bread. No substitutions. No mix and match.", "items": [
+      { "name": "Catfish Fillet, Perch, Tilapia (2 pcs)", "price": "13.99" },
+      { "name": "Catfish Fillet, Perch, Tilapia (3 pcs)", "price": "16.99" },
+      { "name": "Catfish Fillet, Perch, Tilapia (4 pcs)", "price": "21.99" },
+      { "name": "Catfish Steak Bone In (2 pcs)", "price": "13.99" },
+      { "name": "Catfish Steak Bone In (3 pcs)", "price": "15.99" },
+      { "name": "Catfish Steak Bone In (4 pcs)", "price": "19.99" },
+      { "name": "Catfish Nuggets (1 Lb)", "price": "14.99", "popular": true },
+      { "name": "Cod Fish Wild Caught (2 pcs)", "price": "14.99" },
+      { "name": "Cod Fish Wild Caught (3 pcs)", "price": "19.99" },
+      { "name": "Cod Fish Wild Caught (4 pcs)", "price": "23.99" },
+      { "name": "Crab Cakes Meal (4 pcs)", "price": "14.99" },
+      { "name": "Red Snapper (2 pcs)", "price": "14.99" },
+      { "name": "Red Snapper (3 pcs)", "price": "19.99" },
+      { "name": "Red Snapper (4 pcs)", "price": "23.99" }
+    ]},
+    { "name": "Fish Only Family Deal", "items": [
+      { "name": "Catfish, Perch, Tilapia (10 pcs)", "price": "49.99" },
+      { "name": "Catfish, Perch, Tilapia (20 pcs)", "price": "69.99" },
+      { "name": "Catfish, Perch, Tilapia (30 pcs)", "price": "99.99" },
+      { "name": "Catfish, Perch, Tilapia (40 pcs)", "price": "139.99" },
+      { "name": "Catfish, Perch, Tilapia (50 pcs)", "price": "166.99" },
+      { "name": "Half Pan of Catfish Nuggets", "price": "49.99" },
+      { "name": "Full Pan of Catfish Nuggets", "price": "89.99" }
+    ]},
+    { "name": "Captain's Family Meal Deal", "items": [
+      { "name": "Captain's Family Meal Deal", "price": "59.99", "description": "Large fries, and your choice of two items." }
+    ]},
+    { "name": "Combo Dinners", "items": [
+      { "name": "Your Choice of Two Items", "price": "18.99", "description": "Choose two items from our menu to create a customized combo dinner." },
+      { "name": "Your Choice of Three Items", "price": "21.99", "description": "Mix and match any three menu items, served together as one meal." }
+    ]},
+    { "name": "Side Orders", "items": [
+      { "name": "Hush Puppies (10 pcs)", "price": "6.99", "description": "Crispy, deep-fried cornbread balls." },
+      { "name": "Breaded Mushrooms (10 pcs)", "price": "6.99", "description": "Crispy breaded mushrooms." },
+      { "name": "Mac and Cheese Bites (10 pcs)", "price": "6.99", "description": "Crispy bites filled with macaroni and cheese." },
+      { "name": "Cheese Sticks (5 pcs)", "price": "6.99", "description": "Crispy sticks filled with melted cheese." },
+      { "name": "Cheese Curds", "price": "6.99", "description": "Crispy, melted cheese bits." },
+      { "name": "Pizza Puff", "price": "6.99", "description": "Crispy pastry filled with savory ingredients." },
+      { "name": "Onion Rings (10 pcs)", "price": "6.99", "popular": true, "description": "Crispy onion pieces in a golden batter." },
+      { "name": "Small Fries", "price": "3.99" },
+      { "name": "Large Fries", "price": "6.99" },
+      { "name": "Half Pan of Fries", "price": "16.99" },
+      { "name": "Full Pan of Fries", "price": "27.99" },
+      { "name": "Extra Sauce", "price": "0.50" },
+      { "name": "Gizzards / Livers (side)", "price": "7.99" },
+      { "name": "Wings (1 pc, side)", "price": "2.45" },
+      { "name": "Legs (1 pc, side)", "price": "3.99" },
+      { "name": "Thighs (1 pc, side)", "price": "3.99" },
+      { "name": "Catfish Nuggets (side)", "price": "7.99" }
+    ]},
+    { "name": "Kids Meal", "note": "Served with fries.", "items": [
+      { "name": "Chicken Nuggets (5 pcs)", "price": "6.99", "popular": true },
+      { "name": "Chicken Tenders (2 pcs)", "price": "6.99" },
+      { "name": "Pizza Puff", "price": "6.99" }
+    ]},
+    { "name": "Desserts", "items": [
+      { "name": "Cheesecake", "price": "3.99", "description": "Rich and creamy dessert with a velvety texture." },
+      { "name": "Caramel Cheesecake", "price": "3.99", "description": "Rich and creamy cheesecake with a caramel twist." },
+      { "name": "Carrot Cake", "price": "3.99", "popular": true, "description": "Moist and flavorful cake made with carrots." },
+      { "name": "Caramel Coconut", "price": "3.99", "description": "Rich coconut dessert with caramel flavor." },
+      { "name": "Lemon Cake", "price": "3.99", "description": "Moist and tangy cake with a hint of lemon." }
+    ]},
+    { "name": "Drinks", "items": [
+      { "name": "Water", "price": "0.99" },
+      { "name": "Mystic", "price": "3.99" },
+      { "name": "Calypos", "price": "3.99", "popular": true }
+    ]}
+  ]
+}

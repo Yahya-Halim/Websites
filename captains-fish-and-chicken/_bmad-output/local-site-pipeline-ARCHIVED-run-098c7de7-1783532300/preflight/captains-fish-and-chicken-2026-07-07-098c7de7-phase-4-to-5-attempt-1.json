@@ -1,0 +1,20 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "fromPhase": 4,
+  "toPhase": 5,
+  "attempt": 1,
+  "sourceArtifactHash": "3c44c8bbadcf050194d272e5e95014f773e9200c917501554994a7df980c23d5",
+  "status": "failed",
+  "emittedAt": "2026-07-07T20:12:11.511Z",
+  "checksPassed": [
+    "inputSchema",
+    "briefAlignment",
+    "phaseAdjacency"
+  ],
+  "checksFailed": [
+    "blocking"
+  ],
+  "blockingReasons": [
+    "do-not-ship-guards gate fails on declared identity fixtures (gaId G-XXXXXXXXXX + .example domain/email) per owner deferral; Phase 5 factoryValidate contract requires exitCode 0 — real domain/email/GA4 must be wired and site rebuilt before Phase 5 can seal"
+  ]
+}

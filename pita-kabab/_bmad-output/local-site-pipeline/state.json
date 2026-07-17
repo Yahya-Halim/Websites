@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "briefHash": "9b69ed4957690fe371f3ecd49cc07fb601eb912231d47283e674ca6fc33fe2a4",
+  "brief": {
+    "engagement": "pita-kabab",
+    "business": "Pita Kabab",
+    "businessType": "restaurant",
+    "scope": "single location",
+    "location": {
+      "streetAddress": "3100 6th St SW",
+      "city": "Cedar Rapids",
+      "state": "IA",
+      "postalCode": "52404",
+      "singleLocationInScope": true
+    },
+    "provenance": "Business name and address supplied by the engagement owner (authoritative), 2026-07-12. Cross-engagement seed fact from the Captains Fish and Chicken brief (D:/website/captains-fish-and-chicken/brief.json): 3100 6th St SW was formerly a Captains Fish and Chicken address and is now Pita Kabab under the SAME OWNER; the Captains site carries disambiguation content for this address. Cuisine/service model NOT yet owner-confirmed — name suggests Middle Eastern/Mediterranean kabab restaurant; verify in Phase 0 sweep and owner interview. No domain, email, GA4, phone, hours, menu, or brand assets supplied yet.",
+    "seedFactsOnly": true,
+    "ignorePriorWork": false,
+    "relatedEngagements": [
+      {
+        "engagement": "captains-fish-and-chicken",
+        "relation": "same owner; this address excluded from that scope; disambiguation content live at https://captains-fish-chicken.netlify.app"
+      }
+    ]
+  },
+  "currentPhase": 4,
+  "completedPhases": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "phaseArtifacts": {
+    "0": {
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+      "hash": "53d094d068d264eba0cb4b0a5cf5dd1b015a2ca86944c18bd81b471ad4a0af10",
+      "completedAt": "2026-07-12T21:57:22.797Z",
+      "handoffPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\handoffs\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+      "delegation": {
+        "schemaVersion": 1,
+        "role": "builder",
+        "workerId": "phase-0-builder-fable-5-2026-07-12",
+        "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json",
+        "reportHash": "760771098c1b6db26d8c4910e946b61ae90ca0194fbbffae34a87b5d0c22b269",
+        "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+        "packetHash": "5c2aa3625566ef588065029f5db4e82709cb785a8f039a22d18b2af0ff5917e8",
+        "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-capsule.json",
+        "capsuleHash": "f3de39c16f25b3b80e1a44f9d305b0f8b856ba7dfd4e6d9d67e1d84cee4b6eda",
+        "status": "completed",
+        "commandsRun": [
+          "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 0 --artifact D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json (ok: true, problems: [])",
+          "node -e sha256(phase-0-artifact.json) => 53d094d068d264eba0cb4b0a5cf5dd1b015a2ca86944c18bd81b471ad4a0af10"
+        ],
+        "filesRead": [
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-capsule.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-business-discovery\\SKILL.md",
+          "D:\\website\\pita-kabab\\brief.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\probe-set.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\web-footprint-findings.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\owner-questionnaire.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\discovery-notes.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs (phase 0 contract sections)",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs (inspectArtifact / runtime evidence sections)"
+        ],
+        "filesChanged": [
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\probe-set.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\web-footprint-findings.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\owner-questionnaire.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\discovery-notes.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json"
+        ],
+        "verification": [
+          "inspect-artifact phase 0: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it.' (first and only run; no weaknesses reported)",
+          "Artifact contains all 7 required fields non-null; buildOutputCreated=false; webFootprintFindings.sourcesChecked has 16 entries each with source+status in {found,not-found}; findings/discrepancies/ownerResidueQuestions arrays populated (10/5/17).",
+          "All five packet outputPaths files exist and are filled (probe-set, web-footprint-findings, owner-questionnaire, discovery-notes, phase-0-artifact).",
+          "complete-phase NOT run per dispatch stop condition; Yahya approval gate remains ahead."
+        ],
+        "specialist": "local-business-discovery"
+      }
+    },
+    "1": {
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+      "hash": "23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47",
+      "completedAt": "2026-07-12T23:05:34.148Z",
+      "handoffPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\handoffs\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+      "delegation": {
+        "schemaVersion": 1,
+        "role": "builder",
+        "workerId": "phase-1-builder-subagent-2026-07-12",
+        "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json",
+        "reportHash": "34ae18d22b0d6f3aeba08afe38eb695c280e99633b6e5b45265c28b6940e105b",
+        "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+        "packetHash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9",
+        "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+        "capsuleHash": "02b8a27ccebb0d52a9c7ca65d6c12535b96a91fe702ecc10be7f9b52211fda55",
+        "status": "completed",
+        "commandsRun": [
+          "16x WebSearch (Cedar Rapids mediterranean/halal/shawarma/kabob/gyro/falafel/catering/iftar/competitor-verification/neighborhood/near-me queries, 2026-07-12)",
+          "2x WebFetch (zabihah.com Cedar Rapids subregion page; halalrun.com CR halal list, 2026-07-12)",
+          "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 1 --artifact ...\\phase-1\\phase-1-artifact.json",
+          "node -e sha256(phase-1-artifact.json)"
+        ],
+        "filesRead": [
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\seo-geo\\research\\keyword-research\\SKILL.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+        ],
+        "filesChanged": [
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-notes.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+        ],
+        "verification": [
+          "inspect-artifact run 2026-07-12: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it' (clean on first pass).",
+          "All five required artifact fields (researchSources, competitorNotes, keywordEntityFindings, sourceDates, evidenceGaps) populated; 26 researchSources entries each carry retrievedAt=2026-07-12; 14 competitor notes with per-claim basis; 11 evidence gaps recorded honestly with unblock paths.",
+          "Truthfulness floor spot-check: no numeric search volumes, difficulties, or CPCs appear anywhere in the artifact; every keyword row carries volume: N/A and a stated observation basis.",
+          "Artifact references the Phase 0 owner questionnaire for owner-gated claims (ownerChecklistReference field)."
+        ],
+        "specialist": "keyword-research"
+      }
+    },
+    "2": {
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+      "hash": "519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6",
+      "completedAt": "2026-07-12T23:29:02.721Z",
+      "handoffPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\handoffs\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+      "delegation": {
+        "schemaVersion": 1,
+        "role": "builder",
+        "workerId": "phase-2-builder-fable-5-2026-07-12",
+        "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json",
+        "reportHash": "291300a494d596a98363ae4a65f1fc74f8b67a18386c4905bbb1861d498a5c6c",
+        "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+        "packetHash": "083aebeda84c8c6a540acbb00bf847ec092a7efa23f15a2c11c6054a9c6e2f2c",
+        "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-capsule.json",
+        "capsuleHash": "56b40b92f173d2bffbef6f759b0299ba10ed223092213902fa8aaacf2a0040ce",
+        "status": "completed",
+        "commandsRun": [
+          "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 2 --artifact D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json (ok: true, problems: [])",
+          "node -e sha256(phase-2-artifact.json) => 519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6"
+        ],
+        "filesRead": [
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-capsule.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\location-matrix-planner\\SKILL.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\artifacts\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\artifacts\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+          "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\schemas\\archetypes\\restaurant.ts",
+          "D:\\plugin\\localevolve-factory\\packages\\engine\\templates\\archetypes\\restaurant\\src\\content.config.ts.tpl",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs (phase 2 contract sections)",
+          "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs (inspectArtifact / phase-4 route-match sections)",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json"
+        ],
+        "filesChanged": [
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\page-matrix-plan.md",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+          "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json"
+        ],
+        "verification": [
+          "inspect-artifact phase 2: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it.' (clean on first run).",
+          "All six required artifact fields non-null: pageMatrix (46 internal page entries, all path-based, zero external links), pageMatrixStrategy (named model 'Restaurant Page-Family Matrix v1' + 6 page families), foldedPages (13 entries with named reasons), requiredCroBlocks (mirrors cro-contract with owner-input dependencies flagged), imageSlotPlan (32 slots, representational-only constraints), minimumPageCountRationale (46 planned, 41-page floor with all conditionals dropped, 25-500 gate satisfied).",
+          "Every pageMatrix entry maps to an engine restaurant-archetype route kind (home / menu-hub / menu-category / occasion / root-landing / neighborhood / contact) verified against packages/engine/templates/archetypes/restaurant; route count equals data entries (7 menu + 10 occasions + 18 landings + 8 neighborhoods + 3 fixed); reserved root slugs (menu, contact, occasions, neighborhoods) avoided.",
+          "Evidence discipline: every page's evidenceBasis cites sealed Phase 0/1 findings; 5 pages flagged conditional on owner confirmation (4 halal-gated + 1 craft-claim-gated); near-me/neighborhood family conservatively sized at 8 because local-pack was never observed; no fabricated claims, prices, or local facts appear in any brief.",
+          "Artifact references the Yahya/founder checklist (ownerChecklistReference -> phase-0 owner-questionnaire.md) and the post-seal gates (Yahya approval + page-matrix-depth review).",
+          "complete-phase NOT run per dispatch stop condition."
+        ],
+        "specialist": "location-matrix-planner"
+      }
+    },
+    "3": {
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+      "hash": "f0336ed10576443b4e41f797181abd9e085bdb33568b00c8b20a84bf0be78c54",
+      "completedAt": "2026-07-12T23:51:22.128Z",
+      "amendedAt": "2026-07-13T04:20:41.009Z",
+      "delegationOverride": {
+        "schemaVersion": 1,
+        "runId": "pita-kabab-2026-07-12-b5881b47",
+        "phase": 3,
+        "role": "builder",
+        "actor": "Yahya",
+        "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+        "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+        "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+        "createdAt": "2026-07-13T04:20:41.009Z",
+        "override": 2,
+        "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+      }
+    }
+  },
+  "phaseSpecialists": {
+    "0": "local-business-discovery",
+    "1": "keyword-research",
+    "2": "location-matrix-planner",
+    "3": "ui-ux-pro-max"
+  },
+  "phaseWorkers": {
+    "0": {
+      "workerId": "phase-0-builder-fable-5-2026-07-12",
+      "specialist": "local-business-discovery",
+      "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json",
+      "reportHash": "760771098c1b6db26d8c4910e946b61ae90ca0194fbbffae34a87b5d0c22b269"
+    },
+    "1": {
+      "workerId": "phase-1-builder-subagent-2026-07-12",
+      "specialist": "keyword-research",
+      "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json",
+      "reportHash": "34ae18d22b0d6f3aeba08afe38eb695c280e99633b6e5b45265c28b6940e105b"
+    },
+    "2": {
+      "workerId": "phase-2-builder-fable-5-2026-07-12",
+      "specialist": "location-matrix-planner",
+      "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json",
+      "reportHash": "291300a494d596a98363ae4a65f1fc74f8b67a18386c4905bbb1861d498a5c6c"
+    },
+    "3": {
+      "workerId": null,
+      "specialist": "ui-ux-pro-max",
+      "delegationOverride": {
+        "schemaVersion": 1,
+        "runId": "pita-kabab-2026-07-12-b5881b47",
+        "phase": 3,
+        "role": "builder",
+        "actor": "Yahya",
+        "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+        "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+        "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+        "createdAt": "2026-07-13T04:20:41.009Z",
+        "override": 2,
+        "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+      }
+    }
+  },
+  "pendingRegenerations": {},
+  "startedAt": "2026-07-12T21:43:53.036Z",
+  "updatedAt": "2026-07-13T04:20:49.362Z",
+  "overrides": [],
+  "delegationOverrides": [
+    {
+      "schemaVersion": 1,
+      "runId": "pita-kabab-2026-07-12-b5881b47",
+      "phase": 3,
+      "role": "builder",
+      "actor": "Yahya",
+      "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+      "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+      "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+      "createdAt": "2026-07-13T02:05:29.783Z",
+      "override": 1,
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-1.json"
+    },
+    {
+      "schemaVersion": 1,
+      "runId": "pita-kabab-2026-07-12-b5881b47",
+      "phase": 3,
+      "role": "builder",
+      "actor": "Yahya",
+      "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+      "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+      "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+      "createdAt": "2026-07-13T04:20:41.009Z",
+      "override": 2,
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+    }
+  ],
+  "amendments": [
+    {
+      "schemaVersion": 1,
+      "runId": "pita-kabab-2026-07-12-b5881b47",
+      "phase": 3,
+      "amendment": 1,
+      "actor": "Yahya",
+      "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-reason.md",
+      "reason": "# Phase 3 Amendment 1 — Reason\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nDate: 2026-07-12\nSpecialist: ui-ux-pro-max\n\n## Why\n\nEngagement-owner design direction delivered in chat after the first Phase 4 build\npreview:\n\n1. **Re-palette to green + yellow/gold.** The sealed design used pomegranate red\n   `#DC2626`. The owner directed an olive-green + warm-gold scheme. This also fits\n   a Palestinian Mediterranean restaurant far better (olive, herb, the gold of\n   grilled kabab and baklava) and matches the brand mark generated this session.\n2. **Reduce whitespace / tighten layout.** The red/cream text-only build (pre-imagery)\n   read as too sparse — large empty white stretches between sections and an empty\n   cream hero.\n3. **Brand logo now exists.** Generated via Higgsfield (logo-prompting formula),\n   4 variants, v2 selected — so the previously owner-pending `brand-logo` slot is\n   now filled (owner-confirm/replace still allowed before launch).\n\n## What changed (scope)\n\n- `designSystem.palette` → olive-green `#1B6E3E` primary (white text 6.3:1),\n  gold `#E0A80D` accent used only with dark ink (6.9:1), green-tinted canvas\n  `#F7F9F3`, sage borders. All WCAG AA re-verified.\n- Layout density: full-bleed green hero band, alternating pale-gold/white section\n  bands, gold small-caps eyebrows, section rhythm 32/48 (was 48/80), container\n  padding 20/24, 70rem max-width, 18px card radius.\n- CRO CTA banner recolored green + gold; sticky bar and header CTA green.\n- `assetNeeds.brandLogo` → generated Higgsfield mark (v2), exported to\n  `public/logo.png`, wired to `business.brand.logoFilename`.\n- Image art direction re-toned to the green/gold canvas.\n- `design-tokens.json` and `design-system.md` updated in lockstep; amendment\n  annotated inline in both.\n\n## What did NOT change\n\nidentityDecision fixtures (pitakabab.example / owner@pitakabab.example /\nG-XXXXXXXXXX, paymentAccepted unknown), the six page families, the 46/41 route\ncounts, the omit-never-fabricate truthfulness floor, and all owner-input\ndependencies (value props, lead-form endpoint, prices, halal/craft gating).\n\n## Downstream\n\nPhase 4 was not yet sealed (it was blocked on the 5 conditional-route parity\nissue), so this amendment invalidates no sealed downstream approval or review.\nPhase 4 build will be re-run against the amended tokens.\n",
+      "previousArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+      "previousArtifactHash": "0d5f95542f819c01072026c6f971c774ab4f0fdce89d5b7a59d1913f36f4e45b",
+      "newArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+      "newArtifactHash": "cb33effcbb1d624b667238fd0938d0c8834ee9c734bab214aabf475d16e97a7f",
+      "specialist": "ui-ux-pro-max",
+      "amendedAt": "2026-07-13T02:05:29.783Z",
+      "delegationOverride": {
+        "schemaVersion": 1,
+        "runId": "pita-kabab-2026-07-12-b5881b47",
+        "phase": 3,
+        "role": "builder",
+        "actor": "Yahya",
+        "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+        "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+        "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+        "createdAt": "2026-07-13T02:05:29.783Z",
+        "override": 1,
+        "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-1.json"
+      },
+      "previousRuntimeEvidence": {
+        "designSystem": {
+          "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+          "hash": "9f9e379d9ed3a06e8418b33313db4a85ac7c636ff9d2e653bf0796b5166d347e",
+          "mtimeMs": 1783900061209.5645
+        }
+      },
+      "newRuntimeEvidence": {
+        "designSystem": {
+          "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+          "hash": "607efe55d6887ea0bb0cabc0119019048ed230d908a36848f1c02f50ada35214",
+          "mtimeMs": 1783908282634.7222
+        }
+      },
+      "invalidatedPhases": [],
+      "handoffPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\handoffs\\pita-kabab-2026-07-12-b5881b47\\phase-3-amendment-1.json"
+    },
+    {
+      "schemaVersion": 1,
+      "runId": "pita-kabab-2026-07-12-b5881b47",
+      "phase": 3,
+      "amendment": 2,
+      "actor": "Yahya",
+      "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-2-reason.md",
+      "reason": "# Phase 3 Amendment 2 — Reason\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nDate: 2026-07-12\nSpecialist: ui-ux-pro-max\n\n## Why\n\nEngagement-owner direction: make the site feel **more professional and based on\nthe food region and cultures** (specifically Palestinian/Levantine, not generic\n\"Middle Eastern\").\n\n## Process\n\nRan a design-direction workflow: 5 independent directions (Levantine editorial,\nTatreez modern, Old Jerusalem stone & arch, Contemporary Mediterranean bistro,\nLevantine souk warmth) → a design judge + a cultural-authenticity/truthfulness\nguard → one synthesized implementation spec. Winner: **Tatreez modern**\n(authenticity 9, brand-fit 9), grafting the Levantine-editorial typography and\nparchment stock. Every guard fix folded in.\n\n## What changed (scope)\n\n- **Typography:** Fraunces (editorial serif display) + IBM Plex Sans (body) +\n  IBM Plex Mono (tracked eyebrows) + IBM Plex Sans Arabic (draft/gated).\n  Retires Fredoka + Nunito. Google Fonts css2 URL validated 200.\n- **Palette additions:** --color-forest #0F2A1E (headings, footer, hero hem),\n  --color-parchment #F4EEE0 (menu-stock bands, replaces pale-gold),\n  --color-linen #F1ECDE, --color-stitch #2F6B43 (tatreez on light). Green + gold\n  + green canvas kept. Madder/sumac red DEFERRED (owner-gated).\n- **Motif:** Palestinian tatreez (najmet Beit Lahm star + saw-tooth), inline SVG\n  component. Gold-on-forest saw-hems (hero, CTA banner, footer top); olive star\n  dividers + h2 ticks + eyebrow bullets on light. Structural, aria-hidden.\n- **Copy:** \"a Palestinian kitchen in Cedar Rapids\", \"Palestinian kitchen ·\n  Cedar Rapids\" tag, warmer section headings — all owner-sourced/truthful.\n- **Menu:** printed-carte rows (Fraunces dish names, italic descriptors, hairline\n  rules, tabular prices). Per-item photos kept (owner requested them).\n- **Footer:** project-shadow Footer for readable light text on forest (the engine\n  Footer's scoped #6b6b6b/#222 fail on the dark ground).\n\n## Guard gates honored\n\n- Arabic (ahlan wa sahlan anchor + Naskh dish names) ships HIDDEN behind\n  `enableArabic=false` until owner Ray Aqel verifies script/diacritics.\n- Owner menu spellings frozen verbatim (foul, mfatakeh, kalaya, kabab/kabob,\n  \"Mediterranean Delight\").\n- Madder/sumac red dropped (green+red+white flag-palette risk + 2.28:1 on forest).\n- No fabricated tenure/awards/family-story; only owner-published claims shipped.\n\n## What did NOT change\n\nidentityDecision fixtures, page families, route count (41 built / 46 planned),\nomit-never-fabricate truthfulness floor, CRO slots, and the green+gold + kabab\nlogo identity.\n\n## Downstream\n\nPhase 4 remains unsealed (still blocked on the 5 conditional routes + Phase 5\nidentity fixtures); this amendment invalidates no sealed downstream approval.\nPhase 4 build already rebuilt against the amended tokens (41 routes, exit 0).\n",
+      "previousArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+      "previousArtifactHash": "cb33effcbb1d624b667238fd0938d0c8834ee9c734bab214aabf475d16e97a7f",
+      "newArtifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+      "newArtifactHash": "f0336ed10576443b4e41f797181abd9e085bdb33568b00c8b20a84bf0be78c54",
+      "specialist": "ui-ux-pro-max",
+      "amendedAt": "2026-07-13T04:20:41.009Z",
+      "delegationOverride": {
+        "schemaVersion": 1,
+        "runId": "pita-kabab-2026-07-12-b5881b47",
+        "phase": 3,
+        "role": "builder",
+        "actor": "Yahya",
+        "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+        "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+        "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+        "createdAt": "2026-07-13T04:20:41.009Z",
+        "override": 2,
+        "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+      },
+      "previousRuntimeEvidence": {
+        "designSystem": {
+          "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+          "hash": "607efe55d6887ea0bb0cabc0119019048ed230d908a36848f1c02f50ada35214",
+          "mtimeMs": 1783908282634.7222
+        }
+      },
+      "newRuntimeEvidence": {
+        "designSystem": {
+          "path": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md",
+          "hash": "8e58adbb186c4103a228b343cb73349205a1f99ae0d54d3145bda915dd88c6ac",
+          "mtimeMs": 1783916399006.1475
+        }
+      },
+      "invalidatedPhases": [],
+      "handoffPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\handoffs\\pita-kabab-2026-07-12-b5881b47\\phase-3-amendment-2.json"
+    }
+  ]
+}

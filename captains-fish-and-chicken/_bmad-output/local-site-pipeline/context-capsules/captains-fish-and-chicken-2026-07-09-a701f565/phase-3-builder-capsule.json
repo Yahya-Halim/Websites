@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 3,
+  "specialist": "ui-ux-pro-max",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3.json",
+  "packetHash": "9960600e85b30a1e3e5865e4ab825ee65f9ae5ad10e062c13fc4c2ca8b8dd687",
+  "mission": "Produce the Phase 3 artifact using the prepared workbench and sealed inputs only.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3.json",
+      "hash": "9960600e85b30a1e3e5865e4ab825ee65f9ae5ad10e062c13fc4c2ca8b8dd687"
+    },
+    {
+      "kind": "specialist-skill",
+      "path": "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-system.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identityDecision.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identity-decision.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-tokens.json"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\figma-handoff.md"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed drafts from other phases",
+    "Direct edits to workflow state files"
+  ],
+  "requiredOutputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+    "requiredArtifactFields": [
+      "designSystem",
+      "designContentBuildPlan",
+      "selectedArchitecture",
+      "assetNeeds",
+      "identityDecision"
+    ]
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": []
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3-builder-report.json",
+    "requiredRole": "builder",
+    "requiredStatus": "completed"
+  }
+}

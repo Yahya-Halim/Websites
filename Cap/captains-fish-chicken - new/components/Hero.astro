@@ -1,0 +1,105 @@
+---
+/**
+ * Hero — the above-the-fold headline + dual-CTA band (cro-gates Task 4).
+ *
+ * Renders ONE `<h1>` (the heading), an optional subheading, the dual CTA (via
+ * the CtaBar component, surface="hero"), an optional value-prop strip (via the
+ * ValueProps component — NEVER an inline unmarked strip), and an optional hero
+ * image (with `loading`/`fetchpriority` + a WebP/AVIF `<source>`).
+ *
+ * KG7: heading absent → renders NOTHING (no throw, no marker). When it renders,
+ * the root carries `data-cro-block="hero"`. Value props, when present, are
+ * emitted BY ValueProps so the strip carries `data-cro-block="value-props"`.
+ */
+import CtaBar from '@engine/components/CtaBar.astro';
+import ValueProps from '@engine/components/ValueProps.astro';
+
+interface CtaLink {
+  text: string;
+  href: string;
+}
+
+interface ValuePropItem {
+  label: string;
+  sublabel?: string;
+}
+
+interface HeroImage {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  /** Modern-format source (WebP/AVIF) offered via <picture>. */
+  modernSrc?: string;
+  modernType?: string;
+}
+
+interface Props {
+  /** H1 text. Absent → the whole component renders nothing. */
+  heading?: string;
+  subheading?: string;
+  ctaPrimary?: CtaLink;
+  ctaSecondary?: CtaLink;
+  /** The `site.valueProps` array (exactly 3 when present). */
+  valueProps?: ValuePropItem[];
+  image?: HeroImage;
+}
+
+const { heading, subheading, ctaPrimary, ctaSecondary, valueProps, image } = Astro.props;
+const hasHeading = Boolean(heading && heading.trim().length > 0);
+const modernType = image?.modernType ?? 'image/webp';
+---
+
+{hasHeading && (
+  <section class="hero" data-cro-block="hero">
+    {image && (
+      <picture class="hero-image">
+        {image.modernSrc && <source srcset={image.modernSrc} type={modernType} />}
+        <img
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
+    )}
+    <div class="hero-copy">
+      <h1>{heading}</h1>
+      {subheading && <p class="hero-subheading">{subheading}</p>}
+      <CtaBar surface="hero" ctaPrimary={ctaPrimary} ctaSecondary={ctaSecondary} />
+    </div>
+    {valueProps && valueProps.length > 0 && <ValueProps items={valueProps} />}
+  </section>
+)}
+
+<style>
+  .hero {
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+  .hero-copy {
+    max-width: 44rem;
+    margin: 0 auto;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+  }
+  .hero-subheading {
+    font-size: 1.25rem;
+    color: #444;
+    margin: 0 0 1.5rem;
+  }
+  .hero .cta-bar {
+    justify-content: center;
+  }
+</style>

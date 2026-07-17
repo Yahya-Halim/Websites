@@ -1,0 +1,91 @@
+{
+  "kind": "occasions",
+  "slug": "game-day-wings",
+  "title": "Game Day Wings in Cedar Rapids | Captains Fish and Chicken",
+  "headline": "Party Wings and Crispy Tenders for Every Game Day",
+  "body": "Game day in Cedar Rapids hits different with a hot box of wings on the table. At Captains Fish and Chicken on 1st Avenue NE, our party wings are fried fresh to order and built for the couch crowd, so you get that shattering crunch instead of soggy delivery wings that showed up cold. Feeding a full watch party? Stack party wings with whole wings, throw in some boneless chicken bites for the folks who want it easy, and load up on sides like fries so nobody's left snacking on air at halftime. It's the kind of spread that keeps the room loud for all four quarters. We fry to order, so plan your kickoff and call (319) 221-1040 to lock in a pickup time, or send it straight to your door through DoorDash, Uber Eats, or Grubhub. Captains opened in 2024 under owner Ray Aqel and is rated 4.4 on Google, with a simple promise behind every basket: fish, chicken and seafood made fresh to order. Whether it's a two-person matchup or a house full of fans in Northeast Cedar Rapids or Marion, we've got the wings to carry the game.",
+  "featuredItems": [
+    {
+      "sectionSlug": "party-wings",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "whole-wings",
+      "itemIndex": 2
+    },
+    {
+      "sectionSlug": "boneless-chicken-bites",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "chicken-tenders",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "sides",
+      "itemIndex": 0
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many wings should I order for a watch party?",
+      "answer": "A good rule of thumb is 6 to 8 wings per person for a group that's making wings the main event, or 4 to 5 if you're also serving tenders and sides. For a crowd of eight to ten, ordering party wings plus a 10pc whole wings meal keeps everyone fed. Call (319) 221-1040 and we'll help you size it."
+    },
+    {
+      "question": "How do I order wings for game day?",
+      "answer": "Call (319) 221-1040 and order ahead so we can time your wings to your kickoff. Everything is fried fresh to order, so a heads-up call means hot wings ready right when you need them at 1616 1st Ave NE."
+    },
+    {
+      "question": "Can you deliver wings to my party?",
+      "answer": "Yes. We're on DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your app and order for delivery. Each app sets its own delivery times and fees."
+    },
+    {
+      "question": "Do you have boneless options for the group?",
+      "answer": "We do. Our boneless chicken bites and chicken tenders are great for guests who'd rather skip the bone, and they round out a wing spread nicely."
+    },
+    {
+      "question": "Should I call ahead for a large wing order?",
+      "answer": "Yes. For a big game-day order, calling (319) 221-1040 ahead of time lets the kitchen fry everything fresh and have it bagged hot at your pickup time instead of during the rush."
+    }
+  ],
+  "crossLinks": [
+    {
+      "slug": "/menu/party-wings/",
+      "anchor": "party wings",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/whole-wings/",
+      "anchor": "whole wings",
+      "context": "inline"
+    },
+    {
+      "slug": "/party-wings-cedar-rapids/",
+      "anchor": "party wings in Cedar Rapids",
+      "context": "related"
+    },
+    {
+      "slug": "/menu/boneless-chicken-bites/",
+      "anchor": "boneless chicken bites",
+      "context": "related"
+    },
+    {
+      "slug": "/occasions/office-and-party-catering/",
+      "anchor": "catering for bigger parties",
+      "context": "related"
+    }
+  ],
+  "heroAltText": "A game-day spread of crispy party wings, boneless bites, and fries from Captains Fish and Chicken in Cedar Rapids",
+  "schemaTypes": [
+    "WebPage",
+    "FAQPage"
+  ],
+  "seo": {
+    "title": "Game Day Wings in Cedar Rapids | Captains Fish and Chicken",
+    "description": "Fresh-fried party wings and tenders for game day in Cedar Rapids. Order ahead for pickup at (319) 221-1040 or get delivery via DoorDash, Uber Eats, Grubhub.",
+    "canonical": "https://captains-fish-and-chicken.example/occasions/game-day-wings/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "Phase 4 sealed occasions.json authored from owner-confirmed offerings"
+}

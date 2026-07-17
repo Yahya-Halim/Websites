@@ -1,0 +1,35 @@
+{
+  "kind": "menu",
+  "slug": "gizzards-and-livers",
+  "name": "Gizzards & Livers",
+  "order": 8,
+  "description": "Soul-food classics fried to order. Meals include fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Gizzards (1 lb)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "name": "Livers (1 lb)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 13.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Fried Gizzards & Livers — Cedar Rapids Soul Food | Captains",
+    "description": "Southern-style fried chicken gizzards and livers by the pound, with fries, coleslaw, and bread, at Captains in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/gizzards-and-livers/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

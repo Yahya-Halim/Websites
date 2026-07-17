@@ -1,0 +1,129 @@
+{
+  "id": "site",
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Menu",
+      "href": "/menu/"
+    },
+    {
+      "label": "Catering",
+      "href": "/occasions/office-and-party-catering/"
+    },
+    {
+      "label": "Fried Catfish",
+      "href": "/fried-catfish-cedar-rapids/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact/"
+    }
+  ],
+  "footer": {
+    "links": [
+      {
+        "label": "Full Menu",
+        "href": "/menu/"
+      },
+      {
+        "label": "Fried Catfish",
+        "href": "/fried-catfish-cedar-rapids/"
+      },
+      {
+        "label": "Fried Chicken & Wings",
+        "href": "/fried-chicken-and-wings-cedar-rapids/"
+      },
+      {
+        "label": "Party Wings",
+        "href": "/party-wings-cedar-rapids/"
+      },
+      {
+        "label": "Seafood Takeout",
+        "href": "/seafood-takeout-cedar-rapids/"
+      },
+      {
+        "label": "Soul Food",
+        "href": "/soul-food-cedar-rapids/"
+      },
+      {
+        "label": "Catering & Party Pans",
+        "href": "/occasions/office-and-party-catering/"
+      },
+      {
+        "label": "How to Order",
+        "href": "/how-to-order/"
+      },
+      {
+        "label": "FAQ",
+        "href": "/faq/"
+      },
+      {
+        "label": "Contact & Directions",
+        "href": "/contact/"
+      },
+      {
+        "label": "Fish & Chicken Near Me",
+        "href": "/fish-and-chicken-near-me/"
+      },
+      {
+        "label": "Quick Lunch Takeout",
+        "href": "/occasions/quick-lunch-takeout/"
+      },
+      {
+        "label": "NE Cedar Rapids",
+        "href": "/neighborhoods/northeast-cedar-rapids/"
+      },
+      {
+        "label": "Marion, IA",
+        "href": "/neighborhoods/marion-ia/"
+      },
+      {
+        "label": "Catering Cedar Rapids",
+        "href": "/catering-cedar-rapids/"
+      },
+      {
+        "label": "Open Late",
+        "href": "/open-late-cedar-rapids/"
+      },
+      {
+        "label": "Our Location",
+        "href": "/location/"
+      }
+    ],
+    "copyrightText": "© Captains Fish and Chicken"
+  },
+  "schemaMap": {},
+  "cta": {
+    "text": "Call to Order (319) 221-1040",
+    "href": "tel:+13192211040"
+  },
+  "ctaPrimary": {
+    "text": "Call to Order (319) 221-1040",
+    "href": "tel:+13192211040"
+  },
+  "valueProps": [
+    {
+      "label": "Made Fresh to Order",
+      "sublabel": "Every order fried when you place it"
+    },
+    {
+      "label": "Family Deals up to 50 pc",
+      "sublabel": "Fish family deals & party pans"
+    },
+    {
+      "label": "4.4 stars on Google",
+      "sublabel": "Rated by Cedar Rapids diners on Google"
+    }
+  ],
+  "ctaBanner": {
+    "headline": "Call ahead — everything is fried fresh to order.",
+    "sublabel": "(319) 221-1040 · 1616 1st Ave NE, Cedar Rapids"
+  }
+}

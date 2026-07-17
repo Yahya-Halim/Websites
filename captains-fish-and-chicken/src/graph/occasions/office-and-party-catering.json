@@ -1,0 +1,104 @@
+{
+  "kind": "occasions",
+  "slug": "office-and-party-catering",
+  "title": "Office and Party Catering in Cedar Rapids | Captains Fish and Chicken",
+  "headline": "Fish Family Deals, Party Wings, and Pans to Feed the Whole Room",
+  "body": "Catering a Cedar Rapids office lunch, a birthday, or a full-blown party? Captains Fish and Chicken on 1st Avenue NE feeds a crowd without cutting corners. Our fish family deals scale from a 10-piece all the way up to a 50-piece, so whether it's a small team meeting or a packed backyard, there's a size that fits. Add party wings by the batch, drop in a couple of nugget pans, and round it out with big sides, and you've got a spread that keeps a room full of people happy. Everything is fried fresh to order, which means it arrives crisp and hot, not sitting in steam. Owner Ray Aqel built Captains in 2024 on one idea, and it holds up at scale: fish, chicken and seafood made fresh to order, rated 4.4 on Google. Because larger orders take real kitchen time, always call ahead at (319) 221-1040 so we can prep your catering fresh and have it ready at your pickup time. Prefer delivery for smaller catering orders? We're on DoorDash, Uber Eats, and Grubhub. Serving Northeast Cedar Rapids, Marion, and everywhere in between, we make big-group ordering simple.",
+  "featuredItems": [
+    {
+      "sectionSlug": "fish-family-deals",
+      "itemIndex": 4
+    },
+    {
+      "sectionSlug": "fish-family-deals",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "fish-family-deals",
+      "itemIndex": 5
+    },
+    {
+      "sectionSlug": "party-wings",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "family-meals-and-combos",
+      "itemIndex": 2
+    },
+    {
+      "sectionSlug": "sides",
+      "itemIndex": 0
+    }
+  ],
+  "faqs": [
+    {
+      "question": "How many people does a 50-piece fish family deal feed?",
+      "answer": "A 50-piece fish family deal generally serves around 15 to 20 people as a main dish, especially when paired with sides. For a smaller group of six to eight, the 10-piece fish family deal is a better fit. Call (319) 221-1040 and tell us your headcount and we'll recommend the right size."
+    },
+    {
+      "question": "What should I order to cater an office lunch for 20?",
+      "answer": "For about 20 people, a 50-piece fish family deal plus a batch or two of party wings and a couple of large sides usually does it. If some of your group prefers chicken, add a three-item family combo. Call (319) 221-1040 and we'll build the order to your headcount."
+    },
+    {
+      "question": "How far in advance should I call for catering?",
+      "answer": "For large catering orders, please call (319) 221-1040 as early as you can, at minimum several hours ahead and more for very big orders. Since everything is fried fresh to order, advance notice lets us prep it fresh and have it ready at your scheduled pickup time at 1616 1st Ave NE."
+    },
+    {
+      "question": "How do I order catering, by phone or app?",
+      "answer": "For catering, call (319) 221-1040 directly. Phone ordering lets us confirm quantities, timing, and pickup for large orders. Smaller catering orders can also be placed for delivery through DoorDash, Uber Eats, or Grubhub."
+    },
+    {
+      "question": "Can catering be delivered?",
+      "answer": "Smaller catering orders can be delivered through DoorDash, Uber Eats, and Grubhub, subject to each app's size limits and fees. For the largest fish family deals and pans, pickup at 1616 1st Ave NE is the most reliable option, and calling ahead ensures it's ready and fresh."
+    },
+    {
+      "question": "Do you offer pans for parties?",
+      "answer": "Yes. Our nugget pans and fish family deals are made for feeding groups, and party wings can be added by the batch. Call (319) 221-1040 to combine pans, wings, and sides into one catering order sized to your party."
+    }
+  ],
+  "crossLinks": [
+    {
+      "slug": "/menu/fish-family-deals/",
+      "anchor": "fish family deals",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/party-wings/",
+      "anchor": "party wings",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/family-meals-and-combos/",
+      "anchor": "family meals and combos",
+      "context": "related"
+    },
+    {
+      "slug": "/how-to-order/",
+      "anchor": "how to order",
+      "context": "related"
+    },
+    {
+      "slug": "/contact/",
+      "anchor": "contact us",
+      "context": "related"
+    },
+    {
+      "slug": "/menu/sides/",
+      "anchor": "sides for the group",
+      "context": "related"
+    }
+  ],
+  "heroAltText": "A large catering spread of fish family deals, party wings, and pans from Captains Fish and Chicken in Cedar Rapids",
+  "schemaTypes": [
+    "WebPage",
+    "FAQPage"
+  ],
+  "seo": {
+    "title": "Office and Party Catering in Cedar Rapids | Captains Fish and Chicken",
+    "description": "Cater your Cedar Rapids office lunch or party with fish family deals up to 50pc, party wings, and pans. Call (319) 221-1040 to order ahead and size your order.",
+    "canonical": "https://captains-fish-and-chicken.example/occasions/office-and-party-catering/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "Phase 4 sealed occasions.json authored from owner-confirmed offerings"
+}

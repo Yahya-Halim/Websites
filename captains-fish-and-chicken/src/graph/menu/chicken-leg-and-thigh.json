@@ -1,0 +1,71 @@
+{
+  "kind": "menu",
+  "slug": "chicken-leg-and-thigh",
+  "name": "Chicken Leg & Thigh Mix",
+  "order": 5,
+  "description": "Bone-in dark-meat fried chicken. Meals include fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Chicken Mix Meal (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 12.99
+        }
+      ]
+    },
+    {
+      "name": "Chicken Mix Meal (6 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 15.99
+        }
+      ]
+    },
+    {
+      "name": "Chicken Mix Meal (10 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 24.99
+        }
+      ]
+    },
+    {
+      "name": "Chicken Mix Only (20 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 39.99
+        }
+      ]
+    },
+    {
+      "name": "Chicken Mix Only (30 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 59.99
+        }
+      ]
+    },
+    {
+      "name": "Chicken Mix Only (50 pcs)",
+      "prices": [
+        {
+          "label": "Only",
+          "price": 89.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Fried Chicken Leg & Thigh Mix | Captains Cedar Rapids",
+    "description": "Bone-in dark-meat fried chicken dinners and bulk counts in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/chicken-leg-and-thigh/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

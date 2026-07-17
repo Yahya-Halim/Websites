@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-kids-meals",
+  "question": "How much do Kids Meals cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/kids-meals.json",
+  "lastVerified": "2026-07-07"
+}

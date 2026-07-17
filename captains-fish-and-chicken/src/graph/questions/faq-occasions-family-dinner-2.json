@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-family-dinner-2",
+  "question": "Can I get family dinner delivered?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

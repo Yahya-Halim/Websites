@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 0,
+  "phaseName": "DISCOVER",
+  "createdAt": "2026-07-12T21:44:10.455Z",
+  "specialist": "local-business-discovery",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-business-discovery\\SKILL.md",
+  "requiredArtifactFields": [
+    "interviewSummary",
+    "webFootprintFindings",
+    "businessIdentity",
+    "userConfirmedFacts",
+    "unverifiedClaims",
+    "missingAnswers",
+    "buildOutputCreated"
+  ],
+  "checklist": [
+    {
+      "id": "derive-probe-set",
+      "label": "Derive the full probe set before web research or owner interview."
+    },
+    {
+      "id": "run-web-footprint-sweep",
+      "label": "Run the probe-guided web-footprint sweep with per-source status."
+    },
+    {
+      "id": "three-buckets",
+      "label": "Split findings into web-answered claims, discrepancies, and owner-only residue."
+    },
+    {
+      "id": "emit-owner-questionnaire",
+      "label": "Emit owner-questionnaire.md for unresolved residue and unblock paths."
+    },
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    }
+  ],
+  "outputPaths": {
+    "workbench": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0",
+    "phaseArtifact": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+    "probeSet": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\probe-set.json",
+    "webFootprintFindings": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\web-footprint-findings.json",
+    "ownerQuestionnaire": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\owner-questionnaire.md",
+    "discoveryNotes": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\discovery-notes.md"
+  },
+  "artifactEvidencePaths": {},
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": true,
+    "requiredReviewers": []
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "delegation": {
+    "role": "builder",
+    "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+    "packetHash": "5c2aa3625566ef588065029f5db4e82709cb785a8f039a22d18b2af0ff5917e8",
+    "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-capsule.json",
+    "capsuleHash": "f3de39c16f25b3b80e1a44f9d305b0f8b856ba7dfd4e6d9d67e1d84cee4b6eda",
+    "dispatchPromptPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder.md",
+    "requiredReportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-0-builder-report.json"
+  }
+}

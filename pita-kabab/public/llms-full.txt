@@ -1,0 +1,23 @@
+# Pita Kabab
+> Mediterranean & Middle Eastern cooking in Cedar Rapids
+
+## NAP
+- Name: Pita Kabab
+- Address: 3100 6th St SW, Cedar Rapids, IA 52404
+- Phone: +1-319-440-3709
+- Email: owner@pitakabab.example
+
+## Hours
+Mon–Tue & Thu–Sat 10am–10pm · Sun 11am–8pm · Closed Wednesday (hours as published by the restaurant — please call to confirm)
+
+## Domain
+https://pitakabab.example
+
+## Description
+Pita Kabab is a counter-service Mediterranean and Middle Eastern restaurant at 3100 6th St SW in Cedar Rapids, Iowa, serving shawarma, kabobs, falafel, hummus, wings and baklava for takeout, dine-in, delivery and catering.
+
+## Owner
+Ray Aqel
+
+## Year Established
+2025

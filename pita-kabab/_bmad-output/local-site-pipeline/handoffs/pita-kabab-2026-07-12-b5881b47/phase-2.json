@@ -1,0 +1,60 @@
+{
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "briefHash": "9b69ed4957690fe371f3ecd49cc07fb601eb912231d47283e674ca6fc33fe2a4",
+  "phase": 2,
+  "exitedAt": "2026-07-12T23:29:02.721Z",
+  "specialistInvoked": "location-matrix-planner",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "phase-2-builder-fable-5-2026-07-12",
+    "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json",
+    "reportHash": "291300a494d596a98363ae4a65f1fc74f8b67a18386c4905bbb1861d498a5c6c",
+    "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+    "packetHash": "083aebeda84c8c6a540acbb00bf847ec092a7efa23f15a2c11c6054a9c6e2f2c",
+    "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-capsule.json",
+    "capsuleHash": "56b40b92f173d2bffbef6f759b0299ba10ed223092213902fa8aaacf2a0040ce",
+    "status": "completed",
+    "commandsRun": [
+      "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 2 --artifact D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json (ok: true, problems: [])",
+      "node -e sha256(phase-2-artifact.json) => 519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6"
+    ],
+    "filesRead": [
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-capsule.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-2.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\location-matrix-planner\\SKILL.md",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\artifacts\\pita-kabab-2026-07-12-b5881b47\\phase-0.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\artifacts\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+      "D:\\plugin\\localevolve-factory\\packages\\engine\\src\\schemas\\archetypes\\restaurant.ts",
+      "D:\\plugin\\localevolve-factory\\packages\\engine\\templates\\archetypes\\restaurant\\src\\content.config.ts.tpl",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs (phase 2 contract sections)",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs (inspectArtifact / phase-4 route-match sections)",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json"
+    ],
+    "filesChanged": [
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\page-matrix-plan.md",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-2-builder-report.json"
+    ],
+    "verification": [
+      "inspect-artifact phase 2: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it.' (clean on first run).",
+      "All six required artifact fields non-null: pageMatrix (46 internal page entries, all path-based, zero external links), pageMatrixStrategy (named model 'Restaurant Page-Family Matrix v1' + 6 page families), foldedPages (13 entries with named reasons), requiredCroBlocks (mirrors cro-contract with owner-input dependencies flagged), imageSlotPlan (32 slots, representational-only constraints), minimumPageCountRationale (46 planned, 41-page floor with all conditionals dropped, 25-500 gate satisfied).",
+      "Every pageMatrix entry maps to an engine restaurant-archetype route kind (home / menu-hub / menu-category / occasion / root-landing / neighborhood / contact) verified against packages/engine/templates/archetypes/restaurant; route count equals data entries (7 menu + 10 occasions + 18 landings + 8 neighborhoods + 3 fixed); reserved root slugs (menu, contact, occasions, neighborhoods) avoided.",
+      "Evidence discipline: every page's evidenceBasis cites sealed Phase 0/1 findings; 5 pages flagged conditional on owner confirmation (4 halal-gated + 1 craft-claim-gated); near-me/neighborhood family conservatively sized at 8 because local-pack was never observed; no fabricated claims, prices, or local facts appear in any brief.",
+      "Artifact references the Yahya/founder checklist (ownerChecklistReference -> phase-0 owner-questionnaire.md) and the post-seal gates (Yahya approval + page-matrix-depth review).",
+      "complete-phase NOT run per dispatch stop condition."
+    ],
+    "specialist": "location-matrix-planner"
+  },
+  "outputs": {
+    "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+    "artifactHash": "519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6",
+    "contract": "page matrix, folded pages, required CRO blocks, image-slot plan, minimum page-count rationale"
+  },
+  "nextPhaseAllowed": [
+    3
+  ],
+  "nextPhaseHint": 3,
+  "blocking": []
+}

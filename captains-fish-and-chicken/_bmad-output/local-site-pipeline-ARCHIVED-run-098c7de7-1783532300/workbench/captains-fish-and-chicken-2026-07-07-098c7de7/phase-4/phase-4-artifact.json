@@ -1,0 +1,149 @@
+{
+  "phase": 4,
+  "summary": "Phase 4 BUILD for Captains Fish and Chicken. Scaffolded the restaurant archetype, authored all six data collections from sealed Phase 0/2 inputs (owner-confirmed menu, 6 occasions, 10 landings, 2 genuine-fact neighborhoods), linked the local engine, graph-seeded, wired, and built. Astro build SUCCEEDED: 35/35 internal routes + sitemap. factory validate exits 1 — the ONLY blocking gate is do-not-ship-guards, tripped by the declared identity fixtures (G-XXXXXXXXXX + .example) exactly as designed; all other gates (route-completeness 35, schema-floor, cro-block-presence, sap-anti-doorway, graph-gate) pass. AMENDED-REBUILD 2026-07-07: owner supplied the real brand logo; site rebranded to navy/gold via project shadow channel (token Base layout, navy sticky header w/ logo, navy footer, overlay heroes, card-grid menu, mobile sticky call bar via site.ctaPrimary) and imagery wired (93 Higgsfield assets: 87 menu items + heroes + logo). Rebuild still 35/35 routes; validate still fails ONLY on the intended identity fixtures.",
+  "checklist": [
+    {
+      "id": "scaffold-restaurant-archetype",
+      "status": "done",
+      "note": "factory init restaurant"
+    },
+    {
+      "id": "author-data-from-sealed-inputs",
+      "status": "done",
+      "note": "business/site/menu (deterministic) + occasions/landings/neighborhoods (schema-bound content agents); no fabrication (no calamari, no NewBo, no dine-in claim, no 2nd location, hours say call-to-confirm)"
+    },
+    {
+      "id": "build-35-routes",
+      "status": "done",
+      "note": "35/35 internal routes built; matches Phase 2 matrix exactly"
+    },
+    {
+      "id": "known-blocker-fixtures",
+      "status": "acknowledged",
+      "reason": "do-not-ship-guards fails on declared identity fixtures per owner deferral; resolved at Phase 7 by swapping real domain/email/GA4 — the gate working, not a defect"
+    }
+  ],
+  "filesChanged": [
+    "src/data/business.json (NAP, hours w/ accurate displayText, geo, owner Ray Aqel, brand tokens Captain Red/Fry Gold, gaId fixture G-XXXXXXXXXX, domain/email .example)",
+    "src/data/site.json (nav, footer, call CTA, order links)",
+    "src/data/menu.json (14 owner-confirmed sections, all items priced -> Menu JSON-LD)",
+    "src/data/occasions.json (6 occasions; each >=5 FAQ, >=4 cross-links, real featured items)",
+    "src/data/landings.json (10; 6 intent + how-to-order + about + faq[>=8] + made-fresh-to-order story)",
+    "src/data/neighborhoods.json (2; NE Cedar Rapids + Marion, genuine local facts)",
+    "package.json (engine linked via file: to local monorepo)",
+    "src/ theme + components + graph (wire-generated)",
+    "dist/ (35 built routes + sitemap-index.xml + robots.txt + llms.txt)",
+    "src/layouts/Base.astro (NEW project layout: brand tokens + modern global CSS; pages repointed from @engine alias — aliases do not honor shadows)",
+    "src/components/Header.astro (navy sticky nav + logo.png + gold CTA; mobile: static, CTA delegated to sticky bar)",
+    "src/components/Footer.astro (NEW navy footer: NAP/hours/links columns)",
+    "src/components/Hero.astro (NEW overlay hero, CRO-contract compatible: single h1, data-cro-block, CtaBar/ValueProps)",
+    "src/pages/* (Base/Hero imports repointed to project-local; menu card grid; occasion hero images; trailing-slash nav fix)",
+    "src/data/site.json (nav/footer trailing slashes; ctaPrimary tel: for sticky call bar)",
+    "src/data/business.json (brand palette navy/gold from owner logo; logoFilename logo.png)",
+    "public/images/** + public/logo.png (93 exported Higgsfield assets — representational)",
+    "scripts/image-prompts.json + scripts/selections.json (imagery manifest + selections)",
+    "public/images/hero/*.webp (modern-format heroes; jpg kept for og/marketing)"
+  ],
+  "routesGenerated": [
+    "/",
+    "/menu",
+    "/menu/seafood",
+    "/menu/whole-wings",
+    "/menu/party-wings",
+    "/menu/boneless-chicken-bites",
+    "/menu/chicken-leg-and-thigh",
+    "/menu/chicken-tenders",
+    "/menu/shrimp",
+    "/menu/gizzards-and-livers",
+    "/menu/fish-family-deals",
+    "/menu/family-meals-and-combos",
+    "/menu/sides",
+    "/menu/kids-meals",
+    "/menu/desserts",
+    "/menu/drinks",
+    "/occasions/family-dinner",
+    "/occasions/game-day-wings",
+    "/occasions/office-and-party-catering",
+    "/occasions/friday-fish-fry",
+    "/occasions/seafood-feast",
+    "/occasions/quick-lunch-takeout",
+    "/fried-catfish-cedar-rapids",
+    "/fried-chicken-and-wings-cedar-rapids",
+    "/seafood-takeout-cedar-rapids",
+    "/soul-food-cedar-rapids",
+    "/fish-and-chicken-near-me",
+    "/party-wings-cedar-rapids",
+    "/how-to-order",
+    "/about",
+    "/faq",
+    "/made-fresh-to-order",
+    "/neighborhoods/northeast-cedar-rapids",
+    "/neighborhoods/marion-ia",
+    "/contact"
+  ],
+  "commandsRun": [
+    {
+      "cmd": "factory init restaurant D:/website/captains-fish-and-chicken --force --name captains-fish-and-chicken",
+      "result": "scaffolded"
+    },
+    {
+      "cmd": "npm install (engine linked via file:)",
+      "result": "261 packages"
+    },
+    {
+      "cmd": "factory graph-seed",
+      "result": "0 created (legacy mode; graph-presence advisory only)"
+    },
+    {
+      "cmd": "factory wire",
+      "result": "ok (legacy mode)"
+    },
+    {
+      "cmd": "factory build",
+      "result": "success — 35 pages + sitemap in ~3.5s, exit 0"
+    },
+    {
+      "cmd": "factory validate",
+      "result": "exit 1 — do-not-ship-guards fails on identity fixtures (intended); all other gates pass"
+    },
+    {
+      "cmd": "higgsfield MCP generation (93 renders, ~188 credits) + higgsfield-workflow export",
+      "result": "93/93 exported (brand-logo raster fallback: recraft vector plan-gated 403)"
+    },
+    {
+      "cmd": "factory build (post-rebrand)",
+      "result": "success — 35 pages, exit 0"
+    },
+    {
+      "cmd": "factory validate (post-rebrand)",
+      "result": "exit 1 — only do-not-ship-guards on identity fixtures (intended); graph-presence advisory"
+    },
+    {
+      "cmd": "sharp jpg->webp (4 heroes) + repoint hero srcs; factory build + validate",
+      "result": "delta-review regression fixed: hero modern-format failures cleared; do-not-ship-guards now fails ONLY on identity fixtures"
+    }
+  ],
+  "buildResult": {
+    "status": "success",
+    "pagesBuilt": 35,
+    "expectedRoutes": 35,
+    "buildExitCode": 0,
+    "sitemap": true,
+    "validate": {
+      "exitCode": 1,
+      "blockingGate": "do-not-ship-guards",
+      "reason": "declared identity fixtures (gaId G-XXXXXXXXXX + .example domain) rendered in output — INTENDED per owner's deferral of real domain/email/GA4 to launch; resolved at Phase 7 by swapping real values then rebuilding",
+      "passingGates": [
+        "route-completeness",
+        "schema-floor",
+        "cro-block-presence",
+        "sap-anti-doorway",
+        "graph-gate"
+      ],
+      "advisories": [
+        "asset-references-exist: public/logo.svg missing (Phase 6 imagery)",
+        "graph-presence: legacy mode"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "hours",
+  "question": "What are Captains Fish and Chicken's hours?",
+  "provenance": "KNOW",
+  "source": "src/graph/facts/hours.json",
+  "lastVerified": "2026-07-07"
+}

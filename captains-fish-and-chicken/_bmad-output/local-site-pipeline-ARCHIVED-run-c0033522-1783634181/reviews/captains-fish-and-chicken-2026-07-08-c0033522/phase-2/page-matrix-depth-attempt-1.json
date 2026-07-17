@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 2,
+  "reviewer": "page-matrix-depth",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/phase-2-artifact.json",
+  "artifactHash": "e4753185d6ffb1b42282eebdde719bbfcc394eb62c5e556451d2d2aacb8fab89",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/review-page-matrix-depth.md",
+  "notesHash": "0d600d97a4c236ea7fdb0eee6d5e513d16a479fc5e53cf3909c2ca150498953b",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-2\\page-matrix-depth-attempt-1.md",
+  "notesHeadings": [
+    "Phase 2 review — page-matrix-depth (run v2)",
+    "Verified",
+    "Carry-forward guardrails for Phase 4 authoring (non-blocking)"
+  ],
+  "notes": "# Phase 2 review — page-matrix-depth (run v2)\n\n**Reviewer:** page-matrix-depth (independent read-only subagent; did NOT produce the artifact)\n**Verdict:** PASS\n**Date:** 2026-07-08\n\n## Verified\n- routeCountVerified: 38 (hand-counted; family arithmetic checks: 1+1+14+6+8+4+1+2+1)\n- menuSectionsMatch: true (14/14 slug-for-slug vs src/data/menu.json, identical order; Gazette sides correctly held out; owner's 'Mac and Cheese Bites' correctly distinguished from the Gazette 'mac and cheese' side)\n- reservedSlugCollision: false ('location' not in {menu, contact, occasions, neighborhoods})\n- Phase 1 traceability: all 3 additions verbatim-traced (open-late -> quickWin #3; catering -> quickWin #5 + pillar gap; /location -> geoOpportunity #1 + citation-poisoning finding)\n- All kinds map to on-disk templates; floors mirror Zod minima; SW scope held; folds sound; call-only documented\n- 8/8 criteria pass; zero blocking issues\n\n## Carry-forward guardrails for Phase 4 authoring (non-blocking)\n1. MARION FACTS: 'Hwy 100/7th Ave' provenance is NOT in sealed Phase 1 (carried from archived run) — Phase 4 must independently substantiate Marion's >=1 localFact floor or the page FOLDS.\n2. CALAMARI BAN IS PLAN-WIDE: Phase 1's entity list erroneously includes calamari; the ban applies to ALL pages, not just seafood-feast.\n3. TITLE TRUTHFULNESS: no uncaveated hours claims in <title> tags (esp. /open-late-cedar-rapids).\n4. HOME HOURS BLOCK inherits the conservative structured-hours stance (Mon-Thu + Sun only in JSON-LD; displayText caveated).\n",
+  "reviewedAt": "2026-07-08T19:27:27.009Z"
+}

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 1,
+  "specialist": "keyword-research",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+  "packetHash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9",
+  "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+  "capsuleHash": "02b8a27ccebb0d52a9c7ca65d6c12535b96a91fe702ecc10be7f9b52211fda55",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+  "artifactHash": "23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47",
+  "workerId": "phase-1-builder-subagent-2026-07-12",
+  "status": "completed",
+  "commandsRun": [
+    "16x WebSearch (Cedar Rapids mediterranean/halal/shawarma/kabob/gyro/falafel/catering/iftar/competitor-verification/neighborhood/near-me queries, 2026-07-12)",
+    "2x WebFetch (zabihah.com Cedar Rapids subregion page; halalrun.com CR halal list, 2026-07-12)",
+    "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 1 --artifact ...\\phase-1\\phase-1-artifact.json",
+    "node -e sha256(phase-1-artifact.json)"
+  ],
+  "filesRead": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\seo-geo\\research\\keyword-research\\SKILL.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+  ],
+  "filesChanged": [
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-notes.md",
+    "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+  ],
+  "assumptions": [
+    "Sealed Phase 0 artifact in the run workbench is an allowed input as the phase's upstream handoff (dispatch guidance names it explicitly).",
+    "WebSearch SERP composition observed 2026-07-12 is treated as Measured evidence per the specialist skill's labeling rules; all volume/difficulty metrics are N/A because no SEO tool/GSC/trends connector was available - nothing fabricated.",
+    "Halal-family keyword targeting is recorded as gated on owner confirmation of halal certification (Phase 0 residue); research does not assert the certification as fact.",
+    "complete-phase intentionally NOT run per dispatch rule 8; sealing is the orchestrator's job after the research-sufficiency reviewer gate."
+  ],
+  "blockers": [],
+  "verification": [
+    "inspect-artifact run 2026-07-12: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it' (clean on first pass).",
+    "All five required artifact fields (researchSources, competitorNotes, keywordEntityFindings, sourceDates, evidenceGaps) populated; 26 researchSources entries each carry retrievedAt=2026-07-12; 14 competitor notes with per-claim basis; 11 evidence gaps recorded honestly with unblock paths.",
+    "Truthfulness floor spot-check: no numeric search volumes, difficulties, or CPCs appear anywhere in the artifact; every keyword row carries volume: N/A and a stated observation basis.",
+    "Artifact references the Phase 0 owner questionnaire for owner-gated claims (ownerChecklistReference field)."
+  ]
+}

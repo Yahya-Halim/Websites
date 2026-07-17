@@ -1,0 +1,62 @@
+{
+  "kind": "menu",
+  "slug": "desserts",
+  "name": "Desserts",
+  "order": 13,
+  "description": "Sweet finishes.",
+  "items": [
+    {
+      "name": "Cheesecake",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Caramel Cheesecake",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Carrot Cake",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Caramel Coconut",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Lemon Cake",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Desserts — Cheesecake & Cakes | Captains Cedar Rapids",
+    "description": "Cheesecake, caramel cheesecake, carrot cake, caramel coconut, and lemon cake in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/desserts/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

@@ -1,0 +1,144 @@
+{
+  "kind": "menu",
+  "slug": "seafood",
+  "name": "Seafood",
+  "order": 1,
+  "description": "Fresh-to-order fried seafood — catfish fillet, catfish steak, catfish nuggets, wild-caught cod, perch, tilapia, red snapper, and crab cakes. Every meal comes with fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Catfish Fillet, Perch or Tilapia (2 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Fillet, Perch or Tilapia (3 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 16.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Fillet, Perch or Tilapia (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 21.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Steak, Bone In (2 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Steak, Bone In (3 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 15.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Steak, Bone In (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 19.99
+        }
+      ]
+    },
+    {
+      "name": "Catfish Nuggets (1 lb)",
+      "description": "Bite-sized catfish with a crispy coating.",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 14.99
+        }
+      ]
+    },
+    {
+      "name": "Cod Fish, Wild Caught (2 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 14.99
+        }
+      ]
+    },
+    {
+      "name": "Cod Fish, Wild Caught (3 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 19.99
+        }
+      ]
+    },
+    {
+      "name": "Cod Fish, Wild Caught (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 23.99
+        }
+      ]
+    },
+    {
+      "name": "Crab Cakes (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 14.99
+        }
+      ]
+    },
+    {
+      "name": "Red Snapper (2 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 14.99
+        }
+      ]
+    },
+    {
+      "name": "Red Snapper (3 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 19.99
+        }
+      ]
+    },
+    {
+      "name": "Red Snapper (4 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 23.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Fried Seafood — Catfish, Cod & Snapper | Captains Cedar Rapids",
+    "description": "Fresh fried catfish, wild-caught cod, perch, tilapia, red snapper, and crab cakes in Cedar Rapids. Meals with fries, coleslaw, and bread.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/seafood/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

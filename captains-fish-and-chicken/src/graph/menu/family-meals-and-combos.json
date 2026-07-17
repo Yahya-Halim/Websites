@@ -1,0 +1,47 @@
+{
+  "kind": "menu",
+  "slug": "family-meals-and-combos",
+  "name": "Family Meals & Combo Dinners",
+  "order": 10,
+  "description": "Mix-and-match combo dinners and the Captain's Family Meal Deal.",
+  "items": [
+    {
+      "name": "Captain's Family Meal Deal",
+      "description": "Large fries and your choice of two items.",
+      "prices": [
+        {
+          "label": "Deal",
+          "price": 59.99
+        }
+      ]
+    },
+    {
+      "name": "Combo Dinner — Your Choice of Two Items",
+      "description": "Choose two items to build a combo dinner.",
+      "prices": [
+        {
+          "label": "Combo",
+          "price": 18.99
+        }
+      ]
+    },
+    {
+      "name": "Combo Dinner — Your Choice of Three Items",
+      "description": "Mix and match any three items, served together.",
+      "prices": [
+        {
+          "label": "Combo",
+          "price": 21.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Family Meals & Combo Dinners | Captains Cedar Rapids",
+    "description": "Build-your-own combo dinners and the Captain's Family Meal Deal in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/family-meals-and-combos/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

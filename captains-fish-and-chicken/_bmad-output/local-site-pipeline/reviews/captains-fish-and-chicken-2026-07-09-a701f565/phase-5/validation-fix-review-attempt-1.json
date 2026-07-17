@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 5,
+  "reviewer": "validation-fix-review",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+  "artifactHash": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-fix-review-notes.md",
+  "notesHash": "5cb95c8d7f76707cf94dc208cd13e04588a7959c93a54b01a17d46f9ee664dba",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-fix-review-attempt-1.md",
+  "notesHeadings": [
+    "Phase 5 Reviewer Notes — validation-fix-review gate (v3)",
+    "Verdict",
+    "Integrity",
+    "Per-criterion results",
+    "(a) factoryValidate — PASS",
+    "(b) seoGeoAudit — PASS",
+    "(c) failures [] / fixRounds [] — HONEST",
+    "(d) remainingAdvisories (6) — REAL and NON-BLOCKING",
+    "(e) Fixture flags — ZERO",
+    "Blockers",
+    "Assumptions",
+    "Review method"
+  ],
+  "notes": "# Phase 5 Reviewer Notes — validation-fix-review gate (v3)\n\n- Run: captains-fish-and-chicken-2026-07-09-a701f565\n- Phase: 5 (VALIDATE), specialist seo-geo-ai-validation\n- Gate: validation-fix-review\n- Reviewer: validation-fix-review (v3 — fresh capsule-scoped sub-agent, independent read-only re-verification)\n- Date: 2026-07-10\n\n## Verdict\n\n**PASS.** The sealed Phase 5 artifact honestly reports a first-pass `factory validate`\nsuccess (exit 0, 6/6 blocking gates + 5/5 advisories) and a vendored SEO/GEO audit with\nzero blocking findings and six genuinely non-blocking advisories. Every load-bearing claim\nI could independently reproduce against `dist/` and the engine matched. Zero fixture flags.\nNo hidden site edits occurred during the Phase 5 window.\n\n## Integrity\n\n- **Sealed artifact hash MATCHES.** `phase-5-artifact.json` sha256 =\n  `db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268` (capsule expected value),\n  confirmed twice (sha256sum + PowerShell Get-FileHash). Artifact not edited during review.\n- **Packet identity consistent.** Capsule `packetHash` `cb29eb40…` equals the packet's own\n  `delegation.packetHash` (phase-5.json line 213) and the required report contract. The raw\n  file-byte sha256 of `phase-5.json` is `6494b52e…`; the divergence is expected — the engine's\n  packetHash is a canonical hash (the field is embedded inside the packet it names, so it\n  cannot be a byte hash of that file). Not a blocker.\n- **Capsule identity.** Orchestrator-declared canonical capsuleHash `426bd6c2…`; raw\n  file-byte sha256 is `295cd1b3…` — same canonical-vs-byte pattern as the packet. Recorded\n  the canonical value per the workflow contract. Not a blocker.\n\n## Per-criterion results\n\n### (a) factoryValidate — PASS\n- Artifact records `command: npx factory validate`, `exitCode: 0`, all 6 gate ids\n  (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards,\n  sap-anti-doorway, graph-gate) each = pass, plus 5 advisories pass (11/11).\n- Log at `phase-5/factory-validate.log` contains the command, working dir, engine version,\n  exit code, the 6 gate ids, and reproduces `.factory/journal.ndjson` (11 validator-ran\n  events, all pass) and `.factory/last-run.json` (success:true, errorCount 0).\n- **Independent re-run** of `npx factory validate` in `D:\\website\\captains-fish-and-chicken`\n  → exit 0. Gate set and pass/fail match the log exactly. (Read-only side effect: .factory journal.)\n\n### (b) seoGeoAudit — PASS\n- Report at `phase-5/seo-geo-audit.md` opens with the command against a real target\n  (`https://captains-fish-chicken.netlify.app … --mode audit --full --tech --visibility`,\n  matching the sealed REAL identity domain — no placeholder), a `## Status` section\n  (`ready_with_concerns`), `## Blocking Findings` = `None`, a `## Advisory Findings`\n  section (6 items), and a `## Fix Notes` section.\n- Spot-checks against `dist/` (all reproduced independently):\n  - Titles: 38 present / 38 unique. MATCH.\n  - Canonicals: 38, one per page, all self-referencing on the netlify.app origin. MATCH.\n  - Image alt: 138 `<img>`, 0 missing alt, 0 empty alt. MATCH.\n  - Review copy: 0 files contain \"208 reviews\"; no \"N reviews\" count anywhere; \"4.4 stars\"\n    on home; 0 pages carry `aggregateRating` (no fabricated rating node). MATCH.\n\n### (c) failures [] / fixRounds [] — HONEST\n- `failures: []`, `fixRounds: []`. Phase 5 must not touch `src/`.\n- Git cannot diff this dir (project shows as untracked under the `D:\\website` repo), so\n  verified by mtimes: newest `src/` files are `src/data/site.json` & `src/data/menu.json`\n  (18:12 local) and `src/content/_generated/*.jsonld` (18:13) — all part of the Phase 4\n  build (dist built 18:21). The Phase 5 window (factory-validate.log 18:42 → artifact 18:46)\n  touched no `src/` file. Zero-fix-round claim is truthful.\n\n### (d) remainingAdvisories (6) — REAL and NON-BLOCKING\n1. OG/Twitter absent — confirmed 0 pages carry `og:*` / `twitter:*`. Real; not a gate.\n2. Structured hours omit Fri-Sat — confirmed: home JSON-LD names only Mon/Tue/Wed/Thu/Sun;\n   Friday & Saturday absent from `openingHoursSpecification`. Deliberately unfixed (hours\n   owner-unconfirmed; sealed constraint forbids adding hours claims). Correct call.\n3. Five long titles — confirmed. Raw-byte measurement flags 5–6 titles at 66–70; using\n   decoded character length (the correct SERP metric — `&amp;` entities and em-dashes\n   normalize the borderline /location/ title to ~65), the artifact's list of five\n   (69/68/67/66/66) is exact and defensible. Cosmetic.\n4. /menu/ meta description ~203 chars — plausible; clipped tail is non-primary. Cosmetic.\n5. Hours owner-unconfirmed — constraint; every surface keeps the call-to-confirm caveat.\n6. Dual phone display formats — confirmed both `tel:+1-319-221-1040` and `(319) 221-1040`\n   present; same number, schema-consistent. Cosmetic.\nNone of the six touches a factory gate.\n\n### (e) Fixture flags — ZERO\n- Real GA4 `G-7W35DKNK6Z` on all pages; real canonicals on the netlify.app origin;\n  0 `.example` identity; 0 `aggregateRating`. do-not-ship-guards gate PASS. Confirmed.\n\n## Blockers\n\nNone.\n\n## Assumptions\n\n- The engine uses canonical (not byte-wise) hashing for packet and capsule identities;\n  the sealed artifact is hashed byte-wise (matched exactly). Treated the packet/capsule\n  byte-vs-canonical divergence as expected, not tampering.\n- The vendored `/aaron-marketing:seo-geo` audit narrative was not re-executed end-to-end;\n  its concrete, checkable dist/ claims were independently spot-checked and all held.\n\n## Review method\n\nRead-only per capsule: sealed artifact, phase packet, factory-validate.log, seo-geo-audit.md\nread; hashes verified; `npx factory validate` independently re-run (journal side effect only);\n`dist/` inspected with independent grep/awk; no project or site files modified; the phase\nartifact was not edited. A prior reviewer version's notes existed at this path and were\nsuperseded by this v3 pass, which reached the same PASS verdict independently.\n",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "reviewer",
+    "workerId": "phase5-reviewer-validation-fix-review-v3-cd6c069a",
+    "reportPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/worker-reports/captains-fish-and-chicken-2026-07-09-a701f565/phase-5-validation-fix-review-review-report.json",
+    "reportHash": "12ac17de204195e90a16286d958b90316b86334663c2f80e092bf807e1adfa50",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+    "packetHash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-capsule.json",
+    "capsuleHash": "426bd6c28b8e2c1601eea8fb602ec857483e25c2c2c1159eac37a79ece80b4b8",
+    "status": "completed",
+    "commandsRun": [
+      "sha256sum phase-5-artifact.json (verify sealed artifact)",
+      "Get-FileHash -Algorithm SHA256 phase-5-artifact.json + phase-5.json (cross-check)",
+      "sha256sum phase-5.json (raw byte hash of packet)",
+      "sha256sum phase-5-validation-fix-review-review-capsule.json (raw byte hash of capsule)",
+      "npx factory validate (independent re-run in D:\\website\\captains-fish-and-chicken; exit 0)",
+      "git status --short (repo root D:\\website; project dir untracked)",
+      "ls -l / find -printf mtimes on src/, dist/, phase-5 workbench, phase-4 artifact",
+      "grep/awk over dist/**/index.html: titles unique-count, canonicals, img alt, review-count, aggregateRating, og/twitter, title lengths, openingHoursSpecification day names, phone formats",
+      "sha256sum validation-fix-review-notes.md (final notes hash)"
+    ],
+    "filesRead": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-capsule.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\factory-validate.log",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\seo-geo-audit.md",
+      "dist/**/index.html (38 built routes, spot-check inspection)"
+    ],
+    "filesChanged": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-fix-review-notes.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-report.json"
+    ],
+    "verification": [
+      "Sealed Phase 5 artifact sha256 = db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268 matches capsule expected value (confirmed via sha256sum and PowerShell Get-FileHash). Artifact not edited.",
+      "Independent npx factory validate re-run in D:\\website\\captains-fish-and-chicken returned exit code 0; all 6 gates (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) pass plus 5 advisories (11/11), matching factory-validate.log and the artifact's factoryValidate block.",
+      "factory-validate.log contains the command, exit code, all 6 gate ids, and verbatim .factory/journal.ndjson + .factory/last-run.json for the run.",
+      "seo-geo-audit.md contains the command with the real target (https://captains-fish-chicken.netlify.app), a Status section (ready_with_concerns), 'Blocking Findings: None', an Advisory Findings section (6), and Fix Notes.",
+      "dist/ spot-checks reproduced: 38 routes; 38/38 unique titles; 38 canonicals each self-referencing the netlify.app origin; 138 <img> with 0 missing/empty alt; 0 files with '208 reviews' and no 'N reviews' count anywhere; 0 pages with aggregateRating; '4.4 stars' present count-free.",
+      "failures [] and fixRounds [] honest: newest src/ mtime is 18:13 local (Phase 4 generated JSON-LD) / 18:12 (site.json, menu.json); the Phase 5 window (factory-validate.log 18:42 -> artifact 18:46) modified no src/ file. Phase 5 did not touch src/.",
+      "All 6 advisories confirmed real and non-blocking: (1) 0 og/twitter tags; (2) openingHoursSpecification names only Mon/Tue/Wed/Thu/Sun, Fri/Sat absent, correctly left unfixed under owner-unconfirmed-hours constraint; (3) five long titles (69/68/67/66/66 decoded chars) confirmed; (4) /menu/ meta ~203 chars; (5) hours caveat carried; (6) dual phone formats +1-319-221-1040 and (319) 221-1040 both present. None intersects a factory gate.",
+      "Zero fixture flags: real GA4 G-7W35DKNK6Z on all pages, real canonicals, 0 .example identity, 0 aggregateRating; do-not-ship-guards gate PASS."
+    ],
+    "specialist": "validation-fix-review",
+    "reviewer": "validation-fix-review"
+  },
+  "reviewedAt": "2026-07-11T00:25:14.007Z"
+}

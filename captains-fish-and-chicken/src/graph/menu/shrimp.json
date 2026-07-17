@@ -1,0 +1,63 @@
+{
+  "kind": "menu",
+  "slug": "shrimp",
+  "name": "Shrimp",
+  "order": 7,
+  "description": "Captains-breaded jumbo and medium shrimp. Meals include fries, coleslaw, and bread.",
+  "items": [
+    {
+      "name": "Jumbo Shrimp, 1/2 lb (7 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 15.99
+        }
+      ]
+    },
+    {
+      "name": "Jumbo Shrimp, 1 lb (14 pcs)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 25.99
+        }
+      ]
+    },
+    {
+      "name": "Medium Shrimp (1/2 lb)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 13.99
+        }
+      ]
+    },
+    {
+      "name": "Medium Shrimp (1 lb)",
+      "prices": [
+        {
+          "label": "Meal",
+          "price": 21.99
+        }
+      ]
+    },
+    {
+      "name": "Shrimp Basket",
+      "description": "Popcorn shrimp basket.",
+      "prices": [
+        {
+          "label": "Basket",
+          "price": 10.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Fried Jumbo & Medium Shrimp | Captains Cedar Rapids",
+    "description": "Captains-breaded jumbo and medium fried shrimp and shrimp baskets in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/shrimp/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

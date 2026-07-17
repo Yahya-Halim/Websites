@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-seafood-feast-2",
+  "questionRef": "questions/faq-occasions-seafood-feast-2",
+  "text": "Call (319) 221-1040 and order ahead so the kitchen can time your seafood to your arrival. Because everything is fried fresh to order, calling ahead means it's hot and crispy when you pick up at 1616 1st Ave NE.",
+  "cites": [
+    "occasions/seafood-feast"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

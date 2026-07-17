@@ -1,0 +1,911 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "@id": "https://captains-fish-chicken.netlify.app/#menu",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-seafood",
+      "name": "Seafood",
+      "description": "Fresh-to-order fried seafood — catfish fillet, catfish steak, catfish nuggets, wild-caught cod, perch, tilapia, red snapper, and crab cakes. Every meal comes with fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Fillet, Perch or Tilapia (2 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 13.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Fillet, Perch or Tilapia (3 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 16.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Fillet, Perch or Tilapia (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 21.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Steak, Bone In (2 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 13.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Steak, Bone In (3 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 15.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Steak, Bone In (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 19.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Nuggets (1 lb)",
+          "description": "Bite-sized catfish with a crispy coating.",
+          "offers": {
+            "@type": "Offer",
+            "price": 14.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cod Fish, Wild Caught (2 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 14.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cod Fish, Wild Caught (3 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 19.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cod Fish, Wild Caught (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 23.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Crab Cakes (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 14.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Red Snapper (2 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 14.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Red Snapper (3 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 19.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Red Snapper (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 23.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-whole-wings",
+      "name": "Whole Wings",
+      "description": "Bone-in whole wings fried to order. Meals come with fries, coleslaw, and bread; larger counts are wings only.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Wings Meal (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 8.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings Meal (6 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 13.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings Meal (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 19.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings Only (20 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 32.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings Only (30 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 49.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings Only (50 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 84.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings Only (100 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 159.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-party-wings",
+      "name": "Party Wings",
+      "description": "Smaller party-style wings, perfect for sharing and game day. Meals include fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Party Wings Meal (8 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 14.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Party Wings Meal (12 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 18.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Party Wings Only (16 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 24.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Party Wings Only (20 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 28.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Party Wings, Chicken Only (30 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 45.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Party Wings, Chicken Only (50 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 79.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-boneless-chicken-bites",
+      "name": "Boneless Chicken Bites",
+      "description": "Crispy boneless wings and chicken bites. Meals include fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Boneless Wings Meal (8 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 12.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Boneless Wings Meal (12 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 18.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Boneless Wings Only (20 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 26.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Boneless Wings Only (30 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 49.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Boneless Wings Only (50 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 79.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-chicken-leg-and-thigh",
+      "name": "Chicken Leg & Thigh Mix",
+      "description": "Bone-in dark-meat fried chicken. Meals include fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Mix Meal (4 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 12.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Mix Meal (6 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 15.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Mix Meal (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 24.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Mix Only (20 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 39.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Mix Only (30 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 59.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Chicken Mix Only (50 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 89.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-chicken-tenders",
+      "name": "Chicken Tenders",
+      "description": "Hand-breaded chicken tenders fried to order. Meals include fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Tenders Meal (3 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 12.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tenders Meal (6 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 21.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tenders Meal (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 34.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Tenders Only (20 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 59.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-shrimp",
+      "name": "Shrimp",
+      "description": "Captains-breaded jumbo and medium shrimp. Meals include fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Jumbo Shrimp, 1/2 lb (7 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 15.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Jumbo Shrimp, 1 lb (14 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 25.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Medium Shrimp (1/2 lb)",
+          "offers": {
+            "@type": "Offer",
+            "price": 13.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Medium Shrimp (1 lb)",
+          "offers": {
+            "@type": "Offer",
+            "price": 21.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Shrimp Basket",
+          "description": "Popcorn shrimp basket.",
+          "offers": {
+            "@type": "Offer",
+            "price": 10.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-gizzards-and-livers",
+      "name": "Gizzards & Livers",
+      "description": "Soul-food classics fried to order. Meals include fries, coleslaw, and bread.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Gizzards (1 lb)",
+          "offers": {
+            "@type": "Offer",
+            "price": 13.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Livers (1 lb)",
+          "offers": {
+            "@type": "Offer",
+            "price": 13.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-fish-family-deals",
+      "name": "Fish Only Family Deals",
+      "description": "Big-batch fried fish for the whole table — catfish, perch, and tilapia by the piece or the pan.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Catfish, Perch & Tilapia (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 49.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish, Perch & Tilapia (20 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 69.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish, Perch & Tilapia (30 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 99.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish, Perch & Tilapia (40 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 139.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish, Perch & Tilapia (50 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 166.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Nuggets, Half Pan",
+          "offers": {
+            "@type": "Offer",
+            "price": 49.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Nuggets, Full Pan",
+          "offers": {
+            "@type": "Offer",
+            "price": 89.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-family-meals-and-combos",
+      "name": "Family Meals & Combo Dinners",
+      "description": "Mix-and-match combo dinners and the Captain's Family Meal Deal.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Captain's Family Meal Deal",
+          "description": "Large fries and your choice of two items.",
+          "offers": {
+            "@type": "Offer",
+            "price": 59.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Combo Dinner — Your Choice of Two Items",
+          "description": "Choose two items to build a combo dinner.",
+          "offers": {
+            "@type": "Offer",
+            "price": 18.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Combo Dinner — Your Choice of Three Items",
+          "description": "Mix and match any three items, served together.",
+          "offers": {
+            "@type": "Offer",
+            "price": 21.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-sides",
+      "name": "Side Orders",
+      "description": "Southern-style sides and shareables.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Hush Puppies (10 pcs)",
+          "description": "Crispy, deep-fried cornbread balls.",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Breaded Mushrooms (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mac and Cheese Bites (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cheese Sticks (5 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Cheese Curds",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Pizza Puff",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Onion Rings (10 pcs)",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Small Fries",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Large Fries",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Half Pan of Fries",
+          "offers": {
+            "@type": "Offer",
+            "price": 16.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Full Pan of Fries",
+          "offers": {
+            "@type": "Offer",
+            "price": 27.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Extra Sauce",
+          "offers": {
+            "@type": "Offer",
+            "price": 0.5,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Gizzards or Livers (side)",
+          "offers": {
+            "@type": "Offer",
+            "price": 7.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Catfish Nuggets (side)",
+          "offers": {
+            "@type": "Offer",
+            "price": 7.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Wings (1 pc, side)",
+          "offers": {
+            "@type": "Offer",
+            "price": 2.45,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Legs (1 pc, side)",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Thighs (1 pc, side)",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-kids-meals",
+      "name": "Kids Meals",
+      "description": "Kid-sized favorites, served with fries.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Kids Chicken Nuggets (5 pcs)",
+          "description": "Served with fries.",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kids Chicken Tenders (2 pcs)",
+          "description": "Served with fries.",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Kids Pizza Puff",
+          "description": "Served with fries.",
+          "offers": {
+            "@type": "Offer",
+            "price": 6.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-desserts",
+      "name": "Desserts",
+      "description": "Sweet finishes.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Cheesecake",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Caramel Cheesecake",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Carrot Cake",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Caramel Coconut",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Lemon Cake",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "@id": "https://captains-fish-chicken.netlify.app/#menu-drinks",
+      "name": "Drinks",
+      "description": "Cool it down.",
+      "hasMenuItem": [
+        {
+          "@type": "MenuItem",
+          "name": "Water",
+          "offers": {
+            "@type": "Offer",
+            "price": 0.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Mystic",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "MenuItem",
+          "name": "Calypos",
+          "offers": {
+            "@type": "Offer",
+            "price": 3.99,
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+  ]
+}

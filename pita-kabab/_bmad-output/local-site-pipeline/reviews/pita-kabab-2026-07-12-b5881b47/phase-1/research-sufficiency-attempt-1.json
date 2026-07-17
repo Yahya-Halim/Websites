@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 1,
+  "reviewer": "research-sufficiency",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+  "artifactHash": "23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47",
+  "notesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-sufficiency-review-notes.md",
+  "notesHash": "9152b1e35561bdd7cd35f2b841d596f1b45f8f8742f1a4b205aa1faa26e06a36",
+  "storedNotesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\review-notes\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-sufficiency-attempt-1.md",
+  "notesHeadings": [
+    "Phase 1 research-sufficiency review — Pita Kabab (run pita-kabab-2026-07-12-b5881b47)",
+    "Verdict: PASS",
+    "Independent source spot-checks (5 performed, all confirmed)",
+    "Gate criteria assessment",
+    "Strengths",
+    "Weaknesses (non-blocking)",
+    "Blocking findings",
+    "Process/integrity checks"
+  ],
+  "notes": "# Phase 1 research-sufficiency review — Pita Kabab (run pita-kabab-2026-07-12-b5881b47)\n\nReviewer: research-sufficiency (independent fresh sub-agent, 2026-07-12)\nArtifact reviewed: `D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json`\nSealed hash verified: `23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47` (SHA256 of artifact file matches capsule).\nPacket hash verified: `dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9` (recomputed via the engine's packetHash rule — packet minus `delegation` block, `sha256(JSON.stringify(core) + \"\\n\")` — matches capsule and packet delegation stamp).\nCapsule stable hash: `53572254e04193947727e2ef7945c562831320b71794a56b5eaac71759d515ff` (matches report scaffold).\n\n## Verdict: PASS\n\nThe Phase 1 artifact is sufficient to seed the Phase 2 page matrix for a 25-500 page local\nrestaurant site. Evidence discipline is the strongest aspect: no fabricated metrics anywhere,\nper-claim source+date bases, and an unusually honest 11-item evidence-gap register.\n\n## Independent source spot-checks (5 performed, all confirmed)\n\n1. **Zabihah Cedar Rapids subregion page** (fetched live 2026-07-12): Pita Kabab NOT listed —\n   confirmed. O's Grill listed as Mediterranean, HalalRank 80 — confirmed. \"29 verified halal\n   restaurants\" heading — confirmed. Matches the artifact's claims exactly.\n2. **HalalRun \"Top Halal Restaurants in Cedar Rapids\"** (fetched live 2026-07-12): Pita Kabab\n   NOT mentioned — confirmed. Published 2023-01-17 — confirmed. Zero CR-proper Mediterranean\n   restaurants on the list (Olive Tree Café is Bettendorf; Tabooleh is Coralville) — confirmed.\n3. **The Halal Guys Iowa franchise deal** (QSR Magazine 403'd to direct fetch; corroborated via\n   QSR/Fransmart/Gazette/kroc.com search results): 5-location deal covering Des Moines, Cedar\n   Rapids, Iowa City; Coralville opened Dec 21, 2024 with Gazette coverage — consistent with the\n   artifact's \"Coralville open per Jan-2025 Gazette coverage; CR date unannounced.\"\n4. **Gyro Hut** (gyrohut.net 403'd to direct fetch; corroborated via Yelp/Grubhub/restaurant.com\n   search results): established 2006, 1455 Mount Vernon Rd SE, Yelp shows 58 reviews — all three\n   details confirmed exactly.\n5. **Pita'z Mediterranean & American Cuisine** (newbocitymarket.org, pitazhiawatha.com,\n   tourismcedarrapids.com search results): Lebanese, two locations — Hiawatha (1057 N Center\n   Point Rd, (319) 395-7482) and NewBo City Market (1100 3rd St SE, (319) 777-8944) — confirmed\n   exactly, including both phone numbers as stated in the artifact.\n\nNo spot-checked claim failed. One incidental finding: Zabihah's CR subregion page also lists\n\"Mr. Shawarma\" — independent search places it (as \"Mr. Shawerma\") in Coral Ridge Mall,\nIowa City/Coralville, i.e. adjacent metro, so the artifact's \"thin CR-proper shawarma\ncompetition\" quick-win claim stands (see weaknesses for the triage note).\n\n## Gate criteria assessment\n\n- **Keyword/entity findings evidence-backed with source URLs and dates**: PASS. 27 research\n  sources each carry URL + retrievedAt (all 2026-07-12); every keyword row and entity finding\n  carries an explicit per-row `basis` with Measured/Estimated/User-provided labeling per the\n  specialist skill contract.\n- **Competitor coverage credible**: PASS. 9 CR-metro entries tiered primary/secondary/\n  adjacent-category, plus adjacent-metro cluster, two announced future entrants (threat-watch),\n  and a defunct-listing pollution note (Zaytoon). Unverified entries (New York Gyro, Halal\n  Zaiqa) are explicitly tagged `secondary-unverified` rather than laundered into facts. The\n  Phase 0 Pita'z conflation guard is carried forward.\n- **Evidence gaps honest, no fabricated metrics**: PASS — exemplary. No search-volume tool was\n  available and the artifact says so loudly (metricsDisclosure), sets every volume/difficulty/\n  CPC to N/A, and grounds opportunity tiers only in observed SERP composition and listing\n  existence. The 11-item evidenceGaps register includes impact ratings and unblock paths, and\n  correctly distinguishes \"not observed\" from verified negatives (ezCater), flags unobservable\n  local-pack rankings, and quarantines a likely-Canadian false positive.\n- **Intents sufficient to seed Phase 2 matrix**: PASS. Six intent families cover occasions\n  (wedding/corporate/graduation/iftar catering, family-dinner), menu categories (shawarma,\n  kabob, falafel, hummus, baklava, chicken-over-rice, gyro), neighborhoods (8 suburbs, 5\n  districts/quadrants), near-me/landmark anchors (CID airport, Kirkwood), plus GEO/AI-answer\n  targets. A 5-pillar cluster map with sizing guidance (~45-55 core pages, doorway-page guard,\n  contested-geo warnings) is directly consumable by a Phase 2 page-matrix planner.\n- **Owner/founder checklist reference**: PASS. Packet sets yahyaApprovalRequired=false for this\n  gate; the artifact nonetheless carries `ownerChecklistReference` to the Phase 0 owner\n  questionnaire and gates every halal/catering-terms claim on owner confirmation.\n- **Packet checklist**: all four items addressed with evidence in the artifact's checklist\n  block.\n\n## Strengths\n\n1. Zero-fabrication metric discipline: N/A everywhere a number could not be measured, with the\n   prioritization basis restated per keyword row.\n2. Directory-absence findings (Zabihah, HalalRun) are direct fetches, not snippets — and both\n   reproduced exactly on independent re-fetch. These are the highest-leverage entity findings\n   for AI-answer visibility and they are solid.\n3. Competitive set is tiered, dated, and conflation-guarded; future entrants create a defensible\n   urgency narrative (first-mover window on CR halal terms) without overclaiming dates.\n4. Evidence-gap register is decision-grade: each gap has an impact rating and a concrete\n   unblock path, and high-impact gaps (halal certification, GBP/local-pack blindness, no volume\n   data) are the right ones to surface before Phase 2.\n5. Seasonal/GEO findings (iftar SERP vacuum, Mother Mosque/Midamar heritage angle) are both\n   evidence-backed and genuinely differentiating.\n\n## Weaknesses (non-blocking)\n\n1. All prioritization is qualitative (SERP composition + listing existence). Acceptable given no\n   tooling, and honestly disclosed — but Phase 2 should treat tier labels as provisional and\n   re-score once GSC or a volume tool connects.\n2. Local-pack/GBP state was never directly observed in Phase 0 or 1; near-me \"quick-win\" claims\n   rest on competitor-absence inference. The artifact flags this itself (high impact). Phase 2\n   should not size near-me pages aggressively until a manual local-pack check happens.\n3. A few venues on the Zabihah CR-region list (Mr. Shawarma, Desi Zaiqa Grill, Kandaka, Oh My\n   Grill, Tata Yaya) were not individually triaged in the competitor notes. My check places\n   Mr. Shawerma in Coral Ridge Mall (adjacent metro), so no CR-proper claim is undermined, but\n   Phase 2 should sweep these names once when building the halal-intent pages.\n4. The Facebook group post citation (community question demand) is login-gated and effectively\n   unverifiable; it carries only one low-weight claim.\n5. The artifact's summary says \"18 web sources\" while sourceDates.method says \"16 searches + 2\n   fetches\" and researchSources has 27 entries — the counts describe different things (retrieval\n   events vs. cited sources) but the summary wording is slightly loose. Cosmetic only.\n6. research-notes.md is referenced by the sealed artifact but is not itself hash-sealed;\n   reviewers and Phase 2 consumers should treat the artifact JSON, not the notes, as canonical.\n\n## Blocking findings\n\nNone.\n\n## Process/integrity checks\n\n- Artifact file SHA256 matches capsule sealed hash: yes.\n- Packet core hash matches capsule packetHash: yes (delegation-block exclusion rule confirmed\n  against `packages/plugin/lib/local-site-workflow/delegation.mjs` in the factory repo).\n- Artifact was not edited by this review.\n",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "reviewer",
+    "workerId": "research-sufficiency-review-2026-07-12-fresh-subagent",
+    "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-research-sufficiency-review-report.json",
+    "reportHash": "05d8acc8bd35b75c837444b891419191b01fdbd20d90c7ffd8fa14d56f056a44",
+    "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+    "packetHash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9",
+    "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-research-sufficiency-review-capsule.json",
+    "capsuleHash": "53572254e04193947727e2ef7945c562831320b71794a56b5eaac71759d515ff",
+    "status": "completed",
+    "commandsRun": [
+      "Get-FileHash phase-1.json, phase-1-artifact.json (SHA256)",
+      "node sha256(JSON.stringify(packet-minus-delegation)+'\\n') to verify packetHash rule",
+      "node sha256(JSON.stringify(capsule)+'\\n') to verify capsuleHash",
+      "WebFetch zabihah.com Cedar Rapids subregion page (spot-check 1)",
+      "WebFetch halalrun.com top-halal-restaurants-in-cedar-rapids-iowa (spot-check 2)",
+      "WebSearch Halal Guys five-Iowa-locations franchise deal (spot-check 3; qsrmagazine.com 403 to direct fetch, corroborated via QSR/Fransmart/Gazette/kroc.com results)",
+      "WebSearch Gyro Hut Mount Vernon Rd established 2006 (spot-check 4; gyrohut.net 403 to direct fetch, corroborated via Yelp/Grubhub/restaurant.com results)",
+      "WebSearch Pita'z Hiawatha NewBo locations (spot-check 5)",
+      "WebSearch Mr. Shawarma Iowa location (incidental triage of untriaged Zabihah entry)"
+    ],
+    "filesRead": [
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-research-sufficiency-review-capsule.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-notes.md",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-research-sufficiency-review-report.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\delegation.mjs"
+    ],
+    "filesChanged": [
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-sufficiency-review-notes.md",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-research-sufficiency-review-report.json"
+    ],
+    "verification": [
+      "Artifact file SHA256 matches capsule sealed hash 23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47.",
+      "Packet core (minus delegation block) hashes to dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9, matching capsule packetHash per the engine's packetHash rule in delegation.mjs.",
+      "5 of 27 cited sources spot-checked live on 2026-07-12; all 5 confirmed the exact claims attached to them (Zabihah absence + O's Grill HalalRank 80 + 29-count; HalalRun absence + 2023-01-17 date + zero CR-proper Mediterranean; Halal Guys 5-location Iowa deal incl. Cedar Rapids; Gyro Hut est. 2006 at 1455 Mount Vernon Rd SE with 58 Yelp reviews; Pita'z two locations with matching phone numbers).",
+      "No fabricated metrics found: every volume/difficulty/CPC slot is N/A with a stated qualitative basis; evidence gaps register is honest and decision-grade.",
+      "Phase artifact was not edited by this review."
+    ],
+    "reviewer": "research-sufficiency"
+  },
+  "reviewedAt": "2026-07-12T23:10:51.605Z"
+}

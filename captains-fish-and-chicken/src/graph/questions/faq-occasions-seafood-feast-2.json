@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-seafood-feast-2",
+  "question": "How do I order a seafood feast for pickup?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

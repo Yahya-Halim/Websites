@@ -1,0 +1,1450 @@
+{
+  "factsVersion": 1,
+  "businessCore": {
+    "name": "Captains Fish and Chicken",
+    "domain": "https://captains-fish-chicken.netlify.app",
+    "hours": {
+      "weekday": {
+        "days": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday"
+        ],
+        "opens": "11:00",
+        "closes": "22:00"
+      },
+      "sunday": {
+        "days": [
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "20:00"
+      },
+      "displayText": "Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm (please call to confirm)"
+    },
+    "phone": "+1-319-221-1040",
+    "address": {
+      "street": "1616 1st Ave NE",
+      "city": "Cedar Rapids",
+      "state": "IA",
+      "stateFullName": "Iowa",
+      "zip": "52402",
+      "country": "US"
+    }
+  },
+  "entity": {
+    "owner": "Ray Aqel"
+  },
+  "attributes": {
+    "servesCuisine": "Seafood, Fried Chicken, Soul Food",
+    "priceRange": "$$"
+  },
+  "menu": [
+    {
+      "slug": "boneless-chicken-bites",
+      "name": "Boneless Chicken Bites",
+      "items": [
+        {
+          "name": "Boneless Wings Meal (8 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 12.99
+            }
+          ]
+        },
+        {
+          "name": "Boneless Wings Meal (12 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 18.99
+            }
+          ]
+        },
+        {
+          "name": "Boneless Wings Only (20 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 26.99
+            }
+          ]
+        },
+        {
+          "name": "Boneless Wings Only (30 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 49.99
+            }
+          ]
+        },
+        {
+          "name": "Boneless Wings Only (50 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 79.99
+            }
+          ]
+        }
+      ],
+      "description": "Crispy boneless wings and chicken bites. Meals include fries, coleslaw, and bread."
+    },
+    {
+      "slug": "chicken-leg-and-thigh",
+      "name": "Chicken Leg & Thigh Mix",
+      "items": [
+        {
+          "name": "Chicken Mix Meal (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 12.99
+            }
+          ]
+        },
+        {
+          "name": "Chicken Mix Meal (6 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 15.99
+            }
+          ]
+        },
+        {
+          "name": "Chicken Mix Meal (10 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 24.99
+            }
+          ]
+        },
+        {
+          "name": "Chicken Mix Only (20 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 39.99
+            }
+          ]
+        },
+        {
+          "name": "Chicken Mix Only (30 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 59.99
+            }
+          ]
+        },
+        {
+          "name": "Chicken Mix Only (50 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 89.99
+            }
+          ]
+        }
+      ],
+      "description": "Bone-in dark-meat fried chicken. Meals include fries, coleslaw, and bread."
+    },
+    {
+      "slug": "chicken-tenders",
+      "name": "Chicken Tenders",
+      "items": [
+        {
+          "name": "Tenders Meal (3 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 12.99
+            }
+          ]
+        },
+        {
+          "name": "Tenders Meal (6 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 21.99
+            }
+          ]
+        },
+        {
+          "name": "Tenders Meal (10 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 34.99
+            }
+          ]
+        },
+        {
+          "name": "Tenders Only (20 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 59.99
+            }
+          ]
+        }
+      ],
+      "description": "Hand-breaded chicken tenders fried to order. Meals include fries, coleslaw, and bread."
+    },
+    {
+      "slug": "desserts",
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Cheesecake",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Caramel Cheesecake",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Carrot Cake",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Caramel Coconut",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Lemon Cake",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        }
+      ],
+      "description": "Sweet finishes."
+    },
+    {
+      "slug": "drinks",
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "Water",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 0.99
+            }
+          ]
+        },
+        {
+          "name": "Mystic",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Calypos",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        }
+      ],
+      "description": "Cool it down."
+    },
+    {
+      "slug": "family-meals-and-combos",
+      "name": "Family Meals & Combo Dinners",
+      "items": [
+        {
+          "name": "Captain's Family Meal Deal",
+          "prices": [
+            {
+              "label": "Deal",
+              "price": 59.99
+            }
+          ],
+          "description": "Large fries and your choice of two items."
+        },
+        {
+          "name": "Combo Dinner — Your Choice of Two Items",
+          "prices": [
+            {
+              "label": "Combo",
+              "price": 18.99
+            }
+          ],
+          "description": "Choose two items to build a combo dinner."
+        },
+        {
+          "name": "Combo Dinner — Your Choice of Three Items",
+          "prices": [
+            {
+              "label": "Combo",
+              "price": 21.99
+            }
+          ],
+          "description": "Mix and match any three items, served together."
+        }
+      ],
+      "description": "Mix-and-match combo dinners and the Captain's Family Meal Deal."
+    },
+    {
+      "slug": "fish-family-deals",
+      "name": "Fish Only Family Deals",
+      "items": [
+        {
+          "name": "Catfish, Perch & Tilapia (10 pcs)",
+          "prices": [
+            {
+              "label": "Family",
+              "price": 49.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish, Perch & Tilapia (20 pcs)",
+          "prices": [
+            {
+              "label": "Family",
+              "price": 69.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish, Perch & Tilapia (30 pcs)",
+          "prices": [
+            {
+              "label": "Family",
+              "price": 99.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish, Perch & Tilapia (40 pcs)",
+          "prices": [
+            {
+              "label": "Family",
+              "price": 139.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish, Perch & Tilapia (50 pcs)",
+          "prices": [
+            {
+              "label": "Family",
+              "price": 166.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Nuggets, Half Pan",
+          "prices": [
+            {
+              "label": "Pan",
+              "price": 49.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Nuggets, Full Pan",
+          "prices": [
+            {
+              "label": "Pan",
+              "price": 89.99
+            }
+          ]
+        }
+      ],
+      "description": "Big-batch fried fish for the whole table — catfish, perch, and tilapia by the piece or the pan."
+    },
+    {
+      "slug": "gizzards-and-livers",
+      "name": "Gizzards & Livers",
+      "items": [
+        {
+          "name": "Gizzards (1 lb)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "Livers (1 lb)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 13.99
+            }
+          ]
+        }
+      ],
+      "description": "Soul-food classics fried to order. Meals include fries, coleslaw, and bread."
+    },
+    {
+      "slug": "kids-meals",
+      "name": "Kids Meals",
+      "items": [
+        {
+          "name": "Kids Chicken Nuggets (5 pcs)",
+          "prices": [
+            {
+              "label": "Kids",
+              "price": 6.99
+            }
+          ],
+          "description": "Served with fries."
+        },
+        {
+          "name": "Kids Chicken Tenders (2 pcs)",
+          "prices": [
+            {
+              "label": "Kids",
+              "price": 6.99
+            }
+          ],
+          "description": "Served with fries."
+        },
+        {
+          "name": "Kids Pizza Puff",
+          "prices": [
+            {
+              "label": "Kids",
+              "price": 6.99
+            }
+          ],
+          "description": "Served with fries."
+        }
+      ],
+      "description": "Kid-sized favorites, served with fries."
+    },
+    {
+      "slug": "party-wings",
+      "name": "Party Wings",
+      "items": [
+        {
+          "name": "Party Wings Meal (8 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "name": "Party Wings Meal (12 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 18.99
+            }
+          ]
+        },
+        {
+          "name": "Party Wings Only (16 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 24.99
+            }
+          ]
+        },
+        {
+          "name": "Party Wings Only (20 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 28.99
+            }
+          ]
+        },
+        {
+          "name": "Party Wings, Chicken Only (30 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 45.99
+            }
+          ]
+        },
+        {
+          "name": "Party Wings, Chicken Only (50 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 79.99
+            }
+          ]
+        }
+      ],
+      "description": "Smaller party-style wings, perfect for sharing and game day. Meals include fries, coleslaw, and bread."
+    },
+    {
+      "slug": "seafood",
+      "name": "Seafood",
+      "items": [
+        {
+          "name": "Catfish Fillet, Perch or Tilapia (2 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Fillet, Perch or Tilapia (3 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 16.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Fillet, Perch or Tilapia (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 21.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Steak, Bone In (2 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Steak, Bone In (3 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 15.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Steak, Bone In (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 19.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Nuggets (1 lb)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 14.99
+            }
+          ],
+          "description": "Bite-sized catfish with a crispy coating."
+        },
+        {
+          "name": "Cod Fish, Wild Caught (2 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "name": "Cod Fish, Wild Caught (3 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 19.99
+            }
+          ]
+        },
+        {
+          "name": "Cod Fish, Wild Caught (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 23.99
+            }
+          ]
+        },
+        {
+          "name": "Crab Cakes (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "name": "Red Snapper (2 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 14.99
+            }
+          ]
+        },
+        {
+          "name": "Red Snapper (3 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 19.99
+            }
+          ]
+        },
+        {
+          "name": "Red Snapper (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 23.99
+            }
+          ]
+        }
+      ],
+      "description": "Fresh-to-order fried seafood — catfish fillet, catfish steak, catfish nuggets, wild-caught cod, perch, tilapia, red snapper, and crab cakes. Every meal comes with fries, coleslaw, and bread."
+    },
+    {
+      "slug": "shrimp",
+      "name": "Shrimp",
+      "items": [
+        {
+          "name": "Jumbo Shrimp, 1/2 lb (7 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 15.99
+            }
+          ]
+        },
+        {
+          "name": "Jumbo Shrimp, 1 lb (14 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 25.99
+            }
+          ]
+        },
+        {
+          "name": "Medium Shrimp (1/2 lb)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "Medium Shrimp (1 lb)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 21.99
+            }
+          ]
+        },
+        {
+          "name": "Shrimp Basket",
+          "prices": [
+            {
+              "label": "Basket",
+              "price": 10.99
+            }
+          ],
+          "description": "Popcorn shrimp basket."
+        }
+      ],
+      "description": "Captains-breaded jumbo and medium shrimp. Meals include fries, coleslaw, and bread."
+    },
+    {
+      "slug": "sides",
+      "name": "Side Orders",
+      "items": [
+        {
+          "name": "Hush Puppies (10 pcs)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ],
+          "description": "Crispy, deep-fried cornbread balls."
+        },
+        {
+          "name": "Breaded Mushrooms (10 pcs)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Mac and Cheese Bites (10 pcs)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Cheese Sticks (5 pcs)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Cheese Curds",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Pizza Puff",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Onion Rings (10 pcs)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Small Fries",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Large Fries",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 6.99
+            }
+          ]
+        },
+        {
+          "name": "Half Pan of Fries",
+          "prices": [
+            {
+              "label": "Pan",
+              "price": 16.99
+            }
+          ]
+        },
+        {
+          "name": "Full Pan of Fries",
+          "prices": [
+            {
+              "label": "Pan",
+              "price": 27.99
+            }
+          ]
+        },
+        {
+          "name": "Extra Sauce",
+          "prices": [
+            {
+              "label": "Add-on",
+              "price": 0.5
+            }
+          ]
+        },
+        {
+          "name": "Gizzards or Livers (side)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 7.99
+            }
+          ]
+        },
+        {
+          "name": "Catfish Nuggets (side)",
+          "prices": [
+            {
+              "label": "Side",
+              "price": 7.99
+            }
+          ]
+        },
+        {
+          "name": "Wings (1 pc, side)",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 2.45
+            }
+          ]
+        },
+        {
+          "name": "Legs (1 pc, side)",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        },
+        {
+          "name": "Thighs (1 pc, side)",
+          "prices": [
+            {
+              "label": "Each",
+              "price": 3.99
+            }
+          ]
+        }
+      ],
+      "description": "Southern-style sides and shareables."
+    },
+    {
+      "slug": "whole-wings",
+      "name": "Whole Wings",
+      "items": [
+        {
+          "name": "Wings Meal (4 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 8.99
+            }
+          ]
+        },
+        {
+          "name": "Wings Meal (6 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 13.99
+            }
+          ]
+        },
+        {
+          "name": "Wings Meal (10 pcs)",
+          "prices": [
+            {
+              "label": "Meal",
+              "price": 19.99
+            }
+          ]
+        },
+        {
+          "name": "Wings Only (20 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 32.99
+            }
+          ]
+        },
+        {
+          "name": "Wings Only (30 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 49.99
+            }
+          ]
+        },
+        {
+          "name": "Wings Only (50 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 84.99
+            }
+          ]
+        },
+        {
+          "name": "Wings Only (100 pcs)",
+          "prices": [
+            {
+              "label": "Only",
+              "price": 159.99
+            }
+          ]
+        }
+      ],
+      "description": "Bone-in whole wings fried to order. Meals come with fries, coleslaw, and bread; larger counts are wings only."
+    }
+  ],
+  "questionsAndAnswers": [
+    {
+      "question": "How many people does a family meal feed?",
+      "answers": [
+        {
+          "text": "Our family meals and combos are portioned for a hungry household. A single family deal comfortably covers a family of four, and the three-item combo stretches further for larger groups. If you're feeding five or more, ask about our fish family deals when you call (319) 221-1040 and we'll help you size the order.",
+          "cites": [
+            "occasions/family-dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How do I order family dinner for pickup?",
+      "answers": [
+        {
+          "text": "The easiest way is to call (319) 221-1040 and order ahead. Since everything is fried fresh to order, calling gives the kitchen time to have your dinner hot and bagged when you arrive at 1616 1st Ave NE.",
+          "cites": [
+            "occasions/family-dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Can I get family dinner delivered?",
+      "answers": [
+        {
+          "text": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Open your preferred app, search for Captains Fish and Chicken, and build your order. Delivery times and fees are set by each app.",
+          "cites": [
+            "occasions/family-dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Do you have options for kids?",
+      "answers": [
+        {
+          "text": "We do. Our kids meals are sized right for smaller appetites, so you can add one or two alongside the family deal and keep everyone at the table happy.",
+          "cites": [
+            "occasions/family-dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Should I call ahead for a big family order?",
+      "answers": [
+        {
+          "text": "Yes, please call ahead for larger orders. A quick call to (319) 221-1040 lets us prep everything fresh and have it ready at your pickup time instead of making you wait.",
+          "cites": [
+            "occasions/family-dinner"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What kinds of fish can I get for a fish fry?",
+      "answers": [
+        {
+          "text": "We fry fresh catfish fillet, perch, tilapia, and cod. Each is dropped fresh to order for a crispy golden finish. If you want a mix for the table, a fish family deal lets you feed a group, and you can call (319) 221-1040 to talk through options.",
+          "cites": [
+            "occasions/friday-fish-fry"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How many does a fish family deal feed for a fish fry?",
+      "answers": [
+        {
+          "text": "The 10-piece fish family deal comfortably feeds a family of four to six as the main dish with sides. For larger gatherings, we offer bigger fish family deals up to a 50-piece. Call (319) 221-1040 and tell us your headcount.",
+          "cites": [
+            "occasions/friday-fish-fry"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How do I order a fish fry for Friday pickup?",
+      "answers": [
+        {
+          "text": "Call (319) 221-1040 and order ahead. Since we fry fresh to order, calling gives the kitchen time to have your fish hot and ready when you arrive at 1616 1st Ave NE, especially on a busy Friday evening.",
+          "cites": [
+            "occasions/friday-fish-fry"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Can I get a fish fry delivered?",
+      "answers": [
+        {
+          "text": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app. Each app sets its own delivery times and fees.",
+          "cites": [
+            "occasions/friday-fish-fry"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Is the fish fry only on Fridays?",
+      "answers": [
+        {
+          "text": "Not at all. We fry fresh fish every day, all year round, so you can enjoy a fish fry any day you like. Friday is just a favorite. Call (319) 221-1040 to confirm current hours before you head over.",
+          "cites": [
+            "occasions/friday-fish-fry"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How many wings should I order for a watch party?",
+      "answers": [
+        {
+          "text": "A good rule of thumb is 6 to 8 wings per person for a group that's making wings the main event, or 4 to 5 if you're also serving tenders and sides. For a crowd of eight to ten, ordering party wings plus a 10pc whole wings meal keeps everyone fed. Call (319) 221-1040 and we'll help you size it.",
+          "cites": [
+            "occasions/game-day-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How do I order wings for game day?",
+      "answers": [
+        {
+          "text": "Call (319) 221-1040 and order ahead so we can time your wings to your kickoff. Everything is fried fresh to order, so a heads-up call means hot wings ready right when you need them at 1616 1st Ave NE.",
+          "cites": [
+            "occasions/game-day-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Can you deliver wings to my party?",
+      "answers": [
+        {
+          "text": "Yes. We're on DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your app and order for delivery. Each app sets its own delivery times and fees.",
+          "cites": [
+            "occasions/game-day-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Do you have boneless options for the group?",
+      "answers": [
+        {
+          "text": "We do. Our boneless chicken bites and chicken tenders are great for guests who'd rather skip the bone, and they round out a wing spread nicely.",
+          "cites": [
+            "occasions/game-day-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Should I call ahead for a large wing order?",
+      "answers": [
+        {
+          "text": "Yes. For a big game-day order, calling (319) 221-1040 ahead of time lets the kitchen fry everything fresh and have it bagged hot at your pickup time instead of during the rush.",
+          "cites": [
+            "occasions/game-day-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How many people does a 50-piece fish family deal feed?",
+      "answers": [
+        {
+          "text": "A 50-piece fish family deal generally serves around 15 to 20 people as a main dish, especially when paired with sides. For a smaller group of six to eight, the 10-piece fish family deal is a better fit. Call (319) 221-1040 and tell us your headcount and we'll recommend the right size.",
+          "cites": [
+            "occasions/office-and-party-catering"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What should I order to cater an office lunch for 20?",
+      "answers": [
+        {
+          "text": "For about 20 people, a 50-piece fish family deal plus a batch or two of party wings and a couple of large sides usually does it. If some of your group prefers chicken, add a three-item family combo. Call (319) 221-1040 and we'll build the order to your headcount.",
+          "cites": [
+            "occasions/office-and-party-catering"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How far in advance should I call for catering?",
+      "answers": [
+        {
+          "text": "For large catering orders, please call (319) 221-1040 as early as you can, at minimum several hours ahead and more for very big orders. Since everything is fried fresh to order, advance notice lets us prep it fresh and have it ready at your scheduled pickup time at 1616 1st Ave NE.",
+          "cites": [
+            "occasions/office-and-party-catering"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How do I order catering, by phone or app?",
+      "answers": [
+        {
+          "text": "For catering, call (319) 221-1040 directly. Phone ordering lets us confirm quantities, timing, and pickup for large orders. Smaller catering orders can also be placed for delivery through DoorDash, Uber Eats, or Grubhub.",
+          "cites": [
+            "occasions/office-and-party-catering"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Can catering be delivered?",
+      "answers": [
+        {
+          "text": "Smaller catering orders can be delivered through DoorDash, Uber Eats, and Grubhub, subject to each app's size limits and fees. For the largest fish family deals and pans, pickup at 1616 1st Ave NE is the most reliable option, and calling ahead ensures it's ready and fresh.",
+          "cites": [
+            "occasions/office-and-party-catering"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Do you offer pans for parties?",
+      "answers": [
+        {
+          "text": "Yes. Our nugget pans and fish family deals are made for feeding groups, and party wings can be added by the batch. Call (319) 221-1040 to combine pans, wings, and sides into one catering order sized to your party.",
+          "cites": [
+            "occasions/office-and-party-catering"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What are good quick lunch options?",
+      "answers": [
+        {
+          "text": "For a fast lunch, try a two-item combo, a basket of chicken tenders, a 4-piece whole wings meal, or a single catfish fillet with a side. All are fried fresh to order and easy to eat on a break. Call (319) 221-1040 to order ahead.",
+          "cites": [
+            "occasions/quick-lunch-takeout"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How do I order lunch ahead so it's ready fast?",
+      "answers": [
+        {
+          "text": "Call (319) 221-1040 and place your order before you head over. Since everything is fried fresh to order, a call ahead means your lunch is hot and bagged when you arrive at 1616 1st Ave NE, so you're not waiting on a short break.",
+          "cites": [
+            "occasions/quick-lunch-takeout"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Can I get lunch delivered to my workplace?",
+      "answers": [
+        {
+          "text": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app, and have lunch delivered to your office or job site. Each app sets its own delivery times and fees.",
+          "cites": [
+            "occasions/quick-lunch-takeout"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Do you have lunch portions for one person?",
+      "answers": [
+        {
+          "text": "Yes. Combos, tender baskets, and single fillets are sized for one, so you can grab exactly what you need without a big order. Call (319) 221-1040 if you'd like a recommendation.",
+          "cites": [
+            "occasions/quick-lunch-takeout"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Are you open for lunch?",
+      "answers": [
+        {
+          "text": "We serve fresh takeout throughout the day. Hours can vary, so please call (319) 221-1040 to confirm current hours before you head over for lunch.",
+          "cites": [
+            "occasions/quick-lunch-takeout"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What's on the seafood feast?",
+      "answers": [
+        {
+          "text": "Our seafood lineup features jumbo shrimp, a shrimp basket, crab cakes, fresh red snapper, and cod, all fried fresh to order. Mix and match to build the feast you want, and add sides to round out the plate. Call (319) 221-1040 if you'd like help putting it together.",
+          "cites": [
+            "occasions/seafood-feast"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much seafood should I order to feed a group?",
+      "answers": [
+        {
+          "text": "For a shared seafood feast, plan on a mix such as a shrimp basket plus a couple of crab cakes and a red snapper for two to three people, scaling up from there. Tell us your headcount at (319) 221-1040 and we'll help you size the order.",
+          "cites": [
+            "occasions/seafood-feast"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How do I order a seafood feast for pickup?",
+      "answers": [
+        {
+          "text": "Call (319) 221-1040 and order ahead so the kitchen can time your seafood to your arrival. Because everything is fried fresh to order, calling ahead means it's hot and crispy when you pick up at 1616 1st Ave NE.",
+          "cites": [
+            "occasions/seafood-feast"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Can I get seafood delivered?",
+      "answers": [
+        {
+          "text": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your preferred app to order. Delivery times and fees are set by each app.",
+          "cites": [
+            "occasions/seafood-feast"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "Should I call ahead for a large seafood order?",
+      "answers": [
+        {
+          "text": "Yes. For a bigger seafood feast, calling (319) 221-1040 ahead lets us prep everything fresh and have it ready at your pickup time instead of making you wait during a rush.",
+          "cites": [
+            "occasions/seafood-feast"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "What are Captains Fish and Chicken's hours?",
+      "answers": [
+        {
+          "text": "Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm (please call to confirm)",
+          "cites": [
+            "facts/hours"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Boneless Chicken Bites cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Boneless Wings Meal (8 pcs): Meal 12.99\nBoneless Wings Meal (12 pcs): Meal 18.99\nBoneless Wings Only (20 pcs): Only 26.99\nBoneless Wings Only (30 pcs): Only 49.99\nBoneless Wings Only (50 pcs): Only 79.99",
+          "cites": [
+            "menu/boneless-chicken-bites"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Chicken Leg & Thigh Mix cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Chicken Mix Meal (4 pcs): Meal 12.99\nChicken Mix Meal (6 pcs): Meal 15.99\nChicken Mix Meal (10 pcs): Meal 24.99\nChicken Mix Only (20 pcs): Only 39.99\nChicken Mix Only (30 pcs): Only 59.99\nChicken Mix Only (50 pcs): Only 89.99",
+          "cites": [
+            "menu/chicken-leg-and-thigh"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Chicken Tenders cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Tenders Meal (3 pcs): Meal 12.99\nTenders Meal (6 pcs): Meal 21.99\nTenders Meal (10 pcs): Meal 34.99\nTenders Only (20 pcs): Only 59.99",
+          "cites": [
+            "menu/chicken-tenders"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Desserts cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Cheesecake: Each 3.99\nCaramel Cheesecake: Each 3.99\nCarrot Cake: Each 3.99\nCaramel Coconut: Each 3.99\nLemon Cake: Each 3.99",
+          "cites": [
+            "menu/desserts"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Drinks cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Water: Each 0.99\nMystic: Each 3.99\nCalypos: Each 3.99",
+          "cites": [
+            "menu/drinks"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Family Meals & Combo Dinners cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Captain's Family Meal Deal: Deal 59.99\nCombo Dinner — Your Choice of Two Items: Combo 18.99\nCombo Dinner — Your Choice of Three Items: Combo 21.99",
+          "cites": [
+            "menu/family-meals-and-combos"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Fish Only Family Deals cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Catfish, Perch & Tilapia (10 pcs): Family 49.99\nCatfish, Perch & Tilapia (20 pcs): Family 69.99\nCatfish, Perch & Tilapia (30 pcs): Family 99.99\nCatfish, Perch & Tilapia (40 pcs): Family 139.99\nCatfish, Perch & Tilapia (50 pcs): Family 166.99\nCatfish Nuggets, Half Pan: Pan 49.99\nCatfish Nuggets, Full Pan: Pan 89.99",
+          "cites": [
+            "menu/fish-family-deals"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Gizzards & Livers cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Gizzards (1 lb): Meal 13.99\nLivers (1 lb): Meal 13.99",
+          "cites": [
+            "menu/gizzards-and-livers"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Kids Meals cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Kids Chicken Nuggets (5 pcs): Kids 6.99\nKids Chicken Tenders (2 pcs): Kids 6.99\nKids Pizza Puff: Kids 6.99",
+          "cites": [
+            "menu/kids-meals"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Party Wings cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Party Wings Meal (8 pcs): Meal 14.99\nParty Wings Meal (12 pcs): Meal 18.99\nParty Wings Only (16 pcs): Only 24.99\nParty Wings Only (20 pcs): Only 28.99\nParty Wings, Chicken Only (30 pcs): Only 45.99\nParty Wings, Chicken Only (50 pcs): Only 79.99",
+          "cites": [
+            "menu/party-wings"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Seafood cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Catfish Fillet, Perch or Tilapia (2 pcs): Meal 13.99\nCatfish Fillet, Perch or Tilapia (3 pcs): Meal 16.99\nCatfish Fillet, Perch or Tilapia (4 pcs): Meal 21.99\nCatfish Steak, Bone In (2 pcs): Meal 13.99\nCatfish Steak, Bone In (3 pcs): Meal 15.99\nCatfish Steak, Bone In (4 pcs): Meal 19.99\nCatfish Nuggets (1 lb): Meal 14.99\nCod Fish, Wild Caught (2 pcs): Meal 14.99\nCod Fish, Wild Caught (3 pcs): Meal 19.99\nCod Fish, Wild Caught (4 pcs): Meal 23.99\nCrab Cakes (4 pcs): Meal 14.99\nRed Snapper (2 pcs): Meal 14.99\nRed Snapper (3 pcs): Meal 19.99\nRed Snapper (4 pcs): Meal 23.99",
+          "cites": [
+            "menu/seafood"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Shrimp cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Jumbo Shrimp, 1/2 lb (7 pcs): Meal 15.99\nJumbo Shrimp, 1 lb (14 pcs): Meal 25.99\nMedium Shrimp (1/2 lb): Meal 13.99\nMedium Shrimp (1 lb): Meal 21.99\nShrimp Basket: Basket 10.99",
+          "cites": [
+            "menu/shrimp"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Side Orders cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Hush Puppies (10 pcs): Side 6.99\nBreaded Mushrooms (10 pcs): Side 6.99\nMac and Cheese Bites (10 pcs): Side 6.99\nCheese Sticks (5 pcs): Side 6.99\nCheese Curds: Side 6.99\nPizza Puff: Side 6.99\nOnion Rings (10 pcs): Side 6.99\nSmall Fries: Side 3.99\nLarge Fries: Side 6.99\nHalf Pan of Fries: Pan 16.99\nFull Pan of Fries: Pan 27.99\nExtra Sauce: Add-on 0.5\nGizzards or Livers (side): Side 7.99\nCatfish Nuggets (side): Side 7.99\nWings (1 pc, side): Each 2.45\nLegs (1 pc, side): Each 3.99\nThighs (1 pc, side): Each 3.99",
+          "cites": [
+            "menu/sides"
+          ]
+        }
+      ]
+    },
+    {
+      "question": "How much do Whole Wings cost at Captains Fish and Chicken?",
+      "answers": [
+        {
+          "text": "Wings Meal (4 pcs): Meal 8.99\nWings Meal (6 pcs): Meal 13.99\nWings Meal (10 pcs): Meal 19.99\nWings Only (20 pcs): Only 32.99\nWings Only (30 pcs): Only 49.99\nWings Only (50 pcs): Only 84.99\nWings Only (100 pcs): Only 159.99",
+          "cites": [
+            "menu/whole-wings"
+          ]
+        }
+      ]
+    }
+  ],
+  "provenanceSummary": {
+    "counts": {
+      "KNOW": 118
+    },
+    "lastVerifiedMax": "2026-07-07"
+  },
+  "graphHash": "1fb720b6f58300a1cc524b3bd9c4ca8e24c7fe24d4884642bfa88a59381e7a10"
+}

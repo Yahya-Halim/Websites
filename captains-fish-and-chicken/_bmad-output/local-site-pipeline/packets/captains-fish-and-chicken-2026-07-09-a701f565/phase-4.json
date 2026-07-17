@@ -1,0 +1,428 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 4,
+  "phaseName": "BUILD",
+  "createdAt": "2026-07-09T23:08:59.382Z",
+  "specialist": "seo-content-writer",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md",
+  "requiredArtifactFields": [
+    "filesChanged",
+    "routesGenerated",
+    "commandsRun",
+    "buildResult"
+  ],
+  "checklist": [
+    {
+      "id": "read-phase2-build-matrix",
+      "label": "Read packet.inputEvidence.phase2.pageMatrix, pageMatrixStrategy, and requiredCroBlocks before editing site files; routesGenerated must prove the approved internal matrix."
+    },
+    {
+      "id": "read-phase3-design-handoff",
+      "label": "Read packet.inputEvidence.phase3.designSystem.path, especially Phase 4 Build Notes, before editing site files."
+    },
+    {
+      "id": "apply-phase3-identity-decision",
+      "label": "Apply packet.inputEvidence.phase3.identityDecision exactly; do not invent domain, email, GA, payment, or canonical metadata."
+    },
+    {
+      "id": "apply-design-token-handoff-if-present",
+      "label": "When packet.inputEvidence.phase3.designTokenExport exists, apply that repo-owned token export and preserve designTokenSource, designTokenExportPath, and designTokenHash in the Phase 4 artifact."
+    },
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    },
+    {
+      "id": "review-notes-file",
+      "label": "Require reviewer notes to travel by --notes-file."
+    }
+  ],
+  "inputEvidence": {
+    "phase2": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-09-a701f565/phase-2.json",
+      "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\phase-2-artifact.json",
+      "artifactHash": "2589da7ca284bde56ee19d9a02d01f5746ef70fb4746ceff2bb7473f8d0c5bb9",
+      "pageMatrixStrategy": {
+        "model": "Restaurant single-location depth with live-site route parity: menu-category x occasion x search-intent families, plus a genuine-fact neighborhood ring and a GEO truth-assertion page - identical route set to the deployed 2026-07-08 build",
+        "pageFamilies": [
+          "Home (conversion hub) - 1 route",
+          "Menu hub + 14 menu-category pages (owner-confirmed menu sections from src/data/menu.json)",
+          "Occasion pages - 6 buying moments (src/data/occasions.json)",
+          "Search-intent root landings - 8 (dish + near-me + soul-food + open-late + catering)",
+          "Story / info / FAQ / how-to-order landings - 4",
+          "Location truth-assertion page - 1 (GEO disambiguation)",
+          "Neighborhood pages - 2 (anti-doorway floor met)",
+          "Contact - 1"
+        ],
+        "crossLinkPlan": "Menu sections <-> related occasions <-> matching intent landings; /catering-cedar-rapids/ <-> /occasions/office-and-party-catering/ (intent vs occasion framing); /open-late-cedar-rapids/ -> menu hub + /fish-and-chicken-near-me/; /location/ -> /contact/ + /about/ + /faq/ (disambiguation cluster); neighborhoods -> menu hub + nearest intent landing; home -> menu hub + top occasions + top intents. Occasions >=4 cross-links, intent landings >=2.",
+        "routeParity": "HARD CONSTRAINT for Phase 4: generate routes EXACTLY matching this matrix - the same 38 internal routes live at https://captains-fish-chicken.netlify.app since 2026-07-08. Zero deltas versus the approved archived matrix (run c0033522). URL stability protects the in-progress first indexing of the owned domain; any future route change requires redirects and a new approval.",
+        "sapNote": "No service-area SAP pages. The SW-quadrant neighborhood page remains REJECTED - no genuine SW local facts beyond city-wide app delivery = doorway risk; SW delivery reach stays as copy on /fish-and-chicken-near-me/. This matches the engine's sapEligible predicate: no location in data carries SAP town-fact minima."
+      },
+      "imageSlotPlan": [
+        "existing-93-asset-library - REUSE: 87 menu-item renders + occasion/marketing heroes + og image + logo produced in the archived run remain valid for the unchanged menu (same items, same prices); Phase 6 re-verifies manifest/selections/exports against this run rather than regenerating (~186 credits saved). Representational.",
+        "home-hero-animated - REUSE: owner-approved beach-loop video + webp keyframes. Representational.",
+        "open-late-hero - EXISTING from archived run (evening storefront-glow illustration for /open-late-cedar-rapids/); re-verify presence in Phase 6, regenerate only if missing. Representational.",
+        "catering-intent-hero - REUSE catering-party-pans hero on /catering-cedar-rapids/. Representational.",
+        "brand-logo - OWNER FILE DROP still pending at public/logo.png (shark-captain emblem, navy/gold); raster placeholder currently live; swap on delivery, no route impact. Not representational.",
+        "real-photography - OPEN: owner photos to replace representational renders when supplied; no route impact. Not representational."
+      ],
+      "requiredCroBlocks": {
+        "note": "Restaurant archetype carries no auto-dealer CRO block contract (croContractFor('restaurant', ...) === null). Restaurant conversion elements are planned per kind below; the call-only exception applies site-wide (owner decision, sealed in this run's Phase 0: no lead-form endpoint and no SMS number exist).",
+        "layoutSingleton": [
+          "sticky mobile call bar (tel:, call-only) - mounted once in the layout, not per page"
+        ],
+        "home": [
+          "hero + single call CTA + 3 value-props strip (review-stat valueProp subject to the GBP count verification advisory)",
+          "signature dish cards",
+          "owner-price favorites band",
+          "mid-page CTA banner",
+          "occasion cards",
+          "how-to-order steps + delivery CTAs",
+          "hours+location block (caveated hours)",
+          "style rule: matches interior pages (left h2s, white steel-bordered cards, navy shell-only, gold CTAs-only)"
+        ],
+        "menu-hub-and-sections": [
+          "priced item cards (Menu JSON-LD)",
+          "call CTA",
+          "order-online CTAs (external links as CTAs, not pages)",
+          "representational-photos note"
+        ],
+        "occasion": [
+          "hero + call CTA",
+          ">=1 featured menu item",
+          ">=5 FAQ",
+          ">=4 cross-links"
+        ],
+        "landing-intent-story-info-faq": [
+          "hero + call CTA",
+          "body",
+          "FAQ where relevant",
+          ">=2 cross-links"
+        ],
+        "neighborhood": [
+          "single city-specific H1",
+          ">=1 genuine local fact",
+          ">=2 local-proximity trust lines",
+          ">=1 town-specific FAQ",
+          ">=400 chars unique local body text",
+          "per-city title/meta",
+          "NAP keeps the HQ city"
+        ],
+        "contact": [
+          "NAP + map + caveated hours + directions + call CTA"
+        ],
+        "documentedExceptions": [
+          "lead form OMITTED site-wide (no site.leadForm.endpoint exists; owner call-only decision, Phase 0 sealed)",
+          "dual CTA reduced to single tel: call CTA (no SMS number exists; owner call-only decision)",
+          "trust content ships as 'why choose us' copy, not the auto-dealer 6-fact grid (fewer than six verified trust facts exist; KG7 omit-never-fabricate)",
+          "offer callout and financing block OMITTED (site.offers empty, site.financing.providers empty)"
+        ]
+      },
+      "minimumPageCountRationale": "38 internal routes (>=25 floor, <=500 cap): 1 home + 1 menu hub + 14 menu sections (owner-confirmed menu paste) + 6 occasions + 8 search-intent landings + 4 info/faq/story landings + 1 location truth page + 2 neighborhoods + 1 contact. This is EXACTLY the route set live at https://captains-fish-chicken.netlify.app since 2026-07-08 (verified this run against src/data/landings.json 13 + occasions.json 6 + neighborhoods.json 2 + menu.json 14 sections + the three fixed routes). Route parity is deliberate: the owned domain is one day into its first indexing (still absent from SERP index per this run's sealed Phase 1), so URL stability is itself an SEO asset, and no sealed Phase 0/1 finding of this run adds a route that clears the anti-thin floor or removes one that fails it. External ordering links are CTAs (externalCount 0). If a neighborhood page's facts failed at authoring the count would drop to 36-37, still above floor - but both neighborhoods' facts are re-carried in this run's sealed Phase 1 entities/localModifiers, so no drop is expected.",
+      "pageMatrix": [
+        {
+          "path": "/",
+          "kind": "home",
+          "title": "Captains Fish and Chicken - Fresh Fish, Chicken & Seafood in Cedar Rapids",
+          "note": "Hero + single call CTA + 3 value props. REVIEW-STAT ADVISORY: the Google rating valueProp may cite 4.4 stars but the review COUNT is drifting (owner-cited 208 on 2026-07-07; Wanderlog Google-mirror 192 on 2026-07-09) - Phase 4 must verify the count against live GBP before citing one, or cite the attributed, dated owner figure without implying currency."
+        },
+        {
+          "path": "/menu/",
+          "kind": "menu-hub",
+          "title": "Menu",
+          "parent": "/"
+        },
+        {
+          "path": "/menu/seafood/",
+          "kind": "menu-section",
+          "parent": "/menu/",
+          "note": "Owner menu paste 2026-07-07; confirmed species only (catfish, perch, tilapia, cod, calamari, crab cakes per owner paste)."
+        },
+        {
+          "path": "/menu/whole-wings/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/party-wings/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/boneless-chicken-bites/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/chicken-leg-and-thigh/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/chicken-tenders/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/shrimp/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/gizzards-and-livers/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/fish-family-deals/",
+          "kind": "menu-section",
+          "parent": "/menu/",
+          "note": "Large-format family fish deals - Phase 1 growth pillar: no verified-open local rival competes on bulk fried-fish value; '50 piece' terms have no SERP presence yet (N/A)."
+        },
+        {
+          "path": "/menu/family-meals-and-combos/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/sides/",
+          "kind": "menu-section",
+          "parent": "/menu/",
+          "note": "Gazette-reported sides additions (mashed potatoes, mac and cheese delta) remain OUT pending owner confirmation - open questionnaire item; menu ships exactly as the 2026-07-07 owner paste."
+        },
+        {
+          "path": "/menu/kids-meals/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/desserts/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/menu/drinks/",
+          "kind": "menu-section",
+          "parent": "/menu/"
+        },
+        {
+          "path": "/occasions/family-dinner/",
+          "kind": "occasion"
+        },
+        {
+          "path": "/occasions/game-day-wings/",
+          "kind": "occasion"
+        },
+        {
+          "path": "/occasions/office-and-party-catering/",
+          "kind": "occasion",
+          "note": "Cross-links /catering-cedar-rapids/ (occasion vs search-intent framing of the same open catering gap)."
+        },
+        {
+          "path": "/occasions/friday-fish-fry/",
+          "kind": "occasion",
+          "note": "Phase 1 re-validated 2026-07-09: fish-fry SERP remains bar/event-dominated with no counter-service takeout specialist; year-round takeout angle; KHAK Lent roundup pitch stays on the launch checklist (Lent 2027)."
+        },
+        {
+          "path": "/occasions/seafood-feast/",
+          "kind": "occasion",
+          "note": "Owner-confirmed items only."
+        },
+        {
+          "path": "/occasions/quick-lunch-takeout/",
+          "kind": "occasion"
+        },
+        {
+          "path": "/fried-catfish-cedar-rapids/",
+          "kind": "landing-intent",
+          "note": "Phase 1 (re-verified 2026-07-09): SERP summary places Captains at/near the top of Yelp fried-fish results - this is Estimated, so copy must NOT claim 'ranked #1 on Yelp' or any list position; Gazette cornmeal-catfish quote citable with attribution. Species cluster anchor (catfish/perch/tilapia/cod)."
+        },
+        {
+          "path": "/fried-chicken-and-wings-cedar-rapids/",
+          "kind": "landing-intent",
+          "note": "Play the lemon-pepper + fish-combo flank, not head terms (Harold's confirmed operating with late hours; Wingstop owns wings head terms)."
+        },
+        {
+          "path": "/seafood-takeout-cedar-rapids/",
+          "kind": "landing-intent",
+          "note": "Fried-basket counter-service lane vs per-pound boil houses (Juicy Crab Island, Crab House). Fresh-vs-frozen positioning vs LJS Williams Blvd (reopened) is fair game, BUT the NE fast-seafood vacancy dates to June 2014 (Corridor Business Journal) - never frame the LJS 1st Ave SE closure as recent."
+        },
+        {
+          "path": "/soul-food-cedar-rapids/",
+          "kind": "landing-intent",
+          "note": "Secondary pillar - field refilled (I'm Soul Hungry, Fork and Sports, Iowa Soul Food Market); sharpen the fish+chicken+soul-food-sides breadth angle; closed rivals (Vivian's, Just Like Home, Sweetiepie's) must not be cited as live."
+        },
+        {
+          "path": "/fish-and-chicken-near-me/",
+          "kind": "landing-intent",
+          "note": "Carries the city-wide delivery-reach copy including the SW quadrant (apps deliver city-wide from the NE store) - this is the SW-recapture play WITHOUT a doorway page."
+        },
+        {
+          "path": "/party-wings-cedar-rapids/",
+          "kind": "landing-intent"
+        },
+        {
+          "path": "/open-late-cedar-rapids/",
+          "kind": "landing-intent",
+          "note": "Hours remain owner-UNCONFIRMED - copy keeps the call-to-confirm caveat (aggregators agree Mon-Thu to 10pm, Fri-Sat to 11pm). Do not claim 'latest open': Two Bros hits 3am Fri-Sat and Harold's 2am Sat; the claim is 'open later than most', qualified."
+        },
+        {
+          "path": "/catering-cedar-rapids/",
+          "kind": "landing-intent",
+          "note": "Phase 1 quick win 3 re-validated 2026-07-09: 'fried chicken catering cedar rapids' + 'party pans' SERP still open - only Popeyes-via-ezCater ranks; verified-open rival set has zero owned catering content. Cross-links the catering occasion."
+        },
+        {
+          "path": "/how-to-order/",
+          "kind": "landing-info",
+          "note": "Phone-first ordering; delivery-app links are CTAs, never pages."
+        },
+        {
+          "path": "/about/",
+          "kind": "landing-info",
+          "note": "Owner story per KHAK 2024-10-28 (attributed): Ray Aqel, opened Oct 2024 in the former Gutamex/Brick City Grill space, first Iowa location, previously opened and sold same-model restaurants in MN/IL/MI. Ray also owns Pita Kabab - state it plainly to aid disambiguation."
+        },
+        {
+          "path": "/faq/",
+          "kind": "landing-faq",
+          "note": "Disambiguation FAQs re-confirmed load-bearing 2026-07-09 (stale SW Yelp + Grubhub listings still rank on the brand SERP): 'Is the 6th St SW Captains still open?' (no - it became Pita Kabab in 2025, same owner); 'Is Captains the same as Pita Kabab?'. Rating FAQ cites 4.4 attributed and dated; review count pending GBP verification (Phase 4 advisory)."
+        },
+        {
+          "path": "/made-fresh-to-order/",
+          "kind": "landing-story",
+          "note": "Cornmeal breading + freshly ground lemon pepper - Gazette-attributed press quotes; owning this language on-site redirects AI citation to the business (Phase 1 GEO 2)."
+        },
+        {
+          "path": "/location/",
+          "kind": "landing-info",
+          "note": "GEO truth assertion, re-confirmed necessary 2026-07-09: ONE location - 1616 1st Ave NE; explicit DATED statement that 3100 6th St SW closed as Captains and became Pita Kabab in 2025 (same owner, different cuisine); map, directions, parking. Counters the stale two-location signals (Yelp SW 'Updated March 2026', Grubhub store 11805992) still ranking today, plus out-of-market name collisions (incl. the 'Captain Fish & Chicken' iOS app, App Store id6753231029 - different business)."
+        },
+        {
+          "path": "/neighborhoods/northeast-cedar-rapids/",
+          "kind": "neighborhood",
+          "note": "Genuine facts re-carried in this run's sealed Phase 1: Mound View ('Moundview' city spelling), Wellington Heights, Coe College, 1st Avenue East corridor, I-380. Meets anti-doorway floor: single city-specific H1, >=1 genuine local fact, >=2 proximity trust lines, >=1 town FAQ."
+        },
+        {
+          "path": "/neighborhoods/marion-ia/",
+          "kind": "neighborhood",
+          "note": "~5 mi via Hwy 100/7th Ave; app delivery reach; no fried fish/chicken specialist in Marion (Phase 1 local modifier gap). Meets the same anti-doorway floor."
+        },
+        {
+          "path": "/contact/",
+          "kind": "contact",
+          "note": "NAP (1616 1st Ave NE, Cedar Rapids, IA 52402, (319) 221-1040) + map + caveated hours + directions + call CTA. No lead form (owner call-only policy)."
+        }
+      ]
+    },
+    "phase3": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-09-a701f565/phase-3.json",
+      "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+      "artifactHash": "ee63a4a2d93405f3e5c1e4343b1fcc6f923853d9d1a2120bd19330dbb4f90c9c",
+      "designSystem": {
+        "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-3/design-system.md",
+        "hash": "d0f386cdf138867f6b20791e4d55b36a11feea571aecb18454d056399e08c589",
+        "query": "local restaurant takeout fried fish chicken seafood counter-service warm trustworthy",
+        "stack": "astro"
+      },
+      "designContentBuildPlan": {
+        "model": "Re-run parity build: author content for the approved 38-route matrix using the existing live design system; route set must match the deployed 2026-07-08 build exactly (zero deltas).",
+        "pageFamilies": [
+          "Home (conversion hub) - 1 route: hero + single call CTA + 3 value props, signature dish cards, owner-price favorites band, mid-page CTA banner, occasion cards, how-to-order steps + delivery CTAs, hours+location block (caveated hours); interior visual language per owner style rule",
+          "Menu hub + 14 menu-section pages: priced item cards with Menu JSON-LD, call CTA, order-online external CTAs (links as CTAs, not pages), representational-photos note",
+          "Occasion pages - 6: hero + call CTA, >=1 featured menu item, >=5 FAQ, >=4 cross-links",
+          "Search-intent landings - 8: hero + call CTA, body, FAQ where relevant, >=2 cross-links; per-page copy advisories from the sealed matrix notes",
+          "Info/FAQ/story landings - 4: /how-to-order/ phone-first, /about/ attributed KHAK owner story with Pita Kabab disambiguation, /faq/ disambiguation FAQs, /made-fresh-to-order/ Gazette-attributed language",
+          "Location truth-assertion page - 1: one location 1616 1st Ave NE; dated statement that 3100 6th St SW closed as Captains and became Pita Kabab in 2025",
+          "Neighborhood pages - 2: single city-specific H1, >=1 genuine local fact, >=2 proximity trust lines, >=1 town FAQ, >=400 chars unique body, per-city title/meta, NAP keeps HQ city",
+          "Contact - 1: NAP + map + caveated hours + directions + call CTA; no lead form"
+        ],
+        "conversionPlan": [
+          "Sticky mobile call bar (tel:, call-only) mounted once in the Base layout - never per page",
+          "Single gold call CTA per hero; gold pill CTAs with navy-900 text sitewide",
+          "Documented exceptions (sealed owner call-only decision): lead form OMITTED site-wide, dual CTA reduced to single tel: CTA, trust content ships as why-choose-us copy not a 6-fact grid, offer and financing blocks OMITTED"
+        ],
+        "copyAdvisories": [
+          "Chicago Grill framing is returning-not-new",
+          "LJS 1st Ave SE closure dates to June 2014 - never frame as recent",
+          "No '#1 on Yelp' or list-position claims (Estimated evidence only)",
+          "Pita Kabab mentioned for disambiguation only (same owner; SW location became Pita Kabab in 2025)",
+          "Verify GBP review count before citing one (owner-cited 208 on 2026-07-07 vs Wanderlog mirror 192 on 2026-07-09) or cite the attributed dated owner figure without implying currency",
+          "Hours stay caveated with a call-to-confirm line (owner never confirmed hours)",
+          "4 small menu sections (kids-meals, desserts, drinks, gizzards-and-livers) need unique non-boilerplate copy"
+        ],
+        "crossLinkPlan": "Menu sections <-> related occasions <-> matching intent landings; /catering-cedar-rapids/ <-> /occasions/office-and-party-catering/; /open-late-cedar-rapids/ -> menu hub + /fish-and-chicken-near-me/; /location/ -> /contact/ + /about/ + /faq/; neighborhoods -> menu hub + nearest intent landing; home -> menu hub + top occasions + top intents. Occasions >=4 cross-links, intent landings >=2."
+      },
+      "selectedArchitecture": {
+        "name": "astro-6-restaurant-archetype-static",
+        "framework": "Astro 6, static output, trailingSlash always",
+        "components": "Project-local Base/Header/Footer/Hero with RELATIVE imports - the @engine alias hardpoints into the engine package so component shadows do NOT work through it; Analytics and StickyCallBar keep @engine imports inside the Base layout",
+        "stylingRoot": "src/layouts/Base.astro global stylesheet + CSS custom properties (brand tokens); no per-page token forks",
+        "data": "Route generation from src/data (menu.json 14 sections, occasions.json 6, landings.json 13, neighborhoods.json 2) plus three fixed routes; external ordering links rendered as CTAs, never routes",
+        "constraints": [
+          "Route parity hard constraint: generate EXACTLY the sealed Phase 2 38-route matrix; any future route change requires redirects and a new approval",
+          "Zero client JS islands; all pages static .astro",
+          "Canonical URLs derive from the Base layout against the real identity domain"
+        ]
+      },
+      "assetNeeds": [
+        "existing-93-asset-library - REUSE: 87 menu-item renders + occasion/marketing heroes + og image + logo from the archived run remain valid for the unchanged menu; Phase 6 re-verifies manifest/selections/exports against this run rather than regenerating. Representational.",
+        "home-hero-animated - REUSE: owner-approved beach-loop.mp4 video + webp poster keyframes + reduced-motion static fallback. Representational.",
+        "open-late-hero - EXISTING from archived run (evening storefront-glow illustration for /open-late-cedar-rapids/); re-verify presence in Phase 6, regenerate only if missing. Representational.",
+        "catering-intent-hero - REUSE catering-party-pans hero on /catering-cedar-rapids/. Representational.",
+        "brand-logo - OWNER FILE DROP still pending at public/logo.png (shark-captain emblem, navy/gold); raster placeholder currently live; swap on delivery, no route impact. Not representational.",
+        "real-photography - OPEN: owner photos to replace representational renders when supplied; no route impact. Not representational."
+      ],
+      "identityDecision": {
+        "mode": "real",
+        "domain": "https://captains-fish-chicken.netlify.app",
+        "email": "captainsfishchicken@gmail.com",
+        "gaId": "G-7W35DKNK6Z",
+        "paymentAccepted": "unknown",
+        "provenance": "All owner-supplied, live since 2026-07-08, validate exit 0. Payment policy unknown - owner never stated; do not fabricate payment claims.",
+        "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identity-decision.md"
+      },
+      "designTokenExport": {
+        "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-3/design-tokens.json",
+        "hash": "23452304c7e124f81929daca9cd46d42d2bfed8f0f23f9e04d35db8f7ac812d9",
+        "source": {
+          "type": "repo",
+          "path": "src/layouts/Base.astro",
+          "format": "css-custom-properties"
+        },
+        "figmaSyncStatus": {
+          "status": "not-configured",
+          "details": "No live Figma file exists for this engagement; the repo is the design source of truth and the token export above carries a verifiable SHA-256."
+        }
+      }
+    }
+  },
+  "outputPaths": {
+    "workbench": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4",
+    "phaseArtifact": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\phase-4-artifact.json"
+  },
+  "artifactEvidencePaths": {},
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": [
+      "build-quality"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "delegation": {
+    "role": "builder",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+    "packetHash": "c36db2815eaa89a6134d739844d08a5e81de13c1f5ada9f8ed0b70f316adb1f1",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-capsule.json",
+    "capsuleHash": "e11c4bb818cbc249530be7a53c30bc4730a80be5c863c5b4e4ac938835861682",
+    "dispatchPromptPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder.md",
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-report.json"
+  }
+}

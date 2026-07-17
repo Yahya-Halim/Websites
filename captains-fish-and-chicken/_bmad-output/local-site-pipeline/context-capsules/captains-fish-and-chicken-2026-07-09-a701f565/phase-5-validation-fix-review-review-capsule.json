@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 5,
+  "reviewer": "validation-fix-review",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+  "packetHash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+  "artifactHash": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268",
+  "mission": "Review Phase 5 artifact for the validation-fix-review gate.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+      "hash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de"
+    },
+    {
+      "kind": "sealed-artifact",
+      "path": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+      "hash": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed artifact drafts",
+    "Direct edits to workflow state files"
+  ],
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-validation-fix-review-review-report.json",
+    "requiredRole": "reviewer",
+    "requiredStatus": "completed"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-quick-lunch-takeout-4",
+  "questionRef": "questions/faq-occasions-quick-lunch-takeout-4",
+  "text": "We serve fresh takeout throughout the day. Hours can vary, so please call (319) 221-1040 to confirm current hours before you head over for lunch.",
+  "cites": [
+    "occasions/quick-lunch-takeout"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/quick-lunch-takeout.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

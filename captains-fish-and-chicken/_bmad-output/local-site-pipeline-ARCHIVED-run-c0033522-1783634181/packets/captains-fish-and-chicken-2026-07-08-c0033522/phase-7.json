@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 7,
+  "phaseName": "LAUNCH",
+  "createdAt": "2026-07-08T22:41:22.017Z",
+  "specialist": "local-launch-checklist",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-launch-checklist\\SKILL.md",
+  "requiredArtifactFields": [
+    "launchChecklist",
+    "deployTarget",
+    "postLaunchVerification"
+  ],
+  "checklist": [
+    {
+      "id": "read-phase3-launch-identity",
+      "label": "Read packet.inputEvidence.phase3.identityDecision before launch checks; never ship declared fixtures or placeholder identity."
+    },
+    {
+      "id": "read-phase5-validation-results",
+      "label": "Read packet.inputEvidence.phase5 validation evidence before launch readiness; unresolved failures remain blocking."
+    },
+    {
+      "id": "read-phase6-imagery-proof",
+      "label": "Read packet.inputEvidence.phase6 verificationReport, exports, and selections before launch QA."
+    },
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    },
+    {
+      "id": "review-notes-file",
+      "label": "Require reviewer notes to travel by --notes-file."
+    }
+  ],
+  "inputEvidence": {
+    "phase3": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-08-c0033522/phase-3.json",
+      "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-3/phase-3-artifact.json",
+      "artifactHash": "b801367a98370345bfc73746c096a729eafcb03a6393ad6ddc0db4ca002d5aad",
+      "identityDecision": {
+        "mode": "real",
+        "domain": "https://captains-fish-chicken.netlify.app",
+        "email": "captainsfishchicken@gmail.com",
+        "gaId": "G-7W35DKNK6Z",
+        "paymentAccepted": "unknown",
+        "notesFile": "identity-decision.md",
+        "rationale": "AMENDED 2026-07-08: owner supplied real values (Netlify subdomain now; custom domain can follow), real GA4 property, and a live business inbox. Fixtures fully retired; factory validate exits 0. paymentAccepted still unknown -> omitted from JSON-LD."
+      }
+    },
+    "phase5": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-08-c0033522/phase-5.json",
+      "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/phase-5-artifact.json",
+      "artifactHash": "fab4dd0d4e28755dae6a2129be9aa85a2890e6df0e7702d1cdb0523584508283",
+      "validationRuns": [
+        {
+          "id": "factory-validate-post-identity",
+          "command": "factory validate",
+          "status": "passed",
+          "exitCode": 0,
+          "note": "zero gates, zero advisories across the 38-route dist (post identity swap + rebuild)"
+        },
+        {
+          "id": "seo-geo-audit-v2",
+          "command": "/aaron-marketing:seo-geo dist/ --mode audit --full --tech --visibility",
+          "status": "passed",
+          "note": "38/38 pages; 0 blocking; 173 ld+json parsed 0 errors; menu prices reconciled; gtag once/page"
+        },
+        {
+          "id": "factory-validate-post-fixes",
+          "command": "factory validate",
+          "status": "passed",
+          "exitCode": 0,
+          "note": "re-confirmed exit 0 after advisory fixes (title + descriptions) and rebuild"
+        }
+      ],
+      "factoryValidate": {
+        "command": "factory validate",
+        "exitCode": 0,
+        "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/factory-validate.log",
+        "checkedGateIds": [
+          "schema-floor",
+          "route-completeness",
+          "cro-block-presence",
+          "do-not-ship-guards",
+          "sap-anti-doorway",
+          "graph-gate"
+        ]
+      },
+      "seoGeoAudit": {
+        "command": "/aaron-marketing:seo-geo dist/ --mode audit --full --tech --visibility",
+        "status": "passed",
+        "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/seo-geo-audit.md",
+        "blockingFindings": 0,
+        "advisoryFindings": 4,
+        "advisoriesFixedPreSeal": 3
+      },
+      "failures": [],
+      "fixRounds": [
+        {
+          "round": 1,
+          "scope": "SEO advisory fixes pre-seal",
+          "changes": [
+            "home <title> 74 -> 61 chars",
+            "/contact/ description 353 -> 161 chars (page-specific)",
+            "/menu/ description 40 -> 203 chars (rich menu summary)",
+            "both neighborhood descriptions 195 -> 153 chars"
+          ],
+          "revalidation": "factory build + factory validate exit 0"
+        }
+      ],
+      "remainingAdvisories": [
+        "Restaurant openingHoursSpecification covers Mon-Thu + Sun only (Fri-Sat omitted) — DELIBERATE sealed conservative-hours decision until the owner confirms the 11pm close; visible text + llms.txt carry the caveated full week",
+        "Plain-text \"Rated 4.4 on Google\" (~20 pages; correctly NOT aggregateRating schema) — verify against live GBP at launch and keep in sync"
+      ],
+      "runtimeEvidence": {
+        "factoryValidateLog": {
+          "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/factory-validate.log",
+          "hash": "736b0c5183787e66df975700960edcef4aa364841ea5f678aa9ac6556e2527d2",
+          "mtimeMs": 1783546473737.3193
+        },
+        "seoGeoAuditReport": {
+          "path": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-5/seo-geo-audit.md",
+          "hash": "6f04dcf53af4469668f859e18a4af8481088cb91c90b5d11e8506fa4fe549f06",
+          "mtimeMs": 1783546894100.5269
+        }
+      }
+    },
+    "phase6": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-08-c0033522/phase-6.json",
+      "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/phase-6-artifact.json",
+      "artifactHash": "a80c833fa2f9e2222dfc195530084e8c3a981e5cb2be6035d56d8717cf36883d",
+      "higgsfieldManifest": {
+        "path": "scripts/image-prompts.json",
+        "slots": 94,
+        "breakdown": {
+          "menuItems": 87,
+          "marketingAndHeroes": 7
+        },
+        "newThisRun": [
+          "open-late-hero (flat-2D night scene, brand palette, representational)"
+        ],
+        "reusedFromArchivedRun": 93
+      },
+      "selections": {
+        "path": "scripts/selections.json",
+        "selected": 94,
+        "kinds": "all variant picks with provenance higgsfield-mcp:nano_banana_pro"
+      },
+      "exports": {
+        "outputsOnDisk": 94,
+        "missing": 0,
+        "destinations": [
+          "public/images/menu/** (87)",
+          "public/images/hero/*.webp (incl. open-late.webp new)",
+          "public/images/og/og-social.jpg",
+          "public/logo.png (placeholder pending owner file)",
+          "public/videos/beach-loop.mp4 (owner-approved looped hero)"
+        ],
+        "exportTool": "higgsfield-workflow export (sharp resize/convert) + sharp webp for heroes"
+      },
+      "verificationReport": {
+        "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/imagery-verification-report.md",
+        "status": "passed",
+        "higgsfieldWorkflowVerify": {
+          "ok": true,
+          "problems": [],
+          "deferredSlots": 0,
+          "deferredPages": 0
+        },
+        "uiChecks": [
+          {
+            "viewport": "desktop",
+            "status": "pass",
+            "notes": "open-late hero loads (webp, correct representational alt); single h1; no horizontal overflow; home renders 8 sections with video hero; 0 broken images"
+          },
+          {
+            "viewport": "mobile",
+            "status": "pass",
+            "notes": "375x812: sticky call bar fixed and visible; header static (CTA delegated by design); single h1; 0 broken images; no horizontal overflow"
+          }
+        ],
+        "unresolvedIssues": [],
+        "honesty": "All generated imagery representational and labeled; never presented as photos of the actual premises or dishes; logo placeholder pending owner file drop; owner photography invited to replace renders."
+      }
+    }
+  },
+  "outputPaths": {
+    "workbench": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-7",
+    "phaseArtifact": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-7\\phase-7-artifact.json"
+  },
+  "artifactEvidencePaths": {},
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": true,
+    "requiredReviewers": [
+      "launch-readiness"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation."
+}

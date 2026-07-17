@@ -1,0 +1,22 @@
+{
+  "engagement": "pita-kabab",
+  "business": "Pita Kabab",
+  "businessType": "restaurant",
+  "scope": "single location",
+  "location": {
+    "streetAddress": "3100 6th St SW",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "postalCode": "52404",
+    "singleLocationInScope": true
+  },
+  "provenance": "Business name and address supplied by the engagement owner (authoritative), 2026-07-12. Cross-engagement seed fact from the Captains Fish and Chicken brief (D:/website/captains-fish-and-chicken/brief.json): 3100 6th St SW was formerly a Captains Fish and Chicken address and is now Pita Kabab under the SAME OWNER; the Captains site carries disambiguation content for this address. Cuisine/service model NOT yet owner-confirmed — name suggests Middle Eastern/Mediterranean kabab restaurant; verify in Phase 0 sweep and owner interview. No domain, email, GA4, phone, hours, menu, or brand assets supplied yet.",
+  "seedFactsOnly": true,
+  "ignorePriorWork": false,
+  "relatedEngagements": [
+    {
+      "engagement": "captains-fish-and-chicken",
+      "relation": "same owner; this address excluded from that scope; disambiguation content live at https://captains-fish-chicken.netlify.app"
+    }
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "phase": 3,
+  "summary": "Phase 3 DESIGN artifact for the captains-fish-and-chicken-2026-07-09-a701f565 re-run over the launched site. UI UX Pro Max was run for the restaurant query and Astro stack; the generated red palette and webfont pairing were recorded but overridden by the sealed owner brand (navy/gold shark-captain logo palette, live in src/layouts/Base.astro since 2026-07-08). The design system documents the existing live token implementation, the sealed owner style rule (home matches interior visual language; navy shell-only; gold CTAs-only), the call-only conversion pattern, and a full Phase 4 build handoff bound to the approved 38-route matrix. Identity is real (owner-supplied domain, email, GA4), payment policy is unknown, and the repo-based design-token export is hashed for handoff. No Figma file exists for this engagement.",
+  "checklist": [
+    "read-phase2-page-matrix: done — designed against packet.inputEvidence.phase2.pageMatrix (38 routes), pageMatrixStrategy (route-parity hard constraint), and artifactRecordPath _bmad-output/local-site-pipeline/artifacts/captains-fish-and-chicken-2026-07-09-a701f565/phase-2.json",
+    "read-phase2-image-slot-plan: done — imageSlotPlan (existing 94-slot library reuse, beach-loop video hero, pending logo drop) and requiredCroBlocks (per-kind blocks plus documentedExceptions) reserved in the design system and Phase 4 Build Notes",
+    "run-ui-ux-design-system: done — search.py --design-system run for the approved matrix and local-business stack, plus --stack astro and --domain ux supplements; commands recorded in design-system.md Query section",
+    "capture-design-system-output: done — generated guidance persisted in design-system.md and referenced from designSystem.designSystemPath",
+    "write-phase4-build-notes: done — Phase 4 Build Notes cover page-matrix families, selected architecture, asset handoff, CRO blocks, copy advisories, and identityDecision/canonical metadata",
+    "record-optional-figma-token-handoff: done — no live Figma; repo-sourced design tokens exported to design-tokens.json with SHA-256 recorded in figma-handoff.md and this artifact",
+    "record-identity-decision: done — real identity recorded (owner-supplied domain, businessEmail, GA4, live since 2026-07-08) in identityDecision.json and identity-decision.md",
+    "document-payment-policy: done — paymentAccepted recorded as unknown; owner never stated payment methods; no payment claims may be fabricated",
+    "read-specialist-skill: done — ui-ux-pro-max SKILL.md read at the packet specialistSkillPath before authoring",
+    "fill-phase-artifact: done — all five required contract fields filled with evidence",
+    "inspect-before-complete: done — inspect-artifact run against this artifact until problems: []"
+  ],
+  "designSystem": {
+    "designSystemPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-3/design-system.md",
+    "query": "local restaurant takeout fried fish chicken seafood counter-service warm trustworthy",
+    "stack": "astro",
+    "tool": "ui-ux-pro-max search.py --design-system (vendored), plus --stack astro and --domain ux supplements",
+    "generatedPattern": "Hero-Centric + Conversion (adopted)",
+    "generatedStyle": "Vibrant & Block-based (softened to the live card-on-cloud system per the sealed owner style rule)",
+    "generatedPalette": "appetizing red #DC2626 family (rejected — owner brand lock)",
+    "generatedTypography": "Playfair Display SC + Karla (recorded, not adopted; live site keeps the system-ui stack)",
+    "brandPalette": [
+      "navy-700 #123253 (structural navy — headings, shell)",
+      "gold-500 #F5B301 (conversion gold — CTAs and price pills only)",
+      "cloud #F7FAFC (page background)",
+      "blue-500 #2D74B5 (steel blue — links)",
+      "navy-900 #0B1E33 (deep navy — ink)"
+    ],
+    "ownerStyleRule": "Home matches interior pages' visual language: left-aligned h2s, 2.5rem section rhythm, white cards with steel-200 borders + radius-md + shadow-sm on cloud; navy confined to shared shell (header/footer/sticky call bar); gold only for CTAs/price pills; no home-only filled color bands or centered headings.",
+    "tokenSourceOfTruth": "src/layouts/Base.astro (CSS custom properties, live since 2026-07-08)"
+  },
+  "designContentBuildPlan": {
+    "model": "Re-run parity build: author content for the approved 38-route matrix using the existing live design system; route set must match the deployed 2026-07-08 build exactly (zero deltas).",
+    "pageFamilies": [
+      "Home (conversion hub) - 1 route: hero + single call CTA + 3 value props, signature dish cards, owner-price favorites band, mid-page CTA banner, occasion cards, how-to-order steps + delivery CTAs, hours+location block (caveated hours); interior visual language per owner style rule",
+      "Menu hub + 14 menu-section pages: priced item cards with Menu JSON-LD, call CTA, order-online external CTAs (links as CTAs, not pages), representational-photos note",
+      "Occasion pages - 6: hero + call CTA, >=1 featured menu item, >=5 FAQ, >=4 cross-links",
+      "Search-intent landings - 8: hero + call CTA, body, FAQ where relevant, >=2 cross-links; per-page copy advisories from the sealed matrix notes",
+      "Info/FAQ/story landings - 4: /how-to-order/ phone-first, /about/ attributed KHAK owner story with Pita Kabab disambiguation, /faq/ disambiguation FAQs, /made-fresh-to-order/ Gazette-attributed language",
+      "Location truth-assertion page - 1: one location 1616 1st Ave NE; dated statement that 3100 6th St SW closed as Captains and became Pita Kabab in 2025",
+      "Neighborhood pages - 2: single city-specific H1, >=1 genuine local fact, >=2 proximity trust lines, >=1 town FAQ, >=400 chars unique body, per-city title/meta, NAP keeps HQ city",
+      "Contact - 1: NAP + map + caveated hours + directions + call CTA; no lead form"
+    ],
+    "conversionPlan": [
+      "Sticky mobile call bar (tel:, call-only) mounted once in the Base layout - never per page",
+      "Single gold call CTA per hero; gold pill CTAs with navy-900 text sitewide",
+      "Documented exceptions (sealed owner call-only decision): lead form OMITTED site-wide, dual CTA reduced to single tel: CTA, trust content ships as why-choose-us copy not a 6-fact grid, offer and financing blocks OMITTED"
+    ],
+    "copyAdvisories": [
+      "Chicago Grill framing is returning-not-new",
+      "LJS 1st Ave SE closure dates to June 2014 - never frame as recent",
+      "No '#1 on Yelp' or list-position claims (Estimated evidence only)",
+      "Pita Kabab mentioned for disambiguation only (same owner; SW location became Pita Kabab in 2025)",
+      "Verify GBP review count before citing one (owner-cited 208 on 2026-07-07 vs Wanderlog mirror 192 on 2026-07-09) or cite the attributed dated owner figure without implying currency",
+      "Hours stay caveated with a call-to-confirm line (owner never confirmed hours)",
+      "4 small menu sections (kids-meals, desserts, drinks, gizzards-and-livers) need unique non-boilerplate copy"
+    ],
+    "crossLinkPlan": "Menu sections <-> related occasions <-> matching intent landings; /catering-cedar-rapids/ <-> /occasions/office-and-party-catering/; /open-late-cedar-rapids/ -> menu hub + /fish-and-chicken-near-me/; /location/ -> /contact/ + /about/ + /faq/; neighborhoods -> menu hub + nearest intent landing; home -> menu hub + top occasions + top intents. Occasions >=4 cross-links, intent landings >=2."
+  },
+  "selectedArchitecture": {
+    "name": "astro-6-restaurant-archetype-static",
+    "framework": "Astro 6, static output, trailingSlash always",
+    "components": "Project-local Base/Header/Footer/Hero with RELATIVE imports - the @engine alias hardpoints into the engine package so component shadows do NOT work through it; Analytics and StickyCallBar keep @engine imports inside the Base layout",
+    "stylingRoot": "src/layouts/Base.astro global stylesheet + CSS custom properties (brand tokens); no per-page token forks",
+    "data": "Route generation from src/data (menu.json 14 sections, occasions.json 6, landings.json 13, neighborhoods.json 2) plus three fixed routes; external ordering links rendered as CTAs, never routes",
+    "constraints": [
+      "Route parity hard constraint: generate EXACTLY the sealed Phase 2 38-route matrix; any future route change requires redirects and a new approval",
+      "Zero client JS islands; all pages static .astro",
+      "Canonical URLs derive from the Base layout against the real identity domain"
+    ]
+  },
+  "assetNeeds": [
+    "existing-93-asset-library - REUSE: 87 menu-item renders + occasion/marketing heroes + og image + logo from the archived run remain valid for the unchanged menu; Phase 6 re-verifies manifest/selections/exports against this run rather than regenerating. Representational.",
+    "home-hero-animated - REUSE: owner-approved beach-loop.mp4 video + webp poster keyframes + reduced-motion static fallback. Representational.",
+    "open-late-hero - EXISTING from archived run (evening storefront-glow illustration for /open-late-cedar-rapids/); re-verify presence in Phase 6, regenerate only if missing. Representational.",
+    "catering-intent-hero - REUSE catering-party-pans hero on /catering-cedar-rapids/. Representational.",
+    "brand-logo - OWNER FILE DROP still pending at public/logo.png (shark-captain emblem, navy/gold); raster placeholder currently live; swap on delivery, no route impact. Not representational.",
+    "real-photography - OPEN: owner photos to replace representational renders when supplied; no route impact. Not representational."
+  ],
+  "identityDecision": {
+    "mode": "real",
+    "domain": "https://captains-fish-chicken.netlify.app",
+    "email": "captainsfishchicken@gmail.com",
+    "gaId": "G-7W35DKNK6Z",
+    "paymentAccepted": "unknown",
+    "provenance": "All owner-supplied, live since 2026-07-08, validate exit 0. Payment policy unknown - owner never stated; do not fabricate payment claims.",
+    "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identity-decision.md"
+  },
+  "designTokenSource": {
+    "type": "repo",
+    "path": "src/layouts/Base.astro",
+    "format": "css-custom-properties"
+  },
+  "designTokenExportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-3/design-tokens.json",
+  "designTokenHash": "23452304c7e124f81929daca9cd46d42d2bfed8f0f23f9e04d35db8f7ac812d9",
+  "componentMappingRefs": [
+    {
+      "name": "Base layout (styling root, brand tokens, CTA/FAQ/related-chip styles)",
+      "path": "src/layouts/Base.astro"
+    },
+    {
+      "name": "Header (project-local shadow, relative import)",
+      "path": "src/components/Header.astro"
+    },
+    {
+      "name": "Footer (project-local shadow, relative import)",
+      "path": "src/components/Footer.astro"
+    }
+  ],
+  "figmaSyncStatus": {
+    "status": "not-configured",
+    "details": "No live Figma file exists for this engagement; the repo is the design source of truth and the token export above carries a verifiable SHA-256."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-chicken-leg-and-thigh",
+  "question": "How much do Chicken Leg & Thigh Mix cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/chicken-leg-and-thigh.json",
+  "lastVerified": "2026-07-07"
+}

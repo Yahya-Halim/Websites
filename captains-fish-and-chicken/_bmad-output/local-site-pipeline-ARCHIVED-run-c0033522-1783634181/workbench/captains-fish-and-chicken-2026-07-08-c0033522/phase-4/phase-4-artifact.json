@@ -1,0 +1,126 @@
+{
+  "phase": 4,
+  "summary": "Phase 4 BUILD (run v2). HOME-FIRST per owner directive: the home page was upgraded before the rest of the build — Gazette-attributed press-quote block (citable GEO fact), one-location truth strip (links /location + /faq disambiguation), and visit-links to the new pages; interior style language preserved (owner rule). Then the full build: three new landings authored (open-late-cedar-rapids with call-to-confirm hours discipline, catering-cedar-rapids grounded in real party pans/family deals, location truth-assertion page), FAQ gained two disambiguation questions, footer gained three inbound links (orphan prevention). Build SUCCEEDED: 38/38 routes matching the approved Phase 2 matrix EXACTLY (missing [] / extra []), zero dangling links, zero slashless internal hrefs, calamari absent site-wide, open-late title carries no uncaveated hours claim. Graph-mode wire (existing KNOW-provenance graph; menu unchanged so 92 seeded Q&A stand). factory validate: EXIT 0 — zero gates, zero advisories (identity amended to real 2026-07-08: netlify.app domain + gmail + GA4 G-7W35DKNK6Z; 36 canonicals swapped). 93-asset library reused (no regeneration).",
+  "checklist": [
+    {
+      "id": "read-phase2-build-matrix",
+      "status": "done",
+      "note": "38 routes consumed from packet.inputEvidence.phase2; built set verified equal (missing [], extra [])"
+    },
+    {
+      "id": "read-phase3-design-handoff",
+      "status": "done",
+      "note": "design-system.md Phase 4 Build Notes followed: project-local components, token system, asset reuse, authoring constraints"
+    },
+    {
+      "id": "apply-phase3-identity-decision",
+      "status": "done",
+      "note": "REAL identity applied (amended): domain captains-fish-chicken.netlify.app, email captainsfishchicken@gmail.com, gaId G-7W35DKNK6Z; 36 canonicals + sitemap + llms swapped"
+    },
+    {
+      "id": "apply-design-token-handoff-if-present",
+      "status": "ignored",
+      "reason": "No Figma token handoff exists (Phase 3 recorded repo-owned CSS tokens as the deterministic input)"
+    },
+    {
+      "id": "read-specialist-skill",
+      "status": "done",
+      "note": "seo-content-writer adapter + vendored content-writer discipline"
+    },
+    {
+      "id": "fill-phase-artifact",
+      "status": "done"
+    },
+    {
+      "id": "inspect-before-complete",
+      "status": "done"
+    },
+    {
+      "id": "review-notes-file",
+      "status": "done",
+      "note": "build-quality review recorded via --notes-file"
+    }
+  ],
+  "filesChanged": [
+    "src/pages/index.astro (HOME-FIRST upgrades: Gazette press-quote card w/ gold accent border, one-location truth strip, visit-links to open-late/catering/how-to-order; interior style language)",
+    "src/data/landings.json (10 -> 13: + open-late-cedar-rapids [intent], catering-cedar-rapids [intent], location [info]; faq landing + 2 disambiguation questions -> 11 FAQs)",
+    "src/data/site.json (footer + 3 inbound links for the new pages -> 17 footer links)",
+    "src/data/* otherwise carried from validated prior build (menu = owner paste exactly; sides delta held per open owner question)",
+    "src/graph/** carried (14 menu + 6 occasions + 6 facts KNOW nodes + 92 seeded Q&A; menu unchanged)",
+    "dist/ (38 routes + sitemap + robots.txt + graph-mode llms.txt 6.5KB / llms-full 19KB)",
+    "src/data/business.json + all seo.canonical fields (identity fixtures -> REAL values; 36 replacements)"
+  ],
+  "routesGenerated": [
+    "/",
+    "/menu",
+    "/menu/seafood",
+    "/menu/whole-wings",
+    "/menu/party-wings",
+    "/menu/boneless-chicken-bites",
+    "/menu/chicken-leg-and-thigh",
+    "/menu/chicken-tenders",
+    "/menu/shrimp",
+    "/menu/gizzards-and-livers",
+    "/menu/fish-family-deals",
+    "/menu/family-meals-and-combos",
+    "/menu/sides",
+    "/menu/kids-meals",
+    "/menu/desserts",
+    "/menu/drinks",
+    "/occasions/family-dinner",
+    "/occasions/game-day-wings",
+    "/occasions/office-and-party-catering",
+    "/occasions/friday-fish-fry",
+    "/occasions/seafood-feast",
+    "/occasions/quick-lunch-takeout",
+    "/fried-catfish-cedar-rapids",
+    "/fried-chicken-and-wings-cedar-rapids",
+    "/seafood-takeout-cedar-rapids",
+    "/soul-food-cedar-rapids",
+    "/fish-and-chicken-near-me",
+    "/party-wings-cedar-rapids",
+    "/open-late-cedar-rapids",
+    "/catering-cedar-rapids",
+    "/how-to-order",
+    "/about",
+    "/faq",
+    "/made-fresh-to-order",
+    "/location",
+    "/neighborhoods/northeast-cedar-rapids",
+    "/neighborhoods/marion-ia",
+    "/contact"
+  ],
+  "commandsRun": [
+    "local-site-workflow prepare --phase 4 (evidence-chained packet: phase2 + phase3, no missing evidence) -> prepared",
+    "home-first authoring (index.astro) + new landings + footer links -> done per owner directive",
+    "factory wire -> graph-mode ok",
+    "factory build -> success — 38 pages in ~2.6s, exit 0",
+    "route-vs-matrix verification -> built set == approved Phase 2 matrix: missing [], extra []",
+    "link + guardrail sweep -> 0 dangling internal links; 0 slashless hrefs; calamari absent; open-late <title> carries no hours claim",
+    "factory validate -> exit 1 — ONLY do-not-ship-guards on declared identity fixtures (intended); zero advisories",
+    "preview verification (home) -> press-quote + truth strip + new links render; video hero present; single h1; 0 broken images; 8 sections",
+    "identity swap (real domain/email/GA4) + factory build -> success 38 pages",
+    "factory validate (post-identity) -> EXIT 0: zero gates, zero advisories"
+  ],
+  "buildResult": {
+    "status": "passed",
+    "pagesBuilt": 38,
+    "expectedRoutes": 38,
+    "buildExitCode": 0,
+    "sitemap": true,
+    "validate": {
+      "exitCode": 0,
+      "blockingGate": null,
+      "reason": "identity real; do-not-ship-guards clean; all gates pass",
+      "passingGates": [
+        "do-not-ship-guards",
+        "route-completeness",
+        "schema-floor",
+        "cro-block-presence",
+        "sap-anti-doorway",
+        "graph-gate"
+      ],
+      "advisories": []
+    }
+  }
+}

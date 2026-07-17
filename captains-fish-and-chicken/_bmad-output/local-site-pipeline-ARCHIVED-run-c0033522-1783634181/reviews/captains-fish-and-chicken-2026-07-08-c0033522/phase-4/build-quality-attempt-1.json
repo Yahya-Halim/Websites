@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 4,
+  "reviewer": "build-quality",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-4/phase-4-artifact.json",
+  "artifactHash": "dbece931ef2467cf5d6815eec68f0a87eb7cb431747b626a412d8990bd96d9fa",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-4/review-build-quality.md",
+  "notesHash": "b4dddc12818a14a2ed56f83a49412648b1f275d27d611b70fa79836c67647ce2",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-4\\build-quality-attempt-1.md",
+  "notesHeadings": [
+    "Phase 4 review — build-quality (run v2)",
+    "Verified",
+    "Non-blocking weaknesses"
+  ],
+  "notes": "# Phase 4 review — build-quality (run v2)\n\n**Reviewer:** build-quality (independent read-only subagent; did NOT produce the build)\n**Verdict:** PASS (16/16 criteria; zero blocking issues)\n**Date:** 2026-07-08\n\n## Verified\n- routeMatch: 38/38 vs approved Phase 2 matrix — 0 missing, 0 extra (the new route-vs-matrix gate satisfied)\n- New pages: open-late (10 caveat phrases, no hours in title), catering (all prices match menu.json,\n  no invented items), location (one-location truth; SW = Pita Kabab, never a live Captains)\n- Home: Gazette-ATTRIBUTED press quote; truth strip; links to all 3 new pages resolve; single h1;\n  left-aligned h2s; no home-only filled bands (owner style rule holds)\n- Truthfulness: zero violations (calamari absent; dine-in only as FAQ denials; no items beyond the\n  owner paste — 'mashed' absent, mac-and-cheese only as the owner's Bites item; every hours render caveated)\n- Links: 0 dangling, 0 slashless; 37 inbound pages to each new page\n- FAQ: both disambiguation questions present\n- Validate: fixture-only do-not-ship gate, ZERO advisories, all other gates silent\n- Graph artifacts: llms.txt (NAP/cuisine/priced menu), Restaurant JSON-LD w/ servesCuisine+priceRange+hasMenu\n  on 38/38, Speakable 38/38, Menu JSON-LD 87 priced items\n- Marion facts: geographically plausible (Hwy 100 / 7th Ave corridor), no fabricated landmarks — guardrail satisfied\n\n## Non-blocking weaknesses\n1. JSON-LD openingHoursSpecification omits Fri-Sat vs visible copy — NOTE: this is the SEALED\n   conservative-hours decision (Phase 0/2/3: owner has not confirmed the 11pm close; incomplete\n   machine-readable hours beat incorrect ones; displayText carries the full caveated week).\n   Resolves when the owner confirms hours.\n2. Inbound links to new pages are mostly footer-driven; contextual in-body links thin — Phase 5/6\n   polish candidate.\n3. Home '4.4 stars — 208 reviews' is point-in-time without a date; will drift — verify at launch.\n4. Identity fixtures ship throughout (intended; Phase 5 wall).\n",
+  "reviewedAt": "2026-07-08T20:27:30.446Z"
+}

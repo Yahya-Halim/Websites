@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "workerId": "phase4-builder-v3-a701f565-2026-07-09-fable",
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 4,
+  "specialist": "seo-content-writer",
+  "status": "completed",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+  "packetHash": "c36db2815eaa89a6134d739844d08a5e81de13c1f5ada9f8ed0b70f316adb1f1",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-capsule.json",
+  "capsuleHash": "e11c4bb818cbc249530be7a53c30bc4730a80be5c863c5b4e4ac938835861682",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\phase-4-artifact.json",
+  "artifactHash": "74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059",
+  "commandsRun": [
+    "npm run build",
+    "node -e \"enumerate dist/ index.html routes and diff against the approved 38-route Phase 2 matrix\"",
+    "grep -rl \"208 reviews\" dist/ (no matches)",
+    "grep -c for the four new menu-section description strings in built section pages (all present)",
+    "curl -s -o /dev/null -w \"%{http_code}\" against six live routes on https://captains-fish-chicken.netlify.app (all 200)",
+    "node packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project D:/website/captains-fish-and-chicken --phase 4 --artifact <phase-4-artifact.json> --specialist seo-content-writer"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-capsule.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-system.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\site.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\menu.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\landings.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\business.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\pages\\menu\\[slug].astro"
+  ],
+  "filesChanged": [
+    "src/data/site.json",
+    "src/data/menu.json"
+  ],
+  "assumptions": [
+    "The sealed advisory's count-free fallback applies because no Google-first-party review count was retrievable by automated means on 2026-07-09 (google.com/search and Google Maps block fetchers; only third-party mirrors surfaced).",
+    "Rewriting src/data/menu.json section descriptions (not items/prices) satisfies the unique-copy advisory since the description renders as each section page's hero subheading and metadata fallback.",
+    "menu.json was rewritten with 2-space JSON indentation matching its existing format; all item and price data preserved (verified via JSON parse and grep of built output)."
+  ],
+  "blockers": [],
+  "verification": [
+    "npm run build passed: 38 pages built, sitemap created, no errors.",
+    "Route parity: dist/ route enumeration matches the approved 38-route Phase 2 matrix exactly (zero missing, zero extra, trailing-slash form).",
+    "Built output contains no '208 reviews' string anywhere in dist/; the count-free valueProp and all four new menu-section copy strings verified present in built HTML.",
+    "Live-URL proof: /, /menu/, /menu/kids-meals/, /occasions/friday-fish-fry/, /neighborhoods/marion-ia/, /location/ all serve HTTP 200 from https://captains-fish-chicken.netlify.app.",
+    "Copy advisories verified compliant by grep: no Chicago Grill mention, no LJS mention in shipped copy, no list-position claims, Pita Kabab disambiguation-only, hours caveated site-wide.",
+    "Identity untouched: src/data/business.json still carries domain https://captains-fish-chicken.netlify.app, email captainsfishchicken@gmail.com, gaId G-7W35DKNK6Z.",
+    "Design tokens preserved: src/layouts/Base.astro unmodified; sealed Phase 3 designTokenSource/designTokenExportPath/designTokenHash recorded flat in the artifact.",
+    "inspect-artifact returned ok: true with problems: [] on the final artifact bytes; artifactHash computed after the final write with no subsequent modification."
+  ]
+}

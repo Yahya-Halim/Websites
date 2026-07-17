@@ -1,0 +1,48 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://pitakabab.example/#business",
+  "name": "Pita Kabab",
+  "description": "Pita Kabab is a counter-service Mediterranean and Middle Eastern restaurant at 3100 6th St SW in Cedar Rapids, Iowa, serving shawarma, kabobs, falafel, hummus, wings and baklava for takeout, dine-in, delivery and catering.",
+  "telephone": "+1-319-440-3709",
+  "email": "owner@pitakabab.example",
+  "url": "https://pitakabab.example",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3100 6th St SW",
+    "addressLocality": "Cedar Rapids",
+    "addressRegion": "IA",
+    "postalCode": "52404",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday"
+      ],
+      "opens": "11:00",
+      "closes": "20:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.yelp.com/biz/pita-kabab-cedar-rapids",
+    "https://www.doordash.com/store/pita-kabab-cedar-rapids-41564223/"
+  ],
+  "servesCuisine": "Mediterranean, Middle Eastern",
+  "image": "https://pitakabab.example/logo-icon.png",
+  "logo": "https://pitakabab.example/logo-icon.png",
+  "foundingDate": "2025"
+}

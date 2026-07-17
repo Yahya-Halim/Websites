@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 0,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-0/phase-0-artifact.json",
+  "artifactHash": "77d2ff1ad8fbb12182c0e1c414fef545b6f4697cbb3e3a65876766cec82a54b8",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-0/approval-notes.md",
+  "notes": "# Phase 0 approval — Captains Fish and Chicken\n\n**Approved by:** operator (geekeys343@gmail.com), acting for owner Ray Aqel\n**Date:** 2026-07-07\n**Run:** captains-fish-and-chicken-2026-07-07-098c7de7\n\n## Ruling\nPhase 0 DISCOVER artifact approved to seal and advance to Phase 1 RESEARCH.\n\n## Load-bearing gaps acknowledged at approval\n1. **Identity deferred by owner decision.** No real domain, business email, or GA4 ID\n   exist yet. Owner directed: do NOT collect these until the whole build is complete.\n   Build will proceed on OVERTLY-SYNTHETIC declared fixtures\n   (`captains-fish-and-chicken.example`, email on `.example`, `G-XXXXXXXXXX`).\n   The Phase 5 do-not-ship gate MUST flag these — that is the gate working, not a\n   failure. Real values are swapped in at Phase 7 launch.\n2. **Hours unofficial** — Sun 11-8 / Mon-Thu 11-10 / Fri-Sat 11-11 (community source);\n   `hours.displayText` carries exact text; owner confirmation pending.\n3. **Dine-in unconfirmed** — takeout + delivery + family/party catering are\n   evidence-backed and shippable; dine-in service copy held until owner confirms.\n4. **Trust grid** — candidate facts drafted; grid omits if fewer than 6 genuine facts survive.\n\n## Confirmed this phase\n- Full menu with prices + descriptions (owner paste) — authoritative, prices may ship.\n- Call-only contact; no lead form; no SMS line.\n- Cite Google 4.4 / 208 reviews with attribution.\n- Single-location scope; 3100 6th St SW excluded.\n",
+  "approvedAt": "2026-07-07T19:05:01.070Z",
+  "expiresAt": "2026-07-14T19:05:01.070Z"
+}

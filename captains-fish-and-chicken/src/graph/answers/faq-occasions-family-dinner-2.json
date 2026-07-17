@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-family-dinner-2",
+  "questionRef": "questions/faq-occasions-family-dinner-2",
+  "text": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Open your preferred app, search for Captains Fish and Chicken, and build your order. Delivery times and fees are set by each app.",
+  "cites": [
+    "occasions/family-dinner"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

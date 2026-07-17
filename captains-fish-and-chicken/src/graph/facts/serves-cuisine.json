@@ -1,0 +1,8 @@
+{
+  "kind": "facts",
+  "slug": "serves-cuisine",
+  "ref": "business.servesCuisine",
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "derived from owner-confirmed menu categories"
+}

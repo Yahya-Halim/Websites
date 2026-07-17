@@ -1,0 +1,143 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "briefHash": "a2e9ae6c4df7f69be3e50dfd8e28169115c7dd2a8958ef7096aefa76bec2ddc7",
+  "phase": 5,
+  "exitedAt": "2026-07-09T23:50:04.160Z",
+  "specialistInvoked": "seo-geo-ai-validation",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "phase5-builder-v3-7f2e9c41",
+    "reportPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/worker-reports/captains-fish-and-chicken-2026-07-09-a701f565/phase-5-builder-report.json",
+    "reportHash": "2f452602b728d347f744f9a5300ebc06c8b453121a23157bee0077db21d76299",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+    "packetHash": "cb29eb408c8a163ad56b1137664c2f8800b9212b2f8c30963a597025b23c04de",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-builder-capsule.json",
+    "capsuleHash": "35100bcb6b5c95f3609d3788fe9093771263efe6060c99b62536377c5821d0d7",
+    "status": "completed",
+    "commandsRun": [
+      "npx factory validate (cwd D:\\website\\captains-fish-and-chicken) -> exit 0, 11/11 validators passed incl. all 6 gates: schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate",
+      "node audit.mjs (scratchpad) -> full dist/ sweep of all 38 routes: titles, meta descriptions, canonicals, h1 counts, OG tags, JSON-LD parse + type rollup + NAP extraction + makesOffer double-encoding check, tel: links, img alt completeness, internal-link crawl, fixture/placeholder-GA grep, GA4 id presence",
+      "node canon.mjs (scratchpad) -> verified all 38 canonicals are exactly one per page and self-referencing on https://captains-fish-chicken.netlify.app",
+      "node NAP-consistency check -> exactly 1 distinct NAP tuple across all 38 Restaurant JSON-LD blocks",
+      "curl live origin -> HTTP 200 for /, /robots.txt, /llms.txt, /sitemap-index.xml, /menu/, /contact/, /faq/; live robots.txt diff vs dist/robots.txt -> IDENTICAL",
+      "grep -rl \"208 reviews\" dist/ -> no matches (count-free review copy verified); grep \"4.4 stars on Google\" dist/index.html -> present",
+      "node hashcheck.mjs -> recomputed canonical packetHash and capsuleHash; both match the dispatch values",
+      "node D:/plugin/localevolve-factory/packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project D:/website/captains-fish-and-chicken --phase 5 --artifact <phase-5-artifact.json> --specialist seo-geo-ai-validation -> first run 4 problems (fixRounds array shape, command target token order, Status line format, Blocking Findings heading format); fixed; second run ok:true problems:[]",
+      "sha256sum phase-5-artifact.json -> db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268"
+    ],
+    "filesRead": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5-builder-capsule.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-geo-ai-validation\\SKILL.md",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\commands\\seo-geo.md",
+      "D:\\website\\captains-fish-and-chicken\\package.json",
+      "D:\\website\\captains-fish-and-chicken\\.factory\\journal.ndjson",
+      "D:\\website\\captains-fish-and-chicken\\.factory\\last-run.json",
+      "D:\\website\\captains-fish-and-chicken\\dist (all 38 index.html routes, robots.txt, llms.txt, sitemap-index.xml, sitemap-0.xml, facts.json)",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\business.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\site.json"
+    ],
+    "filesChanged": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\factory-validate.log",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\seo-geo-audit.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\validation-report.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json"
+    ],
+    "verification": [
+      "factory validate exit code 0 with all 6 required gate ids passing (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate), confirmed in .factory/journal.ndjson entries 2026-07-09T23:36:29.216Z-23:36:29.222Z and .factory/last-run.json success:true errors:[] warnings:[].",
+      "SEO/GEO audit executed with a real target (https://captains-fish-chicken.netlify.app) in --mode audit with --full --tech --visibility; report status ready_with_concerns; Blocking Findings: None (not fabricated - zero blocking findings were measured); 6 advisories recorded.",
+      "Zero fixture flags measured: no .example domains/emails, no placeholder/reserved GA ids anywhere in dist/; real identity (captains-fish-chicken.netlify.app, captainsfishchicken@gmail.com, G-7W35DKNK6Z) rendered on all 38 pages.",
+      "Validation scope matched packet.inputEvidence.phase4: all 38 built routes enumerated from dist/ equal routesGenerated exactly; frozen surfaces untouched (no source or dist edits this phase; menu/prices and identity values unchanged).",
+      "failures [] and fixRounds [] are truthful: validation passed on the first run with no fix-and-rerun cycle.",
+      "inspect-artifact final result: ok true, problems [], 'Artifact satisfies the phase contract; complete-phase may seal it.'",
+      "packetHash and capsuleHash recomputed with the workflow's canonical stableHash and both match the dispatch values; artifactHash is sha256 of the final artifact bytes (db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268).",
+      "Stop condition honored: exactly one inspected phase artifact produced; no complete-phase, review, approve, prepare, or deploy performed."
+    ],
+    "specialist": "seo-geo-ai-validation"
+  },
+  "outputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-5\\phase-5-artifact.json",
+    "artifactHash": "db0bd88a40913d350e0ebdf7891ce1acbac4c7fea5becbab88dae0ffb11cf268",
+    "contract": "validation runs, factory validate evidence, SEO/GEO audit evidence, failures, fix rounds, remaining advisories",
+    "validationRuns": [
+      {
+        "id": "factory-validate",
+        "command": "npx factory validate",
+        "target": "D:/website/captains-fish-and-chicken (Phase 4 build: dist/, 38 routes)",
+        "startedAt": "2026-07-09T23:36:28.751Z",
+        "finishedAt": "2026-07-09T23:36:29.222Z",
+        "status": "passed",
+        "detail": "Exit code 0. 11/11 validators passed: 6 blocking gates (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) and 5 advisories (has-generated-llms-txt, has-generated-robots-txt, no-todo-markers-in-artifacts, asset-references-exist, graph-presence). errorCount 0, warningCount 0.",
+        "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log"
+      },
+      {
+        "id": "seo-geo-audit",
+        "command": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility",
+        "target": "dist/ (38 routes, Phase 4 artifactHash 74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059) + live origin crawl surfaces",
+        "startedAt": "2026-07-09",
+        "finishedAt": "2026-07-09",
+        "status": "passed",
+        "detail": "Status ready_with_concerns: Blocking Findings: None; 6 non-blocking advisories. Measured: 38/38 unique titles and meta descriptions; one self-referencing live-origin canonical per page; single h1 per page; JSON-LD 0 parse errors (Restaurant 38, WebSite 38, WebPage 37, BreadcrumbList 37, FAQPage 21, Menu 1, ContactPage 1); single consistent NAP tuple; 0 broken internal links; 138 images 0 missing alt; tel: CTA on every page; real GA4 id everywhere; zero fixture flags; count-free review claim; robots.txt AI-crawler allow-list (GPTBot, ClaudeBot, PerplexityBot, Google-Extended); llms.txt 8 sections well-formed; sitemap 38/38 on-origin, no funnel paths; live 200 on /, /robots.txt, /llms.txt, /sitemap-index.xml, /menu/, /contact/, /faq/; live robots.txt identical to dist.",
+        "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md"
+      }
+    ],
+    "factoryValidate": {
+      "command": "npx factory validate",
+      "exitCode": 0,
+      "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log",
+      "checkedGateIds": [
+        "schema-floor",
+        "route-completeness",
+        "cro-block-presence",
+        "do-not-ship-guards",
+        "sap-anti-doorway",
+        "graph-gate"
+      ],
+      "gateResults": {
+        "schema-floor": "pass",
+        "route-completeness": "pass",
+        "cro-block-presence": "pass",
+        "do-not-ship-guards": "pass",
+        "sap-anti-doorway": "pass",
+        "graph-gate": "pass"
+      },
+      "advisoryValidatorResults": {
+        "has-generated-llms-txt": "pass",
+        "has-generated-robots-txt": "pass",
+        "no-todo-markers-in-artifacts": "pass",
+        "asset-references-exist": "pass",
+        "graph-presence": "pass"
+      },
+      "engineVersion": "0.1.0",
+      "startedAt": "2026-07-09T23:36:28.751Z",
+      "finishedAt": "2026-07-09T23:36:29.222Z",
+      "success": true
+    },
+    "seoGeoAudit": {
+      "command": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility",
+      "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md",
+      "status": "ready_with_concerns",
+      "blockingFindings": [],
+      "blockingFindingsCount": 0,
+      "advisoryFindingsCount": 6,
+      "auditTarget": "dist/ (Phase 4 build, 38 routes) cross-checked against https://captains-fish-chicken.netlify.app crawl surfaces",
+      "fixtureFlags": 0
+    },
+    "failures": [],
+    "fixRounds": [],
+    "remainingAdvisories": [
+      "Open Graph / Twitter Card meta tags are absent on all 38 pages (no og:title/og:description/og:url/og:type/og:image or twitter:*); social and chat-app link previews degrade. Not a factory gate; add an OG block in a future template round.",
+      "Structured openingHoursSpecification covers only Mon-Thu 11:00-22:00 and Sun 11:00-20:00 while the caveated display text also claims Fri-Sat 11am-11pm (source gap: business.json hours has no structured Fri-Sat entry). Deliberately not fixed: hours are owner-unconfirmed and the sealed constraint forbids adding hours claims; resolve when the owner confirms hours.",
+      "Five titles are 66-69 characters and may truncate in SERPs: /occasions/office-and-party-catering/ (69), /catering-cedar-rapids/ (68), /open-late-cedar-rapids/ (67), /fried-chicken-and-wings-cedar-rapids/ (66), /menu/seafood/ (66).",
+      "/menu/ meta description is 203 characters and will truncate around ~165 in SERPs; the clipped tail is non-primary (delivery-apps mention).",
+      "Hours remain owner-unconfirmed; every page and llms.txt correctly keep the 'please call to confirm' caveat until the owner confirms.",
+      "Dual visible phone display formats: tel: CTAs show +1-319-221-1040 while body copy shows (319) 221-1040; same number and schema-consistent, cosmetic only. Runtime CWV/Lighthouse is out of factory-validate scope and was not measured; route to local-launch-checklist after the Phase 7 deploy."
+    ]
+  },
+  "nextPhaseAllowed": [
+    6
+  ],
+  "nextPhaseHint": 6,
+  "blocking": []
+}

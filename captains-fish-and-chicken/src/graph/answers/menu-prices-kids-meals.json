@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-kids-meals",
+  "questionRef": "questions/menu-prices-kids-meals",
+  "text": "Kids Chicken Nuggets (5 pcs): Kids 6.99\nKids Chicken Tenders (2 pcs): Kids 6.99\nKids Pizza Puff: Kids 6.99",
+  "cites": [
+    "menu/kids-meals"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/kids-meals.json",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 4,
+  "phaseName": "BUILD",
+  "specialist": "seo-content-writer",
+  "createdAt": "2026-07-09T23:59:00.000Z",
+  "summary": "Parity re-run build over the live launched site: applied the two sealed content advisories (review-count made count-free after failed live GBP verification; four thin menu-section descriptions rewritten as unique copy), rebuilt the Astro 6 static site, and proved exact 38-route parity against the approved Phase 2 matrix plus live-URL 200s on six sampled deployed routes.",
+  "checklist": [
+    "read-phase2-build-matrix: done — packet pageMatrix/pageMatrixStrategy/requiredCroBlocks read before edits; routesGenerated proves the approved matrix exactly",
+    "read-phase3-design-handoff: done — design-system.md Phase 4 Build Notes read and applied",
+    "apply-phase3-identity-decision: done — identity untouched and verified in src/data/business.json",
+    "apply-design-token-handoff-if-present: done — sealed token source/export/hash preserved as flat fields",
+    "read-specialist-skill: done — seo-content-writer SKILL.md read before authoring",
+    "fill-phase-artifact: done",
+    "inspect-before-complete: done — iterated inspect-artifact until problems: []"
+  ],
+  "filesChanged": [
+    "src/data/site.json",
+    "src/data/menu.json"
+  ],
+  "routesGenerated": [
+    "/",
+    "/menu/",
+    "/menu/seafood/",
+    "/menu/whole-wings/",
+    "/menu/party-wings/",
+    "/menu/boneless-chicken-bites/",
+    "/menu/chicken-leg-and-thigh/",
+    "/menu/chicken-tenders/",
+    "/menu/shrimp/",
+    "/menu/gizzards-and-livers/",
+    "/menu/fish-family-deals/",
+    "/menu/family-meals-and-combos/",
+    "/menu/sides/",
+    "/menu/kids-meals/",
+    "/menu/desserts/",
+    "/menu/drinks/",
+    "/occasions/family-dinner/",
+    "/occasions/game-day-wings/",
+    "/occasions/office-and-party-catering/",
+    "/occasions/friday-fish-fry/",
+    "/occasions/seafood-feast/",
+    "/occasions/quick-lunch-takeout/",
+    "/fried-catfish-cedar-rapids/",
+    "/fried-chicken-and-wings-cedar-rapids/",
+    "/seafood-takeout-cedar-rapids/",
+    "/soul-food-cedar-rapids/",
+    "/fish-and-chicken-near-me/",
+    "/party-wings-cedar-rapids/",
+    "/open-late-cedar-rapids/",
+    "/catering-cedar-rapids/",
+    "/how-to-order/",
+    "/about/",
+    "/faq/",
+    "/made-fresh-to-order/",
+    "/location/",
+    "/neighborhoods/northeast-cedar-rapids/",
+    "/neighborhoods/marion-ia/",
+    "/contact/"
+  ],
+  "commandsRun": [
+    "npm run build",
+    "node -e \"walk dist/ and enumerate every index.html as a trailing-slash route; diff against the approved 38-route Phase 2 matrix\"",
+    "grep -rl \"208 reviews\" dist/ (no matches — count-free review copy verified in built output)",
+    "grep -c for the four new menu-section description strings in dist/menu/{gizzards-and-livers,kids-meals,desserts,drinks}/index.html (all present)",
+    "curl -s -o /dev/null -w \"%{http_code}\" https://captains-fish-chicken.netlify.app{/,/menu/,/menu/kids-meals/,/occasions/friday-fish-fry/,/neighborhoods/marion-ia/,/location/} (all 200)"
+  ],
+  "buildResult": {
+    "status": "passed",
+    "command": "npm run build",
+    "output": "Astro 6 static build completed: 38 page(s) built in 2.48s; sitemap-index.xml created at dist; no build errors.",
+    "routeParity": "EXACT MATCH — dist/ contains 38 index.html routes; diff against the approved Phase 2 38-route matrix (trailing-slash form) reports zero missing and zero extra routes. Route parity hard constraint satisfied: identical route set to the live 2026-07-08 deploy.",
+    "liveRouteProof": {
+      "checkedAt": "2026-07-09",
+      "origin": "https://captains-fish-chicken.netlify.app",
+      "sampledRoutes": [
+        { "route": "/", "httpStatus": 200 },
+        { "route": "/menu/", "httpStatus": 200 },
+        { "route": "/menu/kids-meals/", "httpStatus": 200 },
+        { "route": "/occasions/friday-fish-fry/", "httpStatus": 200 },
+        { "route": "/neighborhoods/marion-ia/", "httpStatus": 200 },
+        { "route": "/location/", "httpStatus": 200 }
+      ],
+      "summary": "All six sampled live routes (home, menu hub, one menu section, one occasion, one neighborhood, location truth page) serve HTTP 200 from the deployed origin, closing the reviewer's live parity evidence gap. Note: live pages serve the pre-fix content until Phase 7 deploys this build."
+    },
+    "buyerProofSummary": [
+      "home: buyer intent (fresh fried fish/chicken takeout in Cedar Rapids) is above the fold with hero + single gold tel: call CTA + 3 value props; the review value prop now cites '4.4 stars on Google' attributed without a review count (count unverifiable live).",
+      "menu sections: priced item cards from the frozen 2026-07-07 owner paste with Menu JSON-LD, call CTA, order-online external CTAs, and a 'Photos are representational' note; the four small sections (kids-meals, desserts, drinks, gizzards-and-livers) now carry unique non-boilerplate hero/description copy naming their actual items.",
+      "occasions: hero + call CTA, featured menu items, >=5 FAQs, >=4 cross-links; catering occasion cross-links the catering intent landing.",
+      "intent/info/faq/story landings: hero + call CTA, body, FAQs where relevant, >=2 cross-links; disambiguation cluster (/location/ -> /contact/ + /about/ + /faq/) intact.",
+      "neighborhoods: single city-specific H1, genuine local facts (Moundview/Coe College/I-380; Marion via Hwy 100), proximity trust lines, town FAQ, >=400 chars unique body, NAP keeps HQ city.",
+      "contact: NAP (1616 1st Ave NE, Cedar Rapids, IA 52402, (319) 221-1040) + map + caveated hours + directions + call CTA; no lead form (sealed owner call-only decision)."
+    ],
+    "sourceOrGapNotes": [
+      "Google review COUNT: GAP — live GBP count could not be verified from Google itself (google.com/search and Google Maps both refuse automated fetch; web search surfaced only third-party mirrors). Owner cited 208 on 2026-07-07; Wanderlog Google-mirror showed 192 on 2026-07-09. Per the sealed advisory's omit-never-fabricate floor the count was REMOVED: site.json valueProp now reads label '4.4 stars on Google', sublabel 'Rated by Cedar Rapids diners on Google'. No other file cites a review count; the /faq/ page and all landings cite 'Rated 4.4 on Google' attributed, count-free.",
+      "Hours: remain owner-UNCONFIRMED; every page keeps the call-to-confirm caveat — no hours claims added.",
+      "Payment policy: UNKNOWN (owner never stated); copy directs buyers to call to confirm payment methods — no payment claims.",
+      "Menu items/prices: frozen 2026-07-07 owner paste; untouched this phase (only section-level descriptions strengthened).",
+      "Item names 'Mystic' and 'Calypos' reproduced exactly as the owner paste spells them."
+    ],
+    "unresolvedBlockers": []
+  },
+  "advisoryOutcomes": {
+    "reviewCountAdvisory": "RESOLVED — count dropped. Live GBP verification attempted (WebSearch plus WebFetch of google.com/search and Google Maps) and failed: Google blocks automated fetch and no Google-first-party count was retrievable. valueProp edited to cite '4.4 stars on Google' attributed WITHOUT a review count (preferred count-free outcome). The /faq/ rating copy already cited 4.4 without a count and needed no edit.",
+    "smallMenuSectionsCopy": "RESOLVED — kids-meals, desserts, drinks, and gizzards-and-livers section descriptions in src/data/menu.json were boilerplate-thin ('Sweet finishes.', 'Cool it down.', etc.) and were rewritten as unique, item-specific, non-boilerplate copy rendered as each section page's hero subheading and JSON-LD description. Items and prices untouched.",
+    "chicagoGrillFraming": "COMPLIANT — no 'Chicago Grill' mention exists anywhere in src/; nothing to fix.",
+    "ljsJune2014": "COMPLIANT — no LJS / Long John Silver's mention exists in shipped copy (only an internal provenance note in src/graph/facts/phone.json listing corroborating sources); no recency framing anywhere.",
+    "noYelpListPosition": "COMPLIANT — no '#1', 'number one', or 'ranked' claims exist in src/.",
+    "pitaKababDisambiguationOnly": "COMPLIANT — all Pita Kabab mentions (index.astro, landings.json FAQ and location entries) are disambiguation-context only, stating same owner / different restaurant / SW location became Pita Kabab in 2025.",
+    "caveatedHours": "COMPLIANT — hours copy site-wide keeps the call-to-confirm caveat; /open-late-cedar-rapids/ claims 'open later than most', qualified, not 'latest open'."
+  },
+  "identityApplication": {
+    "mode": "real",
+    "domain": "https://captains-fish-chicken.netlify.app",
+    "email": "captainsfishchicken@gmail.com",
+    "gaId": "G-7W35DKNK6Z",
+    "verification": "src/data/business.json untouched this phase; domain, email, and gaId verified present and exactly matching the sealed Phase 3 identityDecision. Canonical URLs derive from the Base layout against the real identity domain. Payment policy unknown — no payment claims fabricated."
+  },
+  "designTokenSource": {
+    "type": "repo",
+    "path": "src/layouts/Base.astro",
+    "format": "css-custom-properties"
+  },
+  "designTokenExportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-3/design-tokens.json",
+  "designTokenHash": "23452304c7e124f81929daca9cd46d42d2bfed8f0f23f9e04d35db8f7ac812d9",
+  "designTokenPreservation": "src/layouts/Base.astro (the sealed repo token source) was not modified this phase; the sealed Phase 3 export path and SHA-256 hash are preserved above. Owner style rule (interior visual language, navy shell-only, gold CTAs-only) untouched."
+}

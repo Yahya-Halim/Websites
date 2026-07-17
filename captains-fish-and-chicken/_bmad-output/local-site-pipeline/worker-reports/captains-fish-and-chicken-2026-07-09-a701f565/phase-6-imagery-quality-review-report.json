@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "workerId": "phase6-reviewer-imagery-quality-v3-61841af6",
+  "role": "reviewer",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 6,
+  "specialist": "imagery-quality",
+  "reviewer": "imagery-quality",
+  "verdict": "pass",
+  "status": "completed",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6.json",
+  "packetHash": "a4de314169e880c30330d2fe19e6ed1967c06017ab33022e4ae0785442c704cc",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-imagery-quality-review-capsule.json",
+  "capsuleHash": "0f7c62e4c573157970eba8646d5ddb309846f0e4f82f77800ceac4387d2a9673",
+  "artifactHashReviewed": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\imagery-quality-review-notes.md",
+  "artifactHash": "8de908782ad7feddeb9b189250344af911133838591ffb6dd3d2fcc0dc73879b",
+  "notesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\imagery-quality-review-notes.md",
+  "commandsRun": [
+    "sha256sum (POSIX) on phase-6-artifact.json, phase-6.json, capsule.json",
+    "Get-FileHash -Algorithm SHA256 on artifact, packet, capsule, image-prompts.json, selections.json",
+    "ConvertFrom-Json parse of scripts/image-prompts.json (94 images; 87 menu-item + 7 marketing; required=1 brand-logo; reference_status generate-from-scratch=94)",
+    "ConvertFrom-Json parse of scripts/selections.json (94 variant selections; 0 missing source/provenance; slot-id alignment 94/94)",
+    "System.IO.File::Exists UTF-8-aware existence check over all 94 manifest output_file targets (0 missing) + 10 named-asset spot-check (all exist)",
+    "ls -b public/images/menu/family-meals-and-combos (confirmed em-dash U+2014 combo-dinner filenames on disk)",
+    "node higgsfield-workflow.mjs verify --project D:/website/captains-fish-and-chicken -> ok:true, problems:[], deferred slots/pages []",
+    "node scratchpad/sweep.mjs -> dist sweep: 38 pages, 94 unique refs, 0 broken, 138 img, 0 missing alt, 5/5 hero webp, 0 non-modern",
+    "grep representational across dist/*.html (present on 14 menu category pages + catering/home/open-late)",
+    "grep alt qualifier on dist/menu/seafood/index.html (menu-item alts end with '(representational image)')",
+    "ConvertFrom-Json parse of src/data/menu.json (frozen menu = 87 items across 14 categories; per-category counts match manifest 1:1)",
+    "Get-FileHash -Algorithm SHA256 on imagery-quality-review-notes.md (final notes bytes)"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-imagery-quality-review-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-imagery-quality-review-report.json (scaffold)",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\scripts\\image-prompts.json",
+    "D:\\website\\captains-fish-and-chicken\\scripts\\selections.json",
+    "D:\\website\\captains-fish-and-chicken\\src\\data\\menu.json",
+    "D:\\website\\captains-fish-and-chicken\\dist\\**\\*.html (38 built pages, via sweep)",
+    "D:\\website\\captains-fish-and-chicken\\public\\ (manifest export targets + named assets, existence checks)"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\imagery-quality-review-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6-imagery-quality-review-report.json"
+  ],
+  "assumptions": [
+    "The sealed Phase 6 artifact named in the capsule (hash d2e25f43...) is the authoritative review target; it verified byte-for-byte, so the review proceeded.",
+    "packetHash and capsuleHash fields carry the contract-declared values from the capsule allowedInputs / orchestrator brief. The actual on-disk files hash differently (packet 9c9b2ed0..., capsule 7c2a8a1e...); see advisory A1 and the verification array. This mismatch does not affect the imagery-quality verdict because every gate finding was re-derived from primary sources, not from packet evidence.",
+    "'Every export EXISTS' was evaluated with a UTF-8-aware .NET existence check; a naive WinPS 5.1 Test-Path false-flagged two em-dash filenames that are in fact present on disk."
+  ],
+  "blockers": [],
+  "verification": [
+    { "check": "sealed phase-6 artifact sha256", "expected": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656", "computed": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656", "result": "match" },
+    { "check": "manifest image-prompts.json sha256 vs artifact claim", "expected": "7f9009e67d6062a0b9ec83816388aa37d0ed33f1181e8e51b54f71a3d02f0259", "computed": "7f9009e67d6062a0b9ec83816388aa37d0ed33f1181e8e51b54f71a3d02f0259", "result": "match" },
+    { "check": "selections.json sha256 vs artifact claim", "expected": "303e4cd9ef3eb058d02ce2f2b316d484615f2dea9f67d1c150f587b9033390a7", "computed": "303e4cd9ef3eb058d02ce2f2b316d484615f2dea9f67d1c150f587b9033390a7", "result": "match" },
+    { "check": "phase-6 packet sha256 vs capsule/orchestrator-declared", "expected": "a4de314169e880c30330d2fe19e6ed1967c06017ab33022e4ae0785442c704cc", "computed": "9c9b2ed04d505ac3e08e56292268e5c62425d926b507da15b15484ac7dacee47", "result": "mismatch-advisory-A1" },
+    { "check": "review capsule sha256 vs orchestrator-declared", "expected": "0f7c62e4c573157970eba8646d5ddb309846f0e4f82f77800ceac4387d2a9673", "computed": "7c2a8a1e539152f15b7659536e9046e50399506ff9563f62a8c7488699b5a81a", "result": "mismatch-advisory-A1" },
+    { "check": "criterion-a manifest/selections/exports counts", "expected": "94 / 94 / 94, 87 menu-item + 7 marketing, every selection has source+provenance, every export on disk", "computed": "94 images (87 menu-item + 7 marketing, required=1), 94 variant selections (0 missing source/provenance), slot-id alignment 94/94, 94/94 exports exist on disk (UTF-8-aware), 10/10 named-asset spot-check exist", "result": "pass" },
+    { "check": "criterion-b dist wiring sweep", "expected": "0 broken refs, all heroes webp/avif, all img have alt", "computed": "38 pages, 94 unique refs, 0 broken, 138 img tags, 0 missing alt, 5/5 hero webp, 0 non-modern hero", "result": "pass" },
+    { "check": "criterion-c representational honesty", "expected": "note on menu pages, no generated-as-real-premises, logo placeholder acknowledged not silent", "computed": "'Photos are representational' on 14 menu category pages; menu-item alts end '(representational image)'; manifest blocker_notes label each render REPRESENTATIONAL; logo.png placeholder acknowledged non-blocking", "result": "pass" },
+    { "check": "criterion-d verificationReport structure", "expected": "desktop+mobile uiChecks present and passing, unresolvedIssues empty", "computed": "status pass/ok true; desktop-ui-check pass; mobile-ui-check pass; unresolvedIssues [] empty; 3 advisories correctly routed forward", "result": "pass" },
+    { "check": "criterion-e no fabrication vs frozen menu", "expected": "87 items, no off-menu images (e.g. no calamari)", "computed": "src/data/menu.json = 87 items / 14 categories; manifest menu-item = 87; per-category counts match 1:1; no calamari/squid/lobster/oyster/scallop ids", "result": "pass" },
+    { "check": "higgsfield-workflow verify (read-only, independent)", "expected": "ok:true, problems:[], zero deferred", "computed": "{ ok:true, problems:[], deferred:{ slots:[], pages:[] } }", "result": "pass" },
+    { "check": "notes file final sha256 (artifactHash)", "expected": "sha256 of final notes bytes", "computed": "8de908782ad7feddeb9b189250344af911133838591ffb6dd3d2fcc0dc73879b", "result": "recorded" }
+  ]
+}

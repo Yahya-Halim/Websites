@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "workerId": "phase0-builder-v3-ad68d563",
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 0,
+  "specialist": "local-business-discovery",
+  "status": "completed",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0.json",
+  "packetHash": "bae95982695ab650a5f4c0ab83f4373122b4648f8d50cbfb9d01fb582055cd83",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0-builder-capsule.json",
+  "capsuleHash": "29f73a973f5436d92099c1143f4445f7dd5a28a79d2099b2396b845a3e6b48d4",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json",
+  "artifactHash": "3c92f0acc5ecfc5dc5e804ae32d501068ce8a4e52efbd68a5ca264228b453fa0",
+  "commandsRun": [
+    "node D:/plugin/localevolve-factory/packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project D:/website/captains-fish-and-chicken --phase 0 --artifact \"D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json\"",
+    "node -e \"console.log(require('crypto').createHash('sha256').update(require('fs').readFileSync('<artifact path>')).digest('hex'))\""
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0-builder-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\local-business-discovery\\SKILL.md",
+    "D:\\website\\captains-fish-and-chicken\\brief.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\web-footprint-findings.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\probe-set.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\owner-questionnaire.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\discovery-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\phase-0-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0\\discovery-notes.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-0-builder-report.json"
+  ],
+  "assumptions": [
+    "The filled web-footprint-findings.json authored by the prior worker in this run is an allowed workbench input; it was verified coherent (23 sources with per-source status, NAP consistency, NE/SW phone separation, hours caveat, owned-site status all consistent with brief.json) and not re-swept.",
+    "Owner statements in brief.json are owner-provided declared facts (recorded in userConfirmedFacts), not web claims.",
+    "No live owner interview occurred in this run; residue was routed to owner-questionnaire.md per the residue-only interview rule.",
+    "Hours remain owner-unconfirmed and are recorded only as an aggregator claim with the call-to-confirm caveat.",
+    "buildOutputCreated is false: the live site at https://captains-fish-chicken.netlify.app was produced by the archived v2 run, not by this phase."
+  ],
+  "blockers": [],
+  "verification": [
+    "inspect-artifact problems: []",
+    "inspect-artifact recommendations: 'Artifact satisfies the phase contract; complete-phase may seal it.'",
+    "All seven packet requiredArtifactFields present and non-null; checklist non-empty with all 7 packet checklist ids evidenced.",
+    "webFootprintFindings summarizes the filled findings file (23 sourcesChecked with statuses, 10 findings, 4 discrepancies, 7 ownerResidueQuestions) and references detailFile web-footprint-findings.json.",
+    "artifactHash computed from final artifact bytes after the last edit; artifact untouched afterward."
+  ]
+}

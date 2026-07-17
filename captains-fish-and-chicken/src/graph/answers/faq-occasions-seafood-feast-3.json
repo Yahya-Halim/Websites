@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-seafood-feast-3",
+  "questionRef": "questions/faq-occasions-seafood-feast-3",
+  "text": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your preferred app to order. Delivery times and fees are set by each app.",
+  "cites": [
+    "occasions/seafood-feast"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-game-day-wings-2",
+  "questionRef": "questions/faq-occasions-game-day-wings-2",
+  "text": "Yes. We're on DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your app and order for delivery. Each app sets its own delivery times and fees.",
+  "cites": [
+    "occasions/game-day-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/game-day-wings.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 1,
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-1/phase-1-artifact.json",
+  "artifactHash": "a0ac6507af3347d0ba9b8a5ef2859d88782baa02539f1c21332b61659bace5cb",
+  "specialist": "keyword-research",
+  "completedAt": "2026-07-08T18:28:19.789Z",
+  "contract": "research sources, competitor notes, keyword/entity findings, source dates, evidence gaps",
+  "artifact": {
+    "phase": 1,
+    "summary": "Phase 1 RESEARCH (run v2, fresh 2026-07-08, plugin 92aeaae). 3-agent SERP-grounded refresh with change detection vs the archived baseline. Landscape shifted materially: the SW flank is now held by three rivals (Chicago Grill Chicken & Fish — new direct format clone; Harold's Chicken since Feb 2025; Long John Silver's Williams Blvd) after the Captains SW store became Pita Kabab; Two Bros relocated to 600 17th St NE (blocks from Captains, weak digital presence); LJS 3801 1st Ave SE shows CLOSED (NE fast-seafood vacancy on Captains' own corridor); Sugapeach remains the metro quality rival but is RELOCATING summer 2026 (time-boxed opportunity); the soul-food field refilled with new independents. Brand SERP remains 100% aggregator-owned with stale two-location signals — citation cleanup + owned brand/menu/hours pages are the top quick wins. All volume metrics Estimated/N-A (no tool). Hiphop Fish & Chicken removed from the competitor set (no Iowa presence).",
+    "checklist": [
+      {
+        "id": "founder-scope-single-location",
+        "status": "done",
+        "note": "Single 1616 1st Ave NE; SW address (now Pita Kabab) excluded and flagged as confusion entity"
+      },
+      {
+        "id": "founder-confirmed-offerings-only",
+        "status": "done",
+        "note": "Pillars/terms derive from owner-confirmed menu + Phase 0 sealed facts"
+      },
+      {
+        "id": "founder-metric-honesty",
+        "status": "done",
+        "note": "No volume tool: every metric Estimated or N/A; SERP-composition sampling 2026-07-08 only"
+      },
+      {
+        "id": "founder-truthful-claims",
+        "status": "done",
+        "note": "Closed/changed businesses quarantined (8 entries incl. Hiphop removal + Harold's date correction); stale aggregator claims flagged, not repeated"
+      }
+    ],
+    "researchSources": [
+      {
+        "source": "WebSearch live SERP sampling — keywords agent",
+        "type": "serp",
+        "date": "2026-07-08",
+        "queries": [
+          "fried fish Cedar Rapids Iowa best",
+          "fried chicken Cedar Rapids best restaurant",
+          "soul food Cedar Rapids Iowa",
+          "seafood restaurant Cedar Rapids Iowa",
+          "chicken wings Cedar Rapids Iowa best",
+          "catering fried chicken fish party pans Cedar Rapids",
+          "family fish dinner deal 50 piece Cedar Rapids",
+          "fish and chicken near me Cedar Rapids delivery DoorDash",
+          "\"Captains Fish and Chicken\" Cedar Rapids menu hours",
+          "Pita Kabab Cedar Rapids 3100 6th St SW",
+          "Sugapeach Chicken Fish Fry North Liberty 2026",
+          "Long John Silver's Cedar Rapids closed or open",
+          "fried catfish Cedar Rapids",
+          "Chicago Grill Chicken and Fish Cedar Rapids new restaurant",
+          "Harold's Chicken Cedar Rapids reopened 2026",
+          "best restaurants near me open late Cedar Rapids 1st Avenue NE takeout",
+          "Captains Fish and Chicken Cedar Rapids reviews Ray Aqel",
+          "lemon pepper fish wings Cedar Rapids Iowa",
+          "chicken tenders family meal Cedar Rapids takeout"
+        ]
+      },
+      {
+        "source": "WebSearch live SERP sampling — competitors agent",
+        "type": "serp",
+        "date": "2026-07-08",
+        "queries": [
+          "Captains Fish and Chicken Cedar Rapids 1st Ave NE",
+          "Pita Kabab Cedar Rapids 3100 6th St SW",
+          "Sugapeach Chicken & Fish Fry North Liberty open 2026",
+          "Harold's Chicken Cedar Rapids reopened 2026",
+          "Two Bros Fish and Chicken Cedar Rapids",
+          "Hiphop Fish & Chicken Cedar Rapids Iowa",
+          "Juicy Crab Island Cedar Rapids",
+          "Crab House seafood restaurant Cedar Rapids Iowa",
+          "Long John Silver's Cedar Rapids Iowa open",
+          "Popeyes Wingstop KFC Cedar Rapids locations",
+          "\"Hiphop Fish\" chicken Iowa location",
+          "best fried chicken Cedar Rapids 2026",
+          "Sweetiepie's Chicken & Fish Fry Cedar Rapids",
+          "Chicago Grill Cedar Rapids menu fish chicken",
+          "fish and chicken near me Cedar Rapids delivery",
+          "soul food restaurant Cedar Rapids Iowa 2026",
+          "Friday fish fry Cedar Rapids best places",
+          "\"Two Bros\" chicken fish \"17th St\" Cedar Rapids hours open",
+          "Fork and Sports soul food Cedar Rapids opened",
+          "[WebFetch] restaurantguru.com/Two-Bros-Chicken-and-Fish-Cedar-Rapids — open/closed status check"
+        ]
+      },
+      {
+        "source": "WebSearch live SERP sampling — GEO/entity agent",
+        "type": "serp",
+        "date": "2026-07-08",
+        "queries": [
+          "Captains Fish and Chicken Cedar Rapids 1616 1st Ave NE",
+          "Captains Fish and Chicken Cedar Rapids Gazette catfish \"tastes like chicken\"",
+          "Pita Kabab Cedar Rapids 3100 6th St SW Ray Aqel",
+          "best fried fish Cedar Rapids 2026",
+          "best fried chicken Cedar Rapids Iowa 2026",
+          "soul food restaurant Cedar Rapids Iowa",
+          "Sugapeach Chicken Fish Fry North Liberty Iowa 2026",
+          "Harold's Chicken Cedar Rapids reopened 2026",
+          "Long John Silver's Cedar Rapids Iowa open",
+          "fish and chicken delivery Cedar Rapids DoorDash Uber Eats Grubhub",
+          "\"Captains Fish and Chicken\" Facebook Pita Kabab",
+          "party pans catering fried chicken fish Cedar Rapids family meal deal 50 piece",
+          "restaurants near Coe College Cedar Rapids 1st Avenue NE takeout",
+          "fried fish chicken restaurant Marion Hiawatha Iowa",
+          "Captains Fish and Chicken Cedar Rapids menu website official",
+          "Cedar Rapids Wellington Heights Mound View neighborhood 1st Avenue NE businesses",
+          "best chicken wings Cedar Rapids Iowa top 10",
+          "Restaurant Guru \"Captains Fish and Chicken\" Cedar Rapids reviews"
+        ]
+      },
+      {
+        "source": "Yelp Top-10 category pages (fried chicken / fish fry / soul food / broasted)",
+        "type": "aggregator",
+        "date": "2026 (Yelp-dated \"Updated 2026\")"
+      },
+      {
+        "source": "Restaurant Guru / Tripadvisor / Wheree best-of pages",
+        "type": "aggregator",
+        "date": "2026-05/2026-06 page dates; STALE content flagged (Sweetiepie's still listed)"
+      },
+      {
+        "source": "DoorDash / UberEats / Grubhub / Postmates store + category pages",
+        "type": "delivery",
+        "date": "2026-07-08"
+      },
+      {
+        "source": "The Gazette (Sugapeach relocation; Harold's Feb 2025 opening; Captains Dec 2024 catfish feature; Fork and Sports preview)",
+        "type": "press",
+        "date": "2024-12 to 2026"
+      },
+      {
+        "source": "KHAK (openings; annual Lent fish-fry roundup)",
+        "type": "press",
+        "date": "2024-10 to 2026"
+      },
+      {
+        "source": "Prior sealed run (archived 098c7de7)",
+        "type": "baseline-for-change-detection",
+        "date": "2026-07-07"
+      }
+    ],
+    "competitorNotes": {
+      "competitors": [
+        {
+          "name": "Sugapeach Chicken & Fish Fry",
+          "type": "local-independent",
+          "url": "https://sugapeach.com/",
+          "note": "STILL OPEN and still the primary quality rival. 650 Pacha Pkwy Ste 1, North Liberty. Yelp listing updated June 2026 (131 Yelp reviews, Estimated); new 2026 appetizer menu; own site with online ordering plus OpenTable/Tripadvisor presence. Corridor-wide brand authority in exactly Captains' category (Southern fried chicken + fish fry + soul food sides), but 20+ minutes from Cedar Rapids NE — loses on proximity for city-modified and near-me queries. Closed Mondays, closes 8pm (4pm Sun) — Captains' 10-11pm hours beat it at night."
+        },
+        {
+          "name": "Harold's Chicken (Cedar Rapids #75)",
+          "type": "national-chain",
+          "url": "https://www.thegazette.com/lifestyles/food-drink/harold-s-chicken-franchise-returns-to-cedar-rapids/article_6be5100e-dabe-5399-a4ac-f5bff734d5b1.html",
+          "note": "CONFIRMED OPERATING — correction to baseline: reopened February 2025 (not 2026), at 4330 16th Ave SW (former Highway 30 Diner), co-owners Vaosa O'Meara and Tierra Long; only Harold's in Iowa. Chicago-franchise brand pull, strong Gazette coverage, DoorDash/EatStreet presence, ranks in Yelp broasted/fried-chicken lists alongside Captains. SW-side — now the strongest fried-chicken name on the flank Captains just vacated."
+        },
+        {
+          "name": "Two Bros Chicken & Fish",
+          "type": "local-independent",
+          "url": "https://restaurantguru.com/Two-Bros-Chicken-and-Fish-Cedar-Rapids",
+          "note": "OPEN at NEW address: 600 17th St NE (moved; old 824 6th St SW listing marked CLOSED on Yelp). Restaurant Guru shows open 11am-9pm weekdays, until 3am Fri/Sat, closed Sunday; (319) 200-4111. This is now Captains' nearest direct-format rival — blocks from 1616 1st Ave NE — but digital footprint is weak (zero Restaurant Guru/Foursquare ratings, N/A review counts, no own site found). Late-night 3am weekend hours are its one differentiator."
+        },
+        {
+          "name": "Chicago Grill Chicken & Fish",
+          "type": "local-independent",
+          "url": "https://www.chicagogrillcr.com/",
+          "note": "NEW TO MAP this run. Live at 824 6th St SW — the exact space Two Bros vacated — open ~11am-11pm with hand-breaded catfish, wings, mix combos (fish+shrimp+wings), plus shawarma/gyro/Philly. Own website, Toast online ordering, active on DoorDash/Grubhub/UberEats/Postmates. Direct menu overlap and now the closest fried fish+chicken counter to the SW-side demand Captains no longer serves; avg item ~$7 (Estimated, menu aggregator)."
+        },
+        {
+          "name": "Juicy Crab Island",
+          "type": "local-independent",
+          "url": "https://www.thegazette.com/article/juicy-crab-island-brings-seafood-soul-food-to-first-avenue-in-cedar-rapids/",
+          "note": "OPEN (Yelp updated May 2026). 1323 1st Ave SE — same 1st Ave corridor as Captains, and the address of the OLD closed Harold's. Cajun seafood boil (snow/king crab, crawfish, shrimp) PLUS a soul food menu (fried chicken, wings, catfish filet, collards, mac) and full bar; owner Jacinta Ingram; Gazette coverage. Overlaps Captains on the seafood and soul-food pillars at a higher, sit-down price point. Closed Mondays."
+        },
+        {
+          "name": "Crab House (Seafood Boil and Bar)",
+          "type": "local-independent",
+          "url": "https://crabhousecr.com/",
+          "note": "OPEN. 2360 Edgewood Rd SW Ste 100, (319) 396-3153, own site, DoorDash/Grubhub/Seamless. Cajun boil-focused (crab, crawfish, lobster, oysters); expanding to Coralville per KHAK. Seafood-pillar competitor only — no fried chicken program — and SW-side, so limited direct overlap on Captains' core fried fish+chicken combos."
+        },
+        {
+          "name": "Long John Silver's",
+          "type": "national-chain",
+          "url": "https://www.ljsilvers.com/locations/ia/cedar-rapids/2630-williams-blvd-sw/",
+          "note": "OPEN (reopened Oct 2024 after Dec 2023 fire; Yelp updated May 2026). 2630 Williams Blvd SW, 10am-10/11pm daily. Remains Captains' clearest positioning win: national frozen-menu fast-food fish vs Captains' fresh hand-breaded cornmeal catfish (Gazette-quoted). SW-side location means it also absorbs some of the demand Captains' former SW store served."
+        },
+        {
+          "name": "Popeyes Louisiana Kitchen",
+          "type": "national-chain",
+          "url": "https://locations.popeyes.com/",
+          "note": "Two Cedar Rapids locations confirmed (370 Blairs Ferry Rd NE, 3401 E Ave NW). Owns 'fried chicken near me' head-term real estate with Yelp/Grubhub/Postmates depth. Not beatable on head terms; irrelevant on fish, gizzards, party pans, soul food sides."
+        },
+        {
+          "name": "KFC",
+          "type": "national-chain",
+          "url": "https://locations.kfc.com/ia/cedar-rapids",
+          "note": "Multiple Cedar Rapids locations per KFC's own locator (exact count N/A from SERP). Competes on family bucket/family-meal intent — the one national overlapping Captains' family fish deal / 50pc value framing. Fight it on fish-family-deal long-tail, not chicken head terms."
+        },
+        {
+          "name": "Wingstop",
+          "type": "national-chain",
+          "url": "https://locations.wingstop.com/us/ia/cedar-rapids",
+          "note": "Cedar Rapids presence confirmed (Edgewood Rd, Yelp updated Feb 2026). Owns wings+delivery head queries and lemon-pepper association at national scale — directly relevant because the Gazette feature hangs Captains' identity partly on lemon pepper. Own 'lemon pepper wings Cedar Rapids' long-tail with local-review proof instead."
+        },
+        {
+          "name": "Champs Chicken (16th Ave BP)",
+          "type": "national-chain",
+          "url": "https://champschicken.com/locations/16th-ave-bp-cedar-rapids-ia/",
+          "note": "Minor. Gas-station franchise counter (fried chicken/tenders) that surfaces in 2026 broasted/fried-chicken SERPs via its corporate location page. Low threat, but shows chain location-page SEO outranking independents on long-tail — an argument for Captains owning a proper location/menu page."
+        },
+        {
+          "name": "I'm Soul Hungry",
+          "type": "local-independent",
+          "url": "https://www.yelp.com/biz/im-soul-hungry-no-title",
+          "note": "NEW TO MAP. 1632 1st Ave NW, (319) 382-4353; Yelp listing active Feb 2026, Nextdoor presence. Live soul-food entrant on the same 1st Avenue axis (NW side). Ratings/volume N/A from SERP. Pressures Captains' soul-food pillar, not its fried fish/chicken core."
+        },
+        {
+          "name": "Fork and Sports",
+          "type": "local-independent",
+          "url": "https://khak.com/cedar-rapids-sports-restaurant-open/",
+          "note": "NEW TO MAP. Sports-themed soul food at 209 3rd St SE (downtown, ex-Taco Gato) from Vaosa O'Meara — the same restaurateur behind Harold's Chicken CR. Gazette previewed late Feb/early Mar 2026 opening; KHAK reports it now open. Menu: fried/baked/smothered classics incl. fried chicken 'similar to Harold's', with planned weekend late-night. Watch item: O'Meara now holds two fried-chicken-adjacent brands in town."
+        },
+        {
+          "name": "Yelp Top-10 lists (fried chicken / fish fry / fish-and-chicken / soul food, Cedar Rapids)",
+          "type": "aggregator-directory",
+          "url": "https://www.yelp.com/search?find_desc=Fish+And+Chicken&find_loc=Cedar+Rapids%2C+Ia",
+          "note": "CONFIRMED still dominating head SERPs — 'Updated 2026' Yelp list pages ranked for fried chicken, Friday fish fry, all-you-can-eat fish fry, broasted chicken, and soul food queries this sweep. Captains appears inside these lists (e.g. broasted chicken), so Yelp profile completeness and review velocity remain the cheapest head-term lever."
+        },
+        {
+          "name": "Restaurant Guru / Tripadvisor / Wheree list pages",
+          "type": "aggregator-directory",
+          "url": "https://restaurantguru.com/fried-fish-Cedar-Rapids-m237",
+          "note": "Restaurant Guru's 'Top 7 fried fish Cedar Rapids' (May 2026) and Tripadvisor best-of pages still rank. Warning: these are STALE — Tripadvisor's June 2026 '10 BEST' page still surfaces Sweetiepie's (closed ~2015), and scraper clones (res-discover.com, wheree.com, res-menu.net) rank for Captains' own brand queries because Captains has no owned website in the SERP."
+        },
+        {
+          "name": "DoorDash / UberEats / Grubhub category pages",
+          "type": "aggregator-directory",
+          "url": "https://www.doordash.com/en/food-delivery/cedar-rapids-ia-restaurants/fish-and-chips/",
+          "note": "Delivery-app store and category pages own the transactional 'delivery near me' SERP; Captains' own DoorDash/UberEats/Postmates/Seamless stores rank top-3 for its brand+delivery queries (top sellers per DoorDash: whole wings, party wings, boneless bites, catfish — Estimated). These are simultaneously Captains' best current SERP asset and a margin tax."
+        }
+      ],
+      "closedOrChanged": [
+        "Captains Fish and Chicken, 3100 6th St SW (former second location) — CHANGED: now Pita Kabab, a Mediterranean/Palestinian restaurant by the same owner Ray Aqel (pitakababcr.com, (319) 440-3709, Yelp May 2026). Must never be cited as a Captains location. HAZARD: a stale Yelp page 'Captains Fish and Chicken — 3100 6th St SW, Updated March 2026' is still live and not marked closed, and May 2025 Gazette/KHAK 'second location' articles still rank — active citation-poisoning risk for run v2.",
+        "Two Bros Chicken & Fish, 824 6th St SW — CLOSED (Yelp marked CLOSED July 2025); business relocated to 600 17th St NE (open), and the old SW space is now occupied by competitor Chicago Grill Chicken & Fish.",
+        "Harold's Chicken #23, 211 1st Ave NE — CLOSED (old downtown location, Yelp marked CLOSED); the only live Harold's is 4330 16th Ave SW. Old EatStreet/Seamless listings for 1323 1st Ave SE / 200 1st Ave NE are dead citations; 1323 1st Ave SE is now Juicy Crab Island.",
+        "Vivian's Soul Food, 2925 Williams Pkwy SW — CLOSED (confirmed again, Yelp CLOSED, updated May 2026).",
+        "Just Like Home Soul Food, 1100 3rd St SE — CLOSED (confirmed again, Yelp CLOSED, updated May 2026).",
+        "Sweetiepie's Chicken & Fish Fry, 624 12th Ave SE — CLOSED since ~2015; legacy folded into Sugapeach (Iowa Soul Food Company). Still appears in Tripadvisor's 'Updated June 2026' best-of page — do not cite as live.",
+        "Hiphop Fish & Chicken — NOT PRESENT in Iowa: hiphopfc.com locations are MD/GA/NC/FL only; no Cedar Rapids listing found in any SERP. Remove from competitor set entirely.",
+        "SoulGood Southern Dining — no evidence of current operation; only a stale Facebook page surfaced (no address, hours, or 2026 activity). Keep quarantined per baseline."
+      ],
+      "strategicRead": "The single biggest v2 change is geographic: by converting the SW store into Pita Kabab, Captains surrendered the entire SW flank, and three fried-fish/chicken sellers now hold it — Chicago Grill Chicken & Fish (new, in Two Bros' old 824 6th St SW space, near-identical menu), Harold's Chicken (4330 16th Ave SW, franchise brand pull, opened Feb 2025), and Long John Silver's (Williams Blvd). Meanwhile Captains' home turf got more crowded but not stronger: Two Bros relocated to 600 17th St NE — blocks away — yet has near-zero reviews and no website, and Juicy Crab Island sits down the same 1st Ave corridor at a higher boil-house price point. Who wins what: Sugapeach still wins metro-wide brand/quality searches for chicken-and-fish-fry but loses Cedar Rapids proximity and evening hours; national chains (Popeyes x2, KFC, Wingstop, Champs) own chicken head terms; Yelp/Restaurant Guru/Tripadvisor lists and delivery-app category pages still own every head SERP, and several are provably stale. What Captains should own: (1) URGENT citation hygiene before anything else — get the phantom Yelp 'Captains 3100 6th St SW' page closed/merged and add sister-restaurant disambiguation (same owner, different cuisine) so reviews, NAP and entity signals consolidate on 1616 1st Ave NE; the 2025 'second location' press is now a liability. (2) Own the fresh-vs-frozen fish position against LJS and species-level long-tail (catfish, perch, red snapper, cod, gizzards, livers) validated by the Gazette cornmeal-catfish feature — no local rival has press like this. (3) Own family fish deals up to 50pc + party pans — nobody in the live set (Sugapeach closes 8pm, chains cap at buckets, boil houses are per-pound) competes on bulk fried-fish value; this is also the KFC family-meal counter. (4) Own 'SW Cedar Rapids delivery' with a service-area page rather than ceding the old store's demand to Chicago Grill. (5) Keep soul food a secondary pillar — that segment is refilling fast (I'm Soul Hungry, Fork and Sports by Harold's owner O'Meara) even as the old closures (Vivian's, Just Like Home, Sweetiepie's) stay closed. The 8-pillar baseline structure holds; retitle 'near-me+delivery' to explicitly include the SW service-area play, and treat review velocity on the single NE location as the compounding asset — 4.4/208 on Google already beats every same-format rival in town (all metrics Estimated or platform-reported; no keyword volumes used).",
+      "baselineCorrections": [
+        "Harold's Chicken opened Feb 2025 (not \"reopened 2026\" as prior run stated)",
+        "Hiphop Fish & Chicken has NO Iowa presence — removed from the set entirely",
+        "Two Bros relocated: 824 6th St SW CLOSED -> 600 17th St NE (near Captains, low digital footprint)",
+        "LJS split: 3801 1st Ave SE CLOSED (Oct 2025) — NE fast-seafood vacancy; Williams Blvd SW store reopened post-fire"
+      ]
+    },
+    "keywordEntityFindings": {
+      "pillars": [
+        {
+          "pillar": "Fried fish / Friday fish fry (VALIDATED — Captains present in Yelp fried-fish and catfish top-10s; aggregators still own head SERPs; all volumes Estimated, no keyword tool)",
+          "topTerms": [
+            "fried fish cedar rapids",
+            "friday fish fry cedar rapids",
+            "fish fry near me cedar rapids",
+            "fried catfish cedar rapids",
+            "all you can eat fish fry cedar rapids (bar-dominated: Odie's, Stinky's, Teddys)"
+          ]
+        },
+        {
+          "pillar": "Fried chicken + wings (VALIDATED but MORE competitive than baseline — Born To Fry food truck tops Yelp fried chicken; Harold's Chicken ranks in both wings and fried-chicken SERPs; Wingstop/It's Just Wings own wings head terms; Captains surfaces mainly under 'broasted chicken')",
+          "topTerms": [
+            "fried chicken cedar rapids",
+            "chicken wings cedar rapids",
+            "broasted chicken cedar rapids",
+            "chicken tenders cedar rapids",
+            "lemon pepper wings cedar rapids"
+          ]
+        },
+        {
+          "pillar": "Seafood (VALIDATED — but boil-house entrants now crowd it: Crab House 2360 Edgewood Rd SW, Juicy Crab Island 1323 1st Ave SE; Red Lobster/Tripadvisor own head terms)",
+          "topTerms": [
+            "seafood restaurant cedar rapids",
+            "seafood near me cedar rapids",
+            "shrimp dinner cedar rapids",
+            "seafood delivery cedar rapids",
+            "seafood boil cedar rapids (adjacent, rising — Estimated)"
+          ]
+        },
+        {
+          "pillar": "Soul food (VALIDATED — Captains named in Yelp soul-food results; field refilled since baseline closures: I'm Soul Hungry 1632 1st Ave NW, Iowa Soul Food Market 1100 3rd St SE in former Just Like Home space, Royceann's, C&P Soul Food Cafe)",
+          "topTerms": [
+            "soul food cedar rapids",
+            "soul food near me cedar rapids",
+            "southern food cedar rapids",
+            "soul food restaurant 1st avenue cedar rapids",
+            "catfish and soul food cedar rapids"
+          ]
+        },
+        {
+          "pillar": "Catering + party pans (VALIDATED as open gap — head SERP owned by ezCater/Popeyes party pans and generic caterer directories; Captains party pans invisible except via Yelp menu page)",
+          "topTerms": [
+            "fried chicken catering cedar rapids",
+            "fish fry catering cedar rapids",
+            "party pans cedar rapids",
+            "catering near me cedar rapids",
+            "soul food catering cedar rapids"
+          ]
+        },
+        {
+          "pillar": "Family deals (VALIDATED — Captains' own DoorDash listing ranks for family-deal queries showing 'Fish Only Family Deal' and 'Captains Family Meal Deal'; no local player has owned content; chains (KFC Family Fill Up, Metro Diner $49 tenders meal) own generic terms; '50 piece' term N/A in SERPs)",
+          "topTerms": [
+            "family meal deal cedar rapids",
+            "family fish dinner cedar rapids",
+            "50 piece fish deal cedar rapids (N/A — no SERP presence yet)",
+            "chicken tenders family meal cedar rapids",
+            "8 piece fish and chicken deal"
+          ]
+        },
+        {
+          "pillar": "Near-me + delivery (VALIDATED — DoorDash/UberEats/Grubhub/Postmates category pages own every head SERP; Captains present but DoorDash city page still shows TWO locations; new rival Chicago Grill Chicken & Fish claims 'Best Fried Fish & Chicken in Cedar Rapids' tagline on DoorDash)",
+          "topTerms": [
+            "fish and chicken near me cedar rapids",
+            "chicken delivery cedar rapids",
+            "fish delivery cedar rapids",
+            "late night takeout cedar rapids",
+            "doordash fish and chips cedar rapids"
+          ]
+        },
+        {
+          "pillar": "Brand + menu + hours (VALIDATED with a twist — brand SERP is 100% aggregator-owned: Yelp x2 incl. stale SW listing, Tripadvisor, DoorDash, Grubhub-stale, UberEats, Postmates, Zmenu, Wheree, res-discover scraper; zero owned results; Gazette second-location article still ranks and asserts an address that is now Pita Kabab)",
+          "topTerms": [
+            "captains fish and chicken",
+            "captains fish and chicken menu",
+            "captains fish and chicken cedar rapids hours",
+            "captains fish and chicken phone number",
+            "captains fish and chicken 1st ave"
+          ]
+        }
+      ],
+      "quickWins": [
+        "Citation cleanup for the dead 3100 6th St SW location: get Yelp ('Updated March 2026', still live), Grubhub, and the DoorDash city page ('2 locations') to mark it closed/converted — it is now Pita Kabab and every stale listing risks mis-orders and split brand equity. Highest-leverage single action found in this refresh.",
+        "Publish an owned menu + hours page targeting 'captains fish and chicken menu/hours' — the brand SERP has zero owned results; even scrapers (Zmenu, Wheree, res-discover.com) outrank the business. Easiest SERP to take (Estimated: low competition, branded intent).",
+        "Late-night visibility: Captains is open to 10-11pm but absent from Yelp 'Restaurants Open Late' and KHAK late-night roundups; only Starlite Room represents the 1st Ave NE corridor. Add 'open late' language to GBP/site and pitch the KHAK list.",
+        "Friday fish fry positioning: the 'friday fish fry cedar rapids' SERP is bar-and-grill dominated (Odie's, Stinky's, Teddys) with no counter-service/takeout player; KHAK publishes an annual Corridor Lent fish-fry roundup — build a fish-fry landing section and pitch inclusion before Lent 2027.",
+        "Catering/party-pan landing page targeting 'fried chicken catering cedar rapids' + 'party pans cedar rapids' — only Popeyes-via-ezCater ranks locally; Captains' party pans are invisible despite being a real offering."
+      ],
+      "growth": [
+        "Own the catfish cluster: Captains already leads Yelp's catfish list and the Gazette quote ('fried catfish tastes like chicken', cornmeal breading, fresh-ground lemon pepper) still ranks — build an owned catfish/fish-species page (perch, tilapia, cod, catfish) that becomes the canonical result instead of the outdated Gazette article.",
+        "Large-format family deals content: structured pages for the up-to-50pc fish deals and family meal bundles — no local competitor has owned content here (chains own generic terms); Captains' DoorDash listing already ranks for these queries, so an owned page can stack the SERP (Estimated opportunity).",
+        "Wings/tenders flank vs Harold's and Wingstop: hardest pillar; differentiate on lemon pepper whole wings + fish combo framing ('fish and wings combo cedar rapids') where chains cannot follow; requires sustained review velocity on Yelp/Google.",
+        "SW-side recapture after losing the 3100 6th St SW store: Chicago Grill Chicken & Fish (824 6th St SW) and Harold's (4330 16th Ave SW) now own SW-quadrant fish-and-chicken demand — publish delivery-radius/service-area content making clear the NE store delivers city-wide via DoorDash/UberEats/Grubhub.",
+        "Sugapeach relocation window (summer 2026, per The Gazette): the Corridor's #1 quality rival will churn citations, hours, and reviews during its first move in 10 years — publish Corridor-wide 'fish fry / soul food' comparison-adjacent content in Q3 2026 to intercept displaced North Liberty/Iowa City demand."
+      ],
+      "geoOpportunities": [
+        "Single-location truth assertion for AI engines: llms.txt + LocalBusiness JSON-LD with one NAP (1616 1st Ave NE, (319) 221-1040) and an explicit dated statement that the 3100 6th St SW site closed and became Pita Kabab — today DoorDash, Yelp, and the Gazette all tell AI models Captains has two locations, so any LLM answer will likely repeat the error until an authoritative correction exists.",
+        "Citable fact block: publish attributed, quotable passages anchored on the Gazette Dec 2024 feature (cornmeal breading, freshly ground lemon pepper, 'fried catfish tastes like chicken') — AI engines already surface this exact language; owning it on-site redirects citation to the business.",
+        "Conversational Q&A / FAQPage schema matching AI-style queries: 'who owns Captains Fish and Chicken' (Ray Aqel, previously opened the model in MN/IL/MI), 'what happened to the second Captains location', 'is Captains Fish and Chicken good' (Google 4.4/208 — Estimated, verify at publish) — this narrative currently lives only in Facebook posts and KHAK snippets.",
+        "Structured menu with prices (Menu/MenuItem schema + speakable) for family deals and party pans — delivery apps are currently the ONLY machine-readable menu source AI can cite; an owned structured menu becomes the preferred citation for price/deal questions.",
+        "Authority-surface hygiene: claim/correct Restaurant Guru, Restaurantji, Wheree, Tripadvisor, and Stacker-feeding profiles (all appear in sampled SERPs and are common AI citation feeders), and pitch a Gazette/KHAK follow-up story on the Pita Kabab conversion to create a fresh authoritative source establishing the single-location canon."
+      ],
+      "changesVsBaseline": [
+        "Pita Kabab conversion did NOT free 'captains' brand SERP space — the opposite: stale Captains listings at 3100 6th St SW still rank (Yelp listing 'Updated March 2026', Grubhub store page, DoorDash city page showing '2 locations'), and the Gazette 'opens second location' article still ranks for catfish and brand queries. Net-new liability requiring cleanup, not a freed opportunity. Pita Kabab itself ranks only for Mediterranean terms (own site pitakababcr.com) and does not collide with 'captains' queries.",
+        "New SERP entrants absent from the 2026-07-07 baseline: Chicago Grill Chicken & Fish (824 6th St SW — direct format clone with own website chicagogrillcr.com and 'Best Fried Fish & Chicken in Cedar Rapids' tagline on DoorDash); Juicy Crab Island (1323 1st Ave SE — seafood + soul food ON Captains' own First Avenue corridor, with Gazette coverage); Boston Fish (804 5th St SE, DoorDash); Born To Fry (food truck now topping Yelp fried-chicken results); I'm Soul Hungry (1632 1st Ave NW); Iowa Soul Food Market (1100 3rd St SE, occupying former Just Like Home space); Crab House Seafood Boil and Bar (2360 Edgewood Rd SW).",
+        "Sugapeach (North Liberty) confirmed as primary quality rival (Restaurant Guru 4.5/1302 — Estimated) BUT is relocating in summer 2026 per The Gazette ('significant changes happening over the next four months') — a new time-boxed opportunity window that did not exist in the baseline.",
+        "Long John Silver's picture shifted: the 3801 1st Ave SE store shows CLOSED on Yelp (as of Oct 2025) while the Williams Blvd SW store reopened post-fire — so the baseline's 'clearest win' (frozen-menu LJS, SW side) now includes a fast-seafood vacancy on Captains' own 1st Ave corridor (Estimated — verify locally before citing).",
+        "Harold's Chicken is a stronger rival than baseline assumed: confirmed operating at 4330 16th Ave SW (Gazette; state's only Harold's) and now ranking in BOTH wings and fried-chicken head SERPs; the old Harold's #23 at 211 1st Ave NE is marked closed on Yelp, leaving more 1st-Ave-corridor chicken demand unserved.",
+        "Baseline closures re-confirmed: Vivian's Soul Food and Just Like Home Soul Food both still shown closed on Yelp; the soul-food field has since refilled with new independents (I'm Soul Hungry, Iowa Soul Food Market, Royceann's, C&P) — the pillar is no longer a vacuum.",
+        "Aggregator dominance of head SERPs unchanged (validates baseline): Yelp, Restaurant Guru, Tripadvisor, Restaurantji, Stacker, and delivery apps own every non-brand head query sampled; one NEW scraper (captains-fish-and-chicken.res-discover.com) now ranks on the brand SERP, reinforcing the owned-site urgency.",
+        "All demand metrics remain Estimated or N/A — no keyword-volume tool was available for this run; every prioritization above is based on live SERP composition sampled 2026-07-08."
+      ],
+      "entities": [
+        "Captains Fish and Chicken, INC — canonical single location, 1616 1st Ave NE, Cedar Rapids, IA 52402, (319) 221-1040 (counter-service fried fish/chicken/seafood/soul food; Yelp categorizes as Soul Food)",
+        "Ray Aqel — owner; previously opened and sold the same restaurant model in Minnesota, Illinois, and Michigan; also owns Pita Kabab (Gazette, KHAK)",
+        "The Gazette (Cedar Rapids) — press entity; feature 'Captain's Fish and Chicken opens second location in Cedar Rapids' with the quotable claims: fried catfish 'takes on a very similar flavor profile to fried chicken', 'medium-bodied cornmeal breading', 'freshly ground lemon pepper' as main seasoning; CAUTION: headline anchors the now-defunct SW location",
+        "KHAK 98.1 (Townsquare Media) — two features: 'There's a New Place for Fried Chicken & Fish in Cedar Rapids' and a second-location announcement; also publishes the Lent fish-fry and best-wings/best-fried-chicken Eastern Iowa roundups AI engines cite",
+        "Pita Kabab (3100 6th St SW, Cedar Rapids; pitakababcr.com; opened 2025; same owner Ray Aqel; halal Mediterranean/Palestinian) — CONFUSION ENTITY: former Captains second location, must NEVER be cited as a Captains",
+        "Stale 'Captains at 3100 6th St SW' listings still live (entity-confusion risk, verified 2026-07): Yelp second listing yelp.com/biz/captains-fish-and-chicken-cedar-rapids-2 marked 'Updated March 2026', Grubhub restaurant/11805992 at 3100 6th St SW, WanderBoat AI trip-planner listing",
+        "Captains Facebook page (facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294) — CONFIRMED posting Pita Kabab soft-opening content ('changing the concept of their 6th Street location'); owned-channel brand blending risk",
+        "Third-party citation layer (no owned site found): Yelp, Tripadvisor (d28991845), DoorDash (store 34802887), Uber Eats, Postmates, Seamless, Zmenu, Wheree, res-discover.com auto-generated site, Restaurantji",
+        "Signature menu entities: fried catfish, perch, tilapia, cod, red snapper, calamari, crab cakes, shrimp, wings, tenders, gizzards, liver, hush puppies, fried okra, mac & cheese, cheese curds, banana pudding, lemon cake; cornmeal breading + lemon pepper seasoning",
+        "Sugapeach Chicken & Fish Fry (650 Pacha Pkwy Ste 1, North Liberty; sugapeach.com; OpenTable; 'best soul food restaurant in Iowa' claims; new-for-2026 appetizers; cornmeal-breaded catfish + beer-batter cod) — PRIMARY RIVAL, confirmed active June 2026",
+        "Harold's Chicken #75 (4330 16th Ave SW, Cedar Rapids; co-owners O'Meara and Tierra Long; Gazette: opened February 2025, state's only Harold's; CORRECTION to baseline 'reopened 2026') — ranks on wings and broasted-chicken SERPs",
+        "Long John Silver's (2630 Williams Blvd SW; (319) 365-5353) — REOPENED Oct 2024 after Dec 2023 fire with renovated interior; 'clearest win' framing should shift from operational weakness to fresh-vs-frozen menu contrast; SW side",
+        "Yelp fried-fish top-10 co-mention entities (2026): Daisy's Garage, The Blind Pig, Emil's Hideaway, Sacred Cow Tavern, Cheddar's Scratch Kitchen, The Hip-Stir, Pickle Palace, Cliff's Dive Bar",
+        "Broasted/pressure-fried co-mentions: The Inn Restaurant and Bar, Born To Fry, Naso's (Marion, pressure-fried chicken since 1952/1975); wings SERP: Kickstand, Wingstop, It's Just Wings, Buffalo Wild Wings, Popeyes",
+        "Soul-food SERP co-mentions (active): Royceann's Soul Food, Shugga's Soul Cafe, I'm Soul Hungry, Black Sheep Social Club, Pick Up N Go, Koffigrill Afro-Caribbean",
+        "Closed-but-still-ranking soul food entities: Vivian's Soul Food (Yelp CLOSED; still carries 'best soul food in Iowa' legacy accolades), Just Like Home Soul Food (Yelp CLOSED May 2026), SoulGood Southern Dining — citation-displacement opportunity",
+        "Out-of-market name-collision entities (AI disambiguation risk): Captain Fish & Chicken (Miami Gardens FL), The Captain Fish & Chicken, Captain Sam's Fish and Chicken, Captain Fresh Fish & Chicken (Kankakee IL), Captain's Table (Detroit), Captain Kitchen Kebab & Fish (Melbourne AU)",
+        "Geo anchors near 1616 1st Ave NE: Coe College (Tripadvisor 'Restaurants Near Coe College' + Grubhub Coe College delivery page dominate), Mound View/Moundview, Wellington Heights, College District, 1st Avenue East Micro-Area Action Plan, shuttered First Avenue Hy-Vee, vacant former McDonald's at 1530 1st Ave NE, Commons on 1st (14th St NE)"
+      ],
+      "geoQuestions": [
+        "Where can I get fried catfish in Cedar Rapids?",
+        "What's the best fish and chicken takeout near Coe College?",
+        "Is the Captains Fish and Chicken on 6th St SW in Cedar Rapids still open?",
+        "Is Captains Fish and Chicken the same as Pita Kabab? Who owns them?",
+        "Who has better fried fish in Cedar Rapids — Captains Fish and Chicken or Long John Silver's?",
+        "Where can I order a 50-piece family fish deal or a party pan of fried chicken in Cedar Rapids?",
+        "Does Captains Fish and Chicken deliver? Is it on DoorDash, Uber Eats, or Grubhub?",
+        "What are Captains Fish and Chicken's hours and phone number in Cedar Rapids?",
+        "What soul food restaurants are still open in Cedar Rapids now that Vivian's Soul Food closed?",
+        "Where can I get lemon pepper wings or fried gizzards in Cedar Rapids?",
+        "What's a good fried fish place near Wellington Heights or Mound View in Cedar Rapids?",
+        "Is there a good fish and chicken spot near Marion or Hiawatha, Iowa?",
+        "Where can I find a Friday fish fry near Cedar Rapids during Lent 2026?",
+        "Where can I get fried perch, red snapper, or whole catfish in Cedar Rapids?",
+        "Who does fried chicken and fish catering trays for a party in Cedar Rapids?",
+        "What's the best late-night fried chicken takeout on 1st Avenue NE in Cedar Rapids?"
+      ],
+      "localModifiers": [
+        "Cedar Rapids, IA / 52402 / Linn County",
+        "1st Avenue NE / First Avenue East corridor / College District (city's 1st Avenue East Micro-Area Action Plan area)",
+        "near Coe College (Tripadvisor 'Restaurants Near Coe College' list + Grubhub Coe College delivery page are the ranking surfaces)",
+        "Mound View (city also spells 'Moundview')",
+        "Wellington Heights",
+        "Commons on 1st / 14th Street NE intersection",
+        "Marion, IA (no fried fish/chicken specialist — only Naso's pressure-fried chicken; content gap)",
+        "Hiawatha, IA (only Culver's fish and chips; content gap)",
+        "I-380 corridor / off I-380 downtown exits",
+        "Cedar Rapids–Iowa City Corridor ('the Corridor' — local press vernacular)",
+        "NE Cedar Rapids vs SW Cedar Rapids (competitors Harold's, LJS, and Pita Kabab are all SW-side; Captains owns the NE quadrant)",
+        "North Liberty (Sugapeach's geography — 25 min south, do not concede 'near me' overlap)",
+        "near me + takeout / curbside pickup / delivery",
+        "Lent / Friday fish fry Eastern Iowa (KHAK 2026 roundup surface)",
+        "downtown Cedar Rapids / MedQuarter-adjacent (use cautiously — corridor naming verified only as 1st Avenue East)"
+      ]
+    },
+    "sourceDates": {
+      "serpSweep": "2026-07-08",
+      "yelpListPages": "Updated 2026 (Yelp-dated)",
+      "gazetteSugapeachRelocation": "2026 (summer 2026 relocation reported)",
+      "haroldsOpening": "2025-02 (Gazette)",
+      "captainsCatfishFeature": "2024-12 (Gazette via Hoopla)",
+      "baselineRun": "2026-07-07",
+      "note": "Date context for all research is 2026-07; aggregator \"best-of\" page dates carry stale content and are flagged where detected."
+    },
+    "evidenceGaps": [
+      "No owned website or domain found in any SERP — only auto-generated third-party pages (res-discover.com, Wheree, Zmenu); AI engines have no canonical first-party source, no schema, no llms.txt surface. Highest-impact gap.",
+      "Google rating 4.4/208 (prior baseline) could not be re-verified via WebSearch this run — GBP data not exposed in results; label Estimated, verify directly in GBP before citing.",
+      "Hours conflict across sources: one aggregator shows Sun 11:00 AM–8:00 PM and Fri–Sat close at 11 PM; another truncates Saturday; NAP/hours consistency across Yelp/Tripadvisor/delivery apps unverified.",
+      "Family fish deals up to 50pc and party pans appear NOWHERE in third-party SERPs — catering-intent queries return zero Captains results; the differentiator is invisible to AI engines and needs first-party + aggregator menu coverage.",
+      "Stale SW-location citations confirmed live with no closure annotation: Yelp second listing (updated March 2026), Grubhub 3100 6th St SW menu page, WanderBoat listing, plus Gazette/KHAK second-location headlines — cleanup/suppression plan required; risk that AI answers cite the Pita Kabab address as a Captains.",
+      "Captains Facebook page confirmed cross-posting Pita Kabab content — no separate audit done of how much of the feed is Pita Kabab vs Captains; owned-channel entity blending unquantified.",
+      "No keyword-volume tool available — all demand metrics are Estimated or N/A this run; no search-volume claims were made or should be made.",
+      "Restaurant Guru dedicated Captains page did not surface this run despite baseline claiming Restaurant Guru presence — unconfirmed; Restaurant Guru category pages (fried-fish, chicken-wings) do rank.",
+      "Baseline discrepancy: Harold's Chicken opened February 2025 per the Gazette, not 'reopened 2026' as the prior run stated — reconcile before publishing competitor claims.",
+      "Captains' presence in the KHAK Lent 2026 Eastern Iowa fish-fry roundup unverified — inclusion not confirmed; a concrete outreach/citation opportunity either way.",
+      "Opening date (Oct 2024) and the Gazette feature month (Dec 2024) not independently re-dated this run — article dates not exposed in snippets; verify before using as structured-data foundingDate.",
+      "Review counts and ratings on Yelp/Tripadvisor/delivery apps not quantified this run (snippets omitted counts) — needed for review-velocity tracking vs Sugapeach (131 Yelp reviews visible) and Harold's."
+    ]
+  },
+  "handoffPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\handoffs\\captains-fish-and-chicken-2026-07-08-c0033522\\phase-1.json"
+}

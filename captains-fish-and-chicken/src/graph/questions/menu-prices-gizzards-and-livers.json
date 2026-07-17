@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-gizzards-and-livers",
+  "question": "How much do Gizzards & Livers cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/gizzards-and-livers.json",
+  "lastVerified": "2026-07-07"
+}

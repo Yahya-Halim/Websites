@@ -1,0 +1,279 @@
+---
+import Base from '../../layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderFaqJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+// CRO blocks (T4) composed into the occasion kind.
+import Hero from '../../components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+// One static page per occasions-collection entry, keyed by the entry's own
+// `slug` field. Empty collection → no paths generated.
+export async function getStaticPaths() {
+  const occasions = await getCollection('occasions');
+  return occasions.map((occasion) => ({
+    params: { slug: occasion.data.slug },
+    props: { occasion },
+  }));
+}
+
+const { occasion } = Astro.props;
+const o = occasion.data;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+// Featured items resolve against the menu collection by sectionSlug + index;
+// unresolvable references render nothing (data validation owns integrity).
+const menuSections = await getCollection('menu');
+const featured = o.featuredItems
+  .map(({ sectionSlug, itemIndex }) => {
+    const section = menuSections.find((s) => s.data.slug === sectionSlug);
+    const item = section?.data.items[itemIndex];
+    return item && section ? { item, sectionSlug: section.data.slug, sectionName: section.data.name } : null;
+  })
+  .filter(Boolean);
+
+const businessName = business?.name ?? '';
+const title = o.seo.title;
+const metaDescription = o.seo.description;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site
+  ? new URL(`/occasions/${o.slug}/`, Astro.site).href
+  : `/occasions/${o.slug}/`;
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description: metaDescription,
+  websiteName: businessName,
+  websiteUrl,
+  speakableSelectors: ['.hero-copy h1', '.hero-subheading'],
+});
+
+// Home → Occasions → {title}. Middle crumb url-less (no occasions hub page).
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Occasions' },
+    { name: o.title },
+  ],
+});
+
+// Occasion schema mandates ≥5 FAQs, so the FAQ block always renders here.
+const faqLd = renderFaqJsonLd({ faqs: o.faqs });
+
+// Generated occasion heroes (Higgsfield, representational). Only occasions
+// with an exported hero render an image; the rest render the text hero.
+const OCCASION_HERO_IMAGES = {
+  'office-and-party-catering': '/images/hero/catering-party-pans.webp',
+  'family-dinner': '/images/hero/family-dinner.webp',
+  'game-day-wings': '/images/hero/game-day-wings.webp',
+};
+const heroSrc = OCCASION_HERO_IMAGES[o.slug];
+const heroImage = heroSrc
+  ? { src: heroSrc, alt: o.heroAltText ?? `${o.title} (representational image)`, width: 1600, height: 900 }
+  : undefined;
+---
+
+<Base title={title} description={metaDescription} jsonLd={[webPageLd, breadcrumbLd, faqLd]}>
+  <article class="occasion">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading={o.headline}
+      subheading={metaDescription}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+      image={heroImage}
+    />
+
+    <section class="body">
+      <p>{o.body}</p>
+    </section>
+
+    {featured.length > 0 && (
+      <section class="featured" aria-labelledby="featured-heading">
+        <span class="eyebrow">ON THE MENU</span>
+        <h2 id="featured-heading">What to order</h2>
+        <ul>
+          {featured.map((f) => (
+            <li>
+              <a href={`/menu/${f.sectionSlug}/`}>{f.item.name}</a>
+              <span class="featured-section">from {f.sectionName}</span>
+              {f.item.description && <p>{f.item.description}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {o.howToSteps && o.howToSteps.length > 0 && (
+      <section class="how-to" aria-labelledby="how-to-heading">
+        <span class="eyebrow">HOW IT WORKS</span>
+        <h2 id="how-to-heading">How it works</h2>
+        <ol>
+          {o.howToSteps.map((step) => (
+            <li>
+              <strong>{step.name}</strong>
+              <p>{step.text}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    <section class="faqs" aria-labelledby="faqs-heading">
+      <span class="eyebrow">GOOD TO KNOW</span>
+      <h2 id="faqs-heading">Frequently asked questions</h2>
+      <dl>
+        {o.faqs.map((faq) => (
+          <>
+            <dt>{faq.question}</dt>
+            <dd>{faq.answer}</dd>
+          </>
+        ))}
+      </dl>
+    </section>
+
+    {/* Occasion schema mandates ≥4 cross-links (the matrix mesh). */}
+    <nav class="related" aria-labelledby="related-heading">
+      <span class="eyebrow">MORE TO EXPLORE</span>
+      <h2 id="related-heading">Related</h2>
+      <ul>
+        {o.crossLinks.map((link) => (
+          <li><a href={link.slug}>{link.anchor}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    {/* Truthfulness floor: every page showing a food render carries the
+        visible disclosure, same as home and the menu pages. */}
+    {heroImage && <p class="image-note">Food photos are representational.</p>}
+  </article>
+</Base>
+
+<style>
+  .occasion {
+    padding: 2rem 0;
+  }
+  .body p {
+    max-width: 65ch;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+  .featured,
+  .how-to,
+  .faqs,
+  .related {
+    margin-top: 2.5rem;
+  }
+
+  /* "What to order" — white cards, same DNA as the menu grids. */
+  .featured ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+  }
+  .featured li {
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    box-shadow: var(--shadow-sm);
+    padding: 1.1rem 1.25rem;
+  }
+  .featured a {
+    font-weight: 800;
+    color: var(--navy-700, #123253);
+    text-decoration: none;
+  }
+  .featured a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .featured-section {
+    display: block;
+    margin-top: 0.15rem;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.85rem;
+  }
+  .featured li p {
+    margin: 0.5rem 0 0;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.92rem;
+    line-height: 1.5;
+  }
+
+  /* "How it works" — numbered step cards (shared step language with home). */
+  .how-to ol {
+    list-style: none;
+    counter-reset: step;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
+  }
+  .how-to ol li {
+    counter-increment: step;
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    box-shadow: var(--shadow-sm);
+    padding: 1.25rem 1.25rem 1rem;
+  }
+  .how-to ol li::before {
+    content: counter(step);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--steel-100, #e8eef4);
+    color: var(--navy-700, #123253);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  .how-to strong {
+    display: block;
+    color: var(--navy-700, #123253);
+    margin-bottom: 0.25rem;
+  }
+  .how-to ol li p {
+    margin: 0;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.95rem;
+  }
+  .image-note {
+    font-size: 0.8rem;
+    color: var(--ink-soft, #3c4f66);
+    margin-top: 2.5rem;
+  }
+</style>

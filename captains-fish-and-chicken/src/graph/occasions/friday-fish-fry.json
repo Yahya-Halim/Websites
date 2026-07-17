@@ -1,0 +1,95 @@
+{
+  "kind": "occasions",
+  "slug": "friday-fish-fry",
+  "title": "Friday Fish Fry in Cedar Rapids | Captains Fish and Chicken",
+  "headline": "A Fresh Fish Fry Any Friday, All Year Round",
+  "body": "You don't need a special season for a good fish fry. At Captains Fish and Chicken on 1st Avenue NE, we fry fresh fish to order every day of the year, so Friday night in Cedar Rapids always has an easy answer. Choose from fresh catfish fillet, perch, tilapia, or cod, all dropped crispy and golden and never left sitting under a heat lamp. Whether you want a single fillet with fries or a full fish family deal to cover the whole table, we've got the fry that satisfies. It's the kind of honest, fresh-cooked fish that keeps folks in Northeast Cedar Rapids and Marion coming back week after week. Because it's fried fresh to order, call (319) 221-1040 to order ahead for pickup and skip the wait, or have your fish fry delivered through DoorDash, Uber Eats, or Grubhub. Captains opened in 2024 under owner Ray Aqel with a straightforward promise: fish, chicken and seafood made fresh to order, and we're rated 4.4 on Google. Make it a standing Friday tradition, no occasion required.",
+  "featuredItems": [
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 1
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 2
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 7
+    },
+    {
+      "sectionSlug": "fish-family-deals",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "sides",
+      "itemIndex": 0
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What kinds of fish can I get for a fish fry?",
+      "answer": "We fry fresh catfish fillet, perch, tilapia, and cod. Each is dropped fresh to order for a crispy golden finish. If you want a mix for the table, a fish family deal lets you feed a group, and you can call (319) 221-1040 to talk through options."
+    },
+    {
+      "question": "How many does a fish family deal feed for a fish fry?",
+      "answer": "The 10-piece fish family deal comfortably feeds a family of four to six as the main dish with sides. For larger gatherings, we offer bigger fish family deals up to a 50-piece. Call (319) 221-1040 and tell us your headcount."
+    },
+    {
+      "question": "How do I order a fish fry for Friday pickup?",
+      "answer": "Call (319) 221-1040 and order ahead. Since we fry fresh to order, calling gives the kitchen time to have your fish hot and ready when you arrive at 1616 1st Ave NE, especially on a busy Friday evening."
+    },
+    {
+      "question": "Can I get a fish fry delivered?",
+      "answer": "Yes. Order through DoorDash, Uber Eats, or Grubhub by searching Captains Fish and Chicken in the app. Each app sets its own delivery times and fees."
+    },
+    {
+      "question": "Is the fish fry only on Fridays?",
+      "answer": "Not at all. We fry fresh fish every day, all year round, so you can enjoy a fish fry any day you like. Friday is just a favorite. Call (319) 221-1040 to confirm current hours before you head over."
+    }
+  ],
+  "crossLinks": [
+    {
+      "slug": "/menu/seafood/",
+      "anchor": "seafood menu",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/fish-family-deals/",
+      "anchor": "fish family deals",
+      "context": "inline"
+    },
+    {
+      "slug": "/fried-catfish-cedar-rapids/",
+      "anchor": "fried catfish in Cedar Rapids",
+      "context": "related"
+    },
+    {
+      "slug": "/made-fresh-to-order/",
+      "anchor": "made fresh to order",
+      "context": "related"
+    },
+    {
+      "slug": "/occasions/family-dinner/",
+      "anchor": "family dinner ideas",
+      "context": "related"
+    }
+  ],
+  "heroAltText": "Crispy golden fried catfish, perch, and cod with fries from Captains Fish and Chicken in Cedar Rapids",
+  "schemaTypes": [
+    "WebPage",
+    "FAQPage"
+  ],
+  "seo": {
+    "title": "Friday Fish Fry in Cedar Rapids | Captains Fish and Chicken",
+    "description": "A fresh fish fry any Friday, all year round. Fried catfish, perch, tilapia, and cod for pickup or delivery in Cedar Rapids. Call (319) 221-1040 to order ahead.",
+    "canonical": "https://captains-fish-and-chicken.example/occasions/friday-fish-fry/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "Phase 4 sealed occasions.json authored from owner-confirmed offerings"
+}

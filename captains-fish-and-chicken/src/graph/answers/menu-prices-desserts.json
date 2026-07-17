@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-desserts",
+  "questionRef": "questions/menu-prices-desserts",
+  "text": "Cheesecake: Each 3.99\nCaramel Cheesecake: Each 3.99\nCarrot Cake: Each 3.99\nCaramel Coconut: Each 3.99\nLemon Cake: Each 3.99",
+  "cites": [
+    "menu/desserts"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/desserts.json",
+  "lastVerified": "2026-07-07"
+}

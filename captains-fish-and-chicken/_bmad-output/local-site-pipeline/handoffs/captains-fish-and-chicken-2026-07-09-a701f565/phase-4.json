@@ -1,0 +1,157 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "briefHash": "a2e9ae6c4df7f69be3e50dfd8e28169115c7dd2a8958ef7096aefa76bec2ddc7",
+  "phase": 4,
+  "exitedAt": "2026-07-09T23:18:22.677Z",
+  "specialistInvoked": "seo-content-writer",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "phase4-builder-v3-a701f565-2026-07-09-fable",
+    "reportPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/worker-reports/captains-fish-and-chicken-2026-07-09-a701f565/phase-4-builder-report.json",
+    "reportHash": "53cab36b756d6181b73d6504aab1686285ebe5324672e7a1da788b39637ab2df",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+    "packetHash": "c36db2815eaa89a6134d739844d08a5e81de13c1f5ada9f8ed0b70f316adb1f1",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-capsule.json",
+    "capsuleHash": "e11c4bb818cbc249530be7a53c30bc4730a80be5c863c5b4e4ac938835861682",
+    "status": "completed",
+    "commandsRun": [
+      "npm run build",
+      "node -e \"enumerate dist/ index.html routes and diff against the approved 38-route Phase 2 matrix\"",
+      "grep -rl \"208 reviews\" dist/ (no matches)",
+      "grep -c for the four new menu-section description strings in built section pages (all present)",
+      "curl -s -o /dev/null -w \"%{http_code}\" against six live routes on https://captains-fish-chicken.netlify.app (all 200)",
+      "node packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project D:/website/captains-fish-and-chicken --phase 4 --artifact <phase-4-artifact.json> --specialist seo-content-writer"
+    ],
+    "filesRead": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4-builder-capsule.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-system.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\site.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\menu.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\landings.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\data\\business.json",
+      "D:\\website\\captains-fish-and-chicken\\src\\pages\\menu\\[slug].astro"
+    ],
+    "filesChanged": [
+      "src/data/site.json",
+      "src/data/menu.json"
+    ],
+    "verification": [
+      "npm run build passed: 38 pages built, sitemap created, no errors.",
+      "Route parity: dist/ route enumeration matches the approved 38-route Phase 2 matrix exactly (zero missing, zero extra, trailing-slash form).",
+      "Built output contains no '208 reviews' string anywhere in dist/; the count-free valueProp and all four new menu-section copy strings verified present in built HTML.",
+      "Live-URL proof: /, /menu/, /menu/kids-meals/, /occasions/friday-fish-fry/, /neighborhoods/marion-ia/, /location/ all serve HTTP 200 from https://captains-fish-chicken.netlify.app.",
+      "Copy advisories verified compliant by grep: no Chicago Grill mention, no LJS mention in shipped copy, no list-position claims, Pita Kabab disambiguation-only, hours caveated site-wide.",
+      "Identity untouched: src/data/business.json still carries domain https://captains-fish-chicken.netlify.app, email captainsfishchicken@gmail.com, gaId G-7W35DKNK6Z.",
+      "Design tokens preserved: src/layouts/Base.astro unmodified; sealed Phase 3 designTokenSource/designTokenExportPath/designTokenHash recorded flat in the artifact.",
+      "inspect-artifact returned ok: true with problems: [] on the final artifact bytes; artifactHash computed after the final write with no subsequent modification."
+    ],
+    "specialist": "seo-content-writer"
+  },
+  "outputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-4\\phase-4-artifact.json",
+    "artifactHash": "74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059",
+    "contract": "files changed, routes generated, commands run, build result",
+    "routesGenerated": [
+      "/",
+      "/menu/",
+      "/menu/seafood/",
+      "/menu/whole-wings/",
+      "/menu/party-wings/",
+      "/menu/boneless-chicken-bites/",
+      "/menu/chicken-leg-and-thigh/",
+      "/menu/chicken-tenders/",
+      "/menu/shrimp/",
+      "/menu/gizzards-and-livers/",
+      "/menu/fish-family-deals/",
+      "/menu/family-meals-and-combos/",
+      "/menu/sides/",
+      "/menu/kids-meals/",
+      "/menu/desserts/",
+      "/menu/drinks/",
+      "/occasions/family-dinner/",
+      "/occasions/game-day-wings/",
+      "/occasions/office-and-party-catering/",
+      "/occasions/friday-fish-fry/",
+      "/occasions/seafood-feast/",
+      "/occasions/quick-lunch-takeout/",
+      "/fried-catfish-cedar-rapids/",
+      "/fried-chicken-and-wings-cedar-rapids/",
+      "/seafood-takeout-cedar-rapids/",
+      "/soul-food-cedar-rapids/",
+      "/fish-and-chicken-near-me/",
+      "/party-wings-cedar-rapids/",
+      "/open-late-cedar-rapids/",
+      "/catering-cedar-rapids/",
+      "/how-to-order/",
+      "/about/",
+      "/faq/",
+      "/made-fresh-to-order/",
+      "/location/",
+      "/neighborhoods/northeast-cedar-rapids/",
+      "/neighborhoods/marion-ia/",
+      "/contact/"
+    ],
+    "buildResult": {
+      "status": "passed",
+      "command": "npm run build",
+      "output": "Astro 6 static build completed: 38 page(s) built in 2.48s; sitemap-index.xml created at dist; no build errors.",
+      "routeParity": "EXACT MATCH — dist/ contains 38 index.html routes; diff against the approved Phase 2 38-route matrix (trailing-slash form) reports zero missing and zero extra routes. Route parity hard constraint satisfied: identical route set to the live 2026-07-08 deploy.",
+      "liveRouteProof": {
+        "checkedAt": "2026-07-09",
+        "origin": "https://captains-fish-chicken.netlify.app",
+        "sampledRoutes": [
+          {
+            "route": "/",
+            "httpStatus": 200
+          },
+          {
+            "route": "/menu/",
+            "httpStatus": 200
+          },
+          {
+            "route": "/menu/kids-meals/",
+            "httpStatus": 200
+          },
+          {
+            "route": "/occasions/friday-fish-fry/",
+            "httpStatus": 200
+          },
+          {
+            "route": "/neighborhoods/marion-ia/",
+            "httpStatus": 200
+          },
+          {
+            "route": "/location/",
+            "httpStatus": 200
+          }
+        ],
+        "summary": "All six sampled live routes (home, menu hub, one menu section, one occasion, one neighborhood, location truth page) serve HTTP 200 from the deployed origin, closing the reviewer's live parity evidence gap. Note: live pages serve the pre-fix content until Phase 7 deploys this build."
+      },
+      "buyerProofSummary": [
+        "home: buyer intent (fresh fried fish/chicken takeout in Cedar Rapids) is above the fold with hero + single gold tel: call CTA + 3 value props; the review value prop now cites '4.4 stars on Google' attributed without a review count (count unverifiable live).",
+        "menu sections: priced item cards from the frozen 2026-07-07 owner paste with Menu JSON-LD, call CTA, order-online external CTAs, and a 'Photos are representational' note; the four small sections (kids-meals, desserts, drinks, gizzards-and-livers) now carry unique non-boilerplate hero/description copy naming their actual items.",
+        "occasions: hero + call CTA, featured menu items, >=5 FAQs, >=4 cross-links; catering occasion cross-links the catering intent landing.",
+        "intent/info/faq/story landings: hero + call CTA, body, FAQs where relevant, >=2 cross-links; disambiguation cluster (/location/ -> /contact/ + /about/ + /faq/) intact.",
+        "neighborhoods: single city-specific H1, genuine local facts (Moundview/Coe College/I-380; Marion via Hwy 100), proximity trust lines, town FAQ, >=400 chars unique body, NAP keeps HQ city.",
+        "contact: NAP (1616 1st Ave NE, Cedar Rapids, IA 52402, (319) 221-1040) + map + caveated hours + directions + call CTA; no lead form (sealed owner call-only decision)."
+      ],
+      "sourceOrGapNotes": [
+        "Google review COUNT: GAP — live GBP count could not be verified from Google itself (google.com/search and Google Maps both refuse automated fetch; web search surfaced only third-party mirrors). Owner cited 208 on 2026-07-07; Wanderlog Google-mirror showed 192 on 2026-07-09. Per the sealed advisory's omit-never-fabricate floor the count was REMOVED: site.json valueProp now reads label '4.4 stars on Google', sublabel 'Rated by Cedar Rapids diners on Google'. No other file cites a review count; the /faq/ page and all landings cite 'Rated 4.4 on Google' attributed, count-free.",
+        "Hours: remain owner-UNCONFIRMED; every page keeps the call-to-confirm caveat — no hours claims added.",
+        "Payment policy: UNKNOWN (owner never stated); copy directs buyers to call to confirm payment methods — no payment claims.",
+        "Menu items/prices: frozen 2026-07-07 owner paste; untouched this phase (only section-level descriptions strengthened).",
+        "Item names 'Mystic' and 'Calypos' reproduced exactly as the owner paste spells them."
+      ],
+      "unresolvedBlockers": []
+    }
+  },
+  "nextPhaseAllowed": [
+    5
+  ],
+  "nextPhaseHint": 5,
+  "blocking": []
+}

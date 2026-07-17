@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-friday-fish-fry-4",
+  "questionRef": "questions/faq-occasions-friday-fish-fry-4",
+  "text": "Not at all. We fry fresh fish every day, all year round, so you can enjoy a fish fry any day you like. Friday is just a favorite. Call (319) 221-1040 to confirm current hours before you head over.",
+  "cites": [
+    "occasions/friday-fish-fry"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

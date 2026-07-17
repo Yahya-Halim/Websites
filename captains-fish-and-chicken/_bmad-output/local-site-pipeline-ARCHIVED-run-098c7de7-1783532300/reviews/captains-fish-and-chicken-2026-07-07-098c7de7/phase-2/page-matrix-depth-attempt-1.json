@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 2,
+  "reviewer": "page-matrix-depth",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-2/phase-2-artifact.json",
+  "artifactHash": "2e63d9126119aadf0187652a7418d9d2e16b315dd1ec9c531b5ac92883dbd0da",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-2/review-page-matrix-depth.md",
+  "notesHash": "bbef9215404728ad881a9d1e2d63d5564dcfbcd7a0dba3682c78fe840454a4af",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-2\\page-matrix-depth-attempt-1.md",
+  "notesHeadings": [
+    "Phase 2 review — page-matrix-depth",
+    "Independence caveat",
+    "Criteria (all pass; one weak on neighborhood facts)",
+    "Reviewer-flagged nits — FIXED PRE-SEAL (write-once discipline)",
+    "Carried to Phase 4 (authoring constraints)",
+    "Blocking issues"
+  ],
+  "notes": "# Phase 2 review — page-matrix-depth\n\n**Reviewer:** page-matrix-depth (independent subagent; did NOT produce the artifact)\n**Verdict:** PASS\n**Date:** 2026-07-07\n**Run:** captains-fish-and-chicken-2026-07-07-098c7de7\n**Route count verified:** 35 internal (in the 25-500 band; externalCount 0)\n\n## Independence caveat\nIndependent reviewer. Verified route count by directly counting pageMatrix entries;\ncross-checked every menu-section slug against menu-confirmed.json; confirmed all six\nrestaurant route templates physically exist under\npackages/engine/templates/archetypes/restaurant/src/pages/; validated schema floors\nagainst packages/engine/src/schemas/archetypes/restaurant.ts. Could not field-verify\nCedar Rapids geography beyond the pipeline's own Phase-1 entity list.\n\n## Criteria (all pass; one weak on neighborhood facts)\n1. Route count 25-500, all internal, no tel:/http in matrix — PASS\n2. Named restaurant depth strategy (menu x occasion x intent + folded neighborhood ring) — PASS\n3. Menu-category pages map 1:1 to owner-confirmed menu; only documented merge — PASS\n4. Occasions + intent landings grounded in confirmed offerings + Phase 1 pillars — PASS\n5. Buildability: every kind has a template + can meet its schema floor — PASS\n6. Single-location scope; 3100 6th St SW absent; no multi-town SAP — PASS\n7. Call-only correct for restaurant archetype (auto-dealer CRO gate does not bind) — PASS\n8. Fold decisions sound (thin neighborhoods, unconfirmed-hours occasion) — PASS\n9. Neighborhood local facts genuine — WEAK (see fixes below)\n\n## Reviewer-flagged nits — FIXED PRE-SEAL (write-once discipline)\n1. NE Cedar Rapids note claimed proximity to 'NewBo' — geographically wrong (NewBo is\n   SE/downtown, not the 1st Ave NE corridor). CORRECTED to Mound View / Wellington\n   Heights + downtown + I-380 (matches Phase 1 entity data).\n2. /occasions/seafood-feast referenced 'calamari' — NOT on the owner-confirmed menu\n   (calamari appears only in aggregator/Phase-1 prose). REMOVED; note now explicitly\n   excludes calamari.\n\n## Carried to Phase 4 (authoring constraints)\n- NEVER feature calamari as a menu item (not owner-confirmed).\n- Neighborhood localFacts must use Mound View / Wellington Heights / I-380 / real\n  drive-times; fold either neighborhood page if genuine facts fail.\n- /faq and /how-to-order must not assert unconfirmed hours.\n- 6 occasions each need >=5 real FAQs + >=4 cross-links — watch content-thinning.\n\n## Blocking issues\nNone.\n",
+  "reviewedAt": "2026-07-07T19:40:55.613Z"
+}

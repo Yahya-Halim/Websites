@@ -1,0 +1,65 @@
+{
+  "name": "captains-fish-and-chicken-brand-tokens",
+  "version": "2026-07-09",
+  "designTokenSource": {
+    "type": "repo",
+    "path": "src/layouts/Base.astro",
+    "format": "css-custom-properties"
+  },
+  "provenance": "Exported 2026-07-09 from the live brand implementation in src/layouts/Base.astro (site launched 2026-07-08 at https://captains-fish-chicken.netlify.app). Palette derives from the owner-supplied shark-captain logo (deep navy / gold / steel / white). No Figma file exists for this engagement; the repo is the token source of truth.",
+  "color": {
+    "navy-900": "#0b1e33",
+    "navy-700": "#123253",
+    "navy-600": "#1a4470",
+    "blue-500": "#2d74b5",
+    "gold-500": "#f5b301",
+    "gold-600": "#df9f00",
+    "steel-100": "#e8eef4",
+    "steel-200": "#d5dfe9",
+    "cloud": "#f7fafc",
+    "white": "#ffffff",
+    "ink": "#0b1e33",
+    "ink-soft": "#3c4f66",
+    "accent-color": "var(--gold-500)"
+  },
+  "colorRoles": {
+    "structure": "navy-700 / navy-900 — confined to the shared shell (header, footer, sticky call bar) and headings",
+    "conversion": "gold-500 (hover gold-600) — CTAs and price pills only; engine components consume --accent-color",
+    "surface": "cloud page background; white cards with steel-200 borders",
+    "body-text": "ink on cloud/white; ink-soft for secondary copy",
+    "link": "blue-500"
+  },
+  "radius": {
+    "radius-sm": "0.5rem",
+    "radius-md": "0.75rem",
+    "radius-lg": "1rem",
+    "pill": "999px (CTAs, related-link chips, sticky call bar)"
+  },
+  "shadow": {
+    "shadow-sm": "0 1px 2px rgba(11, 30, 51, 0.08), 0 2px 8px rgba(11, 30, 51, 0.06)",
+    "shadow-md": "0 2px 6px rgba(11, 30, 51, 0.1), 0 10px 28px rgba(11, 30, 51, 0.12)"
+  },
+  "typography": {
+    "fontFamily": "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "headingColor": "var(--navy-700)",
+    "headingWeight": 800,
+    "headingLineHeight": 1.15,
+    "headingLetterSpacing": "-0.015em",
+    "h1Size": "clamp(2rem, 5vw, 3rem)",
+    "h2Size": "clamp(1.4rem, 3vw, 1.9rem)",
+    "bodyLineHeight": 1.6,
+    "bodyMeasure": "65ch max for .body/.sections paragraphs"
+  },
+  "layout": {
+    "mainMaxWidth": "72rem",
+    "mainPadding": "1.5rem 1.5rem 3.5rem",
+    "sectionRhythm": "2.5rem top margin on h2 sections",
+    "cardPattern": "white background, 1px steel-200 border, radius-md, shadow-sm"
+  },
+  "components": {
+    "cta": "gold-500 background, navy-900 text, weight 800, pill radius, shadow-sm, hover gold-600 + translateY(-1px)",
+    "stickyCallBar": ".sticky-call shares the gold CTA treatment; mounted once in Base layout, tel: call-only",
+    "faqCards": "white dt/dd cards with steel-200 borders, radius-md split top/bottom",
+    "relatedChips": "white pill chips, steel-200 border, navy-700 text, gold-500 border on hover"
+  }
+}

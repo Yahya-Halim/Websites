@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-07-098c7de7",
+  "phase": 1,
+  "reviewer": "research-sufficiency",
+  "attempt": 1,
+  "verdict": "pass",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-1/phase-1-artifact.json",
+  "artifactHash": "9e8a398e6656bd83e563a0538a8b3177d0db27dde83d555955d5ccb19563a3e1",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-07-098c7de7/phase-1/review-research-sufficiency.md",
+  "notesHash": "d3972a145286b81049aaca6c84ea8efaa14e99e7ff5b00f57c19ac6ffbad485c",
+  "storedNotesFile": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\review-notes\\captains-fish-and-chicken-2026-07-07-098c7de7\\phase-1\\research-sufficiency-attempt-1.md",
+  "notesHeadings": [
+    "Phase 1 review — research-sufficiency",
+    "Independence caveat",
+    "Criteria (all pass)",
+    "Non-blocking weaknesses (cleanup, not required to advance)",
+    "Blocking issues"
+  ],
+  "notes": "# Phase 1 review — research-sufficiency\n\n**Reviewer:** research-sufficiency (independent subagent; did NOT produce the artifact)\n**Verdict:** PASS\n**Date:** 2026-07-07\n**Run:** captains-fish-and-chicken-2026-07-07-098c7de7\n\n## Independence caveat\nIndependent reviewer — no role in the 3-agent sweep that produced the artifact.\nAdversarially re-ran own web searches to verify the most falsifiable claims (business\nidentity, owner, opening date, second-location split, primary rival, clearest-win chain,\nall named/excluded competitors) rather than trusting internal consistency. Limitation:\nsame class of public SERP/aggregator sources, no paid volume tool — can confirm absence\nof fabricated volume metrics but cannot establish true search volumes.\n\n## Criteria (all pass)\n1. Sources cited with dates + diverse (SERP + aggregator + delivery + press) — PASS\n2. Competitors real, SERP-grounded, no fabrication; closed businesses quarantined — PASS\n   (independently confirmed Sugapeach, Long John Silver's SW-only, Crab House, Harold's,\n   Two Bros NE-live, Iowa Soul Food Market; Vivian's confirmed closed 2022)\n3. Metric honesty — zero numeric volumes; all Estimated/N-A; re-run path stated — PASS\n4. Keyword pillars cover confirmed offerings; BOFU-first with MOFU/TOFU split — PASS\n5. Single-location scope respected; 3100 6th St SW quarantined to scope/NAP/exclusion — PASS\n6. Evidence gaps complete + actionable (all 6 required surfaced) — PASS\n7. GEO/entity + 10 natural-language question targets present — PASS\n\n## Non-blocking weaknesses (cleanup, not required to advance)\n- Sugapeach founding stated \"est. 2016\"; public sources indicate 2012 (orig. \"Sweetiepie's\"). Non-load-bearing.\n- Sugapeach \"~20-25 min away\" drive-time is defensible but unverified.\n- The \"late-night ~3am Fri/Sat\" hours datum is loosely traced; gap correctly surfaced regardless.\n- Review counts (Yelp ~1, FB ~17, Google 4.4/208) are aggregator-attributed and self-flagged as not first-party-confirmed.\n\n## Blocking issues\nNone. No fabrication, no scope violation, no missing critical evidence gap.\n",
+  "reviewedAt": "2026-07-07T19:14:03.770Z"
+}

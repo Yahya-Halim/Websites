@@ -1,0 +1,76 @@
+---
+/**
+ * OfferCallout — current promotional offers (cro-gates Task 4).
+ *
+ * Sourced from `site.offers[]` (T1: `{label, detail, validFrom?, validThrough?}`).
+ * Renders each offer's label + detail. The build is CLOCK-FREE: this component
+ * does NOT compute expiry — no `Date.now()`, no `new Date()`, no date arithmetic.
+ * Whatever offers are in data are rendered as-is; freshness is a data/CI concern,
+ * not a render concern. Any tel affordance on an offer callout is a T14
+ * composition concern (from `freeInspection.tel`), never a per-offer field.
+ *
+ * KG7: empty/absent offers → renders NOTHING (no marker). When it renders, the
+ * root carries `data-cro-block="offer-callout"`.
+ */
+interface Offer {
+  label: string;
+  detail: string;
+}
+
+interface Props {
+  /** The `site.offers` array. */
+  offers?: Offer[];
+}
+
+const { offers } = Astro.props;
+const hasOffers = Array.isArray(offers) && offers.length > 0;
+---
+
+{hasOffers && (
+  <section class="offer-callout" data-cro-block="offer-callout">
+    <ul class="offer-list">
+      {offers!.map((offer) => (
+        <li class="offer">
+          <span class="offer-label">{offer.label}</span>
+          <span class="offer-detail">{offer.detail}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+<style>
+  .offer-callout {
+    margin: 2rem 0;
+  }
+  .offer-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  .offer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #e5e5e5;
+    border-left: 4px solid var(--accent-color, #f60);
+    border-radius: 0.375rem;
+  }
+  .offer-label {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  .offer-detail {
+    color: #444;
+  }
+  .offer-cta {
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: var(--accent-color, #f60);
+    text-decoration: none;
+  }
+</style>

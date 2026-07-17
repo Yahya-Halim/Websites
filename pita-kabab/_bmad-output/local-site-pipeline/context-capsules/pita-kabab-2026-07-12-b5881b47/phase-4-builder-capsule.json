@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 4,
+  "specialist": "seo-content-writer",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-4.json",
+  "packetHash": "556a3e07caa3e963ac5dc0ff9e3d7b3d45e2af67245e914975397bd27399041a",
+  "mission": "Produce the Phase 4 artifact using the prepared workbench and sealed inputs only.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-4.json",
+      "hash": "556a3e07caa3e963ac5dc0ff9e3d7b3d45e2af67245e914975397bd27399041a"
+    },
+    {
+      "kind": "specialist-skill",
+      "path": "D:\\plugin\\localevolve-factory\\packages\\plugin\\skills\\seo-content-writer\\SKILL.md"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-4"
+    },
+    {
+      "kind": "output-path",
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-4\\phase-4-artifact.json"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed drafts from other phases",
+    "Direct edits to workflow state files"
+  ],
+  "requiredOutputs": {
+    "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-4\\phase-4-artifact.json",
+    "requiredArtifactFields": [
+      "filesChanged",
+      "routesGenerated",
+      "commandsRun",
+      "buildResult"
+    ]
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": [
+      "build-quality"
+    ]
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-4-builder-report.json",
+    "requiredRole": "builder",
+    "requiredStatus": "completed"
+  }
+}

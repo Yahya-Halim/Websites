@@ -1,0 +1,8 @@
+{
+  "mode": "fixture",
+  "domain": "https://pitakabab.example",
+  "email": "owner@pitakabab.example",
+  "gaId": "G-XXXXXXXXXX",
+  "paymentAccepted": "unknown",
+  "notesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identity-decision.md"
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "role": "reviewer",
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 1,
+  "reviewer": "research-sufficiency",
+  "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+  "packetHash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+  "artifactHash": "23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47",
+  "mission": "Review Phase 1 artifact for the research-sufficiency gate.",
+  "allowedInputs": [
+    {
+      "kind": "phase-packet",
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+      "hash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9"
+    },
+    {
+      "kind": "sealed-artifact",
+      "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+      "hash": "23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47"
+    }
+  ],
+  "forbiddenInputs": [
+    "Parent chat memory not present in the capsule",
+    "Unsealed artifact drafts",
+    "Direct edits to workflow state files"
+  ],
+  "returnContract": {
+    "requiredReportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-research-sufficiency-review-report.json",
+    "requiredRole": "reviewer",
+    "requiredStatus": "completed"
+  }
+}

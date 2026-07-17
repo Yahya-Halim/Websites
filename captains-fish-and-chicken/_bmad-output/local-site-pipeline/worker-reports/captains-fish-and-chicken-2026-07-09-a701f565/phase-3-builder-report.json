@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "role": "builder",
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 3,
+  "specialist": "ui-ux-pro-max",
+  "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3.json",
+  "packetHash": "9960600e85b30a1e3e5865e4ab825ee65f9ae5ad10e062c13fc4c2ca8b8dd687",
+  "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3-builder-capsule.json",
+  "capsuleHash": "d5239db5c7cf83fb0e6adbf0acc7a0c1df781276859447e6c29bd97f9c90d8b0",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+  "artifactHash": "ee63a4a2d93405f3e5c1e4343b1fcc6f923853d9d1a2120bd19330dbb4f90c9c",
+  "workerId": "phase3-builder-v3-a701f565-fable-20260709",
+  "status": "completed",
+  "commandsRun": [
+    "python packages/plugin/vendored/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/scripts/search.py \"local restaurant takeout fried fish chicken seafood counter-service warm trustworthy\" --design-system -f markdown -p \"Captains Fish and Chicken\"",
+    "python packages/plugin/vendored/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/scripts/search.py \"layout hydration images performance\" --stack astro -n 6",
+    "python packages/plugin/vendored/ui-ux-pro-max-skill/.claude/skills/ui-ux-pro-max/scripts/search.py \"sticky call bar mobile touch target accessibility contrast\" --domain ux -n 5",
+    "Get-FileHash design-tokens.json -Algorithm SHA256 (23452304c7e124f81929daca9cd46d42d2bfed8f0f23f9e04d35db8f7ac812d9)",
+    "node D:/plugin/localevolve-factory/packages/plugin/bin/local-site-workflow.mjs inspect-artifact --project D:/website/captains-fish-and-chicken --phase 3 --artifact D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-3/phase-3-artifact.json --specialist ui-ux-pro-max",
+    "Get-FileHash phase-3-artifact.json -Algorithm SHA256 (ee63a4a2d93405f3e5c1e4343b1fcc6f923853d9d1a2120bd19330dbb4f90c9c)",
+    "node -e stableHash verification of packet core and capsule (both match the sealed delegation hashes)"
+  ],
+  "filesRead": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3-builder-capsule.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3.json",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md",
+    "D:\\website\\captains-fish-and-chicken\\src\\layouts\\Base.astro",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\phase-contracts.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\index.mjs",
+    "D:\\plugin\\localevolve-factory\\packages\\plugin\\lib\\local-site-workflow\\delegation.mjs"
+  ],
+  "filesChanged": [
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-system.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\design-tokens.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\figma-handoff.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identityDecision.json",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identity-decision.md",
+    "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3-builder-report.json"
+  ],
+  "assumptions": [
+    "The generated UI UX Pro Max red palette and Playfair/Karla pairing are recorded as tool output but overridden by the sealed owner brand (navy/gold logo palette live in src/layouts/Base.astro since 2026-07-08); re-theming a launched, one-day-indexed site would break brand continuity with the logo, GBP imagery, and the existing render library.",
+    "Identity values (domain, businessEmail, gaId) are owner-supplied and live since 2026-07-08 per the sealed run context; paymentAccepted is recorded as unknown because the owner never stated a payment policy.",
+    "No Figma file exists for this engagement; the repo is the design source of truth, so the design-token handoff is repo-sourced (src/layouts/Base.astro) with a hashed JSON export in the phase-3 workbench."
+  ],
+  "blockers": [],
+  "verification": [
+    "inspect-artifact phase 3 returned ok: true with problems: [] (specialist ui-ux-pro-max).",
+    "packet core stable hash recomputed as 9960600e85b30a1e3e5865e4ab825ee65f9ae5ad10e062c13fc4c2ca8b8dd687 and capsule stable hash as d5239db5c7cf83fb0e6adbf0acc7a0c1df781276859447e6c29bd97f9c90d8b0 - both match the sealed delegation values.",
+    "artifactHash ee63a4a2d93405f3e5c1e4343b1fcc6f923853d9d1a2120bd19330dbb4f90c9c is the SHA-256 of the final phase-3-artifact.json bytes; nothing was modified after hashing.",
+    "designTokenHash 23452304c7e124f81929daca9cd46d42d2bfed8f0f23f9e04d35db8f7ac812d9 matches the SHA-256 of design-tokens.json referenced by designTokenExportPath.",
+    "design-system.md contains all five required sections (Query, Stack, Generated Guidance, Local-Business Adaptations, Phase 4 Build Notes) and designSystem.designSystemPath exactly equals the packet artifactEvidencePaths.designSystem relative form.",
+    "identityDecision mode real validated: public domain (captains-fish-chicken.netlify.app), public email (gmail.com), non-placeholder GA4 id (G-7W35DKNK6Z), paymentAccepted unknown.",
+    "All five required artifact fields (designSystem, designContentBuildPlan, selectedArchitecture, assetNeeds, identityDecision) are non-null; assetNeeds and checklist are arrays of plain strings per the envelope shape rule.",
+    "No complete-phase, review, approve, or prepare command was run; exactly one inspected phase artifact was produced."
+  ]
+}

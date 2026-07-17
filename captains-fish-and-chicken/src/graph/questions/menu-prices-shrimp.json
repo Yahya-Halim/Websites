@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-shrimp",
+  "question": "How much do Shrimp cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/shrimp.json",
+  "lastVerified": "2026-07-07"
+}

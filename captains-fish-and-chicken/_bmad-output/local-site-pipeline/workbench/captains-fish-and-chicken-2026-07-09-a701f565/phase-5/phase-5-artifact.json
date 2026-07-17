@@ -1,0 +1,130 @@
+{
+  "phase": 5,
+  "summary": "Phase 5 VALIDATE passed with zero blocking findings and zero fix rounds. `npx factory validate` exited 0 with all 6 blocking gates passing (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) plus all 5 advisory validators, against the Phase 4 built output (dist/, 38 routes, sealed REAL identity: captains-fish-chicken.netlify.app / captainsfishchicken@gmail.com / GA4 G-7W35DKNK6Z; zero fixture flags). The vendored /aaron-marketing:seo-geo audit (--mode audit --full --tech --visibility) against dist/ plus live-origin crawl surfaces returned status ready_with_concerns with Blocking Findings: None and 6 non-blocking advisories. Measured evidence: unique titles/meta descriptions 38/38, exactly one self-referencing live-origin canonical per page, single h1 per page, JSON-LD on every page with 0 parse errors and one consistent NAP tuple, 0 broken internal links, 138 images with 0 missing alt, tel: CTA and real GA4 id on every page, count-free review claim verified, robots.txt AI-crawler allow-list, well-formed llms.txt, sitemap 38/38 on-origin with no funnel paths, live origin HTTP 200 on all sampled crawl surfaces with live robots.txt byte-identical to dist. Frozen surfaces (2026-07-07 owner menu paste, identity values) verified untouched.",
+  "checklist": [
+    {
+      "id": "read-phase3-validation-identity",
+      "done": true,
+      "evidence": "packet.inputEvidence.phase3.identityDecision read before validation: mode=real, domain=https://captains-fish-chicken.netlify.app, email=captainsfishchicken@gmail.com, gaId=G-7W35DKNK6Z, paymentAccepted=unknown. No declared fixtures; dist/ verified free of .example and placeholder-GA patterns (do-not-ship-guards gate PASS plus independent grep of all 38 pages)."
+    },
+    {
+      "id": "read-phase4-build-artifact",
+      "done": true,
+      "evidence": "packet.inputEvidence.phase4 read before validation: artifactHash 74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059, 38 routesGenerated, commandsRun (npm run build, route-parity diff, review-count grep, section-copy grep, live curl sample), buildResult.status=passed with EXACT MATCH route parity."
+    },
+    {
+      "id": "validate-phase4-routes-and-build-output",
+      "done": true,
+      "evidence": "Validation scope was the Phase 4 dist/ build in D:/website/captains-fish-and-chicken: audited all 38 built index.html routes matching packet.inputEvidence.phase4.routesGenerated exactly; cross-checked live origin (same 38-route matrix, pre-fix deploy) only for crawl-surface availability, not as the content source."
+    },
+    {
+      "id": "run-factory-validate",
+      "done": true,
+      "evidence": "npx factory validate from project root, exit code 0, 2026-07-09T23:36:28.751Z; gates checked: schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate (all PASS, 11/11 validators). Full log with journal.ndjson and last-run.json output at _bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log"
+    },
+    {
+      "id": "run-vendored-seo-geo-audit",
+      "done": true,
+      "evidence": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility executed per the vendored packages/plugin/vendored/seo-geo-claude-skills audit methodology against dist/ + live crawl surfaces; status ready_with_concerns, Blocking Findings: None. Report at _bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md"
+    },
+    {
+      "id": "separate-blockers-advisories",
+      "done": true,
+      "evidence": "failures (blocking) = []; 6 non-blocking advisories recorded in remainingAdvisories and detailed in seo-geo-audit.md Advisory Findings; separation documented in validation-report.md before review."
+    },
+    {
+      "id": "read-specialist-skill",
+      "done": true,
+      "evidence": "D:/plugin/localevolve-factory/packages/plugin/skills/seo-geo-ai-validation/SKILL.md read in full before authoring: advisory heuristics (steps 5-12) all executed, blocking-gate layer verified via factory validate, Phase 5 artifact evidence contract followed (relative evidence paths, no placeholder audit target)."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "done": true,
+      "evidence": "This artifact fills all six required fields (validationRuns, factoryValidate, seoGeoAudit, failures, fixRounds, remainingAdvisories) with measured runtime evidence and the packet's relative artifactEvidencePaths."
+    },
+    {
+      "id": "inspect-before-complete",
+      "done": true,
+      "evidence": "local-site-workflow.mjs inspect-artifact --phase 5 --specialist seo-geo-ai-validation run against this artifact and iterated until problems: []."
+    },
+    {
+      "id": "review-notes-file",
+      "done": true,
+      "evidence": "No review performed in this builder invocation (stop condition honored). Reviewer notes for the validation-fix-review gate must travel by --notes-file per the packet; noted for the orchestrator."
+    }
+  ],
+  "validationRuns": [
+    {
+      "id": "factory-validate",
+      "command": "npx factory validate",
+      "target": "D:/website/captains-fish-and-chicken (Phase 4 build: dist/, 38 routes)",
+      "startedAt": "2026-07-09T23:36:28.751Z",
+      "finishedAt": "2026-07-09T23:36:29.222Z",
+      "status": "passed",
+      "detail": "Exit code 0. 11/11 validators passed: 6 blocking gates (schema-floor, route-completeness, cro-block-presence, do-not-ship-guards, sap-anti-doorway, graph-gate) and 5 advisories (has-generated-llms-txt, has-generated-robots-txt, no-todo-markers-in-artifacts, asset-references-exist, graph-presence). errorCount 0, warningCount 0.",
+      "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log"
+    },
+    {
+      "id": "seo-geo-audit",
+      "command": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility",
+      "target": "dist/ (38 routes, Phase 4 artifactHash 74ac0805e884305f9514ca1376aec8935dae65a0b75ff0f9f8c418ac80dd2059) + live origin crawl surfaces",
+      "startedAt": "2026-07-09",
+      "finishedAt": "2026-07-09",
+      "status": "passed",
+      "detail": "Status ready_with_concerns: Blocking Findings: None; 6 non-blocking advisories. Measured: 38/38 unique titles and meta descriptions; one self-referencing live-origin canonical per page; single h1 per page; JSON-LD 0 parse errors (Restaurant 38, WebSite 38, WebPage 37, BreadcrumbList 37, FAQPage 21, Menu 1, ContactPage 1); single consistent NAP tuple; 0 broken internal links; 138 images 0 missing alt; tel: CTA on every page; real GA4 id everywhere; zero fixture flags; count-free review claim; robots.txt AI-crawler allow-list (GPTBot, ClaudeBot, PerplexityBot, Google-Extended); llms.txt 8 sections well-formed; sitemap 38/38 on-origin, no funnel paths; live 200 on /, /robots.txt, /llms.txt, /sitemap-index.xml, /menu/, /contact/, /faq/; live robots.txt identical to dist.",
+      "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md"
+    }
+  ],
+  "factoryValidate": {
+    "command": "npx factory validate",
+    "exitCode": 0,
+    "logPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/factory-validate.log",
+    "checkedGateIds": [
+      "schema-floor",
+      "route-completeness",
+      "cro-block-presence",
+      "do-not-ship-guards",
+      "sap-anti-doorway",
+      "graph-gate"
+    ],
+    "gateResults": {
+      "schema-floor": "pass",
+      "route-completeness": "pass",
+      "cro-block-presence": "pass",
+      "do-not-ship-guards": "pass",
+      "sap-anti-doorway": "pass",
+      "graph-gate": "pass"
+    },
+    "advisoryValidatorResults": {
+      "has-generated-llms-txt": "pass",
+      "has-generated-robots-txt": "pass",
+      "no-todo-markers-in-artifacts": "pass",
+      "asset-references-exist": "pass",
+      "graph-presence": "pass"
+    },
+    "engineVersion": "0.1.0",
+    "startedAt": "2026-07-09T23:36:28.751Z",
+    "finishedAt": "2026-07-09T23:36:29.222Z",
+    "success": true
+  },
+  "seoGeoAudit": {
+    "command": "/aaron-marketing:seo-geo https://captains-fish-chicken.netlify.app --mode audit --full --tech --visibility",
+    "reportPath": "_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-5/seo-geo-audit.md",
+    "status": "ready_with_concerns",
+    "blockingFindings": [],
+    "blockingFindingsCount": 0,
+    "advisoryFindingsCount": 6,
+    "auditTarget": "dist/ (Phase 4 build, 38 routes) cross-checked against https://captains-fish-chicken.netlify.app crawl surfaces",
+    "fixtureFlags": 0
+  },
+  "failures": [],
+  "fixRounds": [],
+  "remainingAdvisories": [
+    "Open Graph / Twitter Card meta tags are absent on all 38 pages (no og:title/og:description/og:url/og:type/og:image or twitter:*); social and chat-app link previews degrade. Not a factory gate; add an OG block in a future template round.",
+    "Structured openingHoursSpecification covers only Mon-Thu 11:00-22:00 and Sun 11:00-20:00 while the caveated display text also claims Fri-Sat 11am-11pm (source gap: business.json hours has no structured Fri-Sat entry). Deliberately not fixed: hours are owner-unconfirmed and the sealed constraint forbids adding hours claims; resolve when the owner confirms hours.",
+    "Five titles are 66-69 characters and may truncate in SERPs: /occasions/office-and-party-catering/ (69), /catering-cedar-rapids/ (68), /open-late-cedar-rapids/ (67), /fried-chicken-and-wings-cedar-rapids/ (66), /menu/seafood/ (66).",
+    "/menu/ meta description is 203 characters and will truncate around ~165 in SERPs; the clipped tail is non-primary (delivery-apps mention).",
+    "Hours remain owner-unconfirmed; every page and llms.txt correctly keep the 'please call to confirm' caveat until the owner confirms.",
+    "Dual visible phone display formats: tel: CTAs show +1-319-221-1040 while body copy shows (319) 221-1040; same number and schema-consistent, cosmetic only. Runtime CWV/Lighthouse is out of factory-validate scope and was not measured; route to local-launch-checklist after the Phase 7 deploy."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 6,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/phase-6-artifact.json",
+  "artifactHash": "a80c833fa2f9e2222dfc195530084e8c3a981e5cb2be6035d56d8717cf36883d",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-6/approval-notes.md",
+  "notes": "# Phase 6 approval — run v2\n\n**Approved by:** operator (geekeys343@gmail.com), acting for owner Ray Aqel — Yahya actor per gate\n**Date:** 2026-07-08\n\n## Ruling\nPhase 6 IMAGERY approved. 94/94 manifest-selections-exports independently verified; verifier clean;\nrepresentational honesty airtight; desktop+mobile UI checks pass, zero unresolved.\n\n## Acknowledged\n- public/logo.png remains the generated placeholder until the owner drops the shark-captain file.\n- Real owner photography remains invited to replace representational renders post-launch.\n",
+  "approvedAt": "2026-07-08T22:41:21.512Z",
+  "expiresAt": "2026-07-15T22:41:21.512Z"
+}

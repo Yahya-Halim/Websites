@@ -1,0 +1,47 @@
+{
+  "kind": "menu",
+  "slug": "kids-meals",
+  "name": "Kids Meals",
+  "order": 12,
+  "description": "Kid-sized favorites, served with fries.",
+  "items": [
+    {
+      "name": "Kids Chicken Nuggets (5 pcs)",
+      "description": "Served with fries.",
+      "prices": [
+        {
+          "label": "Kids",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Kids Chicken Tenders (2 pcs)",
+      "description": "Served with fries.",
+      "prices": [
+        {
+          "label": "Kids",
+          "price": 6.99
+        }
+      ]
+    },
+    {
+      "name": "Kids Pizza Puff",
+      "description": "Served with fries.",
+      "prices": [
+        {
+          "label": "Kids",
+          "price": 6.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Kids Meals — Cedar Rapids | Captains Fish and Chicken",
+    "description": "Kids chicken nuggets, tenders, and pizza puff served with fries in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/kids-meals/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

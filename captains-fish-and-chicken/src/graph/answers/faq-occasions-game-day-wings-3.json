@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-game-day-wings-3",
+  "questionRef": "questions/faq-occasions-game-day-wings-3",
+  "text": "We do. Our boneless chicken bites and chicken tenders are great for guests who'd rather skip the bone, and they round out a wing spread nicely.",
+  "cites": [
+    "occasions/game-day-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/game-day-wings.json#faqs[3]",
+  "lastVerified": "2026-07-07"
+}

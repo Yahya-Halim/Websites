@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-family-dinner-1",
+  "questionRef": "questions/faq-occasions-family-dinner-1",
+  "text": "The easiest way is to call (319) 221-1040 and order ahead. Since everything is fried fresh to order, calling gives the kitchen time to have your dinner hot and bagged when you arrive at 1616 1st Ave NE.",
+  "cites": [
+    "occasions/family-dinner"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

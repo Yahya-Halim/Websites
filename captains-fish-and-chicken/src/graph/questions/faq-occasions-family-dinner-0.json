@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-family-dinner-0",
+  "question": "How many people does a family meal feed?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[0]",
+  "lastVerified": "2026-07-07"
+}

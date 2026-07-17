@@ -1,0 +1,797 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 1,
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+  "artifactHash": "23c0fa8726684d63dbd00113aa9a48239aac2edd6f09769a470729daabbd1f47",
+  "specialist": "keyword-research",
+  "completedAt": "2026-07-12T23:05:34.148Z",
+  "contract": "research sources, competitor notes, keyword/entity findings, source dates, evidence gaps",
+  "artifact": {
+    "phase": 1,
+    "runId": "pita-kabab-2026-07-12-b5881b47",
+    "summary": "Phase 1 RESEARCH for Pita Kabab (Palestinian Mediterranean, 3100 6th St SW, Cedar Rapids, IA 52404). 18 web sources consulted on 2026-07-12 (16 searches + 2 directory fetches) following the keyword-research specialist's 8-phase method. Direct CR-metro competitor set of 9 mapped plus 5 adjacent-metro players and 2 announced future entrants (The Halal Guys, Saj Grill). Keyword landscape: most non-brand local SERPs are aggregator-only (Yelp/TripAdvisor/DoorDash), meaning winnable; 'gyro' is the one entrenched-local-brand term (Gyro Hut since 2006). Standout entity findings: Pita Kabab is absent from both halal directories AI systems cite (Zabihah, HalalRun); the SW quadrant has no other Mediterranean/halal restaurant; Cedar Rapids has nationally significant halal/Muslim heritage entities (Mother Mosque 1934, Midamar 1974) supporting a durable halal-intent market and E-E-A-T content angles. No search-volume tool was available: every volume/difficulty metric is N/A by the omit-never-fabricate rule; prioritization is grounded in observed SERP composition and platform-listing existence only. Supporting detail in research-notes.md.",
+    "checklist": [
+      {
+        "id": "read-specialist-skill",
+        "status": "done",
+        "evidence": "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\seo-geo\\research\\keyword-research\\SKILL.md read before any research; 8-phase method and Measured/User-provided/Estimated labeling applied"
+      },
+      {
+        "id": "fill-phase-artifact",
+        "status": "done",
+        "evidence": "this file; all five required fields populated with per-claim sources and retrieval dates"
+      },
+      {
+        "id": "inspect-before-complete",
+        "status": "done",
+        "evidence": "local-site-workflow inspect-artifact run on this file; see worker report verification"
+      },
+      {
+        "id": "review-notes-file",
+        "status": "noted",
+        "evidence": "builder acknowledges reviewer notes must travel by --notes-file; research-sufficiency reviewer gate follows this phase per capsule gatesAfterCompletion"
+      }
+    ],
+    "ownerChecklistReference": "Halal-targeting keywords are gated on the Phase 0 owner questionnaire (D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\owner-questionnaire.md): the halal certifying body, catering terms, and ordering strategy items must be owner-confirmed before halal/catering claims ship on pages.",
+    "researchSources": [
+      {
+        "source": "Pita Kabab owner site (via SERP descriptions)",
+        "url": "https://pitakababcr.com/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Brand SERP presence: site already surfaces top-3 for 'mediterranean restaurant cedar rapids', 'kabob restaurant cedar rapids', 'mediterranean catering cedar rapids', 'falafel hummus cedar rapids'"
+      },
+      {
+        "source": "WebSearch: mediterranean restaurant Cedar Rapids Iowa",
+        "url": "https://www.tripadvisor.com/Restaurants-g37743-c28-Cedar_Rapids_Iowa.html",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Aggregator-dominated SERP for the head term; TripAdvisor/Yelp/YellowPages category pages exist (demand existence)"
+      },
+      {
+        "source": "Yelp Mediterranean/kebab/falafel/gyros/halal category pages for Cedar Rapids (SERP-observed)",
+        "url": "https://www.yelp.com/search?cflt=mediterranean&find_loc=Cedar+Rapids,+IA",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Yelp maintains dedicated CR category SERPs for mediterranean, kebab, falafel, gyros, halal restaurant, chicken shawarma - platform-listing evidence of each intent family"
+      },
+      {
+        "source": "Zest Mediterranean Grill",
+        "url": "https://www.zestmediterranean.com/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Competitor: Greek restaurant, 475 Northland Ave NE, offers catering"
+      },
+      {
+        "source": "Pita'z Hiawatha + NewBo",
+        "url": "https://pitazhiawatha.com/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Strongest direct competitor: Lebanese, two locations (Hiawatha (319) 395-7482; NewBo City Market 1100 3rd St SE (319) 777-8944), own domain with menu/location pages"
+      },
+      {
+        "source": "The Gazette - Pita'z NewBo expansion coverage",
+        "url": "https://www.thegazette.com/food-drink/chew-on-this-pitaz-and-lincoln-wine-bar-add-cedar-rapids-spots-and-one-more-bite-opens-downtown/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Pita'z press footprint (conflation guard: never attribute to Pita Kabab); local press covers Mediterranean openings"
+      },
+      {
+        "source": "Zabihah Cedar Rapids subregion page (fetched)",
+        "url": "https://www.zabihah.com/subregion/5044a180-9f3a-11ef-956c-6045bdeb9f57/cedar-rapids",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Pita Kabab NOT listed; O's Grill is the only Mediterranean entry (HalalRank 80); '29 verified halal restaurants' across the wider area; halal markets = Walmart/Hy-Vee only"
+      },
+      {
+        "source": "HalalRun - Top Halal Restaurants in Cedar Rapids (fetched)",
+        "url": "https://halalrun.com/top-halal-restaurants-in-cedar-rapids-iowa/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Pita Kabab NOT listed; list published 2023-01-17 (stale) and contains zero CR-proper Mediterranean restaurants - citation-surface gap"
+      },
+      {
+        "source": "Gyro Hut",
+        "url": "https://gyrohut.net/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Competitor: 1455 Mount Vernon Rd SE, est. 2006, 58 Yelp reviews - entrenched on 'gyro cedar rapids'"
+      },
+      {
+        "source": "Gyro Hut 2.0 (Grubhub listing)",
+        "url": "https://www.grubhub.com/restaurant/gyro-hut-20-45-kirkwood-court-southwest-cedar-rapids/8733152",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Only other SW-quadrant Mediterranean-adjacent player (45 Kirkwood Court SW); appears in 'near Kirkwood' and 'near CID airport' aggregator lists"
+      },
+      {
+        "source": "O's Grill",
+        "url": "https://www.osgrill.com/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Competitor: Mediterranean food truck + catering (gyros/shawarma/Moroccan chicken), 3911 Center Point Rd NE; competes on 'mediterranean catering cedar rapids'"
+      },
+      {
+        "source": "Vytyl Mediterranean/halal market",
+        "url": "https://vytylstores.com/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Halal market + deli/bakery at 365 Edgewood Rd NW (opened Dec 2022); competes on shawarma/baklava retail intents"
+      },
+      {
+        "source": "Homegrown Iowan - Vytyl and Zaytoon coverage",
+        "url": "http://homegrowniowan.com/popular-eatery-leaving-newbo-city-market/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Zaytoon left NewBo City Market 2019-02-27 (defunct/status-unclear competitor); companion article evidences Vytyl shawarma demand"
+      },
+      {
+        "source": "Julia's Kitchen",
+        "url": "https://www.juliaskitchencr.com/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Competitor: Mediterranean catering/events in Cedar Rapids"
+      },
+      {
+        "source": "Restaurant Guru - chicken shawarma Cedar Rapids",
+        "url": "https://restaurantguru.com/chicken-shawarma-Cedar-Rapids-m404",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Only 2 restaurants listed for chicken shawarma in CR - thin competition on shawarma dish terms"
+      },
+      {
+        "source": "The Halal Guys Iowa franchise coverage (Gazette/QSR/Fransmart)",
+        "url": "https://www.qsrmagazine.com/news/halal-guys-signs-franchise-deal-open-five-new-iowa-locations/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "5-location Iowa franchise deal incl. Cedar Rapids (date unannounced); Coralville location open per Gazette Jan-2025 coverage - future halal-term competitor"
+      },
+      {
+        "source": "khak.com restaurant news - Saj Grill expansion",
+        "url": "https://khak.com/cedar-rapids-iowa-city-restaurants/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Saj Grill (23 S Dubuque St, Iowa City) plans Coralville then 'a Cedar Rapids spot in the future' - future shawarma/saj competitor"
+      },
+      {
+        "source": "Tabooleh Coralville (TripAdvisor + Gazette)",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g37791-d13869551-Reviews-Tabooleh_Mediterranean_Buffet-Coralville_Iowa.html",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Adjacent-metro Egyptian/Mediterranean buffet (210 2nd Ave, Coralville) - secondary competitor"
+      },
+      {
+        "source": "Midamar Corporation",
+        "url": "https://www.midamarhalal.com/pages/about",
+        "retrievedAt": "2026-07-12",
+        "evidences": "National halal meat company HQ at 1105 60th Ave SW Cedar Rapids since 1974 - halal-ecosystem entity in Pita Kabab's own quadrant"
+      },
+      {
+        "source": "Mother Mosque of America (Wikipedia/NPS/mothermosque.org)",
+        "url": "https://en.wikipedia.org/wiki/Mother_Mosque_of_America",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Oldest standing purpose-built US mosque (1934) at 1335 9th St NW; Islamic Center of CR (1971); first national Muslim cemetery (1948) - durable halal demand + E-E-A-T heritage content angle"
+      },
+      {
+        "source": "TripAdvisor/Yelp/OpenTable landmark pages - near Eastern Iowa Airport",
+        "url": "https://www.tripadvisor.com/RestaurantsNear-g37743-qCID-Cedar_Rapids_Iowa.html",
+        "retrievedAt": "2026-07-12",
+        "evidences": "'Restaurants near CID' aggregator SERPs exist with no Mediterranean sit-down present; District 23 at 2825 6th St SW confirms the 6th St SW corridor near the airport"
+      },
+      {
+        "source": "TripAdvisor/Yelp near-pages - Kirkwood Community College",
+        "url": "https://www.tripadvisor.com/RestaurantsNear-g37743-d7840789-Kirkwood_Community_College-Cedar_Rapids_Iowa.html",
+        "retrievedAt": "2026-07-12",
+        "evidences": "'Near Kirkwood' aggregator SERPs exist; Gyro Hut 2.0 present, no Mediterranean sit-down present"
+      },
+      {
+        "source": "Czech Village & New Bohemia district / Cedar Rapids tourism + economic development",
+        "url": "https://the-district.org/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "District and neighborhood anchors for geo-modified pages (Czech Village, NewBo, Kingston Village, core districts)"
+      },
+      {
+        "source": "Facebook group question - Mediterranean/Greek options in Cedar Rapids",
+        "url": "https://www.facebook.com/groups/199945990364320/posts/2126001187758781/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Direct community question-intent demand for 'good Mediterranean food in Cedar Rapids' (GEO answer target)"
+      },
+      {
+        "source": "IslamicFinder Ramadan calendar - Cedar Rapids",
+        "url": "https://www.islamicfinder.org/ramadan-calendar/4850751/cedar-rapids-ramadan-calendar/",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Ramadan 2026 ran ~Feb 17-Mar 18 in CR; iftar SERP contains only prayer-time sites, zero local restaurant content - open seasonal GEO gap"
+      },
+      {
+        "source": "eatyala.com blog - Halal food near MAS Iowa Cedar Rapids",
+        "url": "https://eatyala.com/blog/halal-food-near-mas-iowa-cedar-rapids-ia",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Competitors already target 'halal food near [mosque]' page patterns; MAS Iowa is a local anchor entity"
+      },
+      {
+        "source": "Phase 0 sealed artifact (this run)",
+        "url": "file:///D:/website/pita-kabab/_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-0/phase-0-artifact.json",
+        "retrievedAt": "2026-07-12",
+        "evidences": "Business identity, existing site page inventory (home/menu/order/catering/contact/family-dinner/blog), unverified claims incl. halal certification, stale Captains listings, conflation guard for Pita'z"
+      }
+    ],
+    "competitorNotes": [
+      {
+        "name": "Pita'z Mediterranean & American Cuisine",
+        "tier": "primary",
+        "locations": "Hiawatha + NewBo City Market (1100 3rd St SE)",
+        "positioning": "Lebanese + American, two locations, own domain (pitazhiawatha.com), Gazette press coverage, Yelp presence (210 3rd Ave SE listing)",
+        "keywordOverlap": "mediterranean/shawarma/gyro/falafel + Hiawatha and NewBo geo terms",
+        "note": "CONFLATION GUARD: distinct business; its press must never be attributed to Pita Kabab (carried from Phase 0)",
+        "basis": "pitazhiawatha.com, newbocitymarket.org, thegazette.com, yelp.com, 2026-07-12"
+      },
+      {
+        "name": "Zest Mediterranean Grill",
+        "tier": "primary",
+        "locations": "475 Northland Ave NE",
+        "positioning": "Greek; catering for office parties and at-home celebrations",
+        "keywordOverlap": "mediterranean restaurant/grill + catering",
+        "basis": "zestmediterranean.com, 2026-07-12"
+      },
+      {
+        "name": "Gyro Hut / Gyro Hut 2.0",
+        "tier": "primary",
+        "locations": "1455 Mount Vernon Rd SE / 45 Kirkwood Court SW",
+        "positioning": "Greek fast-casual since 2006; 58 Yelp reviews; 2.0 unit is the only other SW-quadrant player and appears in near-Kirkwood and near-CID aggregator lists",
+        "keywordOverlap": "gyro (entrenched), near-Kirkwood, near-airport",
+        "basis": "gyrohut.net, yelp.com, grubhub.com, tripadvisor.com, 2026-07-12"
+      },
+      {
+        "name": "O's Grill",
+        "tier": "primary",
+        "locations": "3911 Center Point Rd NE (food truck + catering)",
+        "positioning": "Mediterranean/halal food truck, corporate + wedding catering; the ONLY Mediterranean entry on Zabihah's CR page (HalalRank 80)",
+        "keywordOverlap": "mediterranean catering, gyros, shawarma, halal",
+        "basis": "osgrill.com, zabihah.com, 2026-07-12"
+      },
+      {
+        "name": "Vytyl",
+        "tier": "secondary",
+        "locations": "365 Edgewood Rd NW",
+        "positioning": "Halal market + deli/bakery (opened Dec 2022); popular chicken shawarma and baklava at the deli counter",
+        "keywordOverlap": "shawarma, baklava, halal meat/market",
+        "basis": "vytylstores.com, homegrowniowan.com, 2026-07-12"
+      },
+      {
+        "name": "Julia's Kitchen",
+        "tier": "secondary",
+        "locations": "Cedar Rapids (address not captured)",
+        "positioning": "Mediterranean catering and events",
+        "keywordOverlap": "mediterranean catering cedar rapids",
+        "basis": "juliaskitchencr.com, 2026-07-12"
+      },
+      {
+        "name": "New York Gyro",
+        "tier": "secondary-unverified",
+        "locations": "Cedar Rapids (address unverified)",
+        "positioning": "Halal NYC-cart style (chicken over rice); appears in Yelp halal lists and a Facebook foodie group post",
+        "keywordOverlap": "halal food, chicken over rice, gyro",
+        "basis": "yelp.com search snippets, facebook.com group post, 2026-07-12"
+      },
+      {
+        "name": "Halal Zaiqa",
+        "tier": "secondary-unverified",
+        "locations": "NE Cedar Rapids (snippet address '7314 West Park Rd NE', unverified)",
+        "positioning": "Halal restaurant, cuisine mix unclear (likely South Asian)",
+        "keywordOverlap": "halal restaurant cedar rapids",
+        "basis": "facebook.com/61571545375284 SERP snippet, 2026-07-12"
+      },
+      {
+        "name": "Taste of India / Taj Mahal / Mirch Masala (halal South Asian cluster)",
+        "tier": "adjacent-category",
+        "locations": "Taste of India: 1060 Old Marion Rd NE + Hiawatha",
+        "positioning": "Halal but Indian/Pakistani - competes on 'halal restaurant' intents, not Mediterranean intents",
+        "keywordOverlap": "halal restaurant cedar rapids only",
+        "basis": "halalrun.com, yelp.com, 2026-07-12"
+      },
+      {
+        "name": "Tabooleh Mediterranean Buffet",
+        "tier": "adjacent-metro",
+        "locations": "210 2nd Ave, Coralville",
+        "positioning": "Egyptian/Mediterranean buffet (opened 2018); Gazette + Little Village press",
+        "keywordOverlap": "mediterranean buffet, corridor-wide mediterranean intents",
+        "basis": "tripadvisor.com, thegazette.com, littlevillagemag.com, 2026-07-12"
+      },
+      {
+        "name": "Saj Grill / Oasis Falafel / India Cafe / The Halal Guys (Iowa City-Coralville cluster)",
+        "tier": "adjacent-metro",
+        "locations": "Iowa City / Coralville",
+        "positioning": "Strong Mediterranean/halal brands 25-30 mi south; bleed into corridor-wide SERPs",
+        "keywordOverlap": "corridor 'best mediterranean/halal Iowa' style queries",
+        "basis": "icsajgrill.com, halalrun.com, thegazette.com, 2026-07-12"
+      },
+      {
+        "name": "The Halal Guys (future CR entrant)",
+        "tier": "threat-watch",
+        "locations": "Cedar Rapids location planned under 5-store Iowa franchise deal; Coralville open per Jan-2025 Gazette coverage; CR date unannounced",
+        "positioning": "National halal fast-casual brand with heavy brand search",
+        "keywordOverlap": "halal, gyro, chicken over rice, falafel platter",
+        "note": "First-mover window: capture CR halal terms before entry",
+        "basis": "qsrmagazine.com, fransmart.com, thegazette.com, thehalalguys.com, 2026-07-12"
+      },
+      {
+        "name": "Saj Grill (future CR entrant)",
+        "tier": "threat-watch",
+        "locations": "'Cedar Rapids spot in the future' after Coralville, per khak.com; no date",
+        "positioning": "Iowa City Middle Eastern brand expanding north",
+        "keywordOverlap": "shawarma, saj, falafel, gyro",
+        "basis": "khak.com, 2026-07-12"
+      },
+      {
+        "name": "Zaytoon Mediterranean Grill",
+        "tier": "defunct-unclear",
+        "locations": "Left NewBo City Market 2019-02-27; current status unresolved",
+        "positioning": "Legacy listings still appear on Zabihah/Hoopla/TripAdvisor and pollute halal-Mediterranean SERPs",
+        "keywordOverlap": "halal mediterranean cedar rapids (stale listings)",
+        "basis": "homegrowniowan.com, zabihah.com, tripadvisor.com, 2026-07-12"
+      }
+    ],
+    "keywordEntityFindings": {
+      "metricsDisclosure": "No SEO tool, Search Console, or trends connector was available in this dispatch. Search volume, keyword difficulty, and CPC are N/A for every keyword below - omitted, not estimated as numbers. Prioritization basis is stated per row: SERP composition observed via WebSearch on 2026-07-12, platform-listing existence, or competitor page existence. Labels: Measured = direct SERP/fetch observation; Estimated = model inference; User-provided = from sealed brief/Phase 0.",
+      "intentFamilies": [
+        {
+          "family": "Category head terms (BOFU, commercial)",
+          "keywords": [
+            {
+              "keyword": "mediterranean restaurant cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured (SERP 2026-07-12): aggregators + pitakababcr.com already top-3 organic; no entrenched local brand owns it"
+            },
+            {
+              "keyword": "middle eastern restaurant cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured (SERP): Yelp mideastern category page exists; same aggregator-only composition"
+            },
+            {
+              "keyword": "halal restaurant cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured (SERP + fetches): Yelp/Zabihah/HalalRun/DoorDash category pages dominate; zero CR-proper Mediterranean specialist listed on the halal directories; GATED on owner confirming halal certification (Phase 0 residue)"
+            },
+            {
+              "keyword": "palestinian restaurant cedar rapids / palestinian food iowa",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured (SERP): no other Palestinian-identified restaurant surfaced in any CR search - uncontested differentiator; volume unknown, likely low but high-fit (Estimated)"
+            }
+          ]
+        },
+        {
+          "family": "Dish/menu-category terms (BOFU-leaning)",
+          "keywords": [
+            {
+              "keyword": "shawarma cedar rapids / chicken shawarma cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured: Restaurant Guru lists only 2 CR shawarma restaurants; Yelp chicken-shawarma SERP exists; current answers are a grocery deli (Vytyl) and a non-specialist (Pepperjax)"
+            },
+            {
+              "keyword": "kabob / kebab cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured: Pita Kabab already holds most top slots (brand-name match); Yelp kebab category exists; defend and consolidate"
+            },
+            {
+              "keyword": "gyro cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "long-term",
+              "basis": "Measured: Gyro Hut entrenched since 2006 (58 Yelp reviews, own domain) + Gyro Hut 2.0 + New York Gyro; hardest dish term - target via menu page, not a dedicated battle page"
+            },
+            {
+              "keyword": "falafel cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured: Yelp falafel category exists; competition is O's Grill (food truck) and Rawlicious (wrap item); no falafel-specialist page found"
+            },
+            {
+              "keyword": "hummus cedar rapids / baklava cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured: only Vytyl (market deli) surfaces for baklava; hummus has no dedicated local page found; low-competition dish pages"
+            },
+            {
+              "keyword": "chicken over rice cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured: no CR-proper page found (NYC results bleed in); New York Gyro (unverified) and future Halal Guys are the natural owners - preempt with a menu-item page"
+            },
+            {
+              "keyword": "family dinner deals cedar rapids / kids eat cheap",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "transactional",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "User-provided (Phase 0): /family-dinner/ page already exists with kids $5.98 offer; SERP already surfaces it for kabob searches; no volume evidence (Estimated demand)"
+            }
+          ]
+        },
+        {
+          "family": "Near-me / proximity anchors (BOFU, GBP-dependent)",
+          "keywords": [
+            {
+              "keyword": "mediterranean food near me / halal food near me / shawarma near me (CR SW quadrant)",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "transactional",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured: SW quadrant has no other Mediterranean/halal restaurant in any observed list (closest: Gyro Hut 2.0, Greek); won via GBP + proximity; NOTE local-pack rankings were not observable with available tools (gap)"
+            },
+            {
+              "keyword": "restaurants near eastern iowa airport (CID)",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured: TripAdvisor/Yelp/OpenTable landmark pages exist with no Mediterranean sit-down present; Pita Kabab's 6th St SW corridor position (District 23 at 2825 6th St SW corroborates corridor) makes a 'near CID' page credible; exact distance unverified (Estimated: same corridor)"
+            },
+            {
+              "keyword": "restaurants near kirkwood community college",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured: TripAdvisor/Yelp near-pages exist; Gyro Hut 2.0 is the only Mediterranean-adjacent entry; student/staff lunch demand plausible (Estimated)"
+            }
+          ]
+        },
+        {
+          "family": "Catering & occasions (BOFU, highest ticket)",
+          "keywords": [
+            {
+              "keyword": "mediterranean catering cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "transactional",
+              "funnel": "BOFU",
+              "opportunityTier": "quick-win",
+              "basis": "Measured: pitakababcr.com already #1-observed organic result; competitors O's Grill/Julia's Kitchen/Zest + ezCater/The Knot aggregators; Pita Kabab not observed on ezCater (listing gap)"
+            },
+            {
+              "keyword": "halal catering cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "transactional",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured: no dedicated local page found in any search; GATED on owner halal confirmation"
+            },
+            {
+              "keyword": "wedding catering / corporate lunch catering / graduation party catering cedar rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "transactional",
+              "funnel": "BOFU",
+              "opportunityTier": "growth",
+              "basis": "Measured: ezCater/The Knot hold the SERPs (aggregator-only); Phase 0 shows the catering page already claims these use cases (200+ guests, 50% deposit, 10-person min - owner must confirm terms before republishing)"
+            },
+            {
+              "keyword": "iftar catering cedar rapids / ramadan catering",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "transactional",
+              "funnel": "BOFU",
+              "opportunityTier": "geo-seasonal",
+              "basis": "Measured: CR iftar SERP contains ONLY prayer-time calculators - zero restaurant content; local Muslim community anchors (Mother Mosque, Islamic Center, MAS Iowa) evidence durable demand; Ramadan 2026 ran ~Feb 17-Mar 18 (islamicfinder.org), 2027 window earlier (Estimated) - publish ~1 month ahead"
+            }
+          ]
+        },
+        {
+          "family": "Geo-modified matrix terms (Phase 2 inputs)",
+          "keywords": [
+            {
+              "keyword": "[category/dish] + Marion / Hiawatha / Fairfax / Ely / Swisher / Robins / Walford / Atkins",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "matrix",
+              "basis": "Measured (anchor existence): standard metro ring; Pita'z holds Hiawatha, Taste of India holds Hiawatha/NE; no Mediterranean player holds Marion/Fairfax/Ely/Swisher; build only with unique local proof per page (doorway-page guard)"
+            },
+            {
+              "keyword": "[category] + downtown / Czech Village / NewBo / Kingston Village / Westdale area / SW Cedar Rapids",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial",
+              "funnel": "BOFU",
+              "opportunityTier": "matrix",
+              "basis": "Measured (anchor existence): district pages (the-district.org, tourismcedarrapids.com) evidence the geography; NewBo is contested (Pita'z on-site); Westdale quadrant conflicting across sources - verify before asserting"
+            }
+          ]
+        },
+        {
+          "family": "GEO / AI-answer targets (TOFU-MOFU, informational)",
+          "keywords": [
+            {
+              "keyword": "best mediterranean food in cedar rapids (list-style)",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "commercial-investigation",
+              "funnel": "MOFU",
+              "opportunityTier": "geo",
+              "basis": "Measured: Facebook group question observed verbatim; Yelp/TripAdvisor 'best' pages exist; AI answers currently synthesize from aggregators where Pita Kabab is under-represented"
+            },
+            {
+              "keyword": "shawarma vs gyro / what is shawarma / kabob vs kebab / what is palestinian food / is shawarma halal",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "informational",
+              "funnel": "TOFU",
+              "opportunityTier": "geo",
+              "basis": "Estimated (pattern inference per specialist GEO-check: questions/definitions/comparisons are AI-answer-friendly); no local page answers these; pairs with charcoal-grill/vertical-spit differentiators from Phase 0"
+            },
+            {
+              "keyword": "halal history of cedar rapids / oldest mosque in america food scene",
+              "volume": "N/A",
+              "difficulty": "N/A",
+              "intent": "informational",
+              "funnel": "TOFU",
+              "opportunityTier": "geo",
+              "basis": "Measured (entity existence): Mother Mosque (1934), first national Muslim cemetery (1948), Islamic Center (1971), Midamar (1974) - unique E-E-A-T authority angle no competitor uses"
+            }
+          ]
+        }
+      ],
+      "entities": {
+        "differentiators": [
+          {
+            "entity": "Palestinian cuisine identity",
+            "finding": "Only Palestinian-identified restaurant surfaced in the CR metro across all searches",
+            "basis": "Measured (absence across 16 SERPs, 2026-07-12); claims themselves owner-unverified per Phase 0"
+          },
+          {
+            "entity": "Charcoal grill + vertical-spit shawarma + daily scratch prep",
+            "finding": "Concrete craft differentiators for dish pages and GEO answers",
+            "basis": "User-provided/Phase 0 unverified claims - confirm with owner before use as facts"
+          }
+        ],
+        "halalEcosystem": [
+          {
+            "entity": "Midamar Corporation",
+            "detail": "National halal meat company, 1105 60th Ave SW (same SW quadrant), est. 1974",
+            "relevance": "Entity association for halal content; potential supplier-story angle (unverified)"
+          },
+          {
+            "entity": "Mother Mosque of America",
+            "detail": "Oldest standing purpose-built US mosque (1934), 1335 9th St NW",
+            "relevance": "Durable local Muslim community + heritage content angle"
+          },
+          {
+            "entity": "Islamic Center of Cedar Rapids / MAS Iowa",
+            "detail": "1971 mosque; MAS Iowa targeted by competitor content ('halal food near MAS Iowa' - eatyala.com)",
+            "relevance": "Near-mosque page pattern already used by competitors"
+          }
+        ],
+        "citationSurfaces": {
+          "listedOn": [
+            "Yelp (13 photos, ~2 reviews)",
+            "DoorDash (store 41564223)",
+            "Google (4.9, 8 reviews per snippet)",
+            "Facebook",
+            "Roadtrippers",
+            "Bizapedia"
+          ],
+          "missingFrom": [
+            "Zabihah (fetched 2026-07-12 - not listed)",
+            "HalalRun (fetched 2026-07-12 - not listed; list stale since 2023-01-17)",
+            "TripAdvisor (Phase 0: no page)",
+            "ezCater (not observed on CR catering page)",
+            "tourismcedarrapids.com directory (competitors listed; Pita Kabab not observed)",
+            "Grubhub/Uber Eats (Phase 0: absent; owner ordering-strategy decision)"
+          ],
+          "actionImplication": "Directory absence directly suppresses AI-answer visibility for halal/mediterranean queries; listing creation is a Phase 2+ action item gated on owner confirmations (halal certification, catering terms, ordering strategy)"
+        },
+        "clusters": [
+          {
+            "pillar": "Mediterranean restaurant Cedar Rapids (home)",
+            "clusters": [
+              "menu hub",
+              "shawarma",
+              "kabob",
+              "falafel",
+              "hummus",
+              "bowls",
+              "platters",
+              "wings",
+              "kids",
+              "desserts/baklava",
+              "family-dinner offer (exists)"
+            ]
+          },
+          {
+            "pillar": "Halal Cedar Rapids (owner-gated)",
+            "clusters": [
+              "halal restaurant CR",
+              "halal catering",
+              "halal FAQ",
+              "halal heritage of Cedar Rapids authority article"
+            ]
+          },
+          {
+            "pillar": "Catering Cedar Rapids",
+            "clusters": [
+              "wedding",
+              "corporate/office lunch",
+              "graduation party",
+              "iftar/Ramadan (seasonal)",
+              "game day",
+              "holiday",
+              "per-suburb catering pages"
+            ]
+          },
+          {
+            "pillar": "Near-me / locations",
+            "clusters": [
+              "near Eastern Iowa Airport",
+              "near Kirkwood Community College",
+              "downtown",
+              "Czech Village/NewBo",
+              "Kingston Village",
+              "Westdale area",
+              "suburb pages: Marion, Hiawatha, Fairfax, Ely, Swisher, Robins, Walford, Atkins"
+            ]
+          },
+          {
+            "pillar": "Palestinian cuisine guide (TOFU/GEO)",
+            "clusters": [
+              "what is Palestinian food",
+              "shawarma vs gyro",
+              "charcoal kabob explainer",
+              "halal explained",
+              "first-visit ordering guide"
+            ]
+          }
+        ],
+        "matrixSizingGuidance": "Core tier ~45-55 pages (8 service + 10 dish + 14 geo + 8 occasion + 10-15 GEO/FAQ) fits the 25-500 envelope. Dish-by-geo combinatorials only where each page carries unique local proof (testimonial, delivery-radius fact, occasion photo) - otherwise doorway-page/thin-content risk. NewBo geo pages compete with an on-site incumbent (Pita'z); prioritize SW/airport/Kirkwood/suburb-ring pages where no Mediterranean player exists."
+      },
+      "prioritizedOpportunities": {
+        "quickWins": [
+          "mediterranean catering cedar rapids - already #1-observed organic; harden the page, add occasion subpages (basis: SERP observation 2026-07-12)",
+          "shawarma cedar rapids - only 2 listed competitors, neither a Mediterranean sit-down specialist (basis: Restaurant Guru listing count)",
+          "palestinian restaurant cedar rapids - zero competing claimants observed (basis: absence across 16 SERPs)",
+          "Directory/entity fixes: create Zabihah + HalalRun + TripAdvisor + tourism-directory listings once owner confirms halal certification and identity facts (basis: direct fetches showing absence)"
+        ],
+        "growth": [
+          "halal restaurant cedar rapids - beat the aggregators before The Halal Guys/Saj Grill open CR locations (announced, undated)",
+          "near-CID-airport and near-Kirkwood pages - aggregator-only SERPs with no Mediterranean presence",
+          "suburb catering matrix pages (Marion, Fairfax, Ely, Swisher uncontested)"
+        ],
+        "geoAiOpportunities": [
+          "iftar/Ramadan catering content - zero local restaurant content on observed SERP; seasonal, publish ~1 month pre-Ramadan",
+          "halal-heritage-of-Cedar-Rapids authority article leveraging Mother Mosque/Midamar entities",
+          "shawarma-vs-gyro and what-is-Palestinian-food Q&A pages feeding AI answer boxes"
+        ]
+      }
+    },
+    "sourceDates": {
+      "allWebRetrievals": "2026-07-12",
+      "method": "16 WebSearch queries + 2 WebFetch directory fetches (Zabihah subregion page, HalalRun CR list), all executed 2026-07-12; per-source dates listed in researchSources[].retrievedAt",
+      "staleSourcesFlagged": [
+        "HalalRun CR list published 2023-01-17 (fetched 2026-07-12) - stale but still ranking, which is itself evidence of thin halal-content competition",
+        "Zaytoon NewBo departure dated 2019-02-27 (Homegrown Iowan)",
+        "The Halal Guys Coralville coverage dated Jan 2025 (Gazette)",
+        "Ramadan 2026 calendar (Feb 17-Mar 18) from islamicfinder.org; 2027 dates not sourced (Estimated: earlier by ~11 days)"
+      ],
+      "phase0InputDate": "Phase 0 web-footprint sweep 2026-07-12 (sealed artifact, same run)"
+    },
+    "evidenceGaps": [
+      {
+        "gap": "No search-volume, difficulty, or CPC data for ANY keyword - no SEO tool, Search Console, or trends connector was available. All such metrics are N/A; opportunity tiers rest solely on observed SERP composition and listing existence.",
+        "impact": "high",
+        "unblockPath": "Connect GSC after launch (striking-distance mining) or a volume tool; re-score in a later cycle."
+      },
+      {
+        "gap": "Google local-pack / Maps rankings unobservable with available tools; GBP listing never directly fetched (Phase 0 and Phase 1). Near-me opportunity claims rest on competitor-absence inference.",
+        "impact": "high",
+        "unblockPath": "Owner GBP access or manual local-pack checks during Phase 2."
+      },
+      {
+        "gap": "Pita Kabab's halal certification (certifying body) is owner-unverified (Phase 0 residue). Every halal-family keyword and directory listing action is gated on this.",
+        "impact": "high",
+        "unblockPath": "Owner questionnaire item; do not ship halal claims until confirmed."
+      },
+      {
+        "gap": "ezCater/tourism-directory absence is 'not observed in retrieved lists', not a verified negative (pages were summarized, not exhaustively crawled).",
+        "impact": "medium",
+        "unblockPath": "Direct listing checks during the Phase 2 action plan."
+      },
+      {
+        "gap": "New York Gyro and Halal Zaiqa: addresses/operating status unverified (search snippets only).",
+        "impact": "low",
+        "unblockPath": "Direct listing fetches or drive-by verification if they matter to positioning."
+      },
+      {
+        "gap": "Zaytoon's current status unclear (left NewBo 2019; zaytoonrestaurant.com may be unrelated); stale listings may still absorb halal-Mediterranean queries.",
+        "impact": "low",
+        "unblockPath": "Ignore unless it resurfaces in local-pack observations."
+      },
+      {
+        "gap": "The Halal Guys and Saj Grill CR opening dates unknown (announced intent only) - first-mover window size unquantifiable.",
+        "impact": "medium",
+        "unblockPath": "Monitor local press (Gazette/KCRG/khak) during engagement."
+      },
+      {
+        "gap": "Westdale district quadrant conflicting across sources (one source claims NE; commonly associated with SW Edgewood Rd corridor) - unresolved, not asserted anywhere in findings.",
+        "impact": "low",
+        "unblockPath": "Verify against city district map before building a Westdale geo page."
+      },
+      {
+        "gap": "'Cedar Falafel & Shawarma' (Instagram/SkipTheDishes) surfaced in one SERP; location unconfirmed and likely not Cedar Rapids (SkipTheDishes is Canada-centric). Excluded from competitor set.",
+        "impact": "low",
+        "unblockPath": "None needed unless it reappears in CR-scoped results."
+      },
+      {
+        "gap": "Muslim/halal-seeking population size in CR metro not quantified (no demographic source pulled); halal demand evidence is institutional (mosques, Midamar, 29 Zabihah-verified venues region-wide), not numeric.",
+        "impact": "medium",
+        "unblockPath": "Census/ACS or mosque-community estimates if demand sizing is needed for Phase 2 prioritization."
+      },
+      {
+        "gap": "Yelp/TripAdvisor/DoorDash direct fetches were 403 in Phase 0; review counts and ratings come from search snippets.",
+        "impact": "low",
+        "unblockPath": "Owner-side platform dashboards or manual checks."
+      }
+    ]
+  },
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "phase-1-builder-subagent-2026-07-12",
+    "reportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json",
+    "reportHash": "34ae18d22b0d6f3aeba08afe38eb695c280e99633b6e5b45265c28b6940e105b",
+    "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+    "packetHash": "dbe68b26bf3b4968eff8607a74f3b6c30ab3a6f606dc31b27ee5fb9f37a6e9e9",
+    "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+    "capsuleHash": "02b8a27ccebb0d52a9c7ca65d6c12535b96a91fe702ecc10be7f9b52211fda55",
+    "status": "completed",
+    "commandsRun": [
+      "16x WebSearch (Cedar Rapids mediterranean/halal/shawarma/kabob/gyro/falafel/catering/iftar/competitor-verification/neighborhood/near-me queries, 2026-07-12)",
+      "2x WebFetch (zabihah.com Cedar Rapids subregion page; halalrun.com CR halal list, 2026-07-12)",
+      "node D:\\plugin\\localevolve-factory\\packages\\plugin\\bin\\local-site-workflow.mjs inspect-artifact --project D:\\website\\pita-kabab --phase 1 --artifact ...\\phase-1\\phase-1-artifact.json",
+      "node -e sha256(phase-1-artifact.json)"
+    ],
+    "filesRead": [
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-capsule.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-1.json",
+      "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\seo-geo-claude-skills\\seo-geo\\research\\keyword-research\\SKILL.md",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-0\\phase-0-artifact.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+    ],
+    "filesChanged": [
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\phase-1-artifact.json",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-1\\research-notes.md",
+      "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-1-builder-report.json"
+    ],
+    "verification": [
+      "inspect-artifact run 2026-07-12: ok=true, problems=[], recommendation 'Artifact satisfies the phase contract; complete-phase may seal it' (clean on first pass).",
+      "All five required artifact fields (researchSources, competitorNotes, keywordEntityFindings, sourceDates, evidenceGaps) populated; 26 researchSources entries each carry retrievedAt=2026-07-12; 14 competitor notes with per-claim basis; 11 evidence gaps recorded honestly with unblock paths.",
+      "Truthfulness floor spot-check: no numeric search volumes, difficulties, or CPCs appear anywhere in the artifact; every keyword row carries volume: N/A and a stated observation basis.",
+      "Artifact references the Phase 0 owner questionnaire for owner-gated claims (ownerChecklistReference field)."
+    ],
+    "specialist": "keyword-research"
+  },
+  "handoffPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\handoffs\\pita-kabab-2026-07-12-b5881b47\\phase-1.json"
+}

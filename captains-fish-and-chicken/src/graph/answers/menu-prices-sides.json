@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-sides",
+  "questionRef": "questions/menu-prices-sides",
+  "text": "Hush Puppies (10 pcs): Side 6.99\nBreaded Mushrooms (10 pcs): Side 6.99\nMac and Cheese Bites (10 pcs): Side 6.99\nCheese Sticks (5 pcs): Side 6.99\nCheese Curds: Side 6.99\nPizza Puff: Side 6.99\nOnion Rings (10 pcs): Side 6.99\nSmall Fries: Side 3.99\nLarge Fries: Side 6.99\nHalf Pan of Fries: Pan 16.99\nFull Pan of Fries: Pan 27.99\nExtra Sauce: Add-on 0.5\nGizzards or Livers (side): Side 7.99\nCatfish Nuggets (side): Side 7.99\nWings (1 pc, side): Each 2.45\nLegs (1 pc, side): Each 3.99\nThighs (1 pc, side): Each 3.99",
+  "cites": [
+    "menu/sides"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/sides.json",
+  "lastVerified": "2026-07-07"
+}

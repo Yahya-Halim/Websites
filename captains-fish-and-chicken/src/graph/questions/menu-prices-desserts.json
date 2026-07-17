@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-desserts",
+  "question": "How much do Desserts cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/desserts.json",
+  "lastVerified": "2026-07-07"
+}

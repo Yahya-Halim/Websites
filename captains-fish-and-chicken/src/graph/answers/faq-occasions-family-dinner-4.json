@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-family-dinner-4",
+  "questionRef": "questions/faq-occasions-family-dinner-4",
+  "text": "Yes, please call ahead for larger orders. A quick call to (319) 221-1040 lets us prep everything fresh and have it ready at your pickup time instead of making you wait.",
+  "cites": [
+    "occasions/family-dinner"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/family-dinner.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

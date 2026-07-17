@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-friday-fish-fry-2",
+  "question": "How do I order a fish fry for Friday pickup?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[2]",
+  "lastVerified": "2026-07-07"
+}

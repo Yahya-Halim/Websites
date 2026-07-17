@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-friday-fish-fry-4",
+  "question": "Is the fish fry only on Fridays?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

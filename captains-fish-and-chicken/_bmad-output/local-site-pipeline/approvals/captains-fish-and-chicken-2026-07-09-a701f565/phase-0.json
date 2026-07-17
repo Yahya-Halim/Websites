@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 0,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-09-a701f565/phase-0/phase-0-artifact.json",
+  "artifactHash": "3c92f0acc5ecfc5dc5e804ae32d501068ce8a4e52efbd68a5ca264228b453fa0",
+  "notesFile": "C:/Users/Lenovo/AppData/Local/Temp/claude/D--plugin-localevolve-factory/ad68d563-d121-4a5d-83ed-f2d8405933d4/scratchpad/p0-approval-notes.md",
+  "notes": "# Phase 0 Approval — run v3 (captains-fish-and-chicken-2026-07-09-a701f565)\n\nApproved under the operator's standing directive of 2026-07-09: \"seal everything after using the new repo updates and implementation to the captains-fish-chicken website\", plus the earlier explicit \"approved\" recorded as pre-authorization for Phase 0 of this run. Real operator: geekeys343@gmail.com (actor recorded as Yahya per workflow contract).\n\nBasis for approval:\n- Fresh 23-source web-footprint sweep completed by capsule worker (10 findings, 4 discrepancies, 7 owner-residue questions).\n- Artifact re-shaped to the 9ea6578 envelope contract (discrepancies as strings) and inspect-artifact returned problems: [].\n- Worker report hash-bound: artifactHash 3c92f0acc5ecfc5dc5e804ae32d501068ce8a4e52efbd68a5ca264228b453fa0, packetHash bae95982695ab650a5f4c0ab83f4373122b4648f8d50cbfb9d01fb582055cd83.\n- Owner truths preserved verbatim: priced menu paste authoritative, call-only contact, Google rating cited with attribution (review-count drift 208 vs 192 carried as discrepancy for Phase 4 handling), conservative structured hours with caveated displayText, SW address only as disambiguation.\n",
+  "approvedAt": "2026-07-09T22:22:41.197Z",
+  "expiresAt": "2026-07-16T22:22:41.197Z"
+}

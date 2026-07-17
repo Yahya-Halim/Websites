@@ -1,0 +1,62 @@
+---
+/**
+ * ValueProps — the 3-item value-proposition strip (cro-gates Task 4).
+ *
+ * Sourced from `site.valueProps` (T1: exactly 3 `{label, sublabel?}` when
+ * present). KG7: absent/empty → renders NOTHING (no wrapper, no marker). When it
+ * renders, the root carries `data-cro-block="value-props"` for T7 detection.
+ *
+ * Hero COMPOSES this component (never an inline unmarked strip) so the marked
+ * strip is emitted identically wherever value props appear.
+ */
+interface ValuePropItem {
+  label: string;
+  sublabel?: string;
+}
+
+interface Props {
+  /** The `site.valueProps` array (exactly 3 when present). */
+  items?: ValuePropItem[];
+}
+
+const { items } = Astro.props;
+const hasItems = Array.isArray(items) && items.length > 0;
+---
+
+{hasItems && (
+  <ul class="value-props" data-cro-block="value-props">
+    {items!.map((item) => (
+      <li class="value-prop">
+        <span class="value-prop-label">{item.label}</span>
+        {item.sublabel && <span class="value-prop-sublabel">{item.sublabel}</span>}
+      </li>
+    ))}
+  </ul>
+)}
+
+<style>
+  .value-props {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+  .value-prop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1 1 12rem;
+  }
+  .value-prop-label {
+    font-weight: 700;
+    font-size: 1.05rem;
+  }
+  .value-prop-sublabel {
+    color: #6b6b6b;
+    font-size: 0.9rem;
+  }
+</style>

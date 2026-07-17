@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "faq-occasions-seafood-feast-4",
+  "questionRef": "questions/faq-occasions-seafood-feast-4",
+  "text": "Yes. For a bigger seafood feast, calling (319) 221-1040 ahead lets us prep everything fresh and have it ready at your pickup time instead of making you wait during a rush.",
+  "cites": [
+    "occasions/seafood-feast"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[4]",
+  "lastVerified": "2026-07-07"
+}

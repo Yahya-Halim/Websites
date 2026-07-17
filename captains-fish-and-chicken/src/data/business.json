@@ -1,0 +1,64 @@
+{
+  "id": "business",
+  "name": "Captains Fish and Chicken",
+  "tagline": "Fresh fish, chicken & seafood — made to order in Cedar Rapids",
+  "phone": "+1-319-221-1040",
+  "email": "captainsfishchicken@gmail.com",
+  "domain": "https://captains-fish-chicken.netlify.app",
+  "owner": "Ray Aqel",
+  "slogan": "Fried fresh to order.",
+  "description": "Captains Fish and Chicken serves fresh-to-order fried fish, chicken, wings, and seafood for takeout and delivery in Cedar Rapids, Iowa. Catfish, perch, tilapia, cod, red snapper, jumbo shrimp, whole and party wings, tenders, gizzards and livers, plus family fish deals and party pans for catering. Owner-operated by Ray Aqel on 1st Avenue NE since 2024.",
+  "address": {
+    "street": "1616 1st Ave NE",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "stateFullName": "Iowa",
+    "zip": "52402",
+    "country": "US"
+  },
+  "geo": {
+    "latitude": 41.9847,
+    "longitude": -91.6521
+  },
+  "hours": {
+    "weekday": {
+      "days": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday"
+      ],
+      "opens": "11:00",
+      "closes": "22:00"
+    },
+    "sunday": {
+      "days": [
+        "Sunday"
+      ],
+      "opens": "11:00",
+      "closes": "20:00"
+    },
+    "displayText": "Mon–Thu 11am–10pm · Fri–Sat 11am–11pm · Sun 11am–8pm (please call to confirm)"
+  },
+  "yearEstablished": "2024",
+  "copyrightYears": "2024-2026",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Captains+Fish+and+Chicken+1616+1st+Ave+NE+Cedar+Rapids+IA+52402",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=1616+1st+Ave+NE+Cedar+Rapids+IA+52402",
+  "sameAs": [
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/"
+  ],
+  "brand": {
+    "primaryColor": "#123253",
+    "accentColor": "#F5B301",
+    "bgColor": "#F7FAFC",
+    "secondaryColor": "#2D74B5",
+    "textColor": "#0B1E33",
+    "logoFilename": "logo-icon.png",
+    "logoAlt": "Captains Fish & Chicken logo — captain shark emblem"
+  },
+  "analytics": {
+    "gaId": "G-7W35DKNK6Z"
+  },
+  "servesCuisine": "Seafood, Fried Chicken, Soul Food",
+  "priceRange": "$$"
+}

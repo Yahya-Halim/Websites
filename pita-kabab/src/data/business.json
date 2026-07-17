@@ -1,0 +1,54 @@
+{
+  "id": "business",
+  "name": "Pita Kabab",
+  "tagline": "Mediterranean & Middle Eastern cooking in Cedar Rapids",
+  "phone": "+1-319-440-3709",
+  "email": "owner@pitakabab.example",
+  "domain": "https://pitakabab.example",
+  "owner": "Ray Aqel",
+  "slogan": "Fresh Mediterranean, made to order.",
+  "description": "Pita Kabab is a counter-service Mediterranean and Middle Eastern restaurant at 3100 6th St SW in Cedar Rapids, Iowa, serving shawarma, kabobs, falafel, hummus, wings and baklava for takeout, dine-in, delivery and catering.",
+  "address": {
+    "street": "3100 6th St SW",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "stateFullName": "Iowa",
+    "zip": "52404",
+    "country": "US"
+  },
+  "hours": {
+    "weekday": {
+      "days": ["Monday", "Tuesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "22:00"
+    },
+    "sunday": {
+      "days": ["Sunday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    },
+    "displayText": "Mon–Tue & Thu–Sat 10am–10pm · Sun 11am–8pm · Closed Wednesday (hours as published by the restaurant — please call to confirm)"
+  },
+  "yearEstablished": "2025",
+  "copyrightYears": "2025-2026",
+  "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Pita+Kabab+3100+6th+St+SW+Cedar+Rapids+IA+52404",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=3100+6th+St+SW+Cedar+Rapids+IA+52404",
+  "sameAs": [
+    "https://www.yelp.com/biz/pita-kabab-cedar-rapids",
+    "https://www.doordash.com/store/pita-kabab-cedar-rapids-41564223/"
+  ],
+  "servesCuisine": "Mediterranean, Middle Eastern",
+  "ownerAlsoOwns": "Captains Fish and Chicken",
+  "brand": {
+    "primaryColor": "#1B6E3E",
+    "accentColor": "#E0A80D",
+    "bgColor": "#F7F9F3",
+    "secondaryColor": "#14512E",
+    "textColor": "#1C2B21",
+    "logoFilename": "logo-icon.png",
+    "logoAlt": "Pita Kabab logo — kabab skewer emblem"
+  },
+  "analytics": {
+    "gaId": "G-XXXXXXXXXX"
+  }
+}

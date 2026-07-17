@@ -1,0 +1,17 @@
+{
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "fromPhase": 2,
+  "toPhase": 3,
+  "attempt": 1,
+  "sourceArtifactHash": "519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6",
+  "status": "passed",
+  "emittedAt": "2026-07-12T23:40:46.928Z",
+  "checksPassed": [
+    "inputSchema",
+    "blocking",
+    "briefAlignment",
+    "phaseAdjacency"
+  ],
+  "checksFailed": [],
+  "blockingReasons": []
+}

@@ -1,0 +1,72 @@
+{
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "briefHash": "a2e9ae6c4df7f69be3e50dfd8e28169115c7dd2a8958ef7096aefa76bec2ddc7",
+  "phase": 7,
+  "exitedAt": "2026-07-16T01:41:23.019Z",
+  "specialistInvoked": "local-launch-checklist",
+  "delegation": {
+    "schemaVersion": 1,
+    "role": "builder",
+    "workerId": "builder-phase7-a701f565",
+    "reportPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/worker-reports/captains-fish-and-chicken-2026-07-09-a701f565/phase-7-builder-report.json",
+    "reportHash": "1becc5532778506379c67a5ceaa88176d77d98fa31a42afe2dbb863fee8c9697",
+    "packetPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7.json",
+    "packetHash": "2dda44042b29a02a2101252b0961101b9645bf451b28ba4db0a86acb54cc7e39",
+    "capsulePath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder-capsule.json",
+    "capsuleHash": "b3011c498e72828d9703591e703cb35c9b5a2dcd59898a01a2434e2cda2aa9a0",
+    "status": "completed",
+    "commandsRun": [
+      "npx factory build (exit 0; 38 routes; sitemap-index.xml + sitemap-0.xml emitted)",
+      "npx factory validate (exit 0)",
+      "node (recompute canonical delegation-stripped stableHash for packet + capsule; both match declared)",
+      "node dist-sweep.mjs (38 dist HTML pages: titles/meta/canonical/H1/GA4/JSON-LD/img-alt/internal-links/NAP/fixtures)",
+      "curl -s -o /dev/null -w %{http_code} (read-only live GET: /, /menu/, /robots.txt, /sitemap-index.xml, /sitemap-0.xml, /llms.txt, /contact/, /menu/desserts/, /menu/kids-meals/)",
+      "curl + diff (byte-identical comparison of live routes vs dist)",
+      "npx lighthouse (mobile, headless Chrome) against live / and /menu/",
+      "node --preserve-symlinks bin/local-site-workflow.mjs inspect-artifact --phase 7 (ok:true, problems:[])",
+      "node (sha256 of final phase-7-artifact.json bytes)"
+    ],
+    "filesRead": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\packets\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\context-capsules\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder-capsule.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder.md",
+      "C:\\Users\\Lenovo\\.claude\\plugins\\cache\\localevolve-factory\\localevolve-factory\\9ea6578e8fd4\\skills\\local-launch-checklist\\SKILL.md",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\phase-3-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-3\\identity-decision.md",
+      "packet.inputEvidence.phase5 (validationRuns, factoryValidate, seoGeoAudit, failures, remainingAdvisories) embedded in phase-7.json",
+      "packet.inputEvidence.phase6 (higgsfieldManifest, selections, exports, verificationReport) embedded in phase-7.json",
+      "C:\\Users\\Lenovo\\.claude\\plugins\\cache\\localevolve-factory\\localevolve-factory\\9ea6578e8fd4\\lib\\local-site-workflow\\phase-contracts.mjs",
+      "C:\\Users\\Lenovo\\.claude\\plugins\\cache\\localevolve-factory\\localevolve-factory\\9ea6578e8fd4\\lib\\local-site-workflow\\delegation.mjs",
+      "C:\\Users\\Lenovo\\.claude\\plugins\\cache\\localevolve-factory\\localevolve-factory\\9ea6578e8fd4\\lib\\local-site-workflow\\index.mjs"
+    ],
+    "filesChanged": [
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\phase-7-artifact.json",
+      "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\worker-reports\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7-builder-report.json"
+    ],
+    "verification": [
+      "inspect-artifact returned ok:true, problems:[] for phase 7 (contract satisfied; complete-phase may seal).",
+      "Packet canonical delegation-stripped stableHash = 2dda44042b29a02a2101252b0961101b9645bf451b28ba4db0a86acb54cc7e39 and capsule stableHash = b3011c498e72828d9703591e703cb35c9b5a2dcd59898a01a2434e2cda2aa9a0 - both recomputed and MATCH the declared values (the stale draft's 'hash mismatch' was a raw-file-sha error).",
+      "npx factory build exit 0 (38 routes; sitemap-index.xml + sitemap-0.xml emitted); npx factory validate exit 0.",
+      "Dist sweep (38 pages): 38 routePages, 38 unique titles, 0 duplicate titles, 0 missing meta descriptions, 0 missing canonical, 0 off-host canonical (all on captains-fish-chicken.netlify.app), 0 pages with non-single H1.",
+      "Dist sweep: GA4 G-7W35DKNK6Z present on all 38 pages (0 missing); Restaurant JSON-LD on all 38 pages (WebSite 38, WebPage 37, BreadcrumbList 37, FAQPage 21, ContactPage 1, Menu 1) with 0 JSON-LD parse errors.",
+      "Dist sweep: 152 <img> tags, 0 missing alt (100% coverage); 152 image refs, 0 broken; 1201 internal links, 0 broken; 231 tel: hrefs across all 38 pages.",
+      "Dist sweep: single NAP tuple on all 38 pages (1616 1st Ave NE / (319) 221-1040 / +1-319-221-1040), 0 competing phone strings; 0 fixture leaks (.example / G-XXXXXXXXXX / 555-0147 / placeholder); custom gtag('event','contact') conversion wiring on all 38 pages.",
+      "Read-only live HTTP 200 on /, /menu/, /robots.txt, /sitemap-index.xml, /sitemap-0.xml, /llms.txt, /contact/, /menu/desserts/, /menu/kids-meals/.",
+      "Live origin is BYTE-IDENTICAL to the freshly built v3 dist across all sampled routes (diff = 0 lines; identical content-hashed _astro bundles); live is count-free (0 '208 reviews'), shows '4.4 stars on Google', live robots.txt carries the AI-crawler allow-list, live sitemap lists 38 URLs. The stale draft's '208 reviews live' concern does not reproduce.",
+      "Mobile Lighthouse (v13.4.0): home Performance 89 / Accessibility 96 / Best Practices 100 / SEO 92; /menu/ Performance 67 / Accessibility 95 / Best Practices 100 / SEO 92. A11y/BP/SEO >=90 on both; mobile Performance <90 recorded as a post-launch optimization advisory (not a launch blocker); no scores fabricated.",
+      "All 9 launchChecklist ids (identity, validation, imagery, conversion-actions, crawlability, analytics, local-presence, broken-links, mobile-lighthouse) sealed with status pass + evidence; owner-account tasks (GSC, GA4 in-property confirmation, GBP) and truthfulness caveats (placeholder logo, owner-unconfirmed hours, estimated prices, unknown payment) carried as next-actions, not papered over.",
+      "Final artifact sha256 = 95552cf4999181c6299d484073248a2e77a1321683c60d45ebe03bcb0443efd9 (19716 bytes), computed after the last write."
+    ],
+    "specialist": "local-launch-checklist"
+  },
+  "outputs": {
+    "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-7\\phase-7-artifact.json",
+    "artifactHash": "95552cf4999181c6299d484073248a2e77a1321683c60d45ebe03bcb0443efd9",
+    "contract": "launch checklist, deploy target, post-launch verification"
+  },
+  "nextPhaseAllowed": [
+    7
+  ],
+  "nextPhaseHint": 7,
+  "blocking": []
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 0,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-0/phase-0-artifact.json",
+  "artifactHash": "2a9d222f14d080b10e5f3f5ab32da71748224f0da9789d1ccac9d7ca08893122",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-0/approval-notes.md",
+  "notes": "# Phase 0 approval — run v2 (from-scratch, plugin 92aeaae)\n\n**Approved by:** operator (geekeys343@gmail.com), acting for owner Ray Aqel — recorded as Yahya actor per gate contract\n**Date:** 2026-07-08\n\n## Ruling\nPhase 0 DISCOVER artifact approved to seal-advance to Phase 1 RESEARCH.\n\n## Load-bearing items acknowledged at approval\n1. Identity (domain/email/GA4) remains deferred to launch — declared fixtures through build; Phase 5 wall expected until real values arrive.\n2. Menu delta OPEN: Gazette-reported sides additions (mashed potatoes, mac and cheese) await owner confirmation — blocks final menu data at Phase 4, not Phase 1-3.\n3. Hours remain owner-unconfirmed (3 concordant surfaces vs Uber Eats conflict); structured hours stay conservative; displayText caveated.\n4. SW location converted to Pita Kabab — excluded; stale Captains listings recorded as owner cleanup item (out of site scope).\n5. Logo file drop + real photography still pending from owner.\n",
+  "approvedAt": "2026-07-08T18:22:10.265Z",
+  "expiresAt": "2026-07-15T18:22:10.265Z"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-08-c0033522",
+  "phase": 2,
+  "actor": "Yahya",
+  "artifactPath": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/phase-2-artifact.json",
+  "artifactHash": "e4753185d6ffb1b42282eebdde719bbfcc394eb62c5e556451d2d2aacb8fab89",
+  "notesFile": "D:/website/captains-fish-and-chicken/_bmad-output/local-site-pipeline/workbench/captains-fish-and-chicken-2026-07-08-c0033522/phase-2/approval-notes.md",
+  "notes": "# Phase 2 approval — run v2 (38-route matrix)\n\n**Approved by:** operator (geekeys343@gmail.com), acting for owner Ray Aqel — Yahya actor per gate\n**Date:** 2026-07-08\n\n## Ruling\n38-route page matrix approved (35 carried + open-late + catering + /location truth page, each traced to sealed Phase 1 findings). Independent page-matrix-depth review PASSED (zero blocking).\n\n## Acknowledged at approval\n1. Identity still deferred to launch (fixtures through build; Phase 5 wall expected).\n2. Menu sides delta (Gazette) still awaiting owner answer — blocks final menu data at Phase 4.\n3. Four reviewer guardrails bind Phase 4 authoring: Marion facts must be independently substantiated or fold; plan-wide calamari ban; no uncaveated hours in titles; conservative structured hours on home.\n4. Imagery: REUSE the 93-asset library from the archived run (menu unchanged); Phase 6 re-verifies rather than regenerates.\n5. Call-only conversion; SW address only as disambiguation content.\n",
+  "approvedAt": "2026-07-08T20:00:21.363Z",
+  "expiresAt": "2026-07-15T20:00:21.363Z"
+}

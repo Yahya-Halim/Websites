@@ -1,0 +1,570 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-07T20:45:00.000Z",
+  "slots": {
+    "menu-seafood-catfish-fillet-perch-or-tilapia-2-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-fillet-perch-or-tilapia-2-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-catfish-fillet-perch-or-tilapia-3-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-fillet-perch-or-tilapia-3-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-catfish-fillet-perch-or-tilapia-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-fillet-perch-or-tilapia-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-catfish-steak-bone-in-2-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-steak-bone-in-2-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-catfish-steak-bone-in-3-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-steak-bone-in-3-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-catfish-steak-bone-in-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-steak-bone-in-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-catfish-nuggets-1-lb": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-catfish-nuggets-1-lb/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-cod-fish-wild-caught-2-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-cod-fish-wild-caught-2-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-cod-fish-wild-caught-3-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-cod-fish-wild-caught-3-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-cod-fish-wild-caught-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-cod-fish-wild-caught-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-crab-cakes-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-crab-cakes-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-red-snapper-2-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-red-snapper-2-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-red-snapper-3-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-red-snapper-3-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-seafood-red-snapper-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-seafood-red-snapper-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-meal-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-meal-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-meal-6-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-meal-6-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-meal-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-meal-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-only-20-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-only-20-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-only-30-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-only-30-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-only-50-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-only-50-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-whole-wings-wings-only-100-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-whole-wings-wings-only-100-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-party-wings-party-wings-meal-8-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-party-wings-party-wings-meal-8-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-party-wings-party-wings-meal-12-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-party-wings-party-wings-meal-12-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-party-wings-party-wings-only-16-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-party-wings-party-wings-only-16-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-party-wings-party-wings-only-20-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-party-wings-party-wings-only-20-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-party-wings-party-wings-chicken-only-30-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-party-wings-party-wings-chicken-only-30-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-party-wings-party-wings-chicken-only-50-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-party-wings-party-wings-chicken-only-50-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-boneless-chicken-bites-boneless-wings-meal-8-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-boneless-chicken-bites-boneless-wings-meal-8-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-boneless-chicken-bites-boneless-wings-meal-12-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-boneless-chicken-bites-boneless-wings-meal-12-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-boneless-chicken-bites-boneless-wings-only-20-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-boneless-chicken-bites-boneless-wings-only-20-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-boneless-chicken-bites-boneless-wings-only-30-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-boneless-chicken-bites-boneless-wings-only-30-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-boneless-chicken-bites-boneless-wings-only-50-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-boneless-chicken-bites-boneless-wings-only-50-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-leg-and-thigh-chicken-mix-meal-4-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-leg-and-thigh-chicken-mix-meal-4-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-leg-and-thigh-chicken-mix-meal-6-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-leg-and-thigh-chicken-mix-meal-6-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-leg-and-thigh-chicken-mix-meal-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-leg-and-thigh-chicken-mix-meal-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-leg-and-thigh-chicken-mix-only-20-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-leg-and-thigh-chicken-mix-only-20-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-leg-and-thigh-chicken-mix-only-30-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-leg-and-thigh-chicken-mix-only-30-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-leg-and-thigh-chicken-mix-only-50-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-leg-and-thigh-chicken-mix-only-50-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-tenders-tenders-meal-3-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-tenders-tenders-meal-3-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-tenders-tenders-meal-6-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-tenders-tenders-meal-6-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-tenders-tenders-meal-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-tenders-tenders-meal-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-chicken-tenders-tenders-only-20-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-chicken-tenders-tenders-only-20-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-shrimp-jumbo-shrimp-1-2-lb-7-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-shrimp-jumbo-shrimp-1-2-lb-7-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-shrimp-jumbo-shrimp-1-lb-14-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-shrimp-jumbo-shrimp-1-lb-14-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-shrimp-medium-shrimp-1-2-lb": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-shrimp-medium-shrimp-1-2-lb/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-shrimp-medium-shrimp-1-lb": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-shrimp-medium-shrimp-1-lb/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-shrimp-shrimp-basket": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-shrimp-shrimp-basket/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-gizzards-and-livers-gizzards-1-lb": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-gizzards-and-livers-gizzards-1-lb/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-gizzards-and-livers-livers-1-lb": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-gizzards-and-livers-livers-1-lb/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-perch-tilapia-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-perch-tilapia-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-perch-tilapia-20-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-perch-tilapia-20-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-perch-tilapia-30-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-perch-tilapia-30-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-perch-tilapia-40-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-perch-tilapia-40-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-perch-tilapia-50-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-perch-tilapia-50-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-nuggets-half-pan": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-nuggets-half-pan/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-fish-family-deals-catfish-nuggets-full-pan": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-fish-family-deals-catfish-nuggets-full-pan/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-family-meals-and-combos-captains-family-meal-deal": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-family-meals-and-combos-captains-family-meal-deal/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-family-meals-and-combos-combo-dinner-—-your-choice-of-two-items": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-family-meals-and-combos-combo-dinner-—-your-choice-of-two-items/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-family-meals-and-combos-combo-dinner-—-your-choice-of-three-items": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-family-meals-and-combos-combo-dinner-—-your-choice-of-three-items/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-hush-puppies-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-hush-puppies-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-breaded-mushrooms-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-breaded-mushrooms-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-mac-and-cheese-bites-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-mac-and-cheese-bites-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-cheese-sticks-5-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-cheese-sticks-5-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-cheese-curds": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-cheese-curds/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-pizza-puff": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-pizza-puff/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-onion-rings-10-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-onion-rings-10-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-small-fries": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-small-fries/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-large-fries": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-large-fries/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-half-pan-of-fries": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-half-pan-of-fries/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-full-pan-of-fries": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-full-pan-of-fries/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-extra-sauce": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-extra-sauce/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-gizzards-or-livers-side": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-gizzards-or-livers-side/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-catfish-nuggets-side": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-catfish-nuggets-side/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-wings-1-pc-side": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-wings-1-pc-side/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-legs-1-pc-side": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-legs-1-pc-side/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-sides-thighs-1-pc-side": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-sides-thighs-1-pc-side/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-kids-meals-kids-chicken-nuggets-5-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-kids-meals-kids-chicken-nuggets-5-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-kids-meals-kids-chicken-tenders-2-pcs": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-kids-meals-kids-chicken-tenders-2-pcs/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-kids-meals-kids-pizza-puff": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-kids-meals-kids-pizza-puff/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-desserts-cheesecake": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-desserts-cheesecake/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-desserts-caramel-cheesecake": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-desserts-caramel-cheesecake/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-desserts-carrot-cake": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-desserts-carrot-cake/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-desserts-caramel-coconut": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-desserts-caramel-coconut/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-desserts-lemon-cake": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-desserts-lemon-cake/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-drinks-water": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-drinks-water/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-drinks-mystic": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-drinks-mystic/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "menu-drinks-calypos": {
+      "kind": "variant",
+      "source": "output/images/generated/menu-drinks-calypos/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "home-hero": {
+      "kind": "variant",
+      "source": "output/images/generated/home-hero/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "occasion-catering": {
+      "kind": "variant",
+      "source": "output/images/generated/occasion-catering/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "occasion-family-dinner": {
+      "kind": "variant",
+      "source": "output/images/generated/occasion-family-dinner/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "occasion-game-day": {
+      "kind": "variant",
+      "source": "output/images/generated/occasion-game-day/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "og-social": {
+      "kind": "variant",
+      "source": "output/images/generated/og-social/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "brand-logo": {
+      "kind": "variant",
+      "source": "output/images/generated/brand-logo/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-07T20:45:00.000Z"
+    },
+    "open-late-hero": {
+      "kind": "variant",
+      "source": "output/images/generated/open-late-hero/nano_banana_pro-r1-0.png",
+      "provenance": "higgsfield-mcp:nano_banana_pro:r1",
+      "updatedAt": "2026-07-08T20:40:00.000Z"
+    }
+  }
+}

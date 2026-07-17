@@ -1,0 +1,1155 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 3,
+  "phaseName": "DESIGN",
+  "createdAt": "2026-07-12T23:40:53.439Z",
+  "specialist": "ui-ux-pro-max",
+  "specialistSkillPath": "D:\\plugin\\localevolve-factory\\packages\\plugin\\vendored\\ui-ux-pro-max-skill\\.claude\\skills\\ui-ux-pro-max\\SKILL.md",
+  "requiredArtifactFields": [
+    "designSystem",
+    "designContentBuildPlan",
+    "selectedArchitecture",
+    "assetNeeds",
+    "identityDecision"
+  ],
+  "checklist": [
+    {
+      "id": "read-phase2-page-matrix",
+      "label": "Read packet.inputEvidence.phase2.pageMatrix, pageMatrixStrategy, and artifactRecordPath before running UI UX Pro Max; design against the approved page families."
+    },
+    {
+      "id": "read-phase2-image-slot-plan",
+      "label": "Read packet.inputEvidence.phase2.imageSlotPlan and requiredCroBlocks so design-system guidance reserves the right visual and conversion slots."
+    },
+    {
+      "id": "run-ui-ux-design-system",
+      "label": "Run UI UX Pro Max design-system guidance for the approved page matrix and local-business stack."
+    },
+    {
+      "id": "consult-styleguide-library",
+      "label": "Consult references/styleguide-library.md, pick the reference design system that fits the business via the archetype matrix, and fill the design-system.md \"Reference Style Guide\" section with the chosen guide and the cues borrowed."
+    },
+    {
+      "id": "capture-design-system-output",
+      "label": "Persist the UI UX Pro Max design-system output and reference it in the Phase 3 artifact."
+    },
+    {
+      "id": "write-phase4-build-notes",
+      "label": "Fill Phase 4 Build Notes with page-matrix families, selected architecture, asset handoff, and identityDecision/canonical metadata."
+    },
+    {
+      "id": "record-optional-figma-token-handoff",
+      "label": "If Figma or design tokens are available, record references, token paths, and hashes without making live Figma access required."
+    },
+    {
+      "id": "record-identity-decision",
+      "label": "Record real identity or declared fixtures before Phase 4 build."
+    },
+    {
+      "id": "document-payment-policy",
+      "label": "Record payment policy as known or unknown; do not fabricate payment claims."
+    },
+    {
+      "id": "read-specialist-skill",
+      "label": "Read the resolved specialist SKILL.md before authoring phase work."
+    },
+    {
+      "id": "fill-phase-artifact",
+      "label": "Fill the scaffolded phase artifact with contract-compliant evidence."
+    },
+    {
+      "id": "inspect-before-complete",
+      "label": "Run inspect-artifact before complete-phase and fix reported weaknesses."
+    }
+  ],
+  "inputEvidence": {
+    "phase2": {
+      "artifactRecordPath": "_bmad-output/local-site-pipeline/artifacts/pita-kabab-2026-07-12-b5881b47/phase-2.json",
+      "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+      "artifactHash": "519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6",
+      "pageMatrixStrategy": {
+        "model": "Restaurant Page-Family Matrix v1 - restaurant-native depth model (occasion / menu-category / search-intent / neighborhood / story families plus fixed core), replacing service x location SAP for this single-location restaurant",
+        "pageFamilies": [
+          "core (home, menu hub, contact)",
+          "menu-category (menu/[slug] from real menu sections)",
+          "occasion (occasions/[slug] buying moments)",
+          "search-intent (root [slug] landings, kind=intent)",
+          "story (root [slug] landings, kinds story/info/faq incl. GEO/AI-answer targets)",
+          "neighborhood (neighborhoods/[slug] local landings under the anti-doorway schema floor)"
+        ],
+        "seamNote": "The specialist SKILL.md's When-NOT-to-use skips single-location businesses; the runner rules for this engagement mandate restaurant page families for this single-location restaurant (the skill's own restaurant/single-location mode carve-out). Runner rules win where they conflict; documented per dispatch. Slug convention follows the engine's fixed restaurant route kinds - no /{location}/{service} SAP pattern applies.",
+        "routeKindMapping": {
+          "home": "shared pages/index.astro (1 page)",
+          "menu-hub": "pages/menu/index.astro (1 page)",
+          "menu-category": "pages/menu/[slug].astro from menu.json entries (7 pages)",
+          "occasion": "pages/occasions/[slug].astro from occasions.json entries (10 pages)",
+          "root-landing": "pages/[slug].astro from landings.json entries (18 pages; reserved slugs menu/contact/occasions/neighborhoods avoided)",
+          "neighborhood": "pages/neighborhoods/[slug].astro from neighborhoods.json entries (8 pages)",
+          "contact": "pages/contact.astro (1 page)"
+        },
+        "externalCtasNeverPages": [
+          "DoorDash store 41564223 (order CTA)",
+          "tel:(319) 440-3709 (owner-confirm pending)",
+          "sms: text link (owner-gated; no SMS capability evidenced)",
+          "Google Maps directions",
+          "Facebook page"
+        ],
+        "crossLinkingPlan": "Home links each family hub and top quick-win landings; menu hub links all 7 categories; each menu category cross-links its dish landings and >=1 occasion; each occasion links >=4 targets (menu categories, catering siblings, contact); dish landings link their menu category + related dishes + relevant occasion; neighborhoods link menu, catering occasion, and contact (occasion schema minima: >=4 crossLinks; landings/neighborhoods carry crossLinks arrays)."
+      },
+      "imageSlotPlan": [
+        {
+          "slotId": "home-hero",
+          "pagePath": "/",
+          "subject": "Representational Palestinian Mediterranean spread: charcoal-grilled kabobs, shawarma, fresh pita",
+          "constraints": "representational only; no real-premises/staff depiction claims; no unverified claim overlays",
+          "conditional": false
+        },
+        {
+          "slotId": "home-cta-banner-bg",
+          "pagePath": "/",
+          "subject": "Warm representational food-texture background for the mid-page CTA banner",
+          "constraints": "representational only; must not fight banner text contrast",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-hub-hero",
+          "pagePath": "/menu",
+          "subject": "Representational overview platter collage of menu families",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-sandwiches-hero",
+          "pagePath": "/menu/sandwiches-wraps",
+          "subject": "Representational shawarma/kabob wrap close-up",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-bowls-hero",
+          "pagePath": "/menu/bowls",
+          "subject": "Representational Mediterranean rice bowl",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-platters-hero",
+          "pagePath": "/menu/platters",
+          "subject": "Representational grilled kabob platter with rice and salad",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-mediterranean-delight-hero",
+          "pagePath": "/menu/mediterranean-delight",
+          "subject": "Representational mezze: hummus, tabbouleh, olives, pita",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-wings-hero",
+          "pagePath": "/menu/wings",
+          "subject": "Representational seasoned wings",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-kids-hero",
+          "pagePath": "/menu/kids-meals",
+          "subject": "Representational kid-friendly plate",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "menu-desserts-hero",
+          "pagePath": "/menu/desserts",
+          "subject": "Representational baklava close-up",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-catering-hero",
+          "pagePath": "/occasions/catering",
+          "subject": "Representational catering buffet spread",
+          "constraints": "representational only; no fabricated event photos presented as client events",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-wedding-hero",
+          "pagePath": "/occasions/wedding-catering",
+          "subject": "Representational elegant Mediterranean wedding buffet",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-corporate-hero",
+          "pagePath": "/occasions/corporate-catering",
+          "subject": "Representational office lunch trays",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-graduation-hero",
+          "pagePath": "/occasions/graduation-party-catering",
+          "subject": "Representational party platter table",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-iftar-hero",
+          "pagePath": "/occasions/iftar-catering",
+          "subject": "Representational iftar table with dates and shared platters",
+          "constraints": "representational only; no certification marks unless owner-confirmed",
+          "conditional": true,
+          "condition": "halal confirmation"
+        },
+        {
+          "slotId": "occasion-family-dinner-hero",
+          "pagePath": "/occasions/family-dinner",
+          "subject": "Representational family-style shared dinner",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-lunch-hero",
+          "pagePath": "/occasions/lunch",
+          "subject": "Representational quick lunch wrap and side",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-game-day-hero",
+          "pagePath": "/occasions/game-day-catering",
+          "subject": "Representational wings and platters party spread",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-vegetarian-hero",
+          "pagePath": "/occasions/vegetarian-mediterranean",
+          "subject": "Representational falafel and mezze vegetarian spread",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "occasion-halal-catering-hero",
+          "pagePath": "/occasions/halal-catering",
+          "subject": "Representational catering spread",
+          "constraints": "representational only; no halal badges unless owner-confirmed",
+          "conditional": true,
+          "condition": "halal confirmation"
+        },
+        {
+          "slotId": "landing-shawarma-hero",
+          "pagePath": "/shawarma-cedar-rapids",
+          "subject": "Representational vertical-spit shawarma carving",
+          "constraints": "representational only; craft claim in caption gated on owner confirmation",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-kabob-hero",
+          "pagePath": "/kabob-cedar-rapids",
+          "subject": "Representational charcoal-grilled kabob skewers",
+          "constraints": "representational only; charcoal claim in caption gated",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-falafel-hero",
+          "pagePath": "/falafel-cedar-rapids",
+          "subject": "Representational golden falafel with tahini",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-hummus-hero",
+          "pagePath": "/hummus-cedar-rapids",
+          "subject": "Representational hummus bowl with olive oil swirl",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-baklava-hero",
+          "pagePath": "/baklava-cedar-rapids",
+          "subject": "Representational layered baklava with pistachio",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-chicken-over-rice-hero",
+          "pagePath": "/chicken-over-rice-cedar-rapids",
+          "subject": "Representational chicken over rice with white sauce",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-shawarma-vs-gyro-comparison",
+          "pagePath": "/shawarma-vs-gyro",
+          "subject": "Side-by-side representational comparison illustration of shawarma and gyro",
+          "constraints": "representational/illustrative only",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-palestinian-food-guide",
+          "pagePath": "/what-is-palestinian-food",
+          "subject": "Representational Palestinian dishes collage (musakhan, maqluba, kabobs)",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "landing-charcoal-process",
+          "pagePath": "/how-we-cook-charcoal-shawarma",
+          "subject": "Representational charcoal-grill cooking process",
+          "constraints": "representational only; must not present as the restaurant's actual kitchen",
+          "conditional": true,
+          "condition": "craft-claim confirmation"
+        },
+        {
+          "slotId": "neighborhood-shared-delivery",
+          "pagePath": "/neighborhoods/* (shared)",
+          "subject": "Representational packed catering-delivery bags/trays",
+          "constraints": "representational only; ONE shared image - no fabricated per-town storefront or streetscape photos",
+          "conditional": false
+        },
+        {
+          "slotId": "og-default-share",
+          "pagePath": "site-wide (og:image default)",
+          "subject": "Brand-toned representational hero dish with logotype space",
+          "constraints": "representational only",
+          "conditional": false
+        },
+        {
+          "slotId": "brand-logo",
+          "pagePath": "site-wide (header/footer/schema)",
+          "subject": "Pita Kabab logo",
+          "constraints": "owner asset or logo-prompting workflow output; owner approval required before use",
+          "conditional": false
+        }
+      ],
+      "requiredCroBlocks": {
+        "contractNote": "Mirrors the engine's machine contract (cro-contract.ts); the cro-block-presence build gate fails any page missing a required block. Restaurant seam: menu/occasion/landing/neighborhood pages take the detail-kind block set; neighborhoods additionally carry the anti-doorway quota, which the engine's neighborhood schema encodes as data minima.",
+        "siteWideSingletons": [
+          "position:fixed mobile call/text sticky bar - mounted ONCE in the layout, planned once not per page",
+          "dual CTA in header and footer: tel: CALL link AND sms: 'Call or Text' link"
+        ],
+        "byPageKind": {
+          "home": [
+            "hero carrying the single h1 + 3-value-prop strip (site.valueProps, exactly 3 items - OWNER COPY PENDING, gate fails until captured)",
+            "dual CTA (tel: + sms:)",
+            "sticky call/text bar (singleton)",
+            ">=1 mid-page full-width CTA banner (tel: anchor + non-empty headline; site.ctaBanner - OWNER COPY PENDING)",
+            "Why-Choose-Us trust grid with >=6 REAL owner-confirmed facts - all 8 candidates currently unverified; grid OMITTED if fewer than six survive confirmation (never padded)",
+            "lead form <=6 fields posting to site.leadForm.endpoint - CONDITIONAL: no external form-service endpoint exists yet (owner must provision)"
+          ],
+          "contact": [
+            "lead form (same external-endpoint condition)",
+            "dual CTA + sticky bar",
+            "NAP with confirmed address 3100 6th St SW, Cedar Rapids, IA 52404"
+          ],
+          "detail (menu hub, menu-category, occasion, root-landing)": [
+            "hero + dual CTA + sticky bar",
+            "trust grid (conditional on >=6 confirmed facts, else omitted site-wide)"
+          ],
+          "neighborhood": [
+            "detail-kind blocks",
+            "anti-doorway quota: single city-specific H1; >=1 genuine local fact; >=2 local-proximity trust lines (never the HQ address line reused); >=1 town-specific FAQ; >=400 chars unique local content; <0.70 trigram similarity vs siblings; per-city title/meta; labeled address keeps HQ city (Cedar Rapids); zero placeholders; fold-or-don't-ship"
+          ]
+        },
+        "conditionalBlocks": {
+          "offerCallout": "Required iff site.offers non-empty. Sole candidate: kids $5.98 family-dinner offer, owner-confirm pending. Empty slot is REMOVED, never placeholder-filled (KG7).",
+          "financingBlock": "No financing partners found or expected (restaurant); omitted.",
+          "smsCta": "No SMS capability evidenced for (319) 440-3709; sms: half of the dual CTA is owner-gated - omitted or replaced per engine contract until confirmed.",
+          "callCta": "tel: CTA appears on every page; the number itself is owner-unverified until canonical-phone confirmation (owner-questionnaire item)."
+        },
+        "ownerInputDependencies": [
+          "site.valueProps (exactly 3) - owner questionnaire item, CRO gate blocker",
+          "site.ctaBanner headline - owner questionnaire item, CRO gate blocker",
+          "site.leadForm.endpoint (https external form service) - not provisioned",
+          "canonical phone + SMS capability",
+          ">=6 confirmed trust facts or grid omitted"
+        ]
+      },
+      "minimumPageCountRationale": "46 internal pages planned: 3 core + 7 menu-category + 10 occasion + 10 search-intent + 8 story/info + 8 neighborhood. This sits inside the runner's mandatory 25-500 internal-page gate and matches the sealed Phase 1 core sizing guidance (~45-55 pages: 8 service + 10 dish + 14 geo + 8 occasion + 10-15 GEO/FAQ, adapted to restaurant families). 5 pages are conditional on owner confirmations (4 halal-gated: /occasions/iftar-catering, /occasions/halal-catering, /halal-restaurant-cedar-rapids, /halal-heritage-of-cedar-rapids; 1 craft-claim-gated: /how-we-cook-charcoal-shawarma); the floor holds at 41 pages even if every conditional page drops, so the 25-page minimum is never at risk from owner gating. Route count is a direct function of engine data entries: menu.json (7) + occasions.json (10) + landings.json (18) + neighborhoods.json (8) + 3 fixed routes (home, menu hub, contact) = 46 emitted routes, keeping the Phase 4 route-completeness comparison exact. The matrix was NOT inflated toward the ceiling: 13 candidates that could not clear the anti-thin standard (entrenched-competitor battle pages, near-duplicate dish siblings, contested or fact-less towns, unresolved geography) were folded with named reasons instead of shipping thin - fold-or-don't-ship per the specialist skill, and neighborhood folds mirror the engine schema minima so plan-time and build-time folds agree. Near-me/neighborhood pages are deliberately conservative at 8 (not the full 14-anchor ring) because local-pack rankings were never observed (Phase 1 evidence gap); external ordering/social/map links are CTAs and were never counted as pages.",
+      "pageMatrix": [
+        {
+          "path": "/",
+          "title": "Pita Kabab - Mediterranean Restaurant in Cedar Rapids, IA",
+          "family": "core",
+          "routeKind": "home",
+          "dataCollection": "site/business singletons",
+          "parentHub": null,
+          "primaryIntent": "mediterranean restaurant cedar rapids (BOFU head term)",
+          "evidenceBasis": "Phase 1 quick-win: pitakababcr.com already top-3 observed organic; aggregator-only SERP composition (2026-07-12)",
+          "requiredCroBlocksKind": "home",
+          "conditional": false,
+          "dependencies": [
+            "site.valueProps (exactly 3, owner copy pending)",
+            "site.ctaBanner (owner copy pending)",
+            "site.leadForm.endpoint (external form service, not provisioned)",
+            "trust grid needs >=6 owner-confirmed facts or is omitted",
+            "canonical phone confirmation for tel: CTA",
+            "SMS confirmation for sms: CTA"
+          ]
+        },
+        {
+          "path": "/menu",
+          "title": "Menu - Pita Kabab Cedar Rapids",
+          "family": "core",
+          "routeKind": "menu-hub",
+          "dataCollection": "menu.json (aggregate)",
+          "parentHub": "/",
+          "primaryIntent": "pita kabab menu; also absorbs gyro cedar rapids (folded battle page)",
+          "evidenceBasis": "Phase 0: live /menu/ page with 7 real sections; Phase 1: gyro entrenched by Gyro Hut since 2006 - target via menu page, not a dedicated page",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "menu prices owner-unverified: prices omitted until confirmed (menu JSON-LD requires priced items; omit-never-fabricate)"
+          ]
+        },
+        {
+          "path": "/contact",
+          "title": "Contact & Directions - Pita Kabab Cedar Rapids",
+          "family": "core",
+          "routeKind": "contact",
+          "dataCollection": "site/business singletons",
+          "parentHub": "/",
+          "primaryIntent": "NAP, hours, directions, parking, lead capture",
+          "evidenceBasis": "Phase 0 confirmed address 3100 6th St SW; hours single-sourced to owner site (owner confirm); free adjacent parking claim unverified",
+          "requiredCroBlocksKind": "contact",
+          "conditional": false,
+          "dependencies": [
+            "site.leadForm.endpoint (lead form conditional on external endpoint)",
+            "hours confirmation",
+            "canonical phone confirmation"
+          ]
+        },
+        {
+          "path": "/menu/sandwiches-wraps",
+          "title": "Shawarma, Kabob & Falafel Sandwiches - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "sandwiches-wraps",
+          "parentHub": "/menu",
+          "primaryIntent": "sandwich/wrap dish queries; absorbs folded gyro intent",
+          "evidenceBasis": "Phase 0: sandwiches section $6.99-$12.99 on owner site menu (2026-07-12)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "prices owner-unverified - omit until confirmed"
+          ]
+        },
+        {
+          "path": "/menu/bowls",
+          "title": "Mediterranean Bowls - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "bowls",
+          "parentHub": "/menu",
+          "primaryIntent": "rice/salad bowl queries incl. chicken-over-rice support",
+          "evidenceBasis": "Phase 0: bowls section $13.99-$15.99 on owner site menu",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "prices owner-unverified - omit until confirmed"
+          ]
+        },
+        {
+          "path": "/menu/platters",
+          "title": "Grilled Kabob & Shawarma Platters - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "platters",
+          "parentHub": "/menu",
+          "primaryIntent": "platter/dinner queries",
+          "evidenceBasis": "Phase 0: platters section $14.99-$29.99 on owner site menu",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "prices owner-unverified - omit until confirmed"
+          ]
+        },
+        {
+          "path": "/menu/mediterranean-delight",
+          "title": "Mediterranean Delight - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "mediterranean-delight",
+          "parentHub": "/menu",
+          "primaryIntent": "hummus/mezze/sides queries",
+          "evidenceBasis": "Phase 0: Mediterranean Delight section on owner site menu",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "section item list needs owner-site capture at build time"
+          ]
+        },
+        {
+          "path": "/menu/wings",
+          "title": "Wings - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "wings",
+          "parentHub": "/menu",
+          "primaryIntent": "wings queries; feeds game-day occasion",
+          "evidenceBasis": "Phase 0: wings section on owner site menu",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/menu/kids-meals",
+          "title": "Kids Meals - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "kids-meals",
+          "parentHub": "/menu",
+          "primaryIntent": "kids meal / family value queries",
+          "evidenceBasis": "Phase 0: kids section $5.98-$6.99; feeds family-dinner occasion",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "kids pricing owner-unverified"
+          ]
+        },
+        {
+          "path": "/menu/desserts",
+          "title": "Baklava & Desserts - Pita Kabab",
+          "family": "menu-category",
+          "routeKind": "menu-category",
+          "dataCollection": "menu.json",
+          "dataEntrySlug": "desserts",
+          "parentHub": "/menu",
+          "primaryIntent": "baklava/dessert queries",
+          "evidenceBasis": "Phase 0: desserts section on owner site menu; Phase 1: only Vytyl (market deli) surfaces for baklava",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/occasions/catering",
+          "title": "Mediterranean Catering in Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "catering",
+          "parentHub": "/",
+          "primaryIntent": "mediterranean catering cedar rapids (quick-win, highest ticket)",
+          "evidenceBasis": "Phase 1: pitakababcr.com already #1-observed organic; competitors O's Grill/Julia's Kitchen/Zest + aggregators; Pita Kabab absent from ezCater (listing gap)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "catering terms (10-person min, 50% deposit, 200+ capacity, notice tiers) owner-confirm before republishing",
+            "legacy /catering/ redirect if replace-mode confirmed"
+          ]
+        },
+        {
+          "path": "/occasions/wedding-catering",
+          "title": "Wedding Catering Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "wedding-catering",
+          "parentHub": "/occasions/catering",
+          "primaryIntent": "wedding catering cedar rapids (growth)",
+          "evidenceBasis": "Phase 1: ezCater/The Knot hold the SERPs (aggregator-only); existing catering page already claims wedding use case",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "catering terms owner-confirm"
+          ]
+        },
+        {
+          "path": "/occasions/corporate-catering",
+          "title": "Corporate & Office Lunch Catering Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "corporate-catering",
+          "parentHub": "/occasions/catering",
+          "primaryIntent": "corporate lunch catering cedar rapids (growth)",
+          "evidenceBasis": "Phase 1 catering pillar cluster; aggregator-only SERP",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "catering terms owner-confirm"
+          ]
+        },
+        {
+          "path": "/occasions/graduation-party-catering",
+          "title": "Graduation Party Catering Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "graduation-party-catering",
+          "parentHub": "/occasions/catering",
+          "primaryIntent": "graduation party catering cedar rapids (growth)",
+          "evidenceBasis": "Phase 1 catering pillar cluster; aggregator-only SERP",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "catering terms owner-confirm"
+          ]
+        },
+        {
+          "path": "/occasions/iftar-catering",
+          "title": "Iftar & Ramadan Catering Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "iftar-catering",
+          "parentHub": "/occasions/catering",
+          "primaryIntent": "iftar catering cedar rapids (geo-seasonal; publish ~1 month pre-Ramadan)",
+          "evidenceBasis": "Phase 1: CR iftar SERP contains only prayer-time calculators - zero restaurant content; Mother Mosque/Islamic Center/MAS Iowa anchors evidence durable demand",
+          "requiredCroBlocksKind": "detail",
+          "conditional": true,
+          "condition": "Halal certification owner-unverified (certifying body unnamed) - page ships only after owner confirmation (owner-questionnaire trust-fact item)",
+          "dependencies": [
+            "halal confirmation",
+            "catering terms owner-confirm",
+            "seasonal publish window"
+          ]
+        },
+        {
+          "path": "/occasions/family-dinner",
+          "title": "Family Dinner Deals - Pita Kabab Cedar Rapids",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "family-dinner",
+          "parentHub": "/",
+          "primaryIntent": "family dinner deals / kids eat cheap cedar rapids",
+          "evidenceBasis": "Phase 0: existing /family-dinner/ page with kids $5.98 offer already surfacing in kabob SERPs (User-provided)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "offer terms owner-confirm before offer callout ships (site.offers)",
+            "legacy /family-dinner/ redirect if replace-mode confirmed"
+          ]
+        },
+        {
+          "path": "/occasions/lunch",
+          "title": "Quick Mediterranean Lunch in SW Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "lunch",
+          "parentHub": "/",
+          "primaryIntent": "lunch near 6th St SW corridor / Kirkwood / airport (Estimated demand)",
+          "evidenceBasis": "Phase 0: counter service, opens 10am most days; Phase 1: student/staff lunch demand plausible (Estimated) near Kirkwood; corridor position corroborated",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "hours confirmation"
+          ]
+        },
+        {
+          "path": "/occasions/game-day-catering",
+          "title": "Game Day Wings & Platters - Pita Kabab Cedar Rapids",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "game-day-catering",
+          "parentHub": "/occasions/catering",
+          "primaryIntent": "game day catering / wings party trays",
+          "evidenceBasis": "Phase 1 catering pillar cluster (game day) grounded in real wings menu section (Phase 0)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "catering terms owner-confirm"
+          ]
+        },
+        {
+          "path": "/occasions/vegetarian-mediterranean",
+          "title": "Vegetarian Mediterranean Meals - Pita Kabab Cedar Rapids",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "vegetarian-mediterranean",
+          "parentHub": "/",
+          "primaryIntent": "vegetarian mediterranean cedar rapids",
+          "evidenceBasis": "Specialist skill lists vegetarian meals as a restaurant buying moment; grounded in real falafel/hummus vegetarian items on owner site menu (Phase 0)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/occasions/halal-catering",
+          "title": "Halal Catering Cedar Rapids - Pita Kabab",
+          "family": "occasion",
+          "routeKind": "occasion",
+          "dataCollection": "occasions.json",
+          "dataEntrySlug": "halal-catering",
+          "parentHub": "/occasions/catering",
+          "primaryIntent": "halal catering cedar rapids (growth)",
+          "evidenceBasis": "Phase 1: no dedicated local page found in any search; first-mover window before The Halal Guys/Saj Grill CR entries",
+          "requiredCroBlocksKind": "detail",
+          "conditional": true,
+          "condition": "Halal certification owner-unverified - page ships only after owner confirmation",
+          "dependencies": [
+            "halal confirmation",
+            "catering terms owner-confirm"
+          ]
+        },
+        {
+          "path": "/middle-eastern-restaurant-cedar-rapids",
+          "title": "Middle Eastern Restaurant in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "middle-eastern-restaurant-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/",
+          "primaryIntent": "middle eastern restaurant cedar rapids (quick-win)",
+          "evidenceBasis": "Phase 1: Yelp mideastern category page exists; aggregator-only SERP composition; differentiated from home head term",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/palestinian-restaurant-cedar-rapids",
+          "title": "Palestinian Restaurant in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "palestinian-restaurant-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/",
+          "primaryIntent": "palestinian restaurant cedar rapids / palestinian food iowa (quick-win, uncontested)",
+          "evidenceBasis": "Phase 1: zero competing claimants observed across 16 SERPs - uncontested differentiator; cuisine-identity claims themselves owner-unverified (ship confirmed wording only)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "Palestinian family-recipes wording owner-confirm (Phase 0 unverified claim)"
+          ]
+        },
+        {
+          "path": "/shawarma-cedar-rapids",
+          "title": "Shawarma in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "shawarma-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/menu/sandwiches-wraps",
+          "primaryIntent": "shawarma cedar rapids + chicken shawarma cedar rapids (quick-win; folded sibling absorbed)",
+          "evidenceBasis": "Phase 1: Restaurant Guru lists only 2 CR shawarma restaurants; current answers are a grocery deli and a non-specialist",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "vertical-spit craft claim owner-confirm before use as fact"
+          ]
+        },
+        {
+          "path": "/kabob-cedar-rapids",
+          "title": "Kabobs in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "kabob-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/menu/platters",
+          "primaryIntent": "kabob / kebab cedar rapids (quick-win, defend brand-term overlap)",
+          "evidenceBasis": "Phase 1: Pita Kabab already holds most top slots (brand-name match); Yelp kebab category exists",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "charcoal-grill claim owner-confirm before use as fact"
+          ]
+        },
+        {
+          "path": "/falafel-cedar-rapids",
+          "title": "Falafel in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "falafel-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/menu/sandwiches-wraps",
+          "primaryIntent": "falafel cedar rapids (quick-win)",
+          "evidenceBasis": "Phase 1: Yelp falafel category exists; competition is a food truck and a wrap item; no falafel-specialist page found",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/hummus-cedar-rapids",
+          "title": "Hummus in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "hummus-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/menu/mediterranean-delight",
+          "primaryIntent": "hummus cedar rapids (growth)",
+          "evidenceBasis": "Phase 1: no dedicated local hummus page found - low-competition dish page",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/baklava-cedar-rapids",
+          "title": "Baklava in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "baklava-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/menu/desserts",
+          "primaryIntent": "baklava cedar rapids (growth)",
+          "evidenceBasis": "Phase 1: only Vytyl (market deli counter) surfaces for baklava",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/chicken-over-rice-cedar-rapids",
+          "title": "Chicken Over Rice in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "chicken-over-rice-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/menu/bowls",
+          "primaryIntent": "chicken over rice cedar rapids (growth, preempt future entrants)",
+          "evidenceBasis": "Phase 1: no CR-proper page found; New York Gyro (unverified) and future Halal Guys are natural owners - preempt",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "menu mapping: confirm an equivalent bowl item exists on the real menu before shipping"
+          ]
+        },
+        {
+          "path": "/halal-restaurant-cedar-rapids",
+          "title": "Halal Restaurant in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "halal-restaurant-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/",
+          "primaryIntent": "halal restaurant cedar rapids (growth; beat aggregators before Halal Guys/Saj Grill open)",
+          "evidenceBasis": "Phase 1: Yelp/Zabihah/HalalRun/DoorDash category pages dominate; zero CR-proper Mediterranean specialist on the halal directories; Pita Kabab absent from both directories AI systems cite",
+          "requiredCroBlocksKind": "detail",
+          "conditional": true,
+          "condition": "Halal certification owner-unverified (certifying body unnamed) - page ships only after owner confirmation; directory-listing actions equally gated",
+          "dependencies": [
+            "halal confirmation",
+            "Zabihah/HalalRun listing creation after confirmation"
+          ]
+        },
+        {
+          "path": "/best-mediterranean-food-cedar-rapids",
+          "title": "Guide to Mediterranean Food in Cedar Rapids - Pita Kabab",
+          "family": "search-intent",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "best-mediterranean-food-cedar-rapids",
+          "landingKind": "intent",
+          "parentHub": "/",
+          "primaryIntent": "best mediterranean food in cedar rapids (MOFU, GEO/AI-answer target)",
+          "evidenceBasis": "Phase 1: community question observed verbatim in Facebook group; AI answers currently synthesize from aggregators where Pita Kabab is under-represented; honest guide format, no fabricated rankings",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/shawarma-vs-gyro",
+          "title": "Shawarma vs Gyro: What's the Difference? - Pita Kabab",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "shawarma-vs-gyro",
+          "landingKind": "info",
+          "parentHub": "/shawarma-cedar-rapids",
+          "primaryIntent": "shawarma vs gyro (TOFU, GEO/AI-answer target)",
+          "evidenceBasis": "Phase 1: questions/definitions/comparisons are AI-answer-friendly (Estimated per specialist GEO-check); no local page answers these",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/what-is-palestinian-food",
+          "title": "What Is Palestinian Food? - Pita Kabab Cedar Rapids",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "what-is-palestinian-food",
+          "landingKind": "info",
+          "parentHub": "/palestinian-restaurant-cedar-rapids",
+          "primaryIntent": "what is palestinian food (TOFU, GEO/AI-answer target)",
+          "evidenceBasis": "Phase 1 Palestinian cuisine guide pillar; uncontested angle",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/halal-heritage-of-cedar-rapids",
+          "title": "Cedar Rapids' Halal Heritage: Mother Mosque to Midamar - Pita Kabab",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "halal-heritage-of-cedar-rapids",
+          "landingKind": "story",
+          "parentHub": "/halal-restaurant-cedar-rapids",
+          "primaryIntent": "halal history of cedar rapids (TOFU, E-E-A-T authority article)",
+          "evidenceBasis": "Phase 1: Mother Mosque (1934), first national Muslim cemetery (1948), Islamic Center (1971), Midamar (1974, same SW quadrant) - unique authority angle no competitor uses",
+          "requiredCroBlocksKind": "detail",
+          "conditional": true,
+          "condition": "Restaurant's own halal tie-in owner-unverified - the city-history facts are citable, but the page's positioning depends on the halal claim; ships with the halal family after owner confirmation",
+          "dependencies": [
+            "halal confirmation"
+          ]
+        },
+        {
+          "path": "/how-we-cook-charcoal-shawarma",
+          "title": "How We Cook: Charcoal Grill & Vertical-Spit Shawarma - Pita Kabab",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "how-we-cook-charcoal-shawarma",
+          "landingKind": "story",
+          "parentHub": "/",
+          "primaryIntent": "craft differentiator story feeding dish pages and GEO answers",
+          "evidenceBasis": "Phase 0 unverified claims: charcoal grill, vertical-spit shawarma, daily scratch prep, generational recipes; Phase 1 lists these as concrete craft differentiators",
+          "requiredCroBlocksKind": "detail",
+          "conditional": true,
+          "condition": "Craft claims (charcoal/spit/scratch/generational) owner-unverified - page ships only after owner confirms the claims (trust-fact questionnaire item)",
+          "dependencies": [
+            "craft-claim confirmation"
+          ]
+        },
+        {
+          "path": "/first-visit-ordering-guide",
+          "title": "First Visit? How to Order at Pita Kabab",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "first-visit-ordering-guide",
+          "landingKind": "info",
+          "parentHub": "/",
+          "primaryIntent": "first-visit ordering guide (TOFU; counter-service explainer)",
+          "evidenceBasis": "Phase 1 Palestinian cuisine guide pillar cluster; grounded in counter-service model (Phase 0)",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": []
+        },
+        {
+          "path": "/how-to-order",
+          "title": "Order Pita Kabab: Pickup, Dine-In & Delivery",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "how-to-order",
+          "landingKind": "info",
+          "parentHub": "/",
+          "primaryIntent": "ordering support (DoorDash delivery, pickup, dine-in); parity with existing /order/",
+          "evidenceBasis": "Phase 0: /order/ page live; DoorDash store 41564223 is the active delivery channel; first-party ordering 'coming soon'",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "ordering strategy owner decision (DoorDash-only vs coming-soon first-party)",
+            "legacy /order/ redirect if replace-mode confirmed",
+            "DoorDash link is an external CTA, never a page"
+          ]
+        },
+        {
+          "path": "/about",
+          "title": "About Pita Kabab - Family-Owned in Cedar Rapids",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "about",
+          "landingKind": "story",
+          "schemaType": "AboutPage",
+          "parentHub": "/",
+          "primaryIntent": "brand/owner story; E-E-A-T surface",
+          "evidenceBasis": "Phase 0: family-owned / owner Ray Aqel / generational recipes all unverified - page ships with owner-confirmed facts only; opening year is owner residue",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "owner-name spelling, family-owned wording, yearEstablished confirmation - unconfirmed claims omitted, never fabricated"
+          ]
+        },
+        {
+          "path": "/faq",
+          "title": "Pita Kabab FAQ - Hours, Parking, Catering & More",
+          "family": "story",
+          "routeKind": "root-landing",
+          "dataCollection": "landings.json",
+          "dataEntrySlug": "faq",
+          "landingKind": "faq",
+          "schemaType": "FAQPage",
+          "parentHub": "/",
+          "primaryIntent": "aggregate FAQ; GEO answer surface",
+          "evidenceBasis": "Phase 1 GEO pillar; FAQ items drawn from confirmed facts only; halal FAQ items gated on owner confirmation",
+          "requiredCroBlocksKind": "detail",
+          "conditional": false,
+          "dependencies": [
+            "halal FAQ entries gated; hours/payment answers need owner confirmation"
+          ]
+        },
+        {
+          "path": "/neighborhoods/near-eastern-iowa-airport",
+          "title": "Mediterranean Food Near Eastern Iowa Airport (CID) - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "near-eastern-iowa-airport",
+          "parentHub": "/",
+          "primaryIntent": "restaurants near eastern iowa airport (growth)",
+          "evidenceBasis": "Phase 1: TripAdvisor/Yelp/OpenTable near-CID pages exist with no Mediterranean sit-down; same 6th St SW corridor (District 23 at 2825 6th St SW corroborates); exact drive-time to be captured honestly at build",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima: >=1 local fact, >=2 proximity lines, >=1 town FAQ, >=400 chars unique content, <0.70 sibling similarity; folds if facts cannot be captured"
+          ]
+        },
+        {
+          "path": "/neighborhoods/near-kirkwood-community-college",
+          "title": "Mediterranean Food Near Kirkwood Community College - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "near-kirkwood-community-college",
+          "parentHub": "/",
+          "primaryIntent": "restaurants near kirkwood community college (growth)",
+          "evidenceBasis": "Phase 1: near-Kirkwood aggregator pages exist; Gyro Hut 2.0 is the only Mediterranean-adjacent entry; student/staff lunch demand (Estimated)",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima; folds if facts cannot be captured"
+          ]
+        },
+        {
+          "path": "/neighborhoods/sw-cedar-rapids",
+          "title": "Mediterranean Restaurant in SW Cedar Rapids - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "sw-cedar-rapids",
+          "parentHub": "/",
+          "primaryIntent": "mediterranean / halal food near me, SW quadrant (quick-win, GBP-dependent)",
+          "evidenceBasis": "Phase 1: SW quadrant has no other Mediterranean/halal restaurant in any observed list; Midamar HQ in same quadrant; local-pack never observed - claims stay competitor-absence-based",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima",
+            "halal wording inside this page gated on owner confirmation"
+          ]
+        },
+        {
+          "path": "/neighborhoods/downtown-cedar-rapids",
+          "title": "Mediterranean Food for Downtown Cedar Rapids - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "downtown-cedar-rapids",
+          "parentHub": "/",
+          "primaryIntent": "downtown cedar rapids lunch/catering delivery intents",
+          "evidenceBasis": "Phase 1: district anchors exist (the-district.org core districts); absorbs folded Czech Village/NewBo and Kingston Village candidates",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima; folds if facts cannot be captured"
+          ]
+        },
+        {
+          "path": "/neighborhoods/marion",
+          "title": "Mediterranean Catering & Takeout for Marion, IA - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "marion",
+          "parentHub": "/",
+          "primaryIntent": "mediterranean marion ia (matrix; uncontested)",
+          "evidenceBasis": "Phase 1: no Mediterranean player holds Marion; suburb catering matrix opportunity (growth)",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima; folds if town facts cannot be captured"
+          ]
+        },
+        {
+          "path": "/neighborhoods/fairfax",
+          "title": "Mediterranean Catering & Takeout for Fairfax, IA - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "fairfax",
+          "parentHub": "/",
+          "primaryIntent": "mediterranean fairfax ia (matrix; uncontested, nearest SW-side suburb)",
+          "evidenceBasis": "Phase 1: no Mediterranean player holds Fairfax; geographically adjacent to the SW corridor",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima; folds if town facts cannot be captured"
+          ]
+        },
+        {
+          "path": "/neighborhoods/ely",
+          "title": "Mediterranean Catering & Takeout for Ely, IA - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "ely",
+          "parentHub": "/",
+          "primaryIntent": "mediterranean ely ia (matrix; uncontested)",
+          "evidenceBasis": "Phase 1: no Mediterranean player holds Ely",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima; small town - folds if genuine local facts cannot be captured"
+          ]
+        },
+        {
+          "path": "/neighborhoods/swisher",
+          "title": "Mediterranean Catering & Takeout for Swisher, IA - Pita Kabab",
+          "family": "neighborhood",
+          "routeKind": "neighborhood",
+          "dataCollection": "neighborhoods.json",
+          "dataEntrySlug": "swisher",
+          "parentHub": "/",
+          "primaryIntent": "mediterranean swisher ia (matrix; uncontested)",
+          "evidenceBasis": "Phase 1: no Mediterranean player holds Swisher",
+          "requiredCroBlocksKind": "neighborhood",
+          "conditional": false,
+          "dependencies": [
+            "anti-doorway schema minima; small town - folds if genuine local facts cannot be captured"
+          ]
+        }
+      ]
+    }
+  },
+  "outputPaths": {
+    "workbench": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3",
+    "phaseArtifact": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+    "designSystem": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\design-system.md",
+    "identityDecision": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identityDecision.json",
+    "identityDecisionNotes": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\identity-decision.md",
+    "designTokens": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\design-tokens.json",
+    "figmaHandoff": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\figma-handoff.md"
+  },
+  "artifactEvidencePaths": {
+    "designSystem": "_bmad-output/local-site-pipeline/workbench/pita-kabab-2026-07-12-b5881b47/phase-3/design-system.md"
+  },
+  "gatesAfterCompletion": {
+    "yahyaApprovalRequired": false,
+    "requiredReviewers": []
+  },
+  "stopCondition": "Stop after producing exactly one inspected phase artifact; do not continue to the next phase in the same invocation.",
+  "delegation": {
+    "role": "builder",
+    "packetPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\packets\\pita-kabab-2026-07-12-b5881b47\\phase-3.json",
+    "packetHash": "da3827508f390b4b7a173eede6f2b51029a747a506ce3df17175b49352a84140",
+    "capsulePath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\context-capsules\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder-capsule.json",
+    "capsuleHash": "d89e0b12b2b48ba4b42a7dc574b7b7dfc8170fac4ed0ff804fe27f05fb754aab",
+    "dispatchPromptPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\dispatch-prompts\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder.md",
+    "requiredReportPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\worker-reports\\pita-kabab-2026-07-12-b5881b47\\phase-3-builder-report.json"
+  }
+}

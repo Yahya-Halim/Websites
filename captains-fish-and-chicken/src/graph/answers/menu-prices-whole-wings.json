@@ -1,0 +1,12 @@
+{
+  "kind": "answers",
+  "slug": "menu-prices-whole-wings",
+  "questionRef": "questions/menu-prices-whole-wings",
+  "text": "Wings Meal (4 pcs): Meal 8.99\nWings Meal (6 pcs): Meal 13.99\nWings Meal (10 pcs): Meal 19.99\nWings Only (20 pcs): Only 32.99\nWings Only (30 pcs): Only 49.99\nWings Only (50 pcs): Only 84.99\nWings Only (100 pcs): Only 159.99",
+  "cites": [
+    "menu/whole-wings"
+  ],
+  "provenance": "KNOW",
+  "source": "src/graph/menu/whole-wings.json",
+  "lastVerified": "2026-07-07"
+}

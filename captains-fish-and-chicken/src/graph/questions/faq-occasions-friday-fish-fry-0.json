@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-friday-fish-fry-0",
+  "question": "What kinds of fish can I get for a fish fry?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/friday-fish-fry.json#faqs[0]",
+  "lastVerified": "2026-07-07"
+}

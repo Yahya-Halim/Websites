@@ -1,0 +1,110 @@
+{
+  "phase": 2,
+  "summary": "Phase 2 PLAN for Captains Fish and Chicken. Restaurant single-location depth model: menu-category x occasion x search-intent families plus a genuine-fact neighborhood ring. 35 internal routes planned (>=25, <500). External ordering links (DoorDash/Uber Eats/Grubhub) are CTAs, not pages. Call-only conversion (no lead form, no SMS) is buildable — the heavy CRO block contract binds only auto-dealer, not the restaurant archetype. Menu ships with owner-confirmed prices (Menu JSON-LD permitted).",
+  "checklist": [
+    { "id": "founder-scope-single-location", "status": "done", "note": "Single 1616 1st Ave NE location; 3100 6th St SW excluded; no service-area SAP matrix" },
+    { "id": "founder-confirmed-data-only", "status": "done", "note": "Menu-category pages derive from owner-confirmed menu; occasions/landings from confirmed offerings + Phase 1 keyword pillars" },
+    { "id": "founder-call-only-exception", "status": "done", "note": "Lead form omitted + single call CTA (no SMS) — documented exception; restaurant archetype has no auto-dealer CRO block gate" },
+    { "id": "founder-fold-not-fabricate", "status": "done", "note": "Thin neighborhoods (Hiawatha/Robins) and late-night occasion folded; no fabricated local facts or hours claims" },
+    { "id": "founder-anti-doorway-neighborhoods", "status": "done", "note": "Only 2 neighborhood pages, each gated on real localFacts + >=2 proximity lines + >=1 town FAQ; fold if facts fail at authoring" }
+  ],
+  "pageMatrixStrategy": {
+    "model": "Restaurant single-location depth: menu-category x occasion x search-intent families, with a thin neighborhood ring folded to genuine-fact towns",
+    "pageFamilies": [
+      "Home (conversion hub)",
+      "Menu hub + menu-category pages (from real menu sections)",
+      "Occasion pages (buying moments)",
+      "Search-intent root landings (dish + near-me + soul-food)",
+      "Story / info / FAQ landings",
+      "Neighborhood pages (anti-doorway floor, genuine facts only)",
+      "Contact"
+    ],
+    "crossLinkPlan": "Menu-category pages cross-link to related occasions + intent landings; occasions feature real menu items and link to their menu sections; intent landings link to the matching menu section + occasion + contact; neighborhoods link to menu hub + contact + nearest intent landing; home links to menu hub, top occasions, and top intent landings. Every occasion carries >=4 cross-links, every intent landing >=2.",
+    "sapNote": "No service-area SAP pages — single location, no multi-town service model. Neighborhood pages substitute and must clear the restaurant anti-doorway floor (localFacts>=1, proximityTrustLines>=2, townFaqs>=1) or fold."
+  },
+  "pageMatrix": [
+    { "path": "/", "kind": "home", "title": "Captains Fish and Chicken — Fresh Fish, Chicken & Seafood in Cedar Rapids", "note": "Conversion hub: hero, call CTA, order-online CTAs, featured dishes, hours/map" },
+
+    { "path": "/menu", "kind": "menu-hub", "title": "Menu — Captains Fish and Chicken", "note": "Menu index linking all sections; Menu JSON-LD (all items priced)" },
+    { "path": "/menu/whole-wings", "kind": "menu-section", "parent": "/menu", "title": "Whole Wings", "note": "7 items, owner-confirmed prices" },
+    { "path": "/menu/party-wings", "kind": "menu-section", "parent": "/menu", "title": "Party Wings", "note": "6 items" },
+    { "path": "/menu/boneless-chicken-bites", "kind": "menu-section", "parent": "/menu", "title": "Boneless Chicken Bites", "note": "5 items" },
+    { "path": "/menu/chicken-leg-and-thigh", "kind": "menu-section", "parent": "/menu", "title": "Chicken Leg & Thigh Mix", "note": "6 items" },
+    { "path": "/menu/chicken-tenders", "kind": "menu-section", "parent": "/menu", "title": "Chicken Tenders", "note": "4 items" },
+    { "path": "/menu/shrimp", "kind": "menu-section", "parent": "/menu", "title": "Shrimp", "note": "5 items" },
+    { "path": "/menu/gizzards-and-livers", "kind": "menu-section", "parent": "/menu", "title": "Gizzards & Livers", "note": "2 items — niche soul-food SEO win" },
+    { "path": "/menu/seafood", "kind": "menu-section", "parent": "/menu", "title": "Seafood — Catfish, Cod, Perch, Tilapia, Red Snapper, Crab Cakes", "note": "14 items — hero category" },
+    { "path": "/menu/fish-family-deals", "kind": "menu-section", "parent": "/menu", "title": "Fish Only Family Deals", "note": "7 items up to 50pc" },
+    { "path": "/menu/family-meals-and-combos", "kind": "menu-section", "parent": "/menu", "title": "Family Meals & Combo Dinners", "note": "Captain's Family Meal Deal + combo dinners (3 items; folds the 1-item deal in)" },
+    { "path": "/menu/sides", "kind": "menu-section", "parent": "/menu", "title": "Side Orders", "note": "17 items incl. hush puppies, mac & cheese bites, cheese curds, onion rings" },
+    { "path": "/menu/kids-meals", "kind": "menu-section", "parent": "/menu", "title": "Kids Meals", "note": "3 items" },
+    { "path": "/menu/desserts", "kind": "menu-section", "parent": "/menu", "title": "Desserts", "note": "5 items" },
+    { "path": "/menu/drinks", "kind": "menu-section", "parent": "/menu", "title": "Drinks", "note": "3 items" },
+
+    { "path": "/occasions/family-dinner", "kind": "occasion", "title": "Family Dinner Takeout", "note": "Featured: family fish deals, combos; >=5 FAQ, >=4 cross-links" },
+    { "path": "/occasions/game-day-wings", "kind": "occasion", "title": "Game-Day Wings & Party Trays", "note": "Party wings, boneless bites" },
+    { "path": "/occasions/office-and-party-catering", "kind": "occasion", "title": "Office & Party Catering (Party Pans)", "note": "Highest-AOV; family fish deals up to 50pc, full pans" },
+    { "path": "/occasions/friday-fish-fry", "kind": "occasion", "title": "Everyday Fish Fry — Not Just Fridays", "note": "Fresh catfish/perch/tilapia/cod; year-round fish-fry positioning" },
+    { "path": "/occasions/seafood-feast", "kind": "occasion", "title": "Seafood Feast", "note": "Shrimp, crab cakes, red snapper, cod (confirmed items only — NO calamari; calamari is not on the owner-confirmed menu)" },
+    { "path": "/occasions/quick-lunch-takeout", "kind": "occasion", "title": "Quick Lunch Takeout", "note": "Combos, tenders, baskets" },
+
+    { "path": "/fried-catfish-cedar-rapids", "kind": "landing-intent", "title": "Fried Catfish in Cedar Rapids", "note": "Signature dish (catfish fillet/steak/nuggets); hero intent win" },
+    { "path": "/fried-chicken-and-wings-cedar-rapids", "kind": "landing-intent", "title": "Fried Chicken & Wings in Cedar Rapids", "note": "Wings/tenders/leg-thigh" },
+    { "path": "/seafood-takeout-cedar-rapids", "kind": "landing-intent", "title": "Seafood Takeout in Cedar Rapids", "note": "Fried-basket seafood vs crab-boil competitors" },
+    { "path": "/soul-food-cedar-rapids", "kind": "landing-intent", "title": "Soul Food in Cedar Rapids", "note": "Captures freed 'soul food CR' demand (Vivian's closed)" },
+    { "path": "/fish-and-chicken-near-me", "kind": "landing-intent", "title": "Fish & Chicken Near You — Cedar Rapids", "note": "Near-me + delivery hub deep-linking DoorDash/Uber Eats/Grubhub" },
+    { "path": "/party-wings-cedar-rapids", "kind": "landing-intent", "title": "Party Wings in Cedar Rapids", "note": "Party-wings + catering intent" },
+    { "path": "/how-to-order", "kind": "landing-info", "title": "How to Order — Pickup, Call-Ahead & Delivery", "note": "Call (319) 221-1040; DoorDash/Uber Eats/Grubhub CTAs" },
+    { "path": "/about", "kind": "landing-info", "title": "About Captains Fish and Chicken", "note": "Owner Ray Aqel, opened Oct 2024, made fresh to order" },
+    { "path": "/faq", "kind": "landing-faq", "title": "Frequently Asked Questions", "note": "Hours, delivery, catering, payment, location" },
+    { "path": "/made-fresh-to-order", "kind": "landing-story", "title": "Made Fresh to Order", "note": "Fresh-prep story; softened until owner confirms as house claim" },
+
+    { "path": "/neighborhoods/northeast-cedar-rapids", "kind": "neighborhood", "title": "Fish & Chicken in Northeast Cedar Rapids", "note": "1st Ave NE corridor; Mound View / Wellington Heights; minutes from downtown Cedar Rapids; I-380 access — real local facts only (NOT NewBo, which is SE/downtown); fold if facts fail" },
+    { "path": "/neighborhoods/marion-ia", "kind": "neighborhood", "title": "Fish & Chicken Near Marion, IA", "note": "Adjacent town ~5 mi NE via 1st Ave/Hwy 100; fold if facts fail" },
+
+    { "path": "/contact", "kind": "contact", "title": "Contact & Location — Captains Fish and Chicken", "note": "NAP + map + hours + directions + call CTA; NO lead form (call-only exception)" }
+  ],
+  "orderingCtasNotPages": [
+    "tel:+13192211040 (primary call CTA)",
+    "https://www.doordash.com/store/captains-fish-and-chicken-inc-cedar-rapids-34802887/",
+    "https://www.ubereats.com/store/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids-ia/AJApcCD3RUefziQ_OTCMSA",
+    "https://www.grubhub.com/restaurant/captains-fish-and-chicken-1616-1st-ave-ne-cedar-rapids/11640296",
+    "https://www.facebook.com/p/Captains-Fish-and-Chicken-INC-61567698479294/"
+  ],
+  "foldedPages": [
+    { "page": "/neighborhoods/hiawatha-ia", "reason": "insufficient distinct genuine local facts vs the NE/Marion pages — folded to avoid a thin doorway page" },
+    { "page": "/neighborhoods/robins-ia", "reason": "same as Hiawatha — folded" },
+    { "page": "/occasions/late-night-eats", "reason": "hours unconfirmed; cannot claim 'open late' without owner confirmation — folded" },
+    { "page": "/menu/captains-family-meal-deal (standalone)", "reason": "single-item section folded into /menu/family-meals-and-combos" },
+    { "page": "/occasions/halal-meals and /occasions/vegetarian", "reason": "no owner-confirmed halal/vegetarian positioning — folded, not fabricated" }
+  ],
+  "requiredCroBlocks": {
+    "note": "Restaurant archetype has NO auto-dealer CRO block-presence contract (croContractFor('restaurant',...) === null), so the heavy dual-CTA/lead-form/6-fact-trust-grid gate does not bind. These are the restaurant conversion elements planned per kind. Call-only exception applies site-wide.",
+    "layoutSingleton": ["sticky mobile call bar (position:fixed, call-only tel:)"],
+    "home": ["hero + single call CTA (tel:)", "3 value-props strip (restaurant copy)", "featured signature dishes", "order-online CTA row (DoorDash/Uber Eats/Grubhub)", "why-choose-us content block", "hours + map + directions"],
+    "menu-hub-and-sections": ["item list with owner-confirmed prices (Menu JSON-LD)", "call CTA", "order-online CTAs"],
+    "occasion": ["hero + call CTA", ">=1 featured menu item", ">=5 FAQ", ">=4 cross-links", "order CTA"],
+    "landing-intent-story-info-faq": ["hero + call CTA", "body copy", "FAQ where relevant", "cross-links", "order CTA"],
+    "neighborhood": ["local hero + single city H1", ">=1 genuine local fact paragraph", ">=2 proximity trust lines", ">=1 town FAQ", "call CTA"],
+    "contact": ["NAP + map + hours + directions", "call CTA"],
+    "documentedExceptions": [
+      "lead-form OMITTED on home + contact (no external form endpoint; owner chose call-only)",
+      "dual-CTA reduced to SINGLE call CTA (no SMS/text number confirmed — no fake SMS line)",
+      "trust content rendered as 'why choose us' restaurant copy, NOT the auto-dealer 6-fact trust-grid gate (not applicable to restaurant archetype)"
+    ]
+  },
+  "imageSlotPlan": [
+    { "slot": "home-hero", "purpose": "Signature spread (fried catfish + wings + shrimp)", "representational": true },
+    { "slot": "brand-logo", "purpose": "Wordmark / brand mark for header + footer", "representational": true },
+    { "slot": "signature-catfish", "purpose": "Fried catfish plate (hero dish)", "representational": true },
+    { "slot": "signature-wings", "purpose": "Whole/party wings basket", "representational": true },
+    { "slot": "signature-shrimp", "purpose": "Jumbo shrimp basket", "representational": true },
+    { "slot": "fish-family-platter", "purpose": "Fish family deal / party pan spread", "representational": true },
+    { "slot": "soul-food-sides", "purpose": "Hush puppies, mac & cheese bites, onion rings", "representational": true },
+    { "slot": "occasion-catering", "purpose": "Catering party-pan hero", "representational": true },
+    { "slot": "occasion-family-dinner", "purpose": "Family dinner hero", "representational": true },
+    { "slot": "og-social", "purpose": "Open Graph / social share image", "representational": true },
+    { "slot": "storefront-note", "purpose": "PLACEHOLDER — prefer a REAL owner photo of the 1616 1st Ave NE storefront; generated imagery must NOT be presented as an actual photo of the premises", "representational": true }
+  ],
+  "minimumPageCountRationale": "35 internal routes clears the 25 floor and stays well under 500. Composition: 1 home + 1 menu hub + 14 menu-category pages (from the owner-confirmed menu) + 6 occasion pages + 10 search-intent/story/info/faq landings + 2 genuine-fact neighborhood pages + 1 contact. The matrix maps 1:1 to the Phase 1 keyword pillars: menu-category depth (fried fish/chicken/wings/seafood/soul-food sides), occasion buying-moments (family/catering/game-day/fish-fry/seafood/lunch), and BOFU intent landings (fried catfish, fish & chicken near me, seafood takeout, soul food, party wings). External ordering links are CTAs, not pages, so externalCount = 0. If either neighborhood page's genuine facts fail at authoring, it folds and the count drops to 33-34 — still above the 25 floor."
+}

@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "faq-occasions-seafood-feast-1",
+  "question": "How much seafood should I order to feed a group?",
+  "provenance": "KNOW",
+  "source": "src/graph/occasions/seafood-feast.json#faqs[1]",
+  "lastVerified": "2026-07-07"
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 2,
+  "actor": "Yahya",
+  "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-artifact.json",
+  "artifactHash": "519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6",
+  "notesFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-2\\phase-2-approval-notes.md",
+  "notes": "# Phase 2 Approval — Yahya\n\nDate: 2026-07-12\nRun: pita-kabab-2026-07-12-b5881b47\nArtifact: phase-2-artifact.json (sealed 2026-07-12, sha256 519c968e28ade4378f21bb0093f55a9aeaa0d6a275e8dde249cfc19df8dcc1f6)\n\nYahya approved Phase 2 PLAN via chat (\"approved\") after the approval request\nsurfaced these load-bearing items explicitly:\n\n1. 46-page Restaurant Page-Family Matrix v1 (41 unconditional + 5 owner-gated:\n   4 halal-gated pages + 1 craft-claim-gated page; floor 41 >= 25-page gate).\n2. Home-page CRO copy (3 value props + banner line) still blocked on owner —\n   Phase 4 hard blocker acknowledged.\n3. Reviewer caveat W1: engine cro-block-presence gate registers only\n   auto-dealer; restaurant CRO blocks are review-enforced this run. Engine fix\n   spun off as a separate task.\n4. Neighborhood family deliberately conservative (8 pages) because local-pack\n   rankings were never directly observed.\n\npage-matrix-depth review: pass (attempt 1), notes hash-verified. Owner\nquestionnaire (17 items) still open; domain decision, halal certifier, and\nvalue props remain the priority unblocks before Phase 3 identity and Phase 4\nbuild.\n",
+  "approvedAt": "2026-07-12T23:40:40.998Z",
+  "expiresAt": "2026-07-19T23:40:40.998Z"
+}

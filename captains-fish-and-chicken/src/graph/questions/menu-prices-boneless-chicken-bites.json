@@ -1,0 +1,8 @@
+{
+  "kind": "questions",
+  "slug": "menu-prices-boneless-chicken-bites",
+  "question": "How much do Boneless Chicken Bites cost at Captains Fish and Chicken?",
+  "provenance": "KNOW",
+  "source": "src/graph/menu/boneless-chicken-bites.json",
+  "lastVerified": "2026-07-07"
+}

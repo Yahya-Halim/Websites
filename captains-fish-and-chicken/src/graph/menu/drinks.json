@@ -1,0 +1,44 @@
+{
+  "kind": "menu",
+  "slug": "drinks",
+  "name": "Drinks",
+  "order": 14,
+  "description": "Cool it down.",
+  "items": [
+    {
+      "name": "Water",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 0.99
+        }
+      ]
+    },
+    {
+      "name": "Mystic",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    },
+    {
+      "name": "Calypos",
+      "prices": [
+        {
+          "label": "Each",
+          "price": 3.99
+        }
+      ]
+    }
+  ],
+  "seo": {
+    "title": "Drinks — Cedar Rapids | Captains Fish and Chicken",
+    "description": "Bottled water, Mystic, and Calypos drinks to round out your fried fish and chicken order at Captains in Cedar Rapids.",
+    "canonical": "https://captains-fish-and-chicken.example/menu/drinks/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "owner-confirmed menu (Phase 0 sealed, menu-confirmed.json, 2026-07-07)"
+}

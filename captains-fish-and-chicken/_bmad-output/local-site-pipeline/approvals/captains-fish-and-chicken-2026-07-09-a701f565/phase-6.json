@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 6,
+  "actor": "Yahya",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-6\\phase-6-artifact.json",
+  "artifactHash": "d2e25f43b7d528b737b78aa668e7fe12b2692ae8c6f0a03073e1eccd8f97b656",
+  "notesFile": "C:/Users/Lenovo/AppData/Local/Temp/claude/D--plugin-localevolve-factory/ad68d563-d121-4a5d-83ed-f2d8405933d4/scratchpad/p6-approval-notes.md",
+  "notes": "# Phase 6 Approval — run v3 (captains-fish-and-chicken-2026-07-09-a701f565)\n\nApproved under the operator's standing directive of 2026-07-09: \"seal everything after using the new repo updates and implementation to the captains-fish-chicken website\". Real operator: geekeys343@gmail.com (actor recorded as Yahya per workflow contract).\n\nBasis:\n- Parity re-verification, NO regeneration — 0 Higgsfield credits spent.\n- 94/94/94 manifest/selections/exports consistent; all 94 export files present on disk; frozen menu (87 items/14 categories) maps 1:1 to 87 renders, no off-menu imagery (no calamari).\n- dist sweep: 38 pages, 94 unique refs, 0 broken, 138 imgs 0 missing alt, 5/5 heroes webp (modern-format gate pass).\n- Representational honesty intact; logo placeholder acknowledged (owner file drop pending, non-blocker).\n- verificationReport: desktop + mobile uiChecks PASS, unresolvedIssues empty.\n- imagery-quality review PASS attempt 1 (artifactHash d2e25f43…, notes 8de90878…).\n- Reviewer advisory A1 (packet/capsule raw-byte hash vs declared canonical) confirmed BENIGN: packet.delegation.packetHash == declared a4de3141… (engine uses canonical hash excluding delegation block; seal already cross-checked). Not tampering.\n",
+  "approvedAt": "2026-07-11T00:43:32.674Z",
+  "expiresAt": "2026-07-18T00:43:32.674Z"
+}

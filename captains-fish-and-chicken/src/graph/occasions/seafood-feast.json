@@ -1,0 +1,95 @@
+{
+  "kind": "occasions",
+  "slug": "seafood-feast",
+  "title": "Seafood Feast in Cedar Rapids | Captains Fish and Chicken",
+  "headline": "Shrimp, Crab Cakes, and Red Snapper Fried Fresh to Order",
+  "body": "When you're in the mood to treat yourself, a seafood feast from Captains Fish and Chicken on 1st Avenue NE delivers. Start with jumbo shrimp fried to a golden crunch, add a couple of crab cakes packed with flavor, and go big with fresh red snapper or a crisp piece of cod. Everything is fried fresh to order, so the seafood arrives hot and crackling instead of steamed soft in a bag. Build a spread just for yourself or lay it out for the table, pairing your seafood with sides for a full plate that feels like a night out without leaving home. Cedar Rapids seafood lovers in the Northeast neighborhood and nearby Marion order from us when they want it done right. Call (319) 221-1040 to order ahead for pickup and get it at peak crispiness, or have your feast delivered through DoorDash, Uber Eats, or Grubhub. Owner Ray Aqel opened Captains in 2024 on a single promise: fish, chicken and seafood made fresh to order, and we're rated 4.4 on Google. Fresh seafood, no fuss, made the way you'd want it.",
+  "featuredItems": [
+    {
+      "sectionSlug": "shrimp",
+      "itemIndex": 0
+    },
+    {
+      "sectionSlug": "shrimp",
+      "itemIndex": 4
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 10
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 11
+    },
+    {
+      "sectionSlug": "seafood",
+      "itemIndex": 7
+    },
+    {
+      "sectionSlug": "sides",
+      "itemIndex": 0
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What's on the seafood feast?",
+      "answer": "Our seafood lineup features jumbo shrimp, a shrimp basket, crab cakes, fresh red snapper, and cod, all fried fresh to order. Mix and match to build the feast you want, and add sides to round out the plate. Call (319) 221-1040 if you'd like help putting it together."
+    },
+    {
+      "question": "How much seafood should I order to feed a group?",
+      "answer": "For a shared seafood feast, plan on a mix such as a shrimp basket plus a couple of crab cakes and a red snapper for two to three people, scaling up from there. Tell us your headcount at (319) 221-1040 and we'll help you size the order."
+    },
+    {
+      "question": "How do I order a seafood feast for pickup?",
+      "answer": "Call (319) 221-1040 and order ahead so the kitchen can time your seafood to your arrival. Because everything is fried fresh to order, calling ahead means it's hot and crispy when you pick up at 1616 1st Ave NE."
+    },
+    {
+      "question": "Can I get seafood delivered?",
+      "answer": "Yes. We deliver through DoorDash, Uber Eats, and Grubhub. Search Captains Fish and Chicken in your preferred app to order. Delivery times and fees are set by each app."
+    },
+    {
+      "question": "Should I call ahead for a large seafood order?",
+      "answer": "Yes. For a bigger seafood feast, calling (319) 221-1040 ahead lets us prep everything fresh and have it ready at your pickup time instead of making you wait during a rush."
+    }
+  ],
+  "crossLinks": [
+    {
+      "slug": "/menu/shrimp/",
+      "anchor": "shrimp menu",
+      "context": "inline"
+    },
+    {
+      "slug": "/menu/seafood/",
+      "anchor": "seafood menu",
+      "context": "inline"
+    },
+    {
+      "slug": "/seafood-takeout-cedar-rapids/",
+      "anchor": "seafood takeout in Cedar Rapids",
+      "context": "related"
+    },
+    {
+      "slug": "/made-fresh-to-order/",
+      "anchor": "made fresh to order",
+      "context": "related"
+    },
+    {
+      "slug": "/occasions/friday-fish-fry/",
+      "anchor": "everyday fish fry",
+      "context": "related"
+    }
+  ],
+  "heroAltText": "A seafood feast of jumbo fried shrimp, crab cakes, and red snapper from Captains Fish and Chicken in Cedar Rapids",
+  "schemaTypes": [
+    "WebPage",
+    "FAQPage"
+  ],
+  "seo": {
+    "title": "Seafood Feast in Cedar Rapids | Captains Fish and Chicken",
+    "description": "A fresh seafood feast in Cedar Rapids: jumbo shrimp, crab cakes, red snapper, and cod fried to order. Pickup or delivery. Call (319) 221-1040 to order ahead.",
+    "canonical": "https://captains-fish-and-chicken.example/occasions/seafood-feast/"
+  },
+  "provenance": "KNOW",
+  "lastVerified": "2026-07-07",
+  "source": "Phase 4 sealed occasions.json authored from owner-confirmed offerings"
+}

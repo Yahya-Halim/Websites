@@ -1,0 +1,340 @@
+---
+// Project Hero — modern full-bleed hero with a navy gradient overlay when an
+// image is present; contract-compatible with the engine Hero (single <h1>,
+// data-cro-block="hero", CtaBar surface="hero", ValueProps strip, KG7:
+// heading absent → renders nothing).
+import CtaBar from '@engine/components/CtaBar.astro';
+import ValueProps from '@engine/components/ValueProps.astro';
+
+interface CtaLink {
+  text: string;
+  href: string;
+}
+
+interface ValuePropItem {
+  label: string;
+  sublabel?: string;
+}
+
+interface HeroImage {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  modernSrc?: string;
+  modernType?: string;
+}
+
+interface AnimatedFrame {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  heading?: string;
+  subheading?: string;
+  ctaPrimary?: CtaLink;
+  ctaSecondary?: CtaLink;
+  valueProps?: ValuePropItem[];
+  image?: HeroImage;
+  /**
+   * Optional CSS-crossfade animated background (seamless loop built from
+   * generated keyframes). Takes precedence over `image`. First frame is the
+   * LCP image (webp, fetchpriority high) and the reduced-motion fallback.
+   */
+  animatedFrames?: AnimatedFrame[];
+  /**
+   * Optional looped video background (autoplay/muted/loop/playsinline).
+   * Takes precedence over `animatedFrames` and `image`. The poster doubles
+   * as the reduced-motion and no-video fallback.
+   */
+  videoBackground?: { src: string; poster: string; alt: string };
+}
+
+const { heading, subheading, ctaPrimary, ctaSecondary, valueProps, image, animatedFrames, videoBackground } = Astro.props;
+const hasHeading = Boolean(heading && heading.trim().length > 0);
+const hasVideo = Boolean(videoBackground?.src);
+const hasAnimation = !hasVideo && Array.isArray(animatedFrames) && animatedFrames.length >= 2;
+const modernType = image?.modernType ?? 'image/webp';
+---
+
+{hasHeading && (
+  <section class={`hero ${image || hasAnimation || hasVideo ? 'hero-with-image' : ''}`} data-cro-block="hero">
+    {hasVideo && (
+      <div class="hero-anim" aria-hidden="true">
+        <video
+          class="hero-video"
+          src={videoBackground!.src}
+          poster={videoBackground!.poster}
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+        ></video>
+        <img
+          class="hero-video-fallback"
+          src={videoBackground!.poster}
+          alt={videoBackground!.alt}
+          width="1376"
+          height="768"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+    )}
+    {hasAnimation && (
+      <div class="hero-anim" aria-hidden="true">
+        {animatedFrames!.map((frame, i) => (
+          <img
+            class={`anim-frame frame-${i}`}
+            src={frame.src}
+            alt={i === 0 ? frame.alt : ''}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : 'auto'}
+            decoding="async"
+            width="1376"
+            height="768"
+          />
+        ))}
+      </div>
+    )}
+    {!hasVideo && !hasAnimation && image && (
+      <picture class="hero-image" aria-hidden="false">
+        {image.modernSrc && <source srcset={image.modernSrc} type={modernType} />}
+        <img
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </picture>
+    )}
+    <div class="hero-copy">
+      <h1>{heading}</h1>
+      {subheading && <p class="hero-subheading">{subheading}</p>}
+      <CtaBar surface="hero" ctaPrimary={ctaPrimary} ctaSecondary={ctaSecondary} />
+    </div>
+    {valueProps && valueProps.length > 0 && <ValueProps items={valueProps} />}
+  </section>
+)}
+
+<style>
+  .hero {
+    padding: 2.5rem 0 1.5rem;
+    text-align: center;
+  }
+
+  /* Text-only hero (menu hub, neighborhoods, most landings): full-bleed NAVY
+     band with a gold wave hem + white copy — the interior-page analog of the
+     home video banner, so every page top reads as a deep-sea header. */
+  .hero:not(.hero-with-image) {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: linear-gradient(180deg, var(--navy-900, #0b1e33), var(--navy-700, #123253));
+    border-radius: var(--radius-lg, 1rem);
+    box-shadow: var(--shadow-md);
+    margin-top: 1rem;
+    padding: clamp(2.25rem, 6vw, 3.75rem) 1.25rem calc(2rem + 10px);
+  }
+  .hero:not(.hero-with-image) h1 {
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(11, 30, 51, 0.5);
+  }
+  .hero:not(.hero-with-image) .hero-subheading {
+    color: rgba(255, 255, 255, 0.92);
+  }
+  /* Gold wave hem across the band bottom. */
+  .hero:not(.hero-with-image)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    background:
+      var(--wave-gold) repeat-x center / 24px 8px,
+      var(--navy-900, #0b1e33);
+  }
+
+  /* Image variant: full-bleed banner with navy gradient overlay + white copy. */
+  .hero-with-image {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-radius: var(--radius-lg, 1rem);
+    padding: 0;
+    margin-top: 1rem;
+    box-shadow: var(--shadow-md, 0 10px 28px rgba(11, 30, 51, 0.2));
+  }
+  /* Gold wave hem across the bottom of the image/video banner too, tying the
+     home hero to the interior navy-band heroes. Sits above the video (z1) and
+     scrim (z-1). */
+  .hero-with-image::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 10px;
+    z-index: 2;
+    background:
+      var(--wave-gold) repeat-x center / 24px 8px,
+      var(--navy-900, #0b1e33);
+  }
+  .hero-with-image .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  .hero-with-image .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Animated background: stacked keyframes crossfading in a seamless cycle
+     (frame 0 -> 1 -> 2 -> 0). Pure CSS, no video decode, loops forever. */
+  .hero-anim {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+  .hero-anim .anim-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: hero-xfade 7.5s infinite;
+  }
+  .hero-anim .frame-0 {
+    opacity: 1;
+    animation-delay: 0s;
+  }
+  .hero-anim .frame-1 {
+    animation-delay: 2.5s;
+  }
+  .hero-anim .frame-2 {
+    animation-delay: 5s;
+  }
+  @keyframes hero-xfade {
+    0% { opacity: 1; }
+    27% { opacity: 1; }
+    40% { opacity: 0; }
+    93% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-anim .anim-frame {
+      animation: none;
+      opacity: 0;
+    }
+    .hero-anim .frame-0 {
+      opacity: 1;
+    }
+  }
+
+  /* Looped video background: video on top, static poster img beneath as the
+     no-video fallback; reduced motion hides the video entirely. */
+  .hero-video,
+  .hero-video-fallback {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-video {
+    z-index: 1;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-video {
+      display: none;
+    }
+  }
+  .hero-with-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      180deg,
+      rgba(11, 30, 51, 0.58) 0%,
+      rgba(11, 30, 51, 0.58) 45%,
+      rgba(11, 30, 51, 0.82) 100%
+    );
+  }
+  .hero-with-image .hero-copy {
+    padding: clamp(3rem, 9vw, 6.5rem) 1.5rem;
+  }
+  .hero-with-image h1 {
+    color: #fff;
+    text-shadow: 0 2px 14px rgba(11, 30, 51, 0.6);
+  }
+  .hero-with-image .hero-subheading {
+    color: rgba(255, 255, 255, 0.96);
+    text-shadow: 0 1px 8px rgba(11, 30, 51, 0.75);
+  }
+
+  /* Text-only variant keeps the light look. */
+  .hero:not(.hero-with-image) .hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.5rem;
+  }
+
+  .hero-copy {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .hero-subheading {
+    font-size: 1.1rem;
+    max-width: 40rem;
+    margin: 0.75rem auto 1.25rem;
+    color: var(--ink-soft, #3c4f66);
+  }
+  .hero :global(.cta-bar) {
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  /* Hero CTA reads as the page's primary action — larger tap target. */
+  .hero :global(.cta) {
+    padding: 0.8rem 1.7rem;
+    font-size: 1.05rem;
+  }
+
+  /* Value props over imagery: navy scrim chips so the strip stays readable
+     on any frame of the video/photo background (baseline failure: navy/gray
+     text sank into the sand). */
+  .hero-with-image :global(.value-props) {
+    padding: 0 1.25rem 1.75rem;
+    margin: 0.5rem 0 0;
+    gap: 0.75rem 1rem;
+  }
+  .hero-with-image :global(.value-prop) {
+    background: rgba(11, 30, 51, 0.66);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: var(--radius-md, 0.75rem);
+    padding: 0.7rem 1.1rem;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .hero-with-image :global(.value-props .value-prop-label) {
+    color: #fff;
+  }
+  /* !important + extra specificity: must beat the Base token override
+     (ink-soft !important) that is correct everywhere except on the scrim. */
+  .hero-with-image :global(.value-props .value-prop-sublabel) {
+    color: rgba(255, 255, 255, 0.88) !important;
+  }
+</style>

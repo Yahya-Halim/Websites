@@ -1,0 +1,305 @@
+---
+import Base from '../../layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderFaqJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+// CRO blocks (T4) composed into the menu-category kind.
+import Hero from '../../components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+// One static page per menu-collection section, keyed by the entry's own
+// `slug` field. Empty collection → no paths → route generates nothing (the
+// scaffold default ships an empty menu.json and still builds).
+export async function getStaticPaths() {
+  const sections = await getCollection('menu');
+  return sections.map((section) => ({
+    params: { slug: section.data.slug },
+    props: { section },
+  }));
+}
+
+const { section } = Astro.props;
+const s = section.data;
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+// site.json drives the CRO blocks (hero dual-CTA, trust bar, conditional promos).
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const name = s.name;
+const description = s.description ?? '';
+// seo is optional on menu sections; fall back to data-derived metadata.
+const businessName = business?.name ?? '';
+const title = s.seo?.title ?? `${name} — ${businessName}`;
+const metaDescription = s.seo?.description ?? description;
+const faqs = s.faqs ?? [];
+const crossLinks = s.crossLinks ?? [];
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site
+  ? new URL(`/menu/${s.slug}/`, Astro.site).href
+  : `/menu/${s.slug}/`;
+const websiteUrl = business?.domain ?? siteRoot;
+const menuUrl = Astro.site ? new URL('/menu/', Astro.site).href : '/menu/';
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description: metaDescription,
+  websiteName: businessName,
+  websiteUrl,
+  speakableSelectors: ['.hero-copy h1', '.hero-subheading'],
+});
+
+// Home → Menu → {name}. Menu crumb carries the real /menu/ hub url.
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Menu', url: menuUrl },
+    { name },
+  ],
+});
+
+const faqLd = renderFaqJsonLd({ faqs });
+
+// Prices render ONLY when the item carries owner-authoritative price data
+// (prices is optional — omit-never-fabricate; no placeholder amounts).
+const priceLine = (prices) =>
+  (prices ?? []).map((p) => (prices.length > 1 ? `${p.label} $${p.price.toFixed(2)}` : `$${p.price.toFixed(2)}`)).join(' · ');
+
+// Generated item imagery (Higgsfield, representational — not photos of the
+// actual dishes). Slug convention MUST match the imagery manifest generator
+// (scripts/image-prompts.json) so every item resolves to its exported file.
+const itemImageSlug = (name) => name.toLowerCase()
+  .replace(/[()&,'.]/g, '')
+  .replace(/\//g, ' ')
+  .replace(/\s+/g, '-')
+  .replace(/-+/g, '-')
+  .replace(/^-|-$/g, '');
+const itemImageSrc = (name) => `/images/menu/${s.slug}/${itemImageSlug(name)}.jpg`;
+---
+
+<Base title={title} description={metaDescription} jsonLd={[webPageLd, breadcrumbLd, faqLd]}>
+  <article class="menu-section">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading={name}
+      subheading={description}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    <section class="items" aria-labelledby="items-heading">
+      <span class="eyebrow">From the counter</span>
+      <h2 id="items-heading">On the menu</h2>
+      <ul class="carte">
+        {s.items.map((item) => (
+          <li class="carte-row">
+            <img
+              class="item-thumb"
+              src={itemImageSrc(item.name)}
+              alt={`${item.name} (representational image)`}
+              width="168"
+              height="168"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="item-body">
+              <p class="item-line">
+                <span class="item-name">{item.name}</span>
+                {item.spicy && (
+                  <span class="item-flag">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 0c.9 2.1.3 3.8-.8 5.1C11.4 6.6 9.5 7.8 9.5 10c0 .3 0 .6.1.9C7.6 9.7 6.6 7.6 7.3 5.4 4.8 7 3 9.9 3 13.2 3 18.6 7.1 24 12.4 24 17.8 24 21 19.5 21 14.9c0-5.6-4.4-7.1-4.9-11.2-1 .8-1.6 2-1.4 3.4C13.5 5 12.6 2.4 13.5 0z"/></svg>
+                    Spicy
+                  </span>
+                )}
+                {item.dietary && item.dietary.length > 0 && (
+                  <span class="item-dietary">{item.dietary.join(', ')}</span>
+                )}
+              </p>
+              {item.description && <p class="item-description">{item.description}</p>}
+            </div>
+            {item.prices && item.prices.length > 0 && (
+              <span class="item-prices">{priceLine(item.prices)}</span>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p class="image-note">Photos are representational.</p>
+    </section>
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    {faqs.length > 0 && (
+      <section class="faqs" aria-labelledby="faqs-heading">
+        <h2 id="faqs-heading">Frequently asked questions</h2>
+        <dl>
+          {faqs.map((faq) => (
+            <>
+              <dt>{faq.question}</dt>
+              <dd>{faq.answer}</dd>
+            </>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    {crossLinks.length > 0 && (
+      <nav class="related" aria-labelledby="related-heading">
+        <h2 id="related-heading">Related</h2>
+        <ul>
+          {crossLinks.map((link) => (
+            <li><a href={link.slug}>{link.anchor}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+  </article>
+</Base>
+
+<style>
+  .menu-section {
+    padding: 2rem 0;
+  }
+  .items {
+    margin-top: 2rem;
+  }
+  /* Printed "catch-board" carte: a single column of item rows on the warm
+     surface, separated by hairlines — a fish-market menu board, not a card
+     grid. Thumbnail | name + descriptor | price column. */
+  .carte {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-lg, 1rem);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .carte-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.15rem;
+    border-bottom: 1px solid var(--steel-200, #d5dfe9);
+  }
+  .carte-row:last-child {
+    border-bottom: none;
+  }
+  .carte-row:nth-child(even) {
+    background: color-mix(in srgb, var(--sand) 55%, #fff);
+  }
+  .item-thumb {
+    flex: 0 0 auto;
+    width: 84px;
+    height: 84px;
+    border-radius: var(--radius-md, 0.75rem);
+    object-fit: cover;
+    background: var(--steel-100, #e8eef4);
+  }
+  .item-body {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .item-line {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0;
+  }
+  .item-name {
+    font-family: var(--font-display, sans-serif);
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+    color: var(--navy-700, #123253);
+  }
+  .item-flag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: var(--steel-100, #e8eef4);
+    color: var(--navy-700, #123253);
+    font-weight: 700;
+    font-size: 0.72rem;
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+  }
+  .item-dietary {
+    background: var(--steel-100, #e8eef4);
+    color: var(--navy-700, #123253);
+    font-weight: 600;
+    font-size: 0.72rem;
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+  }
+  .item-description {
+    margin: 0.25rem 0 0;
+    color: var(--ink-soft, #3c4f66);
+    line-height: 1.5;
+    font-size: 0.92rem;
+    font-style: italic;
+  }
+  /* Price column — gold-on-navy tabular price chip pinned to the row's right,
+     the menu's visual signature. */
+  .item-prices {
+    flex: 0 0 auto;
+    align-self: center;
+    font-family: var(--font-mono, monospace);
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--navy-900, #0b1e33);
+    background: var(--gold-500, #f5b301);
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .image-note {
+    font-size: 0.8rem;
+    color: var(--ink-soft, #3c4f66);
+    margin-top: 1rem;
+  }
+  @media (max-width: 34rem) {
+    .carte-row {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    .item-thumb {
+      width: 60px;
+      height: 60px;
+    }
+    /* Price drops under the body on very narrow screens, still right-aligned. */
+    .item-prices {
+      margin-left: auto;
+    }
+  }
+  .faqs {
+    margin-top: 2.5rem;
+  }
+  .related {
+    margin-top: 2.5rem;
+  }
+</style>

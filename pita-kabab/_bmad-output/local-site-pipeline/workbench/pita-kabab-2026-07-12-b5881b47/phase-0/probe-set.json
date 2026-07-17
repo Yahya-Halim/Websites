@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 0,
+  "business": "Pita Kabab",
+  "derivedFrom": [
+    "T1 site-schema contracts: trustBar.items >=6 real facts, valueProps exactly 3, leadForm.endpoint external https, ctaPrimary tel: + ctaSecondary sms:, offers quantified, financing optional, analytics GA4 + optional ads config",
+    "brief.json seed facts: Pita Kabab, 3100 6th St SW, Cedar Rapids, IA 52404, restaurant, single location, same owner as Captains Fish and Chicken (address formerly Captains)"
+  ],
+  "probes": [
+    {
+      "id": "nap-hours",
+      "question": "Confirm NAP (name, address, phone), hours of operation, maps/directions, and record source disagreements per-source.",
+      "mapsTo": ["business.name", "business.address", "business.phone", "business.hours"],
+      "sources": ["Google Business Profile / Google Maps", "Yelp", "existing website", "Facebook", "Instagram", "delivery platforms"]
+    },
+    {
+      "id": "cuisine-service-model",
+      "question": "Confirm cuisine type (name suggests Middle Eastern/Mediterranean kabab) and service model (dine-in / carryout / delivery / catering). Not owner-confirmed in the brief.",
+      "mapsTo": ["businessIdentity.category", "site pages: menu/services families"],
+      "sources": ["GBP", "Yelp", "delivery platforms", "local press", "owner confirmation"]
+    },
+    {
+      "id": "menu-services",
+      "question": "Discover the menu / service list (items, categories, catering) for the restaurant page family and the lead-form services dropdown. Aggregator prices are NOT owner prices.",
+      "mapsTo": ["site.leadForm options[]", "menu page family"],
+      "sources": ["existing website", "DoorDash", "Uber Eats", "Grubhub", "Slice/ChowNow", "GBP menu", "owner materials"]
+    },
+    {
+      "id": "prior-address-disambiguation",
+      "question": "Verify web sources still attribute 3100 6th St SW to Captains Fish and Chicken (former tenant, same owner) and record stale-listing discrepancies needing cleanup.",
+      "mapsTo": ["webFootprintFindings.discrepancies"],
+      "sources": ["Google Maps", "Yelp", "delivery platforms", "directories"]
+    },
+    {
+      "id": "brand-assets",
+      "question": "Locate logo, brand colors, and usable photography (interior, food). Never fabricate brand assets.",
+      "mapsTo": ["business brand assets"],
+      "sources": ["existing website", "Facebook", "Instagram", "GBP photos", "owner materials"]
+    },
+    {
+      "id": "trust-facts",
+      "question": "Find at least SIX genuine trust facts (years in business, ratings/review counts, certifications, awards, press mentions, halal certification if real). Omit the trust grid below six facts; never invent filler.",
+      "mapsTo": ["site.trustBar.items[]", "business.yearEstablished"],
+      "sources": ["GBP reviews", "Yelp", "TripAdvisor", "local press (Cedar Rapids Gazette, KCRG)", "health/permit sources", "owner materials"]
+    },
+    {
+      "id": "value-props-cta-banner",
+      "question": "Gather owner-articulated copy: exactly 3 hero value-props and a real mid-page CTA-banner headline. Web review themes may inform drafts but owner must confirm; page kind fails the gate until copy exists.",
+      "mapsTo": ["site.valueProps (exactly 3)", "site.ctaBanner"],
+      "sources": ["owner confirmation", "review themes (draft input only)"]
+    },
+    {
+      "id": "offers-promotions",
+      "question": "Find any current QUANTIFIED promotion (e.g. '$X off', 'free drink with combo') with validFrom/validThrough dates. No promotion => omit site.offers.",
+      "mapsTo": ["site.offers[]"],
+      "sources": ["GBP posts", "Facebook", "Instagram", "delivery platforms", "owner confirmation"]
+    },
+    {
+      "id": "financing",
+      "question": "Probe for financing partners (unlikely for a restaurant; catering deposits possible). No financing => omit site.financing.",
+      "mapsTo": ["site.financing.providers[]"],
+      "sources": ["owner confirmation"]
+    },
+    {
+      "id": "lead-form-endpoint",
+      "question": "Determine whether an external static-form endpoint (e.g. Web3Forms https URL) exists or must be provisioned. REQUIRED for a lead form to ship; static site must never post to a first-party handler.",
+      "mapsTo": ["site.leadForm.endpoint"],
+      "sources": ["owner materials", "existing website"]
+    },
+    {
+      "id": "lead-form-options-contact",
+      "question": "Capture the services-dropdown options (e.g. catering inquiry, large orders) and preferred contact channels (call / text / email) for the lead form.",
+      "mapsTo": ["site.leadForm options[]", "site.leadForm preferred-contact select"],
+      "sources": ["owner confirmation"]
+    },
+    {
+      "id": "call-text-capability",
+      "question": "Determine the callable phone number (tel:) AND whether that or another number can receive SMS (sms:). Both required for the dual-CTA; never invent a channel.",
+      "mapsTo": ["site.ctaPrimary.href (tel:)", "site.ctaSecondary.href (sms: or tel:)"],
+      "sources": ["GBP", "existing website", "owner confirmation"]
+    },
+    {
+      "id": "analytics-ads",
+      "question": "Determine GA4 property/measurement id and, only if the owner runs Google Ads, the conversion id + leadForm/telClick labels. Absent => GA4-only.",
+      "mapsTo": ["business.analytics", "business.analytics.ads"],
+      "sources": ["owner confirmation", "analytics access notes"]
+    },
+    {
+      "id": "domain-email-hosting",
+      "question": "Determine the intended domain, business email, and hosting/registrar situation. Never invent domains or emails.",
+      "mapsTo": ["business.domain", "business.email"],
+      "sources": ["owner confirmation", "registrar/hosting notes", "existing website"]
+    },
+    {
+      "id": "payment-policy",
+      "question": "Determine accepted payment methods and any payment policy (cash/card, online ordering).",
+      "mapsTo": ["business payment policy"],
+      "sources": ["GBP attributes", "Yelp attributes", "owner confirmation"]
+    },
+    {
+      "id": "sap-locations",
+      "question": "Confirm single-location scope; restaurant archetype uses menu/page families rather than service-area SAP pages. If any service-area towns are later declared, each needs >=1 localFact, >=2 proximityTrustLines, >=1 townFaq or it folds.",
+      "mapsTo": ["locations[].localFacts", "locations[].proximityTrustLines", "locations[].townFaqs"],
+      "sources": ["brief.json", "owner confirmation"]
+    },
+    {
+      "id": "identity-decision",
+      "question": "Determine domain, email, GA id, payment policy, or declared identity fixtures if real values are unavailable.",
+      "mapsTo": ["businessIdentity fixtures"],
+      "sources": ["owner confirmation", "registrar/hosting notes", "analytics access notes"]
+    }
+  ]
+}

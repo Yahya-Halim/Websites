@@ -1,0 +1,231 @@
+---
+import Base from '../../layouts/Base.astro';
+// Package-subpath import channel (scaffolded page — see contact.astro).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+  renderMenuJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry, getCollection } from 'astro:content';
+import Hero from '../../components/Hero.astro';
+import TrustBar from '@engine/components/TrustBar.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+const sectionsRaw = await getCollection('menu');
+// Hub ordering mirrors the Menu JSON-LD rule: `order` ascending, order-less
+// sections after all ordered ones, then slug (deterministic).
+const sections = [...sectionsRaw].sort((a, b) => {
+  const ao = a.data.order ?? Number.POSITIVE_INFINITY;
+  const bo = b.data.order ?? Number.POSITIVE_INFINITY;
+  if (ao !== bo) return ao < bo ? -1 : 1;
+  return a.data.slug < b.data.slug ? -1 : a.data.slug > b.data.slug ? 1 : 0;
+});
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+
+const businessName = business?.name ?? '';
+const title = `Menu — ${businessName}`;
+const description = `Full menu for ${businessName} in Cedar Rapids — fried catfish, cod, perch, whole and party wings, tenders, shrimp, family fish deals up to 50 pieces, sides, kids meals and desserts, all priced.`;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const pageUrl = Astro.site ? new URL('/menu/', Astro.site).href : '/menu/';
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: pageUrl,
+  description,
+  websiteName: businessName,
+  websiteUrl,
+  speakableSelectors: ['.hero-copy h1', '.hero-subheading'],
+});
+
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Menu' },
+  ],
+});
+
+// Menu JSON-LD only when EVERY item is priced: schema.org Offers require real
+// amounts, and prices are optional data (omit-never-fabricate). A menu with
+// any unpriced item omits the Menu type entirely (KG7) — HTML still renders.
+const allPriced = sections.length > 0
+  && sections.every((s) => s.data.items.every((i) => i.prices && i.prices.length > 0));
+const menuLd = allPriced && business
+  ? renderMenuJsonLd(sections.map((s) => s.data), business)
+  : null;
+
+// Section card imagery: the section's first item render, via the same slug
+// convention as menu/[slug].astro (MUST match scripts/image-prompts.json).
+const itemImageSlug = (name) => name.toLowerCase()
+  .replace(/[()&,'.]/g, '')
+  .replace(/\//g, ' ')
+  .replace(/\s+/g, '-')
+  .replace(/-+/g, '-')
+  .replace(/^-|-$/g, '');
+const sectionImageSrc = (section) => {
+  const first = section.data.items[0];
+  return first ? `/images/menu/${section.data.slug}/${itemImageSlug(first.name)}.jpg` : null;
+};
+// Owner-confirmed price floor per section ("from $X.XX") — derived, never fabricated.
+const sectionMinPrice = (section) => {
+  const amounts = section.data.items.flatMap((i) => (i.prices ?? []).map((p) => p.price));
+  return amounts.length > 0 ? Math.min(...amounts) : null;
+};
+---
+
+<Base title={title} description={description} jsonLd={[webPageLd, breadcrumbLd, menuLd]}>
+  <article class="menu-hub">
+    {/* Hero owns the page's single <h1> + hero-surface dual CTA (R3-F4). */}
+    <Hero
+      heading="Menu"
+      subheading={description}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+
+    {sections.length > 0 && (
+      <section class="sections" aria-labelledby="sections-heading">
+        <span class="eyebrow">BY THE BOARD</span>
+        <h2 id="sections-heading">Browse the menu</h2>
+        <ul>
+          {sections.map((section) => {
+            const image = sectionImageSrc(section);
+            const minPrice = sectionMinPrice(section);
+            return (
+              <li>
+                <a href={`/menu/${section.data.slug}/`}>
+                  {image && (
+                    <img
+                      src={image}
+                      alt={`${section.data.name} (representational image)`}
+                      width="512"
+                      height="384"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  )}
+                  <span class="sec-head">
+                    <span class="sec-name">{section.data.name}</span>
+                    {typeof minPrice === 'number' && (
+                      <span class="sec-price">from ${minPrice.toFixed(2)}</span>
+                    )}
+                  </span>
+                  {section.data.description && <p>{section.data.description}</p>}
+                  <span class="sec-count">{section.data.items.length} {section.data.items.length === 1 ? 'item' : 'items'} →</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <p class="image-note">Photos are representational.</p>
+      </section>
+    )}
+
+    {/* Trust-signal grid (site.trustBar.items ≥6 when present). */}
+    <TrustBar items={site?.trustBar?.items} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page CTA band + dual CTA (site.ctaBanner). */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+  </article>
+</Base>
+
+<style>
+  .menu-hub {
+    padding: 2rem 0;
+  }
+  .sections {
+    margin-top: 2.5rem;
+  }
+  .sections ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1.25rem;
+  }
+  .sections li {
+    height: 100%;
+  }
+  .sections a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--white, #fff);
+    border: 1px solid var(--steel-200, #d5dfe9);
+    border-radius: var(--radius-md, 0.75rem);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  }
+  .sections a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--blue-500, #2d74b5);
+  }
+  .sections img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--steel-100, #e8eef4);
+  }
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.6rem;
+    padding: 0.85rem 1rem 0;
+  }
+  .sec-name {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--navy-700, #123253);
+  }
+  /* Price floor rides in the gold price-pill language. */
+  .sec-price {
+    flex: 0 0 auto;
+    background: var(--gold-500, #f5b301);
+    color: var(--navy-900, #0b1e33);
+    font-weight: 800;
+    font-size: 0.8rem;
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    white-space: nowrap;
+  }
+  .sections p {
+    margin: 0.35rem 0 0;
+    padding: 0 1rem;
+    color: var(--ink-soft, #3c4f66);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .sec-count {
+    margin-top: auto;
+    padding: 0.75rem 1rem 1rem;
+    color: var(--blue-500, #2d74b5);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .image-note {
+    font-size: 0.8rem;
+    color: var(--ink-soft, #3c4f66);
+    margin-top: 1rem;
+  }
+</style>

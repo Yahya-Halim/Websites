@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "captains-fish-and-chicken-2026-07-09-a701f565",
+  "phase": 2,
+  "actor": "Yahya",
+  "artifactPath": "D:\\website\\captains-fish-and-chicken\\_bmad-output\\local-site-pipeline\\workbench\\captains-fish-and-chicken-2026-07-09-a701f565\\phase-2\\phase-2-artifact.json",
+  "artifactHash": "2589da7ca284bde56ee19d9a02d01f5746ef70fb4746ceff2bb7473f8d0c5bb9",
+  "notesFile": "C:/Users/Lenovo/AppData/Local/Temp/claude/D--plugin-localevolve-factory/ad68d563-d121-4a5d-83ed-f2d8405933d4/scratchpad/p2-approval-notes.md",
+  "notes": "# Phase 2 Approval — run v3 (captains-fish-and-chicken-2026-07-09-a701f565)\n\nApproved under the operator's standing directive of 2026-07-09: \"seal everything after using the new repo updates and implementation to the captains-fish-chicken website\". Real operator: geekeys343@gmail.com (actor recorded as Yahya per workflow contract).\n\nBasis:\n- 38-route matrix with exact 1:1 parity to the LIVE launched site (URL stability load-bearing, one day into first indexing; zero redirect debt).\n- page-matrix-depth review PASS attempt 1 (artifactHash 2589da7c…, notes hash 119fd92c…): parity independently re-derived from src/data + dist; all depth floors met with genuine data (87/87 priced items, occasion FAQ/cross-link floors, neighborhood anti-doorway floors); reserved slugs + trailing-slash respected.\n- All five Phase 1 copy hazards travel in copyAdvisories (Chicago Grill returning-not-new, LJS June 2014, no \"#1 on Yelp\", Pita Kabab disambiguation-only, review-count drift deferred to Phase 4 GBP verification).\n- Reviewer advisories carried to Phase 4: unique copy for 4 small menu sections; no review COUNT citable until GBP verified; live-URL route proof closes parity evidence gap.\n",
+  "approvedAt": "2026-07-09T22:56:38.936Z",
+  "expiresAt": "2026-07-16T22:56:38.936Z"
+}

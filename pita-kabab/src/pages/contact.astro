@@ -1,0 +1,138 @@
+---
+import Base from '../layouts/Base.astro';
+// Scaffolded INTO the consumer project by `factory init` (unlike the shared
+// home, which is engine-injected), so the generators resolve via the PACKAGE
+// SUBPATH — the proven content.config.ts.tpl import channel — NOT the
+// @engine/generators alias (that alias only exists for engine-injected files).
+import {
+  renderWebPageJsonLd,
+  renderBreadcrumbJsonLd,
+} from '@localevolve/local-biz-factory-engine/generators';
+import { getEntry } from 'astro:content';
+// CRO blocks (T4) composed into contact. Scaffolded page → the
+// @engine/components alias, same channel Header/Footer already use here.
+import LeadForm from '@engine/components/LeadForm.astro';
+import OfferCallout from '@engine/components/OfferCallout.astro';
+import CtaBanner from '@engine/components/CtaBanner.astro';
+
+const businessEntry = await getEntry('business', 'biz');
+const business = businessEntry?.data;
+
+// site.json drives the CRO blocks on contact (lead-form endpoint + conditional
+// offers). LeadForm renders ONLY when site.leadForm (incl. its external
+// endpoint) is present — a site without an endpoint ships contact as
+// phone + address + hours + directions (KG7, omit-never-fabricate).
+const siteEntry = await getEntry('site', 'site');
+const site = siteEntry?.data;
+const leadForm = site?.leadForm;
+
+// NAP + page metadata sourced from business data only (no literals).
+const name = business?.name ?? 'Contact';
+const phone = business?.phone ?? '';
+const email = business?.email ?? '';
+const address = business?.address;
+const hoursText = business?.hours?.displayText ?? '';
+const mapsUrl = business?.mapsUrl;
+const directionsUrl = business?.directionsUrl;
+const description = business?.description ?? '';
+
+const title = `Contact ${name}`;
+
+const siteRoot = Astro.site ? Astro.site.href : '/';
+const contactUrl = Astro.site ? new URL('/contact/', Astro.site).href : '/contact/';
+const websiteUrl = business?.domain ?? siteRoot;
+
+const webPageLd = renderWebPageJsonLd({
+  name: title,
+  url: contactUrl,
+  description,
+  websiteName: name,
+  websiteUrl,
+  schemaType: 'ContactPage',
+});
+
+// Breadcrumb Home → Contact (url-less final crumb).
+const breadcrumbLd = renderBreadcrumbJsonLd({
+  trail: [
+    { name: 'Home', url: siteRoot },
+    { name: 'Contact' },
+  ],
+});
+---
+
+<Base title={title} description={description} jsonLd={[webPageLd, breadcrumbLd]}>
+  <section class="contact">
+    <h1>Contact {name}</h1>
+
+    <dl class="nap">
+      {phone && (
+        <>
+          <dt>Phone</dt>
+          <dd><a href={`tel:${phone}`}>{phone}</a></dd>
+        </>
+      )}
+      {email && (
+        <>
+          <dt>Email</dt>
+          <dd><a href={`mailto:${email}`}>{email}</a></dd>
+        </>
+      )}
+      {address && (
+        <>
+          <dt>Address</dt>
+          <dd>
+            <address>
+              {address.street}<br />
+              {address.city}, {address.state} {address.zip}
+            </address>
+          </dd>
+        </>
+      )}
+      {hoursText && (
+        <>
+          <dt>Hours</dt>
+          <dd>{hoursText}</dd>
+        </>
+      )}
+    </dl>
+
+    {(mapsUrl || directionsUrl) && (
+      <p class="map-links">
+        {mapsUrl && <a href={mapsUrl}>View on map</a>}
+        {directionsUrl && <a href={directionsUrl}>Get directions</a>}
+      </p>
+    )}
+
+    {/* Lead-capture form → external provider endpoint (site.leadForm). */}
+    <LeadForm leadForm={leadForm} />
+
+    {/* Conditional promo block (KG7 — only when data present). */}
+    <OfferCallout offers={site?.offers} />
+
+    {/* Mid-page full-width CTA band (site.ctaBanner) + call CTA — matches home. */}
+    <CtaBanner
+      ctaBanner={site?.ctaBanner}
+      ctaPrimary={site?.ctaPrimary}
+      ctaSecondary={site?.ctaSecondary}
+    />
+  </section>
+</Base>
+
+<style>
+  .contact {
+    padding: 2rem 0;
+  }
+  .nap dt {
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .nap dd {
+    margin: 0.25rem 0 0;
+  }
+  .map-links {
+    margin-top: 1.5rem;
+  }
+  .map-links a {
+    margin-right: 1rem;
+  }
+</style>

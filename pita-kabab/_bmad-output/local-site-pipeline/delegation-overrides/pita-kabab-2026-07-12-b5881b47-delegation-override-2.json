@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "phase": 3,
+  "role": "builder",
+  "actor": "Yahya",
+  "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+  "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+  "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+  "createdAt": "2026-07-13T04:20:41.009Z",
+  "override": 2
+}

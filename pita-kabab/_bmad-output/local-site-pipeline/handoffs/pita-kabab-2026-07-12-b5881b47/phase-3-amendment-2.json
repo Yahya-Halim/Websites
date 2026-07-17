@@ -1,0 +1,33 @@
+{
+  "runId": "pita-kabab-2026-07-12-b5881b47",
+  "briefHash": "9b69ed4957690fe371f3ecd49cc07fb601eb912231d47283e674ca6fc33fe2a4",
+  "phase": 3,
+  "exitedAt": "2026-07-13T04:20:41.009Z",
+  "specialistInvoked": "ui-ux-pro-max",
+  "delegationOverride": {
+    "schemaVersion": 1,
+    "runId": "pita-kabab-2026-07-12-b5881b47",
+    "phase": 3,
+    "role": "builder",
+    "actor": "Yahya",
+    "reasonFile": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\amend-1-delegation-override.md",
+    "reason": "# Phase 3 Amendment 1 — Delegation Override\n\nRun: pita-kabab-2026-07-12-b5881b47\nPhase: 3 DESIGN\nActor: Yahya (engagement owner)\nRole bypassed: builder (fresh sub-agent dispatch)\n\n## Why a fresh-sub-agent dispatch is bypassed for this amendment\n\nThe original Phase 3 design work WAS produced by a fresh dispatched sub-agent\n(hash-bound worker report on file). This amendment is a narrow, owner-directed\nrevision of an already-sealed, already-reviewed design: a palette swap\n(red → green/gold), a layout-density tightening, and wiring the now-generated\nbrand mark. It introduces no new design research — it re-applies the same\nDuolingo×Polaris system with different token values under explicit, specific\nowner direction given in chat this session.\n\nThe orchestrator authored the revision directly with full sealed-input context,\nkeeping every design decision traceable in `amend-1-reason.md`,\n`design-system.md` (inline amendment annotations), and `design-tokens.json`.\nWCAG AA contrast was re-verified for every new color pair. No contract field was\nweakened; the artifact still satisfies `validateArtifactContract(3, …)`.\n\nPer the build-local-site command contract, `amend-phase` accepts an explicit\n`--delegation-override` with an actor in lieu of a worker report. That path is\nused here deliberately and audibly, not to skip rigor.\n",
+    "reasonHash": "241e0f4ac806785f4a2b2a6cacc1134f17a423134c0236fbaf7c22672a0ef031",
+    "createdAt": "2026-07-13T04:20:41.009Z",
+    "override": 2,
+    "path": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\delegation-overrides\\pita-kabab-2026-07-12-b5881b47-delegation-override-2.json"
+  },
+  "outputs": {
+    "artifactPath": "D:\\website\\pita-kabab\\_bmad-output\\local-site-pipeline\\workbench\\pita-kabab-2026-07-12-b5881b47\\phase-3\\phase-3-artifact.json",
+    "artifactHash": "f0336ed10576443b4e41f797181abd9e085bdb33568b00c8b20a84bf0be78c54",
+    "contract": "UI UX Pro Max design system, design/content/build plan, selected architecture, asset needs, identity decision",
+    "amendment": 2,
+    "previousArtifactHash": "cb33effcbb1d624b667238fd0938d0c8834ee9c734bab214aabf475d16e97a7f"
+  },
+  "nextPhaseAllowed": [
+    3,
+    4
+  ],
+  "nextPhaseHint": 3,
+  "blocking": []
+}
